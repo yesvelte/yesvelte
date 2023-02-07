@@ -4,10 +4,7 @@
 
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
-
-	import { forwardEventsBuilder } from '../internal/forwardEventsBuilder'
-	import { classname } from '../internal/classname'
-
+	import { classname, forwardEventsBuilder } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
 
 	type $$Props = Partial<ElProps>
@@ -21,15 +18,25 @@
 	export let cssProps: $$Props['cssProps'] = {}
 	export let value: $$Props['value'] = undefined
 
-	// background properties
+	//#region CssProps
+	// gap properties
+	export let gap: $$Props['gap'] = undefined
+
+	// Vertical aligh
+	export let vAlign: $$Props['vAlign'] = undefined
+
+	// shadow
+	export let shadow: $$Props['shadow'] = undefined
+
+	export let hidden: $$Props['hidden'] = undefined
+
+	//#region background properties
 	export let bgColor: $$Props['bgColor'] = undefined
 	export let bgGradient: $$Props['bgGradient'] = undefined
 	export let bgOpacity: $$Props['bgOpacity'] = undefined
+	//#endregion
 
-	//text
-	export let textOpacity: $$Props['textOpacity'] = undefined
-
-	// border properties
+	//#region border properties
 	export let border: $$Props['border'] = undefined
 	export let borderTop: $$Props['borderTop'] = undefined
 	export let borderStart: $$Props['borderStart'] = undefined
@@ -39,8 +46,9 @@
 	export let borderRadius: $$Props['borderRadius'] = undefined
 	export let borderRoundSize: $$Props['borderRoundSize'] = undefined
 	export let borderOpacity: $$Props['borderOpacity'] = undefined
+	//#endregion
 
-	// padding properties
+	//#region padding properties
 	export let p: $$Props['p'] = undefined
 	export let pt: $$Props['pt'] = undefined
 	export let pb: $$Props['pb'] = undefined
@@ -48,8 +56,9 @@
 	export let pe: $$Props['pe'] = undefined
 	export let px: $$Props['px'] = undefined
 	export let py: $$Props['py'] = undefined
+	//#endregion
 
-	// margin properties
+	//#region margin properties
 	export let m: $$Props['m'] = undefined
 	export let mt: $$Props['mt'] = undefined
 	export let mb: $$Props['mb'] = undefined
@@ -57,11 +66,9 @@
 	export let me: $$Props['me'] = undefined
 	export let mx: $$Props['mx'] = undefined
 	export let my: $$Props['my'] = undefined
+	//#endregion
 
-	// gap properties
-	export let gap: $$Props['gap'] = undefined
-
-	// display properties
+	//#region display properties
 	export let clearfix: $$Props['clearfix'] = undefined
 	export let ratio: $$Props['ratio'] = undefined
 	export let sticky: $$Props['sticky'] = undefined
@@ -73,27 +80,24 @@
 	export let dXl: $$Props['dXl'] = undefined
 	export let dXxl: $$Props['dXxl'] = undefined
 	export let dPrint: $$Props['dPrint'] = undefined
+	//#endregion
 
-	// shadow
-	export let shadow: $$Props['shadow'] = undefined
-
-	// sizing
+	//#region sizing properties
 	export let w: $$Props['w'] = undefined
 	export let h: $$Props['h'] = undefined
 	export let mw: $$Props['mw'] = undefined
 	export let mh: $$Props['mh'] = undefined
+	//#endregion
 
-	// position
+	//#region position properties
 	export let position: $$Props['position'] = undefined
 	export let top: $$Props['top'] = undefined
 	export let start: $$Props['start'] = undefined
 	export let bottom: $$Props['bottom'] = undefined
 	export let end: $$Props['end'] = undefined
+	//#endregion
 
-	// Vertical aligh
-	export let vAlign: $$Props['vAlign'] = undefined
-
-	// text
+	//#region text properties
 	export let textColor: $$Props['textColor'] = undefined
 	export let textAlign: $$Props['textAlign'] = undefined
 	export let textAlignSm: $$Props['textAlignSm'] = undefined
@@ -108,49 +112,56 @@
 	export let textLead: $$Props['textLead'] = undefined
 	export let textHeading: $$Props['textHeading'] = undefined
 	export let textTruncate: $$Props['textTruncate'] = undefined
+	export let textOpacity: $$Props['textOpacity'] = undefined
+	//#endregion
 
-	// font
+	//#region font properties
 	export let fontSize: $$Props['fontSize'] = undefined
 	export let fontWeight: $$Props['fontWeight'] = undefined
 	export let fontStyle: $$Props['fontStyle'] = undefined
-	export let hidden: $$Props['hidden'] = undefined
+	//#endregion
 
-	// float
+	//#region float properties
 	export let float: $$Props['float'] = undefined
 	export let floatSm: $$Props['floatSm'] = undefined
 	export let floatMd: $$Props['floatMd'] = undefined
 	export let floatLg: $$Props['floatLg'] = undefined
 	export let floatXl: $$Props['floatXl'] = undefined
 	export let floatXxl: $$Props['floatXxl'] = undefined
+	//#endregion
 
-	// container
+	//#region container properties
 	export let container: $$Props['container'] = undefined
+	//#endregion
 
-	// max widths
+	//#region col properties
 	export let col: $$Props['col'] = undefined
 	export let colSm: $$Props['colSm'] = undefined
 	export let colMd: $$Props['colMd'] = undefined
 	export let colLg: $$Props['colLg'] = undefined
 	export let colXl: $$Props['colXl'] = undefined
 	export let colXxl: $$Props['colXxl'] = undefined
+	//#endregion
 
-	// order
+	//#region order properties
 	export let order: $$Props['order'] = undefined
 	export let orderSm: $$Props['orderSm'] = undefined
 	export let orderMd: $$Props['orderMd'] = undefined
 	export let orderLg: $$Props['orderLg'] = undefined
 	export let orderXl: $$Props['orderXl'] = undefined
 	export let orderXxl: $$Props['orderXxl'] = undefined
+	//#endregion
 
-	// offset
+	//#region offset properties
 	export let offset: $$Props['offset'] = undefined
 	export let offsetSm: $$Props['offsetSm'] = undefined
 	export let offsetMd: $$Props['offsetMd'] = undefined
 	export let offsetLg: $$Props['offsetLg'] = undefined
 	export let offsetXl: $$Props['offsetXl'] = undefined
 	export let offsetXxl: $$Props['offsetXxl'] = undefined
+	//#endregion
 
-	// Row
+	//#region row
 	export let row: $$Props['row'] = undefined
 	export let rowCols: $$Props['rowCols'] = undefined
 	export let rowColsSm: $$Props['rowColsSm'] = undefined
@@ -158,8 +169,9 @@
 	export let rowColsLg: $$Props['rowColsLg'] = undefined
 	export let rowColsXl: $$Props['rowColsXl'] = undefined
 	export let rowColsXxl: $$Props['rowColsXxl'] = undefined
+	//#endregion
 
-	// Row gutters
+	//#region row gutters
 	export let g: $$Props['g'] = undefined
 	export let gSm: $$Props['gSm'] = undefined
 	export let gMd: $$Props['gMd'] = undefined
@@ -168,17 +180,18 @@
 	export let gXxl: $$Props['gXxl'] = undefined
 	export let gx: $$Props['gx'] = undefined
 	export let gy: $$Props['gy'] = undefined
+	//#endregion
 
-	// Align items
+	//#region align items
 	export let alignItems: $$Props['alignItems'] = undefined
 	export let alignSelf: $$Props['alignSelf'] = undefined
 	export let justifyContent: $$Props['justifyContent'] = undefined
+	//#endregion
 
-	// Tab Index
-	export let tabindex: $$Props['tabindex'] = undefined
+	//#endregion
 
 	// forward events
-	export let forwardEvents: (element: HTMLElement) => unknown = () => ({})
+	export let forwardEvents: (element: HTMLElement) => any = () => ({})
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
@@ -326,7 +339,6 @@
 			id,
 			class: classes,
 			style,
-			tabindex,
 		}
 	}
 </script>
