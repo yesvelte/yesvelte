@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 
-	import { classname, forwardEventsBuilder } from '../utils/index'
+	import { classname, forwardEventsBuilder } from '../_utils/index'
 	import type { CssProps, ElProps } from './El.types'
 
 	type $$Props = Partial<ElProps>
