@@ -336,8 +336,7 @@ export interface ElProps extends CssProps {
 	class?: string
 	tag?: HTMLTags
 	element?: HTMLElement
-	cssPrefix?: string
+	componentName?: string
 	cssProps?: CssProps
-	style?: string
 	value?: unknown
 }

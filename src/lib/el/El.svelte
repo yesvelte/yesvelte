@@ -1,5 +1,7 @@
 <script lang="ts" context="module">
 	let globalCounter = 0
+	const elComponentName = 'el'
+	const elTagName = 'div'
 </script>
 
 <script lang="ts">
@@ -11,12 +13,16 @@
 
 	// default properties
 	export let element: $$Props['element'] = undefined
-	export let cssPrefix: $$Props['cssPrefix'] = 'el'
-	export let id: $$Props['id'] = cssPrefix + '_' + globalCounter++
-	export let style: $$Props['style'] = undefined
-	export let tag: $$Props['tag'] = 'div'
+	export let componentName: $$Props['componentName'] = elComponentName
+	export let id: $$Props['id'] = componentName + '_' + globalCounter++
+	export let tag: $$Props['tag'] = elTagName
 	export let cssProps: $$Props['cssProps'] = {}
 	export let value: $$Props['value'] = undefined
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
+	let classes: string | undefined
+	let defaultCssProps: CssProps
+	let elProps = {}
 
 	//#region CssProps
 	// gap properties
@@ -190,16 +196,7 @@
 
 	//#endregion
 
-	// forward events
-	export let forwardEvents: (element: HTMLElement) => any = () => ({})
-
-	let classes: string | undefined
-	let defaultCssProps: CssProps
-	let defaultCssPrefix = 'el'
-	let otherProps = {}
-
 	$: {
-		forwardEvents = forwardEventsBuilder(get_current_component())
 		defaultCssProps = {
 			// background properties
 			bgColor,
@@ -332,31 +329,24 @@
 			alignSelf,
 			justifyContent,
 		}
-		classes = classname(defaultCssPrefix, defaultCssProps, '', true)
-		if (cssPrefix) classes += ' ' + classname(cssPrefix, cssProps, $$props.class, true)
+		classes = classname(elComponentName, defaultCssProps, '', true)
+		if (componentName) classes += ' ' + classname(componentName, cssProps, $$props.class, true)
 
-		otherProps = {
+		elProps = {
 			id,
 			class: classes,
-			style,
 		}
 	}
 </script>
 
 {#if $$slots.default}
-	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...otherProps}>
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...elProps}>
 		<slot />
 	</svelte:element>
 {:else if tag === 'input'}
-	<input use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} bind:value />
+	<input use:forwardEvents bind:this={element} {...$$restProps} {...elProps} bind:value />
 {:else if tag === 'textarea'}
-	<textarea use:forwardEvents bind:this={element} {...$$restProps} {...otherProps} bind:value />
+	<textarea use:forwardEvents bind:this={element} {...$$restProps} {...elProps} bind:value />
 {:else}
-	<svelte:element
-		this={tag}
-		use:forwardEvents
-		bind:this={element}
-		{...$$restProps}
-		{...otherProps}
-	/>
+	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...elProps} />
 {/if}
