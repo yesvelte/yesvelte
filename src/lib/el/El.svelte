@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	let globalCounter: number = 0
+	let globalCounter = 0
 </script>
 
 <script lang="ts">
@@ -178,12 +178,12 @@
 	export let tabindex: $$Props['tabindex'] = undefined
 
 	// forward events
-	export let forwardEvents: (element: HTMLElement) => any = () => ({})
+	export let forwardEvents: (element: HTMLElement) => unknown = () => ({})
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
-	let defaultCssPrefix: string = 'el'
-	let otherProps: $$Props['otherProps'] = {}
+	let defaultCssPrefix = 'el'
+	let otherProps = {}
 
 	$: {
 		forwardEvents = forwardEventsBuilder(get_current_component())

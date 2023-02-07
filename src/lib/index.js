@@ -1,1 +1,1 @@
-// Reexport your entry components here
+export { El } from './el'

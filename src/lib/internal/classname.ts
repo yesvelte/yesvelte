@@ -2,7 +2,12 @@ import { paramCase } from 'change-case'
 
 const prefix = 'u'
 
-export const classname = (root?: string, scoped?: any | any[], global?: any | any[], includeName?: boolean) => {
+export const classname = (
+	root?: string,
+	scoped?: any | any[],
+	global?: any | any[],
+	includeName?: boolean
+) => {
 	root = paramCase(root || '')
 	scoped = [scoped].flat()
 	global = [global].flat()
