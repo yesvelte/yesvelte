@@ -1,0 +1,36 @@
+$prefix-preview: $prefix + 'preview';
+
+.#{$prefix-preview} {
+	margin-bottom: 0.5rem;
+
+	&-vertical {
+		.#{$prefix-preview}-body {
+			flex-direction: column;
+		}
+	}
+
+	&-body {
+		display: block;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 1rem;
+		gap: 0.5rem;
+	}
+
+	&-code {
+		position: relative;
+
+		&-copy-button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none !important;
+		}
+
+		pre {
+			margin: 0;
+			border: transparent;
+		}
+	}
+}

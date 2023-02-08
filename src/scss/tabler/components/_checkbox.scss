@@ -1,0 +1,38 @@
+//
+// Date Picker
+//
+
+$checkbox-wrapper-props: (
+	null: '.form-check',
+	inline: '.form-check-inline',
+	reverse: '.form-check-reverse'
+);
+
+$checkbox-props: (
+	null: '.form-check-input',
+	wrapper: $checkbox-wrapper-props,
+	label: '.form-check-label',
+	description: '.form-check-description'
+);
+
+.#{$prefix-checkbox} {
+	@include apply-props($checkbox-props);
+
+	@each $key, $value in $theme-colors {
+		&-color-#{$key}:checked {
+			background-color: #{$value} !important;
+		}
+	}
+
+	&-description {
+		@each $key, $value in $theme-colors {
+			&-color-#{$key} {
+				color: #{$value} !important;
+			}
+		}
+	}
+
+	&-indeterminate {
+		@extend .form-check-input, [type='checkbox'], :indeterminate;
+	}
+}

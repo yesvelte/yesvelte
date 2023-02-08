@@ -2,4 +2,8 @@
 	import { El } from '$lib'
 </script>
 
-<El mb="2" row container alignSelf="center" class="test" tag="h1">test</El>
+<El container row>
+	<El mb="2" col border class="test" tag="h1"
+		>test <button class="u-button u-button-color-primary">Submit</button>
+	</El>
+</El>

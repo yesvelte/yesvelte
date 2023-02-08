@@ -1,0 +1,42 @@
+//
+// Icon
+//
+
+$icon-sizes: (
+	xs: 0.75rem,
+	sm: 0.875rem,
+	md: 1rem,
+	lg: 1.25rem,
+	xl: 1.5rem,
+	1x: 1rem,
+	2x: 2rem,
+	3x: 3rem,
+	4x: 4rem,
+	5x: 5rem,
+	6x: 6rem,
+	7x: 7rem,
+	8x: 8rem,
+	9x: 9rem
+);
+
+$props: (
+	null: '.icon',
+	filled: '.icon-filled',
+	color: generate_props($theme_colors, ('.text-')),
+	size: generate_props($icon-sizes, ('.icon-size-'))
+);
+
+.#{$prefix-icon} {
+	@include apply-props($props);
+
+	@each $key, $value in $icon-sizes {
+		&-size-#{$key} {
+			width: #{$value} !important;
+			height: #{$value} !important;
+		}
+	}
+
+	* {
+		stroke-width: 1.5px;
+	}
+}

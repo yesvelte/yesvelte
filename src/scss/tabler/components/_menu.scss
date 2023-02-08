@@ -1,0 +1,7 @@
+$menu-props: (
+	null: '.dropdown-menu'
+);
+
+.#{$prefix-menu} {
+	@include apply-props($menu-props);
+}

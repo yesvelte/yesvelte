@@ -1,0 +1,23 @@
+$props: (
+	null: '.alert' '.d-flex',
+	title: '.alert-title',
+	dismissible: '.alert-dismissible',
+	end: '.btn-close',
+	color: generate_props($theme_colors, ('.alert-')),
+	start: '.alert-icon',
+	filled: '.alert-important'
+);
+
+.#{$prefix-alert} {
+	@include apply-props($props);
+
+	&-filled {
+		.#{$prefix-alert}-title {
+			color: #fff;
+		}
+
+		.#{$prefix-alert}-end {
+			@extend .btn-close-white;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+//
+// App
+//
+$app-props: (
+	null: '.page',
+	theme: (
+		dark: '.theme-dark',
+		light: '.theme-light'
+	)
+);
+
+.#{$prefix-app} {
+	@include apply-props($app-props);
+}
+
+//
+// App Body
+//
+$app-body-props: (
+	null: '.page-wrapper'
+);
+
+.#{$prefix-app-body} {
+	@include apply-props($app-body-props);
+}
+
+//
+// App Header
+//
+$app-header-props: (
+	null: '.navbar' '.navbar-expand-md' '.d-print-none',
+	theme: (
+		dark: '.navbar-dark',
+		light: '.navbar-light'
+	)
+);
+
+.#{$prefix-app-header} {
+	@include apply-props($app-header-props);
+}
+
+//
+// App Footer
+//
+$app-footer-props: (
+	null: '.footer' '.footer-transparent' '.d-print-none'
+);
+
+.#{$prefix-app-footer} {
+	@include apply-props($app-footer-props);
+}

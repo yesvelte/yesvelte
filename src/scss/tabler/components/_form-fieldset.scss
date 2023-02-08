@@ -1,0 +1,5 @@
+.#{$prefix-form-fieldset} > fieldset {
+	@extend .form-fieldset;
+	background: #fbfbfb;
+	border: 1px solid #e9e9e9;
+}

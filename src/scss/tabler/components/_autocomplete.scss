@@ -1,0 +1,39 @@
+//
+// Autocomplete
+//
+
+@import '@tabler/core/src/scss/vendor/tom-select';
+
+select.#{$prefix-autocomplete}-loaded {
+	display: none;
+}
+
+$props: (
+	null: '.form-select',
+	dropdown: (
+		'.dropdown-menu',
+		'.w-100'
+	),
+	option: '.dropdown-item',
+	size: (
+		sm: '.form-select-sm',
+		md: '.form-select',
+		lg: '.form-select-lg'
+	),
+	state: (
+		valid: '.is-valid',
+		invalid: '.is-invalid'
+	)
+);
+
+.#{$prefix-autocomplete} {
+	@include apply-props($props);
+
+	&-dropdown {
+		top: calc(100% + 4px);
+	}
+
+	.no-results {
+		padding: 3px 0.75rem;
+	}
+}

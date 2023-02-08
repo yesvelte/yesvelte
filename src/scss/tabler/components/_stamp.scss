@@ -1,0 +1,70 @@
+//
+// Stamp
+//
+
+$props: (
+	null: '.card-stamp'
+);
+
+$card-stamp-sizes: (
+	sm: '5rem',
+	md: '6rem',
+	lg: '7rem'
+);
+
+.#{$prefix-stamp} {
+	@include apply-props($props);
+
+	> .icon {
+		@extend .card-stamp-icon;
+	}
+
+	@each $key, $value in $card-stamp-sizes {
+		&-size-#{$key} {
+			--u-stamp-size: #{$value};
+		}
+	}
+
+	@each $key, $value in $theme-colors {
+		&-bg-color-#{$key} > .icon {
+			@extend .bg-#{$key};
+		}
+
+		&-text-color-#{$key} > .icon {
+			@extend .text-#{$key};
+		}
+	}
+
+	&-icon-position-top-start {
+		top: 0;
+		left: 0;
+
+		.#{$prefix}icon {
+			transform: rotate(-10deg);
+			left: calc(var(--u-stamp-size) * -0.25);
+		}
+	}
+
+	&-icon-position-bottom-start {
+		bottom: 0;
+		left: 0;
+		top: auto;
+
+		.#{$prefix}icon {
+			top: auto;
+			left: calc(var(--u-stamp-size) * -0.25);
+			bottom: calc(var(--u-stamp-size) * -0.25);
+		}
+	}
+
+	&-icon-position-bottom-end {
+		bottom: 0;
+		top: auto;
+		right: 0;
+
+		.#{$prefix}icon {
+			transform: rotate(-10deg);
+			top: calc(100% - (var(--u-stamp-size) * 0.75));
+		}
+	}
+}

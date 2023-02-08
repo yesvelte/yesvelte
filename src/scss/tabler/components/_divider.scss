@@ -1,0 +1,23 @@
+//
+// Divider
+//
+
+$props: (
+	color: generate_props($theme_colors, ('.text-')),
+	alignment: (
+		'start': '.hr-text-left',
+		'center': '.hr-text-center',
+		'end': '.hr-text-right'
+	),
+	direction: (
+		'vertical': '.vr'
+	)
+);
+
+.#{$prefix-divider} {
+	@include apply-props($props);
+
+	&:not(.#{$prefix-divider}-direction-vertical) {
+		@extend .hr-text;
+	}
+}

@@ -1,0 +1,47 @@
+//
+// Button
+//
+
+$props: (
+	null: '.btn' '.gap-2',
+	pill: '.btn-pill',
+	tile: '.btn-square',
+	disabled: '.disabled',
+	active: '.active',
+	loading: '.btn-loading',
+	icon: '.btn-icon',
+	size: (sm: '.btn-sm',
+		lg: '.btn-lg' '.gap-3'
+	),
+	color: generate_props($theme_colors, ('.btn-'))
+);
+
+.#{$prefix-button} {
+	@include apply-props($props);
+
+	@each $key,
+	$value in $theme-colors {
+		&-color-#{$key}.#{$prefix-button}-outline {
+			@extend .btn-outline-#{$key};
+			--#{$prefix}btn-bg: transparent;
+		}
+
+		&-color-#{$key}.#{$prefix-button}-ghost {
+			@extend .btn-ghost-#{$key};
+			--#{$prefix}btn-bg: transparent;
+		}
+	}
+
+	&.#{$prefix-button}-outline {
+		--u-btn-bg: transparent;
+		--u-btn-disabled-bg: transparent;
+	}
+
+	&>.#{$prefix}icon {
+		margin: 0 !important;
+	}
+
+	&>.#{$prefix}avatar {
+		margin: 0 !important;
+	}
+}

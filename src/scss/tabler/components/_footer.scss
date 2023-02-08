@@ -1,0 +1,8 @@
+$props: (
+	null: '.footer',
+	sticky: '.mt-auto'
+);
+
+.#{$prefix-footer} {
+	@include apply-props($props);
+}

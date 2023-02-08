@@ -1,0 +1,12 @@
+//
+// Avatar List
+//
+
+$props: (
+	null: '.avatar-list',
+	stacked: '.avatar-list-stacked'
+);
+
+.#{$prefix-avatar-list} {
+	@include apply-props($props);
+}

@@ -1,0 +1,32 @@
+//
+// Radio
+//
+
+$wrapper-props: (
+	null: '.form-check',
+	inline: '.form-check-inline',
+	reverse: '.form-check-reverse'
+);
+
+.#{$prefix-radio-wrapper} {
+	@include apply-props($wrapper-props);
+}
+
+$props: (
+	null: '.form-check-input',
+	label: '.form-check-label',
+	description: '.form-check-description'
+);
+
+.#{$prefix-radio} {
+	@include apply-props($props);
+
+	@each $key, $value in $theme-colors {
+		&-color-#{$key}:checked {
+			background-color: #{$value} !important;
+		}
+	}
+}
+
+.#{$prefix-radio-group} {
+}

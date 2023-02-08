@@ -1,0 +1,138 @@
+$dialog-props: (
+	null: ('.modal',
+		'.fade'
+	),
+	container: '.modal-dialog',
+	backdrop: (null: ('.modal-backdrop',
+			'.fade'
+		),
+		open: '.show',
+		absolute: '.position-absolute'
+	),
+	open: '.show',
+	absolute: '.position-absolute',
+	close: '.btn-close',
+	body: '.modal-body',
+	content: '.modal-content',
+	footer: '.modal-footer',
+	header: '.modal-header',
+	title: '.modal-title'
+);
+
+.#{$prefix-dialog} {
+	@include apply-props($dialog-props);
+
+	&-placement-center .#{$prefix-dialog-container} {
+		@extend .modal-dialog-centered;
+	}
+
+	&-scrollable .#{$prefix-dialog-container} {
+		@extend .modal-dialog-scrollable;
+	}
+
+	&-backdrop {
+		pointer-events: none;
+		width: 100%;
+		height: 100%;
+	}
+
+	&-open {
+		display: block;
+	}
+
+	&-size-full {
+		.#{$prefix-dialog}-container {
+			@extend .modal-full-width;
+		}
+	}
+
+	@each $size in sm,
+	lg,
+	xl {
+		&-size-#{$size} .#{$prefix-dialog-container} {
+			@extend .modal-#{$size};
+		}
+	}
+}
+
+.u-body-dialog-open {
+	overflow: hidden;
+}
+
+// $prefix-dialog: $prefix + 'dialog';
+// $prefix-dialog-container: $prefix + 'dialog-container';
+
+// .#{$prefix-dialog} {
+// 	@extend .modal;
+
+// 	&-placement-center .#{$prefix-dialog-container} {
+// 		@extend .modal-dialog-centered;
+// 	}
+
+// 	&-scrollable .#{$prefix-dialog-container} {
+// 		@extend .modal-dialog-scrollable;
+// 	}
+
+// 	&-container {
+// 		@extend .modal-dialog;
+// 	}
+
+// 	&-open {
+// 		@extend .d-block;
+// 	}
+
+// 	&-backdrop {
+// 		@extend .modal-backdrop;
+// 		@extend .fade;
+// 		display: none;
+
+// 		&-open {
+// 			display: block;
+// 			@extend .show;
+// 			width: 100%;
+// 			height: 100%;
+// 		}
+
+// 		&-absolute {
+// 			@extend .position-absolute;
+// 		}
+// 	}
+
+// 	&-close {
+// 		@extend .btn-close;
+// 	}
+
+// 	&-absolute {
+// 		@extend .position-absolute;
+// 	}
+
+// 	&-body {
+// 		@extend .modal-body;
+// 	}
+
+// 	&-content {
+// 		@extend .modal-content;
+// 	}
+
+// 	&-footer {
+// 		@extend .modal-footer;
+// 	}
+
+// 	&-header {
+// 		@extend .modal-header;
+// 	}
+
+// 	&-title {
+// 		@extend .modal-title;
+// 	}
+
+// 	@each $size in sm, lg, xl {
+// 		&-size-#{$size} .#{$prefix-dialog-container} {
+// 			@extend .modal-#{$size};
+// 		}
+// 	}
+// }
+
+// .u-body-dialog-open {
+// 	overflow: hidden;
+// }

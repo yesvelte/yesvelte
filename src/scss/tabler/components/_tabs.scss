@@ -1,0 +1,51 @@
+$tabs-props: (
+	null: (
+		'.d-flex'
+	),
+	vertical: (
+		'.flex-row'
+	)
+);
+
+$tab-props: (
+	list: (
+		null: '.nav',
+		pills: '.nav-pills',
+		tabs: '.nav-tabs',
+		grow: '.nav-fill',
+		card: '.card-header-tabs'
+	),
+	content: '.tab-content',
+	pane: '.tab-pane' '.show' '.active',
+	item: (
+		null: '.nav-item',
+		link: (
+			null: '.nav-link',
+			active: '.active',
+			disabled: '.disabled'
+		)
+	)
+);
+
+.#{$prefix-tabs} {
+	@include apply-props($tabs-props);
+	flex-direction: column;
+
+	&-vertical {
+		.#{$prefix-tab}-list {
+			flex-direction: column;
+		}
+	}
+}
+
+.#{$prefix-tab} {
+	@include apply-props($tab-props);
+
+	&-item-link > .#{$prefix-icon} {
+		@extend .me-2;
+	}
+}
+
+.#{$prefix-card}-header > .#{$prefix-tab}-list {
+	@extend .card-header-tabs;
+}

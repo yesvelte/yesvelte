@@ -1,0 +1,53 @@
+//
+// FormField
+//
+$props-form-field: (
+	null: '.mb-3'
+);
+
+.#{$prefix-form-field} {
+	@include apply-props($props-form-field);
+
+	&-hint {
+		margin-top: 0.25rem;
+		font-size: 85.714285%;
+
+		&-state {
+			&-valid {
+				color: #{$success};
+			}
+
+			&-invalid {
+				color: #{$danger};
+			}
+		}
+	}
+}
+
+.#{$prefix-form-input} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-checkbox} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-checkbox-group} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-file-uploader} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-radio-group} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-switch} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-textarea} {
+	@extend .#{$prefix-form-field};
+}

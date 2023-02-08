@@ -1,0 +1,41 @@
+//
+// Date Picker
+//
+
+$wrapper-props: (
+	null: '.input-group',
+	size: (
+		sm: '.input-group-sm',
+		md: '.input-group',
+		lg: '.input-group-lg'
+	)
+);
+
+$props: (
+	null: '.form-control',
+	size: (
+		sm: '.form-control-sm',
+		md: '.form-control',
+		lg: '.form-control-lg'
+	),
+	state: (
+		'valid': '.is-valid',
+		'invalid': '.is-invalid'
+	),
+	border: (
+		rounded: '.form-control-rounded',
+		flush: '.form-control-flush'
+	)
+);
+
+.#{$prefix-date-picker} {
+	@include apply-props($props);
+}
+
+.#{$prefix-date-picker-wrapper} {
+	@include apply-props($wrapper-props);
+
+	& > span {
+		@extend .input-group-text;
+	}
+}

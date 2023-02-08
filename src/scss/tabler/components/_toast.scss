@@ -1,0 +1,14 @@
+$prefix-toast: $prefix + 'toast';
+
+$toast-props: (
+	null: '.toast',
+	close: '.btn-close' '.ms-2',
+	body: '.toast-body',
+	header: '.toast-header',
+	show: '.show',
+	container: '.toast-container'
+);
+
+.#{$prefix-toast} {
+	@include apply-props($toast-props);
+}

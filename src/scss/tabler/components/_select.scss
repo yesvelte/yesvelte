@@ -1,0 +1,20 @@
+//
+// Select
+//
+
+$props: (
+	null: '.form-select',
+	size: (
+		sm: '.form-select-sm',
+		md: '.form-select',
+		lg: '.form-select-lg'
+	),
+	state: (
+		valid: '.is-valid',
+		invalid: '.is-invalid'
+	)
+);
+
+.#{$prefix-select} {
+	@include apply-props($props);
+}

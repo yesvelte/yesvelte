@@ -1,0 +1,38 @@
+$offcanvas-placements: 'start' 'end' 'top' 'bottom';
+
+$props: (
+	null: '.offcanvas',
+	show: '.show',
+	placement: generate_props($offcanvas-placements, ('.offcanvas-')),
+	header: (
+		null: '.offcanvas-header',
+		btn: '.btn-close',
+		title: '.offcanvas-title'
+	),
+	body: '.offcanvas-body',
+	scroll-static: '.offcanvas-scroll-static'
+);
+
+.#{$prefix-offcanvas} {
+	@include apply-props($props);
+
+	&-backdrop {
+		width: 100vw !important;
+		height: 100vh !important;
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		top: 0 !important;
+		left: 0 !important;
+		bottom: 0 !important;
+		right: 0 !important;
+		z-index: 999;
+	}
+}
+
+body:has(.#{$prefix-offcanvas}-no-scroll) {
+	overflow-y: hidden !important;
+}
+
+.#{$prefix-offcanvas}-no-scroll {
+	visibility: hidden !important;
+}

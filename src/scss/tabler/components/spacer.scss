@@ -1,0 +1,8 @@
+//
+// spacer
+//
+$prefix-spacer: $prefix + 'spacer';
+
+.#{$prefix-spacer} {
+	flex-grow: 1 !important;
+}

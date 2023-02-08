@@ -1,0 +1,42 @@
+@function generate_props($map, $extends) {
+	$result: ();
+
+	@each $entryKey, $entryValue in $map {
+		$extend_maps: ();
+
+		@each $extend in $extends {
+			$extend_maps: append($extend_maps, $extend + $entryKey);
+		}
+
+		$result: map-merge(
+			$result,
+			(
+				$entryKey: $extend_maps,
+			)
+		);
+	}
+
+	@return $result;
+}
+
+@mixin apply-props($mappings) {
+	@each $key, $values in $mappings {
+		$prefix: '-';
+
+		@if $key== '' or $key==null {
+			$prefix: '';
+		}
+
+		&#{$prefix}#{$key} {
+			@if type-of($values) == 'map' {
+				@include apply-props($values);
+			} @else if type-of($values) == 'list' {
+				@each $value in $values {
+					@extend #{$value} !optional;
+				}
+			} @else {
+				@extend #{$values} !optional;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+$breadcrumb-variants: (
+	dots: '·',
+	arrows: '›',
+	bullets: '\02022'
+) !default;
+
+$breadcrumb-props: (
+	null: '.breadcrumb',
+	item: (
+		null: '.breadcrumb-item',
+		active: '.active'
+	),
+	separator: generate_props($breadcrumb-variants, '.breadcrumb-')
+);
+
+.#{$prefix-breadcrumb} {
+	@include apply-props($breadcrumb-props);
+}

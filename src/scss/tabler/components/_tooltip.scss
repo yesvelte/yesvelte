@@ -1,0 +1,18 @@
+// --------------------------------------------------
+// Tooltip component
+// --------------------------------------------------
+
+$tooltip-props: (
+	null: (
+		'.tooltip',
+		'.bs-tooltip-auto',
+		'.fade',
+		'.show'
+	),
+	arrow: '.tooltip-arrow',
+	inner: '.tooltip-inner'
+);
+
+.#{$prefix-tooltip} {
+	@include apply-props($tooltip-props);
+}

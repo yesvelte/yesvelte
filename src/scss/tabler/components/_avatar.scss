@@ -1,0 +1,45 @@
+//
+// Avatar
+//
+
+$props: (
+	null: '.avatar',
+	pill: '.rounded-circle',
+	rounded: '.rounded',
+	active: '.active',
+	group: '.avatar-list',
+	group-stacked: '.avatar-list-stacked'
+);
+
+.#{$prefix-avatar} {
+	@include apply-props($props);
+
+	& > .#{$prefix}img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&-tile {
+		border-radius: 0;
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+	}
+
+	@each $key, $value in $theme-colors {
+		&-color-#{$key} {
+			@extend .bg-#{$key + ''}-lt;
+		}
+	}
+
+	@each $size in xs, sm, md, lg, xl {
+		&-size-#{$size} {
+			@extend .avatar-#{$size};
+		}
+	}
+}

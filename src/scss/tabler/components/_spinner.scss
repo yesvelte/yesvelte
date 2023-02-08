@@ -1,0 +1,16 @@
+$props: (
+	null: '.spinner',
+	size: (
+		sm: '.spinner-border-sm',
+		lg: '.spinner-border-lg'
+	),
+	animate: (
+		border: '.spinner-border',
+		grow: '.spinner-grow'
+	),
+	color: generate_props($theme_colors, ('.text-'))
+);
+
+.#{$prefix-spinner} {
+	@include apply-props($props);
+}

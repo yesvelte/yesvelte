@@ -1,0 +1,76 @@
+$table-props: (
+	null: '.table' '.table-vcenter',
+	border: '.table-bordered',
+	border-0: '.table-borderless',
+	nowrap: '.table-nowrap',
+	hover: '.table-hover',
+	sort: '.table-sort',
+	striped: (
+		null: '.table-striped',
+		columns: '.table-striped-columns'
+	),
+	sm: '.table-sm',
+	md: '.table-md',
+	color: generate_props($theme-colors, ('.table-'))
+);
+
+.#{$prefix-table-parent} {
+	$props: (
+		null: '.table-parent',
+		responsive: (
+			null: '.table-responsive',
+			sm: '.table-responsive-sm',
+			md: '.table-responsive-md',
+			lg: '.table-responsive-lg',
+			xl: '.table-responsive-xl'
+		)
+	);
+
+	@include apply-props($props);
+}
+
+.#{$prefix-table} {
+	@include apply-props($table-props);
+
+	&-wrap > :not(caption) > * > * {
+		white-space: unset;
+	}
+}
+
+.#{$prefix-table-row} {
+	$props: (
+		'color': generate_props($theme-colors, ('.table-')),
+		active: '.table-active'
+	);
+
+	@include apply-props($props);
+}
+
+.#{$prefix-table-cell} {
+	$props: (
+		color: generate_props($theme-colors, ('.table-')),
+		truncate: '.td-truncate',
+		active: '.table-active'
+	);
+
+	@include apply-props($props);
+}
+
+.#{$prefix-table-row} {
+	$props: (
+		color: generate_props($theme-colors, ('.table-')),
+		active: '.table-active'
+	);
+
+	@include apply-props($props);
+}
+
+.#{$prefix-table-cell} {
+	$props: (
+		color: generate_props($theme-colors, ('.table-')),
+		truncate: '.td-truncate',
+		active: '.table-active'
+	);
+
+	@include apply-props($props);
+}

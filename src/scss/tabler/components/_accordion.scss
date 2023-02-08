@@ -1,0 +1,21 @@
+$accordions-props: (
+	null: '.accordion'
+);
+
+.#{$prefix-accordions} {
+	@include apply-props($accordions-props);
+}
+
+$accordion-props: (
+	null: '.accordion-item',
+	header: '.accordion-header',
+	body: '.accordion-body',
+	button: (
+		'': '.accordion-button',
+		collapsed: '.collapsed'
+	)
+);
+
+.#{$prefix-accordion} {
+	@include apply-props($accordion-props);
+}

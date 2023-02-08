@@ -1,0 +1,17 @@
+$prefix-popover: $prefix + 'popover';
+
+$popover-props: (
+	null: (
+		'.popover',
+		'.bs-popover-auto',
+		'.fade',
+		'.show'
+	),
+	body: '.popover-body',
+	header: '.popover-header',
+	arrow: '.popover-arrow'
+);
+
+.#{$prefix-popover} {
+	@include apply-props($popover-props);
+}

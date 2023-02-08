@@ -1,0 +1,7 @@
+//
+// Fieldset
+//
+
+.#{$prefix-fieldset} {
+	@extend .form-fieldset;
+}

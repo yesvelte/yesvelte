@@ -1,0 +1,29 @@
+$props: (
+	null: '.badge',
+	outline: '.badge-outline',
+	notification: '.badge-notification',
+	blink: '.badge-blink',
+	pill: '.badge-pill' // 'color': generate_props($theme_colors, ('.bg-', '.text-bg-'))
+);
+
+.#{$prefix-badge} {
+	@include apply-props($props);
+
+	&.#{$prefix-badge}-tile {
+		border-radius: 0;
+	}
+
+	@each $color, $value in $theme-colors {
+		&-color-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
+			@extend .bg-#{$color};
+		}
+
+		&-color-#{$color}.#{$prefix-badge}-outline:not(.#{$prefix-badge}-ghost) {
+			@extend .text-#{$color};
+		}
+
+		&-color-#{$color}.#{$prefix-badge}-ghost:not(.#{$prefix-badge}-outline) {
+			@extend .bg-#{$color}-lt;
+		}
+	}
+}

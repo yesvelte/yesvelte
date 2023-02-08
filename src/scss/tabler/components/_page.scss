@@ -1,0 +1,34 @@
+//
+// Page
+//
+$page-props: (
+	null: '.page-wrapper'
+);
+
+.#{$prefix-page} {
+	@include apply-props($page-props);
+}
+
+//
+// Page Body
+//
+$page-body-props: (
+	null: '.page-body'
+);
+
+.#{$prefix-page-body} {
+	@include apply-props($page-body-props);
+}
+
+//
+// Page Header
+//
+$page-header-props: (
+	null: '.page-header',
+	title: '.page-title',
+	pretitle: '.page-pretitle'
+);
+
+.#{$prefix-page-header} {
+	@include apply-props($page-header-props);
+}

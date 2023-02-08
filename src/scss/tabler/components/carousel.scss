@@ -1,0 +1,93 @@
+// $prefix-carousel: $prefix + "carousel";
+
+// .#{$prefix-carousel} {
+// 	@extend .carousel;
+
+// 	&-item {
+// 		@extend .carousel-item;
+// 	}
+
+// 	&-item-active {
+// 		@extend .active;
+// 	}
+
+// 	&-inner {
+// 		@extend .carousel-inner;
+// 	}
+// }
+
+.u-carousel {
+	@extend .carousel;
+}
+
+.u-carousel-item {
+	@extend .carousel-item;
+}
+
+.u-carousel-item-active {
+	@extend .active;
+}
+
+.u-slide {
+	@extend .slide !optional;
+}
+
+.u-carousel-body {
+	@extend .carousel-inner;
+}
+
+.u-carousel-button-direction-next {
+	@extend .carousel-control-next;
+}
+
+.u-carousel-button-icon-next {
+	@extend .carousel-control-next-icon;
+}
+
+.u-carousel-button-direction-prev {
+	@extend .carousel-control-prev;
+}
+
+.u-carousel-button-icon-prev {
+	@extend .carousel-control-prev-icon;
+}
+
+// 	@extend .carousel;
+// 	@extend .slide !optional;
+
+// 	&-body {
+// 		@extend .carousel-inner;
+// 	}
+
+// 	&-item {
+// 		@extend .carousel-item;
+// 	}
+
+// 	&-item-active {
+// 		@extend .active;
+// 	}
+
+// 	&-indicators {
+// 		@extend .carousel-indicators;
+// 	}
+
+// 	&-indicator-active {
+// 		@extend .active;
+// 	}
+
+// 	&-button-text {
+// 		@extend .visually-hidden;
+// 	}
+
+// 	&-transition {
+// 		&-fade {
+// 			@extend .carousel-fade;
+// 		}
+
+// 	}
+
+// 	// &-transition-slide {
+// 	// 	@extend .slide;
+// 	// }
+
+// }
