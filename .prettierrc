@@ -6,6 +6,11 @@
 	"printWidth": 100,
 	"plugins": ["prettier-plugin-svelte"],
 	"pluginSearchDirs": ["."],
+	"svelteAllowShorthand": true,
+	"svelteBracketNewLine": false,
+	"svelteIndentScriptAndStyle": true,
+	"svelteSortOrder": "options-scripts-markup-styles",
+	"svelteStrictMode": false,
 	"overrides": [
 		{
 			"files": "*.svelte",
