@@ -20,8 +20,8 @@
 	export let pill: $$Props['pill'] = undefined
 	export let tile: $$Props['tile'] = undefined
 
-	let cssProps: any = {}
-	let otherProps: any = {}
+	let cssProps: ButtonProps = {}
+	let props: ButtonProps = {}
 	$: {
 		cssProps = {
 			color,
@@ -35,7 +35,7 @@
 			pill,
 			tile,
 		}
-		otherProps = {
+		props = {
 			tag: href ? 'a' : tag,
 			componentName,
 			role: 'button',
@@ -45,7 +45,7 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps} on:click>
+<El {...$$restProps} {cssProps} {...props} on:click>
 	<slot>
 		{#if value}
 			{value}

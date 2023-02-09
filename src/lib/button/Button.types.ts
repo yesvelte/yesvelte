@@ -20,4 +20,5 @@ export interface ButtonProps extends Partial<ElProps> {
 	tile?: boolean
 	ghost?: boolean
 	href?: string
+	role?: string
 }
