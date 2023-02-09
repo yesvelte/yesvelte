@@ -3,7 +3,7 @@ $props: (
 	outline: '.badge-outline',
 	notification: '.badge-notification',
 	blink: '.badge-blink',
-	pill: '.badge-pill' // 'color': generate_props($theme_colors, ('.bg-', '.text-bg-'))
+	pill: '.badge-pill' // 'color': generate_props($theme_colors, ('.bg-', '.text-bg-')),
 );
 
 .#{$prefix-badge} {

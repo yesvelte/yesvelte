@@ -10,7 +10,8 @@ $props: (
 	active: '.active',
 	loading: '.btn-loading',
 	icon: '.btn-icon',
-	size: (sm: '.btn-sm',
+	size: (
+		sm: '.btn-sm',
 		lg: '.btn-lg' '.gap-3'
 	),
 	color: generate_props($theme_colors, ('.btn-'))
@@ -19,8 +20,7 @@ $props: (
 .#{$prefix-button} {
 	@include apply-props($props);
 
-	@each $key,
-	$value in $theme-colors {
+	@each $key, $value in $theme-colors {
 		&-color-#{$key}.#{$prefix-button}-outline {
 			@extend .btn-outline-#{$key};
 			--#{$prefix}btn-bg: transparent;
@@ -37,11 +37,11 @@ $props: (
 		--u-btn-disabled-bg: transparent;
 	}
 
-	&>.#{$prefix}icon {
+	& > .#{$prefix}icon {
 		margin: 0 !important;
 	}
 
-	&>.#{$prefix}avatar {
+	& > .#{$prefix}avatar {
 		margin: 0 !important;
 	}
 }

@@ -1,9 +1,12 @@
 $dialog-props: (
-	null: ('.modal',
+	null: (
+		'.modal',
 		'.fade'
 	),
 	container: '.modal-dialog',
-	backdrop: (null: ('.modal-backdrop',
+	backdrop: (
+		null: (
+			'.modal-backdrop',
 			'.fade'
 		),
 		open: '.show',
@@ -46,9 +49,7 @@ $dialog-props: (
 		}
 	}
 
-	@each $size in sm,
-	lg,
-	xl {
+	@each $size in sm, lg, xl {
 		&-size-#{$size} .#{$prefix-dialog-container} {
 			@extend .modal-#{$size};
 		}
