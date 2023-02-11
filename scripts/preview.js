@@ -49,14 +49,18 @@ export default function previewProcessor() {
 					if (!srcAttribute) throw Error("Preview doesn't have src prop")
 
 					/** @type {string} */
-					const relativeSrc = srcAttribute.value[0]?.data
+					const relativeSrc = './examples/' + srcAttribute.value[0]?.data
+					console.log('relativeSrc', relativeSrc)
+
 					if (!relativeSrc) throw Error("Preview's src should be path to example source code")
 
 					const absoluteSrc = path.resolve(path.dirname(filename), relativeSrc)
 					if (!absoluteSrc) throw Error('Cannot locate file: ' + relativeSrc)
+					console.log('absoluteSrc', absoluteSrc)
 
 					const sourceCode = fs.readFileSync(absoluteSrc, 'utf-8')
 					if (!sourceCode) throw Error('Cannot load ' + relativeSrc)
+					console.log('sourceCode', sourceCode)
 
 					const {
 						markup: previewMarkup,
@@ -72,14 +76,15 @@ export default function previewProcessor() {
 					result.appendRight(index, ' markup={`' + previewMarkup + '`}')
 
 					if (previewScript) {
-						console.log(previewScript)
-						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/\`/g, '\\`')
-
+						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/`/g, '\\`')
+						console.log(relativeSrc)
+						const xx = `import BackgroundColor from '../routes/docs/BackgroundColor.svelte'`
 						if (escaped.match(/^<script\slang="ts">/)) {
-							escaped = escaped.replace(/<script\slang="ts">/, '<script>')
+							escaped = escaped.replace(/<script\slang="ts">/, '<script lang="ts">\n' + xx + '\n')
+							console.log(escaped)
 						}
 
-						result.appendRight(index, ' script={`' + escaped + '`}')
+						result.appendRight(index, ' script={`' + previewScript + '`}')
 					}
 
 					if (previewStyle) result.appendRight(index, ' style={`' + previewStyle + '`}')
@@ -89,7 +94,7 @@ export default function previewProcessor() {
 			// attach script and style tags
 			if (script) result.prependLeft(0, script)
 			if (style) result.appendRight(result.length(), style)
-			console.log(result.toString())
+
 			return {
 				code: result.toString(),
 				map: result.generateMap({ hires: true, file: filename }),

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import BackgroundColor from '../routes/docs/BackgroundColor.svelte'
-	export let component = BackgroundColor
+	// import BackgroundColor from './BackgroundColor.svelte'
+	export let component: any = undefined
 
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
@@ -8,7 +8,7 @@
 	export let src: string | undefined = undefined
 </script>
 
-<svelte:component this={BackgroundColor} />
+<svelte:component this={component} />
 <h3>Preview</h3>
 <div>
 	<slot />
