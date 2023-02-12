@@ -49,18 +49,15 @@ export default function previewProcessor() {
 					if (!srcAttribute) throw Error("Preview doesn't have src prop")
 
 					/** @type {string} */
-					const relativeSrc = './examples/' + srcAttribute.value[0]?.data
-					console.log('relativeSrc', relativeSrc)
+					const relativeSrc = srcAttribute.value[0]?.data
 
 					if (!relativeSrc) throw Error("Preview's src should be path to example source code")
 
 					const absoluteSrc = path.resolve(path.dirname(filename), relativeSrc)
 					if (!absoluteSrc) throw Error('Cannot locate file: ' + relativeSrc)
-					console.log('absoluteSrc', absoluteSrc)
 
 					const sourceCode = fs.readFileSync(absoluteSrc, 'utf-8')
 					if (!sourceCode) throw Error('Cannot load ' + relativeSrc)
-					console.log('sourceCode', sourceCode)
 
 					const {
 						markup: previewMarkup,
@@ -77,11 +74,8 @@ export default function previewProcessor() {
 
 					if (previewScript) {
 						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/`/g, '\\`')
-						console.log(relativeSrc)
-						const xx = `import BackgroundColor from '../routes/docs/BackgroundColor.svelte'`
 						if (escaped.match(/^<script\slang="ts">/)) {
-							escaped = escaped.replace(/<script\slang="ts">/, '<script lang="ts">\n' + xx + '\n')
-							console.log(escaped)
+							escaped = escaped.replace(/<script\slang="ts">/, '<script lang="ts">\n')
 						}
 
 						result.appendRight(index, ' script={`' + previewScript + '`}')

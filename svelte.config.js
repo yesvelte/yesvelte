@@ -13,8 +13,6 @@ const config = {
 			// this will match a file
 			$components: './src/components',
 			'$components/*': './src/components/*',
-			// $examples: './src/components/examples',
-			// '$examples/*': './src/components/examples/*',
 		},
 	},
 }

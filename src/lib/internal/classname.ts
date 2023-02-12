@@ -1,4 +1,4 @@
-import { paramCase } from 'change-case'
+import { paramCase } from 'param-case'
 
 const prefix = 'u'
 

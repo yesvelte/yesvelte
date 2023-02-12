@@ -1,14 +1,10 @@
 <script lang="ts">
-	// import BackgroundColor from './BackgroundColor.svelte'
-	export let component: any = undefined
-
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
 	export let style: string | undefined = undefined
 	export let src: string | undefined = undefined
 </script>
 
-<svelte:component this={component} />
 <h3>Preview</h3>
 <div>
 	<slot />
