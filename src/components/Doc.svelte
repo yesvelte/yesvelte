@@ -11,10 +11,10 @@
 	</h2>
 </div>
 
-<p>
-	<slot name="description">
+<slot name="description">
+	<p>
 		{description}
-	</slot>
-</p>
+	</p>
+</slot>
 
 <slot />
