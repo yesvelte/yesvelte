@@ -1,6 +1,32 @@
 {
 	"name": "yesvelte",
 	"version": "0.0.1",
+	"description": "YeSvelte UI component library for Svelte",
+	"keywords": [
+		"svelte",
+		"sveltejs",
+		"bootstrap",
+		"tabler",
+		"svelte tabler",
+		"svelte bootstrap",
+		"svelte components",
+		"svelte ui components",
+		"svelte-kit",
+		"sveltekit",
+		"yesvelte",
+		"tabler"
+	],
+	"homepage": "https://www.yesvelte.io/",
+	"bugs": {
+		"url": "https://github.com/yesvelte/yesvelte/issues",
+		"email": "ap@momentaj.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yesvelte/yesvelte.git"
+	},
+	"license": "MIT License",
+	"author": "Amir Pournasserian <ap@momentaj.io>",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
