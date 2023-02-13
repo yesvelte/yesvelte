@@ -11,6 +11,6 @@
 		title="Background Colors"
 		description="You can set background color, gradient, and opacity for any component."
 	>
-		<Preview src="BackgroundColor.svelte">test</Preview>
+		<Preview src="BackgroundColor.svelte">test 1</Preview>
 	</Doc>
 </Page>
