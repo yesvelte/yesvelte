@@ -16,7 +16,10 @@
 		<El col="9">
 			<El border>
 				<El tag="h1">{title}</El>
-				<El tag="p">{description}</El>
+				<slot name="description">
+					<El tag="p">{description}</El>
+				</slot>
+
 				<slot />
 			</El>
 		</El>

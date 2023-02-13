@@ -330,7 +330,8 @@
 			justifyContent,
 		}
 		classes = classname(elComponentName, defaultCssProps)
-		if (componentName) classes += ' ' + classname(componentName, cssProps, $$props.class)
+		if (componentName !== elComponentName)
+			classes += ' ' + classname(componentName, cssProps, $$props.class)
 
 		elProps = {
 			id,

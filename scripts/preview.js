@@ -50,6 +50,7 @@ export default function previewProcessor() {
 
 					/** @type {string} */
 					const relativeSrc = srcAttribute.value[0]?.data
+
 					if (!relativeSrc) throw Error("Preview's src should be path to example source code")
 
 					const absoluteSrc = path.resolve(path.dirname(filename), relativeSrc)
@@ -72,14 +73,12 @@ export default function previewProcessor() {
 					result.appendRight(index, ' markup={`' + previewMarkup + '`}')
 
 					if (previewScript) {
-						console.log(previewScript)
-						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/\`/g, '\\`')
-
+						let escaped = previewScript.replace(/\$\{/g, '\\${').replace(/`/g, '\\`')
 						if (escaped.match(/^<script\slang="ts">/)) {
-							escaped = escaped.replace(/<script\slang="ts">/, '<script>')
+							escaped = escaped.replace(/<script\slang="ts">/, '<script lang="ts">\n')
 						}
 
-						result.appendRight(index, ' script={`' + escaped + '`}')
+						result.appendRight(index, ' script={`' + previewScript + '`}')
 					}
 
 					if (previewStyle) result.appendRight(index, ' style={`' + previewStyle + '`}')
@@ -89,7 +88,7 @@ export default function previewProcessor() {
 			// attach script and style tags
 			if (script) result.prependLeft(0, script)
 			if (style) result.appendRight(result.length(), style)
-			console.log(result.toString())
+
 			return {
 				code: result.toString(),
 				map: result.generateMap({ hires: true, file: filename }),
