@@ -7,8 +7,7 @@
 
 <Page
 	title="Spacing"
-	description="Spacing is used to create space around elements, outside of any defined borders. It can be used to create space between elements or to create space around elements."
->
+	description="Spacing is used to create space around elements, outside of any defined borders. It can be used to create space between elements or to create space around elements.">
 	<Doc title="Margins">
 		<div slot="description">
 			Margins are used to create space around elements, outside of any defined borders.

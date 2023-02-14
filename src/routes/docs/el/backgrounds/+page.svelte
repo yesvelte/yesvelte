@@ -7,12 +7,10 @@
 
 <Page
 	title="Backgrounds"
-	description="You can set background color, gradient, and opacity for any component."
->
+	description="You can set background color, gradient, and opacity for any component.">
 	<Doc
 		title="Background Colors"
-		description="You can set background color, gradient, and opacity for any component."
-	>
+		description="You can set background color, gradient, and opacity for any component.">
 		<Preview src="BackgroundColor.svelte">
 			<BackgroundColor />
 		</Preview>
