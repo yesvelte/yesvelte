@@ -73,6 +73,13 @@ export const navigations = [
 				description:
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
+			{
+				route: base_path + '/tabs',
+				title: 'Tabs',
+				icon: 'material-symbols:tab-outline',
+				description:
+					'Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.',
+			},
 		],
 	},
 ]
