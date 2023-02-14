@@ -66,6 +66,13 @@ export const navigations = [
 				description:
 					'Dividers help organize content and make the interface layout clear and uncluttered. Greater clarity adds up to better user experience and enhanced interaction with a website or app.',
 			},
+			{
+				route: base_path + '/fieldset',
+				title: 'Fieldset',
+				icon: 'radix-icons:fieldset',
+				description:
+					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
+			},
 		],
 	},
 ]
