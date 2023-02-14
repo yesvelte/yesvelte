@@ -1,5 +1,5 @@
 <script>
-	import { Fieldset } from '$lib'
+	import { Fieldset } from 'yesvelte'
 </script>
 
 <Fieldset>Some form elements are here</Fieldset>

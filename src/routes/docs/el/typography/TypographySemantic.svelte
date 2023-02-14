@@ -1,5 +1,5 @@
 <script>
-	import { El } from '$lib'
+	import { El } from 'yesvelte'
 </script>
 
 <El tag="abbr" title="Internationalization">I18N</El>

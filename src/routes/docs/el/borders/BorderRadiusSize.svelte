@@ -1,5 +1,5 @@
 <script>
-	import { El } from '$lib'
+	import { El } from 'yesvelte'
 </script>
 
 <El borderRoundSize="0" border="1">0</El>

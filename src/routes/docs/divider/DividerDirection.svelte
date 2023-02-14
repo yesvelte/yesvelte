@@ -1,5 +1,5 @@
 <script>
-	import { Divider, El } from '$lib'
+	import { Divider, El } from 'yesvelte'
 </script>
 
 <El d="flex" gap="2">

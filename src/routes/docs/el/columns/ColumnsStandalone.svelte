@@ -1,5 +1,5 @@
 <script>
-	import { El } from '$lib'
+	import { El } from 'yesvelte'
 </script>
 
 <El col="3">col="3": width of 25%</El>
