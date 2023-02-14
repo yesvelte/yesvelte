@@ -13,6 +13,8 @@ const config = {
 			// this will match a file
 			$components: './src/components',
 			'$components/*': './src/components/*',
+			yesvelte: './src/lib',
+			'yesvelte/*': './src/lib/*',
 		},
 	},
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from '$lib'
+	import { El } from 'yesvelte'
 	import ToC from './ToC.svelte'
 
 	export let title: string = ''
