@@ -1,5 +1,15 @@
 <script>
-	import { TabList, TabItem, TabContent, TabPanel, Tabs, Card, CardHeader, CardBody, Icon } from '@ubeac/svelte'
+	import {
+		TabList,
+		TabItem,
+		TabContent,
+		TabPanel,
+		Tabs,
+		Card,
+		CardHeader,
+		CardBody,
+		Icon,
+	} from 'yesvelte'
 </script>
 
 <Card>
