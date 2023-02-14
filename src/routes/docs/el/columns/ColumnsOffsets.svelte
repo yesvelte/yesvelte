@@ -20,8 +20,7 @@
 	<El row>
 		<El colSm="5" colMd="6">colSm="5" colMd="6"</El>
 		<El colSm="5" offsetSm="2" colMd="6" offsetMd="0"
-			>colSm="5" offsetSm="2" colMd="6" offsetMd="0"</El
-		>
+			>colSm="5" offsetSm="2" colMd="6" offsetMd="0"</El>
 	</El>
 	<El row>
 		<El colSm="6" colMd="5" colLg="6">colSm="6" colMd="5" colLg="6"</El>

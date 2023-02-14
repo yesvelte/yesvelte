@@ -9,13 +9,11 @@
 <Page
 	title="Divider"
 	description="Dividers help organize content and make the interface layout clear and uncluttered. Greater clarity adds up to better
-user experience and enhanced interaction with a website or app."
->
+user experience and enhanced interaction with a website or app.">
 	<Doc
 		title="Defaults"
 		description="Use dividers to visually separate content into parts. You can use a line only or add text that will be centered by
-default."
-	>
+default.">
 		<Preview src="./DividerDefault.svelte">
 			<DividerDefault />
 		</Preview>
@@ -24,8 +22,7 @@ default."
 	<Doc
 		title="Text Positions"
 		description="You can modify the position of the text which is to be included in a separator and make it left-
-	or right-aligned. Otherwise, the text will remain centered."
-	>
+	or right-aligned. Otherwise, the text will remain centered.">
 		<Preview src="./DividerPositions.svelte">
 			<DividerPositions />
 		</Preview>

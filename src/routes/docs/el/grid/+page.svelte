@@ -72,11 +72,9 @@
 
 	<Doc title="All breakpoints">
 		<div slot="description">
-			For grids that are the same from the smallest of devices to the largest, use the <code
-				>col</code
-			>
-			and <code>col="1~12"</code> . Specify a numbered prop when you need a particularly sized
-			column; otherwise, feel free to stick to <code>col</code>.
+			For grids that are the same from the smallest of devices to the largest, use the
+			<code>col</code> and <code>col="1~12"</code> . Specify a numbered prop when you need a
+			particularly sized column; otherwise, feel free to stick to <code>col</code>.
 		</div>
 		<Preview src="./Grid5.svelte">
 			<div class="custom-class">

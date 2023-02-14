@@ -63,9 +63,8 @@
 
 	<Doc title="Column breaks">
 		<div slot="description">
-			Breaking columns to a new line in flexbox requires a small hack: add an element with <code
-				>w-100</code
-			>
+			Breaking columns to a new line in flexbox requires a small hack: add an element with
+			<code>w-100</code>
 			property wherever you want to wrap your columns to a new line. Normally this is accomplished with
 			multiple <code>rows</code>, but not every implementation method can account for this.
 			<br />

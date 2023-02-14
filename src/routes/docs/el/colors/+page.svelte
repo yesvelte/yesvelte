@@ -9,8 +9,7 @@
 	title="Colors"
 	description="Colors are used to add meaning to a user interface, help distinguish content, and establish
 hierarchy. They can also be used to create visual excitement and draw attention to parts of your
-layout."
->
+layout.">
 	<Doc title="Theme colors">
 		<div slot="description">
 			<p>
