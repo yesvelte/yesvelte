@@ -19,20 +19,15 @@
 	$: active ? selectTab(tab) : null
 
 	let cssProps: TabItemProps = {}
-	let props: TabItemProps = {}
 	$: {
 		cssProps = {
 			disabled,
 			active: $selectedTab === tab,
 		}
-		props = {
-			tag,
-			componentName,
-		}
 	}
 </script>
 
-<El {...$$restProps} {...props} {tag} on:click={() => (!disabled ? selectTab(tab) : null)}>
+<El {...$$restProps} {tag} {componentName} on:click={() => (!disabled ? selectTab(tab) : null)}>
 	<El tag="button" componentName="{componentName}-link" {cssProps}>
 		<slot />
 	</El>

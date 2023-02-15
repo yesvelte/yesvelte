@@ -10,13 +10,10 @@ export interface TabItemProps extends Partial<ElProps> {
 }
 
 export interface TabListProps extends Partial<ElProps> {
-	pills?: boolean
 	grow?: boolean
 	card?: boolean
 	role?: string
 }
-
-export interface TabContentProps extends Partial<ElProps> {}
 
 export interface TabPanelProps extends Partial<ElProps> {
 	role?: string

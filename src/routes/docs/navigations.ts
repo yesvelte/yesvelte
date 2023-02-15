@@ -60,6 +60,13 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_path + '/card',
+				title: 'Card',
+				icon: 'mdi:card-outline',
+				description:
+					'Cards are flexible user interface elements, which help organize content into meaningful sections and make it easier to display on different screen sizes.',
+			},
+			{
 				route: base_path + '/divider',
 				title: 'Divider',
 				icon: 'radix-icons:divider-horizontal',
@@ -72,6 +79,13 @@ export const navigations = [
 				icon: 'radix-icons:fieldset',
 				description:
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
+			},
+			{
+				route: base_path + '/icon',
+				title: 'Icon',
+				icon: 'tabler:star',
+				description:
+					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
 			},
 			{
 				route: base_path + '/tabs',

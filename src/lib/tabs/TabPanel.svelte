@@ -13,9 +13,12 @@
 	const { registerPanel, selectedPanel } = getContext<TabsContext>(TABS)
 	registerPanel(panel)
 
-	$: props = {
-		componentName,
-		role,
+	let props: TabPanelProps = {}
+	$: {
+		props = {
+			componentName,
+			role,
+		}
 	}
 </script>
 

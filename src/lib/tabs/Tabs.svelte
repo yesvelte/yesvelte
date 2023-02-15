@@ -56,15 +56,11 @@
 	})
 
 	let cssProps: TabsProps = {}
-	let props: TabsProps = {}
 	$: {
 		cssProps = { vertical }
-		props = {
-			componentName,
-		}
 	}
 </script>
 
-<El {...$$restProps} {...props} {cssProps}>
+<El {...$$restProps} {componentName} {cssProps}>
 	<slot />
 </El>

@@ -6,14 +6,12 @@
 
 	export let componentName: $$Props['componentName'] = 'tab-list'
 	export let tag: $$Props['tag'] = 'ul'
-	export let pills: $$Props['pills'] = undefined
 	export let grow: $$Props['grow'] = undefined
 
 	let cssProps: TabListProps = {}
 	let props: TabListProps = {}
 	$: {
 		cssProps = {
-			pills,
 			grow,
 		}
 		props = {
@@ -24,6 +22,6 @@
 	}
 </script>
 
-<El {...$$restProps} tabs={!pills} {...props} {componentName} {cssProps}>
+<El {...$$restProps} {...props} {componentName} {cssProps}>
 	<slot />
 </El>
