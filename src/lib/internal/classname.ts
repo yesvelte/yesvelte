@@ -4,7 +4,7 @@ const prefix = 'u'
 
 export const classname = (
 	componentName: string,
-	cssObject: object | undefined,
+	cssObject?: object | undefined,
 	staticClassName?: string
 ) => {
 	componentName = paramCase(componentName)

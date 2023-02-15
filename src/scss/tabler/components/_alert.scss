@@ -5,13 +5,13 @@ $props: (
 	end: '.btn-close',
 	color: generate_props($theme_colors, ('.alert-')),
 	start: '.alert-icon',
-	filled: '.alert-important'
+	important: '.alert-important',
 );
 
 .#{$prefix-alert} {
 	@include apply-props($props);
 
-	&-filled {
+	&-important {
 		.#{$prefix-alert}-title {
 			color: #fff;
 		}
