@@ -11,9 +11,18 @@
 <Page
 	title="Tabs"
 	description="Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.">
-	<Doc
-		title="Basic usage"
-		description="To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the <code>&lt;TabList&gt;</code> and <code>&lt;TabContent&gt;</code> components.">
+	<Doc title="Basic usage">
+		<div slot="description">
+			To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
+			<code>&lt;TabList&gt;</code>
+			and <code>&lt;TabContent&gt;</code> components.
+			<code>&lt;TabList&gt;</code> is used to display the tabs and <code>&lt;TabContent&gt;</code>
+			is used to display the content of the selected tab. To create a tab, you need to use the
+			<code>&lt;TabItem&gt;</code>
+			component inside the <code>&lt;TabList&gt;</code> component. To display the content of the
+			tab, you need to use the <code>&lt;TabPanel&gt;</code> component inside the
+			<code>&lt;TabContent&gt;</code> component.
+		</div>
 		<Preview src="./TabsDefault.svelte">
 			<TabsDefault />
 		</Preview>
