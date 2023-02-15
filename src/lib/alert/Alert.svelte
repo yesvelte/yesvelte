@@ -34,7 +34,7 @@
 		{/if}
 		<div class={classname('alert-body')}>
 			<div class={classname('alert-title')}>
-				<slot name="title">{title}</slot>
+				<slot name="title">{title || ''}</slot>
 			</div>
 			<div>
 				<slot />

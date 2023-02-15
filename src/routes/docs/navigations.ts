@@ -60,6 +60,12 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_path + '/alert',
+				title: 'Alert',
+				icon: 'radix-icons:alert',
+				description: 'TODO',
+			},
+			{
 				route: base_path + '/divider',
 				title: 'Divider',
 				icon: 'radix-icons:divider-horizontal',

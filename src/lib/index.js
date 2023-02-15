@@ -1,4 +1,5 @@
 export { El } from './el'
+export { Alert } from './alert'
 export { Button } from './button'
 export { Divider } from './divider'
 export { Fieldset } from './fieldset'
