@@ -74,6 +74,13 @@ export const navigations = [
 					'Dividers help organize content and make the interface layout clear and uncluttered. Greater clarity adds up to better user experience and enhanced interaction with a website or app.',
 			},
 			{
+				route: base_path + '/dot',
+				title: 'Dot',
+				icon: 'radix-icons:dot',
+				description:
+					'Dots are particularly useful if you want to make an interface element more noticeable.',
+			},
+			{
 				route: base_path + '/fieldset',
 				title: 'Fieldset',
 				icon: 'radix-icons:fieldset',
