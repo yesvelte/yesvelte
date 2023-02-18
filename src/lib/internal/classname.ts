@@ -3,10 +3,11 @@ import { paramCase } from 'param-case'
 const prefix = 'u'
 
 export const classname = (
-	componentName: string,
+	componentName: string | undefined,
 	cssObject: object | undefined,
 	staticClassName?: string
 ) => {
+	if (!componentName) return undefined
 	componentName = paramCase(componentName)
 	const pre = `${prefix}-${componentName}`
 	const result: Array<string> = [pre]

@@ -1,17 +1,11 @@
 $tabs-props: (
-	null: (
-		'.d-flex'
-	),
-	vertical: (
-		'.flex-row'
-	)
+	null: '.d-flex',
+	vertical: '.flex-row'
 );
 
 $tab-props: (
 	list: (
-		null: '.nav',
-		pills: '.nav-pills',
-		tabs: '.nav-tabs',
+		null: '.nav' '.nav-tabs',
 		grow: '.nav-fill',
 		card: '.card-header-tabs'
 	),

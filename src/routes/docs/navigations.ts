@@ -60,6 +60,27 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_path + '/avatar',
+				title: 'Avatar',
+				icon: 'mdi:account-circle-outline',
+				description:
+					'Avatars help customise various elements of a user interface and make the product experience more personalised. They are often used in communication apps, collaboration tools and social media.',
+			},
+			{
+				route: base_path + '/badge',
+				title: 'Badge',
+				icon: 'mdi:square-rounded-badge-outline',
+				description:
+					"Badges are small count and labeling components, which are used to add extra information to an interface element. You can use them to draw users' attention to a new element, notify about unread messages or provide any kind of additional info.",
+			},
+			{
+				route: base_path + '/card',
+				title: 'Card',
+				icon: 'mdi:card-outline',
+				description:
+					'Cards are flexible user interface elements, which help organize content into meaningful sections and make it easier to display on different screen sizes.',
+			},
+			{
 				route: base_path + '/divider',
 				title: 'Divider',
 				icon: 'radix-icons:divider-horizontal',
@@ -79,6 +100,33 @@ export const navigations = [
 				icon: 'radix-icons:fieldset',
 				description:
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
+			},
+			{
+				route: base_path + '/icon',
+				title: 'Icon',
+				icon: 'tabler:star',
+				description:
+					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
+			},
+			{
+				route: base_path + '/ribbon',
+				title: 'Ribbon',
+				icon: 'akar-icons:ribbon',
+				description:
+					'Ribbons are used to express something special on a card. In this page all the details about Ribbon component is described.',
+			},
+			{
+				route: base_path + '/stamp',
+				title: 'Stamp',
+				icon: 'mdi:stamper',
+				description: 'Use stamp component to make the card view more attractive and eye catching.',
+			},
+			{
+				route: base_path + '/tabs',
+				title: 'Tabs',
+				icon: 'material-symbols:tab-outline',
+				description:
+					'Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.',
 			},
 		],
 	},

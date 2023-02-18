@@ -1,27 +1,73 @@
 <script lang="ts">
+	import {
+		TabList,
+		TabItem,
+		TabContent,
+		TabPanel,
+		Tabs,
+		Card,
+		CardHeader,
+		CardBody,
+	} from 'yesvelte'
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
 	export let style: string | undefined = undefined
 	export let src: string | undefined = undefined
 </script>
 
-<h3>Preview</h3>
-<div>
-	<slot />
-</div>
-{#if markup}
-	<h3>Markup</h3>
-	<pre><code>{markup}</code></pre>
-{/if}
-{#if script}
-	<h3>Script</h3>
-	<pre><code>{script}</code></pre>
-{/if}
-{#if style}
-	<h3>Style</h3>
-	<pre><code>{style}</code></pre>
-{/if}
-{#if src && false}
-	<h3>Source</h3>
-	<pre><code>{src}</code></pre>
-{/if}
+<Card>
+	<Tabs>
+		<CardHeader>
+			<TabList>
+				<TabItem active>Preview</TabItem>
+				{#if markup}
+					<TabItem>Markup</TabItem>
+				{/if}
+				{#if script}
+					<TabItem>Script</TabItem>
+				{/if}
+				{#if style}
+					<TabItem>Style</TabItem>
+				{/if}
+				{#if src && false}
+					<TabItem>Source</TabItem>
+				{/if}
+			</TabList>
+		</CardHeader>
+		<CardBody>
+			<TabContent>
+				<TabPanel>
+					<slot />
+				</TabPanel>
+				{#if markup}
+					<TabPanel>
+						<figure class="highlight">
+							<pre><code>{markup}</code></pre>
+						</figure>
+					</TabPanel>
+				{/if}
+				{#if script}
+					<TabPanel>
+						<figure class="highlight">
+							<pre><code>{script}</code></pre>
+						</figure>
+					</TabPanel>
+				{/if}
+				{#if style}
+					<TabPanel>
+						<figure class="highlight">
+							<pre><code>{style}</code></pre>
+						</figure>
+					</TabPanel>
+				{/if}
+				{#if src && false}
+					<TabPanel>
+						<figure class="highlight">
+							<pre><code>{src}</code></pre>
+						</figure>
+					</TabPanel>
+				{/if}
+			</TabContent>
+		</CardBody>
+	</Tabs>
+</Card>
