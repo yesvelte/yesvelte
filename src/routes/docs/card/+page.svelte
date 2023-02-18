@@ -89,13 +89,13 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Card Stamp">
+	<Doc title="Stamp">
 		<Preview src="./CardStamp.svelte">
 			<div class="custom-class"><CardStamp /></div>
 		</Preview>
 	</Doc>
 
-	<Doc title="Card Ribbon" description="Add a Ribbon to your card.">
+	<Doc title="Ribbon" description="Add a Ribbon to your card.">
 		<Preview src="./CardRibbon.svelte">
 			<div class="custom-class"><CardRibbon /></div>
 		</Preview>

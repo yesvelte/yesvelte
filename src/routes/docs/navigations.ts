@@ -95,6 +95,19 @@ export const navigations = [
 					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
 			},
 			{
+				route: base_path + '/ribbon',
+				title: 'Ribbon',
+				icon: 'akar-icons:ribbon',
+				description:
+					'Ribbons are used to express something special on a card. In this page all the details about Ribbon component is described.',
+			},
+			{
+				route: base_path + '/stamp',
+				title: 'Stamp',
+				icon: 'mdi:stamper',
+				description: 'Use stamp component to make the card view more attractive and eye catching.',
+			},
+			{
 				route: base_path + '/tabs',
 				title: 'Tabs',
 				icon: 'material-symbols:tab-outline',
