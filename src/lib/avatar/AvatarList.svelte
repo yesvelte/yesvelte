@@ -9,17 +9,17 @@
 	export let stacked: $$Props['stacked'] = undefined
 
 	let cssProps: AvatarListProps = {}
-	let otherProps: AvatarListProps = {}
+	let props: AvatarListProps = {}
 	$: {
 		cssProps = {
 			stacked,
 		}
-		otherProps = {
+		props = {
 			componentName,
 		}
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
+<El {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

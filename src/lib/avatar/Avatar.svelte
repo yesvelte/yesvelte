@@ -13,7 +13,7 @@
 	export let size: $$Props['size'] = 'ep'
 
 	let cssProps: AvatarProps = {}
-	let otherProps: AvatarProps = {}
+	let props: AvatarProps = {}
 	$: {
 		cssProps = {
 			color,
@@ -22,12 +22,12 @@
 			round,
 			tile,
 		}
-		otherProps = {
+		props = {
 			componentName,
 		}
 	}
 </script>
 
-<El tag="span" {...$$restProps} {cssProps} {...otherProps}>
+<El tag="span" {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

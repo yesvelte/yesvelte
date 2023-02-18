@@ -1,4 +1,5 @@
-export { Avatar } from './avatar'
+export { Avatar, AvatarList } from './avatar'
+export { Badge } from './badge'
 export { El } from './el'
 export { Button } from './button'
 export { Card, CardActions, CardBody, CardFooter, CardHeader, CardMedia, CardTitle } from './card'
