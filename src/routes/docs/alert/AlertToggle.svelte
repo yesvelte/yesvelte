@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Alert, Button, El } from 'yesvelte'
+	import { Alert, Button } from 'yesvelte'
 
 	let open = false
 

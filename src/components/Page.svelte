@@ -2,8 +2,8 @@
 	import { Card, CardBody, El } from 'yesvelte'
 	import ToC from './ToC.svelte'
 
-	export let title: string = ''
-	export let description: string = ''
+	export let title = ''
+	export let description = ''
 </script>
 
 <svelte:head>
