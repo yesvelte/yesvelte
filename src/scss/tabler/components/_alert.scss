@@ -5,7 +5,7 @@ $props: (
 	close: '.btn-close',
 	color: generate_props($theme_colors, ('.alert-')),
 	start: '.alert-icon',
-	important: '.alert-important',
+	important: '.alert-important'
 );
 
 .#{$prefix-alert} {
