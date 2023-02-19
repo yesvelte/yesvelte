@@ -60,6 +60,13 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_path + '/alert',
+				title: 'Alert',
+				icon: 'radix-icons:alert',
+				description:
+					'Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.',
+			},
+			{
 				route: base_path + '/avatar',
 				title: 'Avatar',
 				icon: 'mdi:account-circle-outline',

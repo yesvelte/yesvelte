@@ -19,6 +19,7 @@
 	export let cssProps: $$Props['cssProps'] = {}
 	export let value: $$Props['value'] = undefined
 	export let title: $$Props['title'] = undefined
+	export let role: $$Props['role'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 	let classes: string | undefined
@@ -338,6 +339,7 @@
 			id,
 			class: classes,
 			title,
+			role
 		}
 	}
 </script>

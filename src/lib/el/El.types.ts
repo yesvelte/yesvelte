@@ -340,4 +340,5 @@ export interface ElProps extends CssProps {
 	cssProps?: CssProps
 	value?: unknown
 	title?: string
+	role?: string
 }
