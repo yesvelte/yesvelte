@@ -27,7 +27,7 @@
 {#if open}
 	<El {...$$restProps} {cssProps} {...props} role="alert">
 		{#if icon || $$slots.start}
-			<div class={classname(componentName + '-start')}>
+			<div class={classname('alert-start')}>
 				<slot name="start">
 					<Icon size="xl" name={icon} />
 				</slot>
@@ -42,9 +42,7 @@
 			</div>
 		</div>
 		{#if dismissible}
-			<El class={classname(componentName + '-end')} on:click={() => (open = false)}>
-				<slot name="end" />
-			</El>
+			<div class={classname('alert-close')} on:click={() => (open = false)} />
 		{/if}
 	</El>
 {/if}
