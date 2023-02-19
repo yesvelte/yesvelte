@@ -12,7 +12,7 @@
 	title="Tabs"
 	description="Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.">
 	<Doc title="Basic usage">
-		<div slot="description">
+		<p slot="description">
 			To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
 			<code>&lt;TabList&gt;</code>
 			and <code>&lt;TabContent&gt;</code> components.
@@ -22,7 +22,7 @@
 			component inside the <code>&lt;TabList&gt;</code> component. To display the content of the
 			tab, you need to use the <code>&lt;TabPanel&gt;</code> component inside the
 			<code>&lt;TabContent&gt;</code> component.
-		</div>
+		</p>
 		<Preview src="./TabsDefault.svelte">
 			<TabsDefault />
 		</Preview>
@@ -41,9 +41,11 @@
 			<TabsVertical />
 		</Preview>
 	</Doc>
-	<Doc
-		title="Icons"
-		description="To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the <code>&lt;TabItem&gt;</code> component.">
+	<Doc title="Icons">
+		<p slot="description">
+			To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
+			<code>&lt;TabItem&gt;</code> component.
+		</p>
 		<Preview src="./TabsIcons.svelte">
 			<TabsIcons />
 		</Preview>
@@ -61,45 +63,52 @@
 	</Doc>
 
 	<Doc title="Basic usage">
-		To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
-		<code>&lt;TabList&gt;</code>
-		and
-		<code>&lt;TabContent&gt;</code> components.
+		<p slot="description">
+			To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
+			<code>&lt;TabList&gt;</code> and <code>&lt;TabContent&gt;</code> components.
+		</p>
+		<Preview src="./TabsDefault.svelte">
+			<TabsDefault />
+		</Preview>
 	</Doc>
-	<Preview src="./TabsDefault.svelte">
-		<TabsDefault />
-	</Preview>
 
 	<Doc title="Grow">
-		To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.
+		<p slot="description">
+			To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.
+		</p>
+		<Preview src="./TabsGrow.svelte">
+			<TabsGrow />
+		</Preview>
 	</Doc>
-	<Preview src="./TabsGrow.svelte">
-		<TabsGrow />
-	</Preview>
 
 	<Doc title="Vertical">
-		To make the tabs vertical, you can use the <code>vertical</code> prop.
+		<p slot="description">
+			To make the tabs vertical, you can use the <code>vertical</code> prop.
+		</p>
+		<Preview src="./TabsVertical.svelte">
+			<TabsVertical />
+		</Preview>
 	</Doc>
-	<Preview src="./TabsVertical.svelte">
-		<TabsVertical />
-	</Preview>
 
 	<Doc title="Icons">
-		To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
-		<code>&lt;TabItem&gt;</code>
-		component.
+		<p slot="description">
+			To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
+			<code>&lt;TabItem&gt;</code> component.
+		</p>
+		<Preview src="./TabsIcons.svelte">
+			<TabsIcons />
+		</Preview>
 	</Doc>
-	<Preview src="./TabsIcons.svelte">
-		<TabsIcons />
-	</Preview>
 
-	<Doc title="Only icons" />
-	<Preview src="./TabsOnlyIcons.svelte">
-		<TabsOnlyIcons />
-	</Preview>
+	<Doc title="Only icons">
+		<Preview src="./TabsOnlyIcons.svelte">
+			<TabsOnlyIcons />
+		</Preview>
+	</Doc>
 
-	<Doc title="Tab at the end" />
-	<Preview src="./TabsEnd.svelte">
-		<TabsEnd />
-	</Preview>
+	<Doc title="Tab at the end">
+		<Preview src="./TabsEnd.svelte">
+			<TabsEnd />
+		</Preview>
+	</Doc>
 </Page>

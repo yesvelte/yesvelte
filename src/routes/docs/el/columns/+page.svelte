@@ -14,12 +14,12 @@
 
 <Page title="Columns" description="Columns are used to create a responsive grid system.">
 	<Doc title="Align items">
-		<div slot="description">
+		<p slot="description">
 			<code>alignItems</code> prop is used to align columns vertically. It can be set to
 			<code>start</code>,
 			<code>center</code>
 			or <code>end</code>.
-		</div>
+		</p>
 		<Preview src="./ColumnsAlignItems.svelte">
 			<div class="custom-class custom-class-expanded-row">
 				<ColumnsAlignItems />
@@ -28,12 +28,12 @@
 	</Doc>
 
 	<Doc title="Align self">
-		<div slot="description">
+		<p slot="description">
 			<code>alignSelf</code> prop is used to align columns vertically. It can be set to
 			<code>start</code>,
 			<code>center</code>
 			or <code>end</code>.
-		</div>
+		</p>
 		<Preview src="./ColumnsAlignSelf.svelte">
 			<div class="custom-class custom-class-expanded-row">
 				<ColumnsAlignSelf />
@@ -50,10 +50,10 @@
 	</Doc>
 
 	<Doc title="Column wrapping">
-		<div slot="description">
+		<p slot="description">
 			If more than 12 columns are placed within a single row, each group of extra columns will, as
 			one unit, wrap onto a new line.
-		</div>
+		</p>
 		<Preview src="./ColumnsWrapping.svelte">
 			<div class="custom-class">
 				<ColumnsWrapping />
@@ -62,14 +62,14 @@
 	</Doc>
 
 	<Doc title="Column breaks">
-		<div slot="description">
+		<p slot="description">
 			Breaking columns to a new line in flexbox requires a small hack: add an element with
 			<code>w-100</code>
 			property wherever you want to wrap your columns to a new line. Normally this is accomplished with
 			multiple <code>rows</code>, but not every implementation method can account for this.
 			<br />
 			You may also apply this break at specific breakpoints.
-		</div>
+		</p>
 		<Preview src="./ColumnsBreaks.svelte">
 			<div class="custom-class">
 				<ColumnsBreaks />
@@ -78,10 +78,10 @@
 	</Doc>
 
 	<Doc title="Reordering">
-		<div slot="description">
+		<p slot="description">
 			Use <code>order</code> prop to change the order of your content. Values are
 			<code>'1' | '2' | '3' | '4' | '5' | 'first' | 'last'</code>.
-		</div>
+		</p>
 		<Preview src="./ColumnsOrders.svelte">
 			<div class="custom-class">
 				<ColumnsOrders />

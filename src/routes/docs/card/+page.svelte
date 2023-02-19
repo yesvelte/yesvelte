@@ -15,18 +15,18 @@
 </script>
 
 <Page title="Cards">
-	<div slot="description">
+	<p slot="description">
 		Cards are flexible user interface elements, which help organize content into meaningful sections
 		and make it easier to display on different screen sizes. Cards contain various smaller
 		components, such as images, text, links and buttons and may act as an entry to more detailed
 		information, helping users scan the page quickly and find the most relevant content.
-	</div>
+	</p>
 
 	<Doc title="Default">
-		<div slot="description">
+		<p slot="description">
 			Use the card and cardBody to create a card and use it as the basis for a more advanced card
 			design. A card is a perfect way to organize content and make it look neat and tidy.
-		</div>
+		</p>
 		<Preview src="./CardBody.svelte">
 			<div class="custom-class">
 				<CardBody />
@@ -35,41 +35,41 @@
 	</Doc>
 
 	<Doc title="Title">
-		<div slot="description">
+		<p slot="description">
 			Add a title to your card by adding title props. You can also place the title inside the
 			cardHeader slot to customize your header.
-		</div>
+		</p>
 		<Preview src="./CardTitle.svelte">
 			<div class="custom-class"><CardTitle /></div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Title and image">
-		<div slot="description">
+		<p slot="description">
 			To create a more visually appealing card, add a title and an image. Thanks to that, the card
 			will go well with your inteface design and draw user’s attention.
-		</div>
+		</p>
 		<Preview src="./CardImage.svelte">
 			<div class="custom-class"><CardImage /></div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Blog post">
-		<div slot="description">
+		<p slot="description">
 			Add an image to your blog post card to make it eye-catching. You can do it by adding the
 			image. Thanks to the grid within CardBody, the author details will be displayed at the bottom
 			of the card.
-		</div>
+		</p>
 	</Doc>
 	<Preview src="./CardBlog.svelte">
 		<div class="custom-class"><CardBlog /></div>
 	</Preview>
 
 	<Doc title="Row deck">
-		<div slot="description">
+		<p slot="description">
 			Add the .row-deck (it's tabler helper) class to .row, if you want to display several cards
 			next to one another. Thanks to that, they will all have the same height.
-		</div>
+		</p>
 		<Preview src="./CardRow.svelte">
 			<div class="custom-class"><CardRow /></div>
 		</Preview>
