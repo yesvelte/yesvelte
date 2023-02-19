@@ -2,11 +2,7 @@ import { paramCase } from 'param-case'
 
 const prefix = 'u'
 
-export const classname = (
-	componentName?: string,
-	cssObject?: object,
-	staticClassName?: string
-) => {
+export const classname = (componentName?: string, cssObject?: object, staticClassName?: string) => {
 	if (!componentName) return undefined
 	componentName = paramCase(componentName)
 	const pre = `${prefix}-${componentName}`
