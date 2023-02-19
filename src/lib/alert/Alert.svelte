@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { classname } from '$lib/internal'
 	import { El } from '../el'
+	import { Icon } from '../icon'
 	import type { AlertProps } from './Alert.types'
 
 	type $$Props = AlertProps
