@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { El } from '../el'
-	import type { OffcanvasBodyProps } from './Offcanvas.types'
+	import { El, type ElProps } from '../el'
 
-	type $$Props = OffcanvasBodyProps
+	type $$Props = ElProps
 
 	export let componentName: $$Props['componentName'] = 'offcanvas-body'
 </script>

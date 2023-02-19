@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, setContext } from 'svelte'
+	import { onMount, setContext, createEventDispatcher } from 'svelte'
 	import { El } from '../el'
 	import type { OffcanvasProps } from './Offcanvas.types'
 
@@ -7,16 +7,18 @@
 
 	export let componentName: $$Props['componentName'] = 'offcanvas'
 	export let placement: $$Props['placement'] = 'start'
-	export let scroll: $$Props['scroll'] = undefined
+	export let noScroll: $$Props['noScroll'] = undefined
 	export let backdrop: $$Props['backdrop'] = undefined
 	export let autoClose: $$Props['autoClose'] = undefined
 	export let show: $$Props['show'] = undefined
 
-	// todo: create event dispatcher
+	const dispatch = createEventDispatcher()
 	const close = () => {
 		show = false
+		dispatch('close')
 	}
-	setContext('OFFCANVAS', { close })
+
+	setContext<OffcanvasProps>('OFFCANVAS', { close })
 
 	let element: HTMLElement
 	let props: OffcanvasProps = { componentName, ...$$restProps }
@@ -55,16 +57,16 @@
 	}
 </script>
 
-{#if show}
-	<El componentName="{componentName}-wrapper">
-		<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
-			<slot />
-		</El>
-		<!-- {#if backdrop}
+<El componentName="{componentName}-wrapper">
+	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
+		<slot />
+	</El>
+	{#if show}
+		{#if backdrop}
 			<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} />
 		{/if}
-		{#if !scroll}
+		{#if noScroll}
 			<El componentName="{componentName}-no-scroll" />
-		{/if} -->
-	</El>
-{/if}
+		{/if}
+	{/if}
+</El>

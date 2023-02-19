@@ -2,14 +2,14 @@
 	import { getContext } from 'svelte'
 	import { El } from '../el'
 	import { Button } from '../button'
-	import type { OffcanvasHeaderProps } from './Offcanvas.types'
+	import type { OffcanvasHeaderProps, OffcanvasProps } from './Offcanvas.types'
 
 	type $$Props = OffcanvasHeaderProps
 
 	export let componentName: $$Props['componentName'] = 'offcanvas-header'
 	export let title: $$Props['title'] = undefined
 
-	const ctx = getContext('OFFCANVAS')
+	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 
 	const onClick = () => {
 		if (ctx && ctx.close) ctx.close()

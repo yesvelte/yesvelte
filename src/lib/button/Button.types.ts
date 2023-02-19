@@ -21,4 +21,5 @@ export interface ButtonProps extends Partial<ElProps> {
 	ghost?: boolean
 	href?: string
 	role?: string
+	'aria-label'?: string
 }

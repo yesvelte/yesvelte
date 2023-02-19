@@ -6,8 +6,8 @@
 	const toggleNoScroll = () => (scroll = !scroll)
 </script>
 
-<Button color="primary" on:click={toggleBackdrop}>AutoClose Offcanvas</Button>
-<Button color="primary" on:click={toggleNoScroll}>AutoClose Offcanvas with backdrop</Button>
+<Button color="primary" on:click={toggleBackdrop}>AutoClose</Button>
+<Button color="primary" on:click={toggleNoScroll}>AutoClose with backdrop</Button>
 
 <Offcanvas bind:show autoClose>
 	<OffcanvasHeader title="Offcanvas Title" />

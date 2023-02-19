@@ -8,8 +8,8 @@
 	const toggleNoScroll = () => (showNoScroll = !showNoScroll)
 </script>
 
-<Button color="primary" on:click={toggleBackdrop}>NoScroll Offcanvas</Button>
-<Button color="primary" on:click={toggleScroll}>Offcanvas with noScroll and backdrop</Button>
+<Button color="primary" on:click={toggleBackdrop}>NoScroll</Button>
+<Button color="primary" on:click={toggleScroll}>NoScroll + Backdrop</Button>
 <Button color="primary" on:click={toggleNoScroll}>All together!</Button>
 
 <Offcanvas bind:show={showBackdrop} noScroll>

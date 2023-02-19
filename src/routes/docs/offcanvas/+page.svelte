@@ -19,7 +19,7 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Placements">
+	<Doc title="Placement">
 		<p slot="description">
 			<code>placement</code> property can be <code>top</code>, <code>right</code>,
 			<code>bottom</code>
@@ -43,7 +43,7 @@
 		<p slot="description">
 			<code>autoClose</code> property enables Offcanvas automatically being closed by pressing
 			<i>Escape</i>
-			key or cliking outside of the Offcanvas component. User can close the Offcanvas by clicking on
+			key or clicking outside of the Offcanvas component. User can close the Offcanvas by clicking on
 			the backdrop if <code>backdrop</code>
 			property is set to <code>true</code> or by pressing <i>Escape</i> key. User can also close the
 			Offcanvas by clicking on the close button.
