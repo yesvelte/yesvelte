@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { classname } from '$lib/internal'
 	import { El } from '../el'
 	import { Icon } from '../icon'
 	import type { AlertProps } from './Alert.types'
@@ -27,24 +26,24 @@
 {#if open}
 	<El {...$$restProps} {cssProps} {...props} role="alert">
 		{#if icon || $$slots.start}
-			<div class={classname('alert-start')}>
+			<El componentName="{componentName}-start">
 				<slot name="start">
 					<Icon size="xl" name={icon} />
 				</slot>
-			</div>
+			</El>
 		{/if}
-		<div class={classname('alert-body')}>
+		<El componentName="{componentName}-body">
 			{#if title || $$slots['title']}
-				<div class={classname('alert-title')}>
+				<El componentName="{componentName}-title">
 					<slot name="title">{title}</slot>
-				</div>
+				</El>
 			{/if}
 			<div>
 				<slot />
 			</div>
-		</div>
+		</El>
 		{#if dismissible}
-			<div class={classname('alert-close')} on:click={() => (open = false)} />
+			<El componentName="{componentName}-close" on:click={() => (open = false)} />
 		{/if}
 	</El>
 {/if}
