@@ -46,7 +46,7 @@
 					Burn her! How do you know she is a witch? You don't frighten us, English pig-dogs! Go and
 					boil yo...
 				</p>
-				<El row class="mt-4" align="" justify="start">
+				<El row class="mt-4" justifyContent="start">
 					<El col="auto">
 						<Avatar>
 							<img src="https://preview.tabler.io/static/avatars/001f.jpg" alt="" />
@@ -73,7 +73,7 @@
 					Burn her! How do you know she is a witch? You don't frighten us, English pig-dogs! Go and
 					boil yo...
 				</p>
-				<El row class="mt-4" align="" justify="start">
+				<El row class="mt-4" justifyContent="start">
 					<El col="auto">
 						<Avatar>
 							<img src="https://preview.tabler.io/static/avatars/001f.jpg" alt="" />

@@ -5,10 +5,10 @@
 </script>
 
 <Page title="Ribbons">
-	<div slot="description">
+	<p slot="description">
 		Ribbons are used to express something special on a card. Ribbon container should have <code
 			>relative</code> position.
-	</div>
+	</p>
 	<Doc title="Color">
 		<Preview src="./RibbonColor.svelte">
 			<div class="custom-class"><RibbonColor /></div>

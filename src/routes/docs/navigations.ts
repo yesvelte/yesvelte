@@ -116,6 +116,14 @@ export const navigations = [
 					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
 			},
 			{
+				route: base_path + '/offcanvas',
+				title: 'Offcanvas',
+				icon: 'mdi:page-layout-sidebar-right',
+				description:
+					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
+			},
+
+			{
 				route: base_path + '/ribbon',
 				title: 'Ribbon',
 				icon: 'akar-icons:ribbon',

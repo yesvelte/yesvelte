@@ -15,7 +15,7 @@
 				Are you suggesting that coconuts migrate? No, no, no! Yes, yes. A bit. But she's got a wart.
 				You ...
 			</p>
-			<El row align="center" justify="start">
+			<El row alignItems="center" justifyContent="start">
 				<El col="auto">
 					<Avatar>
 						<img src="https://preview.tabler.io/static/avatars/000f.jpg" alt="" />

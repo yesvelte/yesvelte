@@ -9,8 +9,7 @@ $props: (
 		btn: '.btn-close',
 		title: '.offcanvas-title'
 	),
-	body: '.offcanvas-body',
-	scroll-static: '.offcanvas-scroll-static'
+	body: '.offcanvas-body'
 );
 
 .#{$prefix-offcanvas} {

@@ -15,11 +15,11 @@
 </script>
 
 <Page title="Badges">
-	<div slot="description">
+	<p slot="description">
 		Badges are small count and labeling components, which are used to add extra information to an
 		interface element. You can use them to draw users' attention to a new element, notify about
 		unread messages or provide any kind of additional info.
-	</div>
+	</p>
 
 	<Doc
 		title="Default"
@@ -30,10 +30,10 @@
 	</Doc>
 
 	<Doc title="Colors">
-		<div slot="description">
+		<p slot="description">
 			You can create a soft colour variant of a corresponding contextual badge variation, to make it
 			look more subtle.
-		</div>
+		</p>
 		<Preview src="./BadgeColors.svelte">
 			<div class="custom-class">
 				<BadgeColors />
@@ -42,10 +42,10 @@
 	</Doc>
 
 	<Doc title="Outline">
-		<div slot="description">
+		<p slot="description">
 			Use the <code>outline</code> prop if you want to remove the color and the background of your badge
 			and give it a more subtle look.
-		</div>
+		</p>
 		<Preview src="./BadgeOutlines.svelte">
 			<div class="custom-class">
 				<BadgeOutlines />
@@ -54,9 +54,9 @@
 	</Doc>
 
 	<Doc title="Ghost">
-		<div slot="description">
+		<p slot="description">
 			Use the <code>ghost</code> prop to make your badge look simple yet aesthetically appealing.
-		</div>
+		</p>
 		<Preview src="./BadgeGhosts.svelte">
 			<div class="custom-class">
 				<BadgeGhosts />
@@ -65,9 +65,9 @@
 	</Doc>
 
 	<Doc title="Shapes">
-		<div slot="description">
+		<p slot="description">
 			Use the <code>shape</code> prop to change your badge shape.
-		</div>
+		</p>
 		<Preview src="./BadgeShapes.svelte">
 			<BadgeShapes />
 		</Preview>
@@ -86,20 +86,20 @@
 	</Doc>
 
 	<Doc title="Badge as dot">
-		<div slot="description">
+		<p slot="description">
 			Use the <code>dot</code> prop if you want to create a badge with rounded corners. Its width will
 			adjust to the label text.
-		</div>
+		</p>
 		<Preview src="./BadgeDots.svelte">
 			<BadgeDots />
 		</Preview>
 	</Doc>
 
 	<Doc title="Link">
-		<div slot="description">
+		<p slot="description">
 			Place the link at badge <code>href</code> prop if you want it to perform the function of a link
 			and make it clickable.
-		</div>
+		</p>
 		<Preview src="./BadgeLinks.svelte">
 			<BadgeLinks />
 		</Preview>
