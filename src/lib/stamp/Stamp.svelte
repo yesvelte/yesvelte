@@ -12,8 +12,8 @@
 	export let size: $$Props['size'] = 'md'
 	export let icon: $$Props['icon'] = undefined
 
-	let cssProps: any = {}
-	let otherProps: any = {}
+	let cssProps: StampProps = {}
+	let otherProps: StampProps = {}
 	$: {
 		cssProps = {
 			size,
