@@ -6475,7 +6475,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .alert-dismissible, .u-alert-dismissible {
   padding-right: 3rem;
 }
-.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-offcanvas-header-btn, .alert-dismissible .u-dialog-close, .alert-dismissible .u-alert-end, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-offcanvas-header-btn, .u-alert-dismissible .u-dialog-close, .u-alert-dismissible .u-alert-end {
+.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-offcanvas-header-btn, .alert-dismissible .u-dialog-close, .alert-dismissible .u-alert-close, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-offcanvas-header-btn, .u-alert-dismissible .u-dialog-close, .u-alert-dismissible .u-alert-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -7278,7 +7278,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-color: #134076;
 }
 
-.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-end {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-close {
   box-sizing: content-box;
   width: 0.75rem;
   height: 0.75rem;
@@ -7289,23 +7289,23 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-radius: 4px;
   opacity: 0.3;
 }
-.btn-close:hover, .u-toast-close:hover, .u-offcanvas-header-btn:hover, .u-dialog-close:hover, .u-alert-end:hover {
+.btn-close:hover, .u-toast-close:hover, .u-offcanvas-header-btn:hover, .u-dialog-close:hover, .u-alert-close:hover {
   color: #000000;
   text-decoration: none;
   opacity: 0.75;
 }
-.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-end:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-close:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
   opacity: 1;
 }
-.btn-close:disabled, .u-toast-close:disabled, .u-offcanvas-header-btn:disabled, .u-dialog-close:disabled, .u-alert-end:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-link-disabled, .u-tab-item-link-disabled.u-toast-close, .disabled.u-offcanvas-header-btn, .u-offcanvas-header-btn.u-tab-item-link-disabled, .disabled.u-dialog-close, .u-dialog-close.u-tab-item-link-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-offcanvas-header-btn, .u-button-disabled.u-dialog-close, .disabled.u-alert-end, .u-alert-end.u-tab-item-link-disabled, .u-alert-end.u-button-disabled {
+.btn-close:disabled, .u-toast-close:disabled, .u-offcanvas-header-btn:disabled, .u-dialog-close:disabled, .u-alert-close:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-link-disabled, .u-tab-item-link-disabled.u-toast-close, .disabled.u-offcanvas-header-btn, .u-offcanvas-header-btn.u-tab-item-link-disabled, .disabled.u-dialog-close, .u-dialog-close.u-tab-item-link-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-offcanvas-header-btn, .u-button-disabled.u-dialog-close, .disabled.u-alert-close, .u-alert-close.u-tab-item-link-disabled, .u-alert-close.u-button-disabled {
   pointer-events: none;
   user-select: none;
   opacity: 0.25;
 }
 
-.btn-close-white, .u-alert-filled .u-alert-end {
+.btn-close-white, .u-alert-important .u-alert-close {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
 
@@ -7366,7 +7366,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top-left-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
   border-top-right-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
 }
-.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-offcanvas-header-btn, .u-toast-header .u-offcanvas-header-btn, .toast-header .u-dialog-close, .u-toast-header .u-dialog-close, .toast-header .u-alert-end, .u-toast-header .u-alert-end {
+.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-offcanvas-header-btn, .u-toast-header .u-offcanvas-header-btn, .toast-header .u-dialog-close, .u-toast-header .u-dialog-close, .toast-header .u-alert-close, .u-toast-header .u-alert-close {
   margin-right: calc(-0.5 * var(--u-toast-padding-x));
   margin-left: var(--u-toast-padding-x);
 }
@@ -7492,7 +7492,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top-left-radius: var(--u-modal-inner-border-radius);
   border-top-right-radius: var(--u-modal-inner-border-radius);
 }
-.modal-header .btn-close, .modal-header .u-toast-close, .modal-header .u-offcanvas-header-btn, .u-dialog-header .btn-close, .u-dialog-header .u-toast-close, .u-dialog-header .u-offcanvas-header-btn, .modal-header .u-dialog-close, .u-dialog-header .u-dialog-close, .modal-header .u-alert-end, .u-dialog-header .u-alert-end {
+.modal-header .btn-close, .modal-header .u-toast-close, .modal-header .u-offcanvas-header-btn, .u-dialog-header .btn-close, .u-dialog-header .u-toast-close, .u-dialog-header .u-offcanvas-header-btn, .modal-header .u-dialog-close, .u-dialog-header .u-dialog-close, .modal-header .u-alert-close, .u-dialog-header .u-alert-close {
   padding: calc(var(--u-modal-header-padding-y) * 0.5) calc(var(--u-modal-header-padding-x) * 0.5);
   margin: calc(-0.5 * var(--u-modal-header-padding-y)) calc(-0.5 * var(--u-modal-header-padding-x)) calc(-0.5 * var(--u-modal-header-padding-y)) auto;
 }
@@ -8764,7 +8764,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   justify-content: space-between;
   padding: var(--u-offcanvas-padding-y) var(--u-offcanvas-padding-x);
 }
-.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-offcanvas-header-btn, .u-offcanvas-header .btn-close, .u-offcanvas-header .u-toast-close, .u-offcanvas-header .u-offcanvas-header-btn, .offcanvas-header .u-dialog-close, .u-offcanvas-header .u-dialog-close, .offcanvas-header .u-alert-end, .u-offcanvas-header .u-alert-end {
+.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-offcanvas-header-btn, .u-offcanvas-header .btn-close, .u-offcanvas-header .u-toast-close, .u-offcanvas-header .u-offcanvas-header-btn, .offcanvas-header .u-dialog-close, .u-offcanvas-header .u-dialog-close, .offcanvas-header .u-alert-close, .u-offcanvas-header .u-alert-close {
   padding: calc(var(--u-offcanvas-padding-y) * 0.5) calc(var(--u-offcanvas-padding-x) * 0.5);
   margin-top: calc(-0.5 * var(--u-offcanvas-padding-y));
   margin-right: calc(-0.5 * var(--u-offcanvas-padding-x));
@@ -17178,10 +17178,10 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .theme-dark .u-toast-header,
   .u-app-theme-dark .toast-header,
   .u-app-theme-dark .u-toast-header,
-  .theme-dark .alert:not(.alert-important):not(.u-alert-filled),
-  .u-app-theme-dark .alert:not(.alert-important):not(.u-alert-filled),
-  .theme-dark .u-alert:not(.alert-important):not(.u-alert-filled),
-  .u-app-theme-dark .u-alert:not(.alert-important):not(.u-alert-filled) {
+  .theme-dark .alert:not(.alert-important):not(.u-alert-important),
+  .u-app-theme-dark .alert:not(.alert-important):not(.u-alert-important),
+  .theme-dark .u-alert:not(.alert-important):not(.u-alert-important),
+  .u-app-theme-dark .u-alert:not(.alert-important):not(.u-alert-important) {
     background-color: var(--u-bg-surface);
     color: inherit;
   }
@@ -17260,7 +17260,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .u-app-theme-dark .u-accordion-button {
     color: inherit;
   }
-  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-end, .u-app-theme-dark .u-alert-end,
+  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-close, .u-app-theme-dark .u-alert-close,
   .theme-dark .accordion-button:after,
   .u-app-theme-dark .accordion-button:after,
   .theme-dark .u-accordion-button:after,
@@ -17402,8 +17402,8 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .u-toast,
     .theme-dark-auto .toast-header,
     .theme-dark-auto .u-toast-header,
-    .theme-dark-auto .alert:not(.alert-important):not(.u-alert-filled),
-    .theme-dark-auto .u-alert:not(.alert-important):not(.u-alert-filled) {
+    .theme-dark-auto .alert:not(.alert-important):not(.u-alert-important),
+    .theme-dark-auto .u-alert:not(.alert-important):not(.u-alert-important) {
       background-color: var(--u-bg-surface);
       color: inherit;
     }
@@ -17463,7 +17463,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .u-accordion-button {
       color: inherit;
     }
-    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-end,
+    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-close,
     .theme-dark-auto .accordion-button:after,
     .theme-dark-auto .u-accordion-button:after {
       filter: invert(1) grayscale(100%) brightness(200%);
@@ -17556,17 +17556,17 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   margin-bottom: 0;
 }
 
-.alert-important, .u-alert-filled {
+.alert-important, .u-alert-important {
   border-color: transparent;
   background: var(--u-alert-color);
   color: #fff;
 }
-.alert-important .alert-icon, .u-alert-filled .alert-icon, .alert-important .u-alert-start, .u-alert-filled .u-alert-start,
+.alert-important .alert-icon, .u-alert-important .alert-icon, .alert-important .u-alert-start, .u-alert-important .u-alert-start,
 .alert-important .alert-link,
-.u-alert-filled .alert-link {
+.u-alert-important .alert-link {
   color: inherit;
 }
-.alert-important .alert-link:hover, .u-alert-filled .alert-link:hover {
+.alert-important .alert-link:hover, .u-alert-important .alert-link:hover {
   color: inherit;
 }
 
@@ -20594,10 +20594,10 @@ Card list group
   border-top-left-radius: 0;
 }
 
-.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-end {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-close {
   cursor: pointer;
 }
-.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-end:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-close:focus {
   outline: none;
 }
 
@@ -22175,7 +22175,7 @@ Dimmer
   animation: animated-dots 1.2s steps(4, jump-none) infinite;
 }
 
-.modal-content .btn-close, .modal-content .u-toast-close, .modal-content .u-offcanvas-header-btn, .u-dialog-content .btn-close, .u-dialog-content .u-toast-close, .u-dialog-content .u-offcanvas-header-btn, .modal-content .u-dialog-close, .u-dialog-content .u-dialog-close, .modal-content .u-alert-end, .u-dialog-content .u-alert-end {
+.modal-content .btn-close, .modal-content .u-toast-close, .modal-content .u-offcanvas-header-btn, .u-dialog-content .btn-close, .u-dialog-content .u-toast-close, .u-dialog-content .u-offcanvas-header-btn, .modal-content .u-dialog-close, .u-dialog-content .u-dialog-close, .modal-content .u-alert-close, .u-dialog-content .u-alert-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -25600,7 +25600,13 @@ Antialiasing
   -moz-osx-font-smoothing: auto;
 }
 
-.u-alert-filled .u-alert-title {
+.u-alert .u-alert-start {
+  height: unset !important;
+  width: unset !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.u-alert-important .u-alert-title {
   color: #fff;
 }
 .u-avatar > .u-img {
