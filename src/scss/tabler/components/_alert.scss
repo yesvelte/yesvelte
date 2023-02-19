@@ -11,12 +11,18 @@ $props: (
 .#{$prefix-alert} {
 	@include apply-props($props);
 
+	.#{$prefix-alert}-start {
+		height: unset !important;
+		width: unset !important;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
 	&-important {
 		.#{$prefix-alert}-title {
 			color: #fff;
 		}
-
-		.#{$prefix-alert}-end {
+		.#{$prefix-alert}-close {
 			@extend .btn-close-white;
 		}
 	}
