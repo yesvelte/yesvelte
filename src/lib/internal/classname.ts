@@ -3,8 +3,8 @@ import { paramCase } from 'param-case'
 const prefix = 'u'
 
 export const classname = (
-	componentName: string | undefined,
-	cssObject: object | undefined,
+	componentName?: string,
+	cssObject?: object,
 	staticClassName?: string
 ) => {
 	if (!componentName) return undefined
