@@ -62,7 +62,7 @@ export const navigations = [
 			{
 				route: base_path + '/alert',
 				title: 'Alert',
-				icon: 'radix-icons:alert',
+				icon: 'material-symbols:info-outline',
 				description:
 					'Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.',
 			},
@@ -104,7 +104,7 @@ export const navigations = [
 			{
 				route: base_path + '/fieldset',
 				title: 'Fieldset',
-				icon: 'radix-icons:fieldset',
+				icon: 'fluent-mdl2:field-empty',
 				description:
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
