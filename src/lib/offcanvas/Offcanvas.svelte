@@ -60,11 +60,11 @@
 		<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
 			<slot />
 		</El>
-		{#if backdrop}
+		<!-- {#if backdrop}
 			<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} />
 		{/if}
 		{#if !scroll}
 			<El componentName="{componentName}-no-scroll" />
-		{/if}
+		{/if} -->
 	</El>
 {/if}

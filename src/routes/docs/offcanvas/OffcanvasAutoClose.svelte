@@ -1,9 +1,9 @@
 <script>
 	import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody } from 'yesvelte'
 	let show = false
-	let showNoScroll = false
+	let scroll = false
 	const toggleBackdrop = () => (show = !show)
-	const toggleNoScroll = () => (showNoScroll = !showNoScroll)
+	const toggleNoScroll = () => (scroll = !scroll)
 </script>
 
 <Button color="primary" on:click={toggleBackdrop}>AutoClose Offcanvas</Button>
@@ -16,7 +16,7 @@
 	</OffcanvasBody>
 </Offcanvas>
 
-<Offcanvas bind:show={showNoScroll} autoClose backdrop>
+<Offcanvas bind:show={scroll} autoClose backdrop>
 	<OffcanvasHeader title="Offcanvas Title" />
 	<OffcanvasBody>
 		<p>And here's some amazing content. It's very engaging. Right?</p>
