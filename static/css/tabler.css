@@ -5321,7 +5321,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   cursor: default;
 }
 
-.nav-tabs, .u-tab-list-tabs {
+.nav-tabs, .u-tab-list {
   --u-nav-tabs-border-width: 1px;
   --u-nav-tabs-border-color: var(--u-border-color);
   --u-nav-tabs-border-radius: var(--u-border-radius);
@@ -5331,23 +5331,23 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   --u-nav-tabs-link-active-border-color: var(--u-border-color) var(--u-border-color) var(--u-border-color);
   border-bottom: var(--u-nav-tabs-border-width) solid var(--u-nav-tabs-border-color);
 }
-.nav-tabs .nav-link, .nav-tabs .u-tab-item-link, .u-tab-list-tabs .nav-link, .u-tab-list-tabs .u-tab-item-link {
+.nav-tabs .nav-link, .nav-tabs .u-tab-item-link, .u-tab-list .nav-link, .u-tab-list .u-tab-item-link {
   margin-bottom: calc(-1 * var(--u-nav-tabs-border-width));
   background: none;
   border: var(--u-nav-tabs-border-width) solid transparent;
   border-top-left-radius: var(--u-nav-tabs-border-radius);
   border-top-right-radius: var(--u-nav-tabs-border-radius);
 }
-.nav-tabs .nav-link:hover, .nav-tabs .u-tab-item-link:hover, .u-tab-list-tabs .nav-link:hover, .u-tab-list-tabs .u-tab-item-link:hover, .nav-tabs .nav-link:focus, .nav-tabs .u-tab-item-link:focus, .u-tab-list-tabs .nav-link:focus, .u-tab-list-tabs .u-tab-item-link:focus {
+.nav-tabs .nav-link:hover, .nav-tabs .u-tab-item-link:hover, .u-tab-list .nav-link:hover, .u-tab-list .u-tab-item-link:hover, .nav-tabs .nav-link:focus, .nav-tabs .u-tab-item-link:focus, .u-tab-list .nav-link:focus, .u-tab-list .u-tab-item-link:focus {
   isolation: isolate;
   border-color: var(--u-nav-tabs-link-hover-border-color);
 }
-.nav-tabs .nav-link.disabled, .nav-tabs .nav-link.u-tab-item-link-disabled, .nav-tabs .disabled.u-tab-item-link, .nav-tabs .u-tab-item-link.u-tab-item-link-disabled, .u-tab-list-tabs .nav-link.disabled, .u-tab-list-tabs .nav-link.u-tab-item-link-disabled, .u-tab-list-tabs .disabled.u-tab-item-link, .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-disabled, .nav-tabs .nav-link.u-button-disabled, .nav-tabs .u-button-disabled.u-tab-item-link, .u-tab-list-tabs .nav-link.u-button-disabled, .u-tab-list-tabs .u-button-disabled.u-tab-item-link, .nav-tabs .nav-link:disabled, .nav-tabs .u-tab-item-link:disabled, .u-tab-list-tabs .nav-link:disabled, .u-tab-list-tabs .u-tab-item-link:disabled {
+.nav-tabs .nav-link.disabled, .nav-tabs .nav-link.u-tab-item-link-disabled, .nav-tabs .disabled.u-tab-item-link, .nav-tabs .u-tab-item-link.u-tab-item-link-disabled, .u-tab-list .nav-link.disabled, .u-tab-list .nav-link.u-tab-item-link-disabled, .u-tab-list .disabled.u-tab-item-link, .u-tab-list .u-tab-item-link.u-tab-item-link-disabled, .nav-tabs .nav-link.u-button-disabled, .nav-tabs .u-button-disabled.u-tab-item-link, .u-tab-list .nav-link.u-button-disabled, .u-tab-list .u-button-disabled.u-tab-item-link, .nav-tabs .nav-link:disabled, .nav-tabs .u-tab-item-link:disabled, .u-tab-list .nav-link:disabled, .u-tab-list .u-tab-item-link:disabled {
   color: var(--u-nav-link-disabled-color);
   background-color: transparent;
   border-color: transparent;
 }
-.nav-tabs .nav-link.active, .nav-tabs .nav-link.u-tab-item-link-active, .nav-tabs .active.u-tab-item-link, .nav-tabs .u-tab-item-link.u-tab-item-link-active, .nav-tabs .nav-link.u-tab-pane, .nav-tabs .u-tab-pane.u-tab-item-link, .u-tab-list-tabs .nav-link.active, .u-tab-list-tabs .nav-link.u-tab-item-link-active, .u-tab-list-tabs .active.u-tab-item-link, .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .u-tab-list-tabs .nav-link.u-tab-pane, .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .nav-tabs .nav-link.u-carousel-item-active, .nav-tabs .u-carousel-item-active.u-tab-item-link, .u-tab-list-tabs .nav-link.u-carousel-item-active, .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .nav-tabs .nav-link.u-button-active, .nav-tabs .u-button-active.u-tab-item-link, .u-tab-list-tabs .nav-link.u-button-active, .u-tab-list-tabs .u-button-active.u-tab-item-link, .nav-tabs .nav-link.u-breadcrumb-item-active, .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .nav-tabs .nav-link.u-avatar-active, .nav-tabs .u-avatar-active.u-tab-item-link, .u-tab-list-tabs .nav-link.u-avatar-active, .u-tab-list-tabs .u-avatar-active.u-tab-item-link,
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.u-tab-item-link-active, .nav-tabs .active.u-tab-item-link, .nav-tabs .u-tab-item-link.u-tab-item-link-active, .nav-tabs .nav-link.u-tab-pane, .nav-tabs .u-tab-pane.u-tab-item-link, .u-tab-list .nav-link.active, .u-tab-list .nav-link.u-tab-item-link-active, .u-tab-list .active.u-tab-item-link, .u-tab-list .u-tab-item-link.u-tab-item-link-active, .u-tab-list .nav-link.u-tab-pane, .u-tab-list .u-tab-pane.u-tab-item-link, .nav-tabs .nav-link.u-carousel-item-active, .nav-tabs .u-carousel-item-active.u-tab-item-link, .u-tab-list .nav-link.u-carousel-item-active, .u-tab-list .u-carousel-item-active.u-tab-item-link, .nav-tabs .nav-link.u-button-active, .nav-tabs .u-button-active.u-tab-item-link, .u-tab-list .nav-link.u-button-active, .u-tab-list .u-button-active.u-tab-item-link, .nav-tabs .nav-link.u-breadcrumb-item-active, .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .u-tab-list .nav-link.u-breadcrumb-item-active, .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .nav-tabs .nav-link.u-avatar-active, .nav-tabs .u-avatar-active.u-tab-item-link, .u-tab-list .nav-link.u-avatar-active, .u-tab-list .u-avatar-active.u-tab-item-link,
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-item.u-tooltip .nav-link,
 .nav-tabs .nav-item.u-toast-show .nav-link,
@@ -5364,88 +5364,88 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .nav-tabs .nav-item.u-tab-pane .u-tab-item-link,
 .nav-tabs .u-tab-pane.u-tab-item .nav-link,
 .nav-tabs .u-tab-pane.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.show .nav-link,
-.u-tab-list-tabs .nav-item.u-tooltip .nav-link,
-.u-tab-list-tabs .nav-item.u-toast-show .nav-link,
-.u-tab-list-tabs .nav-item.show .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-tooltip .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-toast-show .u-tab-item-link,
-.u-tab-list-tabs .show.u-tab-item .nav-link,
-.u-tab-list-tabs .u-tab-item.u-tooltip .nav-link,
-.u-tab-list-tabs .u-tab-item.u-toast-show .nav-link,
-.u-tab-list-tabs .show.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .u-tab-item.u-tooltip .u-tab-item-link,
-.u-tab-list-tabs .u-tab-item.u-toast-show .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-tab-pane .nav-link,
-.u-tab-list-tabs .nav-item.u-tab-pane .u-tab-item-link,
-.u-tab-list-tabs .u-tab-pane.u-tab-item .nav-link,
-.u-tab-list-tabs .u-tab-pane.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.show .nav-link,
+.u-tab-list .nav-item.u-tooltip .nav-link,
+.u-tab-list .nav-item.u-toast-show .nav-link,
+.u-tab-list .nav-item.show .u-tab-item-link,
+.u-tab-list .nav-item.u-tooltip .u-tab-item-link,
+.u-tab-list .nav-item.u-toast-show .u-tab-item-link,
+.u-tab-list .show.u-tab-item .nav-link,
+.u-tab-list .u-tab-item.u-tooltip .nav-link,
+.u-tab-list .u-tab-item.u-toast-show .nav-link,
+.u-tab-list .show.u-tab-item .u-tab-item-link,
+.u-tab-list .u-tab-item.u-tooltip .u-tab-item-link,
+.u-tab-list .u-tab-item.u-toast-show .u-tab-item-link,
+.u-tab-list .nav-item.u-tab-pane .nav-link,
+.u-tab-list .nav-item.u-tab-pane .u-tab-item-link,
+.u-tab-list .u-tab-pane.u-tab-item .nav-link,
+.u-tab-list .u-tab-pane.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-popover .nav-link,
 .nav-tabs .nav-item.u-popover .u-tab-item-link,
 .nav-tabs .u-popover.u-tab-item .nav-link,
 .nav-tabs .u-popover.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-popover .nav-link,
-.u-tab-list-tabs .nav-item.u-popover .u-tab-item-link,
-.u-tab-list-tabs .u-popover.u-tab-item .nav-link,
-.u-tab-list-tabs .u-popover.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-popover .nav-link,
+.u-tab-list .nav-item.u-popover .u-tab-item-link,
+.u-tab-list .u-popover.u-tab-item .nav-link,
+.u-tab-list .u-popover.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-offcanvas-show .nav-link,
 .nav-tabs .nav-item.u-offcanvas-show .u-tab-item-link,
 .nav-tabs .u-offcanvas-show.u-tab-item .nav-link,
 .nav-tabs .u-offcanvas-show.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-offcanvas-show .nav-link,
-.u-tab-list-tabs .nav-item.u-offcanvas-show .u-tab-item-link,
-.u-tab-list-tabs .u-offcanvas-show.u-tab-item .nav-link,
-.u-tab-list-tabs .u-offcanvas-show.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-offcanvas-show .nav-link,
+.u-tab-list .nav-item.u-offcanvas-show .u-tab-item-link,
+.u-tab-list .u-offcanvas-show.u-tab-item .nav-link,
+.u-tab-list .u-offcanvas-show.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-dialog-open .nav-link,
 .nav-tabs .nav-item.u-dialog-open .u-tab-item-link,
 .nav-tabs .u-dialog-open.u-tab-item .nav-link,
 .nav-tabs .u-dialog-open.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-dialog-open .nav-link,
-.u-tab-list-tabs .nav-item.u-dialog-open .u-tab-item-link,
-.u-tab-list-tabs .u-dialog-open.u-tab-item .nav-link,
-.u-tab-list-tabs .u-dialog-open.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-dialog-open .nav-link,
+.u-tab-list .nav-item.u-dialog-open .u-tab-item-link,
+.u-tab-list .u-dialog-open.u-tab-item .nav-link,
+.u-tab-list .u-dialog-open.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-dialog-backdrop-open .nav-link,
 .nav-tabs .nav-item.u-dialog-backdrop-open .u-tab-item-link,
 .nav-tabs .u-dialog-backdrop-open.u-tab-item .nav-link,
 .nav-tabs .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-dialog-backdrop-open .nav-link,
-.u-tab-list-tabs .nav-item.u-dialog-backdrop-open .u-tab-item-link,
-.u-tab-list-tabs .u-dialog-backdrop-open.u-tab-item .nav-link,
-.u-tab-list-tabs .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-dialog-backdrop-open .nav-link,
+.u-tab-list .nav-item.u-dialog-backdrop-open .u-tab-item-link,
+.u-tab-list .u-dialog-backdrop-open.u-tab-item .nav-link,
+.u-tab-list .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-el-show .nav-link,
 .nav-tabs .nav-item.u-el-show .u-tab-item-link,
 .nav-tabs .u-el-show.u-tab-item .nav-link,
 .nav-tabs .u-el-show.u-tab-item .u-tab-item-link,
-.u-tab-list-tabs .nav-item.u-el-show .nav-link,
-.u-tab-list-tabs .nav-item.u-el-show .u-tab-item-link,
-.u-tab-list-tabs .u-el-show.u-tab-item .nav-link,
-.u-tab-list-tabs .u-el-show.u-tab-item .u-tab-item-link {
+.u-tab-list .nav-item.u-el-show .nav-link,
+.u-tab-list .nav-item.u-el-show .u-tab-item-link,
+.u-tab-list .u-el-show.u-tab-item .nav-link,
+.u-tab-list .u-el-show.u-tab-item .u-tab-item-link {
   color: var(--u-nav-tabs-link-active-color);
   background-color: var(--u-nav-tabs-link-active-bg);
   border-color: var(--u-nav-tabs-link-active-border-color);
 }
-.nav-tabs .dropdown-menu, .nav-tabs .u-autocomplete-dropdown, .u-tab-list-tabs .dropdown-menu, .u-tab-list-tabs .u-autocomplete-dropdown, .nav-tabs .u-menu, .u-tab-list-tabs .u-menu {
+.nav-tabs .dropdown-menu, .nav-tabs .u-autocomplete-dropdown, .u-tab-list .dropdown-menu, .u-tab-list .u-autocomplete-dropdown, .nav-tabs .u-menu, .u-tab-list .u-menu {
   margin-top: calc(-1 * var(--u-nav-tabs-border-width));
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.nav-pills, .u-tab-list-pills {
+.nav-pills {
   --u-nav-pills-border-radius: 4px;
   --u-nav-pills-link-active-color: var(--u-primary);
   --u-nav-pills-link-active-bg: var(--u-active-bg);
 }
-.nav-pills .nav-link, .nav-pills .u-tab-item-link, .u-tab-list-pills .nav-link, .u-tab-list-pills .u-tab-item-link {
+.nav-pills .nav-link, .nav-pills .u-tab-item-link {
   background: none;
   border: 0;
   border-radius: var(--u-nav-pills-border-radius);
 }
-.nav-pills .nav-link:disabled, .nav-pills .u-tab-item-link:disabled, .u-tab-list-pills .nav-link:disabled, .u-tab-list-pills .u-tab-item-link:disabled {
+.nav-pills .nav-link:disabled, .nav-pills .u-tab-item-link:disabled {
   color: var(--u-nav-link-disabled-color);
   background-color: transparent;
   border-color: transparent;
 }
-.nav-pills .nav-link.active, .nav-pills .nav-link.u-tab-item-link-active, .nav-pills .active.u-tab-item-link, .nav-pills .u-tab-item-link.u-tab-item-link-active, .nav-pills .nav-link.u-tab-pane, .nav-pills .u-tab-pane.u-tab-item-link, .u-tab-list-pills .nav-link.active, .u-tab-list-pills .nav-link.u-tab-item-link-active, .u-tab-list-pills .active.u-tab-item-link, .u-tab-list-pills .u-tab-item-link.u-tab-item-link-active, .u-tab-list-pills .nav-link.u-tab-pane, .u-tab-list-pills .u-tab-pane.u-tab-item-link, .nav-pills .nav-link.u-carousel-item-active, .nav-pills .u-carousel-item-active.u-tab-item-link, .u-tab-list-pills .nav-link.u-carousel-item-active, .u-tab-list-pills .u-carousel-item-active.u-tab-item-link, .nav-pills .nav-link.u-button-active, .nav-pills .u-button-active.u-tab-item-link, .u-tab-list-pills .nav-link.u-button-active, .u-tab-list-pills .u-button-active.u-tab-item-link, .nav-pills .nav-link.u-breadcrumb-item-active, .nav-pills .u-breadcrumb-item-active.u-tab-item-link, .u-tab-list-pills .nav-link.u-breadcrumb-item-active, .u-tab-list-pills .u-breadcrumb-item-active.u-tab-item-link, .nav-pills .nav-link.u-avatar-active, .nav-pills .u-avatar-active.u-tab-item-link, .u-tab-list-pills .nav-link.u-avatar-active, .u-tab-list-pills .u-avatar-active.u-tab-item-link,
+.nav-pills .nav-link.active, .nav-pills .nav-link.u-tab-item-link-active, .nav-pills .active.u-tab-item-link, .nav-pills .u-tab-item-link.u-tab-item-link-active, .nav-pills .nav-link.u-tab-pane, .nav-pills .u-tab-pane.u-tab-item-link, .nav-pills .nav-link.u-carousel-item-active, .nav-pills .u-carousel-item-active.u-tab-item-link, .nav-pills .nav-link.u-button-active, .nav-pills .u-button-active.u-tab-item-link, .nav-pills .nav-link.u-breadcrumb-item-active, .nav-pills .u-breadcrumb-item-active.u-tab-item-link, .nav-pills .nav-link.u-avatar-active, .nav-pills .u-avatar-active.u-tab-item-link,
 .nav-pills .show > .nav-link,
 .nav-pills .u-tooltip > .nav-link,
 .nav-pills .u-toast-show > .nav-link,
@@ -5454,34 +5454,16 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .nav-pills .u-toast-show > .u-tab-item-link,
 .nav-pills .u-tab-pane > .nav-link,
 .nav-pills .u-tab-pane > .u-tab-item-link,
-.u-tab-list-pills .show > .nav-link,
-.u-tab-list-pills .u-tooltip > .nav-link,
-.u-tab-list-pills .u-toast-show > .nav-link,
-.u-tab-list-pills .show > .u-tab-item-link,
-.u-tab-list-pills .u-tooltip > .u-tab-item-link,
-.u-tab-list-pills .u-toast-show > .u-tab-item-link,
-.u-tab-list-pills .u-tab-pane > .nav-link,
-.u-tab-list-pills .u-tab-pane > .u-tab-item-link,
 .nav-pills .u-popover > .nav-link,
 .nav-pills .u-popover > .u-tab-item-link,
-.u-tab-list-pills .u-popover > .nav-link,
-.u-tab-list-pills .u-popover > .u-tab-item-link,
 .nav-pills .u-offcanvas-show > .nav-link,
 .nav-pills .u-offcanvas-show > .u-tab-item-link,
-.u-tab-list-pills .u-offcanvas-show > .nav-link,
-.u-tab-list-pills .u-offcanvas-show > .u-tab-item-link,
 .nav-pills .u-dialog-open > .nav-link,
 .nav-pills .u-dialog-open > .u-tab-item-link,
-.u-tab-list-pills .u-dialog-open > .nav-link,
-.u-tab-list-pills .u-dialog-open > .u-tab-item-link,
 .nav-pills .u-dialog-backdrop-open > .nav-link,
 .nav-pills .u-dialog-backdrop-open > .u-tab-item-link,
-.u-tab-list-pills .u-dialog-backdrop-open > .nav-link,
-.u-tab-list-pills .u-dialog-backdrop-open > .u-tab-item-link,
 .nav-pills .u-el-show > .nav-link,
-.nav-pills .u-el-show > .u-tab-item-link,
-.u-tab-list-pills .u-el-show > .nav-link,
-.u-tab-list-pills .u-el-show > .u-tab-item-link {
+.nav-pills .u-el-show > .u-tab-item-link {
   color: var(--u-nav-pills-link-active-color);
   background-color: var(--u-nav-pills-link-active-bg);
 }
@@ -17209,11 +17191,11 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .theme-dark .bg-light, .theme-dark .u-stamp-bg-color-light > .icon, .theme-dark .u-stamp-bg-color-light > .u-icon, .theme-dark .u-ribbon-bg-color-light, .theme-dark .u-progress-bar-color-light, .theme-dark .u-card-status-color-light, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-theme-dark .bg-light, .u-app-theme-dark .u-stamp-bg-color-light > .icon, .u-app-theme-dark .u-stamp-bg-color-light > .u-icon, .u-app-theme-dark .u-ribbon-bg-color-light, .u-app-theme-dark .u-progress-bar-color-light, .u-app-theme-dark .u-card-status-color-light, .u-app-theme-dark .u-el-bg-color-light, .u-app-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost) {
     background-color: #1a2234 !important;
   }
-  .theme-dark .card-tabs .nav-tabs .nav-link, .theme-dark .card-tabs .nav-tabs .u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link, .theme-dark .card-tabs .u-tab-list-tabs .u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-tab-item-link {
+  .theme-dark .card-tabs .nav-tabs .nav-link, .theme-dark .card-tabs .nav-tabs .u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link, .theme-dark .card-tabs .u-tab-list .u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link, .u-app-theme-dark .card-tabs .u-tab-list .u-tab-item-link {
     background-color: #1a2234;
     color: inherit;
   }
-  .theme-dark .card-tabs .nav-tabs .nav-link.active, .theme-dark .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .theme-dark .card-tabs .nav-tabs .active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark .card-tabs .nav-tabs .nav-link.u-tab-pane, .theme-dark .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.active, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-tab-item-link-active, .theme-dark .card-tabs .u-tab-list-tabs .active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-tab-pane, .theme-dark .card-tabs .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .theme-dark .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-carousel-item-active, .theme-dark .card-tabs .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-button-active, .theme-dark .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-button-active, .theme-dark .card-tabs .u-tab-list-tabs .u-button-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .theme-dark .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .theme-dark .card-tabs .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-avatar-active, .theme-dark .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-avatar-active, .theme-dark .card-tabs .u-tab-list-tabs .u-avatar-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.active, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .nav-tabs .active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-tab-pane, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-tab-pane, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .u-app-theme-dark .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-carousel-item-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-button-active, .u-app-theme-dark .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-button-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-button-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .u-app-theme-dark .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-avatar-active, .u-app-theme-dark .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list-tabs .nav-link.u-avatar-active, .u-app-theme-dark .card-tabs .u-tab-list-tabs .u-avatar-active.u-tab-item-link {
+  .theme-dark .card-tabs .nav-tabs .nav-link.active, .theme-dark .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .theme-dark .card-tabs .nav-tabs .active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark .card-tabs .nav-tabs .nav-link.u-tab-pane, .theme-dark .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link.active, .theme-dark .card-tabs .u-tab-list .nav-link.u-tab-item-link-active, .theme-dark .card-tabs .u-tab-list .active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .u-tab-item-link.u-tab-item-link-active, .theme-dark .card-tabs .u-tab-list .nav-link.u-tab-pane, .theme-dark .card-tabs .u-tab-list .u-tab-pane.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .theme-dark .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link.u-carousel-item-active, .theme-dark .card-tabs .u-tab-list .u-carousel-item-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-button-active, .theme-dark .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link.u-button-active, .theme-dark .card-tabs .u-tab-list .u-button-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .theme-dark .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link.u-breadcrumb-item-active, .theme-dark .card-tabs .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .theme-dark .card-tabs .nav-tabs .nav-link.u-avatar-active, .theme-dark .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .theme-dark .card-tabs .u-tab-list .nav-link.u-avatar-active, .theme-dark .card-tabs .u-tab-list .u-avatar-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.active, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .nav-tabs .active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-tab-pane, .u-app-theme-dark .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.active, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .u-tab-list .active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .u-tab-item-link.u-tab-item-link-active, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-tab-pane, .u-app-theme-dark .card-tabs .u-tab-list .u-tab-pane.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .u-app-theme-dark .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-carousel-item-active, .u-app-theme-dark .card-tabs .u-tab-list .u-carousel-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-button-active, .u-app-theme-dark .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-button-active, .u-app-theme-dark .card-tabs .u-tab-list .u-button-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .u-app-theme-dark .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-breadcrumb-item-active, .u-app-theme-dark .card-tabs .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .u-app-theme-dark .card-tabs .nav-tabs .nav-link.u-avatar-active, .u-app-theme-dark .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .u-app-theme-dark .card-tabs .u-tab-list .nav-link.u-avatar-active, .u-app-theme-dark .card-tabs .u-tab-list .u-avatar-active.u-tab-item-link {
     background-color: #1d273b;
     color: inherit;
   }
@@ -17431,11 +17413,11 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .bg-light, .theme-dark-auto .u-stamp-bg-color-light > .icon, .theme-dark-auto .u-stamp-bg-color-light > .u-icon, .theme-dark-auto .u-ribbon-bg-color-light, .theme-dark-auto .u-progress-bar-color-light, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost) {
       background-color: #1a2234 !important;
     }
-    .theme-dark-auto .card-tabs .nav-tabs .nav-link, .theme-dark-auto .card-tabs .nav-tabs .u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-tab-item-link {
+    .theme-dark-auto .card-tabs .nav-tabs .nav-link, .theme-dark-auto .card-tabs .nav-tabs .u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link, .theme-dark-auto .card-tabs .u-tab-list .u-tab-item-link {
       background-color: #1a2234;
       color: inherit;
     }
-    .theme-dark-auto .card-tabs .nav-tabs .nav-link.active, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .nav-tabs .active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-tab-pane, .theme-dark-auto .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.active, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-tab-pane, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .theme-dark-auto .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-carousel-item-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-button-active, .theme-dark-auto .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-button-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-button-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .theme-dark-auto .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-avatar-active, .theme-dark-auto .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list-tabs .nav-link.u-avatar-active, .theme-dark-auto .card-tabs .u-tab-list-tabs .u-avatar-active.u-tab-item-link {
+    .theme-dark-auto .card-tabs .nav-tabs .nav-link.active, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .nav-tabs .active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-tab-pane, .theme-dark-auto .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link.active, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .u-tab-list .active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .u-tab-item-link.u-tab-item-link-active, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-tab-pane, .theme-dark-auto .card-tabs .u-tab-list .u-tab-pane.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .theme-dark-auto .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-carousel-item-active, .theme-dark-auto .card-tabs .u-tab-list .u-carousel-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-button-active, .theme-dark-auto .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-button-active, .theme-dark-auto .card-tabs .u-tab-list .u-button-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .theme-dark-auto .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-breadcrumb-item-active, .theme-dark-auto .card-tabs .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .theme-dark-auto .card-tabs .nav-tabs .nav-link.u-avatar-active, .theme-dark-auto .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .theme-dark-auto .card-tabs .u-tab-list .nav-link.u-avatar-active, .theme-dark-auto .card-tabs .u-tab-list .u-avatar-active.u-tab-item-link {
       background-color: #1d273b;
       color: inherit;
     }
@@ -20555,30 +20537,30 @@ Card list group
   border-top: 0;
 }
 
-.card-tabs .nav-tabs, .card-tabs .u-tab-list-tabs {
+.card-tabs .nav-tabs, .card-tabs .u-tab-list {
   position: relative;
   z-index: 1000;
   border-bottom: 0;
 }
-.card-tabs .nav-tabs .nav-link, .card-tabs .nav-tabs .u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link, .card-tabs .u-tab-list-tabs .u-tab-item-link {
+.card-tabs .nav-tabs .nav-link, .card-tabs .nav-tabs .u-tab-item-link, .card-tabs .u-tab-list .nav-link, .card-tabs .u-tab-list .u-tab-item-link {
   background: var(--u-bg-surface-secondary);
   border: var(--u-border-width) var(--u-border-style) var(--u-border-color);
 }
-.card-tabs .nav-tabs .nav-link.active, .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .card-tabs .nav-tabs .active.u-tab-item-link, .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .nav-tabs .nav-link.u-tab-pane, .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.active, .card-tabs .u-tab-list-tabs .nav-link.u-tab-item-link-active, .card-tabs .u-tab-list-tabs .active.u-tab-item-link, .card-tabs .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .u-tab-list-tabs .nav-link.u-tab-pane, .card-tabs .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-carousel-item-active, .card-tabs .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-button-active, .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-button-active, .card-tabs .u-tab-list-tabs .u-button-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-avatar-active, .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-avatar-active, .card-tabs .u-tab-list-tabs .u-avatar-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link:active, .card-tabs .nav-tabs .u-tab-item-link:active, .card-tabs .u-tab-list-tabs .nav-link:active, .card-tabs .u-tab-list-tabs .u-tab-item-link:active, .card-tabs .nav-tabs .nav-link:hover, .card-tabs .nav-tabs .u-tab-item-link:hover, .card-tabs .u-tab-list-tabs .nav-link:hover, .card-tabs .u-tab-list-tabs .u-tab-item-link:hover {
+.card-tabs .nav-tabs .nav-link.active, .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .card-tabs .nav-tabs .active.u-tab-item-link, .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .nav-tabs .nav-link.u-tab-pane, .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .card-tabs .u-tab-list .nav-link.active, .card-tabs .u-tab-list .nav-link.u-tab-item-link-active, .card-tabs .u-tab-list .active.u-tab-item-link, .card-tabs .u-tab-list .u-tab-item-link.u-tab-item-link-active, .card-tabs .u-tab-list .nav-link.u-tab-pane, .card-tabs .u-tab-list .u-tab-pane.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-carousel-item-active, .card-tabs .u-tab-list .u-carousel-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-button-active, .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-button-active, .card-tabs .u-tab-list .u-button-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-breadcrumb-item-active, .card-tabs .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-avatar-active, .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-avatar-active, .card-tabs .u-tab-list .u-avatar-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link:active, .card-tabs .nav-tabs .u-tab-item-link:active, .card-tabs .u-tab-list .nav-link:active, .card-tabs .u-tab-list .u-tab-item-link:active, .card-tabs .nav-tabs .nav-link:hover, .card-tabs .nav-tabs .u-tab-item-link:hover, .card-tabs .u-tab-list .nav-link:hover, .card-tabs .u-tab-list .u-tab-item-link:hover {
   border-color: var(--u-border-color);
   color: #1d273b;
 }
-.card-tabs .nav-tabs .nav-link.active, .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .card-tabs .nav-tabs .active.u-tab-item-link, .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .nav-tabs .nav-link.u-tab-pane, .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.active, .card-tabs .u-tab-list-tabs .nav-link.u-tab-item-link-active, .card-tabs .u-tab-list-tabs .active.u-tab-item-link, .card-tabs .u-tab-list-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .u-tab-list-tabs .nav-link.u-tab-pane, .card-tabs .u-tab-list-tabs .u-tab-pane.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-carousel-item-active, .card-tabs .u-tab-list-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-button-active, .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-button-active, .card-tabs .u-tab-list-tabs .u-button-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .u-tab-list-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-avatar-active, .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-link.u-avatar-active, .card-tabs .u-tab-list-tabs .u-avatar-active.u-tab-item-link {
+.card-tabs .nav-tabs .nav-link.active, .card-tabs .nav-tabs .nav-link.u-tab-item-link-active, .card-tabs .nav-tabs .active.u-tab-item-link, .card-tabs .nav-tabs .u-tab-item-link.u-tab-item-link-active, .card-tabs .nav-tabs .nav-link.u-tab-pane, .card-tabs .nav-tabs .u-tab-pane.u-tab-item-link, .card-tabs .u-tab-list .nav-link.active, .card-tabs .u-tab-list .nav-link.u-tab-item-link-active, .card-tabs .u-tab-list .active.u-tab-item-link, .card-tabs .u-tab-list .u-tab-item-link.u-tab-item-link-active, .card-tabs .u-tab-list .nav-link.u-tab-pane, .card-tabs .u-tab-list .u-tab-pane.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-carousel-item-active, .card-tabs .nav-tabs .u-carousel-item-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-carousel-item-active, .card-tabs .u-tab-list .u-carousel-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-button-active, .card-tabs .nav-tabs .u-button-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-button-active, .card-tabs .u-tab-list .u-button-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-breadcrumb-item-active, .card-tabs .nav-tabs .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-breadcrumb-item-active, .card-tabs .u-tab-list .u-breadcrumb-item-active.u-tab-item-link, .card-tabs .nav-tabs .nav-link.u-avatar-active, .card-tabs .nav-tabs .u-avatar-active.u-tab-item-link, .card-tabs .u-tab-list .nav-link.u-avatar-active, .card-tabs .u-tab-list .u-avatar-active.u-tab-item-link {
   background: var(--u-card-bg, var(--u-bg-surface));
   border-bottom-color: transparent;
 }
-.card-tabs .nav-tabs .nav-item:not(:first-child) .nav-link, .card-tabs .nav-tabs .nav-item:not(:first-child) .u-tab-item-link, .card-tabs .nav-tabs .u-tab-item:not(:first-child) .nav-link, .card-tabs .nav-tabs .u-tab-item:not(:first-child) .u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-item:not(:first-child) .nav-link, .card-tabs .u-tab-list-tabs .nav-item:not(:first-child) .u-tab-item-link, .card-tabs .u-tab-list-tabs .u-tab-item:not(:first-child) .nav-link, .card-tabs .u-tab-list-tabs .u-tab-item:not(:first-child) .u-tab-item-link {
+.card-tabs .nav-tabs .nav-item:not(:first-child) .nav-link, .card-tabs .nav-tabs .nav-item:not(:first-child) .u-tab-item-link, .card-tabs .nav-tabs .u-tab-item:not(:first-child) .nav-link, .card-tabs .nav-tabs .u-tab-item:not(:first-child) .u-tab-item-link, .card-tabs .u-tab-list .nav-item:not(:first-child) .nav-link, .card-tabs .u-tab-list .nav-item:not(:first-child) .u-tab-item-link, .card-tabs .u-tab-list .u-tab-item:not(:first-child) .nav-link, .card-tabs .u-tab-list .u-tab-item:not(:first-child) .u-tab-item-link {
   border-top-left-radius: 0;
 }
-.card-tabs .nav-tabs .nav-item:not(:last-child) .nav-link, .card-tabs .nav-tabs .nav-item:not(:last-child) .u-tab-item-link, .card-tabs .nav-tabs .u-tab-item:not(:last-child) .nav-link, .card-tabs .nav-tabs .u-tab-item:not(:last-child) .u-tab-item-link, .card-tabs .u-tab-list-tabs .nav-item:not(:last-child) .nav-link, .card-tabs .u-tab-list-tabs .nav-item:not(:last-child) .u-tab-item-link, .card-tabs .u-tab-list-tabs .u-tab-item:not(:last-child) .nav-link, .card-tabs .u-tab-list-tabs .u-tab-item:not(:last-child) .u-tab-item-link {
+.card-tabs .nav-tabs .nav-item:not(:last-child) .nav-link, .card-tabs .nav-tabs .nav-item:not(:last-child) .u-tab-item-link, .card-tabs .nav-tabs .u-tab-item:not(:last-child) .nav-link, .card-tabs .nav-tabs .u-tab-item:not(:last-child) .u-tab-item-link, .card-tabs .u-tab-list .nav-item:not(:last-child) .nav-link, .card-tabs .u-tab-list .nav-item:not(:last-child) .u-tab-item-link, .card-tabs .u-tab-list .u-tab-item:not(:last-child) .nav-link, .card-tabs .u-tab-list .u-tab-item:not(:last-child) .u-tab-item-link {
   border-top-right-radius: 0;
 }
-.card-tabs .nav-tabs .nav-item + .nav-item, .card-tabs .nav-tabs .u-tab-item + .nav-item, .card-tabs .nav-tabs .nav-item + .u-tab-item, .card-tabs .nav-tabs .u-tab-item + .u-tab-item, .card-tabs .u-tab-list-tabs .nav-item + .nav-item, .card-tabs .u-tab-list-tabs .u-tab-item + .nav-item, .card-tabs .u-tab-list-tabs .nav-item + .u-tab-item, .card-tabs .u-tab-list-tabs .u-tab-item + .u-tab-item {
+.card-tabs .nav-tabs .nav-item + .nav-item, .card-tabs .nav-tabs .u-tab-item + .nav-item, .card-tabs .nav-tabs .nav-item + .u-tab-item, .card-tabs .nav-tabs .u-tab-item + .u-tab-item, .card-tabs .u-tab-list .nav-item + .nav-item, .card-tabs .u-tab-list .u-tab-item + .nav-item, .card-tabs .u-tab-list .nav-item + .u-tab-item, .card-tabs .u-tab-list .u-tab-item + .u-tab-item {
   margin-left: calc(-1 * var(--u-border-width));
 }
 .card-tabs .nav-tabs-bottom {
@@ -20607,7 +20589,7 @@ Card list group
 .card-tabs .card, .card-tabs .u-card {
   border-bottom-left-radius: 0;
 }
-.card-tabs .nav-tabs + .tab-content .card, .card-tabs .nav-tabs + .u-tab-content .card, .card-tabs .u-tab-list-tabs + .tab-content .card, .card-tabs .u-tab-list-tabs + .u-tab-content .card, .card-tabs .nav-tabs + .tab-content .u-card, .card-tabs .nav-tabs + .u-tab-content .u-card, .card-tabs .u-tab-list-tabs + .tab-content .u-card, .card-tabs .u-tab-list-tabs + .u-tab-content .u-card {
+.card-tabs .nav-tabs + .tab-content .card, .card-tabs .nav-tabs + .u-tab-content .card, .card-tabs .u-tab-list + .tab-content .card, .card-tabs .u-tab-list + .u-tab-content .card, .card-tabs .nav-tabs + .tab-content .u-card, .card-tabs .nav-tabs + .u-tab-content .u-card, .card-tabs .u-tab-list + .tab-content .u-card, .card-tabs .u-tab-list + .u-tab-content .u-card {
   border-bottom-left-radius: var(--u-card-border-radius);
   border-top-left-radius: 0;
 }
@@ -22321,7 +22303,7 @@ Dimmer
 .nav-vertical .u-el-show.u-tab-item .u-tab-item-link {
   font-weight: var(--u-font-weight-bold);
 }
-.nav-vertical.nav-pills, .nav-vertical.u-tab-list-pills {
+.nav-vertical.nav-pills {
   margin: 0 -0.75rem;
 }
 

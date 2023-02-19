@@ -1,0 +1,33 @@
+<script lang="ts">
+	import { El } from '../el'
+	import type { StampProps } from './Stamp.types'
+	import { Icon } from '../icon'
+
+	type $$Props = StampProps
+
+	export let componentName: $$Props['componentName'] = 'stamp'
+	export let bgColor: $$Props['bgColor'] = undefined
+	export let textColor: $$Props['textColor'] = undefined
+	export let iconPosition: $$Props['iconPosition'] = undefined
+	export let size: $$Props['size'] = 'md'
+	export let icon: $$Props['icon'] = undefined
+
+	let cssProps: any = {}
+	let otherProps: any = {}
+	$: {
+		cssProps = {
+			size,
+			iconPosition,
+			bgColor,
+			textColor,
+		}
+		otherProps = {
+			componentName,
+			icon,
+		}
+	}
+</script>
+
+<El {...$$restProps} {cssProps} {...otherProps}>
+	<Icon name={icon} />
+</El>

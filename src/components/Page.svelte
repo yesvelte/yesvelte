@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El } from 'yesvelte'
+	import { Card, CardBody, El } from 'yesvelte'
 	import ToC from './ToC.svelte'
 
 	export let title: string = ''
@@ -13,17 +13,22 @@
 
 <El container="md">
 	<El row>
-		<El col="9">
-			<El border>
-				<El tag="h1">{title}</El>
-				<slot name="description">
-					<El tag="p">{description}</El>
-				</slot>
-
-				<slot />
-			</El>
+		<El col="2">
+			<Card title="Menu">Menu will come here!</Card>
 		</El>
-		<El col="3">
+		<El col="8">
+			<Card size="lg">
+				<CardBody>
+					<El tag="h1">{title}</El>
+					<slot name="description">
+						<El tag="p">{description}</El>
+					</slot>
+
+					<slot />
+				</CardBody>
+			</Card>
+		</El>
+		<El col="2">
 			<ToC />
 		</El>
 	</El>

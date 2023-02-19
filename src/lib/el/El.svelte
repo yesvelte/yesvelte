@@ -18,6 +18,7 @@
 	export let tag: $$Props['tag'] = elTagName
 	export let cssProps: $$Props['cssProps'] = {}
 	export let value: $$Props['value'] = undefined
+	export let title: $$Props['title'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 	let classes: string | undefined
@@ -336,6 +337,7 @@
 		elProps = {
 			id,
 			class: classes,
+			title,
 		}
 	}
 </script>
