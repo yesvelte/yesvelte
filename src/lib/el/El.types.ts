@@ -341,4 +341,5 @@ export interface ElProps extends CssProps {
 	value?: unknown
 	title?: string
 	tabindex?: string | number
+	role?: string
 }

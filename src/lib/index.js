@@ -1,6 +1,7 @@
 export { Avatar, AvatarList } from './avatar'
 export { Badge } from './badge'
 export { El } from './el'
+export { Alert } from './alert'
 export { Button } from './button'
 export { Card, CardActions, CardBody, CardFooter, CardHeader, CardMedia, CardTitle } from './card'
 export { Divider } from './divider'

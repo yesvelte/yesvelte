@@ -2,21 +2,27 @@ $props: (
 	null: '.alert' '.d-flex',
 	title: '.alert-title',
 	dismissible: '.alert-dismissible',
-	end: '.btn-close',
+	close: '.btn-close',
 	color: generate_props($theme_colors, ('.alert-')),
 	start: '.alert-icon',
-	filled: '.alert-important'
+	important: '.alert-important',
 );
 
 .#{$prefix-alert} {
 	@include apply-props($props);
 
-	&-filled {
+	.#{$prefix-alert}-start {
+		height: unset !important;
+		width: unset !important;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&-important {
 		.#{$prefix-alert}-title {
 			color: #fff;
 		}
-
-		.#{$prefix-alert}-end {
+		.#{$prefix-alert}-close {
 			@extend .btn-close-white;
 		}
 	}
