@@ -16,6 +16,9 @@ function compile(file) {
 					if (url.startsWith('@') || url.startsWith('~')) {
 						url = path.resolve('node_modules', url.substr(1))
 					}
+					if (url.startsWith('../../node_modules/')) {
+						url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
+					}
 					return new URL('file://' + url)
 				},
 			},
