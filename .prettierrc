@@ -5,6 +5,7 @@
 	"trailingComma": "es5",
 	"printWidth": 100,
 	"bracketSameLine": true,
+	"quoteProps": "consistent",
 	"plugins": ["prettier-plugin-svelte"],
 	"pluginSearchDirs": ["."],
 	"svelteAllowShorthand": true,
