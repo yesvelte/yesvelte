@@ -4,51 +4,66 @@
 
 	type $$Props = ButtonProps
 
-	export let outline: $$Props['outline'] = undefined
-	export let href: $$Props['href'] = undefined
-	export let componentName: $$Props['componentName'] = 'button'
-	export let tag: $$Props['tag'] = 'button'
-	export let type: $$Props['type'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let toggle: $$Props['toggle'] = undefined
-	export let color: $$Props['color'] = undefined
-	export let ghost: $$Props['ghost'] = undefined
-	export let loading: $$Props['loading'] = undefined
+	// TODO
+	// shape?: 'tile' | 'pill' | 'round' | 'fab'
+	// ghost
+	// icon
+	// link
+	// outline/outlined
+	// ripple = boolean
+	// expand = "block" | "full" | undefined
+	// text
+	// fill/contained
+	// flat
+	// depresed
+	// rel
+	// plain - remove bg
+	// shaped
+	// elevation
+
 	export let active: $$Props['active'] = undefined
+	export let color: $$Props['color'] = undefined
+	export let componentName: $$Props['componentName'] = 'button'
 	export let disabled: $$Props['disabled'] = undefined
+	export let ghost: $$Props['ghost'] = undefined
+	export let href: $$Props['href'] = undefined
+	// icon?: boolean
+	// link?: boolean
+	export let loading: $$Props['loading'] = undefined
+	export let outline: $$Props['outline'] = undefined
 	export let pill: $$Props['pill'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let target: $$Props['target'] = undefined
 	export let tile: $$Props['tile'] = undefined
+	export let type: $$Props['type'] = undefined
+
+	export let tag: $$Props['tag'] = 'button'
 
 	let cssProps: ButtonProps = {}
 	let props: ButtonProps = {}
 	$: {
 		cssProps = {
+			active,
 			color,
-			outline,
-			size,
-			toggle,
+			disabled,
 			ghost,
 			loading,
-			active,
-			disabled,
+			outline,
 			pill,
+			size,
 			tile,
 		}
 		props = {
-			tag: href ? 'a' : tag,
 			componentName,
-			role: 'button',
-			type: type ?? 'button',
 			href,
+			role: 'button',
+			tag: href ? 'a' : tag,
+			target,
+			type: type ?? 'button',
 		}
 	}
 </script>
 
 <El {...$$restProps} {cssProps} {...props} on:click>
-	<slot>
-		{#if value}
-			{value}
-		{/if}
-	</slot>
+	<slot />
 </El>
