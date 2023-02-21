@@ -10,9 +10,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: 'index.html',
-			prerender: {
-				entries: []
-			}
+			strict: false,
 		}),
 		alias: {
 			// this will match a file
