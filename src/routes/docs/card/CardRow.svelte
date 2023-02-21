@@ -10,12 +10,9 @@
 	</El>
 	<El col>
 		<Card>
-			<CardBody
-				>Extra long content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr Extra
-				long content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr Extra long
-				content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr Extra long content
-				of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr Extra long content of card.
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+			<CardBody>
+				Extra long content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr Extra
+				long content of card.
 			</CardBody>
 		</Card>
 	</El>
