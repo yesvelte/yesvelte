@@ -5,6 +5,9 @@ on:
     branches:
       - dev
 
+permissions:
+  id-token: write
+
 jobs:
   publish-npm:
     # if: ${{ startsWith(github.event.head_commit.message, 'release') }}
