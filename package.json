@@ -16,7 +16,7 @@
 		"yesvelte",
 		"tabler"
 	],
-	"homepage": "https://www.yesvelte.io/",
+	"homepage": "https://www.yesvelte.com/",
 	"bugs": {
 		"url": "https://github.com/yesvelte/yesvelte/issues",
 		"email": "ap@momentaj.io"
@@ -30,6 +30,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
+		"build:site": "vite build",
 		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -49,6 +50,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "^5.0.0",
 		"param-case": "^3.0.4",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
