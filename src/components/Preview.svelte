@@ -10,7 +10,7 @@
 		CardBody,
 	} from 'yesvelte'
 	import Prism from './Prism.svelte'
-	//https://www.npmjs.com/package/prism-themes
+
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
 	export let style: string | undefined = undefined

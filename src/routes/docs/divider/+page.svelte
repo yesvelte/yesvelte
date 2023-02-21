@@ -15,7 +15,9 @@ user experience and enhanced interaction with a website or app.">
 		description="Use dividers to visually separate content into parts. You can use a line only or add text that will be centered by
 default.">
 		<Preview src="./DividerDefault.svelte">
-			<DividerDefault />
+			<div class="custom-class">
+				<DividerDefault />
+			</div>
 		</Preview>
 	</Doc>
 
@@ -24,19 +26,31 @@ default.">
 		description="You can modify the position of the text which is to be included in a separator and make it left-
 	or right-aligned. Otherwise, the text will remain centered.">
 		<Preview src="./DividerPositions.svelte">
-			<DividerPositions />
+			<div class="custom-class">
+				<DividerPositions />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Colors" description="Customize the color of the divider to suit your design.">
 		<Preview src="./DividerColors.svelte">
-			<DividerColors />
+			<div class="custom-class">
+				<DividerColors />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Vertical" description="Direction of divider also can be vertical.">
 		<Preview src="./DividerDirection.svelte">
-			<DividerDirection />
+			<div class="custom-class">
+				<DividerDirection />
+			</div>
 		</Preview>
 	</Doc>
 </Page>
+
+<style>
+	.custom-class > :global(p) {
+		opacity: 0.2;
+	}
+</style>
