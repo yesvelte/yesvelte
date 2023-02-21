@@ -45,6 +45,7 @@
 		"@sveltejs/package": "^1.0.0",
 		"@tabler/core": "^1.0.0-beta16",
 		"@types/bootstrap": "^5.2.6",
+		"@types/prismjs": "^1.26.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
@@ -54,6 +55,7 @@
 		"param-case": "^3.0.4",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prismjs": "^1.29.0",
 		"sass": "^1.58.0",
 		"svelte-check": "^3.0.1",
 		"svelte-preprocess": "^5.0.1",
@@ -66,7 +68,6 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"@types/prismjs": "^1.26.0",
 		"change-case": "^4.1.2",
 		"iconify-icon": "^1.0.5",
 		"inputmask": "^5.0.7",
