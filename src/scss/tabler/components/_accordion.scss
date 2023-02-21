@@ -8,12 +8,14 @@ $accordions-props: (
 
 $accordion-props: (
 	null: '.accordion-item',
-	header: '.accordion-header',
-	body: '.accordion-body',
-	button: (
-		'': '.accordion-button',
-		collapsed: '.collapsed'
-	)
+	header: (
+		null: '.accordion-header',
+		button: (
+			null: '.accordion-button',
+			collapsed: '.collapsed'
+		)
+	),
+	body: '.accordion-body'
 );
 
 .#{$prefix-accordion} {
