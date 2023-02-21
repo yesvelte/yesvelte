@@ -123,6 +123,13 @@ export const navigations = [
 					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
 			},
 			{
+				route: base_path + '/label',
+				title: 'Label',
+				icon: 'pepicons:label',
+				description:
+					'Label component is used to set a name or some identifier for Form Elements. More details about this component is described in this page.',
+			},
+			{
 				route: base_path + '/offcanvas',
 				title: 'Offcanvas',
 				icon: 'mdi:page-layout-sidebar-right',
