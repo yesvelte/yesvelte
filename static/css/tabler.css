@@ -6326,7 +6326,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   --u-accordion-active-bg: transparent;
 }
 
-.accordion-button, .u-accordion-button {
+.accordion-button, .u-accordion-header-button {
   position: relative;
   display: flex;
   align-items: center;
@@ -6342,20 +6342,20 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   transition: var(--u-accordion-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .accordion-button, .u-accordion-button {
+  .accordion-button, .u-accordion-header-button {
     transition: none;
   }
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
+.accordion-button:not(.collapsed):not(.u-accordion-header-button-collapsed), .u-accordion-header-button:not(.collapsed):not(.u-accordion-header-button-collapsed) {
   color: var(--u-accordion-active-color);
   background-color: var(--u-accordion-active-bg);
   box-shadow: inset 0 calc(-1 * var(--u-accordion-border-width)) 0 var(--u-accordion-border-color);
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed)::after {
+.accordion-button:not(.collapsed):not(.u-accordion-header-button-collapsed)::after, .u-accordion-header-button:not(.collapsed):not(.u-accordion-header-button-collapsed)::after {
   background-image: var(--u-accordion-btn-active-icon);
   transform: var(--u-accordion-btn-icon-transform);
 }
-.accordion-button::after, .u-accordion-button::after {
+.accordion-button::after, .u-accordion-header-button::after {
   flex-shrink: 0;
   width: var(--u-accordion-btn-icon-width);
   height: var(--u-accordion-btn-icon-width);
@@ -6367,14 +6367,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   transition: var(--u-accordion-btn-icon-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .accordion-button::after, .u-accordion-button::after {
+  .accordion-button::after, .u-accordion-header-button::after {
     transition: none;
   }
 }
-.accordion-button:hover, .u-accordion-button:hover {
+.accordion-button:hover, .u-accordion-header-button:hover {
   z-index: 2;
 }
-.accordion-button:focus, .u-accordion-button:focus {
+.accordion-button:focus, .u-accordion-header-button:focus {
   z-index: 3;
   border-color: var(--u-accordion-btn-focus-border-color);
   outline: 0;
@@ -6394,7 +6394,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top-left-radius: var(--u-accordion-border-radius);
   border-top-right-radius: var(--u-accordion-border-radius);
 }
-.accordion-item:first-of-type .accordion-button, .accordion-item:first-of-type .u-accordion-button, .u-accordion:first-of-type .accordion-button, .u-accordion:first-of-type .u-accordion-button {
+.accordion-item:first-of-type .accordion-button, .accordion-item:first-of-type .u-accordion-header-button, .u-accordion:first-of-type .accordion-button, .u-accordion:first-of-type .u-accordion-header-button {
   border-top-left-radius: var(--u-accordion-inner-border-radius);
   border-top-right-radius: var(--u-accordion-inner-border-radius);
 }
@@ -6405,7 +6405,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-bottom-right-radius: var(--u-accordion-border-radius);
   border-bottom-left-radius: var(--u-accordion-border-radius);
 }
-.accordion-item:last-of-type .accordion-button.collapsed, .accordion-item:last-of-type .accordion-button.u-accordion-button-collapsed, .accordion-item:last-of-type .collapsed.u-accordion-button, .accordion-item:last-of-type .u-accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .accordion-button.collapsed, .u-accordion:last-of-type .accordion-button.u-accordion-button-collapsed, .u-accordion:last-of-type .collapsed.u-accordion-button, .u-accordion:last-of-type .u-accordion-button.u-accordion-button-collapsed {
+.accordion-item:last-of-type .accordion-button.collapsed, .accordion-item:last-of-type .accordion-button.u-accordion-header-button-collapsed, .accordion-item:last-of-type .collapsed.u-accordion-header-button, .accordion-item:last-of-type .u-accordion-header-button.u-accordion-header-button-collapsed, .u-accordion:last-of-type .accordion-button.collapsed, .u-accordion:last-of-type .accordion-button.u-accordion-header-button-collapsed, .u-accordion:last-of-type .collapsed.u-accordion-header-button, .u-accordion:last-of-type .u-accordion-header-button.u-accordion-header-button-collapsed {
   border-bottom-right-radius: var(--u-accordion-inner-border-radius);
   border-bottom-left-radius: var(--u-accordion-inner-border-radius);
 }
@@ -6432,11 +6432,11 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .accordion-flush .accordion-item:last-child, .accordion-flush .u-accordion:last-child {
   border-bottom: 0;
 }
-.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .u-accordion-button, .accordion-flush .u-accordion .accordion-button, .accordion-flush .u-accordion .u-accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .u-accordion-header-button, .accordion-flush .u-accordion .accordion-button, .accordion-flush .u-accordion .u-accordion-header-button, .accordion-flush .accordion-item .accordion-button.collapsed {
   border-radius: 0;
 }
 
-[data-bs-theme=dark] .accordion-button::after, [data-bs-theme=dark] .u-accordion-button::after {
+[data-bs-theme=dark] .accordion-button::after, [data-bs-theme=dark] .u-accordion-header-button::after {
   --u-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --u-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
@@ -18347,15 +18347,15 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .u-app-theme-dark .markdown > *,
   .theme-dark .accordion-button,
   .u-app-theme-dark .accordion-button,
-  .theme-dark .u-accordion-button,
-  .u-app-theme-dark .u-accordion-button {
+  .theme-dark .u-accordion-header-button,
+  .u-app-theme-dark .u-accordion-header-button {
     color: inherit;
   }
   .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-close, .u-app-theme-dark .u-alert-close,
   .theme-dark .accordion-button:after,
   .u-app-theme-dark .accordion-button:after,
-  .theme-dark .u-accordion-button:after,
-  .u-app-theme-dark .u-accordion-button:after {
+  .theme-dark .u-accordion-header-button:after,
+  .u-app-theme-dark .u-accordion-header-button:after {
     filter: invert(1) grayscale(100%) brightness(200%);
   }
   .theme-dark .apexcharts-text, .u-app-theme-dark .apexcharts-text {
@@ -18552,12 +18552,12 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .markdown,
     .theme-dark-auto .markdown > *,
     .theme-dark-auto .accordion-button,
-    .theme-dark-auto .u-accordion-button {
+    .theme-dark-auto .u-accordion-header-button {
       color: inherit;
     }
     .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-close,
     .theme-dark-auto .accordion-button:after,
-    .theme-dark-auto .u-accordion-button:after {
+    .theme-dark-auto .u-accordion-header-button:after {
       filter: invert(1) grayscale(100%) brightness(200%);
     }
     .theme-dark-auto .apexcharts-text {
@@ -18621,19 +18621,19 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   --u-accordion-color: var(--u-body-color);
 }
 
-.accordion-button:focus:not(:focus-visible), .u-accordion-button:focus:not(:focus-visible) {
+.accordion-button:focus:not(:focus-visible), .u-accordion-header-button:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
 }
-.accordion-button:after, .u-accordion-button:after {
+.accordion-button:after, .u-accordion-header-button:after {
   opacity: 0.7;
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed), .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed) {
+.accordion-button:not(.collapsed):not(.u-accordion-header-button-collapsed), .u-accordion-header-button:not(.collapsed):not(.u-accordion-header-button-collapsed) {
   font-weight: var(--u-font-weight-bold);
   border-bottom-color: transparent;
   box-shadow: none;
 }
-.accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after, .u-accordion-button:not(.collapsed):not(.u-accordion-button-collapsed):after {
+.accordion-button:not(.collapsed):not(.u-accordion-header-button-collapsed):after, .u-accordion-header-button:not(.collapsed):not(.u-accordion-header-button-collapsed):after {
   opacity: 1;
 }
 

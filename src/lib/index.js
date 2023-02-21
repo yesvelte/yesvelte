@@ -1,3 +1,4 @@
+export { Accordions, Accordion, AccordionHeader, AccordionBody, AccordionTitle } from './accordion'
 export { Avatar, AvatarList } from './avatar'
 export { Badge } from './badge'
 export { El } from './el'
