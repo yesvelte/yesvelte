@@ -13,34 +13,34 @@
 		<a href="https://tabler-icons.io/" target="_blank" rel="noreferrer">tabler-icons</a>.
 	</p>
 	<Doc title="Name">
-		<div slot="description">
+		<p slot="description">
 			To use an icon, set the <code>name</code> prop to the icon name.
-		</div>
+		</p>
 		<Preview src="./IconDefault.svelte">
 			<IconDefault />
 		</Preview>
 	</Doc>
 
 	<Doc title="Color">
-		<div slot="description">
+		<p slot="description">
 			Set the <code>color</code> prop to change your icons color.
-		</div>
+		</p>
 		<Preview src="./IconColors.svelte">
 			<IconColors />
 		</Preview>
 	</Doc>
 
 	<Doc title="Filled">
-		<div slot="description">
+		<p slot="description">
 			To use a filled icon, set the <code>filled</code> prop to <code>true</code>.
-		</div>
+		</p>
 		<Preview src="./IconFilled.svelte">
 			<IconFilled />
 		</Preview>
 	</Doc>
 
 	<Doc title="Size">
-		<div slot="description">
+		<p slot="description">
 			To use a different icon size, set the <code>size</code> prop to <code>sm</code>,
 			<code>md</code>
 			or <code>lg</code>,
@@ -54,7 +54,7 @@
 			<code>7x</code>,
 			<code>8x</code>,
 			<code>9x</code>.
-		</div>
+		</p>
 		<Preview src="./IconSizes.svelte">
 			<IconSizes />
 		</Preview>
