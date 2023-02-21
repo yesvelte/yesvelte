@@ -60,6 +60,13 @@ export const navigations = [
 		title: 'Components',
 		children: [
 			{
+				route: base_path + '/accordion',
+				title: 'Accordion',
+				icon: 'vaadin:accordion-menu',
+				description:
+					'Easily build interactive and user-friendly accordion using Accordion component. This page offers detailed documentation and examples to help you create a professional looking accordion component.',
+			},
+			{
 				route: base_path + '/alert',
 				title: 'Alert',
 				icon: 'material-symbols:info-outline',
