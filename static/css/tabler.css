@@ -27142,34 +27142,6 @@ body:has(.u-offcanvas-no-scroll) {
   visibility: hidden !important;
 }
 
-.u-preview {
-  margin-bottom: 0.5rem;
-}
-.u-preview-vertical .u-preview-body {
-  flex-direction: column;
-}
-.u-preview-body {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  gap: 0.5rem;
-}
-.u-preview-code {
-  position: relative;
-}
-.u-preview-code-copy-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  border: none !important;
-}
-.u-preview-code pre {
-  margin: 0;
-  border: transparent;
-}
-
 .u-stamp-size-sm {
   --u-stamp-size: 5rem;
 }
