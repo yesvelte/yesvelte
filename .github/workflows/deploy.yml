@@ -29,7 +29,7 @@ jobs:
       - uses: CasperWA/push-protected@v2
         with:
           token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
-          branch: next
+          branch: dev
 
   publish-npm:
     if: ${{ startsWith(github.event.head_commit.message, 'Release') }}
