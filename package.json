@@ -31,6 +31,7 @@
 		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
 		"build:site": "vite build",
+		"publish": "npm run build && npm publish ./package/",
 		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
