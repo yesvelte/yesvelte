@@ -5,6 +5,7 @@
 	import FormInputHint from './FormInputHint.svelte'
 	import FormInputState from './FormInputState.svelte'
 	import FormInputMask from './FormInputMask.svelte'
+	import FormInputFieldset from './FormInputFieldset.svelte'
 </script>
 
 <Page
@@ -62,6 +63,16 @@
 		</p>
 		<Preview src="./FormInputLayout.svelte">
 			<FormInputLayout />
+		</Preview>
+	</Doc>
+
+	<Doc title="Fieldset">
+		<p slot="description">
+			Use default <code>row</code> and <code>col</code> properties to change layout of the FormInputs
+			inside Fieldset.
+		</p>
+		<Preview src="./FormInputFieldset.svelte">
+			<FormInputFieldset />
 		</Preview>
 	</Doc>
 </Page>
