@@ -1,13 +1,12 @@
 <script lang="ts">
-	import { El } from '../el'
-	import type { FieldsetProps } from './Fieldset.types'
+	import { El, type ElProps } from '../el'
 
-	type $$Props = FieldsetProps
+	type $$Props = ElProps
 
 	export let componentName: $$Props['componentName'] = 'fieldset'
 
-	let cssProps: FieldsetProps = {}
-	let props: FieldsetProps = {}
+	let cssProps: $$Props = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {}
 		props = {
