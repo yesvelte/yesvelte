@@ -109,11 +109,18 @@ export const navigations = [
 					'Dots are particularly useful if you want to make an interface element more noticeable.',
 			},
 			{
-				route: base_path + '/fieldset',
+				route: base_path + '/form/form-fieldset',
 				title: 'Fieldset',
 				icon: 'fluent-mdl2:field-empty',
 				description:
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
+			},
+			{
+				route: base_path + '/form/form-input',
+				title: 'FormInput',
+				icon: 'iconoir:input-field',
+				description:
+					'FormInput is an input and label wrapper component to be used insisde forms. It supports all props and events of Input and also have some additional features.',
 			},
 			{
 				route: base_path + '/icon',
