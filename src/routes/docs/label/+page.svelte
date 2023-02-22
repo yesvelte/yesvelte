@@ -5,13 +5,9 @@
 	import LabelRequired from './LabelRequired.svelte'
 </script>
 
-<h1>Label</h1>
-<p>Label component is used to set a name or some identifier for Form Elements.</p>
-
 <Page
 	title="Label"
-	description="Label component is used to set a name or some identifier for Form Elements.
-">
+	description="Label component is used to set a name or some identifier for Form Elements.">
 	<Doc title="Default Markup">
 		<Preview src="./LabelDefault.svelte">
 			<LabelDefault />

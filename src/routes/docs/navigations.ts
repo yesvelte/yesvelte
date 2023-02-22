@@ -123,6 +123,20 @@ export const navigations = [
 					'Free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful. See the icons documentation from tabler-icons.',
 			},
 			{
+				route: base_path + '/input',
+				title: 'Input',
+				icon: 'iconoir:input-field',
+				description:
+					'Input components are used for collecting user provided information. They can be used for text, numbers, passwords, emails, and more.',
+			},
+			{
+				route: base_path + '/input-group',
+				title: 'Input group',
+				icon: 'fluent:group-list-24-regular',
+				description:
+					'Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.',
+			},
+			{
 				route: base_path + '/label',
 				title: 'Label',
 				icon: 'pepicons:label',
