@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte'
 	import { El } from '../el'
 	import type { InputProps, InputWrapperProps } from './Input.types'
-	import Inputmask from 'inputmask'
 
 	type $$Props = InputProps
 
@@ -21,8 +20,10 @@
 
 	let element: HTMLInputElement
 	onMount(async () => {
+		const Inputmask = await import('inputmask')
+
 		if (element !== undefined && mask) {
-			var im = new Inputmask(mask, maskOptions)
+			var im = new Inputmask.default(mask, maskOptions)
 			im.mask(element)
 		}
 		return () => {
