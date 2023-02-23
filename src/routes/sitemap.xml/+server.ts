@@ -44,9 +44,7 @@ export async function GET(event: any) {
       ${GetNodes(navigations)}
     </urlset>`.trim(),
 		{
-			headers: {
-				'Content-Type': 'application/xml',
-			},
+			headers,
 		}
 	)
 }
