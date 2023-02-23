@@ -11,7 +11,7 @@ function GetNodes(navs: Navigation[]) {
 		} else {
 			result += `
           <url>
-            <loc>${navigation.route}</loc>
+            <loc>https://svelte.ubeac.io${navigation.route}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
           </url>`
@@ -37,7 +37,7 @@ export async function GET() {
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
     <url>
-        <loc>/docs</loc>
+        <loc>https://svelte.ubeac.io/docs</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
