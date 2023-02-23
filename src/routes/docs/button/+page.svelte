@@ -36,7 +36,9 @@
 		title="Color"
 		description="You can use `color` prop to choose color for your button. The big range of available colors will help you show your buttons’ purpose and make them easy to spot.">
 		<Preview src="./ButtonColor.svelte">
-			<ButtonColor />
+			<div class="gap">
+				<ButtonColor />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc title="Shape">
@@ -154,3 +156,9 @@
 		</Preview>
 	</Doc>
 </Page>
+
+<style>
+	.gap > :global(.u-button) {
+		margin-bottom: 0.2rem;
+	}
+</style>

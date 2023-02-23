@@ -2,4 +2,6 @@
 	import { Button } from 'yesvelte'
 </script>
 
-<Button>Button</Button>
+<Button shape="pill">Pill</Button>
+<Button shape="round">Round</Button>
+<Button shape="tile">Tile</Button>

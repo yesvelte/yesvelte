@@ -2,4 +2,4 @@
 	import { Button } from 'yesvelte'
 </script>
 
-<Button>Button</Button>
+<Button href="https://google.com">Google</Button>
