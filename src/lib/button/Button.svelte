@@ -18,7 +18,6 @@
 	export let size: $$Props['size'] = undefined
 	export let target: $$Props['target'] = undefined
 	export let type: $$Props['type'] = undefined
-	export let value: $$Props['value'] = undefined
 
 	let cssProps: ButtonProps = {}
 	let props: ButtonProps = {}
@@ -42,7 +41,6 @@
 			tag: href ? 'a' : 'button',
 			target,
 			type: type ?? 'button',
-			value,
 		}
 	}
 </script>
