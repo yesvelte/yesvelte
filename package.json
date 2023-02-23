@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.1",
+	"version": "0.0.2-next.0",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -16,7 +16,7 @@
 		"yesvelte",
 		"tabler"
 	],
-	"homepage": "https://www.yesvelte.io/",
+	"homepage": "https://www.yesvelte.com/",
 	"bugs": {
 		"url": "https://github.com/yesvelte/yesvelte/issues",
 		"email": "ap@momentaj.io"
@@ -30,6 +30,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
+		"build:site": "vite build",
+		"publish": "npm run build && npm publish ./package/",
 		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -39,18 +41,22 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.5.0",
 		"@sveltejs/package": "^1.0.0",
 		"@tabler/core": "^1.0.0-beta16",
 		"@types/bootstrap": "^5.2.6",
+		"@types/prismjs": "^1.26.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "^5.0.0",
 		"param-case": "^3.0.4",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prismjs": "^1.29.0",
 		"sass": "^1.58.0",
 		"svelte-check": "^3.0.1",
 		"svelte-preprocess": "^5.0.1",
@@ -63,7 +69,6 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"@types/prismjs": "^1.26.0",
 		"change-case": "^4.1.2",
 		"iconify-icon": "^1.0.5",
 		"inputmask": "^5.0.7",

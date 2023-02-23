@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import previewProcessor from './scripts/preview.js'
 
@@ -8,7 +8,12 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [previewProcessor(), vitePreprocess()],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+
+		}),
+		prerender: {
+			handleMissingId: 'warn'
+		},
 		alias: {
 			// this will match a file
 			$components: './src/components',
