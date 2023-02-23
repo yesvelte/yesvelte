@@ -1,5 +1,14 @@
 export const base_path = '/docs'
 
+export interface Navigation {
+	title: string
+	id?: string
+	route?: string
+	icon?: string
+	description?: string
+	children?: Navigation[]
+}
+
 export const navigations = [
 	{
 		title: 'Core Features',
