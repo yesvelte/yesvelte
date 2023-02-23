@@ -21,7 +21,7 @@ function GetNodes(navs: Navigation[]) {
 	return result
 }
 
-export async function GET(event: any) {
+export async function GET() {
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml',
