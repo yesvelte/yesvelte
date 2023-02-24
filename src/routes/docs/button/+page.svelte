@@ -6,7 +6,6 @@
 	import ButtonDisabled from './ButtonDisabled.svelte'
 	import ButtonDropdown from './ButtonDropdown.svelte'
 	import ButtonGhost from './ButtonGhost.svelte'
-	import ButtonHref from './ButtonHref.svelte'
 	import ButtonIcon from './ButtonIcon.svelte'
 	import ButtonLink from './ButtonLink.svelte'
 	import ButtonLoading from './ButtonLoading.svelte'
@@ -57,7 +56,9 @@
 		title="Disabled"
 		description="Make buttons look inactive to show that an action is possible once the user meets certain criteria, such as completing the required fields to submit a form.">
 		<Preview src="./ButtonDisabled.svelte">
-			<ButtonDisabled />
+			<div class="gap">
+				<ButtonDisabled />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc
@@ -71,24 +72,25 @@
 		title="Outline"
 		description="add `outline` prop, if you want to remove the color and the background of your button and give it a more subtle look. Outline buttons are perfect to use as secondary buttons, as they don’t distract users from the main action.">
 		<Preview src="./ButtonOutline.svelte">
-			<ButtonOutline />
+			<div class="gap">
+				<ButtonOutline />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc
 		title="Ghost"
 		description="Use the `ghost` prop to make your button look simple yet aesthetically appealing.">
 		<Preview src="./ButtonGhost.svelte">
-			<ButtonGhost />
+			<div class="gap">
+				<ButtonGhost />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc title="Link">
 		<Preview src="./ButtonLink.svelte">
-			<ButtonLink />
-		</Preview>
-	</Doc>
-	<Doc title="Href">
-		<Preview src="./ButtonHref.svelte">
-			<ButtonHref />
+			<div class="gap">
+				<ButtonLink />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc title="Target">

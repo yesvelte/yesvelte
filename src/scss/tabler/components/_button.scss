@@ -1,47 +1,40 @@
-//
-// Button
-//
-
 $props: (
 	null: '.btn' '.gap-2',
-	pill: '.btn-pill',
-	tile: '.btn-square',
+	color: generate_props($theme_colors, ('.btn-')),
 	disabled: '.disabled',
-	active: '.active',
+	link: '.btn-link',
 	loading: '.btn-loading',
-	icon: '.btn-icon',
+	shape: (
+		pill: '.btn-pill',
+		tile: '.btn-square'
+	),
 	size: (
 		sm: '.btn-sm',
 		lg: '.btn-lg' '.gap-3'
-	),
-	color: generate_props($theme_colors, ('.btn-'))
+	)
 );
 
 .#{$prefix-button} {
 	@include apply-props($props);
 
-	@each $key, $value in $theme-colors {
-		&-color-#{$key}.#{$prefix-button}-outline {
-			@extend .btn-outline-#{$key};
-			--#{$prefix}btn-bg: transparent;
-		}
+	&.#{$prefix-button}-link {
+		background-color: transparent;
+		box-shadow: none;
+	}
 
+	@each $key, $value in $theme-colors {
 		&-color-#{$key}.#{$prefix-button}-ghost {
 			@extend .btn-ghost-#{$key};
 			--#{$prefix}btn-bg: transparent;
 		}
-	}
 
-	&.#{$prefix-button}-outline {
-		--u-btn-bg: transparent;
-		--u-btn-disabled-bg: transparent;
-	}
+		&-color-#{$key}.#{$prefix-button}-link {
+			@extend .link-#{$key};
+		}
 
-	& > .#{$prefix}icon {
-		margin: 0 !important;
-	}
-
-	& > .#{$prefix}avatar {
-		margin: 0 !important;
+		&-color-#{$key}.#{$prefix-button}-outline {
+			@extend .btn-outline-#{$key};
+			--#{$prefix}btn-bg: transparent;
+		}
 	}
 }

@@ -10,7 +10,7 @@ export interface ButtonProps extends Partial<ElProps> {
 	link?: boolean
 	loading?: boolean
 	outline?: boolean
-	shape?: 'tile' | 'pill' | 'round'
+	shape?: 'pill' | 'round' | 'tile'
 	size?: 'sm' | 'md' | 'lg'
 	target?: '_blank' | '_self' | '_parent' | '_top'
 	type?: 'button' | 'reset' | 'submit'
