@@ -1,0 +1,21 @@
+.#{$prefix}alert {
+    @extend .alert;
+    justify-content: start;
+}
+
+.#{$prefix}alert-title {
+    font-weight: bold;
+}
+
+.#{$prefix}alert-body {
+    flex-direction: column;
+    align-items: start;
+}
+
+// daisyui colors
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}alert-color-#{$colorName} {
+        @extend .alert-#{$daisyuiColorName};
+    }
+}

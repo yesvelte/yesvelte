@@ -1,0 +1,16 @@
+$prefix: 'u-' !default;
+@import './colors';
+@import 'daisyui/dist/full';
+
+
+// @import '@tabler/core/src/scss/core';
+// @import '@tabler/core/src/scss/variables';
+// @import '@tabler/core/src/scss/bootstrap-components';
+// @import '@tabler/core/src/scss/config';
+// $prefix: 'u-';
+// @import 'bootstrap/scss/offcanvas';
+// @import '@tabler/core/node_modules/bootstrap/scss/offcanvas';
+
+
+
+@import './components';

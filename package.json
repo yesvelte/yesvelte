@@ -28,7 +28,7 @@
 	"license": "MIT License",
 	"author": "Amir Pournasserian <ap@momentaj.io>",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "concurrently 'nodemon --watch src/scss scripts/styles.generator.js -e scss' 'vite dev'",
 		"build": "npm run style && svelte-kit sync && svelte-package",
 		"build:site": "vite build",
 		"publish": "npm run build && npm publish ./package/",
@@ -37,6 +37,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
+		"tailwind": "tailwindcss -c src/scss/tailwind/tailwind.config.cjs -i src/scss/tailwind/tailwind.css -o src/styles/tailwind.css",
 		"style": "node scripts/styles.generator.js"
 	},
 	"devDependencies": {
@@ -49,10 +50,13 @@
 		"@types/prismjs": "^1.26.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"concurrently": "^7.6.0",
+		"daisyui": "^2.51.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"gh-pages": "^5.0.0",
+		"nodemon": "^2.0.20",
 		"param-case": "^3.0.4",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
@@ -60,6 +64,7 @@
 		"sass": "^1.58.0",
 		"svelte-check": "^3.0.1",
 		"svelte-preprocess": "^5.0.1",
+		"tailwindcss": "^3.2.7",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"

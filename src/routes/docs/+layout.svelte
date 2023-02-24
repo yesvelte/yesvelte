@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '/src/styles/daisyui.css'
 </script>
 
 <svelte:head>

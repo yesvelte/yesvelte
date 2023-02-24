@@ -1,0 +1,11 @@
+.#{$prefix}tab-list {
+    @extend .tabs;
+}
+
+.#{$prefix}tab-item-link {
+    @extend .tab, .tab-lifted;
+}
+
+.#{$prefix}tab-item-link-active {
+    @extend .tab-active;
+}

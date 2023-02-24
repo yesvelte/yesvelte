@@ -1,0 +1,19 @@
+.#{$prefix}switch {
+    @extend .toggle;
+}
+
+
+// daisyui colors
+@each $colorName,
+$daisyuiColorName in $RoleColors {
+    .#{$prefix}switch-color-#{$colorName} {
+        @extend .toggle-#{$daisyuiColorName};
+    }
+}
+
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}switch-color-#{$colorName} {
+        @extend .toggle-#{$daisyuiColorName};
+    }
+}

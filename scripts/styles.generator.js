@@ -3,7 +3,7 @@ import path from 'path'
 import sass from 'sass'
 
 // TODO: Optimize (only compile one)
-const files = ['tabler']
+const files = ['tabler', 'daisyui']
 
 function compile(file) {
 	console.log(`Compiling ${file}...`)
@@ -31,8 +31,8 @@ function compile(file) {
 for (const file of files) {
 	const css = compile(file)
 	// checking if the folder doesn't exist yet and creating it
-	if (!fs.existsSync('./static/css')) {
-		fs.mkdirSync('./static/css', { recursive: true })
+	if (!fs.existsSync('./src/styles')) {
+		fs.mkdirSync('./src/styles', { recursive: true })
 	}
-	fs.writeFileSync(`./static/css/${file}.css`, css, {})
+	fs.writeFileSync(`./src/styles/${file}.css`, css, {})
 }
