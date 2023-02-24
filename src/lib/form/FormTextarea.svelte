@@ -23,7 +23,7 @@
 	export let hint: $$Props['hint'] = undefined
 
 	let props: $$Props = {}
-	let inputProps: $$Props = {}
+	let teaxtareaProps: $$Props = {}
 
 	$: {
 		props = {
@@ -34,7 +34,7 @@
 			componentName,
 		}
 
-		inputProps = {
+		teaxtareaProps = {
 			tag,
 			placeholder,
 			disabled,
@@ -52,7 +52,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Textarea {...inputProps} bind:value>
+	<Textarea {...teaxtareaProps} bind:value>
 		<slot />
 	</Textarea>
 	<slot name="hint" />
