@@ -1,5 +1,6 @@
 .#{$prefix}alert {
     @extend .alert;
+    @extend .mb-2;
     justify-content: start;
 }
 

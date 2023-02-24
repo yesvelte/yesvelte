@@ -1,3 +1,15 @@
 .markdown {
     @extend .prose;
 }
+h1{
+    @extend .text-4xl;
+    @extend .font-bold;
+}
+h2{
+    @extend .text-2xl;
+    @extend .font-bold;
+}
+h3{
+    @extend .text-xl;
+    @extend .font-bold;
+}

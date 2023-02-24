@@ -1,5 +1,6 @@
 .#{$prefix}tab-list {
     @extend .tabs;
+    margin-bottom: -1px;
 }
 
 .#{$prefix}tab-item-link {

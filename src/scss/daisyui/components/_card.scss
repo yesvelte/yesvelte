@@ -4,14 +4,18 @@
     @extend .block;
 }
 .#{$prefix}card-header {
-    @extend .pt-4;
-    @extend .px-4;
+    @extend .pt-3;
+    @extend .px-3;
+    @extend .bg-base-200;
+    @extend .rounded-t-xl;
+    border-bottom: var(--tab-border, 1px) solid hsl(var(--b3));
 }
 .#{$prefix}card-body {
-    @extend .p-4;
+    @extend .p-3;
 }
 .#{$prefix}card-title {
     @extend .card-title;
+    @extend .pb-3;
 }
 .#{$prefix}card-borderless {
     @extend .border-none;
