@@ -97,6 +97,13 @@ export const navigations: Navigation[] = [
 					"Badges are small count and labeling components, which are used to add extra information to an interface element. You can use them to draw users' attention to a new element, notify about unread messages or provide any kind of additional info.",
 			},
 			{
+				route: base_path + '/breadcrumb',
+				title: 'Breadcrumb',
+				icon: 'fluent-mdl2:breadcrumb',
+				description:
+					'Breadcrumbs are used to show the current website or app location and reduce the number of actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.',
+			},
+			{
 				route: base_path + '/card',
 				title: 'Card',
 				icon: 'mdi:card-outline',
