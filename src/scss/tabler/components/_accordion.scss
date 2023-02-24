@@ -15,7 +15,14 @@ $accordion-props: (
 			collapsed: '.collapsed'
 		)
 	),
-	body: '.accordion-body'
+	body: (
+		null: '.accordion-body',
+		wrapper: (
+			null: '.collapse',
+			open: '.show',
+			collapsing: '.collapsing'
+		)
+	)
 );
 
 .#{$prefix-accordion} {
