@@ -1,7 +1,7 @@
 module.exports = {
 	// prefix: '',
 	content: [],
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 	safelist: [
 		{
 			pattern: /.*/,
