@@ -1,5 +1,6 @@
 import type { ElProps } from '../el'
 import type { InputProps, InputStates } from '../input'
+import type { SwitchProps } from '../switch/Switch.types'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -9,3 +10,5 @@ export interface FormFieldProps extends Partial<ElProps> {
 }
 
 export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
+
+export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> {}
