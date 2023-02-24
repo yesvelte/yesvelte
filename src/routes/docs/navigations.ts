@@ -188,6 +188,13 @@ export const navigations: Navigation[] = [
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
 			},
 			{
+				route: base_path + '/switch',
+				title: 'Switch',
+				icon: 'mdi:toggle-switch-outline',
+				description:
+					'The Switch component provides users the ability to choose between two distinct values. These are very similar to a toggle, or on/off switch, though aesthetically different than a Switch.',
+			},
+			{
 				route: base_path + '/tabs',
 				title: 'Tabs',
 				icon: 'material-symbols:tab-outline',
