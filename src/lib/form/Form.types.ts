@@ -11,4 +11,7 @@ export interface FormFieldProps extends Partial<ElProps> {
 
 export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
 
+export interface FormTextAreaProps extends Partial<FormInputProps> {
+	rows?: number | string
+}
 export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> {}
