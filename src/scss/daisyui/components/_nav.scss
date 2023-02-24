@@ -1,6 +1,6 @@
 .nav-vertical {
-    @extend .p-4;
     ul {
         @extend .menu;
+        @extend .p-2;
     }
 }
