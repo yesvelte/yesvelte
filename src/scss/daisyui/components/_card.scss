@@ -1,0 +1,18 @@
+.#{$prefix}card {
+    @extend .card;
+    @extend .card-bordered;
+    @extend .block;
+}
+.#{$prefix}card-header {
+    @extend .pt-4;
+    @extend .px-4;
+}
+.#{$prefix}card-body {
+    @extend .p-4;
+}
+.#{$prefix}card-title {
+    @extend .card-title;
+}
+.#{$prefix}card-borderless {
+    @extend .border-none;
+}
