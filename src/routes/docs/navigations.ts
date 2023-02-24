@@ -111,6 +111,20 @@ export const navigations: Navigation[] = [
 					'Cards are flexible user interface elements, which help organize content into meaningful sections and make it easier to display on different screen sizes.',
 			},
 			{
+				route: base_path + '/checkbox',
+				title: 'Checkbox',
+				icon: 'mdi:checkbox-outline',
+				description:
+					'Use Checkbox if you want to allow users to select more than one option from a set of predefined options or to turn an option on or off.',
+			},
+			{
+				route: base_path + '/checkbox-group',
+				title: 'CheckboxGroup',
+				icon: 'mdi:checkbox-multiple-outline',
+				description:
+					'CheckboxGroup is a wrapper for Checkbox component, it can be used to group multiple checkboxes in one component.',
+			},
+			{
 				route: base_path + '/divider',
 				title: 'Divider',
 				icon: 'radix-icons:divider-horizontal',
@@ -173,13 +187,33 @@ export const navigations: Navigation[] = [
 				description:
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
-
+			{
+				route: base_path + '/radio',
+				title: 'Radio',
+				icon: 'mdi:radiobox-marked',
+				description:
+					'Create consistent cross-browser and cross-device radios with Radio component.',
+			},
+			{
+				route: base_path + '/radio-group',
+				title: 'RadioGroup',
+				icon: 'bi:ui-radios',
+				description:
+					'RadioGroup is a wrapper for Radio component, it can be used to group multiple radios in one component.',
+			},
 			{
 				route: base_path + '/ribbon',
 				title: 'Ribbon',
 				icon: 'akar-icons:ribbon',
 				description:
 					'Ribbons are used to express something special on a card. In this page all the details about Ribbon component is described.',
+			},
+			{
+				route: base_path + '/select',
+				title: 'Select',
+				icon: 'vaadin:select',
+				description:
+					'Select component is used to let users choose from a predefined set of options. It can be single select or multi select.',
 			},
 			{
 				route: base_path + '/stamp',
