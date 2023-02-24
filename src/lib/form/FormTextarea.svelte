@@ -6,7 +6,6 @@
 	type $$Props = FormTextAreaProps
 
 	export let componentName: $$Props['componentName'] = 'form-textarea'
-
 	export let tag: $$Props['tag'] = 'textarea'
 	export let disabled: $$Props['disabled'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
