@@ -6,21 +6,17 @@
 	type $$Props = AvatarProps
 
 	export let componentName: $$Props['componentName'] = 'avatar'
-	export let color: $$Props['color'] = 'primary'
-	export let pill: $$Props['pill'] = undefined
-	export let round: $$Props['round'] = undefined
-	export let tile: $$Props['tile'] = undefined
-	export let size: $$Props['size'] = 'ep'
+	export let color: $$Props['color'] = undefined
+	export let shape: $$Props['shape'] = undefined
+	export let size: $$Props['size'] = undefined
 
-	let cssProps: AvatarProps = {}
-	let props: AvatarProps = {}
+	let cssProps: $$Props = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {
 			color,
 			size,
-			pill,
-			round,
-			tile,
+			shape,
 		}
 		props = {
 			componentName,
