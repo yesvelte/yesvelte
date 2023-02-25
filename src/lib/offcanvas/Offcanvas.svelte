@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Transition from '$lib/transition/Transition.svelte'
 	import { onMount, setContext, createEventDispatcher } from 'svelte'
 	import { El } from '../el'
 	import type { OffcanvasProps } from './Offcanvas.types'
@@ -46,7 +47,7 @@
 	})
 
 	$: {
-		cssProps = { placement, show }
+		cssProps = { placement }
 		if (element && show) {
 			window.setTimeout(function () {
 				element.focus()
@@ -58,9 +59,11 @@
 </script>
 
 <El componentName="{componentName}-wrapper">
-	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
-		<slot />
-	</El>
+	<Transition componentName="{componentName}-transition" {show}>
+		<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
+			<slot />
+		</El>
+	</Transition>
 	{#if show}
 		{#if backdrop}
 			<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} />
