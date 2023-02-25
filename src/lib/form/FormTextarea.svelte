@@ -51,8 +51,6 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Textarea {...teaxtareaProps} bind:value>
-		<slot />
-	</Textarea>
+	<Textarea {...teaxtareaProps} bind:value />
 	<slot name="hint" />
 </FormField>
