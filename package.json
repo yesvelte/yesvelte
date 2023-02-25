@@ -28,7 +28,7 @@
 	"license": "MIT License",
 	"author": "Amir Pournasserian <ap@momentaj.io>",
 	"scripts": {
-		"dev": "concurrently 'nodemon --watch src/scss scripts/styles.generator.js -e scss' 'vite dev'",
+		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
 		"build:site": "vite build",
 		"publish": "npm run build && npm publish ./package/",
@@ -51,13 +51,11 @@
 		"@types/prismjs": "^1.26.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
-		"concurrently": "^7.6.0",
 		"daisyui": "^2.51.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"gh-pages": "^5.0.0",
-		"nodemon": "^2.0.20",
 		"param-case": "^3.0.4",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
@@ -68,7 +66,8 @@
 		"tailwindcss": "^3.2.7",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
-		"vite": "^4.0.0"
+		"vite": "^4.0.0",
+		"vite-plugin-watch-and-run": "^1.1.2"
 	},
 	"peerDependencies": {
 		"svelte": "^3.54.0"
