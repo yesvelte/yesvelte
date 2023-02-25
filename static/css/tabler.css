@@ -11975,11 +11975,11 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   pointer-events: auto !important;
 }
 
-.rounded, .u-avatar-rounded {
+.rounded, .u-avatar-shape-rounded {
   border-radius: var(--u-border-radius) !important;
 }
 
-.rounded-0, .u-el-border-round-size-0 {
+.rounded-0, .u-el-border-round-size-0, .u-avatar-shape-tile {
   border-radius: 0 !important;
 }
 
@@ -11991,7 +11991,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-radius: var(--u-border-radius) !important;
 }
 
-.rounded-3, .u-el-border-round-size-3 {
+.rounded-3, .u-el-border-round-size-3, .u-avatar-shape-pill {
   border-radius: var(--u-border-radius-lg) !important;
 }
 
@@ -12003,7 +12003,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-radius: var(--u-border-radius-2xl) !important;
 }
 
-.rounded-circle, .u-el-border-radius-circle, .u-avatar-pill {
+.rounded-circle, .u-el-border-radius-circle, .u-avatar-shape-circle {
   border-radius: 50% !important;
 }
 
