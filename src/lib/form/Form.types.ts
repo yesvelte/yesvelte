@@ -4,6 +4,7 @@ import type { SwitchProps } from '../switch/Switch.types'
 import type { RadioGroupProps } from '../radio/Radio.types'
 import type { SelectProps } from '../select/Select.types'
 import type { CheckboxProps, CheckboxGroupProps } from '../checkbox/Checkbox.types'
+import type { DatePickerProps } from '../date-picker/DatePicker.types'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -28,3 +29,5 @@ export interface FormCheckboxGroupProps
 		Partial<CheckboxGroupProps> {}
 
 export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
+
+export interface FormDatePickerProps extends Partial<FormFieldProps>, Partial<DatePickerProps> {}

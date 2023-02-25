@@ -125,6 +125,11 @@ export const navigations: Navigation[] = [
 					'CheckboxGroup is a wrapper for Checkbox component, it can be used to group multiple checkboxes in one component.',
 			},
 			{
+				route: base_path + '/date-picker',
+				title: 'Datepicker',
+				icon: 'material-symbols:date-range-outline',
+			},
+			{
 				route: base_path + '/divider',
 				title: 'Divider',
 				icon: 'radix-icons:divider-horizontal',
@@ -188,6 +193,12 @@ export const navigations: Navigation[] = [
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
 			{
+				route: base_path + '/progress',
+				title: 'Progress',
+				icon: 'vaadin:progressbar',
+				description: 'Progress component is used to show the progress of a task.',
+			},
+			{
 				route: base_path + '/radio',
 				title: 'Radio',
 				icon: 'mdi:radiobox-marked',
@@ -220,6 +231,19 @@ export const navigations: Navigation[] = [
 				title: 'Stamp',
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
+			},
+
+			{
+				route: base_path + '/spinner',
+				title: 'Spinner',
+				icon: 'ei:spinner-3',
+				description: 'Spinners are used to show the loading state of a component.',
+			},
+			{
+				route: base_path + '/status',
+				title: 'Status',
+				icon: 'bi:dot',
+				description: 'Status component is used to show the status of a component.',
 			},
 			{
 				route: base_path + '/switch',
