@@ -97,11 +97,32 @@ export const navigations: Navigation[] = [
 					"Badges are small count and labeling components, which are used to add extra information to an interface element. You can use them to draw users' attention to a new element, notify about unread messages or provide any kind of additional info.",
 			},
 			{
+				route: base_path + '/breadcrumb',
+				title: 'Breadcrumb',
+				icon: 'fluent-mdl2:breadcrumb',
+				description:
+					'Breadcrumbs are used to show the current website or app location and reduce the number of actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.',
+			},
+			{
 				route: base_path + '/card',
 				title: 'Card',
 				icon: 'mdi:card-outline',
 				description:
 					'Cards are flexible user interface elements, which help organize content into meaningful sections and make it easier to display on different screen sizes.',
+			},
+			{
+				route: base_path + '/checkbox',
+				title: 'Checkbox',
+				icon: 'mdi:checkbox-outline',
+				description:
+					'Use Checkbox if you want to allow users to select more than one option from a set of predefined options or to turn an option on or off.',
+			},
+			{
+				route: base_path + '/checkbox-group',
+				title: 'CheckboxGroup',
+				icon: 'mdi:checkbox-multiple-outline',
+				description:
+					'CheckboxGroup is a wrapper for Checkbox component, it can be used to group multiple checkboxes in one component.',
 			},
 			{
 				route: base_path + '/divider',
@@ -166,7 +187,20 @@ export const navigations: Navigation[] = [
 				description:
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
-
+			{
+				route: base_path + '/radio',
+				title: 'Radio',
+				icon: 'mdi:radiobox-marked',
+				description:
+					'Create consistent cross-browser and cross-device radios with Radio component.',
+			},
+			{
+				route: base_path + '/radio-group',
+				title: 'RadioGroup',
+				icon: 'bi:ui-radios',
+				description:
+					'RadioGroup is a wrapper for Radio component, it can be used to group multiple radios in one component.',
+			},
 			{
 				route: base_path + '/ribbon',
 				title: 'Ribbon',
@@ -175,10 +209,24 @@ export const navigations: Navigation[] = [
 					'Ribbons are used to express something special on a card. In this page all the details about Ribbon component is described.',
 			},
 			{
+				route: base_path + '/select',
+				title: 'Select',
+				icon: 'vaadin:select',
+				description:
+					'Select component is used to let users choose from a predefined set of options. It can be single select or multi select.',
+			},
+			{
 				route: base_path + '/stamp',
 				title: 'Stamp',
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
+			},
+			{
+				route: base_path + '/switch',
+				title: 'Switch',
+				icon: 'mdi:toggle-switch-outline',
+				description:
+					'The Switch component provides users the ability to choose between two distinct values. These are very similar to a toggle, or on/off switch, though aesthetically different than a Switch.',
 			},
 			{
 				route: base_path + '/tabs',
