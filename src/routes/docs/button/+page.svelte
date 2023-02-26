@@ -4,7 +4,6 @@
 	import ButtonColor from './ButtonColor.svelte'
 	import ButtonDefault from './ButtonDefault.svelte'
 	import ButtonDisabled from './ButtonDisabled.svelte'
-	import ButtonDropdown from './ButtonDropdown.svelte'
 	import ButtonGhost from './ButtonGhost.svelte'
 	import ButtonIcon from './ButtonIcon.svelte'
 	import ButtonLink from './ButtonLink.svelte'
@@ -102,38 +101,44 @@
 		title="Icon"
 		description="Set the 'icon' property to remove unnecessary padding from your button and use an icon without any additional label. Thanks to that, you can save space and make the action easy to recognize for international users.">
 		<Preview src="./ButtonIcon.svelte">
-			<ButtonIcon />
+			<div class="gap">
+				<ButtonIcon />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc
 		title="With Icon"
 		description="Label your button with text and add an icon to communiacate the action and make it easy to identify for users. Icons are easily recognized and improve the aesthetics of your button design, giving it a modern and atractive look.">
 		<Preview src="./ButtonWithIcon.svelte">
-			<ButtonWithIcon />
+			<div class="gap">
+				<ButtonWithIcon />
+			</div>
 		</Preview>
 	</Doc>
-	<Doc
-		title="Tag"
-		description="As one of the most common elements of UI design, buttons have a very important function of engaging users with your website or app and guiding them in their actions.">
+	<Doc title="Tag" description="You can use `button` or `a` tags as a base for your Button.">
 		<Preview src="./ButtonTag.svelte">
 			<ButtonTag />
 		</Preview>
 	</Doc>
-	<Doc title="Type" description="You can use `button` or `a` tags as a base for your Button.">
+	<Doc title="Type" description="Specifies the button's type.">
 		<Preview src="./ButtonType.svelte">
 			<ButtonType />
 		</Preview>
 	</Doc>
 	<Doc title="Active">
 		<Preview src="./ButtonActive.svelte">
-			<ButtonActive />
+			<div class="gap">
+				<ButtonActive />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc
 		title="Social"
 		description="You can use the icons of popular social networking sites, which users are familiar with. Thanks to buttons with social media icons users can share content or follow a website with just one click, without leaving the website.">
 		<Preview src="./ButtonSocial.svelte">
-			<ButtonSocial />
+			<div class="gap">
+				<ButtonSocial />
+			</div>
 		</Preview>
 	</Doc>
 	<Doc
@@ -148,13 +153,6 @@
 		description="Use buttons with avatars to simplify the process of interaction and make your design more personalized. Buttons can contain avatars and labels or only avatars, if displayed on a smaller space.">
 		<Preview src="./ButtonWithAvatar.svelte">
 			<ButtonWithAvatar />
-		</Preview>
-	</Doc>
-	<Doc
-		title="Dropdown"
-		description="Create a dropdown button that will encourage users to click for more options. You can add a label with an icon or remove the label and add an icon on its own if you want to save space. Choose the option that will best suit your design and improve the user experience.">
-		<Preview src="./ButtonDropdown.svelte">
-			<ButtonDropdown />
 		</Preview>
 	</Doc>
 </Page>

@@ -1,5 +1,16 @@
 <script>
-	import { Button } from 'yesvelte'
+	import { Avatar, Button } from 'yesvelte'
 </script>
 
-<Button>TODO</Button>
+<Button>
+	<Avatar>AV</Avatar>
+	Avatar
+</Button>
+<Button>
+	<Avatar>AV</Avatar>
+	Avatar
+</Button>
+<Button>
+	<Avatar>AV</Avatar>
+	Avatar
+</Button>

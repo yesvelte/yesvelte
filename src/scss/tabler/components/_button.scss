@@ -1,7 +1,9 @@
 $props: (
 	null: '.btn' '.gap-2',
+	active: '.active',
 	color: generate_props($theme_colors, ('.btn-')),
 	disabled: '.disabled',
+	icon: '.btn-icon',
 	link: '.btn-link',
 	loading: '.btn-loading',
 	shape: (
@@ -16,6 +18,11 @@ $props: (
 
 .#{$prefix-button} {
 	@include apply-props($props);
+
+	& > .#{$prefix}avatar,
+	& > .#{$prefix}icon {
+		margin: 0 !important;
+	}
 
 	&.#{$prefix-button}-link {
 		background-color: transparent;
