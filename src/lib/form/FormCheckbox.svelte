@@ -9,7 +9,7 @@
 	export let hint: $$Props['hint'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let required: $$Props['required'] = undefined
-	export let cssPrefix: $$Props['cssPrefix'] = 'form-checkbox'
+	export let componentName: $$Props['componentName'] = 'form-checkbox'
 
 	export let color: $$Props['color'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
@@ -25,7 +25,7 @@
 		label,
 		hint,
 		state,
-		cssPrefix,
+		componentName,
 	}
 
 	$: checkboxProps = {

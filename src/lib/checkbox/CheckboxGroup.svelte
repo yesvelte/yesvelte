@@ -13,8 +13,9 @@
 	export let value: $$Props['value'] = undefined
 
 	let element: HTMLElement
+	let props: $$Props = {}
 
-	$: checkboxProps = {
+	$: props = {
 		inline,
 		name: element?.id,
 		color,
@@ -43,11 +44,7 @@
 <El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Checkbox
-				{...checkboxProps}
-				value={index}
-				checked={value?.includes(item)}
-				on:change={onChange}>
+			<Checkbox {...props} value={index} checked={value?.includes(item)} on:change={onChange}>
 				<slot {index} {item}>{item}</slot>
 			</Checkbox>
 		{/each}
