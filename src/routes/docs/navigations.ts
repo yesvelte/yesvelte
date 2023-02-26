@@ -108,7 +108,7 @@ export const navigations: Navigation[] = [
 				title: 'Button',
 				icon: 'mdi:button-cursor',
 				description:
-					"Use button styles that best suit your designs and encourage users to take the desired actions. You can customize the button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.",
+					"Use Button component that best suit your designs and encourage users to take the desired actions. You can customize the Button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.",
 			},
 			{
 				route: base_path + '/button-group',
