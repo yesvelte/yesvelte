@@ -104,6 +104,13 @@ export const navigations: Navigation[] = [
 					'Breadcrumbs are used to show the current website or app location and reduce the number of actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.',
 			},
 			{
+				route: base_path + '/button',
+				title: 'Button',
+				icon: 'mdi:button-cursor',
+				description:
+					'Buttons are the most important UI Element in each page, @ubeac/svelte buttons are beautiful and fully customizable. Cards contain various smaller components, such as images, text, links and buttons and may act as an entry to more detailed information, helping users scan the page quickly and find the most relevant content.',
+			},
+			{
 				route: base_path + '/card',
 				title: 'Card',
 				icon: 'mdi:card-outline',
