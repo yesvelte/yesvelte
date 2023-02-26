@@ -10984,7 +10984,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3, .u-form-field, .u-form-textarea, .u-form-switch, .u-form-radio-group, .u-form-file-uploader, .u-form-checkbox-group, .u-form-checkbox, .u-form-input, .u-el-mb-3 {
+.mb-3, .u-form-field, .u-form-textarea, .u-form-select, .u-form-switch, .u-form-radio-group, .u-form-file-uploader, .u-form-checkbox-group, .u-form-checkbox, .u-form-input, .u-el-mb-3 {
   margin-bottom: 1rem !important;
 }
 

@@ -259,6 +259,62 @@ export const navigations: Navigation[] = [
 				description:
 					'Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.',
 			},
+			{
+				route: base_path + '/textarea',
+				title: 'Textarea',
+				icon: 'mdi:form-textarea',
+			},
+		],
+	},
+	{
+		title: 'Form Components',
+		id: 'menu-forms',
+		children: [
+			{
+				route: base_path + '/form/form-checkbox',
+				title: 'FormCheckbox',
+				icon: 'mdi:checkbox-outline',
+			},
+			{
+				route: base_path + '/form/form-checkbox-group',
+				title: 'FormCheckboxGroup',
+				icon: 'mdi:checkbox-multiple-outline',
+			},
+			{
+				route: base_path + '/form/form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'material-symbols:date-range-outline',
+			},
+			{
+				route: base_path + '/form/form-fieldset',
+				title: 'FormFieldset',
+				icon: 'fluent-mdl2:field-empty',
+			},
+			{
+				route: base_path + '/form/form-input',
+				title: 'FormInput',
+				icon: 'iconoir:input-field',
+			},
+			{
+				route: base_path + '/form/form-radio-group',
+				title: 'FormRadioGroup',
+				icon: 'bi:ui-radios',
+			},
+			{
+				route: base_path + '/form/form-select',
+				title: 'FormSelect',
+				icon: 'vaadin:select',
+			},
+			{
+				route: base_path + '/form/form-switch',
+				title: 'FormSwitch',
+				icon: 'mdi:toggle-switch-outline',
+			},
+			{
+				route: base_path + '/form/form-textarea',
+				title: 'FormTextarea',
+				icon: 'mdi:form-textarea',
+			},
 		],
 	},
 ]
