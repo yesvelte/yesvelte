@@ -8,11 +8,9 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [previewProcessor(), vitePreprocess()],
 	kit: {
-		adapter: adapter({
-
-		}),
+		adapter: adapter({}),
 		prerender: {
-			handleMissingId: 'warn'
+			handleMissingId: 'warn',
 		},
 		alias: {
 			// this will match a file
