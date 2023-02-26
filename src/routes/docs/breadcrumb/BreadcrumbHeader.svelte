@@ -1,5 +1,5 @@
 <script>
-	import { Breadcrumb, BreadcrumbItem, Button, El, Icon } from 'yesvelte'
+	import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, El, Icon } from 'yesvelte'
 </script>
 
 <El class="page-header">
@@ -17,13 +17,13 @@
 			</El>
 		</El>
 		<El col="auto">
-			<!-- <ButtonGroup> -->
-			<Button d="none" dMd="inline-flex">
-				<Icon name="edit" />
-				Edit
-			</Button>
-			<Button color="primary">Publish</Button>
-			<!-- </ButtonGroup> -->
+			<ButtonGroup>
+				<Button d="none" dMd="inline-flex">
+					<Icon name="edit" />
+					Edit
+				</Button>
+				<Button color="primary">Publish</Button>
+			</ButtonGroup>
 		</El>
 	</El>
 </El>
