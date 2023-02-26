@@ -8,8 +8,8 @@
 	export let size: $$Props['size'] = undefined
 	export let vertical: $$Props['vertical'] = undefined
 
-	let cssProps: ButtonGroupProps = {}
-	let props: ButtonGroupProps = {}
+	let cssProps: $$Props = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {
 			size,

@@ -7,9 +7,10 @@
 	import ButtonGroupVertical from './ButtonGroupVertical.svelte'
 </script>
 
-<Page
-	title="Button Group"
-	description="Group a series of buttons together on a single line or stack them in a vertical column.">
+<Page title="ButtonGroup">
+	<p slot="description">
+		Group a <code>Button</code> series together on a single line or stack them in a vertical column.
+	</p>
 	<Doc
 		title="Default"
 		description="Create a list of buttons using the `ButtonGroup` component to display different actions a user can take.">
