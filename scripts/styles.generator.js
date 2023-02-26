@@ -35,4 +35,9 @@ for (const file of files) {
 		fs.mkdirSync('./static/css', { recursive: true })
 	}
 	fs.writeFileSync(`./static/css/${file}.css`, css, {})
+
+	if (!fs.existsSync('./src/css')) {
+		fs.mkdirSync('./src/css', { recursive: true })
+	}
+	fs.writeFileSync(`./src/css/${file}.css`, css, {})
 }

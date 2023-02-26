@@ -4,15 +4,14 @@
 
 	type $$Props = LabelProps
 
-	export let tag: $$Props['tag'] = 'label'
 	export let componentName: $$Props['componentName'] = 'label'
-	export let required: $$Props['required'] = false
+	export let required: $$Props['required'] = undefined
 
 	let fore: $$Props['for'] = undefined
 	export { fore as for }
 
-	let props: $$Props = { tag, componentName }
-	let cssProps: $$Props = { required }
+	let props: $$Props = {}
+	let cssProps: $$Props = {}
 
 	$: {
 		cssProps = {
@@ -20,12 +19,11 @@
 		}
 
 		props = {
-			tag,
 			componentName,
 		}
 	}
 </script>
 
-<El {...$$restProps} for={fore} {cssProps} {...props}>
+<El tag="label" {...$$restProps} for={fore} {cssProps} {...props}>
 	<slot />
 </El>

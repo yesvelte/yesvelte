@@ -4,8 +4,12 @@
 
 $props: (
 	null: '.avatar',
-	pill: '.rounded-circle',
-	rounded: '.rounded',
+	shape: (
+		circle: '.rounded-circle',
+		rounded: '.rounded',
+		tile: '.rounded-0',
+		pill: '.rounded-3'
+	),
 	active: '.active',
 	group: '.avatar-list',
 	group-stacked: '.avatar-list-stacked'
