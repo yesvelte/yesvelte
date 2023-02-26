@@ -332,15 +332,15 @@ export interface CssProps {
 }
 
 export interface ElProps extends CssProps {
-	'id'?: string
-	'class'?: string
-	'tag'?: HTMLTags
-	'element'?: HTMLElement
-	'componentName'?: string
-	'cssProps'?: CssProps
-	'value'?: unknown
-	'title'?: string
-	'tabindex'?: string | number
-	'role'?: string
+	id?: string
+	class?: string
+	tag?: HTMLTags
+	element?: HTMLElement
+	componentName?: string
+	cssProps?: CssProps
+	value?: unknown
+	title?: string
+	tabindex?: string | number
+	role?: string
 	'aria-label'?: string
 }

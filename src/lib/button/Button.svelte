@@ -14,13 +14,13 @@
 	export let link: $$Props['link'] = undefined
 	export let loading: $$Props['loading'] = undefined
 	export let outline: $$Props['outline'] = undefined
-	export let shape: $$Props['shape'] = 'round'
+	export let shape: $$Props['shape'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let target: $$Props['target'] = undefined
 	export let type: $$Props['type'] = undefined
 
-	let cssProps: ButtonProps = {}
-	let props: ButtonProps = {}
+	let cssProps: $$Props = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {
 			active,
