@@ -27060,6 +27060,7 @@ Antialiasing
 }
 .u-body-dialog-open {
   overflow: hidden;
+  padding-right: 16px;
 }
 
 .u-icon-size-xs {
