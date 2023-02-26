@@ -30,19 +30,16 @@ $accordion-props: (
 
 	&-body {
 
-		&-transition-leaving, &-transition-entering {
-			transition: max-height 0.15s ease-out;
+		&-transition-leaving {
+			height: 0;
+			transition: height 0.15s ease-out;
 			overflow: hidden;
 		}
-
-		&-transition-enter-from,
-		&-transition-leave-to {
-			max-height: 0;
+		
+		&-transition-entering {
+			transition: height 0.15s ease-out;
+			overflow: hidden;
 		}
-		&-transition-enter-to,
-		&-transition-leave-from {
-			max-height: 500px;
-		}		
 
 		&-transition-hide {
 			display: none;
