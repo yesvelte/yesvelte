@@ -4,6 +4,7 @@
 	import ModalAlert from './ModalAlert.svelte'
 	import ModalCenter from './ModalCenter.svelte'
 	import ModalDefault from './ModalDefault.svelte'
+	import ModalHeaderMedia from './ModalHeaderMedia.svelte'
 	import ModalLarge from './ModalLarge.svelte'
 	import ModalNoBackdrop from './ModalNoBackdrop.svelte'
 	import ModalPersistent from './ModalPersistent.svelte'
@@ -17,6 +18,11 @@
 	<Doc title="Default">
 		<Preview src="./ModalDefault.svelte">
 			<ModalDefault />
+		</Preview>
+	</Doc>
+	<Doc title="With Image & custom header">
+		<Preview src="./ModalHeaderMedia.svelte">
+			<ModalHeaderMedia />
 		</Preview>
 	</Doc>
 
