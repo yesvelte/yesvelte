@@ -35,7 +35,7 @@ $tab-props: (
 .#{$prefix-tab} {
 	@include apply-props($tab-props);
 
-	&-item-link > .#{$prefix-icon} {
+	&-item-link:not(.#{$prefix-tab}-item-link-icon) > .#{$prefix-icon} {
 		@extend .me-2;
 	}
 }

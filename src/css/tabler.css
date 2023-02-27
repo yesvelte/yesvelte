@@ -10952,7 +10952,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   margin-right: 0.25rem !important;
 }
 
-.me-2, .u-tab-item-link > .u-icon, .u-el-me-2 {
+.me-2, .u-tab-item-link:not(.u-tab-item-link-icon) > .u-icon, .u-el-me-2 {
   margin-right: 0.5rem !important;
 }
 

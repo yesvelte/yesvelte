@@ -8,6 +8,7 @@
 
 	export let componentName: $$Props['componentName'] = 'tab-item'
 	export let tag: $$Props['tag'] = 'li'
+	export let icon: $$Props['icon'] = undefined;
 	export let active: $$Props['active'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 
@@ -22,6 +23,7 @@
 	$: {
 		cssProps = {
 			disabled,
+			icon,
 			active: $selectedTab === tab,
 		}
 	}
