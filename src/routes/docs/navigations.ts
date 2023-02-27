@@ -137,11 +137,11 @@ export const navigations: Navigation[] = [
 				icon: 'material-symbols:date-range-outline',
 			},
 			{
-				route: base_path + '/dialog',
-				title: 'Dialog',
+				route: base_path + '/modal',
+				title: 'Modal',
 				icon: 'vaadin:modal',
 				description:
-					'The Dialog component is a basic way to present content above an enclosing view.',
+					'The Modal component is a basic way to present content above an enclosing view.',
 			},
 
 			{

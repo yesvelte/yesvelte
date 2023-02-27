@@ -1,4 +1,4 @@
-$dialog-props: (
+$modal-props: (
 	null: (
 		'.modal',
 		'.fade'
@@ -22,14 +22,14 @@ $dialog-props: (
 	title: '.modal-title'
 );
 
-.#{$prefix-dialog} {
-	@include apply-props($dialog-props);
+.#{$prefix-modal} {
+	@include apply-props($modal-props);
 
-	&-placement-center .#{$prefix-dialog-container} {
+	&-placement-center .#{$prefix-modal-container} {
 		@extend .modal-dialog-centered;
 	}
 
-	&-scrollable .#{$prefix-dialog-container} {
+	&-scrollable .#{$prefix-modal-container} {
 		@extend .modal-dialog-scrollable;
 	}
 
@@ -44,19 +44,19 @@ $dialog-props: (
 	}
 
 	&-size-full {
-		.#{$prefix-dialog}-container {
+		.#{$prefix-modal-container} {
 			@extend .modal-full-width;
 		}
 	}
 
 	@each $size in sm, lg, xl {
-		&-size-#{$size} .#{$prefix-dialog-container} {
+		&-size-#{$size} .#{$prefix-modal-container} {
 			@extend .modal-#{$size};
 		}
 	}
 }
 
-.#{$prefix}body-dialog-open {
+.#{$prefix}body-modal-open {
 	overflow: hidden;
 	padding-right: 16px;
 }
