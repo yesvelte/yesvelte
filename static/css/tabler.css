@@ -4794,12 +4794,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   outline: 0;
   box-shadow: var(--u-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .btn.u-tab-item-link-active, .btn.u-tab-pane, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-button.u-tab-item-link-active, .u-button.u-tab-pane, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-offcanvas-show, .btn.u-dialog-open, .btn.u-dialog-backdrop-open, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-offcanvas-show, .u-button.u-dialog-open, .u-button.u-dialog-backdrop-open, .btn.u-el-show, .u-el-show.u-button {
+.btn-check:checked + .btn, .btn-check:checked + .u-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .u-button:active, .btn:first-child:active, .u-button:first-child:active, .btn.active, .btn.u-tab-item-link-active, .btn.u-tab-pane, .btn.u-carousel-item-active, .btn.u-button-active, .active.u-button, .u-button.u-tab-item-link-active, .u-button.u-tab-pane, .u-button.u-carousel-item-active, .u-button.u-button-active, .btn.u-breadcrumb-item-active, .u-breadcrumb-item-active.u-button, .btn.u-avatar-active, .u-avatar-active.u-button, .btn.show, .btn.u-tooltip, .btn.u-toast-show, .btn.u-popover, .btn.u-offcanvas-show, .btn.u-modal-show, .btn.u-modal-backdrop-show, .show.u-button, .u-button.u-tooltip, .u-button.u-toast-show, .u-button.u-popover, .u-button.u-offcanvas-show, .u-button.u-modal-show, .u-button.u-modal-backdrop-show, .btn.u-el-show, .u-el-show.u-button {
   color: var(--u-btn-active-color);
   background-color: var(--u-btn-active-bg);
   border-color: var(--u-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.u-tab-item-link-active:focus-visible, .btn.u-tab-pane:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-button.u-tab-item-link-active:focus-visible, .u-button.u-tab-pane:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-offcanvas-show:focus-visible, .btn.u-dialog-open:focus-visible, .btn.u-dialog-backdrop-open:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-offcanvas-show:focus-visible, .u-button.u-dialog-open:focus-visible, .u-button.u-dialog-backdrop-open:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .u-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .u-button:active:focus-visible, .btn:first-child:active:focus-visible, .u-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.u-tab-item-link-active:focus-visible, .btn.u-tab-pane:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.u-button-active:focus-visible, .active.u-button:focus-visible, .u-button.u-tab-item-link-active:focus-visible, .u-button.u-tab-pane:focus-visible, .u-button.u-carousel-item-active:focus-visible, .u-button.u-button-active:focus-visible, .btn.u-breadcrumb-item-active:focus-visible, .u-breadcrumb-item-active.u-button:focus-visible, .btn.u-avatar-active:focus-visible, .u-avatar-active.u-button:focus-visible, .btn.show:focus-visible, .btn.u-tooltip:focus-visible, .btn.u-toast-show:focus-visible, .btn.u-popover:focus-visible, .btn.u-offcanvas-show:focus-visible, .btn.u-modal-show:focus-visible, .btn.u-modal-backdrop-show:focus-visible, .show.u-button:focus-visible, .u-button.u-tooltip:focus-visible, .u-button.u-toast-show:focus-visible, .u-button.u-popover:focus-visible, .u-button.u-offcanvas-show:focus-visible, .u-button.u-modal-show:focus-visible, .u-button.u-modal-backdrop-show:focus-visible, .btn.u-el-show:focus-visible, .u-el-show.u-button:focus-visible {
   box-shadow: var(--u-btn-focus-box-shadow);
 }
 .btn:disabled, .u-button:disabled, .btn.disabled, .btn.u-tab-item-link-disabled, .btn.u-button-disabled, .disabled.u-button, .u-button.u-tab-item-link-disabled, .u-button.u-button-disabled, fieldset:disabled .btn, fieldset:disabled .u-button {
@@ -4849,19 +4849,19 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   --u-btn-border-radius: 2px;
 }
 
-.fade, .u-tooltip, .u-popover, .u-dialog-backdrop, .u-dialog {
+.fade, .u-tooltip, .u-popover, .u-modal-backdrop, .u-modal {
   transition: opacity 0.15s linear;
 }
 @media (prefers-reduced-motion: reduce) {
-  .fade, .u-tooltip, .u-popover, .u-dialog-backdrop, .u-dialog {
+  .fade, .u-tooltip, .u-popover, .u-modal-backdrop, .u-modal {
     transition: none;
   }
 }
-.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-dialog-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-dialog:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
+.fade:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show), .u-tooltip:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show), .u-popover:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show), .u-modal-backdrop:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show), .u-modal:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show) {
   opacity: 0;
 }
 
-.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
+.collapse:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show) {
   display: none;
 }
 
@@ -5157,7 +5157,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   background-color: transparent;
 }
 
-.dropdown-menu.show, .show.u-autocomplete-dropdown, .dropdown-menu.u-tooltip, .u-tooltip.u-autocomplete-dropdown, .dropdown-menu.u-toast-show, .u-toast-show.u-autocomplete-dropdown, .dropdown-menu.u-tab-pane, .u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.u-popover, .u-popover.u-autocomplete-dropdown, .dropdown-menu.u-offcanvas-show, .u-offcanvas-show.u-autocomplete-dropdown, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-tab-pane, .u-menu.u-popover, .u-menu.u-offcanvas-show, .dropdown-menu.u-dialog-open, .u-dialog-open.u-autocomplete-dropdown, .u-dialog-open.u-menu, .dropdown-menu.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-autocomplete-dropdown, .u-dialog-backdrop-open.u-menu, .dropdown-menu.u-el-show, .u-el-show.u-autocomplete-dropdown, .u-el-show.u-menu {
+.dropdown-menu.show, .show.u-autocomplete-dropdown, .dropdown-menu.u-tooltip, .u-tooltip.u-autocomplete-dropdown, .dropdown-menu.u-toast-show, .u-toast-show.u-autocomplete-dropdown, .dropdown-menu.u-tab-pane, .u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.u-popover, .u-popover.u-autocomplete-dropdown, .dropdown-menu.u-offcanvas-show, .u-offcanvas-show.u-autocomplete-dropdown, .dropdown-menu.u-modal-show, .u-modal-show.u-autocomplete-dropdown, .dropdown-menu.u-modal-backdrop-show, .u-modal-backdrop-show.u-autocomplete-dropdown, .show.u-menu, .u-menu.u-tooltip, .u-menu.u-toast-show, .u-menu.u-tab-pane, .u-menu.u-popover, .u-menu.u-offcanvas-show, .u-menu.u-modal-show, .u-menu.u-modal-backdrop-show, .dropdown-menu.u-el-show, .u-el-show.u-autocomplete-dropdown, .u-el-show.u-menu {
   display: block;
 }
 
@@ -5531,22 +5531,22 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .u-tab-list .nav-item.u-offcanvas-show .u-tab-item-link,
 .u-tab-list .u-offcanvas-show.u-tab-item .nav-link,
 .u-tab-list .u-offcanvas-show.u-tab-item .u-tab-item-link,
-.nav-tabs .nav-item.u-dialog-open .nav-link,
-.nav-tabs .nav-item.u-dialog-open .u-tab-item-link,
-.nav-tabs .u-dialog-open.u-tab-item .nav-link,
-.nav-tabs .u-dialog-open.u-tab-item .u-tab-item-link,
-.u-tab-list .nav-item.u-dialog-open .nav-link,
-.u-tab-list .nav-item.u-dialog-open .u-tab-item-link,
-.u-tab-list .u-dialog-open.u-tab-item .nav-link,
-.u-tab-list .u-dialog-open.u-tab-item .u-tab-item-link,
-.nav-tabs .nav-item.u-dialog-backdrop-open .nav-link,
-.nav-tabs .nav-item.u-dialog-backdrop-open .u-tab-item-link,
-.nav-tabs .u-dialog-backdrop-open.u-tab-item .nav-link,
-.nav-tabs .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
-.u-tab-list .nav-item.u-dialog-backdrop-open .nav-link,
-.u-tab-list .nav-item.u-dialog-backdrop-open .u-tab-item-link,
-.u-tab-list .u-dialog-backdrop-open.u-tab-item .nav-link,
-.u-tab-list .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
+.nav-tabs .nav-item.u-modal-show .nav-link,
+.nav-tabs .nav-item.u-modal-show .u-tab-item-link,
+.nav-tabs .u-modal-show.u-tab-item .nav-link,
+.nav-tabs .u-modal-show.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-modal-show .nav-link,
+.u-tab-list .nav-item.u-modal-show .u-tab-item-link,
+.u-tab-list .u-modal-show.u-tab-item .nav-link,
+.u-tab-list .u-modal-show.u-tab-item .u-tab-item-link,
+.nav-tabs .nav-item.u-modal-backdrop-show .nav-link,
+.nav-tabs .nav-item.u-modal-backdrop-show .u-tab-item-link,
+.nav-tabs .u-modal-backdrop-show.u-tab-item .nav-link,
+.nav-tabs .u-modal-backdrop-show.u-tab-item .u-tab-item-link,
+.u-tab-list .nav-item.u-modal-backdrop-show .nav-link,
+.u-tab-list .nav-item.u-modal-backdrop-show .u-tab-item-link,
+.u-tab-list .u-modal-backdrop-show.u-tab-item .nav-link,
+.u-tab-list .u-modal-backdrop-show.u-tab-item .u-tab-item-link,
 .nav-tabs .nav-item.u-el-show .nav-link,
 .nav-tabs .nav-item.u-el-show .u-tab-item-link,
 .nav-tabs .u-el-show.u-tab-item .nav-link,
@@ -5593,10 +5593,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .nav-pills .u-popover > .u-tab-item-link,
 .nav-pills .u-offcanvas-show > .nav-link,
 .nav-pills .u-offcanvas-show > .u-tab-item-link,
-.nav-pills .u-dialog-open > .nav-link,
-.nav-pills .u-dialog-open > .u-tab-item-link,
-.nav-pills .u-dialog-backdrop-open > .nav-link,
-.nav-pills .u-dialog-backdrop-open > .u-tab-item-link,
+.nav-pills .u-modal-show > .nav-link,
+.nav-pills .u-modal-show > .u-tab-item-link,
+.nav-pills .u-modal-backdrop-show > .nav-link,
+.nav-pills .u-modal-backdrop-show > .u-tab-item-link,
 .nav-pills .u-el-show > .nav-link,
 .nav-pills .u-el-show > .u-tab-item-link {
   color: var(--u-nav-pills-link-active-color);
@@ -5719,7 +5719,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .show > .u-tab-item-link, .navbar-nav .u-tooltip > .u-tab-item-link, .navbar-nav .u-toast-show > .u-tab-item-link, .navbar-nav .u-tab-pane > .nav-link, .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-popover > .u-tab-item-link, .navbar-nav .u-offcanvas-show > .nav-link, .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar-nav .u-dialog-open > .nav-link, .navbar-nav .u-dialog-open > .u-tab-item-link, .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-el-show > .u-tab-item-link,
+.navbar-nav .show > .nav-link, .navbar-nav .u-tooltip > .nav-link, .navbar-nav .u-toast-show > .nav-link, .navbar-nav .show > .u-tab-item-link, .navbar-nav .u-tooltip > .u-tab-item-link, .navbar-nav .u-toast-show > .u-tab-item-link, .navbar-nav .u-tab-pane > .nav-link, .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar-nav .u-popover > .nav-link, .navbar-nav .u-popover > .u-tab-item-link, .navbar-nav .u-offcanvas-show > .nav-link, .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar-nav .u-modal-show > .nav-link, .navbar-nav .u-modal-show > .u-tab-item-link, .navbar-nav .u-modal-backdrop-show > .nav-link, .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .navbar-nav .u-el-show > .nav-link, .navbar-nav .u-el-show > .u-tab-item-link,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.u-tab-item-link-active,
 .navbar-nav .active.u-tab-item-link,
@@ -6625,7 +6625,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .alert-dismissible, .u-alert-dismissible {
   padding-right: 3rem;
 }
-.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-offcanvas-header-btn, .alert-dismissible .u-dialog-close, .alert-dismissible .u-alert-close, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-offcanvas-header-btn, .u-alert-dismissible .u-dialog-close, .u-alert-dismissible .u-alert-close {
+.alert-dismissible .btn-close, .alert-dismissible .u-toast-close, .alert-dismissible .u-offcanvas-header-btn, .alert-dismissible .u-modal-close, .alert-dismissible .u-alert-close, .u-alert-dismissible .btn-close, .u-alert-dismissible .u-toast-close, .u-alert-dismissible .u-offcanvas-header-btn, .u-alert-dismissible .u-modal-close, .u-alert-dismissible .u-alert-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -7725,7 +7725,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   --u-list-group-active-border-color: var(--u-tabler-text);
 }
 
-.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-close {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-modal-close, .u-alert-close {
   --u-btn-close-color: #000000;
   --u-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
   --u-btn-close-opacity: 0.3;
@@ -7744,17 +7744,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-radius: 4px;
   opacity: var(--u-btn-close-opacity);
 }
-.btn-close:hover, .u-toast-close:hover, .u-offcanvas-header-btn:hover, .u-dialog-close:hover, .u-alert-close:hover {
+.btn-close:hover, .u-toast-close:hover, .u-offcanvas-header-btn:hover, .u-modal-close:hover, .u-alert-close:hover {
   color: var(--u-btn-close-color);
   text-decoration: none;
   opacity: var(--u-btn-close-hover-opacity);
 }
-.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-close:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-modal-close:focus, .u-alert-close:focus {
   outline: 0;
   box-shadow: var(--u-btn-close-focus-shadow);
   opacity: var(--u-btn-close-focus-opacity);
 }
-.btn-close:disabled, .u-toast-close:disabled, .u-offcanvas-header-btn:disabled, .u-dialog-close:disabled, .u-alert-close:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-link-disabled, .u-tab-item-link-disabled.u-toast-close, .disabled.u-offcanvas-header-btn, .u-offcanvas-header-btn.u-tab-item-link-disabled, .disabled.u-dialog-close, .u-dialog-close.u-tab-item-link-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-offcanvas-header-btn, .u-button-disabled.u-dialog-close, .disabled.u-alert-close, .u-alert-close.u-tab-item-link-disabled, .u-alert-close.u-button-disabled {
+.btn-close:disabled, .u-toast-close:disabled, .u-offcanvas-header-btn:disabled, .u-modal-close:disabled, .u-alert-close:disabled, .btn-close.disabled, .disabled.u-toast-close, .btn-close.u-tab-item-link-disabled, .u-tab-item-link-disabled.u-toast-close, .disabled.u-offcanvas-header-btn, .u-offcanvas-header-btn.u-tab-item-link-disabled, .disabled.u-modal-close, .u-modal-close.u-tab-item-link-disabled, .btn-close.u-button-disabled, .u-button-disabled.u-toast-close, .u-button-disabled.u-offcanvas-header-btn, .u-button-disabled.u-modal-close, .disabled.u-alert-close, .u-alert-close.u-tab-item-link-disabled, .u-alert-close.u-button-disabled {
   pointer-events: none;
   user-select: none;
   opacity: var(--u-btn-close-disabled-opacity);
@@ -7764,7 +7764,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   filter: var(--u-btn-close-white-filter);
 }
 
-[data-bs-theme=dark] .btn-close, [data-bs-theme=dark] .u-toast-close, [data-bs-theme=dark] .u-offcanvas-header-btn, [data-bs-theme=dark] .u-dialog-close, [data-bs-theme=dark] .u-alert-close {
+[data-bs-theme=dark] .btn-close, [data-bs-theme=dark] .u-toast-close, [data-bs-theme=dark] .u-offcanvas-header-btn, [data-bs-theme=dark] .u-modal-close, [data-bs-theme=dark] .u-alert-close {
   filter: var(--u-btn-close-white-filter);
 }
 
@@ -7798,7 +7798,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
 .toast.showing, .showing.u-toast {
   opacity: 0;
 }
-.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-dialog-open):not(.u-dialog-backdrop-open):not(.u-el-show) {
+.toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show), .u-toast:not(.show):not(.u-tooltip):not(.u-toast-show):not(.u-tab-pane):not(.u-popover):not(.u-offcanvas-show):not(.u-modal-show):not(.u-modal-backdrop-show):not(.u-el-show) {
   display: none;
 }
 
@@ -7825,7 +7825,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top-left-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
   border-top-right-radius: calc(var(--u-toast-border-radius) - var(--u-toast-border-width));
 }
-.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-offcanvas-header-btn, .u-toast-header .u-offcanvas-header-btn, .toast-header .u-dialog-close, .u-toast-header .u-dialog-close, .toast-header .u-alert-close, .u-toast-header .u-alert-close {
+.toast-header .btn-close, .u-toast-header .btn-close, .toast-header .u-toast-close, .u-toast-header .u-toast-close, .toast-header .u-offcanvas-header-btn, .u-toast-header .u-offcanvas-header-btn, .toast-header .u-modal-close, .u-toast-header .u-modal-close, .toast-header .u-alert-close, .u-toast-header .u-alert-close {
   margin-right: calc(-0.5 * var(--u-toast-padding-x));
   margin-left: var(--u-toast-padding-x);
 }
@@ -7835,7 +7835,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   word-wrap: break-word;
 }
 
-.modal, .u-dialog {
+.modal, .u-modal {
   --u-modal-zindex: 1055;
   --u-modal-width: 540px;
   --u-modal-padding: 1.5rem;
@@ -7869,46 +7869,46 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   outline: 0;
 }
 
-.modal-dialog, .u-dialog-container {
+.modal-dialog, .u-modal-container {
   position: relative;
   width: auto;
   margin: var(--u-modal-margin);
   pointer-events: none;
 }
-.modal.fade .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-dialog-backdrop .modal-dialog, .modal.fade .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-dialog-backdrop .u-dialog-container, .u-dialog .modal-dialog, .u-dialog .u-dialog-container {
+.modal.fade .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-modal-backdrop .modal-dialog, .modal.fade .u-modal-container, .modal.u-tooltip .u-modal-container, .modal.u-popover .u-modal-container, .modal.u-modal-backdrop .u-modal-container, .u-modal .modal-dialog, .u-modal .u-modal-container {
   transition: transform 0.3s ease-out;
   transform: translate(0, -1rem);
 }
 @media (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-dialog-backdrop .modal-dialog, .modal.fade .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-dialog-backdrop .u-dialog-container, .u-dialog .modal-dialog, .u-dialog .u-dialog-container {
+  .modal.fade .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-modal-backdrop .modal-dialog, .modal.fade .u-modal-container, .modal.u-tooltip .u-modal-container, .modal.u-popover .u-modal-container, .modal.u-modal-backdrop .u-modal-container, .u-modal .modal-dialog, .u-modal .u-modal-container {
     transition: none;
   }
 }
-.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-tab-pane .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-offcanvas-show .modal-dialog, .modal.u-dialog-open .modal-dialog, .modal.u-dialog-backdrop-open .modal-dialog, .modal.show .u-dialog-container, .modal.u-tooltip .u-dialog-container, .modal.u-toast-show .u-dialog-container, .modal.u-tab-pane .u-dialog-container, .modal.u-popover .u-dialog-container, .modal.u-offcanvas-show .u-dialog-container, .modal.u-dialog-open .u-dialog-container, .modal.u-dialog-backdrop-open .u-dialog-container, .show.u-dialog .modal-dialog, .u-dialog.u-tooltip .modal-dialog, .u-dialog.u-toast-show .modal-dialog, .u-dialog.u-tab-pane .modal-dialog, .u-dialog.u-popover .modal-dialog, .u-dialog.u-offcanvas-show .modal-dialog, .u-dialog.u-dialog-open .modal-dialog, .u-dialog.u-dialog-backdrop-open .modal-dialog, .show.u-dialog .u-dialog-container, .u-dialog.u-tooltip .u-dialog-container, .u-dialog.u-toast-show .u-dialog-container, .u-dialog.u-tab-pane .u-dialog-container, .u-dialog.u-popover .u-dialog-container, .u-dialog.u-offcanvas-show .u-dialog-container, .u-dialog.u-dialog-open .u-dialog-container, .u-dialog.u-dialog-backdrop-open .u-dialog-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-dialog-container, .u-el-show.u-dialog .modal-dialog, .u-el-show.u-dialog .u-dialog-container {
+.modal.show .modal-dialog, .modal.u-tooltip .modal-dialog, .modal.u-toast-show .modal-dialog, .modal.u-tab-pane .modal-dialog, .modal.u-popover .modal-dialog, .modal.u-offcanvas-show .modal-dialog, .modal.u-modal-show .modal-dialog, .modal.u-modal-backdrop-show .modal-dialog, .modal.show .u-modal-container, .modal.u-tooltip .u-modal-container, .modal.u-toast-show .u-modal-container, .modal.u-tab-pane .u-modal-container, .modal.u-popover .u-modal-container, .modal.u-offcanvas-show .u-modal-container, .modal.u-modal-show .u-modal-container, .modal.u-modal-backdrop-show .u-modal-container, .show.u-modal .modal-dialog, .u-modal.u-tooltip .modal-dialog, .u-modal.u-toast-show .modal-dialog, .u-modal.u-tab-pane .modal-dialog, .u-modal.u-popover .modal-dialog, .u-modal.u-offcanvas-show .modal-dialog, .u-modal.u-modal-show .modal-dialog, .u-modal.u-modal-backdrop-show .modal-dialog, .show.u-modal .u-modal-container, .u-modal.u-tooltip .u-modal-container, .u-modal.u-toast-show .u-modal-container, .u-modal.u-tab-pane .u-modal-container, .u-modal.u-popover .u-modal-container, .u-modal.u-offcanvas-show .u-modal-container, .u-modal.u-modal-show .u-modal-container, .u-modal.u-modal-backdrop-show .u-modal-container, .modal.u-el-show .modal-dialog, .modal.u-el-show .u-modal-container, .u-el-show.u-modal .modal-dialog, .u-el-show.u-modal .u-modal-container {
   transform: none;
 }
-.modal.modal-static .modal-dialog, .modal.modal-static .u-dialog-container, .modal-static.u-dialog .modal-dialog, .modal-static.u-dialog .u-dialog-container {
+.modal.modal-static .modal-dialog, .modal.modal-static .u-modal-container, .modal-static.u-modal .modal-dialog, .modal-static.u-modal .u-modal-container {
   transform: scale(1.02);
 }
 
-.modal-dialog-scrollable, .u-dialog-scrollable .u-dialog-container {
+.modal-dialog-scrollable, .u-modal-scrollable .u-modal-container {
   height: calc(100% - var(--u-modal-margin) * 2);
 }
-.modal-dialog-scrollable .modal-content, .u-dialog-scrollable .u-dialog-container .modal-content, .modal-dialog-scrollable .u-dialog-content, .u-dialog-scrollable .u-dialog-container .u-dialog-content {
+.modal-dialog-scrollable .modal-content, .u-modal-scrollable .u-modal-container .modal-content, .modal-dialog-scrollable .u-modal-content, .u-modal-scrollable .u-modal-container .u-modal-content {
   max-height: 100%;
   overflow: hidden;
 }
-.modal-dialog-scrollable .modal-body, .u-dialog-scrollable .u-dialog-container .modal-body, .modal-dialog-scrollable .u-dialog-body, .u-dialog-scrollable .u-dialog-container .u-dialog-body {
+.modal-dialog-scrollable .modal-body, .u-modal-scrollable .u-modal-container .modal-body, .modal-dialog-scrollable .u-modal-body, .u-modal-scrollable .u-modal-container .u-modal-body {
   overflow-y: auto;
 }
 
-.modal-dialog-centered, .u-dialog-placement-center .u-dialog-container {
+.modal-dialog-centered, .u-modal-placement-center .u-modal-container {
   display: flex;
   align-items: center;
   min-height: calc(100% - var(--u-modal-margin) * 2);
 }
 
-.modal-content, .u-dialog-content {
+.modal-content, .u-modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7922,7 +7922,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   outline: 0;
 }
 
-.modal-backdrop, .u-dialog-backdrop {
+.modal-backdrop, .u-modal-backdrop {
   --u-backdrop-zindex: 1050;
   --u-backdrop-bg: #1d273b;
   --u-backdrop-opacity: 0.24;
@@ -7934,14 +7934,14 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   height: 100vh;
   background-color: var(--u-backdrop-bg);
 }
-.modal-backdrop.fade, .modal-backdrop.u-tooltip, .modal-backdrop.u-popover, .u-dialog-backdrop, .modal-backdrop.u-dialog {
+.modal-backdrop.fade, .modal-backdrop.u-tooltip, .modal-backdrop.u-popover, .u-modal-backdrop, .modal-backdrop.u-modal {
   opacity: 0;
 }
-.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-tab-pane, .modal-backdrop.u-popover, .modal-backdrop.u-offcanvas-show, .modal-backdrop.u-dialog-open, .modal-backdrop.u-dialog-backdrop-open, .show.u-dialog-backdrop, .u-dialog-backdrop.u-tooltip, .u-dialog-backdrop.u-toast-show, .u-dialog-backdrop.u-tab-pane, .u-dialog-backdrop.u-popover, .u-dialog-backdrop.u-offcanvas-show, .u-dialog-backdrop.u-dialog-open, .u-dialog-backdrop.u-dialog-backdrop-open, .modal-backdrop.u-el-show, .u-el-show.u-dialog-backdrop {
+.modal-backdrop.show, .modal-backdrop.u-tooltip, .modal-backdrop.u-toast-show, .modal-backdrop.u-tab-pane, .modal-backdrop.u-popover, .modal-backdrop.u-offcanvas-show, .modal-backdrop.u-modal-show, .modal-backdrop.u-modal-backdrop-show, .show.u-modal-backdrop, .u-modal-backdrop.u-tooltip, .u-modal-backdrop.u-toast-show, .u-modal-backdrop.u-tab-pane, .u-modal-backdrop.u-popover, .u-modal-backdrop.u-offcanvas-show, .u-modal-backdrop.u-modal-show, .u-modal-backdrop.u-modal-backdrop-show, .modal-backdrop.u-el-show, .u-el-show.u-modal-backdrop {
   opacity: var(--u-backdrop-opacity);
 }
 
-.modal-header, .u-dialog-header {
+.modal-header, .u-modal-header {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -7951,23 +7951,23 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top-left-radius: var(--u-modal-inner-border-radius);
   border-top-right-radius: var(--u-modal-inner-border-radius);
 }
-.modal-header .btn-close, .modal-header .u-toast-close, .modal-header .u-offcanvas-header-btn, .u-dialog-header .btn-close, .u-dialog-header .u-toast-close, .u-dialog-header .u-offcanvas-header-btn, .modal-header .u-dialog-close, .u-dialog-header .u-dialog-close, .modal-header .u-alert-close, .u-dialog-header .u-alert-close {
+.modal-header .btn-close, .modal-header .u-toast-close, .modal-header .u-offcanvas-header-btn, .u-modal-header .btn-close, .u-modal-header .u-toast-close, .u-modal-header .u-offcanvas-header-btn, .modal-header .u-modal-close, .u-modal-header .u-modal-close, .modal-header .u-alert-close, .u-modal-header .u-alert-close {
   padding: calc(var(--u-modal-header-padding-y) * 0.5) calc(var(--u-modal-header-padding-x) * 0.5);
   margin: calc(-0.5 * var(--u-modal-header-padding-y)) calc(-0.5 * var(--u-modal-header-padding-x)) calc(-0.5 * var(--u-modal-header-padding-y)) auto;
 }
 
-.modal-title, .u-dialog-title {
+.modal-title, .u-modal-title {
   margin-bottom: 0;
   line-height: var(--u-modal-title-line-height);
 }
 
-.modal-body, .u-dialog-body {
+.modal-body, .u-modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: var(--u-modal-padding);
 }
 
-.modal-footer, .u-dialog-footer {
+.modal-footer, .u-modal-footer {
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
@@ -7979,33 +7979,33 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-bottom-right-radius: var(--u-modal-inner-border-radius);
   border-bottom-left-radius: var(--u-modal-inner-border-radius);
 }
-.modal-footer > *, .u-dialog-footer > * {
+.modal-footer > *, .u-modal-footer > * {
   margin: calc(var(--u-modal-footer-gap) * 0.5);
 }
 
 @media (min-width: 576px) {
-  .modal, .u-dialog {
+  .modal, .u-modal {
     --u-modal-margin: 1.75rem;
     --u-modal-box-shadow: 0 0.5rem 1rem rgba(var(--u-body-color-rgb), 0.15);
   }
-  .modal-dialog, .u-dialog-container {
+  .modal-dialog, .u-modal-container {
     max-width: var(--u-modal-width);
     margin-right: auto;
     margin-left: auto;
   }
-  .modal-sm, .u-dialog-size-sm .u-dialog-container {
+  .modal-sm, .u-modal-size-sm .u-modal-container {
     --u-modal-width: 380px;
   }
 }
 @media (min-width: 992px) {
-  .modal-lg, .u-dialog-size-lg .u-dialog-container,
+  .modal-lg, .u-modal-size-lg .u-modal-container,
   .modal-xl,
-  .u-dialog-size-xl .u-dialog-container {
+  .u-modal-size-xl .u-modal-container {
     --u-modal-width: 720px;
   }
 }
 @media (min-width: 1200px) {
-  .modal-xl, .u-dialog-size-xl .u-dialog-container {
+  .modal-xl, .u-modal-size-xl .u-modal-container {
     --u-modal-width: 1140px;
   }
 }
@@ -8015,17 +8015,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   height: 100%;
   margin: 0;
 }
-.modal-fullscreen .modal-content, .modal-fullscreen .u-dialog-content {
+.modal-fullscreen .modal-content, .modal-fullscreen .u-modal-content {
   height: 100%;
   border: 0;
   border-radius: 0;
 }
-.modal-fullscreen .modal-header, .modal-fullscreen .u-dialog-header,
+.modal-fullscreen .modal-header, .modal-fullscreen .u-modal-header,
 .modal-fullscreen .modal-footer,
-.modal-fullscreen .u-dialog-footer {
+.modal-fullscreen .u-modal-footer {
   border-radius: 0;
 }
-.modal-fullscreen .modal-body, .modal-fullscreen .u-dialog-body {
+.modal-fullscreen .modal-body, .modal-fullscreen .u-modal-body {
   overflow-y: auto;
 }
 
@@ -8036,17 +8036,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
     height: 100%;
     margin: 0;
   }
-  .modal-fullscreen-sm-down .modal-content, .modal-fullscreen-sm-down .u-dialog-content {
+  .modal-fullscreen-sm-down .modal-content, .modal-fullscreen-sm-down .u-modal-content {
     height: 100%;
     border: 0;
     border-radius: 0;
   }
-  .modal-fullscreen-sm-down .modal-header, .modal-fullscreen-sm-down .u-dialog-header,
+  .modal-fullscreen-sm-down .modal-header, .modal-fullscreen-sm-down .u-modal-header,
   .modal-fullscreen-sm-down .modal-footer,
-  .modal-fullscreen-sm-down .u-dialog-footer {
+  .modal-fullscreen-sm-down .u-modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-sm-down .modal-body, .modal-fullscreen-sm-down .u-dialog-body {
+  .modal-fullscreen-sm-down .modal-body, .modal-fullscreen-sm-down .u-modal-body {
     overflow-y: auto;
   }
 }
@@ -8057,17 +8057,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
     height: 100%;
     margin: 0;
   }
-  .modal-fullscreen-md-down .modal-content, .modal-fullscreen-md-down .u-dialog-content {
+  .modal-fullscreen-md-down .modal-content, .modal-fullscreen-md-down .u-modal-content {
     height: 100%;
     border: 0;
     border-radius: 0;
   }
-  .modal-fullscreen-md-down .modal-header, .modal-fullscreen-md-down .u-dialog-header,
+  .modal-fullscreen-md-down .modal-header, .modal-fullscreen-md-down .u-modal-header,
   .modal-fullscreen-md-down .modal-footer,
-  .modal-fullscreen-md-down .u-dialog-footer {
+  .modal-fullscreen-md-down .u-modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-md-down .modal-body, .modal-fullscreen-md-down .u-dialog-body {
+  .modal-fullscreen-md-down .modal-body, .modal-fullscreen-md-down .u-modal-body {
     overflow-y: auto;
   }
 }
@@ -8078,17 +8078,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
     height: 100%;
     margin: 0;
   }
-  .modal-fullscreen-lg-down .modal-content, .modal-fullscreen-lg-down .u-dialog-content {
+  .modal-fullscreen-lg-down .modal-content, .modal-fullscreen-lg-down .u-modal-content {
     height: 100%;
     border: 0;
     border-radius: 0;
   }
-  .modal-fullscreen-lg-down .modal-header, .modal-fullscreen-lg-down .u-dialog-header,
+  .modal-fullscreen-lg-down .modal-header, .modal-fullscreen-lg-down .u-modal-header,
   .modal-fullscreen-lg-down .modal-footer,
-  .modal-fullscreen-lg-down .u-dialog-footer {
+  .modal-fullscreen-lg-down .u-modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-lg-down .modal-body, .modal-fullscreen-lg-down .u-dialog-body {
+  .modal-fullscreen-lg-down .modal-body, .modal-fullscreen-lg-down .u-modal-body {
     overflow-y: auto;
   }
 }
@@ -8099,17 +8099,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
     height: 100%;
     margin: 0;
   }
-  .modal-fullscreen-xl-down .modal-content, .modal-fullscreen-xl-down .u-dialog-content {
+  .modal-fullscreen-xl-down .modal-content, .modal-fullscreen-xl-down .u-modal-content {
     height: 100%;
     border: 0;
     border-radius: 0;
   }
-  .modal-fullscreen-xl-down .modal-header, .modal-fullscreen-xl-down .u-dialog-header,
+  .modal-fullscreen-xl-down .modal-header, .modal-fullscreen-xl-down .u-modal-header,
   .modal-fullscreen-xl-down .modal-footer,
-  .modal-fullscreen-xl-down .u-dialog-footer {
+  .modal-fullscreen-xl-down .u-modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-xl-down .modal-body, .modal-fullscreen-xl-down .u-dialog-body {
+  .modal-fullscreen-xl-down .modal-body, .modal-fullscreen-xl-down .u-modal-body {
     overflow-y: auto;
   }
 }
@@ -8120,17 +8120,17 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
     height: 100%;
     margin: 0;
   }
-  .modal-fullscreen-xxl-down .modal-content, .modal-fullscreen-xxl-down .u-dialog-content {
+  .modal-fullscreen-xxl-down .modal-content, .modal-fullscreen-xxl-down .u-modal-content {
     height: 100%;
     border: 0;
     border-radius: 0;
   }
-  .modal-fullscreen-xxl-down .modal-header, .modal-fullscreen-xxl-down .u-dialog-header,
+  .modal-fullscreen-xxl-down .modal-header, .modal-fullscreen-xxl-down .u-modal-header,
   .modal-fullscreen-xxl-down .modal-footer,
-  .modal-fullscreen-xxl-down .u-dialog-footer {
+  .modal-fullscreen-xxl-down .u-modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-xxl-down .modal-body, .modal-fullscreen-xxl-down .u-dialog-body {
+  .modal-fullscreen-xxl-down .modal-body, .modal-fullscreen-xxl-down .u-modal-body {
     overflow-y: auto;
   }
 }
@@ -8169,7 +8169,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   word-wrap: break-word;
   opacity: 0;
 }
-.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-tab-pane, .tooltip.u-popover, .tooltip.u-offcanvas-show, .tooltip.u-dialog-open, .tooltip.u-dialog-backdrop-open, .tooltip.u-el-show {
+.tooltip.show, .u-tooltip, .tooltip.u-toast-show, .tooltip.u-tab-pane, .tooltip.u-popover, .tooltip.u-offcanvas-show, .tooltip.u-modal-show, .tooltip.u-modal-backdrop-show, .tooltip.u-el-show {
   opacity: var(--u-tooltip-opacity);
 }
 .tooltip .tooltip-arrow, .tooltip .u-tooltip-arrow, .u-tooltip .tooltip-arrow, .u-tooltip .u-tooltip-arrow {
@@ -8781,12 +8781,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-tab-pane:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-offcanvas-show:not(.hiding), .offcanvas-sm.u-dialog-open:not(.hiding), .offcanvas-sm.u-dialog-backdrop-open:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
+  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.u-tooltip:not(.hiding), .offcanvas-sm.u-toast-show:not(.hiding), .offcanvas-sm.u-tab-pane:not(.hiding), .offcanvas-sm.u-popover:not(.hiding), .offcanvas-sm.u-offcanvas-show:not(.hiding), .offcanvas-sm.u-modal-show:not(.hiding), .offcanvas-sm.u-modal-backdrop-show:not(.hiding), .offcanvas-sm.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-tab-pane, .offcanvas-sm.u-popover, .offcanvas-sm.u-offcanvas-show, .offcanvas-sm.u-dialog-open, .offcanvas-sm.u-dialog-backdrop-open, .offcanvas-sm.u-el-show {
+  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.u-tooltip, .offcanvas-sm.u-toast-show, .offcanvas-sm.u-tab-pane, .offcanvas-sm.u-popover, .offcanvas-sm.u-offcanvas-show, .offcanvas-sm.u-modal-show, .offcanvas-sm.u-modal-backdrop-show, .offcanvas-sm.u-el-show {
     visibility: visible;
   }
 }
@@ -8869,12 +8869,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-tab-pane:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-offcanvas-show:not(.hiding), .offcanvas-md.u-dialog-open:not(.hiding), .offcanvas-md.u-dialog-backdrop-open:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
+  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.u-tooltip:not(.hiding), .offcanvas-md.u-toast-show:not(.hiding), .offcanvas-md.u-tab-pane:not(.hiding), .offcanvas-md.u-popover:not(.hiding), .offcanvas-md.u-offcanvas-show:not(.hiding), .offcanvas-md.u-modal-show:not(.hiding), .offcanvas-md.u-modal-backdrop-show:not(.hiding), .offcanvas-md.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-tab-pane, .offcanvas-md.u-popover, .offcanvas-md.u-offcanvas-show, .offcanvas-md.u-dialog-open, .offcanvas-md.u-dialog-backdrop-open, .offcanvas-md.u-el-show {
+  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.u-tooltip, .offcanvas-md.u-toast-show, .offcanvas-md.u-tab-pane, .offcanvas-md.u-popover, .offcanvas-md.u-offcanvas-show, .offcanvas-md.u-modal-show, .offcanvas-md.u-modal-backdrop-show, .offcanvas-md.u-el-show {
     visibility: visible;
   }
 }
@@ -8957,12 +8957,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-tab-pane:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-offcanvas-show:not(.hiding), .offcanvas-lg.u-dialog-open:not(.hiding), .offcanvas-lg.u-dialog-backdrop-open:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
+  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.u-tooltip:not(.hiding), .offcanvas-lg.u-toast-show:not(.hiding), .offcanvas-lg.u-tab-pane:not(.hiding), .offcanvas-lg.u-popover:not(.hiding), .offcanvas-lg.u-offcanvas-show:not(.hiding), .offcanvas-lg.u-modal-show:not(.hiding), .offcanvas-lg.u-modal-backdrop-show:not(.hiding), .offcanvas-lg.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-tab-pane, .offcanvas-lg.u-popover, .offcanvas-lg.u-offcanvas-show, .offcanvas-lg.u-dialog-open, .offcanvas-lg.u-dialog-backdrop-open, .offcanvas-lg.u-el-show {
+  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.u-tooltip, .offcanvas-lg.u-toast-show, .offcanvas-lg.u-tab-pane, .offcanvas-lg.u-popover, .offcanvas-lg.u-offcanvas-show, .offcanvas-lg.u-modal-show, .offcanvas-lg.u-modal-backdrop-show, .offcanvas-lg.u-el-show {
     visibility: visible;
   }
 }
@@ -9045,12 +9045,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-tab-pane:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-offcanvas-show:not(.hiding), .offcanvas-xl.u-dialog-open:not(.hiding), .offcanvas-xl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
+  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.u-tooltip:not(.hiding), .offcanvas-xl.u-toast-show:not(.hiding), .offcanvas-xl.u-tab-pane:not(.hiding), .offcanvas-xl.u-popover:not(.hiding), .offcanvas-xl.u-offcanvas-show:not(.hiding), .offcanvas-xl.u-modal-show:not(.hiding), .offcanvas-xl.u-modal-backdrop-show:not(.hiding), .offcanvas-xl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-tab-pane, .offcanvas-xl.u-popover, .offcanvas-xl.u-offcanvas-show, .offcanvas-xl.u-dialog-open, .offcanvas-xl.u-dialog-backdrop-open, .offcanvas-xl.u-el-show {
+  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.u-tooltip, .offcanvas-xl.u-toast-show, .offcanvas-xl.u-tab-pane, .offcanvas-xl.u-popover, .offcanvas-xl.u-offcanvas-show, .offcanvas-xl.u-modal-show, .offcanvas-xl.u-modal-backdrop-show, .offcanvas-xl.u-el-show {
     visibility: visible;
   }
 }
@@ -9133,12 +9133,12 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-tab-pane:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-offcanvas-show:not(.hiding), .offcanvas-xxl.u-dialog-open:not(.hiding), .offcanvas-xxl.u-dialog-backdrop-open:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.u-tooltip:not(.hiding), .offcanvas-xxl.u-toast-show:not(.hiding), .offcanvas-xxl.u-tab-pane:not(.hiding), .offcanvas-xxl.u-popover:not(.hiding), .offcanvas-xxl.u-offcanvas-show:not(.hiding), .offcanvas-xxl.u-modal-show:not(.hiding), .offcanvas-xxl.u-modal-backdrop-show:not(.hiding), .offcanvas-xxl.u-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-tab-pane, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-offcanvas-show, .offcanvas-xxl.u-dialog-open, .offcanvas-xxl.u-dialog-backdrop-open, .offcanvas-xxl.u-el-show {
+  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.u-tooltip, .offcanvas-xxl.u-toast-show, .offcanvas-xxl.u-tab-pane, .offcanvas-xxl.u-popover, .offcanvas-xxl.u-offcanvas-show, .offcanvas-xxl.u-modal-show, .offcanvas-xxl.u-modal-backdrop-show, .offcanvas-xxl.u-el-show {
     visibility: visible;
   }
 }
@@ -9210,10 +9210,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   border-top: var(--u-offcanvas-border-width) solid var(--u-offcanvas-border-color);
   transform: translateY(100%);
 }
-.offcanvas.showing, .showing.u-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-tab-pane:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-offcanvas-show:not(.hiding), .show.u-offcanvas:not(.hiding), .u-offcanvas.u-tooltip:not(.hiding), .u-offcanvas.u-toast-show:not(.hiding), .u-offcanvas.u-tab-pane:not(.hiding), .u-offcanvas.u-popover:not(.hiding), .u-offcanvas.u-offcanvas-show:not(.hiding), .offcanvas.u-dialog-open:not(.hiding), .u-dialog-open.u-offcanvas:not(.hiding), .offcanvas.u-dialog-backdrop-open:not(.hiding), .u-dialog-backdrop-open.u-offcanvas:not(.hiding), .offcanvas.u-el-show:not(.hiding), .u-el-show.u-offcanvas:not(.hiding) {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.u-tooltip:not(.hiding), .offcanvas.u-toast-show:not(.hiding), .offcanvas.u-tab-pane:not(.hiding), .offcanvas.u-popover:not(.hiding), .offcanvas.u-offcanvas-show:not(.hiding), .show.u-offcanvas:not(.hiding), .u-offcanvas.u-tooltip:not(.hiding), .u-offcanvas.u-toast-show:not(.hiding), .u-offcanvas.u-tab-pane:not(.hiding), .u-offcanvas.u-popover:not(.hiding), .u-offcanvas.u-offcanvas-show:not(.hiding), .offcanvas.u-modal-show:not(.hiding), .u-modal-show.u-offcanvas:not(.hiding), .offcanvas.u-modal-backdrop-show:not(.hiding), .u-modal-backdrop-show.u-offcanvas:not(.hiding), .offcanvas.u-el-show:not(.hiding), .u-el-show.u-offcanvas:not(.hiding) {
   transform: none;
 }
-.offcanvas.showing, .showing.u-offcanvas, .offcanvas.hiding, .hiding.u-offcanvas, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-tab-pane, .offcanvas.u-popover, .offcanvas.u-offcanvas-show, .show.u-offcanvas, .u-offcanvas.u-tooltip, .u-offcanvas.u-toast-show, .u-offcanvas.u-tab-pane, .u-offcanvas.u-popover, .u-offcanvas.u-offcanvas-show, .offcanvas.u-dialog-open, .u-dialog-open.u-offcanvas, .offcanvas.u-dialog-backdrop-open, .u-dialog-backdrop-open.u-offcanvas, .offcanvas.u-el-show, .u-el-show.u-offcanvas {
+.offcanvas.showing, .showing.u-offcanvas, .offcanvas.hiding, .hiding.u-offcanvas, .offcanvas.show, .offcanvas.u-tooltip, .offcanvas.u-toast-show, .offcanvas.u-tab-pane, .offcanvas.u-popover, .offcanvas.u-offcanvas-show, .show.u-offcanvas, .u-offcanvas.u-tooltip, .u-offcanvas.u-toast-show, .u-offcanvas.u-tab-pane, .u-offcanvas.u-popover, .u-offcanvas.u-offcanvas-show, .offcanvas.u-modal-show, .u-modal-show.u-offcanvas, .offcanvas.u-modal-backdrop-show, .u-modal-backdrop-show.u-offcanvas, .offcanvas.u-el-show, .u-el-show.u-offcanvas {
   visibility: visible;
 }
 
@@ -9226,10 +9226,10 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   height: 100vh;
   background-color: #1d273b;
 }
-.offcanvas-backdrop.fade, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-dialog-backdrop, .offcanvas-backdrop.u-dialog {
+.offcanvas-backdrop.fade, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-modal-backdrop, .offcanvas-backdrop.u-modal {
   opacity: 0;
 }
-.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-tab-pane, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-offcanvas-show, .offcanvas-backdrop.u-dialog-open, .offcanvas-backdrop.u-dialog-backdrop-open, .offcanvas-backdrop.u-el-show {
+.offcanvas-backdrop.show, .offcanvas-backdrop.u-tooltip, .offcanvas-backdrop.u-toast-show, .offcanvas-backdrop.u-tab-pane, .offcanvas-backdrop.u-popover, .offcanvas-backdrop.u-offcanvas-show, .offcanvas-backdrop.u-modal-show, .offcanvas-backdrop.u-modal-backdrop-show, .offcanvas-backdrop.u-el-show {
   opacity: 0.24;
 }
 
@@ -9239,7 +9239,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   justify-content: space-between;
   padding: var(--u-offcanvas-padding-y) var(--u-offcanvas-padding-x);
 }
-.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-offcanvas-header-btn, .u-offcanvas-header .btn-close, .u-offcanvas-header .u-toast-close, .u-offcanvas-header .u-offcanvas-header-btn, .offcanvas-header .u-dialog-close, .u-offcanvas-header .u-dialog-close, .offcanvas-header .u-alert-close, .u-offcanvas-header .u-alert-close {
+.offcanvas-header .btn-close, .offcanvas-header .u-toast-close, .offcanvas-header .u-offcanvas-header-btn, .u-offcanvas-header .btn-close, .u-offcanvas-header .u-toast-close, .u-offcanvas-header .u-offcanvas-header-btn, .offcanvas-header .u-modal-close, .u-offcanvas-header .u-modal-close, .offcanvas-header .u-alert-close, .u-offcanvas-header .u-alert-close {
   padding: calc(var(--u-offcanvas-padding-y) * 0.5) calc(var(--u-offcanvas-padding-x) * 0.5);
   margin-top: calc(-0.5 * var(--u-offcanvas-padding-y));
   margin-right: calc(-0.5 * var(--u-offcanvas-padding-x));
@@ -10129,7 +10129,7 @@ textarea.form-control-lg, textarea.u-textarea-size-lg, textarea.u-file-uploader-
   position: relative !important;
 }
 
-.position-absolute, .u-dialog-absolute, .u-dialog-backdrop-absolute, .u-el-position-absolute {
+.position-absolute, .u-modal-absolute, .u-modal-backdrop-absolute, .u-el-position-absolute {
   position: absolute !important;
 }
 
@@ -15569,7 +15569,7 @@ Navbar
 .navbar .navbar-nav .nav-link.disabled, .navbar .navbar-nav .nav-link.u-tab-item-link-disabled, .navbar .navbar-nav .disabled.u-tab-item-link, .navbar .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .navbar .navbar-nav .nav-link.u-button-disabled, .navbar .navbar-nav .u-button-disabled.u-tab-item-link, .u-app-header .navbar-nav .nav-link.disabled, .u-app-header .navbar-nav .nav-link.u-tab-item-link-disabled, .u-app-header .navbar-nav .disabled.u-tab-item-link, .u-app-header .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-header .navbar-nav .u-button-disabled.u-tab-item-link {
   color: var(--u-disabled-color);
 }
-.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .show > .u-tab-item-link, .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .navbar .navbar-nav .u-tab-pane > .nav-link, .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-popover > .u-tab-item-link, .navbar .navbar-nav .u-offcanvas-show > .nav-link, .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar .navbar-nav .u-dialog-open > .nav-link, .navbar .navbar-nav .u-dialog-open > .u-tab-item-link, .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-el-show > .u-tab-item-link, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .show > .u-tab-item-link, .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-header .navbar-nav .u-tab-pane > .nav-link, .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-link, .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
+.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .u-tooltip > .nav-link, .navbar .navbar-nav .u-toast-show > .nav-link, .navbar .navbar-nav .show > .u-tab-item-link, .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .navbar .navbar-nav .u-tab-pane > .nav-link, .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar .navbar-nav .u-popover > .nav-link, .navbar .navbar-nav .u-popover > .u-tab-item-link, .navbar .navbar-nav .u-offcanvas-show > .nav-link, .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar .navbar-nav .u-modal-show > .nav-link, .navbar .navbar-nav .u-modal-show > .u-tab-item-link, .navbar .navbar-nav .u-modal-backdrop-show > .nav-link, .navbar .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .navbar .navbar-nav .u-el-show > .nav-link, .navbar .navbar-nav .u-el-show > .u-tab-item-link, .u-app-header .navbar-nav .show > .nav-link, .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-header .navbar-nav .show > .u-tab-item-link, .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-header .navbar-nav .u-tab-pane > .nav-link, .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-header .navbar-nav .u-modal-show > .nav-link, .u-app-header .navbar-nav .u-modal-show > .u-tab-item-link, .u-app-header .navbar-nav .u-modal-backdrop-show > .nav-link, .u-app-header .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
 .navbar .navbar-nav .active > .nav-link,
 .navbar .navbar-nav .u-tab-item-link-active > .nav-link,
 .navbar .navbar-nav .active > .u-tab-item-link,
@@ -15606,10 +15606,10 @@ Navbar
 .navbar .navbar-nav .u-popover.u-tab-item-link,
 .navbar .navbar-nav .nav-link.u-offcanvas-show,
 .navbar .navbar-nav .u-offcanvas-show.u-tab-item-link,
-.navbar .navbar-nav .nav-link.u-dialog-open,
-.navbar .navbar-nav .u-dialog-open.u-tab-item-link,
-.navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
-.navbar .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+.navbar .navbar-nav .nav-link.u-modal-show,
+.navbar .navbar-nav .u-modal-show.u-tab-item-link,
+.navbar .navbar-nav .nav-link.u-modal-backdrop-show,
+.navbar .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
 .navbar .navbar-nav .nav-link.u-el-show,
 .navbar .navbar-nav .u-el-show.u-tab-item-link,
 .u-app-header .navbar-nav .nav-link.show,
@@ -15624,10 +15624,10 @@ Navbar
 .u-app-header .navbar-nav .u-popover.u-tab-item-link,
 .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
 .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-link,
-.u-app-header .navbar-nav .nav-link.u-dialog-open,
-.u-app-header .navbar-nav .u-dialog-open.u-tab-item-link,
-.u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
-.u-app-header .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+.u-app-header .navbar-nav .nav-link.u-modal-show,
+.u-app-header .navbar-nav .u-modal-show.u-tab-item-link,
+.u-app-header .navbar-nav .nav-link.u-modal-backdrop-show,
+.u-app-header .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
 .u-app-header .navbar-nav .nav-link.u-el-show,
 .u-app-header .navbar-nav .u-el-show.u-tab-item-link,
 .navbar .navbar-nav .nav-link.active,
@@ -15693,7 +15693,7 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.disabled, .theme-dark .navbar .navbar-nav .nav-link.u-tab-item-link-disabled, .theme-dark .navbar .navbar-nav .disabled.u-tab-item-link, .theme-dark .navbar .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark .navbar .navbar-nav .u-button-disabled.u-tab-item-link, .theme-dark .u-app-header .navbar-nav .nav-link.disabled, .theme-dark .u-app-header .navbar-nav .nav-link.u-tab-item-link-disabled, .theme-dark .u-app-header .navbar-nav .disabled.u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .nav-link.disabled, .u-app-theme-dark .navbar .navbar-nav .nav-link.u-tab-item-link-disabled, .u-app-theme-dark .navbar .navbar-nav .disabled.u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .u-app-theme-dark .navbar .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .navbar .navbar-nav .u-button-disabled.u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.disabled, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-tab-item-link-disabled, .u-app-theme-dark .u-app-header .navbar-nav .disabled.u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-button-disabled, .u-app-theme-dark .u-app-header .navbar-nav .u-button-disabled.u-tab-item-link {
     color: var(--u-disabled-color);
   }
-  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-tab-pane > .nav-link, .theme-dark .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-tab-pane > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-pane > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-open > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-pane > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
+  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-tab-pane > .nav-link, .theme-dark .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-popover > .nav-link, .theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-modal-show > .nav-link, .theme-dark .navbar .navbar-nav .u-modal-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-modal-backdrop-show > .nav-link, .theme-dark .navbar .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark .u-app-header .navbar-nav .show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-tab-pane > .nav-link, .theme-dark .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-modal-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-modal-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-pane > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-popover > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-modal-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-modal-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-modal-backdrop-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .navbar .navbar-nav .u-el-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-pane > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-modal-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-modal-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .nav-link, .u-app-theme-dark .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
   .theme-dark .navbar .navbar-nav .active > .nav-link,
   .theme-dark .navbar .navbar-nav .u-tab-item-link-active > .nav-link,
   .theme-dark .navbar .navbar-nav .active > .u-tab-item-link,
@@ -15762,10 +15762,10 @@ Navbar
   .theme-dark .navbar .navbar-nav .u-popover.u-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.u-offcanvas-show,
   .theme-dark .navbar .navbar-nav .u-offcanvas-show.u-tab-item-link,
-  .theme-dark .navbar .navbar-nav .nav-link.u-dialog-open,
-  .theme-dark .navbar .navbar-nav .u-dialog-open.u-tab-item-link,
-  .theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
-  .theme-dark .navbar .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+  .theme-dark .navbar .navbar-nav .nav-link.u-modal-show,
+  .theme-dark .navbar .navbar-nav .u-modal-show.u-tab-item-link,
+  .theme-dark .navbar .navbar-nav .nav-link.u-modal-backdrop-show,
+  .theme-dark .navbar .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.u-el-show,
   .theme-dark .navbar .navbar-nav .u-el-show.u-tab-item-link,
   .theme-dark .u-app-header .navbar-nav .nav-link.show,
@@ -15780,10 +15780,10 @@ Navbar
   .theme-dark .u-app-header .navbar-nav .u-popover.u-tab-item-link,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
   .theme-dark .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-link,
-  .theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-open,
-  .theme-dark .u-app-header .navbar-nav .u-dialog-open.u-tab-item-link,
-  .theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
-  .theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+  .theme-dark .u-app-header .navbar-nav .nav-link.u-modal-show,
+  .theme-dark .u-app-header .navbar-nav .u-modal-show.u-tab-item-link,
+  .theme-dark .u-app-header .navbar-nav .nav-link.u-modal-backdrop-show,
+  .theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
   .theme-dark .u-app-header .navbar-nav .nav-link.u-el-show,
   .theme-dark .u-app-header .navbar-nav .u-el-show.u-tab-item-link,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.show,
@@ -15798,10 +15798,10 @@ Navbar
   .u-app-theme-dark .navbar .navbar-nav .u-popover.u-tab-item-link,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-offcanvas-show,
   .u-app-theme-dark .navbar .navbar-nav .u-offcanvas-show.u-tab-item-link,
-  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-dialog-open,
-  .u-app-theme-dark .navbar .navbar-nav .u-dialog-open.u-tab-item-link,
-  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
-  .u-app-theme-dark .navbar .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-modal-show,
+  .u-app-theme-dark .navbar .navbar-nav .u-modal-show.u-tab-item-link,
+  .u-app-theme-dark .navbar .navbar-nav .nav-link.u-modal-backdrop-show,
+  .u-app-theme-dark .navbar .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
   .u-app-theme-dark .navbar .navbar-nav .nav-link.u-el-show,
   .u-app-theme-dark .navbar .navbar-nav .u-el-show.u-tab-item-link,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.show,
@@ -15816,10 +15816,10 @@ Navbar
   .u-app-theme-dark .u-app-header .navbar-nav .u-popover.u-tab-item-link,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
   .u-app-theme-dark .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-link,
-  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-open,
-  .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-open.u-tab-item-link,
-  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
-  .u-app-theme-dark .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-modal-show,
+  .u-app-theme-dark .u-app-header .navbar-nav .u-modal-show.u-tab-item-link,
+  .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-modal-backdrop-show,
+  .u-app-theme-dark .u-app-header .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
   .u-app-theme-dark .u-app-header .navbar-nav .nav-link.u-el-show,
   .u-app-theme-dark .u-app-header .navbar-nav .u-el-show.u-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.active,
@@ -15919,7 +15919,7 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.u-tab-item-link-disabled, .theme-dark-auto .navbar .navbar-nav .disabled.u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .navbar .navbar-nav .u-button-disabled.u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .nav-link.disabled, .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-tab-item-link-disabled, .theme-dark-auto .u-app-header .navbar-nav .disabled.u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-button-disabled, .theme-dark-auto .u-app-header .navbar-nav .u-button-disabled.u-tab-item-link {
       color: var(--u-disabled-color);
     }
-    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-tab-pane > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-open > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-pane > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
+    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-tab-pane > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-popover > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-modal-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-modal-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-modal-backdrop-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .u-el-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-tooltip > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-toast-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-pane > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-tab-pane > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-popover > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-modal-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-modal-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-modal-backdrop-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .nav-link, .theme-dark-auto .u-app-header .navbar-nav .u-el-show > .u-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .u-tab-item-link-active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .active > .u-tab-item-link,
@@ -15956,10 +15956,10 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .u-popover.u-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-offcanvas-show,
     .theme-dark-auto .navbar .navbar-nav .u-offcanvas-show.u-tab-item-link,
-    .theme-dark-auto .navbar .navbar-nav .nav-link.u-dialog-open,
-    .theme-dark-auto .navbar .navbar-nav .u-dialog-open.u-tab-item-link,
-    .theme-dark-auto .navbar .navbar-nav .nav-link.u-dialog-backdrop-open,
-    .theme-dark-auto .navbar .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+    .theme-dark-auto .navbar .navbar-nav .nav-link.u-modal-show,
+    .theme-dark-auto .navbar .navbar-nav .u-modal-show.u-tab-item-link,
+    .theme-dark-auto .navbar .navbar-nav .nav-link.u-modal-backdrop-show,
+    .theme-dark-auto .navbar .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.u-el-show,
     .theme-dark-auto .navbar .navbar-nav .u-el-show.u-tab-item-link,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.show,
@@ -15974,10 +15974,10 @@ Navbar
     .theme-dark-auto .u-app-header .navbar-nav .u-popover.u-tab-item-link,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-offcanvas-show,
     .theme-dark-auto .u-app-header .navbar-nav .u-offcanvas-show.u-tab-item-link,
-    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-dialog-open,
-    .theme-dark-auto .u-app-header .navbar-nav .u-dialog-open.u-tab-item-link,
-    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-dialog-backdrop-open,
-    .theme-dark-auto .u-app-header .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-modal-show,
+    .theme-dark-auto .u-app-header .navbar-nav .u-modal-show.u-tab-item-link,
+    .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-modal-backdrop-show,
+    .theme-dark-auto .u-app-header .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
     .theme-dark-auto .u-app-header .navbar-nav .nav-link.u-el-show,
     .theme-dark-auto .u-app-header .navbar-nav .u-el-show.u-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.active,
@@ -17122,7 +17122,7 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .nav-link.u-tab-item-link-disabled, .navbar-dark .navbar-nav .disabled.u-tab-item-link, .navbar-dark .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .navbar-dark .navbar-nav .nav-link.u-button-disabled, .navbar-dark .navbar-nav .u-button-disabled.u-tab-item-link, .u-app-header-theme-dark .navbar-nav .nav-link.disabled, .u-app-header-theme-dark .navbar-nav .nav-link.u-tab-item-link-disabled, .u-app-header-theme-dark .navbar-nav .disabled.u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-tab-item-link.u-tab-item-link-disabled, .u-app-header-theme-dark .navbar-nav .nav-link.u-button-disabled, .u-app-header-theme-dark .navbar-nav .u-button-disabled.u-tab-item-link {
   color: var(--u-disabled-color);
 }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .u-tab-item-link, .navbar-dark .navbar-nav .u-tooltip > .u-tab-item-link, .navbar-dark .navbar-nav .u-toast-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-tab-pane > .nav-link, .navbar-dark .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-popover > .u-tab-item-link, .navbar-dark .navbar-nav .u-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-dialog-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-open > .u-tab-item-link, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .navbar-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-el-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-tab-pane > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-popover > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-open > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .nav-link, .u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tab-item-link,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .u-tooltip > .nav-link, .navbar-dark .navbar-nav .u-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .u-tab-item-link, .navbar-dark .navbar-nav .u-tooltip > .u-tab-item-link, .navbar-dark .navbar-nav .u-toast-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-tab-pane > .nav-link, .navbar-dark .navbar-nav .u-tab-pane > .u-tab-item-link, .navbar-dark .navbar-nav .u-popover > .nav-link, .navbar-dark .navbar-nav .u-popover > .u-tab-item-link, .navbar-dark .navbar-nav .u-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .u-offcanvas-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-modal-show > .nav-link, .navbar-dark .navbar-nav .u-modal-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-modal-backdrop-show > .nav-link, .navbar-dark .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .navbar-dark .navbar-nav .u-el-show > .nav-link, .navbar-dark .navbar-nav .u-el-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .nav-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .nav-link, .u-app-header-theme-dark .navbar-nav .show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-tooltip > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-toast-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-tab-pane > .nav-link, .u-app-header-theme-dark .navbar-nav .u-tab-pane > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-popover > .nav-link, .u-app-header-theme-dark .navbar-nav .u-popover > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-offcanvas-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-modal-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-modal-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-modal-backdrop-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-modal-backdrop-show > .u-tab-item-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .nav-link, .u-app-header-theme-dark .navbar-nav .u-el-show > .u-tab-item-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .u-tab-item-link-active > .nav-link,
 .navbar-dark .navbar-nav .active > .u-tab-item-link,
@@ -17159,10 +17159,10 @@ Navbar dark
 .navbar-dark .navbar-nav .u-popover.u-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.u-offcanvas-show,
 .navbar-dark .navbar-nav .u-offcanvas-show.u-tab-item-link,
-.navbar-dark .navbar-nav .nav-link.u-dialog-open,
-.navbar-dark .navbar-nav .u-dialog-open.u-tab-item-link,
-.navbar-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
-.navbar-dark .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+.navbar-dark .navbar-nav .nav-link.u-modal-show,
+.navbar-dark .navbar-nav .u-modal-show.u-tab-item-link,
+.navbar-dark .navbar-nav .nav-link.u-modal-backdrop-show,
+.navbar-dark .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.u-el-show,
 .navbar-dark .navbar-nav .u-el-show.u-tab-item-link,
 .u-app-header-theme-dark .navbar-nav .nav-link.show,
@@ -17177,10 +17177,10 @@ Navbar dark
 .u-app-header-theme-dark .navbar-nav .u-popover.u-tab-item-link,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-offcanvas-show,
 .u-app-header-theme-dark .navbar-nav .u-offcanvas-show.u-tab-item-link,
-.u-app-header-theme-dark .navbar-nav .nav-link.u-dialog-open,
-.u-app-header-theme-dark .navbar-nav .u-dialog-open.u-tab-item-link,
-.u-app-header-theme-dark .navbar-nav .nav-link.u-dialog-backdrop-open,
-.u-app-header-theme-dark .navbar-nav .u-dialog-backdrop-open.u-tab-item-link,
+.u-app-header-theme-dark .navbar-nav .nav-link.u-modal-show,
+.u-app-header-theme-dark .navbar-nav .u-modal-show.u-tab-item-link,
+.u-app-header-theme-dark .navbar-nav .nav-link.u-modal-backdrop-show,
+.u-app-header-theme-dark .navbar-nav .u-modal-backdrop-show.u-tab-item-link,
 .u-app-header-theme-dark .navbar-nav .nav-link.u-el-show,
 .u-app-header-theme-dark .navbar-nav .u-el-show.u-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.active,
@@ -18248,13 +18248,13 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .u-app-theme-dark .u-footer:not(.footer-transparent):not(.u-app-footer),
   .u-app-theme-dark .u-app-footer:not(.footer-transparent):not(.u-app-footer),
   .theme-dark .modal-content,
-  .theme-dark .u-dialog-content,
+  .theme-dark .u-modal-content,
   .u-app-theme-dark .modal-content,
-  .u-app-theme-dark .u-dialog-content,
+  .u-app-theme-dark .u-modal-content,
   .theme-dark .modal-header,
-  .theme-dark .u-dialog-header,
+  .theme-dark .u-modal-header,
   .u-app-theme-dark .modal-header,
-  .u-app-theme-dark .u-dialog-header,
+  .u-app-theme-dark .u-modal-header,
   .theme-dark .dropdown-menu,
   .theme-dark .u-autocomplete-dropdown,
   .theme-dark .u-menu,
@@ -18276,7 +18276,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     background-color: var(--u-bg-surface);
     color: inherit;
   }
-  .theme-dark .modal, .theme-dark .u-dialog, .u-app-theme-dark .modal, .u-app-theme-dark .u-dialog {
+  .theme-dark .modal, .theme-dark .u-modal, .u-app-theme-dark .modal, .u-app-theme-dark .u-modal {
     --u-modal-border-color: var(--u-border-color);
   }
   .theme-dark .bg-light, .theme-dark .u-stamp-bg-color-light > .icon, .theme-dark .u-stamp-bg-color-light > .u-icon, .theme-dark .u-ribbon-bg-color-light, .theme-dark .u-progress-bar-color-light, .theme-dark .u-card-status-color-light, .theme-dark .u-el-bg-color-light, .theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost), .u-app-theme-dark .bg-light, .u-app-theme-dark .u-stamp-bg-color-light > .icon, .u-app-theme-dark .u-stamp-bg-color-light > .u-icon, .u-app-theme-dark .u-ribbon-bg-color-light, .u-app-theme-dark .u-progress-bar-color-light, .u-app-theme-dark .u-card-status-color-light, .u-app-theme-dark .u-el-bg-color-light, .u-app-theme-dark .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost) {
@@ -18351,7 +18351,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
   .u-app-theme-dark .u-accordion-header-button {
     color: inherit;
   }
-  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-dialog-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-dialog-close, .theme-dark .u-alert-close, .u-app-theme-dark .u-alert-close,
+  .theme-dark .btn-close, .theme-dark .u-toast-close, .theme-dark .u-offcanvas-header-btn, .theme-dark .u-modal-close, .u-app-theme-dark .btn-close, .u-app-theme-dark .u-toast-close, .u-app-theme-dark .u-offcanvas-header-btn, .u-app-theme-dark .u-modal-close, .theme-dark .u-alert-close, .u-app-theme-dark .u-alert-close,
   .theme-dark .accordion-button:after,
   .u-app-theme-dark .accordion-button:after,
   .theme-dark .u-accordion-header-button:after,
@@ -18484,9 +18484,9 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .u-footer:not(.footer-transparent):not(.u-app-footer),
     .theme-dark-auto .u-app-footer:not(.footer-transparent):not(.u-app-footer),
     .theme-dark-auto .modal-content,
-    .theme-dark-auto .u-dialog-content,
+    .theme-dark-auto .u-modal-content,
     .theme-dark-auto .modal-header,
-    .theme-dark-auto .u-dialog-header,
+    .theme-dark-auto .u-modal-header,
     .theme-dark-auto .dropdown-menu,
     .theme-dark-auto .u-autocomplete-dropdown,
     .theme-dark-auto .u-menu,
@@ -18499,7 +18499,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
       background-color: var(--u-bg-surface);
       color: inherit;
     }
-    .theme-dark-auto .modal, .theme-dark-auto .u-dialog {
+    .theme-dark-auto .modal, .theme-dark-auto .u-modal {
       --u-modal-border-color: var(--u-border-color);
     }
     .theme-dark-auto .bg-light, .theme-dark-auto .u-stamp-bg-color-light > .icon, .theme-dark-auto .u-stamp-bg-color-light > .u-icon, .theme-dark-auto .u-ribbon-bg-color-light, .theme-dark-auto .u-progress-bar-color-light, .theme-dark-auto .u-card-status-color-light, .theme-dark-auto .u-el-bg-color-light, .theme-dark-auto .u-badge-color-light:not(.u-badge-outline):not(.u-badge-ghost) {
@@ -18555,7 +18555,7 @@ body:not(.theme-dark):not(.u-app-theme-dark) .hide-theme-light {
     .theme-dark-auto .u-accordion-header-button {
       color: inherit;
     }
-    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-dialog-close, .theme-dark-auto .u-alert-close,
+    .theme-dark-auto .btn-close, .theme-dark-auto .u-toast-close, .theme-dark-auto .u-offcanvas-header-btn, .theme-dark-auto .u-modal-close, .theme-dark-auto .u-alert-close,
     .theme-dark-auto .accordion-button:after,
     .theme-dark-auto .u-accordion-header-button:after {
       filter: invert(1) grayscale(100%) brightness(200%);
@@ -20895,11 +20895,11 @@ a.badge, a.u-badge {
   outline: none;
   box-shadow: none;
 }
-.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-pane, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-el-show {
+.btn-action:hover, .btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-pane, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-modal-show, .btn-action.u-modal-backdrop-show, .btn-action.u-el-show {
   color: var(--u-body-color);
   background: var(--u-active-bg);
 }
-.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-pane, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-dialog-open, .btn-action.u-dialog-backdrop-open, .btn-action.u-el-show {
+.btn-action.show, .btn-action.u-tooltip, .btn-action.u-toast-show, .btn-action.u-tab-pane, .btn-action.u-popover, .btn-action.u-offcanvas-show, .btn-action.u-modal-show, .btn-action.u-modal-backdrop-show, .btn-action.u-el-show {
   color: var(--u-primary);
 }
 .btn-action .icon, .btn-action .u-icon {
@@ -21694,10 +21694,10 @@ Card list group
   border-top-left-radius: 0;
 }
 
-.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-dialog-close, .u-alert-close {
+.btn-close, .u-toast-close, .u-offcanvas-header-btn, .u-modal-close, .u-alert-close {
   cursor: pointer;
 }
-.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-dialog-close:focus, .u-alert-close:focus {
+.btn-close:focus, .u-toast-close:focus, .u-offcanvas-header-btn:focus, .u-modal-close:focus, .u-alert-close:focus {
   outline: none;
 }
 
@@ -21711,7 +21711,7 @@ Card list group
   min-width: 25rem;
   display: none;
 }
-.dropdown-menu.card.show, .card.show.u-autocomplete-dropdown, .dropdown-menu.card.u-tooltip, .card.u-tooltip.u-autocomplete-dropdown, .dropdown-menu.card.u-toast-show, .card.u-toast-show.u-autocomplete-dropdown, .dropdown-menu.card.u-tab-pane, .card.u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.card.u-popover, .card.u-popover.u-autocomplete-dropdown, .dropdown-menu.card.u-offcanvas-show, .card.u-offcanvas-show.u-autocomplete-dropdown, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-tab-pane, .card.u-menu.u-popover, .card.u-menu.u-offcanvas-show, .dropdown-menu.card.u-dialog-open, .card.u-dialog-open.u-autocomplete-dropdown, .card.u-dialog-open.u-menu, .dropdown-menu.card.u-dialog-backdrop-open, .card.u-dialog-backdrop-open.u-autocomplete-dropdown, .card.u-dialog-backdrop-open.u-menu, .dropdown-menu.show.u-card, .show.u-card.u-autocomplete-dropdown, .dropdown-menu.u-card.u-tooltip, .u-card.u-tooltip.u-autocomplete-dropdown, .dropdown-menu.u-card.u-toast-show, .u-card.u-toast-show.u-autocomplete-dropdown, .dropdown-menu.u-card.u-tab-pane, .u-card.u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.u-card.u-popover, .u-card.u-popover.u-autocomplete-dropdown, .dropdown-menu.u-card.u-offcanvas-show, .u-card.u-offcanvas-show.u-autocomplete-dropdown, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-tab-pane, .u-card.u-menu.u-popover, .u-card.u-menu.u-offcanvas-show, .dropdown-menu.u-card.u-dialog-open, .u-card.u-dialog-open.u-autocomplete-dropdown, .u-card.u-dialog-open.u-menu, .dropdown-menu.u-card.u-dialog-backdrop-open, .u-card.u-dialog-backdrop-open.u-autocomplete-dropdown, .u-card.u-dialog-backdrop-open.u-menu, .dropdown-menu.card.u-el-show, .card.u-el-show.u-autocomplete-dropdown, .card.u-el-show.u-menu, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-autocomplete-dropdown, .u-el-show.u-card.u-menu {
+.dropdown-menu.card.show, .card.show.u-autocomplete-dropdown, .dropdown-menu.card.u-tooltip, .card.u-tooltip.u-autocomplete-dropdown, .dropdown-menu.card.u-toast-show, .card.u-toast-show.u-autocomplete-dropdown, .dropdown-menu.card.u-tab-pane, .card.u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.card.u-popover, .card.u-popover.u-autocomplete-dropdown, .dropdown-menu.card.u-offcanvas-show, .card.u-offcanvas-show.u-autocomplete-dropdown, .dropdown-menu.card.u-modal-show, .card.u-modal-show.u-autocomplete-dropdown, .dropdown-menu.card.u-modal-backdrop-show, .card.u-modal-backdrop-show.u-autocomplete-dropdown, .card.show.u-menu, .card.u-menu.u-tooltip, .card.u-menu.u-toast-show, .card.u-menu.u-tab-pane, .card.u-menu.u-popover, .card.u-menu.u-offcanvas-show, .card.u-menu.u-modal-show, .card.u-menu.u-modal-backdrop-show, .dropdown-menu.show.u-card, .show.u-card.u-autocomplete-dropdown, .dropdown-menu.u-card.u-tooltip, .u-card.u-tooltip.u-autocomplete-dropdown, .dropdown-menu.u-card.u-toast-show, .u-card.u-toast-show.u-autocomplete-dropdown, .dropdown-menu.u-card.u-tab-pane, .u-card.u-tab-pane.u-autocomplete-dropdown, .dropdown-menu.u-card.u-popover, .u-card.u-popover.u-autocomplete-dropdown, .dropdown-menu.u-card.u-offcanvas-show, .u-card.u-offcanvas-show.u-autocomplete-dropdown, .dropdown-menu.u-card.u-modal-show, .u-card.u-modal-show.u-autocomplete-dropdown, .dropdown-menu.u-card.u-modal-backdrop-show, .u-card.u-modal-backdrop-show.u-autocomplete-dropdown, .show.u-card.u-menu, .u-card.u-menu.u-tooltip, .u-card.u-menu.u-toast-show, .u-card.u-menu.u-tab-pane, .u-card.u-menu.u-popover, .u-card.u-menu.u-offcanvas-show, .u-card.u-menu.u-modal-show, .u-card.u-menu.u-modal-backdrop-show, .dropdown-menu.card.u-el-show, .card.u-el-show.u-autocomplete-dropdown, .card.u-el-show.u-menu, .dropdown-menu.u-el-show.u-card, .u-el-show.u-card.u-autocomplete-dropdown, .u-el-show.u-card.u-menu {
   display: flex;
 }
 
@@ -23086,8 +23086,8 @@ Legend
 .list-group-hoverable .list-group-item-actions.u-tab-pane,
 .list-group-hoverable .list-group-item-actions.u-popover,
 .list-group-hoverable .list-group-item-actions.u-offcanvas-show,
-.list-group-hoverable .list-group-item-actions.u-dialog-open,
-.list-group-hoverable .list-group-item-actions.u-dialog-backdrop-open,
+.list-group-hoverable .list-group-item-actions.u-modal-show,
+.list-group-hoverable .list-group-item-actions.u-modal-backdrop-show,
 .list-group-hoverable .list-group-item-actions.u-el-show {
   opacity: 1;
 }
@@ -23201,7 +23201,7 @@ Dimmer
   animation: animated-dots 1.2s steps(4, jump-none) infinite;
 }
 
-.modal-content .btn-close, .modal-content .u-toast-close, .modal-content .u-offcanvas-header-btn, .u-dialog-content .btn-close, .u-dialog-content .u-toast-close, .u-dialog-content .u-offcanvas-header-btn, .modal-content .u-dialog-close, .u-dialog-content .u-dialog-close, .modal-content .u-alert-close, .u-dialog-content .u-alert-close {
+.modal-content .btn-close, .modal-content .u-toast-close, .modal-content .u-offcanvas-header-btn, .u-modal-content .btn-close, .u-modal-content .u-toast-close, .u-modal-content .u-offcanvas-header-btn, .modal-content .u-modal-close, .u-modal-content .u-modal-close, .modal-content .u-alert-close, .u-modal-content .u-alert-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -23212,37 +23212,37 @@ Dimmer
   z-index: 10;
 }
 
-.modal-body, .u-dialog-body {
+.modal-body, .u-modal-body {
   scrollbar-color: rgba(var(--u-scrollbar-color, var(--u-body-color-rgb)), 0.16) transparent;
 }
-.modal-body::-webkit-scrollbar, .u-dialog-body::-webkit-scrollbar {
+.modal-body::-webkit-scrollbar, .u-modal-body::-webkit-scrollbar {
   width: 1rem;
   height: 1rem;
   transition: background 0.3s;
 }
 @media (prefers-reduced-motion: reduce) {
-  .modal-body::-webkit-scrollbar, .u-dialog-body::-webkit-scrollbar {
+  .modal-body::-webkit-scrollbar, .u-modal-body::-webkit-scrollbar {
     transition: none;
   }
 }
-.modal-body::-webkit-scrollbar-thumb, .u-dialog-body::-webkit-scrollbar-thumb {
+.modal-body::-webkit-scrollbar-thumb, .u-modal-body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   border: 5px solid transparent;
   box-shadow: inset 0 0 0 1rem rgba(var(--u-scrollbar-color, var(--u-body-color-rgb)), 0.16);
 }
-.modal-body::-webkit-scrollbar-track, .u-dialog-body::-webkit-scrollbar-track {
+.modal-body::-webkit-scrollbar-track, .u-modal-body::-webkit-scrollbar-track {
   background: transparent;
 }
-.modal-body:hover::-webkit-scrollbar-thumb, .u-dialog-body:hover::-webkit-scrollbar-thumb {
+.modal-body:hover::-webkit-scrollbar-thumb, .u-modal-body:hover::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 0 1rem rgba(var(--u-scrollbar-color, var(--u-body-color-rgb)), 0.32);
 }
-.modal-body::-webkit-scrollbar-corner, .u-dialog-body::-webkit-scrollbar-corner {
+.modal-body::-webkit-scrollbar-corner, .u-modal-body::-webkit-scrollbar-corner {
   background: transparent;
 }
-.modal-body .modal-title, .modal-body .u-dialog-title, .u-dialog-body .modal-title, .u-dialog-body .u-dialog-title {
+.modal-body .modal-title, .modal-body .u-modal-title, .u-modal-body .modal-title, .u-modal-body .u-modal-title {
   margin-bottom: 1rem;
 }
-.modal-body + .modal-body, .u-dialog-body + .modal-body, .modal-body + .u-dialog-body, .u-dialog-body + .u-dialog-body {
+.modal-body + .modal-body, .u-modal-body + .modal-body, .modal-body + .u-modal-body, .u-modal-body + .u-modal-body {
   border-top: var(--u-border-width) var(--u-border-style) var(--u-border-color);
 }
 
@@ -23256,20 +23256,20 @@ Dimmer
   border-radius: var(--u-border-radius-lg) var(--u-border-radius-lg) 0 0;
 }
 
-.modal-header, .u-dialog-header {
+.modal-header, .u-modal-header {
   align-items: center;
   min-height: 3.5rem;
   background: #ffffff;
   padding: 0 3.5rem 0 1.5rem;
 }
 
-.modal-title, .u-dialog-title {
+.modal-title, .u-modal-title {
   font-size: 1rem;
   font-weight: var(--u-font-weight-bold);
   line-height: 1.4285714286;
 }
 
-.modal-footer, .u-dialog-footer {
+.modal-footer, .u-modal-footer {
   padding-top: 0;
   padding-bottom: 0.75rem;
 }
@@ -23278,7 +23278,7 @@ Dimmer
   backdrop-filter: blur(4px);
 }
 
-.modal-full-width, .u-dialog-size-full .u-dialog-container {
+.modal-full-width, .u-modal-size-full .u-modal-container {
   max-width: none;
   margin: 0 0.5rem;
 }
@@ -23319,14 +23319,14 @@ Dimmer
 .nav-vertical .nav-item.u-offcanvas-show .u-tab-item-link,
 .nav-vertical .u-offcanvas-show.u-tab-item .nav-link,
 .nav-vertical .u-offcanvas-show.u-tab-item .u-tab-item-link,
-.nav-vertical .nav-item.u-dialog-open .nav-link,
-.nav-vertical .nav-item.u-dialog-open .u-tab-item-link,
-.nav-vertical .u-dialog-open.u-tab-item .nav-link,
-.nav-vertical .u-dialog-open.u-tab-item .u-tab-item-link,
-.nav-vertical .nav-item.u-dialog-backdrop-open .nav-link,
-.nav-vertical .nav-item.u-dialog-backdrop-open .u-tab-item-link,
-.nav-vertical .u-dialog-backdrop-open.u-tab-item .nav-link,
-.nav-vertical .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
+.nav-vertical .nav-item.u-modal-show .nav-link,
+.nav-vertical .nav-item.u-modal-show .u-tab-item-link,
+.nav-vertical .u-modal-show.u-tab-item .nav-link,
+.nav-vertical .u-modal-show.u-tab-item .u-tab-item-link,
+.nav-vertical .nav-item.u-modal-backdrop-show .nav-link,
+.nav-vertical .nav-item.u-modal-backdrop-show .u-tab-item-link,
+.nav-vertical .u-modal-backdrop-show.u-tab-item .nav-link,
+.nav-vertical .u-modal-backdrop-show.u-tab-item .u-tab-item-link,
 .nav-vertical .nav-item.u-el-show .nav-link,
 .nav-vertical .nav-item.u-el-show .u-tab-item-link,
 .nav-vertical .u-el-show.u-tab-item .nav-link,
@@ -23376,14 +23376,14 @@ Dimmer
 .nav-bordered .nav-item.u-offcanvas-show .u-tab-item-link,
 .nav-bordered .u-offcanvas-show.u-tab-item .nav-link,
 .nav-bordered .u-offcanvas-show.u-tab-item .u-tab-item-link,
-.nav-bordered .nav-item.u-dialog-open .nav-link,
-.nav-bordered .nav-item.u-dialog-open .u-tab-item-link,
-.nav-bordered .u-dialog-open.u-tab-item .nav-link,
-.nav-bordered .u-dialog-open.u-tab-item .u-tab-item-link,
-.nav-bordered .nav-item.u-dialog-backdrop-open .nav-link,
-.nav-bordered .nav-item.u-dialog-backdrop-open .u-tab-item-link,
-.nav-bordered .u-dialog-backdrop-open.u-tab-item .nav-link,
-.nav-bordered .u-dialog-backdrop-open.u-tab-item .u-tab-item-link,
+.nav-bordered .nav-item.u-modal-show .nav-link,
+.nav-bordered .nav-item.u-modal-show .u-tab-item-link,
+.nav-bordered .u-modal-show.u-tab-item .nav-link,
+.nav-bordered .u-modal-show.u-tab-item .u-tab-item-link,
+.nav-bordered .nav-item.u-modal-backdrop-show .nav-link,
+.nav-bordered .nav-item.u-modal-backdrop-show .u-tab-item-link,
+.nav-bordered .u-modal-backdrop-show.u-tab-item .nav-link,
+.nav-bordered .u-modal-backdrop-show.u-tab-item .u-tab-item-link,
 .nav-bordered .nav-item.u-el-show .nav-link,
 .nav-bordered .nav-item.u-el-show .u-tab-item-link,
 .nav-bordered .u-el-show.u-tab-item .nav-link,
@@ -27047,18 +27047,6 @@ Antialiasing
   column-gap: 0.75em;
 }
 
-.u-dialog-backdrop {
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-}
-.u-dialog-open {
-  display: block;
-}
-.u-body-dialog-open {
-  overflow: hidden;
-}
-
 .u-icon-size-xs {
   width: 0.75rem !important;
   height: 0.75rem !important;
@@ -27117,6 +27105,19 @@ Antialiasing
 }
 .u-icon * {
   stroke-width: 1.5px;
+}
+
+.u-modal-backdrop {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.u-modal-show {
+  display: block;
+}
+.u-body-modal-show {
+  overflow: hidden;
+  padding-right: 16px;
 }
 
 .u-offcanvas-backdrop {
