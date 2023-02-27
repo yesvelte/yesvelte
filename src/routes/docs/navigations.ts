@@ -104,6 +104,20 @@ export const navigations: Navigation[] = [
 					'Breadcrumbs are used to show the current website or app location and reduce the number of actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website hierarchy and better understand its structure.',
 			},
 			{
+				route: base_path + '/button',
+				title: 'Button',
+				icon: 'mdi:button-cursor',
+				description:
+					"Use Button component that best suit your designs and encourage users to take the desired actions. You can customize the Button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.",
+			},
+			{
+				route: base_path + '/button-group',
+				title: 'ButtonGroup',
+				icon: 'material-symbols:smart-button',
+				description:
+					'Group a series of buttons together on a single line or stack them in a vertical column.',
+			},
+			{
 				route: base_path + '/card',
 				title: 'Card',
 				icon: 'mdi:card-outline',
@@ -123,6 +137,11 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:checkbox-multiple-outline',
 				description:
 					'CheckboxGroup is a wrapper for Checkbox component, it can be used to group multiple checkboxes in one component.',
+			},
+			{
+				route: base_path + '/date-picker',
+				title: 'Datepicker',
+				icon: 'material-symbols:date-range-outline',
 			},
 			{
 				route: base_path + '/divider',
@@ -188,6 +207,12 @@ export const navigations: Navigation[] = [
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
 			{
+				route: base_path + '/progress',
+				title: 'Progress',
+				icon: 'vaadin:progressbar',
+				description: 'Progress component is used to show the progress of a task.',
+			},
+			{
 				route: base_path + '/radio',
 				title: 'Radio',
 				icon: 'mdi:radiobox-marked',
@@ -221,6 +246,19 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
 			},
+
+			{
+				route: base_path + '/spinner',
+				title: 'Spinner',
+				icon: 'ei:spinner-3',
+				description: 'Spinners are used to show the loading state of a component.',
+			},
+			{
+				route: base_path + '/status',
+				title: 'Status',
+				icon: 'bi:dot',
+				description: 'Status component is used to show the status of a component.',
+			},
 			{
 				route: base_path + '/switch',
 				title: 'Switch',
@@ -234,6 +272,62 @@ export const navigations: Navigation[] = [
 				icon: 'material-symbols:tab-outline',
 				description:
 					'Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.',
+			},
+			{
+				route: base_path + '/textarea',
+				title: 'Textarea',
+				icon: 'mdi:form-textarea',
+			},
+		],
+	},
+	{
+		title: 'Form Components',
+		id: 'menu-forms',
+		children: [
+			{
+				route: base_path + '/form/form-checkbox',
+				title: 'FormCheckbox',
+				icon: 'mdi:checkbox-outline',
+			},
+			{
+				route: base_path + '/form/form-checkbox-group',
+				title: 'FormCheckboxGroup',
+				icon: 'mdi:checkbox-multiple-outline',
+			},
+			{
+				route: base_path + '/form/form-datepicker',
+				title: 'FormDatePicker',
+				icon: 'material-symbols:date-range-outline',
+			},
+			{
+				route: base_path + '/form/form-fieldset',
+				title: 'FormFieldset',
+				icon: 'fluent-mdl2:field-empty',
+			},
+			{
+				route: base_path + '/form/form-input',
+				title: 'FormInput',
+				icon: 'iconoir:input-field',
+			},
+			{
+				route: base_path + '/form/form-radio-group',
+				title: 'FormRadioGroup',
+				icon: 'bi:ui-radios',
+			},
+			{
+				route: base_path + '/form/form-select',
+				title: 'FormSelect',
+				icon: 'vaadin:select',
+			},
+			{
+				route: base_path + '/form/form-switch',
+				title: 'FormSwitch',
+				icon: 'mdi:toggle-switch-outline',
+			},
+			{
+				route: base_path + '/form/form-textarea',
+				title: 'FormTextarea',
+				icon: 'mdi:form-textarea',
 			},
 		],
 	},

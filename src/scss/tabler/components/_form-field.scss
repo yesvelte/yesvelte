@@ -48,6 +48,10 @@ $props-form-field: (
 	@extend .#{$prefix-form-field};
 }
 
+.#{$prefix-form-select} {
+	@extend .#{$prefix-form-field};
+}
+
 .#{$prefix-form-textarea} {
 	@extend .#{$prefix-form-field};
 }

@@ -342,4 +342,5 @@ export interface ElProps extends CssProps {
 	title?: string
 	tabindex?: string | number
 	role?: string
+	'aria-label'?: string
 }

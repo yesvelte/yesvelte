@@ -11,20 +11,12 @@
 	export let hint: $$Props['hint'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let state: $$Props['state'] = undefined
-
-	let props: $$Props = { componentName }
-	let labelCssProps: LabelProps = { required }
-
-	$: {
-		props = { componentName }
-		labelCssProps = { required }
-	}
 </script>
 
-<El {...$$restProps} {...props}>
+<El {...$$restProps} {componentName}>
 	<slot name="label">
 		{#if label}
-			<Label cssProps={labelCssProps}>{label}</Label>
+			<Label {required}>{label}</Label>
 		{/if}
 	</slot>
 	<slot />

@@ -31,8 +31,13 @@ function compile(file) {
 for (const file of files) {
 	const css = compile(file)
 	// checking if the folder doesn't exist yet and creating it
-	if (!fs.existsSync('./src/styles')) {
-		fs.mkdirSync('./src/styles', { recursive: true })
+	if (!fs.existsSync('./static/css')) {
+		fs.mkdirSync('./static/css', { recursive: true })
 	}
-	fs.writeFileSync(`./src/styles/${file}.css`, css, {})
+	fs.writeFileSync(`./static/css/${file}.css`, css, {})
+
+	if (!fs.existsSync('./src/css')) {
+		fs.mkdirSync('./src/css', { recursive: true })
+	}
+	fs.writeFileSync(`./src/css/${file}.css`, css, {})
 }

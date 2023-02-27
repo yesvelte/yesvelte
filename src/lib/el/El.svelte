@@ -21,6 +21,7 @@
 	export let title: $$Props['title'] = undefined
 	export let tabindex: $$Props['tabindex'] = undefined
 	export let role: $$Props['role'] = undefined
+	export let ariaLabel: $$Props['aria-label'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 	let classes: string | undefined
@@ -342,6 +343,7 @@
 			title,
 			tabindex,
 			role,
+			ariaLabel,
 		}
 	}
 </script>
