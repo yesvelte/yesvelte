@@ -1,8 +1,12 @@
 <script>
 	import { El, Button, Modal, ModalBody, ModalFooter, Icon } from 'yesvelte'
+
+	let show = false
 </script>
 
-<Modal size="sm" absolute open dismissible>
+<Button on:click={() => (show = !show)} color="primary">Open Alert</Button>
+
+<Modal bind:show dismissible size="sm">
 	<ModalBody>
 		<div class="centered">
 			<Icon size="3x" color="danger" name="alert-triangle" />
@@ -11,7 +15,7 @@
 		</div>
 	</ModalBody>
 	<ModalFooter row>
-		<Button col>Cancel</Button>
+		<Button col on:click={() => (show = false)}>Cancel</Button>
 		<Button col color="danger">Delete 84 Items</Button>
 	</ModalFooter>
 </Modal>

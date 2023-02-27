@@ -9,10 +9,10 @@ $modal-props: (
 			'.modal-backdrop',
 			'.fade'
 		),
-		open: '.show',
+		show: '.show',
 		absolute: '.position-absolute'
 	),
-	open: '.show',
+	show: '.show',
 	absolute: '.position-absolute',
 	close: '.btn-close',
 	body: '.modal-body',
@@ -39,7 +39,7 @@ $modal-props: (
 		height: 100%;
 	}
 
-	&-open {
+	&-show {
 		display: block;
 	}
 
@@ -56,7 +56,7 @@ $modal-props: (
 	}
 }
 
-.#{$prefix}body-modal-open {
+.#{$prefix}body-modal-show {
 	overflow: hidden;
 	padding-right: 16px;
 }

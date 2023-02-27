@@ -1,8 +1,7 @@
 <script lang="ts">
-	import type { ModalFooterProps } from './Modal.types'
-	import { El } from '../el'
+	import { El, type ElProps } from '../el'
 
-	type $$Props = ModalFooterProps
+	type $$Props = ElProps
 
 	export let componentName: $$Props['componentName'] = 'modal-footer'
 </script>

@@ -1,12 +1,12 @@
 <script>
 	import { Button, Modal, ModalBody, ModalFooter } from 'yesvelte'
 
-	let open = false
+	let show = false
 </script>
 
-<Button on:click={() => (open = true)} color="primary">Open Scrollable Modal</Button>
+<Button on:click={() => (show = !show)} color="primary">Open Scrollable Modal</Button>
 
-<Modal scrollable title="Modal title" dismissible bind:open>
+<Modal scrollable title="Modal title" dismissible bind:show>
 	<ModalBody>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi beatae delectus
 		deleniti dolorem eveniet facere fuga iste nemo nesciunt nihil odio perspiciatis, quia quis

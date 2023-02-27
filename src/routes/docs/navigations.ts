@@ -143,13 +143,6 @@ export const navigations: Navigation[] = [
 				title: 'Datepicker',
 				icon: 'material-symbols:date-range-outline',
 			},
-			{
-				route: base_path + '/modal',
-				title: 'Modal',
-				icon: 'vaadin:modal',
-				description:
-					'The Modal component is a basic way to present content above an enclosing view.',
-			},
 
 			{
 				route: base_path + '/divider',
@@ -206,6 +199,13 @@ export const navigations: Navigation[] = [
 				icon: 'pepicons:label',
 				description:
 					'Label component is used to set a name or some identifier for Form Elements. More details about this component is described in this page.',
+			},
+			{
+				route: base_path + '/modal',
+				title: 'Modal',
+				icon: 'vaadin:modal',
+				description:
+					'The Modal component is a basic way to present content above an enclosing view.',
 			},
 			{
 				route: base_path + '/offcanvas',

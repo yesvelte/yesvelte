@@ -1,71 +1,35 @@
 <script lang="ts">
 	import { classname } from '../internal'
-
+	import { createEventDispatcher } from 'svelte'
 	import type { ModalProps } from './Modal.types'
 	import { El } from '../el'
-	import ModalClose from './ModalClose.svelte'
+	import { Button } from '../button'
 	import ModalTitle from './ModalTitle.svelte'
 	import ModalHeader from './ModalHeader.svelte'
 
+	const dispatch = createEventDispatcher()
+
 	type $$Props = ModalProps
 
-	/**
-	 * Make page's color Dimmer
-	 */
 	export let backdrop: $$Props['backdrop'] = true
-
-	/**
-	 * TODO
-	 */
 	export let componentName: $$Props['componentName'] = 'modal'
-
-	/**
-	 * set position relative to it's parent (instead of entire screen)
-	 */
 	export let absolute: $$Props['absolute'] = undefined
-
-	/**
-	 * Show close button inside modal
-	 */
 	export let dismissible: $$Props['dismissible'] = undefined
-
-	/**
-	 * Controls open/close state of Modal
-	 */
-	export let open: $$Props['open'] = undefined
-
-	/**
-	 * Do not close modal if user clicked outside of Modal Component
-	 */
+	export let show: $$Props['show'] = undefined
 	export let persistent: $$Props['persistent'] = undefined
-
-	/**
-	 * Set position of Modal
-	 */
 	export let placement: $$Props['placement'] = 'top'
-
-	/**
-	 * Makes modal's body scrollable
-	 */
 	export let scrollable: $$Props['scrollable'] = undefined
-
-	/**
-	 * Changes width of Modal
-	 */
 	export let size: $$Props['size'] = 'md'
-
-	/**
-	 * Changes width of Modal
-	 */
 	export let title: $$Props['title'] = undefined
 
-	function hide(force = false) {
+	export const close = (force = false) => {
 		if (!force && persistent) return
-		open = false
+		show = false
+		dispatch('close')
 	}
 
 	$: if (typeof window !== 'undefined' && !absolute) {
-		if (open) {
+		if (show) {
 			document.body.classList.add(classname('body-modal-open') ?? '')
 		} else {
 			if (document.body.classList.contains(classname('body-modal-open') ?? '')) {
@@ -74,21 +38,21 @@
 		}
 	}
 
-	function onClickContent(e: any) {
+	const onClickContent = (e: any) => {
 		e.stopPropagation()
 	}
 
-	let cssProps: any
+	let cssProps: $$Props = {}
 	$: cssProps = {
 		placement,
 		scrollable,
 		size,
-		open,
+		show,
 		absolute,
 	}
 </script>
 
-<El {...$$restProps} {componentName} {cssProps} on:click={() => hide()}>
+<El {...$$restProps} {componentName} {cssProps} on:click={() => close()} tabindex="0" role="dialog">
 	<El componentName="{componentName}-container">
 		<El componentName="{componentName}-content" on:click={onClickContent}>
 			{#if title}
@@ -99,13 +63,16 @@
 			<slot />
 			<slot name="close">
 				{#if dismissible}
-					<ModalClose on:close={() => hide(true)} />
+					<Button
+						aria-label="X"
+						type="button"
+						componentName="{componentName}-close"
+						on:click={() => close()} />
 				{/if}
 			</slot>
 		</El>
 	</El>
 </El>
-
 {#if backdrop}
-	<El componentName="{componentName}-backdrop" cssProps={{ open, absolute }} />
+	<El componentName="{componentName}-backdrop" cssProps={{ show, absolute }} />
 {/if}
