@@ -7,6 +7,7 @@ export interface TabsProps extends Partial<ElProps> {
 export interface TabItemProps extends Partial<ElProps> {
 	active?: boolean
 	disabled?: boolean
+	icon?: boolean
 }
 
 export interface TabListProps extends Partial<ElProps> {
