@@ -108,7 +108,14 @@ export const navigations: Navigation[] = [
 				title: 'Button',
 				icon: 'mdi:button-cursor',
 				description:
-					'Buttons are the most important UI Element in each page, @ubeac/svelte buttons are beautiful and fully customizable. Cards contain various smaller components, such as images, text, links and buttons and may act as an entry to more detailed information, helping users scan the page quickly and find the most relevant content.',
+					"Use Button component that best suit your designs and encourage users to take the desired actions. You can customize the Button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.",
+			},
+			{
+				route: base_path + '/button-group',
+				title: 'ButtonGroup',
+				icon: 'material-symbols:smart-button',
+				description:
+					'Group a series of buttons together on a single line or stack them in a vertical column.',
 			},
 			{
 				route: base_path + '/card',

@@ -29,7 +29,7 @@ YeSvelte components have default styles which is based on tabler. which you can 
 ```svelte
 <script>
 	import { Button } from 'yesvelte'
-	import 'yesvelte/tabler.css'
+	import 'yesvelte/css/tabler.css'
 </script>
 
 <Button>Hello World!</Button>
@@ -42,3 +42,7 @@ Check out the [documentation website](https://www.yesvelte.com/) for live demos 
 ## Playground in REPL
 
 Check this [REPL](https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1) to play with components!
+
+## Questions, Feedback, and Suggestions
+
+Looking for a place to chat about YeSvelte and connect with other developers? Check out our [Reddit community](https://www.reddit.com/r/yesvelte/)! We welcome your questions, feedback, and suggestions.
