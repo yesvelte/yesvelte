@@ -172,13 +172,6 @@ export const navigations: Navigation[] = [
 				description: 'FileUpload component is used for collecting files from local device of user.',
 			},
 			{
-				route: base_path + '/form/form-input',
-				title: 'FormInput',
-				icon: 'iconoir:input-field',
-				description:
-					'FormInput is an input and label wrapper component to be used insisde forms. It supports all props and events of Input and also have some additional features.',
-			},
-			{
 				route: base_path + '/icon',
 				title: 'Icon',
 				icon: 'tabler:star',
