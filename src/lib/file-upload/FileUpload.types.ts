@@ -1,21 +1,17 @@
 import type { ElProps } from '../el'
-
-export const FILE_UPLOAD_SIZES = ['sm', 'md', 'lg'] as const
-export type FileUploadSizes = (typeof FILE_UPLOAD_SIZES)[number]
-
-export const FILE_UPLOAD_STATES = ['valid', 'invalid'] as const
-export type FileUploadStates = (typeof FILE_UPLOAD_STATES)[number]
+import type { InputSizes, InputStates } from '../input'
 
 export interface FileUploadWrapperProps extends Partial<ElProps> {
-	size?: FileUploadSizes
+	size?: InputSizes
 }
 
 export interface FileUploadProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
-	size?: FileUploadSizes
+	size?: InputSizes
 	files?: FileList
-	state?: FileUploadStates
-	accept?: string[]
+	state?: InputStates
+	accept?: string
 	multiple?: boolean
+	type?: 'file'
 }

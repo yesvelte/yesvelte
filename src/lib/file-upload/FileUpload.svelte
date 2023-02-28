@@ -15,8 +15,8 @@
 
 	let element: HTMLInputElement
 
-	let props: any = { componentName, placeholder, disabled }
-	let cssProps: any = { state }
+	let props: $$Props = { componentName, placeholder, disabled }
+	let cssProps: $$Props = { state }
 	let wrapperCssProps: FileUploadWrapperProps = { size }
 
 	const onChange = (e: any) => {
@@ -33,7 +33,7 @@
 			componentName,
 			placeholder,
 			disabled,
-			accept: accept?.join(','),
+			accept,
 			multiple,
 			tag: 'input',
 			type: 'file',
