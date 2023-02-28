@@ -166,6 +166,12 @@ export const navigations: Navigation[] = [
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
 			{
+				route: base_path + '/file-upload',
+				title: 'FileUpload',
+				icon: 'material-symbols:upload-file',
+				description: 'FileUpload component is used for collecting files from local device of user.',
+			},
+			{
 				route: base_path + '/form/form-input',
 				title: 'FormInput',
 				icon: 'iconoir:input-field',
@@ -311,6 +317,11 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-fieldset',
 				title: 'FormFieldset',
 				icon: 'fluent-mdl2:field-empty',
+			},
+			{
+				route: base_path + '/form/form-file-upload',
+				title: 'FormFileUpload',
+				icon: 'material-symbols:upload-file',
 			},
 			{
 				route: base_path + '/form/form-input',
