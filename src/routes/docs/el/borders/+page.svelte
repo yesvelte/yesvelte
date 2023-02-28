@@ -82,7 +82,7 @@
 		gap: 0.5rem;
 		min-width: 100%;
 	}
-	.custom-class > :global(.u-el) {
+	.custom-class > :global(.y-el) {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -92,7 +92,7 @@
 		margin: 0.25rem;
 		background-color: #f8f9fa;
 	}
-	.radius-sample > :global(.u-el:last-child) {
+	.radius-sample > :global(.y-el:last-child) {
 		width: 7rem !important;
 	}
 </style>

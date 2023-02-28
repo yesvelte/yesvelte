@@ -58,7 +58,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-progress) {
+	.custom-class > :global(.y-progress) {
 		margin: 0.25rem 0;
 	}
 </style>

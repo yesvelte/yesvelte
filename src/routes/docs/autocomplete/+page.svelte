@@ -70,7 +70,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-autocomplete) {
+	.custom-class > :global(.y-autocomplete) {
 		margin: 0.25rem 0;
 	}
 </style>
