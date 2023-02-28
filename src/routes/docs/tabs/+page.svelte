@@ -27,16 +27,18 @@
 			<TabsDefault />
 		</Preview>
 	</Doc>
-	<Doc
-		title="Grow"
-		description="To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.">
+	<Doc title="Grow">
+		<p slot="description">
+			To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.
+		</p>
 		<Preview src="./TabsGrow.svelte">
 			<TabsGrow />
 		</Preview>
 	</Doc>
-	<Doc
-		title="Vertical"
-		description="To make the tabs vertical, you can use the <code>vertical</code> prop.">
+	<Doc title="Vertical">
+		<p slot="description">
+			To make the tabs vertical, you can use the <code>vertical</code> prop.
+		</p>
 		<Preview src="./TabsVertical.svelte">
 			<TabsVertical />
 		</Preview>
