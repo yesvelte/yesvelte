@@ -1,7 +1,14 @@
+<script context="module">
+	import { appendCustomStyle } from 'iconify-icon'
+
+	appendCustomStyle(`svg [stroke-width="2"] { stroke-width: 1.5; }`)
+</script>
+
 <script lang="ts">
 	import 'iconify-icon'
 	import { classname } from '../internal'
 	import type { IconProps } from './Icon.types'
+	import { onMount } from 'svelte'
 
 	type $$Props = IconProps
 
@@ -21,6 +28,14 @@
 		},
 		$$props.class
 	)
+
+	let loaded = false
+
+	onMount(() => {
+		loaded = true
+	})
 </script>
 
-<iconify-icon icon="{pack}:{name}" {...$$restProps} class={classes} width="100%" height="100%" />
+{#if loaded}
+	<iconify-icon icon="{pack}:{name}" {...$$restProps} class={classes} width="100%" height="100%" />
+{/if}
