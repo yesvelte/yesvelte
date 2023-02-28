@@ -35,14 +35,6 @@
 			<TabsGrow />
 		</Preview>
 	</Doc>
-	<Doc title="Vertical">
-		<p slot="description">
-			To make the tabs vertical, you can use the <code>vertical</code> prop.
-		</p>
-		<Preview src="./TabsVertical.svelte">
-			<TabsVertical />
-		</Preview>
-	</Doc>
 	<Doc title="Icons">
 		<p slot="description">
 			To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
