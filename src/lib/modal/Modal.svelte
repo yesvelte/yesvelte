@@ -30,10 +30,10 @@
 
 	$: if (typeof window !== 'undefined' && !absolute) {
 		if (show) {
-			document.body.classList.add(classname('body-modal-open') ?? '')
+			document.body.classList.add(classname('body-modal-show') ?? '')
 		} else {
-			if (document.body.classList.contains(classname('body-modal-open') ?? '')) {
-				document.body.classList.remove(classname('body-modal-open') ?? '')
+			if (document.body.classList.contains(classname('body-modal-show') ?? '')) {
+				document.body.classList.remove(classname('body-modal-show') ?? '')
 			}
 		}
 	}
