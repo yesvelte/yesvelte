@@ -93,7 +93,7 @@
 		<div class="home-el-col-12 home-el-mt-3 home-el-px-1">
 			<div
 				class="home-el-col-12 text-terminal home-el-border home-el-d-flex home-el-justify-content-between home-el-gap-3 home-el-shadow-lg home-el-text-color-light home-el-p-3 home-el-mb-5 home-el-border-round-size-3 home-el-bg-color-github">
-				<div>npm install yesvelte</div>
+				<div>npm install yesvelte@next</div>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="home-el-d-flex clipboard-icon" on:click={copy}>
 					{#if icon === 'copy'}
