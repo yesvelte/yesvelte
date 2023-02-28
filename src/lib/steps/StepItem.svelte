@@ -9,7 +9,7 @@
 	export let active: $$Props['active'] = undefined
 
 	let cssProps: object = {}
-	let props: StepItemProps = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {
 			active,
