@@ -166,7 +166,7 @@ export const navigations: Navigation[] = [
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
 			{
-				route: base_path + '/form/file-upload',
+				route: base_path + '/file-upload',
 				title: 'FileUpload',
 				icon: 'material-symbols:upload-file',
 				description: 'FileUpload component is used for collecting files from local device of user.',
