@@ -36,7 +36,7 @@ $props-form-field: (
 	@extend .#{$prefix-form-field};
 }
 
-.#{$prefix-form-file-uploader} {
+.#{$prefix-form-file-upload} {
 	@extend .#{$prefix-form-field};
 }
 
@@ -45,6 +45,10 @@ $props-form-field: (
 }
 
 .#{$prefix-form-switch} {
+	@extend .#{$prefix-form-field};
+}
+
+.#{$prefix-form-select} {
 	@extend .#{$prefix-form-field};
 }
 

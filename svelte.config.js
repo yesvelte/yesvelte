@@ -8,10 +8,10 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [previewProcessor(), vitePreprocess()],
 	kit: {
-		adapter: adapter({
-			fallback: 'index.html',
-			strict: false,
-		}),
+		adapter: adapter({}),
+		prerender: {
+			handleMissingId: 'warn',
+		},
 		alias: {
 			// this will match a file
 			$components: './src/components',

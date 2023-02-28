@@ -2,14 +2,14 @@
 	import { Card, CardBody, El, Icon } from 'yesvelte'
 	import ToC from './ToC.svelte'
 	import { navigations } from '../routes/docs/navigations'
-
+	import { page } from '$app/stores'
 	export let title: string = ''
 	export let description: string = ''
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
+	<title>{$page.data.metaData.title ?? title}</title>
+	<meta name="description" content={$page.data.metaData.description ?? description} />
 </svelte:head>
 
 <El container="lg">

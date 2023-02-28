@@ -1,0 +1,80 @@
+<script lang="ts">
+	import { Page, Doc, Preview } from '$components'
+
+	import DatepickerCustom from './DatepickerCustom.svelte'
+	import DatepickerDefault from './DatepickerDefault.svelte'
+	import DatepickerDisabled from './DatepickerDisabled.svelte'
+	import DatepickerEvents from './DatepickerEvents.svelte'
+	import DatepickerFlush from './DatepickerFlush.svelte'
+	import DatepickerFormat from './DatepickerFormat.svelte'
+	import DatepickerRounded from './DatepickerRounded.svelte'
+	import DatepickerSizes from './DatepickerSizes.svelte'
+	import DatepickerValue from './DatepickerValue.svelte'
+</script>
+
+<Page
+	title="DatePicker"
+	description="DatePicker is a fully featured date selection component that lets users select a date.">
+	<Doc title="Default">
+		<Preview src="./DatepickerDefault.svelte">
+			<DatepickerDefault />
+		</Preview>
+	</Doc>
+
+	<Doc title="Date format">
+		<p slot="description">
+			You can change display format of the date using <code>format</code> prop. The format is based
+			on <a href="https://momentjs.com/docs/#/displaying/format/">Format</a> of Moment.js.
+		</p>
+		<Preview src="./DatepickerFormat.svelte">
+			<DatepickerFormat />
+		</Preview>
+	</Doc>
+
+	<Doc title="Initial Value">
+		<Preview src="./DatepickerValue.svelte">
+			<DatepickerValue />
+		</Preview>
+	</Doc>
+
+	<Doc title="Border rounded">
+		<Preview src="./DatepickerRounded.svelte">
+			<DatepickerRounded />
+		</Preview>
+	</Doc>
+
+	<Doc title="No border">
+		<Preview src="./DatepickerFlush.svelte">
+			<DatepickerFlush />
+		</Preview>
+	</Doc>
+
+	<Doc title="Size">
+		<Preview src="./DatepickerSizes.svelte">
+			<DatepickerSizes />
+		</Preview>
+	</Doc>
+
+	<Doc title="Disabled">
+		<Preview src="./DatepickerDisabled.svelte">
+			<DatepickerDisabled />
+		</Preview>
+	</Doc>
+
+	<Doc title="Options">
+		<p slot="description">
+			DatePicker component internally uses <a href="https://litepicker.com/docs/options"
+				>LitePicker</a
+			>. which you can pass options to Litepicker instance using <code>options</code> prop.
+		</p>
+		<Preview src="./DatepickerCustom.svelte">
+			<DatepickerCustom />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./DatepickerEvents.svelte">
+			<DatepickerEvents />
+		</Preview>
+	</Doc>
+</Page>
