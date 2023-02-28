@@ -1,6 +1,6 @@
 import { paramCase } from 'param-case'
 
-const prefix = 'u'
+const prefix = 'y'
 
 export const classname = (componentName?: string, cssObject?: object, staticClassName?: string) => {
 	if (!componentName) return undefined
