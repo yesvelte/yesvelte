@@ -13,7 +13,6 @@ export interface FileUploadWrapperProps extends Partial<ElProps> {
 export interface FileUploadProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
-	readonly?: boolean
 	size?: FileUploadSizes
 	files?: FileList
 	state?: FileUploadStates

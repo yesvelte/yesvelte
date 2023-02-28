@@ -7,7 +7,6 @@
 	export let componentName: $$Props['componentName'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
 	export let accept: $$Props['accept'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
 	export let size: $$Props['size'] = undefined
@@ -16,7 +15,7 @@
 
 	let element: HTMLInputElement
 
-	let props: any = { componentName, placeholder, disabled, readonly }
+	let props: any = { componentName, placeholder, disabled }
 	let cssProps: any = { state }
 	let wrapperCssProps: FileUploadWrapperProps = { size }
 
@@ -34,7 +33,6 @@
 			componentName,
 			placeholder,
 			disabled,
-			readonly,
 			accept: accept?.join(','),
 			multiple,
 			tag: 'input',
