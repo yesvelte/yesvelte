@@ -260,7 +260,13 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
 			},
-
+			{
+				route: base_path + '/steps',
+				title: 'Steps',
+				icon: 'material-symbols:check-circle',
+				description:
+					'Steps component guides users through the steps of a task. It is a kind of navigation bar.',
+			},
 			{
 				route: base_path + '/spinner',
 				title: 'Spinner',

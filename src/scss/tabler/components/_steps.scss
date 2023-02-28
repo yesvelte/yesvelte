@@ -1,0 +1,19 @@
+$steps-props: (
+	null: '.steps',
+	color: generate_props($colors, '.steps-'),
+	counter: '.steps-counter',
+	vertical: '.steps-vertical'
+);
+
+$step-item-props: (
+	null: '.step-item',
+	active: '.active'
+);
+
+.#{$prefix-steps} {
+	@include apply-props($steps-props);
+}
+
+.#{$prefix-step-item} {
+	@include apply-props($step-item-props);
+}
