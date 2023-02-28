@@ -83,6 +83,13 @@ export const navigations: Navigation[] = [
 					'Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.',
 			},
 			{
+				route: base_path + '/autocomplete',
+				title: 'Autocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'Autocomplete is a component that allows you to search and select a value from a list of options. It is a combination of a text input and a dropdown menu.',
+			},
+			{
 				route: base_path + '/avatar',
 				title: 'Avatar',
 				icon: 'mdi:account-circle-outline',
@@ -297,6 +304,13 @@ export const navigations: Navigation[] = [
 		title: 'Form Components',
 		id: 'menu-forms',
 		children: [
+			{
+				route: base_path + '/form/form-autocomplete',
+				title: 'Form Autocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'FormAutocomplete supports all props and events of Autocomplete and also have some additional features.',
+			},
 			{
 				route: base_path + '/form/form-checkbox',
 				title: 'FormCheckbox',
