@@ -319,6 +319,11 @@ export const navigations: Navigation[] = [
 				icon: 'fluent-mdl2:field-empty',
 			},
 			{
+				route: base_path + '/form/form-file-upload',
+				title: 'FormFileUpload',
+				icon: 'material-symbols:upload-file',
+			},
+			{
 				route: base_path + '/form/form-input',
 				title: 'FormInput',
 				icon: 'iconoir:input-field',
