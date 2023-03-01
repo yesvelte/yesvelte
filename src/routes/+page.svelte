@@ -123,7 +123,7 @@
 		top: 0;
 		height: 72px;
 		display: flex;
-		padding: 0.5rem 2rem;
+		padding: 0.5rem 1rem;
 		justify-content: space-between;
 		align-items: center;
 		z-index: 1;
@@ -155,7 +155,7 @@
 	.header .header-buttons {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
 	.header .header-buttons > .button {
 		padding: 8px;
@@ -350,10 +350,6 @@
 			gap: 5%;
 		}
 
-		.header {
-			padding: 0.5rem 2rem;
-		}
-
 		.left-container {
 			/* width: ; */
 			justify-content: center;
@@ -397,6 +393,13 @@
 			/* flex: 1; */
 		}
 
+		.header {
+			padding: 0.5rem 2rem;
+		}
+
+		.header .header-buttons {
+			gap: 1rem;
+		}
 		.button.button-source .text {
 			display: block;
 		}
