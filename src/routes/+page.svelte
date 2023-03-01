@@ -1,5 +1,6 @@
 <script>
 	let icon = 'copy'
+	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte')
@@ -23,79 +24,73 @@
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
 
-<div
-	class="home-el-text-align-center home-el-bg-color-secondary home-el-bg-gradient home-el-bg-opacity-10 home-el-d-flex el-1 flex-column home-el-align-items-center home-el-justify-content-center home-el-p-3 home-el-gap-4 home-el-h-100">
-	<div
-		class="home-el-mb-3 home-el-d-flex home-el-align-items-center home-el-justify-content-center">
-		<div class="home-el-col-5">
-			<img class="img img-svelte" width="180" height="180" alt="Svelte" src="/images/svelte.svg" />
-		</div>
-	</div>
-
-	<div>
-		<h1 class="large-text">YeSvelte components</h1>
-		<h2 class="home-el-mt-3 home-el-text-muted medium-text">
-			Accelerate your Svelte development with YeSvelte components
-		</h2>
-	</div>
-
-	<div class="custom-container home-el-row">
-		<div class="home-el-p-1 home-el-col-12 home-el-col-sm-6">
+<div class="home-page">
+	<div class="header">
+		<div class="brand">YeSvelte</div>
+		<div class="header-buttons">
+			<a class="button" href="/docs">Docs</a>
 			<a
-				role="button"
-				class="home-button home-el-col-12 home-button-size-lg home-button-color-primary"
-				href="/docs">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					aria-hidden="true"
-					role="img"
-					class="home-icon home-icon-size-xl iconify iconify--tabler"
-					width="1em"
-					height="1em"
-					viewBox="0 0 24 24"
-					><path
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13" /></svg>
-				Get Started
-			</a>
-		</div>
-
-		<div class="home-el-p-1 home-el-col-12 home-el-col-sm-6">
-			<a
-				role="button"
-				class="home-button home-el-col-12 home-button-size-lg home-button-color-github"
+				class="button"
+				rel="noreferrer"
+				target="_blank"
 				href="https://github.com/yesvelte/yesvelte">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					aria-hidden="true"
-					role="img"
-					class="home-icon home-icon-size-xl iconify iconify--tabler"
-					width="1em"
-					height="1em"
-					viewBox="0 0 24 24"
-					><path
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21" /></svg>
-				Source Code
+				Github
+			</a>
+			<a class="button" rel="noreferrer" target="_blank" href="https://reddit.com/r/yesvelte">
+				Reddit
 			</a>
 		</div>
+	</div>
+	<div class="body">
+		<div class="left-container">
+			<h1 class="title">YeSvelte Components</h1>
+			<h2 class="description">Accelerate your Svelte development with YeSvelte components</h2>
+			<div class="buttons">
+				<a class="button button-docs" href="/docs">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						class="home-icon home-icon-size-xl iconify iconify--tabler"
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						><path
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13" /></svg>
 
-		<div class="home-el-col-12 home-el-mt-3 home-el-px-1">
-			<div
-				class="home-el-col-12 text-terminal home-el-border home-el-d-flex home-el-justify-content-between home-el-gap-3 home-el-shadow-lg home-el-text-color-light home-el-p-3 home-el-mb-5 home-el-border-round-size-3 home-el-bg-color-github">
-				<div>npm install yesvelte</div>
+					Get Started</a>
+				<a class="button button-source" href="https://github.com/yesvelte/yesvelte">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						aria-hidden="true"
+						role="img"
+						class="home-icon home-icon-size-xl iconify iconify--tabler"
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						><path
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21" /></svg>
+
+					<span class="text"> Source </span>
+				</a>
+			</div>
+
+			<div class="npm-terminal">
+				<div class="text">npm i yesvelte</div>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<div class="home-el-d-flex clipboard-icon" on:click={copy}>
+				<div class="clipboard-icon" on:click={copy}>
 					{#if icon === 'copy'}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -136,184 +131,256 @@
 				</div>
 			</div>
 		</div>
+		<div class="right-container">
+			<div class="svelte-repl">
+				<img src="/images/repl.png" alt="svelte repl" />
+
+				<div class="content">
+					Try YeSvelte components on REPL!
+					<a href={replLink} class="repl-button">Open REPL</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <style>
-	.home-button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 16px;
-		padding: 8px 12px;
-		border-radius: 8px;
-		line-height: 1.5;
-		text-decoration: none;
-	}
-
-	.home-button-color-primary {
-		background-color: #206bc4;
-		color: white;
-	}
-
-	.home-el-text-align-center {
-		text-align: center;
-	}
-
-	.home-el-bg-color-secondary {
-		background-color: #e3e8ed;
-	}
-
-	.home-el-d-flex {
-		display: flex;
-	}
-	.home-el-align-items-center {
-		align-items: center;
-	}
-
-	.home-el-justify-content-center {
-		justify-content: center;
-	}
-	.home-el-justify-content-between {
-		justify-content: space-between;
-	}
-
-	.home-el-px-1 {
-		padding-left: 0.25rem;
-		padding-right: 0.25rem;
-	}
-
-	.home-button-size-lg {
-		font-size: 20px;
-	}
-
-	.home-el-row {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.home-el-gap-3 {
-		gap: 1rem;
-	}
-
-	.home-el-p-3 {
-		padding: 1rem;
-	}
-
-	.home-el-h-100 {
+	:global(body),
+	:global(html),
+	:global(body) > :global(div) {
 		height: 100%;
 	}
 
-	.home-el-mb-3 {
-		margin-bottom: 1rem;
-	}
-
-	.home-el-col-5 {
-		width: 41.6%;
-	}
-
-	.home-el-mt-3 {
-		margin-top: 1rem;
-	}
-	.home-el-text-muted {
-		opacity: 0.7;
-	}
-
-	.home-el-col-12 {
-		width: 100%;
-	}
-
-	.home-el-p-1 {
-		padding: 0.25rem;
-	}
-
-	.flex-column {
-		flex-direction: column;
-	}
-
-	* {
+	:global(*) {
 		margin: 0;
 		box-sizing: border-box;
 	}
 
-	.home-button-color-github {
-		background-color: #181717;
-		color: white;
+	.home-page {
+		height: 100%;
+		background-color: #00000010;
+		display: flex;
+		flex-direction: column;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+			Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
-	@media (min-width: 576px) {
-		.home-el-col-sm-6 {
-			flex-basis: 0 0 auto;
-			width: 50%;
-		}
+	.header {
+		position: sticky;
+		top: 0;
+		height: 72px;
+		display: flex;
+		padding: 0.5rem 1rem;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1;
+		background-color: #ededed;
+		box-shadow: 0 10px 10px #00000010;
 	}
 
-	.home-el-border-round-size-3 {
-		border-radius: 8px;
-	}
-
-	.home-el-mb-5 {
-		margin-bottom: 4rem;
-	}
-
-	.home-icon-size-xl {
-		width: 24px;
-		height: 24px;
-	}
-
-	.home-el-bg-color-github {
-		background-color: #181717;
-		color: white;
-	}
-
-	.home-el-shadow-lg {
-		box-shadow: 0 1rem 3rem #00000018;
-	}
-
-	.home-el-gap-4 {
-		gap: 2rem;
-	}
-
-	.large-text {
-		letter-spacing: -1px;
-		line-height: 34px;
-		font-size: 42px;
+	.button {
 		font-weight: bold;
+		text-decoration: none;
+		color: #000000a0;
+	}
+	.button:hover {
+		text-decoration: underline;
+		color: #000000c0;
 	}
 
-	.medium-text {
-		margin-top: 16px;
-		line-height: 24px;
-		font-size: 22px;
-		font-weight: 300;
+	.home-page .body {
+		flex: 1;
 	}
 
-	.text-terminal {
-		font-family: monospace;
+	.header .brand {
+		font-size: 28px;
+		font-weight: 700;
+		color: rgb(56, 56, 56);
+		text-shadow: 0 0 1rem #0000003b;
+		cursor: default;
+	}
+	.header .header-buttons {
+		display: flex;
+		align-items: flex-end;
+		gap: 1rem;
+	}
+
+	.body {
+		padding: 1rem;
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+		justify-content: start;
+		background-color: #00000010;
+	}
+
+	.left-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+	}
+
+	.left-container .title {
+		margin-top: 60px;
+		font-size: 24px;
+	}
+	.left-container .description {
+		opacity: 0.7;
+		margin-top: 4px;
+		margin-bottom: 1rem;
 		font-size: 18px;
+		font-weight: 400;
 	}
 
-	.custom-container {
-		max-width: 450px;
+	.left-container .buttons {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.left-container .buttons > .button {
+		white-space: nowrap;
+		min-width: 40px;
+		box-shadow: 2px 2px 4px #00000037;
+		color: white;
+		border-radius: 4px;
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
+		height: 40px;
+		justify-content: center;
+	}
+	.left-container .buttons > .button:hover {
+		text-decoration: none;
+		box-shadow: 2px 2px 6px #00000057;
 	}
 
-	.img {
-		object-fit: contain;
-		width: 180px;
+	.button.button-docs {
+		flex: 1;
+		background-color: #2d65f2;
+	}
+	.button.button-docs:hover {
+		background-color: #4572e3;
 	}
 
-	.img-svelte {
-		scale: 0.8;
-		filter: drop-shadow(0 0 3rem #fe3c0060);
+	.button.button-source {
+		background-color: #404040;
+	}
+	.button.button-source:hover {
+		background-color: #454545;
 	}
 
-	.clipboard-icon {
+	.button.button-source .text {
+		display: none;
+	}
+
+	.npm-terminal {
+		background-color: #000000f0;
+		max-width: 700px;
+		width: 100%;
+		color: white;
+		font-family: monospace;
+		padding: 8px;
+		border-radius: 4px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.svelte-repl {
+		max-height: 400px;
+		position: relative;
+		box-shadow: 0 0 4px #00000050;
+		width: 100%;
+		border: 1px solid red;
+		overflow: hidden;
+	}
+
+	.svelte-repl .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		pointer-events: all;
+		gap: 1rem;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+	.svelte-repl img {
+		transition: all 0.5s ease;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.svelte-repl:hover .content {
+		opacity: 1;
+		/* pointer-events: none; */
+	}
+
+	.svelte-repl:hover img {
+		filter: blur(4px);
+		transform: scale(1.2);
+	}
+	.repl-button {
+		padding: 8px 16px;
+		background-color: #ff3e00;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		box-shadow: 0 0 4px #00000010;
+	}
+	.repl-button:hover {
+		box-shadow: 0 0 8px #00000040;
 		cursor: pointer;
 	}
 
-	@media (max-width: 500px) {
-		.img {
-			width: 130px;
+	.right-container {
+		margin-top: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	@media (min-width: 700px) {
+		.body {
+			flex-direction: row;
+			justify-content: center;
+			gap: 5%;
+		}
+
+		.left-container {
+			width: 500px;
+			justify-content: center;
+		}
+
+		.left-container .title {
+			margin-top: 0;
+			font-size: 36px;
+		}
+
+		.right-container {
+			width: 500px;
+		}
+
+		.svelte-repl {
+			max-width: 500px;
+		}
+	}
+
+	@media (min-width: 400px) {
+		.button.button-source {
+			flex: 1;
+		}
+		.button.button-source .text {
+			display: block;
 		}
 	}
 </style>
