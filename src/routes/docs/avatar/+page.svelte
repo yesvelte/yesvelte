@@ -88,7 +88,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-avatar) {
+	.custom-class > :global(.y-avatar) {
 		margin-bottom: 0.2rem;
 	}
 </style>

@@ -83,6 +83,13 @@ export const navigations: Navigation[] = [
 					'Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.',
 			},
 			{
+				route: base_path + '/autocomplete',
+				title: 'Autocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'Autocomplete is a component that allows you to search and select a value from a list of options. It is a combination of a text input and a dropdown menu.',
+			},
+			{
 				route: base_path + '/avatar',
 				title: 'Avatar',
 				icon: 'mdi:account-circle-outline',
@@ -166,11 +173,10 @@ export const navigations: Navigation[] = [
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
 			{
-				route: base_path + '/form/form-input',
-				title: 'FormInput',
-				icon: 'iconoir:input-field',
-				description:
-					'FormInput is an input and label wrapper component to be used insisde forms. It supports all props and events of Input and also have some additional features.',
+				route: base_path + '/file-upload',
+				title: 'FileUpload',
+				icon: 'material-symbols:upload-file',
+				description: 'FileUpload component is used for collecting files from local device of user.',
 			},
 			{
 				route: base_path + '/icon',
@@ -254,7 +260,13 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
 			},
-
+			{
+				route: base_path + '/steps',
+				title: 'Steps',
+				icon: 'material-symbols:check-circle',
+				description:
+					'Steps component guides users through the steps of a task. It is a kind of navigation bar.',
+			},
 			{
 				route: base_path + '/spinner',
 				title: 'Spinner',
@@ -293,6 +305,13 @@ export const navigations: Navigation[] = [
 		id: 'menu-forms',
 		children: [
 			{
+				route: base_path + '/form/form-autocomplete',
+				title: 'Form Autocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'FormAutocomplete supports all props and events of Autocomplete and also have some additional features.',
+			},
+			{
 				route: base_path + '/form/form-checkbox',
 				title: 'FormCheckbox',
 				icon: 'mdi:checkbox-outline',
@@ -311,6 +330,11 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-fieldset',
 				title: 'FormFieldset',
 				icon: 'fluent-mdl2:field-empty',
+			},
+			{
+				route: base_path + '/form/form-file-upload',
+				title: 'FormFileUpload',
+				icon: 'material-symbols:upload-file',
 			},
 			{
 				route: base_path + '/form/form-input',

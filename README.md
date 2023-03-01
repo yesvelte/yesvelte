@@ -7,7 +7,7 @@ YeSvelte is a powerful and flexible Svelte UI component library, designed to hel
 To install YeSvelte, you can use npm:
 
 ```bash
-npm install yesvelte
+npm install yesvelte@next
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ YeSvelte components have default styles which is based on tabler. which you can 
 	import 'yesvelte/css/tabler.css'
 </script>
 
-<Button>Hello World!</Button>
+<Button color="primary">Hello World!</Button>
 ```
 
 ## Demo

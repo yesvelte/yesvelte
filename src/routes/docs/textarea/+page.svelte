@@ -73,7 +73,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-textarea-wrapper) {
+	.custom-class > :global(.y-textarea-wrapper) {
 		margin: 0.25rem 0;
 	}
 </style>

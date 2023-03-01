@@ -3,8 +3,10 @@ import type { InputProps, InputStates } from '../input'
 import type { SwitchProps } from '../switch/Switch.types'
 import type { RadioGroupProps } from '../radio/Radio.types'
 import type { SelectProps } from '../select/Select.types'
+import type { AutocompleteProps } from '../autocomplete/Autocomplete.types'
 import type { CheckboxProps, CheckboxGroupProps } from '../checkbox/Checkbox.types'
 import type { DatePickerProps } from '../date-picker/DatePicker.types'
+import type { FileUploadProps } from '../file-upload/FileUpload.types'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -29,5 +31,8 @@ export interface FormCheckboxGroupProps
 		Partial<CheckboxGroupProps> {}
 
 export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
-
 export interface FormDatePickerProps extends Partial<FormFieldProps>, Partial<DatePickerProps> {}
+export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> {}
+export interface FormAutocompleteProps
+	extends Partial<FormFieldProps>,
+		Partial<AutocompleteProps> {}

@@ -3,7 +3,7 @@
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 
 	async function copy() {
-		await navigator.clipboard.writeText('npm install yesvelte')
+		await navigator.clipboard.writeText('npm install yesvelte@next')
 		icon = 'check'
 
 		setTimeout(() => {
@@ -88,7 +88,7 @@
 			</div>
 
 			<div class="npm-terminal">
-				<div class="text">npm i yesvelte</div>
+				<div class="text">npm i yesvelte@next</div>
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="clipboard-icon" on:click={copy}>
 					{#if icon === 'copy'}

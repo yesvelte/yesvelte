@@ -121,7 +121,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-badge) {
+	.custom-class > :global(.y-badge) {
 		margin-bottom: 0.2rem;
 	}
 </style>
