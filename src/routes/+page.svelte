@@ -1,6 +1,18 @@
 <script>
+	import {
+		CopyIcon,
+		CheckIcon,
+		DiscordIcon,
+		DocsIcon,
+		GithubIcon,
+		RedditIcon,
+	} from '$components/icons'
+
 	let icon = 'copy'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
+	let discordLink = 'https://discord.gg/gD4de625'
+	let githubLink = 'https://github.com/yesvelte/yesvelte'
+	let redditLink = 'https://reddit.com/r/yesvelte'
 
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
@@ -29,15 +41,19 @@
 		<div class="brand">YeSvelte</div>
 		<div class="header-buttons">
 			<a class="button" href="/docs">Docs</a>
+			<a class="button" rel="noreferrer" target="_blank" title="Github link" href={githubLink}>
+				<GithubIcon />
+			</a>
+			<a class="button" rel="noreferrer" target="_blank" title="Discord link" href={discordLink}>
+				<DiscordIcon />
+			</a>
 			<a
 				class="button"
 				rel="noreferrer"
 				target="_blank"
-				href="https://github.com/yesvelte/yesvelte">
-				Github
-			</a>
-			<a class="button" rel="noreferrer" target="_blank" href="https://reddit.com/r/yesvelte">
-				Reddit
+				title="Reddit link"
+				href="https://reddit.com/r/yesvelte">
+				<RedditIcon />
 			</a>
 		</div>
 	</div>
@@ -52,43 +68,14 @@
 			<h2 class="description">Accelerate your Svelte development with YeSvelte components</h2>
 			<div class="buttons">
 				<a class="button button-docs" href="/docs">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						class="home-icon home-icon-size-xl iconify iconify--tabler"
-						width="1em"
-						height="1em"
-						viewBox="0 0 24 24"
-						><path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13" /></svg>
-
+					<DocsIcon />
 					Get Started</a>
 				<a class="button button-source" href="https://github.com/yesvelte/yesvelte">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						aria-hidden="true"
-						role="img"
-						class="home-icon home-icon-size-xl iconify iconify--tabler"
-						width="1em"
-						height="1em"
-						viewBox="0 0 24 24"
-						><path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21" /></svg>
-
+					<GithubIcon />
 					<span class="text"> Source </span>
+				</a>
+				<a href={replLink} rel="noreferrer" target="_blank" class="button button-repl repl-button">
+					Try it on REPL!
 				</a>
 			</div>
 
@@ -97,52 +84,10 @@
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="clipboard-icon" on:click={copy}>
 					{#if icon === 'copy'}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							class="home-icon iconify iconify--tabler"
-							width="1em"
-							height="1em"
-							viewBox="0 0 24 24"
-							><g
-								fill="none"
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								><rect width="12" height="12" x="8" y="8" rx="2" /><path
-									d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></g
-							></svg>
+						<CopyIcon />
 					{:else}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink"
-							aria-hidden="true"
-							role="img"
-							class="home-icon iconify iconify--tabler"
-							width="1em"
-							height="1em"
-							viewBox="0 0 24 24"
-							><path
-								fill="none"
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="m5 12l5 5L20 7" /></svg>
+						<CheckIcon />
 					{/if}
-				</div>
-			</div>
-		</div>
-		<div class="right-container">
-			<div class="svelte-repl">
-				<img src="/images/repl.png" alt="svelte repl" />
-
-				<div class="content">
-					Try YeSvelte components on REPL!
-					<a href={replLink} class="repl-button">Open REPL</a>
 				</div>
 			</div>
 		</div>
@@ -156,6 +101,10 @@
 		height: 100%;
 	}
 
+	:global(body) {
+		background-color: #00000010;
+	}
+
 	:global(*) {
 		margin: 0;
 		box-sizing: border-box;
@@ -163,7 +112,6 @@
 
 	.home-page {
 		height: 100%;
-		background-color: #00000010;
 		display: flex;
 		flex-direction: column;
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -206,8 +154,21 @@
 	}
 	.header .header-buttons {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		gap: 1rem;
+	}
+	.header .header-buttons > .button {
+		padding: 8px;
+		border-radius: 4px;
+		border: 1px solid #00000050;
+		min-width: 42px;
+		height: 42px;
+		transition: background-color 0.2s ease;
+	}
+	.header .header-buttons > .button:hover {
+		background-color: #000000a0;
+		color: white;
+		text-decoration: none;
 	}
 
 	.body {
@@ -224,6 +185,7 @@
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
+		text-align: center;
 	}
 
 	.title-wrapper {
@@ -234,7 +196,7 @@
 		align-items: center;
 	}
 	.left-container .svelte-logo {
-		width: 140px;
+		width: 200px;
 		padding: 1rem;
 		/*  */
 	}
@@ -255,24 +217,31 @@
 	}
 
 	.left-container .buttons {
-		margin-bottom: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 1rem;
 		width: 100%;
-		justify-content: space-between;
+		justify-content: center;
+		flex-direction: column;
 	}
 	.left-container .buttons > .button {
 		white-space: nowrap;
-		min-width: 40px;
+		flex: 1;
+		min-width: 60px;
+		font-size: 16px;
 		box-shadow: 2px 2px 4px #00000037;
 		color: white;
 		border-radius: 4px;
 		display: inline-flex;
 		gap: 8px;
 		align-items: center;
-		height: 40px;
+		height: 60px;
+		width: 100%;
 		justify-content: center;
+		padding: 16px;
 	}
 	.left-container .buttons > .button:hover {
 		text-decoration: none;
@@ -280,7 +249,7 @@
 	}
 
 	.button.button-docs {
-		flex: 1;
+		/* flex: 1; */
 		background-color: #2d65f2;
 	}
 	.button.button-docs:hover {
@@ -298,13 +267,22 @@
 		display: none;
 	}
 
+	.button.button-repl {
+		background-color: #ff3e00;
+		width: 100%;
+	}
+	.button.button-repl:hover {
+		background-color: #ff4e10;
+	}
+
 	.npm-terminal {
-		background-color: #000000f0;
+		background-color: #000000a0;
 		max-width: 700px;
 		width: 100%;
 		color: white;
 		font-family: monospace;
-		padding: 8px;
+		font-size: 24px;
+		padding: 20px;
 		border-radius: 4px;
 		display: flex;
 		justify-content: space-between;
@@ -364,12 +342,6 @@
 		cursor: pointer;
 	}
 
-	.right-container {
-		margin-top: 0;
-		display: flex;
-		align-items: center;
-	}
-
 	@media (min-width: 700px) {
 		.body {
 			padding: 2rem;
@@ -383,38 +355,48 @@
 		}
 
 		.left-container {
-			width: 500px;
+			/* width: ; */
 			justify-content: center;
-			align-items: start;
+			/* align-items: start; */
+			/* text-align: start; */
 		}
 
 		.left-container .title-wrapper {
+			widows: 100%;
 			margin-top: 0;
 			gap: 1rem;
-			flex-direction: row;
-		}
-
-		.title-wrapper .svelte-logo img {
-			filter: drop-shadow(0 0 32px #ff3e0040);
+			justify-content: center;
+			/* flex-direction: row; */
 		}
 
 		.left-container .title {
+			font-size: 72px;
+		}
+
+		.left-container .description {
 			font-size: 36px;
 		}
-
-		.right-container {
-			width: 500px;
+		.button.button-repl {
+			width: auto;
 		}
 
-		.svelte-repl {
-			max-width: 500px;
+		.buttons {
+			flex-direction: row !important;
+		}
+		.buttons > .button {
+			width: 180px !important;
+			flex: unset !important;
 		}
 	}
 
 	@media (min-width: 400px) {
-		.button.button-source {
-			flex: 1;
+		.buttons > .button {
+			font-size: 20px;
 		}
+		.button.button-source {
+			/* flex: 1; */
+		}
+
 		.button.button-source .text {
 			display: block;
 		}
