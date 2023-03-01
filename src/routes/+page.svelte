@@ -43,7 +43,12 @@
 	</div>
 	<div class="body">
 		<div class="left-container">
-			<h1 class="title">YeSvelte Components</h1>
+			<div class="title-wrapper">
+				<div class="svelte-logo">
+					<img class="img" alt="Svelte" src="/images/svelte.svg" />
+				</div>
+				<h1 class="title">YeSvelte Components</h1>
+			</div>
 			<h2 class="description">Accelerate your Svelte development with YeSvelte components</h2>
 			<div class="buttons">
 				<a class="button button-docs" href="/docs">
@@ -170,7 +175,7 @@
 		top: 0;
 		height: 72px;
 		display: flex;
-		padding: 0.5rem 1rem;
+		padding: 0.5rem 2rem;
 		justify-content: space-between;
 		align-items: center;
 		z-index: 1;
@@ -206,7 +211,7 @@
 	}
 
 	.body {
-		padding: 1rem;
+		padding: 2rem;
 		display: flex;
 		gap: 2rem;
 		flex-direction: column;
@@ -218,12 +223,28 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
-		align-items: start;
+		align-items: center;
+	}
+
+	.title-wrapper {
+		margin-top: 60px;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+	}
+	.left-container .svelte-logo {
+		width: 140px;
+		padding: 1rem;
+		/*  */
+	}
+
+	.svelte-logo .img {
+		filter: drop-shadow(4px 0 64px #ff3e0080);
 	}
 
 	.left-container .title {
-		margin-top: 60px;
-		font-size: 24px;
+		font-size: 36px;
 	}
 	.left-container .description {
 		opacity: 0.7;
@@ -295,7 +316,7 @@
 		position: relative;
 		box-shadow: 0 0 4px #00000050;
 		width: 100%;
-		border: 1px solid red;
+		border: 1px solid #ff3e00;
 		overflow: hidden;
 	}
 
@@ -351,18 +372,33 @@
 
 	@media (min-width: 700px) {
 		.body {
+			padding: 2rem;
 			flex-direction: row;
 			justify-content: center;
 			gap: 5%;
 		}
 
+		.header {
+			padding: 0.5rem 2rem;
+		}
+
 		.left-container {
 			width: 500px;
 			justify-content: center;
+			align-items: start;
+		}
+
+		.left-container .title-wrapper {
+			margin-top: 0;
+			gap: 1rem;
+			flex-direction: row;
+		}
+
+		.title-wrapper .svelte-logo img {
+			filter: drop-shadow(0 0 32px #ff3e0040);
 		}
 
 		.left-container .title {
-			margin-top: 0;
 			font-size: 36px;
 		}
 
