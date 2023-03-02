@@ -288,7 +288,7 @@ export const navigations: Navigation[] = [
 			},
 			{
 				route: base_path + '/table',
-				title: 'Tables',
+				title: 'Table',
 				icon: 'mdi:table',
 				description:
 					'Tables are a useful interface element that allows to visualise data and arrange it in a clear way. Thanks to that, users can browse a lot of information at once and a good table design will help you take care of its clarity.',
@@ -313,7 +313,7 @@ export const navigations: Navigation[] = [
 		children: [
 			{
 				route: base_path + '/form/form-autocomplete',
-				title: 'Form Autocomplete',
+				title: 'FormAutocomplete',
 				icon: 'bi:menu-button-fill',
 				description:
 					'FormAutocomplete supports all props and events of Autocomplete and also have some additional features.',
