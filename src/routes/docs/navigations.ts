@@ -287,6 +287,13 @@ export const navigations: Navigation[] = [
 					'The Switch component provides users the ability to choose between two distinct values. These are very similar to a toggle, or on/off switch, though aesthetically different than a Switch.',
 			},
 			{
+				route: base_path + '/table',
+				title: 'Tables',
+				icon: 'mdi:table',
+				description:
+					'Tables are a useful interface element that allows to visualise data and arrange it in a clear way. Thanks to that, users can browse a lot of information at once and a good table design will help you take care of its clarity.',
+			},
+			{
 				route: base_path + '/tabs',
 				title: 'Tabs',
 				icon: 'material-symbols:tab-outline',

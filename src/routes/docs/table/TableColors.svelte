@@ -1,5 +1,5 @@
 <script>
-	import { Table, TableBody, TableCell, TableHead, TableRow } from '@ubeac/svelte'
+	import { Table, TableBody, TableCell, TableHead, TableRow } from 'yesvelte'
 </script>
 
 <Table color="primary">

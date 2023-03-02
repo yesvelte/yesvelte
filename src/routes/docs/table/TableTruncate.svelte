@@ -1,5 +1,5 @@
 <script>
-	import { Table, TableBody, TableCell, TableHead, TableRow } from '@ubeac/svelte'
+	import { Table, TableBody, TableCell, TableHead, TableRow } from 'yesvelte'
 </script>
 
 <Table striped>
@@ -7,23 +7,32 @@
 		<TableRow>
 			<TableCell>Name</TableCell>
 			<TableCell>Title</TableCell>
-			<TableCell truncate>Email</TableCell>
+			<TableCell>Email</TableCell>
 			<TableCell>Role</TableCell>
+			<TableCell>Description</TableCell>
 		</TableRow>
 	</TableHead>
 	<TableBody>
 		<TableRow>
 			<TableCell>Paweł Kuna</TableCell>
 			<TableCell>UI Designer, Training</TableCell>
-			<TableCell truncate>paweluna@howstuffworks.com</TableCell>
+			<TableCell>paweluna@howstuffworks.com</TableCell>
 			<TableCell>User</TableCell>
+			<TableCell truncate>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl vitae ultricies
+				lacinia, nisl nisl aliquet nisl, vitae aliquet nisl nisl sit amet nisl.
+			</TableCell>
 		</TableRow>
 
 		<TableRow>
 			<TableCell>Jeffie Lewzey</TableCell>
 			<TableCell>Chemical Engineer, Support</TableCell>
-			<TableCell truncate>jlewzey1@seesaa.net</TableCell>
+			<TableCell>jlewzey1@seesaa.net</TableCell>
 			<TableCell>Admin</TableCell>
+			<TableCell truncate>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl vitae ultricies
+				lacinia, nisl nisl aliquet nisl, vitae aliquet nisl nisl sit amet nisl.
+			</TableCell>
 		</TableRow>
 
 		<TableRow>
@@ -31,6 +40,10 @@
 			<TableCell>Geologist IV, Support</TableCell>
 			<TableCell truncate>mhulme2@domainmarket.com</TableCell>
 			<TableCell>User</TableCell>
+			<TableCell truncate>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl vitae ultricies
+				lacinia, nisl nisl aliquet nisl, vitae aliquet nisl nisl sit amet nisl.
+			</TableCell>
 		</TableRow>
 
 		<TableRow>
@@ -38,6 +51,10 @@
 			<TableCell>Research Nurse, Sales</TableCell>
 			<TableCell truncate>dslane3@epa.gov</TableCell>
 			<TableCell>Owner</TableCell>
+			<TableCell truncate>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl vitae ultricies
+				lacinia, nisl nisl aliquet nisl, vitae aliquet nisl nisl sit amet nisl.
+			</TableCell>
 		</TableRow>
 
 		<TableRow>
@@ -45,6 +62,10 @@
 			<TableCell>VP Product Management, Accounting</TableCell>
 			<TableCell truncate>elevet4@senate.gov</TableCell>
 			<TableCell>Admin</TableCell>
+			<TableCell truncate>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nisl vitae ultricies
+				lacinia, nisl nisl aliquet nisl, vitae aliquet nisl nisl sit amet nisl.
+			</TableCell>
 		</TableRow>
 	</TableBody>
 </Table>

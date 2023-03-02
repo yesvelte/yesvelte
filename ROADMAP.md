@@ -45,7 +45,7 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] Switch
 - [x] Tabs
 - [x] Textarea
-- [ ] Table
+- [x] Table
 - [ ] Slider
 - [ ] RangeSlider
 - [ ] ColorPicker

@@ -15,7 +15,7 @@
 
 	$: cssProps = {
 		color,
-		border,
+		// border,
 		hover,
 		striped,
 		wrap,
