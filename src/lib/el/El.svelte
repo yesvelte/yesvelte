@@ -333,10 +333,11 @@
 			alignSelf,
 			justifyContent,
 		}
-		classes = classname(elComponentName, defaultCssProps)
-		if (componentName !== elComponentName)
-			classes += ' ' + classname(componentName, cssProps, $$props.class)
-
+		classes = classname(elComponentName, defaultCssProps, $$props.class)
+		
+		if (componentName !== elComponentName) 
+			classes += ' ' + classname(componentName, cssProps)
+		
 		elProps = {
 			id,
 			class: classes,
