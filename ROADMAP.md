@@ -30,7 +30,6 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] FileUpload
 - [x] Icon
 - [x] Input
-- [x] Input group
 - [x] Label
 - [x] Modal
 - [x] Offcanvas
@@ -51,12 +50,11 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [ ] RangeSlider
 - [ ] ColorPicker
 - [ ] Pagination
-- [ ] FloatingButton
-- [ ] Release v1.0 of YeSvelte
+- [ ] FloatingButton (or adding floating action feature to exisiting Button component)
 
 #### New Form Components
 
-- [x] Form Autocomplete
+- [x] FormAutocomplete
 - [x] FormCheckbox
 - [x] FormCheckboxGroup
 - [x] FormDatePicker
@@ -67,6 +65,12 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] FormSelect
 - [x] FormSwitch
 - [x] FormTextarea
+
+#### General
+
+- [ ] Documentation enhancement
+- [ ] Examples and UI interfaces
+- [ ] Release v1.0 of YeSvelte
 
 ### Q2 2023
 
