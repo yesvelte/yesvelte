@@ -85,12 +85,12 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-el) {
+	.custom-class > :global(.y-el) {
 		background-color: rgba(238, 130, 238, 0.1);
 		border: 1px solid rgba(238, 130, 238, 0.5);
 		margin-bottom: 0.5rem;
 	}
-	.custom-class > :global(.u-el > .u-el) {
+	.custom-class > :global(.y-el > .y-el) {
 		background-color: rgba(238, 130, 238, 0.1);
 		border: 1px solid rgba(238, 130, 238, 0.5);
 		text-align: center;

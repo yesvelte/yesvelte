@@ -158,7 +158,7 @@
 </Page>
 
 <style>
-	.gap > :global(.u-button) {
+	.gap > :global(.y-button) {
 		margin-bottom: 0.2rem;
 	}
 </style>

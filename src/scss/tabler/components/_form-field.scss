@@ -36,7 +36,7 @@ $props-form-field: (
 	@extend .#{$prefix-form-field};
 }
 
-.#{$prefix-form-file-uploader} {
+.#{$prefix-form-file-upload} {
 	@extend .#{$prefix-form-field};
 }
 

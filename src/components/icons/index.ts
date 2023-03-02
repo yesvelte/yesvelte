@@ -1,0 +1,6 @@
+export { default as CheckIcon } from './CheckIcon.svelte'
+export { default as CopyIcon } from './CopyIcon.svelte'
+export { default as DiscordIcon } from './DiscordIcon.svelte'
+export { default as DocsIcon } from './DocsIcon.svelte'
+export { default as GithubIcon } from './GithubIcon.svelte'
+export { default as RedditIcon } from './RedditIcon.svelte'

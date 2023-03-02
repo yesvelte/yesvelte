@@ -63,7 +63,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-input-wrapper) {
+	.custom-class > :global(.y-input-wrapper) {
 		margin: 0.25rem 0;
 	}
 </style>
