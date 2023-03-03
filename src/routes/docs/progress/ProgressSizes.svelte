@@ -1,7 +1,14 @@
 <script>
-	import { Progress } from 'yesvelte'
+	import { Progress, ProgressBar } from 'yesvelte'
 </script>
 
-<Progress value="80" size="sm" />
-<Progress value="80" />
-<Progress value="80" style="height: 15px;" />
+<Progress size="sm">
+	<ProgressBar value="80" />
+</Progress>
+<Progress>
+	<ProgressBar value="80" />
+</Progress>
+
+<Progress style="height: 15px;">
+	<ProgressBar value="80" />
+</Progress>

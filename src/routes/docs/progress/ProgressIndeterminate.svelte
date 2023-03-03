@@ -1,5 +1,11 @@
 <script>
-	import { Progress } from 'yesvelte'
+	import { Progress, ProgressBar } from 'yesvelte'
 </script>
 
-<Progress indeterminate color="orange" />
+<Progress size="sm">
+	<ProgressBar color="danger" indeterminate />
+</Progress>
+
+<Progress>
+	<ProgressBar color="danger" indeterminate />
+</Progress>
