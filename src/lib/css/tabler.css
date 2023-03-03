@@ -23677,7 +23677,7 @@ Progress bar
   animation: progress-indeterminate 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 
-.progress-separated .progress-bar, .progress-separated .y-progress-bar {
+.progress-separated .progress-bar, .progress-separated .y-progress-bar, .y-progress-separated .progress-bar, .y-progress-separated .y-progress-bar {
   box-shadow: 0 0 0 2px var(--y-card-bg, var(--y-bg-surface));
 }
 
