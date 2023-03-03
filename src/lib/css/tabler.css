@@ -2457,37 +2457,37 @@ progress {
   border-color: var(--y-table-border-color);
 }
 
-.table-responsive, .y-table-parent-responsive {
+.table-responsive, .y-table-wrapper-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 575.98px) {
-  .table-responsive-sm, .y-table-parent-responsive-sm {
+  .table-responsive-sm, .y-table-wrapper-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 767.98px) {
-  .table-responsive-md, .y-table-parent-responsive-md {
+  .table-responsive-md, .y-table-wrapper-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 991.98px) {
-  .table-responsive-lg, .y-table-parent-responsive-lg {
+  .table-responsive-lg, .y-table-wrapper-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 1199.98px) {
-  .table-responsive-xl, .y-table-parent-responsive-xl {
+  .table-responsive-xl, .y-table-wrapper-responsive-xl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 1399.98px) {
-  .table-responsive-xxl {
+  .table-responsive-xxl, .y-table-wrapper-responsive-xxl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -24875,10 +24875,10 @@ a.step-item:hover, a.y-step-item:hover {
   }
 }
 
-.table-responsive .table, .table-responsive .y-table, .y-table-parent-responsive .table, .y-table-parent-responsive .y-table, .table-responsive .markdown > table, .y-table-parent-responsive .markdown > table {
+.table-responsive .table, .y-table-wrapper-responsive .table, .table-responsive .y-table, .y-table-wrapper-responsive .y-table, .table-responsive .markdown > table, .y-table-wrapper-responsive .markdown > table {
   margin-bottom: 0;
 }
-.table-responsive + .card-footer, .y-table-parent-responsive + .card-footer, .table-responsive + .y-card-footer, .y-table-parent-responsive + .y-card-footer {
+.table-responsive + .card-footer, .y-table-wrapper-responsive + .card-footer, .table-responsive + .y-card-footer, .y-table-wrapper-responsive + .y-card-footer {
   border-top: 0;
 }
 
