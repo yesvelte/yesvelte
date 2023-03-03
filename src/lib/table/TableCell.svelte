@@ -10,7 +10,6 @@
 	export let color: $$Props['color'] = undefined
 	export let truncate: $$Props['truncate'] = undefined
 	export let active: $$Props['active'] = undefined
-	export let colspan: $$Props['colspan'] = undefined
 
 	let head = getContext('TABLE:HEAD') ?? false
 

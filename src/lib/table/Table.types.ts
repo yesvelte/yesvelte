@@ -16,7 +16,6 @@ export interface TableCellProps extends Partial<ElProps> {
 	color?: Colors
 	active?: boolean
 	truncate?: boolean
-	colspan?: string | number
 }
 
 export interface TableRowProps extends Partial<ElProps> {
