@@ -7,6 +7,8 @@
 		GithubIcon,
 		RedditIcon,
 	} from '$components/icons'
+	import { Badge, FormInput } from '$lib'
+	import FormDatePicker from '$lib/form/FormDatePicker.svelte'
 
 	let icon = 'copy'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
@@ -93,6 +95,10 @@
 		</div>
 	</div>
 </div>
+
+<FormInput col="3" innerProps={{ min: 1, max: 3 }} />
+<FormDatePicker col="4" innerProps={{ options: {} }} />
+<Badge aria-checked>TEST</Badge>
 
 <style>
 	:global(body),

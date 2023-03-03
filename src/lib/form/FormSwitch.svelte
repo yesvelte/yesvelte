@@ -1,7 +1,7 @@
 <script lang="ts">
 	import FormField from './FormField.svelte'
 	import { Switch, type SwitchProps } from '../switch'
-	import type { FormSwitchProps } from './Form.types'
+	import type { FormFieldProps, FormSwitchProps } from './Form.types'
 
 	type $$Props = FormSwitchProps
 
@@ -10,15 +10,17 @@
 	export let state: $$Props['state'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-switch'
-	export let color: $$Props['color'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let description: $$Props['description'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
+
+	// export let color: $$Props['color'] = undefined
+	// export let disabled: $$Props['disabled'] = undefined
+	// export let description: $$Props['description'] = undefined
+	// export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let checked: $$Props['checked'] = undefined
-	export let inline: $$Props['inline'] = undefined
+	export let innerProps: $$Props['innerProps'] = undefined
+	// export let inline: $$Props['inline'] = undefined
 
-	let props: $$Props = {}
+	let props: FormFieldProps = {}
 	let switchProps: SwitchProps = {}
 
 	$: {
@@ -31,12 +33,13 @@
 		}
 
 		switchProps = {
-			color,
-			inline,
-			description,
-			reverse,
+			...innerProps,
+			// color,
+			// inline,
+			// description,
+			// reverse,
 			checked,
-			disabled,
+			// disabled,
 		}
 	}
 </script>

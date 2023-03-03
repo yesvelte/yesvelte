@@ -1,3 +1,5 @@
+import type { HTMLAttributes, HTMLInputAttributes } from 'svelte/elements'
+
 // Theme Colors
 export type ThemeColors =
 	| 'primary'
@@ -267,7 +269,7 @@ export interface CssProps {
 	fontStyle?: FontStyles
 
 	//Visibility
-	hidden?: boolean
+	hidden?: boolean | null
 
 	// Float
 	float?: FloatPositions
@@ -331,16 +333,12 @@ export interface CssProps {
 	justifyContent?: JustifyContentTypes
 }
 
-export interface ElProps extends CssProps {
-	id?: string
-	class?: string
+export interface ElProps<T extends EventTarget = HTMLDivElement>
+	extends CssProps,
+		HTMLAttributes<T> {
 	tag?: HTMLTags
-	element?: HTMLElement
+	element?: HTMLElement // should be T
 	componentName?: string
 	cssProps?: object
-	value?: unknown
-	title?: string
-	tabindex?: string | number
-	role?: string
-	'aria-label'?: string
+	value?: any
 }

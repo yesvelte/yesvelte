@@ -18,10 +18,10 @@
 	export let tag: $$Props['tag'] = elTagName
 	export let cssProps: $$Props['cssProps'] = {}
 	export let value: $$Props['value'] = undefined
-	export let title: $$Props['title'] = undefined
-	export let tabindex: $$Props['tabindex'] = undefined
-	export let role: $$Props['role'] = undefined
-	export let ariaLabel: $$Props['aria-label'] = undefined
+	// export let title: $$Props['title'] = undefined
+	// export let tabindex: $$Props['tabindex'] = undefined
+	// export let role: $$Props['role'] = undefined
+	// export let ariaLabel: $$Props['aria-label'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 	let classes: string | undefined
@@ -334,17 +334,16 @@
 			justifyContent,
 		}
 		classes = classname(elComponentName, defaultCssProps, $$props.class)
-		
-		if (componentName !== elComponentName) 
-			classes += ' ' + classname(componentName, cssProps)
-		
+
+		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
+
 		elProps = {
 			id,
 			class: classes,
-			title,
-			tabindex,
-			role,
-			ariaLabel,
+			// title,
+			// tabindex,
+			// role,
+			// ariaLabel,
 		}
 	}
 </script>

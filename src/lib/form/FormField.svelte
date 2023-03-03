@@ -2,7 +2,6 @@
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { FormFieldProps } from './Form.types'
-	import type { LabelProps } from '../label/Label.types'
 
 	type $$Props = FormFieldProps
 
