@@ -1,6 +1,6 @@
 import type { Colors, ElProps } from '../el'
 
-export interface ButtonProps extends Partial<ElProps> {
+export interface ButtonProps extends Partial<ElProps<HTMLButtonElement | HTMLAnchorElement>> {
 	active?: boolean
 	color?: Colors
 	disabled?: boolean

@@ -1,6 +1,7 @@
+import type { HTMLInputAttributes } from 'svelte/elements'
 import type { Colors, ElProps } from '../el'
 
-export interface CheckboxProps extends Partial<ElProps> {
+export type CheckboxProps = Partial<ElProps<HTMLInputElement> & HTMLInputAttributes> & {
 	color?: Colors
 	description?: string
 	disabled?: boolean
@@ -9,6 +10,7 @@ export interface CheckboxProps extends Partial<ElProps> {
 	reverse?: boolean
 	checked?: boolean
 	name?: string
+	value?: any
 	indeterminate?: boolean
 }
 
@@ -17,4 +19,5 @@ export interface CheckboxGroupProps extends Partial<ElProps> {
 	color?: Colors
 	items?: Array<any>
 	reverse?: boolean
+	value?: Array<any>
 }

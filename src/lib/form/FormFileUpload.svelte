@@ -6,38 +6,27 @@
 	type $$Props = FormFileUploadProps
 
 	export let componentName: $$Props['componentName'] = 'form-input'
-	export let tag: $$Props['tag'] = 'input'
-	export let disabled: $$Props['disabled'] = undefined
-	export let accept: $$Props['accept'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
+	export let innerProps: $$Props['innerProps'] = undefined
 	export let required: $$Props['required'] = undefined
-	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let tag: $$Props['tag'] = 'input'
+
 	export let files: $$Props['files'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
 
 	let props: $$Props = {}
-	let fileUploadProps: $$Props = {}
+	let fileUploadProps: $$Props['innerProps'] = {}
 
 	$: props = {
-		required,
-		label,
-		hint,
-		state,
 		componentName,
+		required,
+		state,
 	}
 
 	$: fileUploadProps = {
-		tag,
-		placeholder,
-		disabled,
+		...innerProps,
 		required,
-		size,
 		state,
-		multiple,
-		accept,
+		tag,
 	}
 </script>
 

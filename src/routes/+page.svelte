@@ -96,10 +96,6 @@
 	</div>
 </div>
 
-<FormInput col="3" innerProps={{ min: 1, max: 3 }} />
-<FormDatePicker col="4" innerProps={{ options: {} }} />
-<Badge aria-checked>TEST</Badge>
-
 <style>
 	:global(body),
 	:global(html),

@@ -337,8 +337,9 @@ export interface ElProps<T extends EventTarget = HTMLDivElement>
 	extends CssProps,
 		HTMLAttributes<T> {
 	tag?: HTMLTags
-	element?: HTMLElement // should be T
+	element?: HTMLElement
 	componentName?: string
 	cssProps?: object
-	value?: any
+	value?: unknown
+	for?: string
 }

@@ -5,16 +5,10 @@
 
 	type $$Props = FormDatePickerProps
 
-	// export let disabled: $$Props['disabled'] = undefined
-	// export let borderRounded: $$Props['borderRounded'] = undefined
-	// export let borderFlush: $$Props['borderFlush'] = undefined
-	// export let placeholder: $$Props['placeholder'] = undefined
+	export let componentName: $$Props['componentName'] = 'form-datepicker'
 	export let required: $$Props['required'] = undefined
-	// export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
 	export let innerProps: $$Props['innerProps'] = undefined
 
 	let props: FormFieldProps = {}
@@ -22,21 +16,15 @@
 
 	$: {
 		props = {
+			componentName,
 			required,
-			label,
-			hint,
 			state,
 		}
 
 		datePickerProps = {
 			...innerProps,
-			// placeholder,
-			// disabled,
 			required,
-			// size,
 			state,
-			// borderRounded,
-			// borderFlush,
 		}
 	}
 </script>

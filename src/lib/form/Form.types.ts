@@ -9,7 +9,7 @@ import type { DatePickerProps } from '../date-picker/DatePicker.types'
 import type { FileUploadProps } from '../file-upload/FileUpload.types'
 import type { TextareaProps } from '$lib/textarea'
 
-export interface FormFieldProps<T = undefined> extends Partial<ElProps> {
+export interface FormFieldProps<T = any> extends Partial<ElProps> {
 	label?: string
 	required?: boolean
 	hint?: string
@@ -26,20 +26,41 @@ export interface FormTextAreaProps extends Partial<FormFieldProps<TextareaProps>
 }
 
 export interface FormSwitchProps extends Partial<FormFieldProps<SwitchProps>> {
-	checked: SwitchProps['checked']
+	checked?: SwitchProps['checked']
+	value?: SwitchProps['value']
 }
 
-// export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}
+export interface FormRadioGroupProps extends Partial<FormFieldProps<RadioGroupProps>> {
+	value?: RadioGroupProps['value']
+	items?: RadioGroupProps['items']
+	inline?: RadioGroupProps['inline']
+	reverse?: RadioGroupProps['reverse']
+}
 
-// export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
+export interface FormSelectProps extends Partial<FormFieldProps<SelectProps>> {
+	items?: SelectProps['items']
+	value?: SelectProps['value']
+}
 
-// export interface FormCheckboxGroupProps
-// 	extends Partial<FormFieldProps>,
-// 		Partial<CheckboxGroupProps> {}
+export interface FormCheckboxGroupProps extends Partial<FormFieldProps<CheckboxGroupProps>> {
+	items?: CheckboxGroupProps['items']
+	value?: CheckboxGroupProps['value']
+	inline?: CheckboxGroupProps['inline']
+}
 
-// export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
-export interface FormDatePickerProps extends Partial<FormFieldProps<DatePickerProps>> {}
-// export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> {}
-// export interface FormAutocompleteProps
-// 	extends Partial<FormFieldProps>,
-// 		Partial<AutocompleteProps> {}
+export interface FormCheckboxProps extends Partial<FormFieldProps<CheckboxProps>> {
+	checked?: CheckboxProps['checked']
+	value?: CheckboxProps['value']
+	inline?: CheckboxProps['inline']
+}
+export interface FormDatePickerProps extends Partial<FormFieldProps<DatePickerProps>> {
+	value?: DatePickerProps['value']
+}
+export interface FormFileUploadProps extends Partial<FormFieldProps<FileUploadProps>> {
+	files?: FileUploadProps['files']
+}
+export interface FormAutocompleteProps extends Partial<FormFieldProps<AutocompleteProps>> {
+	items?: AutocompleteProps['items']
+	value?: AutocompleteProps['value']
+	multiple?: AutocompleteProps['multiple']
+}

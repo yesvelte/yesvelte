@@ -4,7 +4,10 @@
 </script>
 
 <FormSwitch
-	description="Pushes will be rejected if they attempt to update more than this. Learn more about this setting, and send us your feedback."
+	innerProps={{
+		description:
+			'Pushes will be rejected if they attempt to update more than this. Learn more about this setting, and send us your feedback.',
+	}}
 	required
 	bind:value
 	label="Pushes">

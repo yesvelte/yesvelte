@@ -5,34 +5,28 @@
 
 	type $$Props = FormAutocompleteProps
 
-	export let disabled: $$Props['disabled'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let items: $$Props['items'] = []
-	export let key: $$Props['key'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
+	export let componentName: $$Props['componentName'] = 'form-autocomplete'
+	export let innerProps: $$Props['innerProps'] = undefined
 	export let required: $$Props['required'] = undefined
-	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
+
 	export let value: $$Props['value'] = undefined
+	export let items: $$Props['items'] = []
+	export let multiple: $$Props['multiple'] = false
 
 	let props: $$Props = {}
-	let autocompleteProps: $$Props = {}
+	let autocompleteProps: $$Props['innerProps'] = {}
 
 	$: {
 		props = {
 			required,
-			label,
-			hint,
 			state,
 		}
 
 		autocompleteProps = {
-			disabled,
+			...innerProps,
 			items,
-			key,
-			placeholder,
-			size,
+			multiple,
 			state,
 		}
 	}

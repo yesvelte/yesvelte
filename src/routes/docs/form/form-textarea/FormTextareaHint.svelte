@@ -5,7 +5,7 @@
 <FormTextarea
 	label="Email"
 	hint="We'll never share your email with anyone else."
-	placeholder="Enter your email..." />
+	innerProps={{ placeholder: 'Enter your email...' }} />
 <FormTextarea
 	label="Email"
 	state="valid"

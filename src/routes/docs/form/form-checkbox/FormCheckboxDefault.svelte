@@ -5,7 +5,11 @@
 	let checked: boolean = false
 </script>
 
-<FormCheckbox description="This is description" bind:value bind:checked label="Form Checkbox">
+<FormCheckbox
+	innerProps={{ description: 'This is description' }}
+	bind:value
+	bind:checked
+	label="Form Checkbox">
 	I agree
 </FormCheckbox>
 

@@ -5,19 +5,18 @@
 
 	type $$Props = FormCheckboxGroupProps
 
-	export let color: $$Props['color'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-checkbox-group'
+	export let innerProps: $$Props['innerProps'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
 
-	let checkboxGroupProps: $$Props = {}
+	export let value: $$Props['value'] = undefined
+	
+	let checkboxGroupProps: $$Props['innerProps'] = {}
 	$: checkboxGroupProps = {
-		color,
+		...innerProps,
 		inline,
 		items,
-		reverse,
 	}
 </script>
 

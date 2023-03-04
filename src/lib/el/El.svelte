@@ -9,7 +9,7 @@
 	import { classname, forwardEventsBuilder } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
 
-	type $$Props = Partial<ElProps>
+	type $$Props = Partial<ElProps<any>>
 
 	// default properties
 	export let element: $$Props['element'] = undefined

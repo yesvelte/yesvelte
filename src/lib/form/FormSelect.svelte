@@ -5,25 +5,22 @@
 
 	type $$Props = FormSelectProps
 
-	export let items: $$Props['items']
+	export let items: $$Props['items'] = undefined
 	export let value: $$Props['value'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
+	// export let label: $$Props['label'] = undefined
+	// export let hint: $$Props['hint'] = undefined
 	export let required: $$Props['required'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
+	export let innerProps: $$Props['innerProps'] = undefined
 
-	let selectProps: SelectProps = {}
+	let selectProps: $$Props['innerProps'] = {}
 	let props: $$Props = {}
 
 	$: {
 		selectProps = {
-			placeholder,
-			disabled,
-			size,
+			...innerProps,
+			required,
 			items,
 			state,
 		}
@@ -31,8 +28,6 @@
 		props = {
 			componentName,
 			required,
-			label,
-			hint,
 			state,
 		}
 	}

@@ -6,8 +6,8 @@
 	type $$Props = FormFieldProps
 
 	export let componentName: $$Props['componentName'] = 'form-field'
-	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let label: $$Props['label'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let state: $$Props['state'] = undefined
 </script>

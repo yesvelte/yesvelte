@@ -1,12 +1,11 @@
+import type { HTMLSelectAttributes } from 'svelte/elements'
 import type { ElProps } from '../el'
 import type { InputSizes, InputStates } from '../input'
 
-export interface AutocompleteProps extends Partial<ElProps> {
+export type AutocompleteProps = Partial<ElProps & HTMLSelectAttributes> & {
 	debounce?: number
-	disabled?: boolean
 	items?: (string | any)[]
 	key?: string | ((item: any) => string)
-	placeholder?: string
 	size?: InputSizes
 	state?: InputStates
 	value?: string | any | any[]

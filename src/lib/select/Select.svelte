@@ -4,6 +4,13 @@
 
 	type $$Props = SelectProps
 
+	type $$Slots = {
+		default: {
+			item: any
+			index: number
+		}
+	}
+
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
 	export let value: $$Props['value'] = undefined
@@ -43,6 +50,6 @@
 			</option>
 		{/each}
 	{:else}
-		<slot />
+		<slot item={undefined} index={0} />
 	{/if}
 </El>

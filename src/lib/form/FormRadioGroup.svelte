@@ -5,17 +5,17 @@
 
 	type $$Props = FormRadioGroupProps
 
-	export let color: $$Props['color'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-radio-group'
+	export let innerProps: $$Props['innerProps'] = undefined
 
-	let radioGroupProps: $$Props = {}
+	let radioGroupProps: $$Props['innerProps'] = {}
 	$: {
 		radioGroupProps = {
-			color,
+			...innerProps,
 			inline,
 			reverse,
 			items,

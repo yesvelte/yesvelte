@@ -5,6 +5,13 @@
 
 	type $$Props = CheckboxGroupProps
 
+	type $$Slots = {
+		default: {
+			item: any,
+			index: number
+		}
+	}
+
 	export let color: $$Props['color'] = undefined
 	export let componentName: $$Props['componentName'] = 'checkbox-group'
 	export let inline: $$Props['inline'] = undefined
@@ -49,6 +56,6 @@
 			</Checkbox>
 		{/each}
 	{:else}
-		<slot />
+		<slot item={undefined} index={0}/>
 	{/if}
 </El>

@@ -2,7 +2,9 @@
 	import { FormSwitch } from 'yesvelte'
 </script>
 
-<FormSwitch reverse label="HTML" value description="This is description">Text of Switch</FormSwitch>
-<FormSwitch reverse label="CSS (disbaled)" disabled>Text</FormSwitch>
-<FormSwitch reverse label="JavaScript" />
-<FormSwitch reverse label="Svelte" />
+<FormSwitch innerProps={{ reverse: true, description: 'This is description' }} label="HTML" value>
+	Text of Switch
+</FormSwitch>
+<FormSwitch innerProps={{ reverse: true }} label="CSS (disbaled)" disabled>Text</FormSwitch>
+<FormSwitch innerProps={{ reverse: true }} label="JavaScript" />
+<FormSwitch innerProps={{ reverse: true }} label="Svelte" />

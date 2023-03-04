@@ -6,22 +6,19 @@
 	type $$Props = FormInputProps
 
 	export let componentName: $$Props['componentName'] = 'form-input'
+	export let innerProps: $$Props['innerProps'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let state: $$Props['state'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
+
 	export let value: $$Props['value'] = undefined
-	export let innerProps: $$Props['innerProps'] = undefined
 
 	let props: FormFieldProps = {}
 	let inputProps: $$Props['innerProps'] = {}
 
 	$: props = {
-		required,
-		label,
-		hint,
-		state,
 		componentName,
+		required,
+		state,
 	}
 
 	$: inputProps = {

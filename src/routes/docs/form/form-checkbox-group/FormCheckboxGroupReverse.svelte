@@ -8,6 +8,6 @@
 	let value = [items[1]]
 </script>
 
-<FormCheckboxGroup label="Select Language" reverse {items} bind:value />
+<FormCheckboxGroup label="Select Language" innerProps={{ reverse: true }} {items} bind:value />
 
 <i>value: {value}</i>

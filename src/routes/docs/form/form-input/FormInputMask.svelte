@@ -16,7 +16,7 @@
 	}
 </script>
 
-<FormInput label="Credit Card" mask="9999 9999 9999 9999" {maskOptions} />
-<FormInput label="Phone Number" mask="(999)-999-9999" {maskOptions} />
-<FormInput label="Postal Code" mask="A9A-9A9" {maskOptions} />
-<FormInput label="Date Time" mask="datetime" maskOptions={dateOptions} />
+<FormInput label="Credit Card" innerProps={{mask: "9999 9999 9999 9999", maskOptions}} />
+<FormInput label="Phone Number" innerProps={{mask: "(999)-999-9999", maskOptions}} />
+<FormInput label="Postal Code" innerProps={{mask: "A9A-9A9", maskOptions}} />
+<FormInput label="Date Time" innerProps={{mask:"datetime", maskOptions: dateOptions}} />

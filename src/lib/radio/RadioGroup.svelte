@@ -5,6 +5,13 @@
 
 	type $$Props = RadioGroupProps
 
+	type $$Slots = {
+		default?: {
+			item: any
+			index: number
+		}
+	}
+
 	export let color: $$Props['color'] = undefined
 	export let componentName: $$Props['componentName'] = 'radio-group'
 	export let inline: $$Props['inline'] = undefined
@@ -38,6 +45,6 @@
 			</Radio>
 		{/each}
 	{:else}
-		<slot />
+		<slot item={undefined} index={0} />
 	{/if}
 </El>

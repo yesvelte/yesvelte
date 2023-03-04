@@ -5,7 +5,10 @@
 	let checked: boolean = false
 </script>
 
-<FormSwitch description="This is description" bind:checked bind:value label="Form Switch"
-	>I agree</FormSwitch>
+<FormSwitch
+	innerProps={{ description: 'This is description' }}
+	bind:checked
+	bind:value
+	label="Form Switch">I agree</FormSwitch>
 
 <i>value: {value}, checked={checked}</i>

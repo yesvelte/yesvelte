@@ -1,16 +1,15 @@
+import type { HTMLInputAttributes } from 'svelte/elements'
 import type { Colors, ElProps } from '../el'
 
-export interface RadioProps extends Partial<ElProps> {
-	disabled?: boolean
-	readonly?: boolean
+export type RadioProps = Partial<ElProps<HTMLInputElement> & HTMLInputAttributes> & {
 	checked?: boolean
 	description?: string
-	name?: string
 	label?: string
 	color?: Colors
 	inline?: boolean
 	reverse?: boolean
 	for?: string
+	value?: any
 }
 
 export interface RadioGroupProps extends Partial<ElProps> {

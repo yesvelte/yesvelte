@@ -5,6 +5,7 @@
 	import moment from 'moment'
 	import type { DatePickerProps } from './DatePicker.types'
 	import { El } from '../el'
+	import type { ChangeEventHandler } from 'svelte/elements'
 
 	type $$Props = DatePickerProps
 
