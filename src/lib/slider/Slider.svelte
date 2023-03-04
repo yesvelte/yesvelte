@@ -1,0 +1,74 @@
+<script lang="ts">
+	import { onDestroy, setContext } from 'svelte'
+	import { onMount } from 'svelte'
+	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
+	import { writable } from 'svelte/store'
+	import type { SliderKnobType, SliderProps } from './Slider.types'
+	import { El, type Colors } from '../el'
+	import { classname } from '$lib/internal'
+
+	type $$Props = SliderProps
+
+	export let color: $$Props['color'] = undefined
+	export let min: $$Props['min'] = undefined
+	export let max: $$Props['max'] = undefined
+	export let step: $$Props['step'] = undefined
+	export let vertical: $$Props['vertical'] = undefined
+	export let connect: $$Props['connect'] = undefined
+
+	let knobs: SliderKnobType[] = []
+	let element: HTMLElement
+	let instance: NoUiSlider
+
+	function register(knob: any) {
+		const id = knobs.length
+		knobs = [...knobs, knob]
+
+		$values[id] = knob.value
+		return id
+	}
+
+	function unregister(id: number) {
+		knobs = knobs.filter((_, index) => index !== id)
+	}
+
+	const values = writable<number[] | string[]>([])
+
+	onMount(() => {
+		if (!element) return
+
+		const options: Options = {
+			start: knobs.map((knob) => knob.value),
+			orientation: vertical ? 'vertical' : 'horizontal',
+			tooltips: knobs.map((knob) => knob.tooltip ?? false),
+			connect: [connect ?? false, ...knobs.map((knob) => knob.connect ?? false)],
+			step,
+			range: {
+				min: min ?? 0,
+				max: max ?? 100,
+			},
+		}
+
+		instance = noUiSlider.create(element, options)
+
+		instance.on('update', (newValues, handle) => {
+			$values[handle] = +newValues[handle]
+		})
+	})
+
+	onDestroy(() => {
+		if (instance) {
+			instance.destroy()
+		}
+	})
+
+	function setValue(id: number, newValue: number) {
+		instance.setHandle(id, newValue)
+	}
+
+	setContext('SLIDER', { register, unregister, setValue, values })
+</script>
+
+<!-- <El bind:element componentName="slider" cssProps={{ color, vertical }} /> -->
+<div class={classname('slider', { color, vertical })} bind:this={element} />
+<slot />
