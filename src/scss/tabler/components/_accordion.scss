@@ -15,9 +15,37 @@ $accordion-props: (
 			collapsed: '.collapsed'
 		)
 	),
-	body: '.accordion-body'
+	body: (
+		null: '.accordion-body',
+		wrapper: (
+			null: '.collapse',
+			open: '.show',
+			collapsing: '.collapsing'
+		)
+	)
 );
 
 .#{$prefix-accordion} {
 	@include apply-props($accordion-props);
+
+	&-body {
+
+		&-transition-leaving {
+			height: 0;
+			transition: height 0.15s ease-out;
+			overflow: hidden;
+		}
+		
+		&-transition-entering {
+			transition: height 0.15s ease-out;
+			overflow: hidden;
+		}
+
+		&-transition-hide {
+			display: none;
+		}
+		&-transition-show {
+			display: block;
+		}
+	}
 }

@@ -9,7 +9,7 @@ $props: (
 		btn: '.btn-close',
 		title: '.offcanvas-title'
 	),
-	body: '.offcanvas-body'
+	body: '.offcanvas-body',
 );
 
 .#{$prefix-offcanvas} {
@@ -26,6 +26,16 @@ $props: (
 		right: 0 !important;
 		z-index: 999;
 	}
+
+	&-transition-entering & {
+		@extend .showing;
+	}
+	&-transition-leaving & {
+		@extend .hiding;
+	}
+	&-transition-show & {
+		@extend .show;
+	}	
 }
 
 body:has(.#{$prefix-offcanvas}-no-scroll) {
