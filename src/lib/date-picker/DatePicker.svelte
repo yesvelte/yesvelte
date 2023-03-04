@@ -98,7 +98,7 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" bind:value bind:element {...$$restProps} {cssProps} {...props} />
+	<El tag="input" {value} bind:element {...$$restProps} {cssProps} {...props} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}
