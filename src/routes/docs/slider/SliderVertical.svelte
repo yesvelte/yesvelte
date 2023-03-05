@@ -14,8 +14,6 @@
 	<Slider color="yellow" connect vertical>
 		<SliderKnob bind:value />
 	</Slider>
-
-	<El>
-		{value}
-	</El>
 </El>
+
+<i>value: {value}</i>

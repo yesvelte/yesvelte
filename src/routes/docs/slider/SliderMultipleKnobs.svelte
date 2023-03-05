@@ -21,6 +21,4 @@
 	</Slider>
 </FormField>
 
-<br />
-
-Selected ranges ({value1} - {value2}), ({value3} - {value4}), ({value5} - {value6})
+<i>Selected ranges ({value1} - {value2}), ({value3} - {value4}), ({value5} - {value6})</i>

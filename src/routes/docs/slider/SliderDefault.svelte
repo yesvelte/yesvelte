@@ -9,7 +9,4 @@
 	<SliderKnob bind:value />
 </Slider>
 
-<br />
-{#if value}
-	{value}
-{/if}
+<i>value: {value}</i>

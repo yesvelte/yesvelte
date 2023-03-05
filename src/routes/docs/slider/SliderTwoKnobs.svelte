@@ -13,6 +13,4 @@
 	</Slider>
 </FormField>
 
-<br />
-
-Search Products in this range ({'$'}{minPrice} - {'$'}{maxPrice})
+<i>Search Products in this range ({'$'}{minPrice} - {'$'}{maxPrice})</i>

@@ -1,7 +1,11 @@
 import type { Colors, ElProps } from '../el'
 import type { Writable } from 'svelte/store'
 
-export type SliderKnobType = { value: number; connect: boolean; tooltip: boolean }
+export type SliderKnobType = {
+	value: number
+	connect: boolean
+	tooltip: boolean
+}
 
 export type SliderContext = {
 	register: (knob: SliderKnobType) => number
