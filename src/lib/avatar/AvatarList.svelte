@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { El } from '../el'
-
 	import type { AvatarListProps } from './AvatarList.types'
 
 	type $$Props = AvatarListProps
@@ -8,8 +7,8 @@
 	export let componentName: $$Props['componentName'] = 'avatar-list'
 	export let stacked: $$Props['stacked'] = undefined
 
-	let cssProps: AvatarListProps = {}
-	let props: AvatarListProps = {}
+	let cssProps: $$Props = {}
+	let props: $$Props = {}
 	$: {
 		cssProps = {
 			stacked,

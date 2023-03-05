@@ -1,7 +1,3 @@
-//
-// Button Group
-//
-
 $props: (
 	size: (
 		sm: '.btn-group-sm',
@@ -17,8 +13,6 @@ $props: (
 		)
 	)
 );
-
-$button-group-sizes: 'sm' 'lg';
 
 .#{$prefix-button-group} {
 	@include apply-props($props);

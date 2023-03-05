@@ -12,6 +12,9 @@
 	import CardRibbon from './CardRibbon.svelte'
 	import CardFooter from './CardFooter.svelte'
 	import CardBackground from './CardBackground.svelte'
+	import CardSize from './CardSize.svelte'
+	import CardRotate from './CardRotate.svelte'
+	import CardState from './CardState.svelte'
 </script>
 
 <Page title="Cards">
@@ -44,26 +47,29 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Title and image">
-		<p slot="description">
-			To create a more visually appealing card, add a title and an image. Thanks to that, the card
-			will go well with your inteface design and draw user’s attention.
-		</p>
-		<Preview src="./CardImage.svelte">
-			<div class="custom-class"><CardImage /></div>
+	<Doc title="Size">
+		<Preview src="./CardSize.svelte">
+			<div class="custom-class">
+				<CardSize />
+			</div>
 		</Preview>
 	</Doc>
 
-	<Doc title="Blog post">
-		<p slot="description">
-			Add an image to your blog post card to make it eye-catching. You can do it by adding the
-			image. Thanks to the grid within CardBody, the author details will be displayed at the bottom
-			of the card.
-		</p>
+	<Doc title="Rotate">
+		<Preview src="./CardRotate.svelte">
+			<div class="custom-class">
+				<CardRotate />
+			</div>
+		</Preview>
 	</Doc>
-	<Preview src="./CardBlog.svelte">
-		<div class="custom-class"><CardBlog /></div>
-	</Preview>
+
+	<Doc title="State">
+		<Preview src="./CardState.svelte">
+			<div class="custom-class">
+				<CardState />
+			</div>
+		</Preview>
+	</Doc>
 
 	<Doc title="Row deck">
 		<p slot="description">
@@ -75,14 +81,14 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Background color">
+	<Doc title="Background">
 		<Preview src="./CardBackground.svelte">
 			<div class="custom-class"><CardBackground /></div>
 		</Preview>
 	</Doc>
 
 	<Doc
-		title="Color variations"
+		title="Status"
 		description="Add a status color to your card, either at the top or on the side of the card, to customise it and make it more eye-catching.">
 		<Preview src="./CardColor.svelte">
 			<div class="custom-class"><CardColor /></div>
@@ -109,24 +115,45 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Media" description="Add a CardMedia to show image and other medias inside our card.">
-		<Preview src="./CardMedia.svelte">
-			<div class="custom-class"><CardMedia /></div>
-		</Preview>
-	</Doc>
-
 	<Doc title="Footer">
 		<Preview src="./CardFooter.svelte">
 			<div class="custom-class"><CardFooter /></div>
 		</Preview>
 	</Doc>
+
+	<Doc title="Title and image">
+		<p slot="description">
+			To create a more visually appealing card, add a title and an image. Thanks to that, the card
+			will go well with your inteface design and draw user’s attention.
+		</p>
+		<Preview src="./CardImage.svelte">
+			<div class="custom-class"><CardImage /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Blog post">
+		<p slot="description">
+			Add an image to your blog post card to make it eye-catching. You can do it by adding the
+			image. Thanks to the grid within CardBody, the author details will be displayed at the bottom
+			of the card.
+		</p>
+		<Preview src="./CardBlog.svelte">
+			<div class="custom-class"><CardBlog /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Media" description="Add a CardMedia to show image and other medias inside our card.">
+		<Preview src="./CardMedia.svelte">
+			<div class="custom-class"><CardMedia /></div>
+		</Preview>
+	</Doc>
 </Page>
 
 <style>
-	.custom-class > :global(.u-card) {
+	.custom-class > :global(.y-card) {
 		margin: 0.5rem 0;
 	}
-	.custom-class > :global(.u-el-row > .u-el > .u-card) {
+	.custom-class > :global(.y-el-row > .y-el > .y-card) {
 		margin: 0.25rem 0;
 	}
 </style>

@@ -9,6 +9,8 @@
 		CardHeader,
 		CardBody,
 	} from 'yesvelte'
+	import Prism from './Prism.svelte'
+
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
 	export let style: string | undefined = undefined
@@ -34,40 +36,33 @@
 				{/if}
 			</TabList>
 		</CardHeader>
-		<CardBody>
-			<TabContent>
-				<TabPanel>
+
+		<TabContent>
+			<TabPanel>
+				<CardBody>
 					<slot />
+				</CardBody>
+			</TabPanel>
+			{#if markup}
+				<TabPanel>
+					<Prism language="html" source={markup} />
 				</TabPanel>
-				{#if markup}
-					<TabPanel>
-						<figure class="highlight">
-							<pre><code>{markup}</code></pre>
-						</figure>
-					</TabPanel>
-				{/if}
-				{#if script}
-					<TabPanel>
-						<figure class="highlight">
-							<pre><code>{script}</code></pre>
-						</figure>
-					</TabPanel>
-				{/if}
-				{#if style}
-					<TabPanel>
-						<figure class="highlight">
-							<pre><code>{style}</code></pre>
-						</figure>
-					</TabPanel>
-				{/if}
-				{#if src && false}
-					<TabPanel>
-						<figure class="highlight">
-							<pre><code>{src}</code></pre>
-						</figure>
-					</TabPanel>
-				{/if}
-			</TabContent>
-		</CardBody>
+			{/if}
+			{#if script}
+				<TabPanel>
+					<Prism language="javascript" source={script} />
+				</TabPanel>
+			{/if}
+			{#if style}
+				<TabPanel>
+					<Prism language="css" source={style} />
+				</TabPanel>
+			{/if}
+			{#if src && false}
+				<TabPanel>
+					<Prism language="html" source={src} />
+				</TabPanel>
+			{/if}
+		</TabContent>
 	</Tabs>
 </Card>

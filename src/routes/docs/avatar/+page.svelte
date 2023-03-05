@@ -16,7 +16,7 @@
 		personalised. They are often used in communication apps, collaboration tools and social media.
 	</p>
 
-	<Doc title="Default markup">
+	<Doc title="Default">
 		<p slot="description">
 			Use the <code>Avatar</code> component to add an avatar to your interface design for greater customisation.
 		</p>
@@ -27,7 +27,7 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Avatar Colors" description="Customize the color of the avatars.">
+	<Doc title="Color" description="Customize the color of the avatars.">
 		<Preview src="./AvatarColors.svelte">
 			<div class="custom-class">
 				<AvatarColors />
@@ -88,7 +88,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-avatar) {
+	.custom-class > :global(.y-avatar) {
 		margin-bottom: 0.2rem;
 	}
 </style>

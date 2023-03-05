@@ -1,20 +1,47 @@
 <script lang="ts">
-	import { Card, CardBody, El } from 'yesvelte'
+	import { Card, CardBody, El, Icon } from 'yesvelte'
 	import ToC from './ToC.svelte'
-
-	export let title = ''
-	export let description = ''
+	import { navigations } from '../routes/docs/navigations'
+	import { page } from '$app/stores'
+	export let title: string = ''
+	export let description: string = ''
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
+	<title>{$page.data.metaData.title ?? title}</title>
+	<meta name="description" content={$page.data.metaData.description ?? description} />
 </svelte:head>
 
 <El container="lg">
 	<El row>
 		<El colMd="2" d="none" dMd="inline-block">
-			<Card title="Menu">Menu will come here!</Card>
+			<ul class="nav nav-pills nav-vertical" id="docs">
+				{#each navigations as navigation}
+					<li class="nav-item">
+						<a
+							href={navigation.route ? navigation.route : `#${navigation.id}`}
+							class="nav-link"
+							data-bs-toggle="collapse"
+							aria-expanded="false">
+							{navigation.title}
+							{#if navigation.children}
+								<span class="nav-link-toggle" />
+							{/if}
+						</a>
+						{#if navigation.children}
+							<ul class="nav nav-pills" data-bs-parent="#docs" id={navigation.id} style="">
+								{#each navigation.children as menu}
+									{@const [pack, icon] = (menu.icon ?? ':').split(':')}
+									<li class="nav-item">
+										<a href={menu.route} class="nav-link gap-2"
+											><Icon {pack} name={icon} /> {menu.title}</a>
+									</li>
+								{/each}
+							</ul>
+						{/if}
+					</li>
+				{/each}
+			</ul>
 		</El>
 		<El colMd="8" colSm="12">
 			<Card size="lg">

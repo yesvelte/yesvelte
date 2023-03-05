@@ -16,6 +16,9 @@ function compile(file) {
 					if (url.startsWith('@') || url.startsWith('~')) {
 						url = path.resolve('node_modules', url.substr(1))
 					}
+					if (url.startsWith('../../node_modules/')) {
+						url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
+					}
 					return new URL('file://' + url)
 				},
 			},
@@ -32,4 +35,9 @@ for (const file of files) {
 		fs.mkdirSync('./static/css', { recursive: true })
 	}
 	fs.writeFileSync(`./static/css/${file}.css`, css, {})
+
+	if (!fs.existsSync('./src/lib/css')) {
+		fs.mkdirSync('./src/lib/css', { recursive: true })
+	}
+	fs.writeFileSync(`./src/lib/css/${file}.css`, css, {})
 }

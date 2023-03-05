@@ -1,0 +1,33 @@
+//
+// File Upload
+//
+
+$file-upload-wrapper-props: (
+	null: '.input-group',
+	size: (
+		sm: '.input-group-sm',
+		md: '.input-group',
+		lg: '.input-group-lg'
+	)
+);
+
+$file-upload-props: (
+	null: '.form-control',
+	size: (
+		sm: '.form-control-sm',
+		md: '.form-control',
+		lg: '.form-control-lg'
+	),
+	state: (
+		valid: '.is-valid',
+		invalid: '.is-invalid'
+	)
+);
+
+.#{$prefix-file-upload-wrapper} {
+	@include apply-props($file-upload-wrapper-props);
+}
+
+.#{$prefix-file-upload} {
+	@include apply-props($file-upload-props);
+}

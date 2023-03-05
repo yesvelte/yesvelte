@@ -1,0 +1,69 @@
+name: Publish Site
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release') }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      # setup git user
+      - run: git config user.name "$GITHUB_ACTOR"
+      - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      # incremnet package version and create a commit
+      - run: npm version prerelease --preid=next -m "Release %s"
+
+      - uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.PUSH_ON_NEXT_BRANCH_TOKEN }}
+          branch: dev
+
+  publish-npm:
+    if: ${{ startsWith(github.event.head_commit.message, 'Release') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run publish -- --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  deploy-site:
+    if: ${{ !startsWith(github.event.head_commit.message, 'Release') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run build:site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload build folder
+          path: './build'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
