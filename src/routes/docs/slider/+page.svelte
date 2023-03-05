@@ -5,6 +5,7 @@
 	import SliderDefault from './SliderDefault.svelte'
 	import SliderMultipleKnobs from './SliderMultipleKnobs.svelte'
 	import SliderRange from './SliderRange.svelte'
+	import SliderTooltip from './SliderTooltip.svelte'
 	import SliderTwoKnobs from './SliderTwoKnobs.svelte'
 	import SliderTwoKnobsConnected from './SliderTwoKnobsConnected.svelte'
 	import SliderVertical from './SliderVertical.svelte'
@@ -44,6 +45,11 @@
 	<Doc title="Range & Steps">
 		<Preview src="./SliderRange.svelte">
 			<SliderRange />
+		</Preview>
+	</Doc>
+	<Doc title="Tooltips">
+		<Preview src="./SliderTooltip.svelte">
+			<SliderTooltip />
 		</Preview>
 	</Doc>
 	<Doc title="Colors">
