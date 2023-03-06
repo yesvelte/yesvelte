@@ -19,7 +19,7 @@
 		props = {
 			componentName,
 			href,
-			'aria-current': active ?? 'page',
+			'aria-current': `${active ?? 'page'}`,
 		}
 	}
 </script>

@@ -12,7 +12,7 @@
 </script>
 
 <FormRadioGroup label="Select Language" bind:value {items} let:item let:index>
-	{index + 1}- {item.text} ({item.code})
+	{(index || 0) + 1}- {item.text} ({item.code})
 </FormRadioGroup>
 
 <i>value: {JSON.stringify(value)}</i>

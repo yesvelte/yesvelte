@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '../el/El.types'
+import type { BackgroundColors, Colors, ElProps } from '../el/El.types'
 
 declare type CardStampPositions =
 	| undefined
@@ -9,7 +9,7 @@ declare type CardStampPositions =
 declare type CardStampSizes = undefined | 'sm' | 'md' | 'lg'
 
 export interface StampProps extends Partial<ElProps> {
-	bgColor?: Colors
+	bgColor?: BackgroundColors
 	textColor?: Colors
 	iconPosition?: CardStampPositions
 	size?: CardStampSizes
