@@ -26,6 +26,6 @@
 	let value: any = undefined
 </script>
 
-<Select bind:value {items} let:item let:index>{item.value} - {item.name}</Select>
+<Select bind:value {items} let:item>{item.value} - {item.name}</Select>
 
 <i>value: {JSON.stringify(value)}</i>

@@ -3,11 +3,12 @@ $progress-sizes: 'sm' 'md';
 $props: (
 	null: '.progress',
 	size: generate_props($progress-sizes, ('.progress-')),
+	separated: '.progress-separated',
 	bar: (
 		null: '.progress-bar',
 		visually-hidden: '.visually-hidden',
-		indeterminate: '.progress-bar-indeterminate',
 		color: generate_props($theme-colors, ('.bg-')),
+		indeterminate: '.progress-bar-indeterminate',
 		striped: (
 			null: '.progress-bar-striped',
 			animated: '.progress-bar-striped' '.progress-bar-animated'

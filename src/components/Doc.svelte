@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let title: string = ''
-	export let description: string = ''
+	export let title = ''
+	export let description = ''
 	$: href = title.replace(/\s/g, '_').replace(/\//g, '_')
 </script>
 
 <div class="mt-3 mb-2">
-	<a href="#{href}">#</a>
+	<a class="h2 link-primary" href="#{href}">#</a>
 	<h2 class="d-inline" data-href={encodeURIComponent(href)} id={href}>
 		{title}
 	</h2>

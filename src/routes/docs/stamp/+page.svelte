@@ -32,7 +32,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-el-row > .u-el > .u-card) {
+	.custom-class > :global(.y-el-row > .y-el > .y-card) {
 		margin: 0.25rem 0;
 	}
 </style>

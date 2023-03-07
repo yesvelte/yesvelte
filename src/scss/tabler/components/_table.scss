@@ -11,23 +11,18 @@ $table-props: (
 	),
 	sm: '.table-sm',
 	md: '.table-md',
-	color: generate_props($theme-colors, ('.table-'))
-);
-
-.#{$prefix-table-parent} {
-	$props: (
-		null: '.table-parent',
+	color: generate_props($theme-colors, ('.table-')),
+	wrapper: (
 		responsive: (
 			null: '.table-responsive',
 			sm: '.table-responsive-sm',
 			md: '.table-responsive-md',
 			lg: '.table-responsive-lg',
-			xl: '.table-responsive-xl'
+			xl: '.table-responsive-xl',
+			xxl: '.table-responsive-xxl'
 		)
-	);
-
-	@include apply-props($props);
-}
+	)
+);
 
 .#{$prefix-table} {
 	@include apply-props($table-props);

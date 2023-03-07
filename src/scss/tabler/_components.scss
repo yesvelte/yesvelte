@@ -11,7 +11,6 @@
 @import './components/card';
 @import './components/carousel';
 @import './components/confirm';
-@import './components/dialog';
 @import './components/divider';
 @import './components/dot';
 @import './components/fieldset';
@@ -20,14 +19,17 @@
 @import './components/icon';
 @import './components/label';
 @import './components/menu';
+@import './components/modal';
 @import './components/offcanvas';
 @import './components/page';
 @import './components/popover';
 @import './components/progress';
 @import './components/ribbon';
+@import './components/slider';
 @import './components/spinner';
 @import './components/stamp';
 @import './components/status';
+@import './components/steps';
 @import './components/table';
 @import './components/tabs';
 @import './components/toast';
@@ -37,7 +39,7 @@
 @import './components/autocomplete';
 @import './components/checkbox';
 @import './components/date-picker';
-@import './components/file-uploader';
+@import './components/file-upload';
 @import './components/input';
 @import './components/radio';
 @import './components/select';

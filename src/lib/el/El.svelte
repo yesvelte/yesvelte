@@ -21,7 +21,10 @@
 	export let title: $$Props['title'] = undefined
 	export let tabindex: $$Props['tabindex'] = undefined
 	export let role: $$Props['role'] = undefined
+	export let ariaCurrent: $$Props['aria-current'] = undefined
 	export let ariaLabel: $$Props['aria-label'] = undefined
+	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
+	export let style: $$Props['style'] = undefined
 
 	const forwardEvents = forwardEventsBuilder(get_current_component())
 	let classes: string | undefined
@@ -333,9 +336,9 @@
 			alignSelf,
 			justifyContent,
 		}
-		classes = classname(elComponentName, defaultCssProps)
-		if (componentName !== elComponentName)
-			classes += ' ' + classname(componentName, cssProps, $$props.class)
+		classes = classname(elComponentName, defaultCssProps, $$props.class)
+
+		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
 
 		elProps = {
 			id,
@@ -343,7 +346,10 @@
 			title,
 			tabindex,
 			role,
+			ariaCurrent,
 			ariaLabel,
+			ariaValuenow,
+			style,
 		}
 	}
 </script>

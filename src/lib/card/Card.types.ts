@@ -1,4 +1,4 @@
-import type { Colors, ElProps } from '../el'
+import type { BackgroundColors, Colors, ElProps } from '../el'
 
 declare type CardStatusPositions = undefined | 'top' | 'bottom' | 'start'
 declare type CardStatusSizes = undefined | 'sm' | 'md' | 'lg'
@@ -14,7 +14,7 @@ export interface CardProps extends Partial<ElProps> {
 	statusColor?: Colors
 	statusPosition?: CardStatusPositions
 	statusSize?: CardStatusSizes
-	bgColor?: Colors
+	bgColor?: BackgroundColors
 	borderless?: boolean
 	rotate?: CardRotateDirections
 	state?: CardStates

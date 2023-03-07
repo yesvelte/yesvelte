@@ -83,6 +83,13 @@ export const navigations: Navigation[] = [
 					'Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.',
 			},
 			{
+				route: base_path + '/autocomplete',
+				title: 'Autocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'Autocomplete is a component that allows you to search and select a value from a list of options. It is a combination of a text input and a dropdown menu.',
+			},
+			{
 				route: base_path + '/avatar',
 				title: 'Avatar',
 				icon: 'mdi:account-circle-outline',
@@ -143,6 +150,7 @@ export const navigations: Navigation[] = [
 				title: 'Datepicker',
 				icon: 'material-symbols:date-range-outline',
 			},
+
 			{
 				route: base_path + '/divider',
 				title: 'Divider',
@@ -165,11 +173,10 @@ export const navigations: Navigation[] = [
 					'Group parts of your form to make it well-structured and clearer for users, using the Fieldset element.',
 			},
 			{
-				route: base_path + '/form/form-input',
-				title: 'FormInput',
-				icon: 'iconoir:input-field',
-				description:
-					'FormInput is an input and label wrapper component to be used insisde forms. It supports all props and events of Input and also have some additional features.',
+				route: base_path + '/file-upload',
+				title: 'FileUpload',
+				icon: 'material-symbols:upload-file',
+				description: 'FileUpload component is used for collecting files from local device of user.',
 			},
 			{
 				route: base_path + '/icon',
@@ -198,6 +205,13 @@ export const navigations: Navigation[] = [
 				icon: 'pepicons:label',
 				description:
 					'Label component is used to set a name or some identifier for Form Elements. More details about this component is described in this page.',
+			},
+			{
+				route: base_path + '/modal',
+				title: 'Modal',
+				icon: 'vaadin:modal',
+				description:
+					'The Modal component is a basic way to present content above an enclosing view.',
 			},
 			{
 				route: base_path + '/offcanvas',
@@ -246,7 +260,19 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:stamper',
 				description: 'Use stamp component to make the card view more attractive and eye catching.',
 			},
-
+			{
+				route: base_path + '/steps',
+				title: 'Steps',
+				icon: 'material-symbols:check-circle',
+				description:
+					'Steps component guides users through the steps of a task. It is a kind of navigation bar.',
+			},
+			{
+				route: base_path + '/slider',
+				title: 'Slider',
+				icon: 'radix-icons:slider',
+				description: 'Slider allow users to make selections from a range of values.',
+			},
 			{
 				route: base_path + '/spinner',
 				title: 'Spinner',
@@ -267,6 +293,13 @@ export const navigations: Navigation[] = [
 					'The Switch component provides users the ability to choose between two distinct values. These are very similar to a toggle, or on/off switch, though aesthetically different than a Switch.',
 			},
 			{
+				route: base_path + '/table',
+				title: 'Table',
+				icon: 'mdi:table',
+				description:
+					'Tables are a useful interface element that allows to visualise data and arrange it in a clear way. Thanks to that, users can browse a lot of information at once and a good table design will help you take care of its clarity.',
+			},
+			{
 				route: base_path + '/tabs',
 				title: 'Tabs',
 				icon: 'material-symbols:tab-outline',
@@ -284,6 +317,13 @@ export const navigations: Navigation[] = [
 		title: 'Form Components',
 		id: 'menu-forms',
 		children: [
+			{
+				route: base_path + '/form/form-autocomplete',
+				title: 'FormAutocomplete',
+				icon: 'bi:menu-button-fill',
+				description:
+					'FormAutocomplete supports all props and events of Autocomplete and also have some additional features.',
+			},
 			{
 				route: base_path + '/form/form-checkbox',
 				title: 'FormCheckbox',
@@ -305,6 +345,11 @@ export const navigations: Navigation[] = [
 				icon: 'fluent-mdl2:field-empty',
 			},
 			{
+				route: base_path + '/form/form-file-upload',
+				title: 'FormFileUpload',
+				icon: 'material-symbols:upload-file',
+			},
+			{
 				route: base_path + '/form/form-input',
 				title: 'FormInput',
 				icon: 'iconoir:input-field',
@@ -318,6 +363,12 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-select',
 				title: 'FormSelect',
 				icon: 'vaadin:select',
+			},
+			{
+				route: base_path + '/form/form-slider',
+				title: 'FormSlider',
+				icon: 'radix-icons:slider',
+				description: 'FormSlider allow users to make selections from a range of values.',
 			},
 			{
 				route: base_path + '/form/form-switch',

@@ -42,14 +42,14 @@
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
 	<El
 		tag="input"
-		type="radio"
+		{...{ type: 'radio' }}
 		bind:element={inputElement}
 		{...$$restProps}
 		{...otherProps}
 		{cssProps}
 		on:change />
 	{#if label || $$slots['default']}
-		<El tag="label" componentName="{componentName}-label" for={labelForId}>
+		<El tag="label" componentName="{componentName}-label" {...{ for: labelForId }}>
 			<slot>
 				{#if label}
 					{label}

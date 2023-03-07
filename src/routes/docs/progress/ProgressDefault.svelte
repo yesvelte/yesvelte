@@ -1,5 +1,7 @@
 <script>
-	import { Progress } from 'yesvelte'
+	import { Progress, ProgressBar } from 'yesvelte'
 </script>
 
-<Progress value="38" />
+<Progress>
+	<ProgressBar value="25" />
+</Progress>

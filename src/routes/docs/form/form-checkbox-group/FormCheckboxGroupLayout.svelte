@@ -46,8 +46,8 @@
 		<FormCheckbox col="12" inline bind:checked={tcAccepted} label="Terms and Conditions">
 			I accept terms and conditions of this website and I am over 18 years old. I agree to receive
 			marketing and promotional materials from this website. I understand that I can unsubscribe at
-			any time. I agree to the <a href="#">Terms and Conditions</a>
-			and <a href="#">Privacy Policy</a>.
+			any time. I agree to the <a href={'#'}>Terms and Conditions</a>
+			and <a href={'#'}>Privacy Policy</a>.
 		</FormCheckbox>
 		<El col textAlign="end">
 			<Button color="primary" disabled={!tcAccepted} on:click={onClick}>Submit</Button>

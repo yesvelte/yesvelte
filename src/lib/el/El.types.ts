@@ -40,7 +40,7 @@ export type SocialMediaColors =
 	| 'linkedin'
 	| 'tabler'
 
-export type Colors = ThemeColors | NamedColors | SocialMediaColors
+export type Colors = ThemeColors | NamedColors | SocialMediaColors | (string & {})
 
 export type TextColors = Colors
 
@@ -337,10 +337,13 @@ export interface ElProps extends CssProps {
 	tag?: HTMLTags
 	element?: HTMLElement
 	componentName?: string
-	cssProps?: CssProps
+	cssProps?: object
 	value?: unknown
 	title?: string
 	tabindex?: string | number
 	role?: string
+	'aria-current'?: string
 	'aria-label'?: string
+	'aria-valuenow'?: number
+	style?: string
 }

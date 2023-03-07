@@ -28,6 +28,22 @@ $tab-props: (
 	&-vertical {
 		.#{$prefix-tab}-list {
 			flex-direction: column;
+			padding-right: 0;
+			padding-bottom: calc(var(--u-card-cap-padding-y) * 0.5);
+			border-right: 1px solid var(--u-nav-tabs-border-color);
+
+			.#{$prefix-tab}-item-link-active {
+				width: calc(100% + var(--u-nav-tabs-border-width)) !important;
+				border-bottom-color: var(--u-nav-tabs-border-color) !important;
+				border-right-color: var(--u-card-bg) !important;
+			}
+
+			.#{$prefix-tab}-item-link {
+				width: 100%;
+
+				border-bottom-left-radius: var(--u-nav-tabs-border-radius);
+				border-top-right-radius: 0;
+			}
 		}
 	}
 }
@@ -35,7 +51,7 @@ $tab-props: (
 .#{$prefix-tab} {
 	@include apply-props($tab-props);
 
-	&-item-link > .#{$prefix-icon} {
+	&-item-link:not(.#{$prefix-tab}-item-link-icon) > .#{$prefix-icon} {
 		@extend .me-2;
 	}
 }

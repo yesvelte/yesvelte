@@ -53,7 +53,7 @@ regardless of limited space.">
 </Page>
 
 <style>
-	.custom-class > :global(.u-status) {
+	.custom-class > :global(.y-status) {
 		margin-bottom: 0.5rem;
 	}
 </style>

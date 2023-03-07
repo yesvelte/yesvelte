@@ -5,6 +5,10 @@
 
 	type $$Props = RadioGroupProps
 
+	interface $$Slots {
+		default: { index?: number; item?: any }
+	}
+
 	export let color: $$Props['color'] = undefined
 	export let componentName: $$Props['componentName'] = 'radio-group'
 	export let inline: $$Props['inline'] = undefined

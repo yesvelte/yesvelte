@@ -49,7 +49,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-select) {
+	.custom-class > :global(.y-select) {
 		margin: 0.25rem 0;
 	}
 </style>

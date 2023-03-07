@@ -7,6 +7,8 @@
 	import ProgressStriped from './ProgressStriped.svelte'
 	import ProgressStripedAnimated from './ProgressStripedAnimated.svelte'
 	import ProgressLabel from './ProgressLabel.svelte'
+	import ProgressGroup from './ProgressGroup.svelte'
+	import ProgressGroupSeparated from './ProgressGroupSeparated.svelte'
 </script>
 
 <Page
@@ -26,15 +28,21 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Size">
-		<Preview src="./ProgressSizes.svelte">
-			<div class="custom-class"><ProgressSizes /></div>
+	<Doc title="Group">
+		<Preview src="./ProgressGroup.svelte">
+			<div class="custom-class"><ProgressGroup /></div>
 		</Preview>
 	</Doc>
 
-	<Doc title="Indeterminate">
-		<Preview src="./ProgressIndeterminate.svelte">
-			<div class="custom-class"><ProgressIndeterminate /></div>
+	<Doc title="Group Separated">
+		<Preview src="./ProgressGroupSeparated.svelte">
+			<div class="custom-class"><ProgressGroupSeparated /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Size">
+		<Preview src="./ProgressSizes.svelte">
+			<div class="custom-class"><ProgressSizes /></div>
 		</Preview>
 	</Doc>
 
@@ -50,6 +58,12 @@
 		</Preview>
 	</Doc>
 
+	<Doc title="Indeterminate">
+		<Preview src="./ProgressIndeterminate.svelte">
+			<div class="custom-class"><ProgressIndeterminate /></div>
+		</Preview>
+	</Doc>
+
 	<Doc title="Label">
 		<Preview src="./ProgressLabel.svelte">
 			<div class="custom-class"><ProgressLabel /></div>
@@ -58,7 +72,7 @@
 </Page>
 
 <style>
-	.custom-class > :global(.u-progress) {
+	.custom-class > :global(.y-progress) {
 		margin: 0.25rem 0;
 	}
 </style>
