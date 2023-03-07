@@ -1,0 +1,38 @@
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}el-bg-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+	}
+	.#{$prefix}el-text-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}el-bg-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+	}
+	.#{$prefix}el-text-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}el-bg-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+	}
+	.#{$prefix}el-text-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}el-bg-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+	}
+	.#{$prefix}el-text-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}
