@@ -1,12 +1,14 @@
 .#{$prefix}tab-list {
-    @extend .tabs;
-    margin-bottom: -1px;
+	@extend .tabs;
+	@extend .list-none;
+	@extend .p-0;
+	margin-bottom: -1px;
 }
 
 .#{$prefix}tab-item-link {
-    @extend .tab, .tab-lifted;
+	@extend .tab, .tab-lifted;
 }
 
 .#{$prefix}tab-item-link-active {
-    @extend .tab-active;
+	@extend .tab-active;
 }

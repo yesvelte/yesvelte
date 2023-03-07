@@ -1,6 +1,8 @@
 .nav-vertical {
-    ul {
-        @extend .menu;
-        @extend .p-2;
-    }
+	@extend .list-none;
+	@extend .p-0;
+	ul {
+		@extend .menu;
+		@extend .p-2;
+	}
 }
