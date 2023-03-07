@@ -2864,26 +2864,26 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   --y-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
 }
 
-.form-range {
+.form-range, .y-slider {
   width: 100%;
   height: 1.25rem;
   padding: 0;
   background-color: transparent;
   appearance: none;
 }
-.form-range:focus {
+.form-range:focus, .y-slider:focus {
   outline: 0;
 }
-.form-range:focus::-webkit-slider-thumb {
+.form-range:focus::-webkit-slider-thumb, .y-slider:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px #f1f5f9, 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
 }
-.form-range:focus::-moz-range-thumb {
+.form-range:focus::-moz-range-thumb, .y-slider:focus::-moz-range-thumb {
   box-shadow: 0 0 0 1px #f1f5f9, 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
 }
-.form-range::-moz-focus-outer {
+.form-range::-moz-focus-outer, .y-slider::-moz-focus-outer {
   border: 0;
 }
-.form-range::-webkit-slider-thumb {
+.form-range::-webkit-slider-thumb, .y-slider::-webkit-slider-thumb {
   width: 1rem;
   height: 1rem;
   margin-top: -0.375rem;
@@ -2894,14 +2894,14 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-range::-webkit-slider-thumb {
+  .form-range::-webkit-slider-thumb, .y-slider::-webkit-slider-thumb {
     transition: none;
   }
 }
-.form-range::-webkit-slider-thumb:active {
+.form-range::-webkit-slider-thumb:active, .y-slider::-webkit-slider-thumb:active {
   background-color: #bcd3ed;
 }
-.form-range::-webkit-slider-runnable-track {
+.form-range::-webkit-slider-runnable-track, .y-slider::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.25rem;
   color: transparent;
@@ -2910,7 +2910,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   border-color: transparent;
   border-radius: 1rem;
 }
-.form-range::-moz-range-thumb {
+.form-range::-moz-range-thumb, .y-slider::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
   background-color: var(--y-primary);
@@ -2920,14 +2920,14 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-range::-moz-range-thumb {
+  .form-range::-moz-range-thumb, .y-slider::-moz-range-thumb {
     transition: none;
   }
 }
-.form-range::-moz-range-thumb:active {
+.form-range::-moz-range-thumb:active, .y-slider::-moz-range-thumb:active {
   background-color: #bcd3ed;
 }
-.form-range::-moz-range-track {
+.form-range::-moz-range-track, .y-slider::-moz-range-track {
   width: 100%;
   height: 0.25rem;
   color: transparent;
@@ -2936,13 +2936,13 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   border-color: transparent;
   border-radius: 1rem;
 }
-.form-range:disabled {
+.form-range:disabled, .y-slider:disabled {
   pointer-events: none;
 }
-.form-range:disabled::-webkit-slider-thumb {
+.form-range:disabled::-webkit-slider-thumb, .y-slider:disabled::-webkit-slider-thumb {
   background-color: var(--y-secondary-color);
 }
-.form-range:disabled::-moz-range-thumb {
+.form-range:disabled::-moz-range-thumb, .y-slider:disabled::-moz-range-thumb {
   background-color: var(--y-secondary-color);
 }
 
@@ -10640,7 +10640,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   height: 75% !important;
 }
 
-.h-100, .y-card-media-element-position-end > *, .y-card-media-element-position-start > *, .y-card-media-element-position-bottom > *, .y-card-media-element-position-top > *, .y-card-media, .y-el-h-100 {
+.h-100, .y-slider-vertical, .y-card-media-element-position-end > *, .y-card-media-element-position-start > *, .y-card-media-element-position-bottom > *, .y-card-media-element-position-top > *, .y-card-media, .y-el-h-100 {
   height: 100% !important;
 }
 
@@ -11425,182 +11425,182 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
 }
 
 /* rtl:end:remove */
-.text-primary, .y-stamp-text-color-primary > .icon, .y-stamp-text-color-primary > .y-icon, .y-spinner-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
+.text-primary, .y-stamp-text-color-primary > .icon, .y-stamp-text-color-primary > .y-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-secondary, .y-stamp-text-color-secondary > .icon, .y-stamp-text-color-secondary > .y-icon, .y-spinner-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
+.text-secondary, .y-stamp-text-color-secondary > .icon, .y-stamp-text-color-secondary > .y-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-success, .y-stamp-text-color-success > .icon, .y-stamp-text-color-success > .y-icon, .y-spinner-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
+.text-success, .y-stamp-text-color-success > .icon, .y-stamp-text-color-success > .y-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-info, .y-stamp-text-color-info > .icon, .y-stamp-text-color-info > .y-icon, .y-spinner-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
+.text-info, .y-stamp-text-color-info > .icon, .y-stamp-text-color-info > .y-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-warning, .y-stamp-text-color-warning > .icon, .y-stamp-text-color-warning > .y-icon, .y-spinner-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
+.text-warning, .y-stamp-text-color-warning > .icon, .y-stamp-text-color-warning > .y-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-danger, .y-stamp-text-color-danger > .icon, .y-stamp-text-color-danger > .y-icon, .y-spinner-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
+.text-danger, .y-stamp-text-color-danger > .icon, .y-stamp-text-color-danger > .y-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-light, .y-stamp-text-color-light > .icon, .y-stamp-text-color-light > .y-icon, .y-spinner-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
+.text-light, .y-stamp-text-color-light > .icon, .y-stamp-text-color-light > .y-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-dark, .y-stamp-text-color-dark > .icon, .y-stamp-text-color-dark > .y-icon, .y-spinner-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
+.text-dark, .y-stamp-text-color-dark > .icon, .y-stamp-text-color-dark > .y-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-muted, .y-stamp-text-color-muted > .icon, .y-stamp-text-color-muted > .y-icon, .y-spinner-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
+.text-muted, .y-stamp-text-color-muted > .icon, .y-stamp-text-color-muted > .y-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: #616876 !important;
 }
 
-.text-blue, .y-stamp-text-color-blue > .icon, .y-stamp-text-color-blue > .y-icon, .y-spinner-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
+.text-blue, .y-stamp-text-color-blue > .icon, .y-stamp-text-color-blue > .y-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-azure, .y-stamp-text-color-azure > .icon, .y-stamp-text-color-azure > .y-icon, .y-spinner-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
+.text-azure, .y-stamp-text-color-azure > .icon, .y-stamp-text-color-azure > .y-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-indigo, .y-stamp-text-color-indigo > .icon, .y-stamp-text-color-indigo > .y-icon, .y-spinner-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
+.text-indigo, .y-stamp-text-color-indigo > .icon, .y-stamp-text-color-indigo > .y-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-purple, .y-stamp-text-color-purple > .icon, .y-stamp-text-color-purple > .y-icon, .y-spinner-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
+.text-purple, .y-stamp-text-color-purple > .icon, .y-stamp-text-color-purple > .y-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-pink, .y-stamp-text-color-pink > .icon, .y-stamp-text-color-pink > .y-icon, .y-spinner-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
+.text-pink, .y-stamp-text-color-pink > .icon, .y-stamp-text-color-pink > .y-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-red, .y-stamp-text-color-red > .icon, .y-stamp-text-color-red > .y-icon, .y-spinner-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
+.text-red, .y-stamp-text-color-red > .icon, .y-stamp-text-color-red > .y-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-orange, .y-stamp-text-color-orange > .icon, .y-stamp-text-color-orange > .y-icon, .y-spinner-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
+.text-orange, .y-stamp-text-color-orange > .icon, .y-stamp-text-color-orange > .y-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-yellow, .y-stamp-text-color-yellow > .icon, .y-stamp-text-color-yellow > .y-icon, .y-spinner-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
+.text-yellow, .y-stamp-text-color-yellow > .icon, .y-stamp-text-color-yellow > .y-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-lime, .y-stamp-text-color-lime > .icon, .y-stamp-text-color-lime > .y-icon, .y-spinner-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
+.text-lime, .y-stamp-text-color-lime > .icon, .y-stamp-text-color-lime > .y-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-green, .y-stamp-text-color-green > .icon, .y-stamp-text-color-green > .y-icon, .y-spinner-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
+.text-green, .y-stamp-text-color-green > .icon, .y-stamp-text-color-green > .y-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-teal, .y-stamp-text-color-teal > .icon, .y-stamp-text-color-teal > .y-icon, .y-spinner-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
+.text-teal, .y-stamp-text-color-teal > .icon, .y-stamp-text-color-teal > .y-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-cyan, .y-stamp-text-color-cyan > .icon, .y-stamp-text-color-cyan > .y-icon, .y-spinner-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
+.text-cyan, .y-stamp-text-color-cyan > .icon, .y-stamp-text-color-cyan > .y-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-facebook, .y-stamp-text-color-facebook > .icon, .y-stamp-text-color-facebook > .y-icon, .y-spinner-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
+.text-facebook, .y-stamp-text-color-facebook > .icon, .y-stamp-text-color-facebook > .y-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-twitter, .y-stamp-text-color-twitter > .icon, .y-stamp-text-color-twitter > .y-icon, .y-spinner-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
+.text-twitter, .y-stamp-text-color-twitter > .icon, .y-stamp-text-color-twitter > .y-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-linkedin, .y-stamp-text-color-linkedin > .icon, .y-stamp-text-color-linkedin > .y-icon, .y-spinner-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
+.text-linkedin, .y-stamp-text-color-linkedin > .icon, .y-stamp-text-color-linkedin > .y-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-google, .y-stamp-text-color-google > .icon, .y-stamp-text-color-google > .y-icon, .y-spinner-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
+.text-google, .y-stamp-text-color-google > .icon, .y-stamp-text-color-google > .y-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-youtube, .y-stamp-text-color-youtube > .icon, .y-stamp-text-color-youtube > .y-icon, .y-spinner-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
+.text-youtube, .y-stamp-text-color-youtube > .icon, .y-stamp-text-color-youtube > .y-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-vimeo, .y-stamp-text-color-vimeo > .icon, .y-stamp-text-color-vimeo > .y-icon, .y-spinner-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
+.text-vimeo, .y-stamp-text-color-vimeo > .icon, .y-stamp-text-color-vimeo > .y-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-dribbble, .y-stamp-text-color-dribbble > .icon, .y-stamp-text-color-dribbble > .y-icon, .y-spinner-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
+.text-dribbble, .y-stamp-text-color-dribbble > .icon, .y-stamp-text-color-dribbble > .y-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-github, .y-stamp-text-color-github > .icon, .y-stamp-text-color-github > .y-icon, .y-spinner-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
+.text-github, .y-stamp-text-color-github > .icon, .y-stamp-text-color-github > .y-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-instagram, .y-stamp-text-color-instagram > .icon, .y-stamp-text-color-instagram > .y-icon, .y-spinner-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
+.text-instagram, .y-stamp-text-color-instagram > .icon, .y-stamp-text-color-instagram > .y-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-pinterest, .y-stamp-text-color-pinterest > .icon, .y-stamp-text-color-pinterest > .y-icon, .y-spinner-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
+.text-pinterest, .y-stamp-text-color-pinterest > .icon, .y-stamp-text-color-pinterest > .y-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-vk, .y-stamp-text-color-vk > .icon, .y-stamp-text-color-vk > .y-icon, .y-spinner-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
+.text-vk, .y-stamp-text-color-vk > .icon, .y-stamp-text-color-vk > .y-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-rss, .y-stamp-text-color-rss > .icon, .y-stamp-text-color-rss > .y-icon, .y-spinner-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
+.text-rss, .y-stamp-text-color-rss > .icon, .y-stamp-text-color-rss > .y-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-flickr, .y-stamp-text-color-flickr > .icon, .y-stamp-text-color-flickr > .y-icon, .y-spinner-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
+.text-flickr, .y-stamp-text-color-flickr > .icon, .y-stamp-text-color-flickr > .y-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-bitbucket, .y-stamp-text-color-bitbucket > .icon, .y-stamp-text-color-bitbucket > .y-icon, .y-spinner-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
+.text-bitbucket, .y-stamp-text-color-bitbucket > .icon, .y-stamp-text-color-bitbucket > .y-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
 }
 
-.text-tabler, .y-stamp-text-color-tabler > .icon, .y-stamp-text-color-tabler > .y-icon, .y-spinner-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
+.text-tabler, .y-stamp-text-color-tabler > .icon, .y-stamp-text-color-tabler > .y-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
 }
@@ -26167,7 +26167,7 @@ Chart sparkline
   background-color: rgba(var(--y-white-rgb), var(--y-bg-opacity)) !important;
 }
 
-.text-primary, .y-stamp-text-color-primary > .icon, .y-stamp-text-color-primary > .y-icon, .y-spinner-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
+.text-primary, .y-stamp-text-color-primary > .icon, .y-stamp-text-color-primary > .y-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
 }
@@ -26176,7 +26176,7 @@ Chart sparkline
   color: var(--y-primary-fg) !important;
 }
 
-.text-secondary, .y-stamp-text-color-secondary > .icon, .y-stamp-text-color-secondary > .y-icon, .y-spinner-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
+.text-secondary, .y-stamp-text-color-secondary > .icon, .y-stamp-text-color-secondary > .y-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
 }
@@ -26185,7 +26185,7 @@ Chart sparkline
   color: var(--y-secondary-fg) !important;
 }
 
-.text-success, .y-stamp-text-color-success > .icon, .y-stamp-text-color-success > .y-icon, .y-spinner-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
+.text-success, .y-stamp-text-color-success > .icon, .y-stamp-text-color-success > .y-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
 }
@@ -26194,7 +26194,7 @@ Chart sparkline
   color: var(--y-success-fg) !important;
 }
 
-.text-info, .y-stamp-text-color-info > .icon, .y-stamp-text-color-info > .y-icon, .y-spinner-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
+.text-info, .y-stamp-text-color-info > .icon, .y-stamp-text-color-info > .y-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
 }
@@ -26203,7 +26203,7 @@ Chart sparkline
   color: var(--y-info-fg) !important;
 }
 
-.text-warning, .y-stamp-text-color-warning > .icon, .y-stamp-text-color-warning > .y-icon, .y-spinner-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
+.text-warning, .y-stamp-text-color-warning > .icon, .y-stamp-text-color-warning > .y-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
 }
@@ -26212,7 +26212,7 @@ Chart sparkline
   color: var(--y-warning-fg) !important;
 }
 
-.text-danger, .y-stamp-text-color-danger > .icon, .y-stamp-text-color-danger > .y-icon, .y-spinner-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
+.text-danger, .y-stamp-text-color-danger > .icon, .y-stamp-text-color-danger > .y-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
 }
@@ -26221,7 +26221,7 @@ Chart sparkline
   color: var(--y-danger-fg) !important;
 }
 
-.text-light, .y-stamp-text-color-light > .icon, .y-stamp-text-color-light > .y-icon, .y-spinner-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
+.text-light, .y-stamp-text-color-light > .icon, .y-stamp-text-color-light > .y-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
 }
@@ -26230,7 +26230,7 @@ Chart sparkline
   color: var(--y-light-fg) !important;
 }
 
-.text-dark, .y-stamp-text-color-dark > .icon, .y-stamp-text-color-dark > .y-icon, .y-spinner-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
+.text-dark, .y-stamp-text-color-dark > .icon, .y-stamp-text-color-dark > .y-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
 }
@@ -26239,7 +26239,7 @@ Chart sparkline
   color: var(--y-dark-fg) !important;
 }
 
-.text-muted, .y-stamp-text-color-muted > .icon, .y-stamp-text-color-muted > .y-icon, .y-spinner-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
+.text-muted, .y-stamp-text-color-muted > .icon, .y-stamp-text-color-muted > .y-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-muted-rgb), var(--y-text-opacity)) !important;
 }
@@ -26248,7 +26248,7 @@ Chart sparkline
   color: var(--y-muted-fg) !important;
 }
 
-.text-blue, .y-stamp-text-color-blue > .icon, .y-stamp-text-color-blue > .y-icon, .y-spinner-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
+.text-blue, .y-stamp-text-color-blue > .icon, .y-stamp-text-color-blue > .y-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
 }
@@ -26257,7 +26257,7 @@ Chart sparkline
   color: var(--y-blue-fg) !important;
 }
 
-.text-azure, .y-stamp-text-color-azure > .icon, .y-stamp-text-color-azure > .y-icon, .y-spinner-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
+.text-azure, .y-stamp-text-color-azure > .icon, .y-stamp-text-color-azure > .y-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
 }
@@ -26266,7 +26266,7 @@ Chart sparkline
   color: var(--y-azure-fg) !important;
 }
 
-.text-indigo, .y-stamp-text-color-indigo > .icon, .y-stamp-text-color-indigo > .y-icon, .y-spinner-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
+.text-indigo, .y-stamp-text-color-indigo > .icon, .y-stamp-text-color-indigo > .y-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
 }
@@ -26275,7 +26275,7 @@ Chart sparkline
   color: var(--y-indigo-fg) !important;
 }
 
-.text-purple, .y-stamp-text-color-purple > .icon, .y-stamp-text-color-purple > .y-icon, .y-spinner-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
+.text-purple, .y-stamp-text-color-purple > .icon, .y-stamp-text-color-purple > .y-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
 }
@@ -26284,7 +26284,7 @@ Chart sparkline
   color: var(--y-purple-fg) !important;
 }
 
-.text-pink, .y-stamp-text-color-pink > .icon, .y-stamp-text-color-pink > .y-icon, .y-spinner-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
+.text-pink, .y-stamp-text-color-pink > .icon, .y-stamp-text-color-pink > .y-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
 }
@@ -26293,7 +26293,7 @@ Chart sparkline
   color: var(--y-pink-fg) !important;
 }
 
-.text-red, .y-stamp-text-color-red > .icon, .y-stamp-text-color-red > .y-icon, .y-spinner-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
+.text-red, .y-stamp-text-color-red > .icon, .y-stamp-text-color-red > .y-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
 }
@@ -26302,7 +26302,7 @@ Chart sparkline
   color: var(--y-red-fg) !important;
 }
 
-.text-orange, .y-stamp-text-color-orange > .icon, .y-stamp-text-color-orange > .y-icon, .y-spinner-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
+.text-orange, .y-stamp-text-color-orange > .icon, .y-stamp-text-color-orange > .y-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
 }
@@ -26311,7 +26311,7 @@ Chart sparkline
   color: var(--y-orange-fg) !important;
 }
 
-.text-yellow, .y-stamp-text-color-yellow > .icon, .y-stamp-text-color-yellow > .y-icon, .y-spinner-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
+.text-yellow, .y-stamp-text-color-yellow > .icon, .y-stamp-text-color-yellow > .y-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
 }
@@ -26320,7 +26320,7 @@ Chart sparkline
   color: var(--y-yellow-fg) !important;
 }
 
-.text-lime, .y-stamp-text-color-lime > .icon, .y-stamp-text-color-lime > .y-icon, .y-spinner-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
+.text-lime, .y-stamp-text-color-lime > .icon, .y-stamp-text-color-lime > .y-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
 }
@@ -26329,7 +26329,7 @@ Chart sparkline
   color: var(--y-lime-fg) !important;
 }
 
-.text-green, .y-stamp-text-color-green > .icon, .y-stamp-text-color-green > .y-icon, .y-spinner-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
+.text-green, .y-stamp-text-color-green > .icon, .y-stamp-text-color-green > .y-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
 }
@@ -26338,7 +26338,7 @@ Chart sparkline
   color: var(--y-green-fg) !important;
 }
 
-.text-teal, .y-stamp-text-color-teal > .icon, .y-stamp-text-color-teal > .y-icon, .y-spinner-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
+.text-teal, .y-stamp-text-color-teal > .icon, .y-stamp-text-color-teal > .y-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
 }
@@ -26347,7 +26347,7 @@ Chart sparkline
   color: var(--y-teal-fg) !important;
 }
 
-.text-cyan, .y-stamp-text-color-cyan > .icon, .y-stamp-text-color-cyan > .y-icon, .y-spinner-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
+.text-cyan, .y-stamp-text-color-cyan > .icon, .y-stamp-text-color-cyan > .y-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
 }
@@ -26356,7 +26356,7 @@ Chart sparkline
   color: var(--y-cyan-fg) !important;
 }
 
-.text-facebook, .y-stamp-text-color-facebook > .icon, .y-stamp-text-color-facebook > .y-icon, .y-spinner-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
+.text-facebook, .y-stamp-text-color-facebook > .icon, .y-stamp-text-color-facebook > .y-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
 }
@@ -26365,7 +26365,7 @@ Chart sparkline
   color: var(--y-facebook-fg) !important;
 }
 
-.text-twitter, .y-stamp-text-color-twitter > .icon, .y-stamp-text-color-twitter > .y-icon, .y-spinner-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
+.text-twitter, .y-stamp-text-color-twitter > .icon, .y-stamp-text-color-twitter > .y-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
 }
@@ -26374,7 +26374,7 @@ Chart sparkline
   color: var(--y-twitter-fg) !important;
 }
 
-.text-linkedin, .y-stamp-text-color-linkedin > .icon, .y-stamp-text-color-linkedin > .y-icon, .y-spinner-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
+.text-linkedin, .y-stamp-text-color-linkedin > .icon, .y-stamp-text-color-linkedin > .y-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
 }
@@ -26383,7 +26383,7 @@ Chart sparkline
   color: var(--y-linkedin-fg) !important;
 }
 
-.text-google, .y-stamp-text-color-google > .icon, .y-stamp-text-color-google > .y-icon, .y-spinner-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
+.text-google, .y-stamp-text-color-google > .icon, .y-stamp-text-color-google > .y-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
 }
@@ -26392,7 +26392,7 @@ Chart sparkline
   color: var(--y-google-fg) !important;
 }
 
-.text-youtube, .y-stamp-text-color-youtube > .icon, .y-stamp-text-color-youtube > .y-icon, .y-spinner-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
+.text-youtube, .y-stamp-text-color-youtube > .icon, .y-stamp-text-color-youtube > .y-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
 }
@@ -26401,7 +26401,7 @@ Chart sparkline
   color: var(--y-youtube-fg) !important;
 }
 
-.text-vimeo, .y-stamp-text-color-vimeo > .icon, .y-stamp-text-color-vimeo > .y-icon, .y-spinner-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
+.text-vimeo, .y-stamp-text-color-vimeo > .icon, .y-stamp-text-color-vimeo > .y-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
 }
@@ -26410,7 +26410,7 @@ Chart sparkline
   color: var(--y-vimeo-fg) !important;
 }
 
-.text-dribbble, .y-stamp-text-color-dribbble > .icon, .y-stamp-text-color-dribbble > .y-icon, .y-spinner-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
+.text-dribbble, .y-stamp-text-color-dribbble > .icon, .y-stamp-text-color-dribbble > .y-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
 }
@@ -26419,7 +26419,7 @@ Chart sparkline
   color: var(--y-dribbble-fg) !important;
 }
 
-.text-github, .y-stamp-text-color-github > .icon, .y-stamp-text-color-github > .y-icon, .y-spinner-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
+.text-github, .y-stamp-text-color-github > .icon, .y-stamp-text-color-github > .y-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
 }
@@ -26428,7 +26428,7 @@ Chart sparkline
   color: var(--y-github-fg) !important;
 }
 
-.text-instagram, .y-stamp-text-color-instagram > .icon, .y-stamp-text-color-instagram > .y-icon, .y-spinner-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
+.text-instagram, .y-stamp-text-color-instagram > .icon, .y-stamp-text-color-instagram > .y-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
 }
@@ -26437,7 +26437,7 @@ Chart sparkline
   color: var(--y-instagram-fg) !important;
 }
 
-.text-pinterest, .y-stamp-text-color-pinterest > .icon, .y-stamp-text-color-pinterest > .y-icon, .y-spinner-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
+.text-pinterest, .y-stamp-text-color-pinterest > .icon, .y-stamp-text-color-pinterest > .y-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
 }
@@ -26446,7 +26446,7 @@ Chart sparkline
   color: var(--y-pinterest-fg) !important;
 }
 
-.text-vk, .y-stamp-text-color-vk > .icon, .y-stamp-text-color-vk > .y-icon, .y-spinner-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
+.text-vk, .y-stamp-text-color-vk > .icon, .y-stamp-text-color-vk > .y-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
 }
@@ -26455,7 +26455,7 @@ Chart sparkline
   color: var(--y-vk-fg) !important;
 }
 
-.text-rss, .y-stamp-text-color-rss > .icon, .y-stamp-text-color-rss > .y-icon, .y-spinner-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
+.text-rss, .y-stamp-text-color-rss > .icon, .y-stamp-text-color-rss > .y-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
 }
@@ -26464,7 +26464,7 @@ Chart sparkline
   color: var(--y-rss-fg) !important;
 }
 
-.text-flickr, .y-stamp-text-color-flickr > .icon, .y-stamp-text-color-flickr > .y-icon, .y-spinner-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
+.text-flickr, .y-stamp-text-color-flickr > .icon, .y-stamp-text-color-flickr > .y-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
 }
@@ -26473,7 +26473,7 @@ Chart sparkline
   color: var(--y-flickr-fg) !important;
 }
 
-.text-bitbucket, .y-stamp-text-color-bitbucket > .icon, .y-stamp-text-color-bitbucket > .y-icon, .y-spinner-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
+.text-bitbucket, .y-stamp-text-color-bitbucket > .icon, .y-stamp-text-color-bitbucket > .y-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
 }
@@ -26482,7 +26482,7 @@ Chart sparkline
   color: var(--y-bitbucket-fg) !important;
 }
 
-.text-tabler, .y-stamp-text-color-tabler > .icon, .y-stamp-text-color-tabler > .y-icon, .y-spinner-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
+.text-tabler, .y-stamp-text-color-tabler > .icon, .y-stamp-text-color-tabler > .y-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
 }
@@ -26804,6 +26804,411 @@ Antialiasing
 .subpixel-antialiased {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+}
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target, .y-slider,
+.noUi-target *,
+.y-slider * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.noUi-target, .y-slider {
+  position: relative;
+}
+
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  transform-style: flat;
+}
+
+/* Offset direction
+ */
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+.noUi-vertical .noUi-origin, .y-slider-vertical .noUi-origin {
+  top: -100%;
+  width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+
+.noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+  height: 18px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 34px;
+  height: 28px;
+  right: -17px;
+  top: -6px;
+}
+
+.noUi-vertical, .y-slider-vertical {
+  width: 18px;
+}
+
+.noUi-vertical .noUi-handle, .y-slider-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  right: -6px;
+  bottom: -17px;
+}
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+  left: -17px;
+  right: auto;
+}
+
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+.noUi-target, .y-slider {
+  background: #FAFAFA;
+  border-radius: 4px;
+  border: 1px solid #D3D3D3;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+.noUi-connects {
+  border-radius: 3px;
+}
+
+.noUi-connect {
+  background: #3FB8AF;
+}
+
+/* Handles and cursors;
+ */
+.noUi-draggable {
+  cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable, .y-slider-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+
+.noUi-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+
+.noUi-handle:after {
+  left: 17px;
+}
+
+.noUi-vertical .noUi-handle:before, .y-slider-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after,
+.y-slider-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+
+.noUi-vertical .noUi-handle:after, .y-slider-vertical .noUi-handle:after {
+  top: 17px;
+}
+
+/* Disabled state;
+ */
+[disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+
+[disabled].noUi-target, [disabled].y-slider,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+ *
+ */
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+
+/* Values;
+ *
+ */
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/* Markings;
+ *
+ */
+.noUi-marker {
+  position: absolute;
+  background: #CCC;
+}
+
+.noUi-marker-sub {
+  background: #AAA;
+}
+
+.noUi-marker-large {
+  background: #AAA;
+}
+
+/* Horizontal layout;
+ *
+ */
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 80px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+
+/* Vertical layout;
+ *
+ */
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120%;
+}
+
+.noUi-vertical .noUi-tooltip, .y-slider-vertical .noUi-tooltip {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+
+.noUi-horizontal .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  left: auto;
+  bottom: 10px;
+}
+
+.noUi-vertical .noUi-origin > .noUi-tooltip, .y-slider-vertical .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(0, -18px);
+  transform: translate(0, -18px);
+  top: auto;
+  right: 28px;
+}
+
+.noUi-target, .y-slider {
+  border: 0;
+  box-shadow: none;
+  background: none;
+  border-radius: 0;
+  color: var(--y-primary);
+}
+
+.noUi-horizontal {
+  height: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.noUi-base {
+  background: var(--y-border-color);
+  border-radius: 1rem;
+}
+
+.noUi-handle {
+  width: 1rem;
+  height: 1rem;
+  border: 2px var(--y-border-style) #ffffff;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background: currentColor;
+  outline: 0;
+}
+.noUi-handle:before, .noUi-handle:after {
+  content: none;
+}
+.noUi-horizontal .noUi-handle {
+  width: 1rem;
+  height: 1rem;
+  top: -0.5rem;
+  right: -0.5rem;
+  margin: 1px 1px 0 0;
+}
+.noUi-handle.noUi-active, .noUi-handle:focus {
+  box-shadow: 0 0 0 1px #f1f5f9, 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+}
+
+.noUi-connect {
+  background: currentColor;
 }
 
 .y-alert .y-alert-start {
