@@ -4,6 +4,7 @@
 	import FormSelectColumn from './FormSelectColumn.svelte'
 	import FormSelectState from './FormSelectState.svelte'
 	import FormSelectHint from './FormSelectHint.svelte'
+	import FormSelectItemsBind from './FormSelectItemsBind.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -30,6 +31,12 @@
 	<Doc title="State">
 		<Preview src="./FormSelectState.svelte">
 			<FormSelectState />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind Item">
+		<Preview src="./FormSelectItemsBind.svelte">
+			<FormSelectItemsBind />
 		</Preview>
 	</Doc>
 
