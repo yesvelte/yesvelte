@@ -1,0 +1,20 @@
+//
+// Range Slider
+//
+
+$props: (
+	null: (
+		'.form-range',
+		'.noUi-target',
+		'.noUi-txt-dir-ltr'
+	),
+	color: generate_props($theme_colors, ('.text-')),
+	'vertical': (
+		'.noUi-vertical',
+		'.h-100'
+	)
+);
+
+.#{$prefix-slider} {
+	@include apply-props($props);
+}

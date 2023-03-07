@@ -7,6 +7,7 @@ import type { AutocompleteProps } from '../autocomplete/Autocomplete.types'
 import type { CheckboxProps, CheckboxGroupProps } from '../checkbox/Checkbox.types'
 import type { DatePickerProps } from '../date-picker/DatePicker.types'
 import type { FileUploadProps } from '../file-upload/FileUpload.types'
+import type { SliderProps } from '../slider/Slider.types'
 
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
@@ -30,6 +31,7 @@ export interface FormCheckboxGroupProps
 	extends Partial<FormFieldProps>,
 		Partial<CheckboxGroupProps> {}
 
+export interface FormSliderProps extends Partial<FormFieldProps>, Partial<SliderProps> {}
 export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
 export interface FormDatePickerProps extends Partial<FormFieldProps>, Partial<DatePickerProps> {}
 export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> {}

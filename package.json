@@ -74,6 +74,7 @@
 		"inputmask": "^5.0.7",
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
+		"nouislider": "^15.7.0",
 		"swiper": "^8.4.5",
 		"tom-select": "^2.2.2"
 	},

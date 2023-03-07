@@ -268,6 +268,12 @@ export const navigations: Navigation[] = [
 					'Steps component guides users through the steps of a task. It is a kind of navigation bar.',
 			},
 			{
+				route: base_path + '/slider',
+				title: 'Slider',
+				icon: 'radix-icons:slider',
+				description: 'Slider allow users to make selections from a range of values.',
+			},
+			{
 				route: base_path + '/spinner',
 				title: 'Spinner',
 				icon: 'ei:spinner-3',
@@ -357,6 +363,12 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-select',
 				title: 'FormSelect',
 				icon: 'vaadin:select',
+			},
+			{
+				route: base_path + '/form/form-slider',
+				title: 'FormSlider',
+				icon: 'radix-icons:slider',
+				description: 'FormSlider allow users to make selections from a range of values.',
 			},
 			{
 				route: base_path + '/form/form-switch',

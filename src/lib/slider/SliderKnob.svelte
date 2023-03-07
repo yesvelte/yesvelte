@@ -1,0 +1,34 @@
+<script lang="ts">
+	import { getContext, onDestroy, onMount } from 'svelte'
+	import type { SliderContext, SliderKnobProps, SliderKnobType } from './Slider.types'
+
+	type $$Props = SliderKnobProps
+
+	export let value: $$Props['value'] = 0
+	export let connect: $$Props['connect'] = false
+	export let tooltip: $$Props['tooltip'] = false
+
+	const { register, unregister, values, setValue } = getContext<SliderContext>('SLIDER')
+
+	let id: number | undefined = undefined
+
+	onMount(() => {
+		const knob: SliderKnobType = { connect: connect!, value: value!, tooltip: tooltip! }
+		id = register(knob)
+	})
+
+	onDestroy(() => {
+		if (!id) return
+		unregister(id)
+	})
+
+	const isDefined = (value: any) => typeof value !== 'undefined'
+
+	$: if (isDefined(id) && isDefined($values[id!])) {
+		value = $values[id!]
+	}
+
+	$: if (isDefined(id) && isDefined(value)) {
+		setValue(id!, value!)
+	}
+</script>

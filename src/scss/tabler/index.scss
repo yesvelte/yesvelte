@@ -2,4 +2,5 @@ $prefix: 'y-' !default;
 @import './mixins';
 @import './variables';
 @import '@tabler/core/src/scss/core';
+@import '@tabler/core/src/scss/vendor/nouislider';
 @import './components';
