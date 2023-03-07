@@ -19,4 +19,5 @@ export interface RadioGroupProps extends Partial<ElProps> {
 	reverse?: boolean
 	items?: Array<any>
 	name?: string
+	key?: string
 }
