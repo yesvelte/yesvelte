@@ -1,5 +1,5 @@
 <script>
-	import { Card, CardBody, CardHeader, CardTitle, El } from 'yesvelte'
+	import { Card, CardBody, CardHeader, CardTitle } from 'yesvelte'
 </script>
 
 <Card title="Card title">

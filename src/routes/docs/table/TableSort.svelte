@@ -2,7 +2,7 @@
 	import { Table, TableBody, TableCell, TableHead, TableRow } from 'yesvelte'
 </script>
 
-<Table sort>
+<Table>
 	<TableHead>
 		<TableRow>
 			<TableCell>Name</TableCell>

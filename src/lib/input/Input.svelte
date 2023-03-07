@@ -28,7 +28,7 @@
 		}
 		return () => {
 			if (element !== undefined && mask) {
-				Inputmask.remove(element)
+				Inputmask.default.remove(element)
 			}
 		}
 	})

@@ -4,6 +4,10 @@
 
 	type $$Props = SelectProps
 
+	interface $$Slots {
+		default: { index?: number; item?: any }
+	}
+
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
 	export let value: $$Props['value'] = undefined

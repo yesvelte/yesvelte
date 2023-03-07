@@ -12,7 +12,7 @@
 </script>
 
 <RadioGroup bind:value {items} let:item let:index>
-	{index + 1}- {item.text}
+	{(index || 0) + 1}- {item.text}
 </RadioGroup>
 
 <i>value: {JSON.stringify(value)}</i>

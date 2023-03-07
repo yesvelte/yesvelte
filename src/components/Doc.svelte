@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let title: string = ''
-	export let description: string = ''
+	export let title = ''
+	export let description = ''
 	$: href = title.replace(/\s/g, '_').replace(/\//g, '_')
 </script>
 

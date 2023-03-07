@@ -12,7 +12,7 @@
 </script>
 
 <FormCheckboxGroup label="Select Language" bind:value {items} let:item let:index>
-	{index + 1}- {item.text}
+	{(index || 0) + 1}- {item.text}
 </FormCheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

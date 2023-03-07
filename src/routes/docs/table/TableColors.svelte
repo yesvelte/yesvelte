@@ -29,7 +29,7 @@
 		{/each}
 
 		<TableRow>
-			<TableCell color="succes">Mallory Hulme</TableCell>
+			<TableCell color="success">Mallory Hulme</TableCell>
 			<TableCell color="info">Geologist IV, Support</TableCell>
 			<TableCell color="danger">mhulme2@domainmarket.com</TableCell>
 			<TableCell color="warning">User</TableCell>

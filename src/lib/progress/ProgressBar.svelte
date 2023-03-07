@@ -34,7 +34,7 @@
 	{componentName}
 	role="progressbar"
 	style="width: {value}%"
-	aria-valuenow={value}
+	aria-valuenow={+(value || 0)}
 	aria-label={_label}>
 	{#if label}
 		<El tag="span">{_label}</El>

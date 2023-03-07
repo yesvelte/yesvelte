@@ -28,13 +28,18 @@ export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<Ra
 export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
 
 export interface FormCheckboxGroupProps
-	extends Partial<FormFieldProps>,
+	extends Partial<Omit<FormFieldProps, 'value'>>,
 		Partial<CheckboxGroupProps> {}
 
 export interface FormSliderProps extends Partial<FormFieldProps>, Partial<SliderProps> {}
 export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
-export interface FormDatePickerProps extends Partial<FormFieldProps>, Partial<DatePickerProps> {}
+
+export interface FormDatePickerProps
+	extends Partial<Omit<FormFieldProps, 'value'>>,
+		Partial<DatePickerProps> {}
+
 export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> {}
+
 export interface FormAutocompleteProps
-	extends Partial<FormFieldProps>,
+	extends Partial<Omit<FormFieldProps, 'value'>>,
 		Partial<AutocompleteProps> {}
