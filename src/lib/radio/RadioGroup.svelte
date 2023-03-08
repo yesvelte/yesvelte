@@ -37,7 +37,13 @@
 <El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Radio {...props} value={index} checked={value === item} on:change={onChange} on:change>
+			<Radio
+				{...props}
+				value={index}
+				checked={value === item}
+				disabled={item.disabled ?? false}
+				on:change={onChange}
+				on:change>
 				<slot {index} {item}>{item}</slot>
 			</Radio>
 		{/each}
