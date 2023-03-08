@@ -318,6 +318,13 @@ export const navigations: Navigation[] = [
 				title: 'Textarea',
 				icon: 'mdi:form-textarea',
 			},
+			{
+				route: base_path + '/tooltip',
+				title: 'Tooltip',
+				icon: 'mdi:tooltip-text',
+				description:
+					'Tooltips are text labels which appear when a user hovers over an interface element.',
+			},
 		],
 	},
 	{
