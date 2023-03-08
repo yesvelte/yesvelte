@@ -2,6 +2,7 @@
 	import { Page, Doc, Preview } from '$components'
 	import SelectDefault from './SelectDefault.svelte'
 	import SelectItems from './SelectItems.svelte'
+	import SelectItemsBind from './SelectItemsBind.svelte'
 	import SelectPlaceholder from './SelectPlaceholder.svelte'
 	import SelectSizes from './SelectSizes.svelte'
 	import SelectDisabled from './SelectDisabled.svelte'
@@ -20,6 +21,12 @@
 	<Doc title="Items">
 		<Preview src="./SelectItems.svelte">
 			<div class="custom-class"><SelectItems /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind Item">
+		<Preview src="./SelectItemsBind.svelte">
+			<div class="custom-class"><SelectItemsBind /></div>
 		</Preview>
 	</Doc>
 
