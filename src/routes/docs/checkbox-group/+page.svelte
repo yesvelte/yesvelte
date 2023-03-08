@@ -6,6 +6,7 @@
 	import CheckboxGroupReverse from './CheckboxGroupReverse.svelte'
 	import CheckboxGroupLabel from './CheckboxGroupLabel.svelte'
 	import CheckboxGroupColor from './CheckboxGroupColor.svelte'
+	import CheckboxGroupDisabledItems from './CheckboxGroupDisabledItems.svelte'
 </script>
 
 <Page title="CheckboxGroup">
@@ -65,6 +66,16 @@
 		</p>
 		<Preview src="./CheckboxGroupItems.svelte">
 			<CheckboxGroupItems />
+		</Preview>
+	</Doc>
+
+	<Doc title="Disabled Items">
+		<p slot="description">
+			You can use <code>items</code> property to pass an array of items to
+			<code>CheckboxGroup</code> component and show some items <code>disabled</code>.
+		</p>
+		<Preview src="./CheckboxGroupDisabledItems.svelte">
+			<CheckboxGroupDisabledItems />
 		</Preview>
 	</Doc>
 </Page>

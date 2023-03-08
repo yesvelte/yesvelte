@@ -48,7 +48,12 @@
 <El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Checkbox {...props} value={index} checked={value?.includes(item)} on:change={onChange}>
+			<Checkbox
+				{...props}
+				value={index}
+				checked={value?.includes(item)}
+				disabled={item.disabled ?? false}
+				on:change={onChange}>
 				<slot {index} {item}>{item}</slot>
 			</Checkbox>
 		{/each}
