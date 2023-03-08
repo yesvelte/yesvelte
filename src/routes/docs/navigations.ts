@@ -221,6 +221,13 @@ export const navigations: Navigation[] = [
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
 			{
+				route: base_path + '/popover',
+				title: 'Popover',
+				icon: 'mdi:tooltip-image',
+				description:
+					'Popovers are used to provide additional information on elements where a simple tooltip is not sufficient',
+			},
+			{
 				route: base_path + '/progress',
 				title: 'Progress',
 				icon: 'vaadin:progressbar',
