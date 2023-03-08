@@ -1,0 +1,17 @@
+$placeholder-props: (
+	null: '.placeholder',
+	size: (
+		xs: '.placeholder-xs',
+		sm: '.placeholder-sm',
+		md: '.placeholder-md',
+		lg: '.placeholder-lg'
+	),
+	animation: (
+		glow: '.placeholder-glow',
+		wave: '.placeholder-wave'
+	)
+);
+
+.#{$prefix-placeholder} {
+	@include apply-props($placeholder-props);
+}
