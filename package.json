@@ -76,7 +76,10 @@
 		"litepicker": "^2.0.12",
 		"moment": "^2.29.4",
 		"nouislider": "^15.7.0",
-		"swiper": "^8.4.5",
+		"slick": "^1.12.2",
+		"slick-carousel": "^1.8.1",
+		"swiper": "^8.4.7",
+		"tiny-slider": "^2.9.4",
 		"tom-select": "^2.2.2"
 	},
 	"type": "module"
