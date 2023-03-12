@@ -19,7 +19,6 @@ export interface SliderProps extends Partial<ElProps> {
 	min?: number
 	max?: number
 	step?: number
-	vertical?: boolean
 	connect?: boolean
 }
 

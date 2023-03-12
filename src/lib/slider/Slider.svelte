@@ -12,7 +12,6 @@
 	export let min: $$Props['min'] = undefined
 	export let max: $$Props['max'] = undefined
 	export let step: $$Props['step'] = undefined
-	export let vertical: $$Props['vertical'] = undefined
 	export let connect: $$Props['connect'] = undefined
 
 	let knobs: SliderKnobType[] = []
@@ -38,7 +37,6 @@
 
 		const options: Options = {
 			start: knobs.map((knob) => knob.value),
-			orientation: vertical ? 'vertical' : 'horizontal',
 			tooltips: knobs.map((knob) => knob.tooltip ?? false),
 			connect: [connect ?? false, ...knobs.map((knob) => knob.connect ?? false)],
 			step,
@@ -68,5 +66,5 @@
 	setContext('SLIDER', { register, unregister, setValue, values })
 </script>
 
-<div class={classname('slider', { color, vertical })} bind:this={element} />
+<div class={classname('slider', { color })} bind:this={element} />
 <slot />

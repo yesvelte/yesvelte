@@ -7,7 +7,6 @@
 	import FormSliderRange from './FormSliderRange.svelte'
 	import FormSliderTwoKnobs from './FormSliderTwoKnobs.svelte'
 	import FormSliderTwoKnobsConnected from './FormSliderTwoKnobsConnected.svelte'
-	import FormSliderVertical from './FormSliderVertical.svelte'
 	import FormSliderWithForm from './FormSliderWithForm.svelte'
 </script>
 
@@ -53,23 +52,9 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Vertical">
-		<Preview src="./FormSliderVertical.svelte">
-			<div class="custom-class">
-				<FormSliderVertical />
-			</div>
-		</Preview>
-	</Doc>
-
 	<Doc title="With Form">
 		<Preview src="./FormSliderWithForm.svelte">
 			<FormSliderWithForm />
 		</Preview>
 	</Doc>
 </Page>
-
-<style>
-	:global(.custom-class) {
-		height: 400px;
-	}
-</style>
