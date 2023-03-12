@@ -8,7 +8,6 @@
 	import SliderTooltip from './SliderTooltip.svelte'
 	import SliderTwoKnobs from './SliderTwoKnobs.svelte'
 	import SliderTwoKnobsConnected from './SliderTwoKnobsConnected.svelte'
-	import SliderVertical from './SliderVertical.svelte'
 </script>
 
 <Page
@@ -57,18 +56,4 @@
 			<SliderColor />
 		</Preview>
 	</Doc>
-
-	<Doc title="Vertical">
-		<Preview src="./SliderVertical.svelte">
-			<div class="custom-class">
-				<SliderVertical />
-			</div>
-		</Preview>
-	</Doc>
 </Page>
-
-<style>
-	:global(.custom-class) {
-		height: 400px;
-	}
-</style>

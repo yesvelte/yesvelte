@@ -9,7 +9,6 @@
 	export let tag: $$Props['tag'] = 'input'
 	export let required: $$Props['required'] = undefined
 	export let color: $$Props['color'] = undefined
-	export let vertical: $$Props['vertical'] = undefined
 	export let connect: $$Props['connect'] = undefined
 	export let min: $$Props['min'] = undefined
 	export let max: $$Props['max'] = undefined
@@ -34,7 +33,6 @@
 		required,
 		state,
 		color,
-		vertical,
 		connect,
 		min,
 		max,
