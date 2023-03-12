@@ -69,10 +69,10 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Disabled Items">
+	<Doc title="Disabled">
 		<p slot="description">
 			You can use <code>items</code> property to pass an array of items to
-			<code>CheckboxGroup</code> component and show some items <code>disabled</code>.
+			<code>CheckboxGroup</code> component and <code>disabled</code> some items.
 		</p>
 		<Preview src="./CheckboxGroupDisabledItems.svelte">
 			<CheckboxGroupDisabledItems />
