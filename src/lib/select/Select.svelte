@@ -42,7 +42,7 @@
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
-			<option value={index} selected={value === item}>
+			<option value={index} selected={value === item} disabled={item.disabled ?? false}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}
