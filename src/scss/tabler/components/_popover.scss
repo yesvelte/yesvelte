@@ -1,11 +1,7 @@
-$prefix-popover: $prefix + 'popover';
-
 $popover-props: (
 	null: (
 		'.popover',
-		'.bs-popover-auto',
-		'.fade',
-		'.show'
+		'.bs-popover-auto'
 	),
 	body: '.popover-body',
 	header: '.popover-header',
