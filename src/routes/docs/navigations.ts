@@ -221,6 +221,13 @@ export const navigations: Navigation[] = [
 					'Build hidden sidebars into your project for navigation, shopping carts, and more using Offcanvas.',
 			},
 			{
+				route: base_path + '/pagination',
+				title: 'Pagination',
+				icon: 'mdi:dots-horizontal',
+				description:
+					'The Pagination component enables the user to select a specific page from a range of pages.',
+			},
+			{
 				route: base_path + '/progress',
 				title: 'Progress',
 				icon: 'vaadin:progressbar',
