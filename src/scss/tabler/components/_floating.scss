@@ -1,0 +1,6 @@
+.#{$prefix-floating} {
+	position: absolute;
+	&-fixed {
+		position: fixed;
+	}
+}

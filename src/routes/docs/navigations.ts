@@ -179,6 +179,12 @@ export const navigations: Navigation[] = [
 				description: 'FileUpload component is used for collecting files from local device of user.',
 			},
 			{
+				route: base_path + '/floating',
+				title: 'Floating',
+				icon: 'material-symbols:apps',
+				description: 'A floating component appears in front of all screen content.',
+			},
+			{
 				route: base_path + '/icon',
 				title: 'Icon',
 				icon: 'tabler:star',
