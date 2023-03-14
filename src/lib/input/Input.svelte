@@ -13,6 +13,7 @@
 	export let maskOptions: $$Props['maskOptions'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
+	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
@@ -51,6 +52,7 @@
 			placeholder,
 			disabled,
 			readonly,
+			required,
 			type,
 			name
 		}

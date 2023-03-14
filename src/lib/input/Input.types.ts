@@ -17,6 +17,7 @@ export interface InputProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
 	readonly?: boolean
+	required?: boolean
 	size?: InputSizes
 	value?: unknown
 	state?: InputStates
