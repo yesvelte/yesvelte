@@ -20,6 +20,7 @@ export interface SliderProps extends Partial<ElProps> {
 	max?: number
 	step?: number
 	connect?: boolean
+	name?: string
 }
 
 export interface SliderKnobProps extends Partial<ElProps> {

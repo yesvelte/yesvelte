@@ -16,6 +16,7 @@
 	export let state: $$Props['state'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let props: $$Props = {}
 	let sliderProps: $$Props = {}
@@ -37,6 +38,7 @@
 		min,
 		max,
 		step,
+		name,
 	}
 </script>
 

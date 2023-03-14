@@ -9,6 +9,7 @@
 	export let tag: $$Props['tag'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
 	export let accept: $$Props['accept'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let required: $$Props['required'] = undefined
@@ -38,6 +39,7 @@
 		state,
 		multiple,
 		accept,
+		name
 	}
 </script>
 

@@ -24,5 +24,6 @@ export interface InputProps extends Partial<ElProps> {
 	borderFlush?: boolean
 	type?: InputTypes
 	mask?: string
+	name?: string
 	maskOptions?: object
 }

@@ -17,6 +17,7 @@
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -51,6 +52,7 @@
 			disabled,
 			readonly,
 			type,
+			name
 		}
 	}
 </script>
