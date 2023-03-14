@@ -10,6 +10,7 @@
 	export let items: $$Props['items'] = []
 	export let key: $$Props['key'] = undefined
 	export let label: $$Props['label'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
@@ -32,6 +33,7 @@
 			items,
 			key,
 			placeholder,
+			name,
 			size,
 			state,
 		}

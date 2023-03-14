@@ -13,6 +13,7 @@
 	export let componentName: $$Props['componentName'] = 'checkbox-group'
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 
@@ -21,7 +22,7 @@
 
 	$: props = {
 		inline,
-		name: element?.id,
+		name: name ?? element?.id,
 		color,
 		reverse,
 	}

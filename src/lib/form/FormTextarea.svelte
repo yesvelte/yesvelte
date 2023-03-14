@@ -14,6 +14,7 @@
 	export let readonly: $$Props['readonly'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let rows: $$Props['rows'] = 3
+	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
@@ -45,6 +46,7 @@
 			borderRounded,
 			borderFlush,
 			rows,
+			name,
 		}
 	}
 </script>

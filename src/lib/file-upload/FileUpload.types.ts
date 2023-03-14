@@ -9,6 +9,7 @@ export interface FileUploadProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
 	size?: InputSizes
+	name?: string
 	files?: FileList
 	state?: InputStates
 	accept?: string

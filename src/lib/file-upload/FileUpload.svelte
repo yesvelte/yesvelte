@@ -8,6 +8,7 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let accept: $$Props['accept'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
@@ -34,6 +35,7 @@
 			placeholder,
 			disabled,
 			accept,
+			name,
 			multiple,
 			tag: 'input',
 			type: 'file',

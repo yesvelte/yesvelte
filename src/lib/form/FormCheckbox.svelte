@@ -19,6 +19,7 @@
 	export let checked: $$Props['checked'] = undefined
 	export let indeterminate: $$Props['indeterminate'] = undefined
 	export let inline: $$Props['inline'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	$: props = {
 		required,
@@ -35,6 +36,7 @@
 		reverse,
 		indeterminate,
 		disabled,
+		name,
 	}
 </script>
 
