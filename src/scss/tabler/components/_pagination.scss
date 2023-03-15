@@ -1,0 +1,13 @@
+$pagination-props: (
+	null: '.pagination',
+	item: (
+		null: '.page-item',
+		link: '.page-link',
+		active: '.active',
+		disabled: '.disabled'
+	)
+);
+
+.#{$prefix-pagination} {
+	@include apply-props($pagination-props);
+}
