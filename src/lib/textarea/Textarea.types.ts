@@ -9,6 +9,7 @@ export type TextareaStates = (typeof TEXTAREA_STATES)[number]
 export interface TextareaProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
+	name?: string
 	readonly?: boolean
 	size?: TextareaSizes
 	state?: TextareaStates

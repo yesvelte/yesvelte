@@ -11,6 +11,7 @@
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
@@ -27,6 +28,7 @@
 			value,
 			disabled,
 			placeholder,
+			name,
 		}
 	}
 

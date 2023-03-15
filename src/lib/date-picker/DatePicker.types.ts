@@ -10,6 +10,7 @@ export interface DatePickerProps extends Partial<ElProps> {
 	placeholder?: string
 	size?: InputSizes
 	state?: InputStates
+	name?: string
 	borderRounded?: boolean
 	borderFlush?: boolean
 }
