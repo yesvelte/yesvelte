@@ -4794,12 +4794,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   outline: 0;
   box-shadow: var(--y-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .btn-check:checked + .y-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .y-button:active, .btn:first-child:active, .y-button:first-child:active, .btn.active, .btn.y-tab-item-link-active, .btn.y-tab-pane, .btn.y-step-item-active, .btn.u-carousel-item-active, .btn.y-button-active, .active.y-button, .y-button.y-tab-item-link-active, .y-button.y-tab-pane, .y-button.y-step-item-active, .y-button.u-carousel-item-active, .y-button.y-button-active, .btn.y-breadcrumb-item-active, .y-breadcrumb-item-active.y-button, .btn.y-avatar-active, .y-avatar-active.y-button, .btn.show, .btn.y-tooltip, .btn.y-toast-show, .btn.y-popover, .btn.y-offcanvas-show, .btn.y-modal-show, .btn.y-modal-backdrop-show, .show.y-button, .y-button.y-tooltip, .y-button.y-toast-show, .y-button.y-popover, .y-button.y-offcanvas-show, .y-button.y-modal-show, .y-button.y-modal-backdrop-show, .btn.y-el-show, .y-el-show.y-button {
+.btn-check:checked + .btn, .btn-check:checked + .y-button, :not(.btn-check) + .btn:active, :not(.btn-check) + .y-button:active, .btn:first-child:active, .y-button:first-child:active, .btn.active, .btn.y-tab-item-link-active, .btn.y-tab-pane, .btn.y-step-item-active, .btn.u-carousel-item-active, .btn.y-button-active, .active.y-button, .y-button.y-tab-item-link-active, .y-button.y-tab-pane, .y-button.y-step-item-active, .y-button.u-carousel-item-active, .y-button.y-button-active, .btn.y-breadcrumb-item-active, .y-breadcrumb-item-active.y-button, .btn.y-avatar-active, .y-avatar-active.y-button, .btn.show, .btn.y-toast-show, .btn.y-offcanvas-show, .btn.y-modal-show, .btn.y-modal-backdrop-show, .show.y-button, .y-button.y-toast-show, .y-button.y-offcanvas-show, .y-button.y-modal-show, .y-button.y-modal-backdrop-show, .btn.y-el-show, .y-el-show.y-button {
   color: var(--y-btn-active-color);
   background-color: var(--y-btn-active-bg);
   border-color: var(--y-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .y-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .y-button:active:focus-visible, .btn:first-child:active:focus-visible, .y-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.y-tab-item-link-active:focus-visible, .btn.y-tab-pane:focus-visible, .btn.y-step-item-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.y-button-active:focus-visible, .active.y-button:focus-visible, .y-button.y-tab-item-link-active:focus-visible, .y-button.y-tab-pane:focus-visible, .y-button.y-step-item-active:focus-visible, .y-button.u-carousel-item-active:focus-visible, .y-button.y-button-active:focus-visible, .btn.y-breadcrumb-item-active:focus-visible, .y-breadcrumb-item-active.y-button:focus-visible, .btn.y-avatar-active:focus-visible, .y-avatar-active.y-button:focus-visible, .btn.show:focus-visible, .btn.y-tooltip:focus-visible, .btn.y-toast-show:focus-visible, .btn.y-popover:focus-visible, .btn.y-offcanvas-show:focus-visible, .btn.y-modal-show:focus-visible, .btn.y-modal-backdrop-show:focus-visible, .show.y-button:focus-visible, .y-button.y-tooltip:focus-visible, .y-button.y-toast-show:focus-visible, .y-button.y-popover:focus-visible, .y-button.y-offcanvas-show:focus-visible, .y-button.y-modal-show:focus-visible, .y-button.y-modal-backdrop-show:focus-visible, .btn.y-el-show:focus-visible, .y-el-show.y-button:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .y-button:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .y-button:active:focus-visible, .btn:first-child:active:focus-visible, .y-button:first-child:active:focus-visible, .btn.active:focus-visible, .btn.y-tab-item-link-active:focus-visible, .btn.y-tab-pane:focus-visible, .btn.y-step-item-active:focus-visible, .btn.u-carousel-item-active:focus-visible, .btn.y-button-active:focus-visible, .active.y-button:focus-visible, .y-button.y-tab-item-link-active:focus-visible, .y-button.y-tab-pane:focus-visible, .y-button.y-step-item-active:focus-visible, .y-button.u-carousel-item-active:focus-visible, .y-button.y-button-active:focus-visible, .btn.y-breadcrumb-item-active:focus-visible, .y-breadcrumb-item-active.y-button:focus-visible, .btn.y-avatar-active:focus-visible, .y-avatar-active.y-button:focus-visible, .btn.show:focus-visible, .btn.y-toast-show:focus-visible, .btn.y-offcanvas-show:focus-visible, .btn.y-modal-show:focus-visible, .btn.y-modal-backdrop-show:focus-visible, .show.y-button:focus-visible, .y-button.y-toast-show:focus-visible, .y-button.y-offcanvas-show:focus-visible, .y-button.y-modal-show:focus-visible, .y-button.y-modal-backdrop-show:focus-visible, .btn.y-el-show:focus-visible, .y-el-show.y-button:focus-visible {
   box-shadow: var(--y-btn-focus-box-shadow);
 }
 .btn:disabled, .y-button:disabled, .btn.disabled, .btn.y-tab-item-link-disabled, .btn.y-button-disabled, .disabled.y-button, .y-button.y-tab-item-link-disabled, .y-button.y-button-disabled, fieldset:disabled .btn, fieldset:disabled .y-button {
@@ -4849,19 +4849,19 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   --y-btn-border-radius: 2px;
 }
 
-.fade, .y-tooltip, .y-popover, .y-modal-backdrop, .y-modal {
+.fade, .y-modal-backdrop, .y-modal {
   transition: opacity 0.15s linear;
 }
 @media (prefers-reduced-motion: reduce) {
-  .fade, .y-tooltip, .y-popover, .y-modal-backdrop, .y-modal {
+  .fade, .y-modal-backdrop, .y-modal {
     transition: none;
   }
 }
-.fade:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-tooltip:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-popover:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-modal-backdrop:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-modal:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
+.fade:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-modal-backdrop:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-modal:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
   opacity: 0;
 }
 
-.collapse:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
+.collapse:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
   display: none;
 }
 
@@ -5157,7 +5157,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   background-color: transparent;
 }
 
-.dropdown-menu.show, .show.y-autocomplete-dropdown, .dropdown-menu.y-tooltip, .y-tooltip.y-autocomplete-dropdown, .dropdown-menu.y-toast-show, .y-toast-show.y-autocomplete-dropdown, .dropdown-menu.y-tab-pane, .y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.y-popover, .y-popover.y-autocomplete-dropdown, .dropdown-menu.y-offcanvas-show, .y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.y-modal-show, .y-modal-show.y-autocomplete-dropdown, .dropdown-menu.y-modal-backdrop-show, .y-modal-backdrop-show.y-autocomplete-dropdown, .show.y-menu, .y-menu.y-tooltip, .y-menu.y-toast-show, .y-menu.y-tab-pane, .y-menu.y-popover, .y-menu.y-offcanvas-show, .y-menu.y-modal-show, .y-menu.y-modal-backdrop-show, .dropdown-menu.y-el-show, .y-el-show.y-autocomplete-dropdown, .y-el-show.y-menu {
+.dropdown-menu.show, .show.y-autocomplete-dropdown, .dropdown-menu.y-toast-show, .y-toast-show.y-autocomplete-dropdown, .dropdown-menu.y-tab-pane, .y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.y-offcanvas-show, .y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.y-modal-show, .y-modal-show.y-autocomplete-dropdown, .dropdown-menu.y-modal-backdrop-show, .y-modal-backdrop-show.y-autocomplete-dropdown, .show.y-menu, .y-menu.y-toast-show, .y-menu.y-tab-pane, .y-menu.y-offcanvas-show, .y-menu.y-modal-show, .y-menu.y-modal-backdrop-show, .dropdown-menu.y-el-show, .y-el-show.y-autocomplete-dropdown, .y-el-show.y-menu {
   display: block;
 }
 
@@ -5492,45 +5492,29 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-link.y-tab-item-link-active, .nav-tabs .active.y-tab-item-link, .nav-tabs .y-tab-item-link.y-tab-item-link-active, .nav-tabs .nav-link.y-tab-pane, .nav-tabs .y-tab-pane.y-tab-item-link, .y-tab-list .nav-link.active, .y-tab-list .nav-link.y-tab-item-link-active, .y-tab-list .active.y-tab-item-link, .y-tab-list .y-tab-item-link.y-tab-item-link-active, .y-tab-list .nav-link.y-tab-pane, .y-tab-list .y-tab-pane.y-tab-item-link, .nav-tabs .nav-link.y-step-item-active, .nav-tabs .y-step-item-active.y-tab-item-link, .y-tab-list .nav-link.y-step-item-active, .y-tab-list .y-step-item-active.y-tab-item-link, .nav-tabs .nav-link.u-carousel-item-active, .nav-tabs .u-carousel-item-active.y-tab-item-link, .y-tab-list .nav-link.u-carousel-item-active, .y-tab-list .u-carousel-item-active.y-tab-item-link, .nav-tabs .nav-link.y-button-active, .nav-tabs .y-button-active.y-tab-item-link, .y-tab-list .nav-link.y-button-active, .y-tab-list .y-button-active.y-tab-item-link, .nav-tabs .nav-link.y-breadcrumb-item-active, .nav-tabs .y-breadcrumb-item-active.y-tab-item-link, .y-tab-list .nav-link.y-breadcrumb-item-active, .y-tab-list .y-breadcrumb-item-active.y-tab-item-link, .nav-tabs .nav-link.y-avatar-active, .nav-tabs .y-avatar-active.y-tab-item-link, .y-tab-list .nav-link.y-avatar-active, .y-tab-list .y-avatar-active.y-tab-item-link,
 .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-item.y-tooltip .nav-link,
 .nav-tabs .nav-item.y-toast-show .nav-link,
 .nav-tabs .nav-item.show .y-tab-item-link,
-.nav-tabs .nav-item.y-tooltip .y-tab-item-link,
 .nav-tabs .nav-item.y-toast-show .y-tab-item-link,
 .nav-tabs .show.y-tab-item .nav-link,
-.nav-tabs .y-tab-item.y-tooltip .nav-link,
 .nav-tabs .y-tab-item.y-toast-show .nav-link,
 .nav-tabs .show.y-tab-item .y-tab-item-link,
-.nav-tabs .y-tab-item.y-tooltip .y-tab-item-link,
 .nav-tabs .y-tab-item.y-toast-show .y-tab-item-link,
 .nav-tabs .nav-item.y-tab-pane .nav-link,
 .nav-tabs .nav-item.y-tab-pane .y-tab-item-link,
 .nav-tabs .y-tab-pane.y-tab-item .nav-link,
 .nav-tabs .y-tab-pane.y-tab-item .y-tab-item-link,
 .y-tab-list .nav-item.show .nav-link,
-.y-tab-list .nav-item.y-tooltip .nav-link,
 .y-tab-list .nav-item.y-toast-show .nav-link,
 .y-tab-list .nav-item.show .y-tab-item-link,
-.y-tab-list .nav-item.y-tooltip .y-tab-item-link,
 .y-tab-list .nav-item.y-toast-show .y-tab-item-link,
 .y-tab-list .show.y-tab-item .nav-link,
-.y-tab-list .y-tab-item.y-tooltip .nav-link,
 .y-tab-list .y-tab-item.y-toast-show .nav-link,
 .y-tab-list .show.y-tab-item .y-tab-item-link,
-.y-tab-list .y-tab-item.y-tooltip .y-tab-item-link,
 .y-tab-list .y-tab-item.y-toast-show .y-tab-item-link,
 .y-tab-list .nav-item.y-tab-pane .nav-link,
 .y-tab-list .nav-item.y-tab-pane .y-tab-item-link,
 .y-tab-list .y-tab-pane.y-tab-item .nav-link,
 .y-tab-list .y-tab-pane.y-tab-item .y-tab-item-link,
-.nav-tabs .nav-item.y-popover .nav-link,
-.nav-tabs .nav-item.y-popover .y-tab-item-link,
-.nav-tabs .y-popover.y-tab-item .nav-link,
-.nav-tabs .y-popover.y-tab-item .y-tab-item-link,
-.y-tab-list .nav-item.y-popover .nav-link,
-.y-tab-list .nav-item.y-popover .y-tab-item-link,
-.y-tab-list .y-popover.y-tab-item .nav-link,
-.y-tab-list .y-popover.y-tab-item .y-tab-item-link,
 .nav-tabs .nav-item.y-offcanvas-show .nav-link,
 .nav-tabs .nav-item.y-offcanvas-show .y-tab-item-link,
 .nav-tabs .y-offcanvas-show.y-tab-item .nav-link,
@@ -5590,15 +5574,11 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
 }
 .nav-pills .nav-link.active, .nav-pills .nav-link.y-tab-item-link-active, .nav-pills .active.y-tab-item-link, .nav-pills .y-tab-item-link.y-tab-item-link-active, .nav-pills .nav-link.y-tab-pane, .nav-pills .y-tab-pane.y-tab-item-link, .nav-pills .nav-link.y-step-item-active, .nav-pills .y-step-item-active.y-tab-item-link, .nav-pills .nav-link.u-carousel-item-active, .nav-pills .u-carousel-item-active.y-tab-item-link, .nav-pills .nav-link.y-button-active, .nav-pills .y-button-active.y-tab-item-link, .nav-pills .nav-link.y-breadcrumb-item-active, .nav-pills .y-breadcrumb-item-active.y-tab-item-link, .nav-pills .nav-link.y-avatar-active, .nav-pills .y-avatar-active.y-tab-item-link,
 .nav-pills .show > .nav-link,
-.nav-pills .y-tooltip > .nav-link,
 .nav-pills .y-toast-show > .nav-link,
 .nav-pills .show > .y-tab-item-link,
-.nav-pills .y-tooltip > .y-tab-item-link,
 .nav-pills .y-toast-show > .y-tab-item-link,
 .nav-pills .y-tab-pane > .nav-link,
 .nav-pills .y-tab-pane > .y-tab-item-link,
-.nav-pills .y-popover > .nav-link,
-.nav-pills .y-popover > .y-tab-item-link,
 .nav-pills .y-offcanvas-show > .nav-link,
 .nav-pills .y-offcanvas-show > .y-tab-item-link,
 .nav-pills .y-modal-show > .nav-link,
@@ -5727,7 +5707,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .show > .nav-link, .navbar-nav .y-tooltip > .nav-link, .navbar-nav .y-toast-show > .nav-link, .navbar-nav .show > .y-tab-item-link, .navbar-nav .y-tooltip > .y-tab-item-link, .navbar-nav .y-toast-show > .y-tab-item-link, .navbar-nav .y-tab-pane > .nav-link, .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar-nav .y-popover > .nav-link, .navbar-nav .y-popover > .y-tab-item-link, .navbar-nav .y-offcanvas-show > .nav-link, .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar-nav .y-modal-show > .nav-link, .navbar-nav .y-modal-show > .y-tab-item-link, .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar-nav .y-el-show > .nav-link, .navbar-nav .y-el-show > .y-tab-item-link,
+.navbar-nav .show > .nav-link, .navbar-nav .y-toast-show > .nav-link, .navbar-nav .show > .y-tab-item-link, .navbar-nav .y-toast-show > .y-tab-item-link, .navbar-nav .y-tab-pane > .nav-link, .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar-nav .y-offcanvas-show > .nav-link, .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar-nav .y-modal-show > .nav-link, .navbar-nav .y-modal-show > .y-tab-item-link, .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar-nav .y-el-show > .nav-link, .navbar-nav .y-el-show > .y-tab-item-link,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.y-tab-item-link-active,
 .navbar-nav .active.y-tab-item-link,
@@ -7808,7 +7788,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
 .toast.showing, .showing.y-toast {
   opacity: 0;
 }
-.toast:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-toast:not(.show):not(.y-tooltip):not(.y-toast-show):not(.y-tab-pane):not(.y-popover):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
+.toast:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show), .y-toast:not(.show):not(.y-toast-show):not(.y-tab-pane):not(.y-offcanvas-show):not(.y-modal-show):not(.y-modal-backdrop-show):not(.y-el-show) {
   display: none;
 }
 
@@ -7885,16 +7865,16 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   margin: var(--y-modal-margin);
   pointer-events: none;
 }
-.modal.fade .modal-dialog, .modal.y-tooltip .modal-dialog, .modal.y-popover .modal-dialog, .modal.y-modal-backdrop .modal-dialog, .modal.fade .y-modal-container, .modal.y-tooltip .y-modal-container, .modal.y-popover .y-modal-container, .modal.y-modal-backdrop .y-modal-container, .y-modal .modal-dialog, .y-modal .y-modal-container {
+.modal.fade .modal-dialog, .modal.y-modal-backdrop .modal-dialog, .modal.fade .y-modal-container, .modal.y-modal-backdrop .y-modal-container, .y-modal .modal-dialog, .y-modal .y-modal-container {
   transition: transform 0.3s ease-out;
   transform: translate(0, -1rem);
 }
 @media (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog, .modal.y-tooltip .modal-dialog, .modal.y-popover .modal-dialog, .modal.y-modal-backdrop .modal-dialog, .modal.fade .y-modal-container, .modal.y-tooltip .y-modal-container, .modal.y-popover .y-modal-container, .modal.y-modal-backdrop .y-modal-container, .y-modal .modal-dialog, .y-modal .y-modal-container {
+  .modal.fade .modal-dialog, .modal.y-modal-backdrop .modal-dialog, .modal.fade .y-modal-container, .modal.y-modal-backdrop .y-modal-container, .y-modal .modal-dialog, .y-modal .y-modal-container {
     transition: none;
   }
 }
-.modal.show .modal-dialog, .modal.y-tooltip .modal-dialog, .modal.y-toast-show .modal-dialog, .modal.y-tab-pane .modal-dialog, .modal.y-popover .modal-dialog, .modal.y-offcanvas-show .modal-dialog, .modal.y-modal-show .modal-dialog, .modal.y-modal-backdrop-show .modal-dialog, .modal.show .y-modal-container, .modal.y-tooltip .y-modal-container, .modal.y-toast-show .y-modal-container, .modal.y-tab-pane .y-modal-container, .modal.y-popover .y-modal-container, .modal.y-offcanvas-show .y-modal-container, .modal.y-modal-show .y-modal-container, .modal.y-modal-backdrop-show .y-modal-container, .show.y-modal .modal-dialog, .y-modal.y-tooltip .modal-dialog, .y-modal.y-toast-show .modal-dialog, .y-modal.y-tab-pane .modal-dialog, .y-modal.y-popover .modal-dialog, .y-modal.y-offcanvas-show .modal-dialog, .y-modal.y-modal-show .modal-dialog, .y-modal.y-modal-backdrop-show .modal-dialog, .show.y-modal .y-modal-container, .y-modal.y-tooltip .y-modal-container, .y-modal.y-toast-show .y-modal-container, .y-modal.y-tab-pane .y-modal-container, .y-modal.y-popover .y-modal-container, .y-modal.y-offcanvas-show .y-modal-container, .y-modal.y-modal-show .y-modal-container, .y-modal.y-modal-backdrop-show .y-modal-container, .modal.y-el-show .modal-dialog, .modal.y-el-show .y-modal-container, .y-el-show.y-modal .modal-dialog, .y-el-show.y-modal .y-modal-container {
+.modal.show .modal-dialog, .modal.y-toast-show .modal-dialog, .modal.y-tab-pane .modal-dialog, .modal.y-offcanvas-show .modal-dialog, .modal.y-modal-show .modal-dialog, .modal.y-modal-backdrop-show .modal-dialog, .modal.show .y-modal-container, .modal.y-toast-show .y-modal-container, .modal.y-tab-pane .y-modal-container, .modal.y-offcanvas-show .y-modal-container, .modal.y-modal-show .y-modal-container, .modal.y-modal-backdrop-show .y-modal-container, .show.y-modal .modal-dialog, .y-modal.y-toast-show .modal-dialog, .y-modal.y-tab-pane .modal-dialog, .y-modal.y-offcanvas-show .modal-dialog, .y-modal.y-modal-show .modal-dialog, .y-modal.y-modal-backdrop-show .modal-dialog, .show.y-modal .y-modal-container, .y-modal.y-toast-show .y-modal-container, .y-modal.y-tab-pane .y-modal-container, .y-modal.y-offcanvas-show .y-modal-container, .y-modal.y-modal-show .y-modal-container, .y-modal.y-modal-backdrop-show .y-modal-container, .modal.y-el-show .modal-dialog, .modal.y-el-show .y-modal-container, .y-el-show.y-modal .modal-dialog, .y-el-show.y-modal .y-modal-container {
   transform: none;
 }
 .modal.modal-static .modal-dialog, .modal.modal-static .y-modal-container, .modal-static.y-modal .modal-dialog, .modal-static.y-modal .y-modal-container {
@@ -7944,10 +7924,10 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   height: 100vh;
   background-color: var(--y-backdrop-bg);
 }
-.modal-backdrop.fade, .modal-backdrop.y-tooltip, .modal-backdrop.y-popover, .y-modal-backdrop, .modal-backdrop.y-modal {
+.modal-backdrop.fade, .y-modal-backdrop, .modal-backdrop.y-modal {
   opacity: 0;
 }
-.modal-backdrop.show, .modal-backdrop.y-tooltip, .modal-backdrop.y-toast-show, .modal-backdrop.y-tab-pane, .modal-backdrop.y-popover, .modal-backdrop.y-offcanvas-show, .modal-backdrop.y-modal-show, .modal-backdrop.y-modal-backdrop-show, .show.y-modal-backdrop, .y-modal-backdrop.y-tooltip, .y-modal-backdrop.y-toast-show, .y-modal-backdrop.y-tab-pane, .y-modal-backdrop.y-popover, .y-modal-backdrop.y-offcanvas-show, .y-modal-backdrop.y-modal-show, .y-modal-backdrop.y-modal-backdrop-show, .modal-backdrop.y-el-show, .y-el-show.y-modal-backdrop {
+.modal-backdrop.show, .modal-backdrop.y-toast-show, .modal-backdrop.y-tab-pane, .modal-backdrop.y-offcanvas-show, .modal-backdrop.y-modal-show, .modal-backdrop.y-modal-backdrop-show, .show.y-modal-backdrop, .y-modal-backdrop.y-toast-show, .y-modal-backdrop.y-tab-pane, .y-modal-backdrop.y-offcanvas-show, .y-modal-backdrop.y-modal-show, .y-modal-backdrop.y-modal-backdrop-show, .modal-backdrop.y-el-show, .y-el-show.y-modal-backdrop {
   opacity: var(--y-backdrop-opacity);
 }
 
@@ -8179,7 +8159,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   word-wrap: break-word;
   opacity: 0;
 }
-.tooltip.show, .y-tooltip, .tooltip.y-toast-show, .tooltip.y-tab-pane, .tooltip.y-popover, .tooltip.y-offcanvas-show, .tooltip.y-modal-show, .tooltip.y-modal-backdrop-show, .tooltip.y-el-show {
+.tooltip.show, .show.y-tooltip, .tooltip.y-toast-show, .y-toast-show.y-tooltip, .tooltip.y-tab-pane, .y-tab-pane.y-tooltip, .tooltip.y-offcanvas-show, .y-offcanvas-show.y-tooltip, .tooltip.y-modal-show, .y-modal-show.y-tooltip, .tooltip.y-modal-backdrop-show, .y-modal-backdrop-show.y-tooltip, .tooltip.y-el-show, .y-el-show.y-tooltip {
   opacity: var(--y-tooltip-opacity);
 }
 .tooltip .tooltip-arrow, .tooltip .y-tooltip-arrow, .y-tooltip .tooltip-arrow, .y-tooltip .y-tooltip-arrow {
@@ -8194,44 +8174,44 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   border-style: solid;
 }
 
-.bs-tooltip-top .tooltip-arrow, .bs-tooltip-top .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .y-tooltip-arrow, [data-popper-placement^=top].y-tooltip .tooltip-arrow, [data-popper-placement^=top].y-tooltip .y-tooltip-arrow {
+.bs-tooltip-top .tooltip-arrow, .bs-tooltip-top .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .y-tooltip-arrow, [data-popper-placement^=top].y-tooltip .tooltip-arrow, [data-popper-placement^=top].y-tooltip .y-tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-top .tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-top .y-tooltip-arrow, .y-popup.y-popup-arrow-placement-top.y-tooltip .tooltip-arrow, .y-popup.y-popup-arrow-placement-top.y-tooltip .y-tooltip-arrow {
   bottom: 0;
 }
-.bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-top .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .y-tooltip-arrow::before, [data-popper-placement^=top].y-tooltip .tooltip-arrow::before, [data-popper-placement^=top].y-tooltip .y-tooltip-arrow::before {
+.bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-top .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .y-tooltip-arrow::before, [data-popper-placement^=top].y-tooltip .tooltip-arrow::before, [data-popper-placement^=top].y-tooltip .y-tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-top .tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-top .y-tooltip-arrow::before, .y-popup.y-popup-arrow-placement-top.y-tooltip .tooltip-arrow::before, .y-popup.y-popup-arrow-placement-top.y-tooltip .y-tooltip-arrow::before {
   top: -1px;
   border-width: var(--y-tooltip-arrow-height) calc(var(--y-tooltip-arrow-width) * 0.5) 0;
   border-top-color: var(--y-tooltip-bg);
 }
 
 /* rtl:begin:ignore */
-.bs-tooltip-end .tooltip-arrow, .bs-tooltip-end .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .y-tooltip-arrow, [data-popper-placement^=right].y-tooltip .tooltip-arrow, [data-popper-placement^=right].y-tooltip .y-tooltip-arrow {
+.bs-tooltip-end .tooltip-arrow, .bs-tooltip-end .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .y-tooltip-arrow, [data-popper-placement^=right].y-tooltip .tooltip-arrow, [data-popper-placement^=right].y-tooltip .y-tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-right .tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-right .y-tooltip-arrow, .y-popup.y-popup-arrow-placement-right.y-tooltip .tooltip-arrow, .y-popup.y-popup-arrow-placement-right.y-tooltip .y-tooltip-arrow {
   left: 0;
   width: var(--y-tooltip-arrow-height);
   height: var(--y-tooltip-arrow-width);
 }
-.bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-end .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .y-tooltip-arrow::before, [data-popper-placement^=right].y-tooltip .tooltip-arrow::before, [data-popper-placement^=right].y-tooltip .y-tooltip-arrow::before {
+.bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-end .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .y-tooltip-arrow::before, [data-popper-placement^=right].y-tooltip .tooltip-arrow::before, [data-popper-placement^=right].y-tooltip .y-tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-right .tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-right .y-tooltip-arrow::before, .y-popup.y-popup-arrow-placement-right.y-tooltip .tooltip-arrow::before, .y-popup.y-popup-arrow-placement-right.y-tooltip .y-tooltip-arrow::before {
   right: -1px;
   border-width: calc(var(--y-tooltip-arrow-width) * 0.5) var(--y-tooltip-arrow-height) calc(var(--y-tooltip-arrow-width) * 0.5) 0;
   border-right-color: var(--y-tooltip-bg);
 }
 
 /* rtl:end:ignore */
-.bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-bottom .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .y-tooltip-arrow, [data-popper-placement^=bottom].y-tooltip .tooltip-arrow, [data-popper-placement^=bottom].y-tooltip .y-tooltip-arrow {
+.bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-bottom .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .y-tooltip-arrow, [data-popper-placement^=bottom].y-tooltip .tooltip-arrow, [data-popper-placement^=bottom].y-tooltip .y-tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-bottom .tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-bottom .y-tooltip-arrow, .y-popup.y-popup-arrow-placement-bottom.y-tooltip .tooltip-arrow, .y-popup.y-popup-arrow-placement-bottom.y-tooltip .y-tooltip-arrow {
   top: 0;
 }
-.bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-bottom .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .y-tooltip-arrow::before, [data-popper-placement^=bottom].y-tooltip .tooltip-arrow::before, [data-popper-placement^=bottom].y-tooltip .y-tooltip-arrow::before {
+.bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-bottom .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .y-tooltip-arrow::before, [data-popper-placement^=bottom].y-tooltip .tooltip-arrow::before, [data-popper-placement^=bottom].y-tooltip .y-tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-bottom .tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-bottom .y-tooltip-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-tooltip .tooltip-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-tooltip .y-tooltip-arrow::before {
   bottom: -1px;
   border-width: 0 calc(var(--y-tooltip-arrow-width) * 0.5) var(--y-tooltip-arrow-height);
   border-bottom-color: var(--y-tooltip-bg);
 }
 
 /* rtl:begin:ignore */
-.bs-tooltip-start .tooltip-arrow, .bs-tooltip-start .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .y-tooltip-arrow, [data-popper-placement^=left].y-tooltip .tooltip-arrow, [data-popper-placement^=left].y-tooltip .y-tooltip-arrow {
+.bs-tooltip-start .tooltip-arrow, .bs-tooltip-start .y-tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .y-tooltip-arrow, [data-popper-placement^=left].y-tooltip .tooltip-arrow, [data-popper-placement^=left].y-tooltip .y-tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-left .tooltip-arrow, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-left .y-tooltip-arrow, .y-popup.y-popup-arrow-placement-left.y-tooltip .tooltip-arrow, .y-popup.y-popup-arrow-placement-left.y-tooltip .y-tooltip-arrow {
   right: 0;
   width: var(--y-tooltip-arrow-height);
   height: var(--y-tooltip-arrow-width);
 }
-.bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-start .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .y-tooltip-arrow::before, [data-popper-placement^=left].y-tooltip .tooltip-arrow::before, [data-popper-placement^=left].y-tooltip .y-tooltip-arrow::before {
+.bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-start .y-tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .y-tooltip-arrow::before, [data-popper-placement^=left].y-tooltip .tooltip-arrow::before, [data-popper-placement^=left].y-tooltip .y-tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-left .tooltip-arrow::before, .bs-tooltip-auto.y-popup.y-popup-arrow-placement-left .y-tooltip-arrow::before, .y-popup.y-popup-arrow-placement-left.y-tooltip .tooltip-arrow::before, .y-popup.y-popup-arrow-placement-left.y-tooltip .y-tooltip-arrow::before {
   left: -1px;
   border-width: calc(var(--y-tooltip-arrow-width) * 0.5) 0 calc(var(--y-tooltip-arrow-width) * 0.5) var(--y-tooltip-arrow-height);
   border-left-color: var(--y-tooltip-bg);
@@ -8306,55 +8286,55 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   border-width: 0;
 }
 
-.bs-popover-top > .popover-arrow, .bs-popover-top > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow, [data-popper-placement^=top].y-popover > .popover-arrow, [data-popper-placement^=top].y-popover > .y-popover-arrow {
+.bs-popover-top > .popover-arrow, .bs-popover-top > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow, [data-popper-placement^=top].y-popover > .popover-arrow, [data-popper-placement^=top].y-popover > .y-popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .y-popover-arrow, .y-popup.y-popup-arrow-placement-top.y-popover > .popover-arrow, .y-popup.y-popup-arrow-placement-top.y-popover > .y-popover-arrow {
   bottom: calc(-1 * (var(--y-popover-arrow-height)) - var(--y-popover-border-width));
 }
-.bs-popover-top > .popover-arrow::before, .bs-popover-top > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::before, [data-popper-placement^=top].y-popover > .popover-arrow::before, [data-popper-placement^=top].y-popover > .y-popover-arrow::before, .bs-popover-top > .popover-arrow::after, .bs-popover-top > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::after, [data-popper-placement^=top].y-popover > .popover-arrow::after, [data-popper-placement^=top].y-popover > .y-popover-arrow::after {
+.bs-popover-top > .popover-arrow::before, .bs-popover-top > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::before, [data-popper-placement^=top].y-popover > .popover-arrow::before, [data-popper-placement^=top].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-top.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-top.y-popover > .y-popover-arrow::before, .bs-popover-top > .popover-arrow::after, .bs-popover-top > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::after, [data-popper-placement^=top].y-popover > .popover-arrow::after, [data-popper-placement^=top].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-top.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-top.y-popover > .y-popover-arrow::after {
   border-width: var(--y-popover-arrow-height) calc(var(--y-popover-arrow-width) * 0.5) 0;
 }
-.bs-popover-top > .popover-arrow::before, .bs-popover-top > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::before, [data-popper-placement^=top].y-popover > .popover-arrow::before, [data-popper-placement^=top].y-popover > .y-popover-arrow::before {
+.bs-popover-top > .popover-arrow::before, .bs-popover-top > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::before, [data-popper-placement^=top].y-popover > .popover-arrow::before, [data-popper-placement^=top].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-top.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-top.y-popover > .y-popover-arrow::before {
   bottom: 0;
   border-top-color: var(--y-popover-arrow-border);
 }
-.bs-popover-top > .popover-arrow::after, .bs-popover-top > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::after, [data-popper-placement^=top].y-popover > .popover-arrow::after, [data-popper-placement^=top].y-popover > .y-popover-arrow::after {
+.bs-popover-top > .popover-arrow::after, .bs-popover-top > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=top] > .y-popover-arrow::after, [data-popper-placement^=top].y-popover > .popover-arrow::after, [data-popper-placement^=top].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-top > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-top.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-top.y-popover > .y-popover-arrow::after {
   bottom: var(--y-popover-border-width);
   border-top-color: var(--y-popover-bg);
 }
 
 /* rtl:begin:ignore */
-.bs-popover-end > .popover-arrow, .bs-popover-end > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow, [data-popper-placement^=right].y-popover > .popover-arrow, [data-popper-placement^=right].y-popover > .y-popover-arrow {
+.bs-popover-end > .popover-arrow, .bs-popover-end > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow, [data-popper-placement^=right].y-popover > .popover-arrow, [data-popper-placement^=right].y-popover > .y-popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .y-popover-arrow, .y-popup.y-popup-arrow-placement-right.y-popover > .popover-arrow, .y-popup.y-popup-arrow-placement-right.y-popover > .y-popover-arrow {
   left: calc(-1 * (var(--y-popover-arrow-height)) - var(--y-popover-border-width));
   width: var(--y-popover-arrow-height);
   height: var(--y-popover-arrow-width);
 }
-.bs-popover-end > .popover-arrow::before, .bs-popover-end > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::before, [data-popper-placement^=right].y-popover > .popover-arrow::before, [data-popper-placement^=right].y-popover > .y-popover-arrow::before, .bs-popover-end > .popover-arrow::after, .bs-popover-end > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::after, [data-popper-placement^=right].y-popover > .popover-arrow::after, [data-popper-placement^=right].y-popover > .y-popover-arrow::after {
+.bs-popover-end > .popover-arrow::before, .bs-popover-end > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::before, [data-popper-placement^=right].y-popover > .popover-arrow::before, [data-popper-placement^=right].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-right.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-right.y-popover > .y-popover-arrow::before, .bs-popover-end > .popover-arrow::after, .bs-popover-end > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::after, [data-popper-placement^=right].y-popover > .popover-arrow::after, [data-popper-placement^=right].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-right.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-right.y-popover > .y-popover-arrow::after {
   border-width: calc(var(--y-popover-arrow-width) * 0.5) var(--y-popover-arrow-height) calc(var(--y-popover-arrow-width) * 0.5) 0;
 }
-.bs-popover-end > .popover-arrow::before, .bs-popover-end > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::before, [data-popper-placement^=right].y-popover > .popover-arrow::before, [data-popper-placement^=right].y-popover > .y-popover-arrow::before {
+.bs-popover-end > .popover-arrow::before, .bs-popover-end > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::before, [data-popper-placement^=right].y-popover > .popover-arrow::before, [data-popper-placement^=right].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-right.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-right.y-popover > .y-popover-arrow::before {
   left: 0;
   border-right-color: var(--y-popover-arrow-border);
 }
-.bs-popover-end > .popover-arrow::after, .bs-popover-end > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::after, [data-popper-placement^=right].y-popover > .popover-arrow::after, [data-popper-placement^=right].y-popover > .y-popover-arrow::after {
+.bs-popover-end > .popover-arrow::after, .bs-popover-end > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .y-popover-arrow::after, [data-popper-placement^=right].y-popover > .popover-arrow::after, [data-popper-placement^=right].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-right > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-right.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-right.y-popover > .y-popover-arrow::after {
   left: var(--y-popover-border-width);
   border-right-color: var(--y-popover-bg);
 }
 
 /* rtl:end:ignore */
-.bs-popover-bottom > .popover-arrow, .bs-popover-bottom > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow, [data-popper-placement^=bottom].y-popover > .popover-arrow, [data-popper-placement^=bottom].y-popover > .y-popover-arrow {
+.bs-popover-bottom > .popover-arrow, .bs-popover-bottom > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow, [data-popper-placement^=bottom].y-popover > .popover-arrow, [data-popper-placement^=bottom].y-popover > .y-popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .y-popover-arrow, .y-popup.y-popup-arrow-placement-bottom.y-popover > .popover-arrow, .y-popup.y-popup-arrow-placement-bottom.y-popover > .y-popover-arrow {
   top: calc(-1 * (var(--y-popover-arrow-height)) - var(--y-popover-border-width));
 }
-.bs-popover-bottom > .popover-arrow::before, .bs-popover-bottom > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::before, [data-popper-placement^=bottom].y-popover > .popover-arrow::before, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::before, .bs-popover-bottom > .popover-arrow::after, .bs-popover-bottom > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::after, [data-popper-placement^=bottom].y-popover > .popover-arrow::after, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::after {
+.bs-popover-bottom > .popover-arrow::before, .bs-popover-bottom > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::before, [data-popper-placement^=bottom].y-popover > .popover-arrow::before, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-popover > .y-popover-arrow::before, .bs-popover-bottom > .popover-arrow::after, .bs-popover-bottom > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::after, [data-popper-placement^=bottom].y-popover > .popover-arrow::after, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-bottom.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-bottom.y-popover > .y-popover-arrow::after {
   border-width: 0 calc(var(--y-popover-arrow-width) * 0.5) var(--y-popover-arrow-height);
 }
-.bs-popover-bottom > .popover-arrow::before, .bs-popover-bottom > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::before, [data-popper-placement^=bottom].y-popover > .popover-arrow::before, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::before {
+.bs-popover-bottom > .popover-arrow::before, .bs-popover-bottom > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::before, [data-popper-placement^=bottom].y-popover > .popover-arrow::before, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-bottom.y-popover > .y-popover-arrow::before {
   top: 0;
   border-bottom-color: var(--y-popover-arrow-border);
 }
-.bs-popover-bottom > .popover-arrow::after, .bs-popover-bottom > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::after, [data-popper-placement^=bottom].y-popover > .popover-arrow::after, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::after {
+.bs-popover-bottom > .popover-arrow::after, .bs-popover-bottom > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .y-popover-arrow::after, [data-popper-placement^=bottom].y-popover > .popover-arrow::after, [data-popper-placement^=bottom].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-bottom.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-bottom.y-popover > .y-popover-arrow::after {
   top: var(--y-popover-border-width);
   border-bottom-color: var(--y-popover-bg);
 }
-.bs-popover-bottom .popover-header::before, .bs-popover-bottom .y-popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .y-popover-header::before, [data-popper-placement^=bottom].y-popover .popover-header::before, [data-popper-placement^=bottom].y-popover .y-popover-header::before {
+.bs-popover-bottom .popover-header::before, .bs-popover-bottom .y-popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .popover-header::before, .bs-popover-auto[data-popper-placement^=bottom] .y-popover-header::before, [data-popper-placement^=bottom].y-popover .popover-header::before, [data-popper-placement^=bottom].y-popover .y-popover-header::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom .popover-header::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-bottom .y-popover-header::before, .y-popup.y-popup-arrow-placement-bottom.y-popover .popover-header::before, .y-popup.y-popup-arrow-placement-bottom.y-popover .y-popover-header::before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -8366,19 +8346,19 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
 }
 
 /* rtl:begin:ignore */
-.bs-popover-start > .popover-arrow, .bs-popover-start > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow, [data-popper-placement^=left].y-popover > .popover-arrow, [data-popper-placement^=left].y-popover > .y-popover-arrow {
+.bs-popover-start > .popover-arrow, .bs-popover-start > .y-popover-arrow, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow, [data-popper-placement^=left].y-popover > .popover-arrow, [data-popper-placement^=left].y-popover > .y-popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .popover-arrow, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .y-popover-arrow, .y-popup.y-popup-arrow-placement-left.y-popover > .popover-arrow, .y-popup.y-popup-arrow-placement-left.y-popover > .y-popover-arrow {
   right: calc(-1 * (var(--y-popover-arrow-height)) - var(--y-popover-border-width));
   width: var(--y-popover-arrow-height);
   height: var(--y-popover-arrow-width);
 }
-.bs-popover-start > .popover-arrow::before, .bs-popover-start > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::before, [data-popper-placement^=left].y-popover > .popover-arrow::before, [data-popper-placement^=left].y-popover > .y-popover-arrow::before, .bs-popover-start > .popover-arrow::after, .bs-popover-start > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::after, [data-popper-placement^=left].y-popover > .popover-arrow::after, [data-popper-placement^=left].y-popover > .y-popover-arrow::after {
+.bs-popover-start > .popover-arrow::before, .bs-popover-start > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::before, [data-popper-placement^=left].y-popover > .popover-arrow::before, [data-popper-placement^=left].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-left.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-left.y-popover > .y-popover-arrow::before, .bs-popover-start > .popover-arrow::after, .bs-popover-start > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::after, [data-popper-placement^=left].y-popover > .popover-arrow::after, [data-popper-placement^=left].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-left.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-left.y-popover > .y-popover-arrow::after {
   border-width: calc(var(--y-popover-arrow-width) * 0.5) 0 calc(var(--y-popover-arrow-width) * 0.5) var(--y-popover-arrow-height);
 }
-.bs-popover-start > .popover-arrow::before, .bs-popover-start > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::before, [data-popper-placement^=left].y-popover > .popover-arrow::before, [data-popper-placement^=left].y-popover > .y-popover-arrow::before {
+.bs-popover-start > .popover-arrow::before, .bs-popover-start > .y-popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::before, [data-popper-placement^=left].y-popover > .popover-arrow::before, [data-popper-placement^=left].y-popover > .y-popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .popover-arrow::before, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .y-popover-arrow::before, .y-popup.y-popup-arrow-placement-left.y-popover > .popover-arrow::before, .y-popup.y-popup-arrow-placement-left.y-popover > .y-popover-arrow::before {
   right: 0;
   border-left-color: var(--y-popover-arrow-border);
 }
-.bs-popover-start > .popover-arrow::after, .bs-popover-start > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::after, [data-popper-placement^=left].y-popover > .popover-arrow::after, [data-popper-placement^=left].y-popover > .y-popover-arrow::after {
+.bs-popover-start > .popover-arrow::after, .bs-popover-start > .y-popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .y-popover-arrow::after, [data-popper-placement^=left].y-popover > .popover-arrow::after, [data-popper-placement^=left].y-popover > .y-popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .popover-arrow::after, .bs-popover-auto.y-popup.y-popup-arrow-placement-left > .y-popover-arrow::after, .y-popup.y-popup-arrow-placement-left.y-popover > .popover-arrow::after, .y-popup.y-popup-arrow-placement-left.y-popover > .y-popover-arrow::after {
   right: var(--y-popover-border-width);
   border-left-color: var(--y-popover-bg);
 }
@@ -8795,12 +8775,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.y-tooltip:not(.hiding), .offcanvas-sm.y-toast-show:not(.hiding), .offcanvas-sm.y-tab-pane:not(.hiding), .offcanvas-sm.y-popover:not(.hiding), .offcanvas-sm.y-offcanvas-show:not(.hiding), .offcanvas-sm.y-modal-show:not(.hiding), .offcanvas-sm.y-modal-backdrop-show:not(.hiding), .offcanvas-sm.y-el-show:not(.hiding) {
+  .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding), .offcanvas-sm.y-toast-show:not(.hiding), .offcanvas-sm.y-tab-pane:not(.hiding), .offcanvas-sm.y-offcanvas-show:not(.hiding), .offcanvas-sm.y-modal-show:not(.hiding), .offcanvas-sm.y-modal-backdrop-show:not(.hiding), .offcanvas-sm.y-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 575.98px) {
-  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.y-tooltip, .offcanvas-sm.y-toast-show, .offcanvas-sm.y-tab-pane, .offcanvas-sm.y-popover, .offcanvas-sm.y-offcanvas-show, .offcanvas-sm.y-modal-show, .offcanvas-sm.y-modal-backdrop-show, .offcanvas-sm.y-el-show {
+  .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show, .offcanvas-sm.y-toast-show, .offcanvas-sm.y-tab-pane, .offcanvas-sm.y-offcanvas-show, .offcanvas-sm.y-modal-show, .offcanvas-sm.y-modal-backdrop-show, .offcanvas-sm.y-el-show {
     visibility: visible;
   }
 }
@@ -8883,12 +8863,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.y-tooltip:not(.hiding), .offcanvas-md.y-toast-show:not(.hiding), .offcanvas-md.y-tab-pane:not(.hiding), .offcanvas-md.y-popover:not(.hiding), .offcanvas-md.y-offcanvas-show:not(.hiding), .offcanvas-md.y-modal-show:not(.hiding), .offcanvas-md.y-modal-backdrop-show:not(.hiding), .offcanvas-md.y-el-show:not(.hiding) {
+  .offcanvas-md.showing, .offcanvas-md.show:not(.hiding), .offcanvas-md.y-toast-show:not(.hiding), .offcanvas-md.y-tab-pane:not(.hiding), .offcanvas-md.y-offcanvas-show:not(.hiding), .offcanvas-md.y-modal-show:not(.hiding), .offcanvas-md.y-modal-backdrop-show:not(.hiding), .offcanvas-md.y-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 767.98px) {
-  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.y-tooltip, .offcanvas-md.y-toast-show, .offcanvas-md.y-tab-pane, .offcanvas-md.y-popover, .offcanvas-md.y-offcanvas-show, .offcanvas-md.y-modal-show, .offcanvas-md.y-modal-backdrop-show, .offcanvas-md.y-el-show {
+  .offcanvas-md.showing, .offcanvas-md.hiding, .offcanvas-md.show, .offcanvas-md.y-toast-show, .offcanvas-md.y-tab-pane, .offcanvas-md.y-offcanvas-show, .offcanvas-md.y-modal-show, .offcanvas-md.y-modal-backdrop-show, .offcanvas-md.y-el-show {
     visibility: visible;
   }
 }
@@ -8971,12 +8951,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.y-tooltip:not(.hiding), .offcanvas-lg.y-toast-show:not(.hiding), .offcanvas-lg.y-tab-pane:not(.hiding), .offcanvas-lg.y-popover:not(.hiding), .offcanvas-lg.y-offcanvas-show:not(.hiding), .offcanvas-lg.y-modal-show:not(.hiding), .offcanvas-lg.y-modal-backdrop-show:not(.hiding), .offcanvas-lg.y-el-show:not(.hiding) {
+  .offcanvas-lg.showing, .offcanvas-lg.show:not(.hiding), .offcanvas-lg.y-toast-show:not(.hiding), .offcanvas-lg.y-tab-pane:not(.hiding), .offcanvas-lg.y-offcanvas-show:not(.hiding), .offcanvas-lg.y-modal-show:not(.hiding), .offcanvas-lg.y-modal-backdrop-show:not(.hiding), .offcanvas-lg.y-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 991.98px) {
-  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.y-tooltip, .offcanvas-lg.y-toast-show, .offcanvas-lg.y-tab-pane, .offcanvas-lg.y-popover, .offcanvas-lg.y-offcanvas-show, .offcanvas-lg.y-modal-show, .offcanvas-lg.y-modal-backdrop-show, .offcanvas-lg.y-el-show {
+  .offcanvas-lg.showing, .offcanvas-lg.hiding, .offcanvas-lg.show, .offcanvas-lg.y-toast-show, .offcanvas-lg.y-tab-pane, .offcanvas-lg.y-offcanvas-show, .offcanvas-lg.y-modal-show, .offcanvas-lg.y-modal-backdrop-show, .offcanvas-lg.y-el-show {
     visibility: visible;
   }
 }
@@ -9059,12 +9039,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.y-tooltip:not(.hiding), .offcanvas-xl.y-toast-show:not(.hiding), .offcanvas-xl.y-tab-pane:not(.hiding), .offcanvas-xl.y-popover:not(.hiding), .offcanvas-xl.y-offcanvas-show:not(.hiding), .offcanvas-xl.y-modal-show:not(.hiding), .offcanvas-xl.y-modal-backdrop-show:not(.hiding), .offcanvas-xl.y-el-show:not(.hiding) {
+  .offcanvas-xl.showing, .offcanvas-xl.show:not(.hiding), .offcanvas-xl.y-toast-show:not(.hiding), .offcanvas-xl.y-tab-pane:not(.hiding), .offcanvas-xl.y-offcanvas-show:not(.hiding), .offcanvas-xl.y-modal-show:not(.hiding), .offcanvas-xl.y-modal-backdrop-show:not(.hiding), .offcanvas-xl.y-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1199.98px) {
-  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.y-tooltip, .offcanvas-xl.y-toast-show, .offcanvas-xl.y-tab-pane, .offcanvas-xl.y-popover, .offcanvas-xl.y-offcanvas-show, .offcanvas-xl.y-modal-show, .offcanvas-xl.y-modal-backdrop-show, .offcanvas-xl.y-el-show {
+  .offcanvas-xl.showing, .offcanvas-xl.hiding, .offcanvas-xl.show, .offcanvas-xl.y-toast-show, .offcanvas-xl.y-tab-pane, .offcanvas-xl.y-offcanvas-show, .offcanvas-xl.y-modal-show, .offcanvas-xl.y-modal-backdrop-show, .offcanvas-xl.y-el-show {
     visibility: visible;
   }
 }
@@ -9147,12 +9127,12 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.y-tooltip:not(.hiding), .offcanvas-xxl.y-toast-show:not(.hiding), .offcanvas-xxl.y-tab-pane:not(.hiding), .offcanvas-xxl.y-popover:not(.hiding), .offcanvas-xxl.y-offcanvas-show:not(.hiding), .offcanvas-xxl.y-modal-show:not(.hiding), .offcanvas-xxl.y-modal-backdrop-show:not(.hiding), .offcanvas-xxl.y-el-show:not(.hiding) {
+  .offcanvas-xxl.showing, .offcanvas-xxl.show:not(.hiding), .offcanvas-xxl.y-toast-show:not(.hiding), .offcanvas-xxl.y-tab-pane:not(.hiding), .offcanvas-xxl.y-offcanvas-show:not(.hiding), .offcanvas-xxl.y-modal-show:not(.hiding), .offcanvas-xxl.y-modal-backdrop-show:not(.hiding), .offcanvas-xxl.y-el-show:not(.hiding) {
     transform: none;
   }
 }
 @media (max-width: 1399.98px) {
-  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.y-tooltip, .offcanvas-xxl.y-toast-show, .offcanvas-xxl.y-tab-pane, .offcanvas-xxl.y-popover, .offcanvas-xxl.y-offcanvas-show, .offcanvas-xxl.y-modal-show, .offcanvas-xxl.y-modal-backdrop-show, .offcanvas-xxl.y-el-show {
+  .offcanvas-xxl.showing, .offcanvas-xxl.hiding, .offcanvas-xxl.show, .offcanvas-xxl.y-toast-show, .offcanvas-xxl.y-tab-pane, .offcanvas-xxl.y-offcanvas-show, .offcanvas-xxl.y-modal-show, .offcanvas-xxl.y-modal-backdrop-show, .offcanvas-xxl.y-el-show {
     visibility: visible;
   }
 }
@@ -9224,10 +9204,10 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   border-top: var(--y-offcanvas-border-width) solid var(--y-offcanvas-border-color);
   transform: translateY(100%);
 }
-.offcanvas.showing, .showing.y-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.y-tooltip:not(.hiding), .offcanvas.y-toast-show:not(.hiding), .offcanvas.y-tab-pane:not(.hiding), .offcanvas.y-popover:not(.hiding), .offcanvas.y-offcanvas-show:not(.hiding), .show.y-offcanvas:not(.hiding), .y-offcanvas.y-tooltip:not(.hiding), .y-offcanvas.y-toast-show:not(.hiding), .y-offcanvas.y-tab-pane:not(.hiding), .y-offcanvas.y-popover:not(.hiding), .y-offcanvas.y-offcanvas-show:not(.hiding), .offcanvas.y-modal-show:not(.hiding), .y-modal-show.y-offcanvas:not(.hiding), .offcanvas.y-modal-backdrop-show:not(.hiding), .y-modal-backdrop-show.y-offcanvas:not(.hiding), .offcanvas.y-el-show:not(.hiding), .y-el-show.y-offcanvas:not(.hiding) {
+.offcanvas.showing, .showing.y-offcanvas, .offcanvas.show:not(.hiding), .offcanvas.y-toast-show:not(.hiding), .offcanvas.y-tab-pane:not(.hiding), .offcanvas.y-offcanvas-show:not(.hiding), .show.y-offcanvas:not(.hiding), .y-offcanvas.y-toast-show:not(.hiding), .y-offcanvas.y-tab-pane:not(.hiding), .y-offcanvas.y-offcanvas-show:not(.hiding), .offcanvas.y-modal-show:not(.hiding), .y-modal-show.y-offcanvas:not(.hiding), .offcanvas.y-modal-backdrop-show:not(.hiding), .y-modal-backdrop-show.y-offcanvas:not(.hiding), .offcanvas.y-el-show:not(.hiding), .y-el-show.y-offcanvas:not(.hiding) {
   transform: none;
 }
-.offcanvas.showing, .showing.y-offcanvas, .offcanvas.hiding, .hiding.y-offcanvas, .offcanvas.show, .offcanvas.y-tooltip, .offcanvas.y-toast-show, .offcanvas.y-tab-pane, .offcanvas.y-popover, .offcanvas.y-offcanvas-show, .show.y-offcanvas, .y-offcanvas.y-tooltip, .y-offcanvas.y-toast-show, .y-offcanvas.y-tab-pane, .y-offcanvas.y-popover, .y-offcanvas.y-offcanvas-show, .offcanvas.y-modal-show, .y-modal-show.y-offcanvas, .offcanvas.y-modal-backdrop-show, .y-modal-backdrop-show.y-offcanvas, .offcanvas.y-el-show, .y-el-show.y-offcanvas {
+.offcanvas.showing, .showing.y-offcanvas, .offcanvas.hiding, .hiding.y-offcanvas, .offcanvas.show, .offcanvas.y-toast-show, .offcanvas.y-tab-pane, .offcanvas.y-offcanvas-show, .show.y-offcanvas, .y-offcanvas.y-toast-show, .y-offcanvas.y-tab-pane, .y-offcanvas.y-offcanvas-show, .offcanvas.y-modal-show, .y-modal-show.y-offcanvas, .offcanvas.y-modal-backdrop-show, .y-modal-backdrop-show.y-offcanvas, .offcanvas.y-el-show, .y-el-show.y-offcanvas {
   visibility: visible;
 }
 
@@ -9240,10 +9220,10 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   height: 100vh;
   background-color: #1d273b;
 }
-.offcanvas-backdrop.fade, .offcanvas-backdrop.y-tooltip, .offcanvas-backdrop.y-popover, .offcanvas-backdrop.y-modal-backdrop, .offcanvas-backdrop.y-modal {
+.offcanvas-backdrop.fade, .offcanvas-backdrop.y-modal-backdrop, .offcanvas-backdrop.y-modal {
   opacity: 0;
 }
-.offcanvas-backdrop.show, .offcanvas-backdrop.y-tooltip, .offcanvas-backdrop.y-toast-show, .offcanvas-backdrop.y-tab-pane, .offcanvas-backdrop.y-popover, .offcanvas-backdrop.y-offcanvas-show, .offcanvas-backdrop.y-modal-show, .offcanvas-backdrop.y-modal-backdrop-show, .offcanvas-backdrop.y-el-show {
+.offcanvas-backdrop.show, .offcanvas-backdrop.y-toast-show, .offcanvas-backdrop.y-tab-pane, .offcanvas-backdrop.y-offcanvas-show, .offcanvas-backdrop.y-modal-show, .offcanvas-backdrop.y-modal-backdrop-show, .offcanvas-backdrop.y-el-show {
   opacity: 0.24;
 }
 
@@ -15583,7 +15563,7 @@ Navbar
 .navbar .navbar-nav .nav-link.disabled, .navbar .navbar-nav .nav-link.y-tab-item-link-disabled, .navbar .navbar-nav .disabled.y-tab-item-link, .navbar .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .navbar .navbar-nav .nav-link.y-button-disabled, .navbar .navbar-nav .y-button-disabled.y-tab-item-link, .y-app-header .navbar-nav .nav-link.disabled, .y-app-header .navbar-nav .nav-link.y-tab-item-link-disabled, .y-app-header .navbar-nav .disabled.y-tab-item-link, .y-app-header .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .y-app-header .navbar-nav .nav-link.y-button-disabled, .y-app-header .navbar-nav .y-button-disabled.y-tab-item-link {
   color: var(--y-disabled-color);
 }
-.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .y-tooltip > .nav-link, .navbar .navbar-nav .y-toast-show > .nav-link, .navbar .navbar-nav .show > .y-tab-item-link, .navbar .navbar-nav .y-tooltip > .y-tab-item-link, .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .navbar .navbar-nav .y-tab-pane > .nav-link, .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar .navbar-nav .y-popover > .nav-link, .navbar .navbar-nav .y-popover > .y-tab-item-link, .navbar .navbar-nav .y-offcanvas-show > .nav-link, .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar .navbar-nav .y-modal-show > .nav-link, .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar .navbar-nav .y-el-show > .nav-link, .navbar .navbar-nav .y-el-show > .y-tab-item-link, .y-app-header .navbar-nav .show > .nav-link, .y-app-header .navbar-nav .y-tooltip > .nav-link, .y-app-header .navbar-nav .y-toast-show > .nav-link, .y-app-header .navbar-nav .show > .y-tab-item-link, .y-app-header .navbar-nav .y-tooltip > .y-tab-item-link, .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-header .navbar-nav .y-tab-pane > .nav-link, .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-header .navbar-nav .y-popover > .nav-link, .y-app-header .navbar-nav .y-popover > .y-tab-item-link, .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-header .navbar-nav .y-modal-show > .nav-link, .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-header .navbar-nav .y-el-show > .nav-link, .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
+.navbar .navbar-nav .show > .nav-link, .navbar .navbar-nav .y-toast-show > .nav-link, .navbar .navbar-nav .show > .y-tab-item-link, .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .navbar .navbar-nav .y-tab-pane > .nav-link, .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar .navbar-nav .y-offcanvas-show > .nav-link, .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar .navbar-nav .y-modal-show > .nav-link, .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar .navbar-nav .y-el-show > .nav-link, .navbar .navbar-nav .y-el-show > .y-tab-item-link, .y-app-header .navbar-nav .show > .nav-link, .y-app-header .navbar-nav .y-toast-show > .nav-link, .y-app-header .navbar-nav .show > .y-tab-item-link, .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-header .navbar-nav .y-tab-pane > .nav-link, .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-header .navbar-nav .y-modal-show > .nav-link, .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-header .navbar-nav .y-el-show > .nav-link, .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
 .navbar .navbar-nav .active > .nav-link,
 .navbar .navbar-nav .y-tab-item-link-active > .nav-link,
 .navbar .navbar-nav .active > .y-tab-item-link,
@@ -15613,15 +15593,11 @@ Navbar
 .y-app-header .navbar-nav .y-avatar-active > .nav-link,
 .y-app-header .navbar-nav .y-avatar-active > .y-tab-item-link,
 .navbar .navbar-nav .nav-link.show,
-.navbar .navbar-nav .nav-link.y-tooltip,
 .navbar .navbar-nav .nav-link.y-toast-show,
 .navbar .navbar-nav .show.y-tab-item-link,
-.navbar .navbar-nav .y-tab-item-link.y-tooltip,
 .navbar .navbar-nav .y-tab-item-link.y-toast-show,
 .navbar .navbar-nav .nav-link.y-tab-pane,
 .navbar .navbar-nav .y-tab-pane.y-tab-item-link,
-.navbar .navbar-nav .nav-link.y-popover,
-.navbar .navbar-nav .y-popover.y-tab-item-link,
 .navbar .navbar-nav .nav-link.y-offcanvas-show,
 .navbar .navbar-nav .y-offcanvas-show.y-tab-item-link,
 .navbar .navbar-nav .nav-link.y-modal-show,
@@ -15631,15 +15607,11 @@ Navbar
 .navbar .navbar-nav .nav-link.y-el-show,
 .navbar .navbar-nav .y-el-show.y-tab-item-link,
 .y-app-header .navbar-nav .nav-link.show,
-.y-app-header .navbar-nav .nav-link.y-tooltip,
 .y-app-header .navbar-nav .nav-link.y-toast-show,
 .y-app-header .navbar-nav .show.y-tab-item-link,
-.y-app-header .navbar-nav .y-tab-item-link.y-tooltip,
 .y-app-header .navbar-nav .y-tab-item-link.y-toast-show,
 .y-app-header .navbar-nav .nav-link.y-tab-pane,
 .y-app-header .navbar-nav .y-tab-pane.y-tab-item-link,
-.y-app-header .navbar-nav .nav-link.y-popover,
-.y-app-header .navbar-nav .y-popover.y-tab-item-link,
 .y-app-header .navbar-nav .nav-link.y-offcanvas-show,
 .y-app-header .navbar-nav .y-offcanvas-show.y-tab-item-link,
 .y-app-header .navbar-nav .nav-link.y-modal-show,
@@ -15715,7 +15687,7 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.disabled, .theme-dark .navbar .navbar-nav .nav-link.y-tab-item-link-disabled, .theme-dark .navbar .navbar-nav .disabled.y-tab-item-link, .theme-dark .navbar .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .theme-dark .navbar .navbar-nav .nav-link.y-button-disabled, .theme-dark .navbar .navbar-nav .y-button-disabled.y-tab-item-link, .theme-dark .y-app-header .navbar-nav .nav-link.disabled, .theme-dark .y-app-header .navbar-nav .nav-link.y-tab-item-link-disabled, .theme-dark .y-app-header .navbar-nav .disabled.y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .theme-dark .y-app-header .navbar-nav .nav-link.y-button-disabled, .theme-dark .y-app-header .navbar-nav .y-button-disabled.y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .nav-link.disabled, .y-app-theme-dark .navbar .navbar-nav .nav-link.y-tab-item-link-disabled, .y-app-theme-dark .navbar .navbar-nav .disabled.y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .y-app-theme-dark .navbar .navbar-nav .nav-link.y-button-disabled, .y-app-theme-dark .navbar .navbar-nav .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .nav-link.disabled, .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-tab-item-link-disabled, .y-app-theme-dark .y-app-header .navbar-nav .disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-button-disabled, .y-app-theme-dark .y-app-header .navbar-nav .y-button-disabled.y-tab-item-link {
     color: var(--y-disabled-color);
   }
-  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .y-tooltip > .nav-link, .theme-dark .navbar .navbar-nav .y-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-tooltip > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-tab-pane > .nav-link, .theme-dark .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-popover > .nav-link, .theme-dark .navbar .navbar-nav .y-popover > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-modal-show > .nav-link, .theme-dark .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-el-show > .nav-link, .theme-dark .navbar .navbar-nav .y-el-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-tooltip > .nav-link, .theme-dark .y-app-header .navbar-nav .y-toast-show > .nav-link, .theme-dark .y-app-header .navbar-nav .show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-tooltip > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-tab-pane > .nav-link, .theme-dark .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-popover > .nav-link, .theme-dark .y-app-header .navbar-nav .y-popover > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-modal-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-el-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-el-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-tooltip > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-toast-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-tooltip > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-tab-pane > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-popover > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-popover > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-offcanvas-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-el-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-el-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tooltip > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-toast-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tooltip > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tab-pane > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-popover > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-popover > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-el-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
+  .theme-dark .navbar .navbar-nav .show > .nav-link, .theme-dark .navbar .navbar-nav .y-toast-show > .nav-link, .theme-dark .navbar .navbar-nav .show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-tab-pane > .nav-link, .theme-dark .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-modal-show > .nav-link, .theme-dark .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark .navbar .navbar-nav .y-el-show > .nav-link, .theme-dark .navbar .navbar-nav .y-el-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-toast-show > .nav-link, .theme-dark .y-app-header .navbar-nav .show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-tab-pane > .nav-link, .theme-dark .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-modal-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark .y-app-header .navbar-nav .y-el-show > .nav-link, .theme-dark .y-app-header .navbar-nav .y-el-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-toast-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-tab-pane > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-offcanvas-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-theme-dark .navbar .navbar-nav .y-el-show > .nav-link, .y-app-theme-dark .navbar .navbar-nav .y-el-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-toast-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tab-pane > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-theme-dark .y-app-header .navbar-nav .y-el-show > .nav-link, .y-app-theme-dark .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
   .theme-dark .navbar .navbar-nav .active > .nav-link,
   .theme-dark .navbar .navbar-nav .y-tab-item-link-active > .nav-link,
   .theme-dark .navbar .navbar-nav .active > .y-tab-item-link,
@@ -15781,15 +15753,11 @@ Navbar
   .y-app-theme-dark .y-app-header .navbar-nav .y-avatar-active > .nav-link,
   .y-app-theme-dark .y-app-header .navbar-nav .y-avatar-active > .y-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.show,
-  .theme-dark .navbar .navbar-nav .nav-link.y-tooltip,
   .theme-dark .navbar .navbar-nav .nav-link.y-toast-show,
   .theme-dark .navbar .navbar-nav .show.y-tab-item-link,
-  .theme-dark .navbar .navbar-nav .y-tab-item-link.y-tooltip,
   .theme-dark .navbar .navbar-nav .y-tab-item-link.y-toast-show,
   .theme-dark .navbar .navbar-nav .nav-link.y-tab-pane,
   .theme-dark .navbar .navbar-nav .y-tab-pane.y-tab-item-link,
-  .theme-dark .navbar .navbar-nav .nav-link.y-popover,
-  .theme-dark .navbar .navbar-nav .y-popover.y-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.y-offcanvas-show,
   .theme-dark .navbar .navbar-nav .y-offcanvas-show.y-tab-item-link,
   .theme-dark .navbar .navbar-nav .nav-link.y-modal-show,
@@ -15799,15 +15767,11 @@ Navbar
   .theme-dark .navbar .navbar-nav .nav-link.y-el-show,
   .theme-dark .navbar .navbar-nav .y-el-show.y-tab-item-link,
   .theme-dark .y-app-header .navbar-nav .nav-link.show,
-  .theme-dark .y-app-header .navbar-nav .nav-link.y-tooltip,
   .theme-dark .y-app-header .navbar-nav .nav-link.y-toast-show,
   .theme-dark .y-app-header .navbar-nav .show.y-tab-item-link,
-  .theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-tooltip,
   .theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-toast-show,
   .theme-dark .y-app-header .navbar-nav .nav-link.y-tab-pane,
   .theme-dark .y-app-header .navbar-nav .y-tab-pane.y-tab-item-link,
-  .theme-dark .y-app-header .navbar-nav .nav-link.y-popover,
-  .theme-dark .y-app-header .navbar-nav .y-popover.y-tab-item-link,
   .theme-dark .y-app-header .navbar-nav .nav-link.y-offcanvas-show,
   .theme-dark .y-app-header .navbar-nav .y-offcanvas-show.y-tab-item-link,
   .theme-dark .y-app-header .navbar-nav .nav-link.y-modal-show,
@@ -15817,15 +15781,11 @@ Navbar
   .theme-dark .y-app-header .navbar-nav .nav-link.y-el-show,
   .theme-dark .y-app-header .navbar-nav .y-el-show.y-tab-item-link,
   .y-app-theme-dark .navbar .navbar-nav .nav-link.show,
-  .y-app-theme-dark .navbar .navbar-nav .nav-link.y-tooltip,
   .y-app-theme-dark .navbar .navbar-nav .nav-link.y-toast-show,
   .y-app-theme-dark .navbar .navbar-nav .show.y-tab-item-link,
-  .y-app-theme-dark .navbar .navbar-nav .y-tab-item-link.y-tooltip,
   .y-app-theme-dark .navbar .navbar-nav .y-tab-item-link.y-toast-show,
   .y-app-theme-dark .navbar .navbar-nav .nav-link.y-tab-pane,
   .y-app-theme-dark .navbar .navbar-nav .y-tab-pane.y-tab-item-link,
-  .y-app-theme-dark .navbar .navbar-nav .nav-link.y-popover,
-  .y-app-theme-dark .navbar .navbar-nav .y-popover.y-tab-item-link,
   .y-app-theme-dark .navbar .navbar-nav .nav-link.y-offcanvas-show,
   .y-app-theme-dark .navbar .navbar-nav .y-offcanvas-show.y-tab-item-link,
   .y-app-theme-dark .navbar .navbar-nav .nav-link.y-modal-show,
@@ -15835,15 +15795,11 @@ Navbar
   .y-app-theme-dark .navbar .navbar-nav .nav-link.y-el-show,
   .y-app-theme-dark .navbar .navbar-nav .y-el-show.y-tab-item-link,
   .y-app-theme-dark .y-app-header .navbar-nav .nav-link.show,
-  .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-tooltip,
   .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-toast-show,
   .y-app-theme-dark .y-app-header .navbar-nav .show.y-tab-item-link,
-  .y-app-theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-tooltip,
   .y-app-theme-dark .y-app-header .navbar-nav .y-tab-item-link.y-toast-show,
   .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-tab-pane,
   .y-app-theme-dark .y-app-header .navbar-nav .y-tab-pane.y-tab-item-link,
-  .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-popover,
-  .y-app-theme-dark .y-app-header .navbar-nav .y-popover.y-tab-item-link,
   .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-offcanvas-show,
   .y-app-theme-dark .y-app-header .navbar-nav .y-offcanvas-show.y-tab-item-link,
   .y-app-theme-dark .y-app-header .navbar-nav .nav-link.y-modal-show,
@@ -15957,7 +15913,7 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.y-tab-item-link-disabled, .theme-dark-auto .navbar .navbar-nav .disabled.y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .theme-dark-auto .navbar .navbar-nav .nav-link.y-button-disabled, .theme-dark-auto .navbar .navbar-nav .y-button-disabled.y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .nav-link.disabled, .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-tab-item-link-disabled, .theme-dark-auto .y-app-header .navbar-nav .disabled.y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-button-disabled, .theme-dark-auto .y-app-header .navbar-nav .y-button-disabled.y-tab-item-link {
       color: var(--y-disabled-color);
     }
-    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-tooltip > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-tooltip > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-tab-pane > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-popover > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-popover > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-modal-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-el-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-tooltip > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-toast-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-tooltip > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-tab-pane > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-popover > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-popover > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-el-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
+    .theme-dark-auto .navbar .navbar-nav .show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-toast-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-tab-pane > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-modal-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark-auto .navbar .navbar-nav .y-el-show > .nav-link, .theme-dark-auto .navbar .navbar-nav .y-el-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-toast-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-toast-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-tab-pane > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-tab-pane > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-offcanvas-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-offcanvas-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-backdrop-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .theme-dark-auto .y-app-header .navbar-nav .y-el-show > .nav-link, .theme-dark-auto .y-app-header .navbar-nav .y-el-show > .y-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .y-tab-item-link-active > .nav-link,
     .theme-dark-auto .navbar .navbar-nav .active > .y-tab-item-link,
@@ -15987,15 +15943,11 @@ Navbar
     .theme-dark-auto .y-app-header .navbar-nav .y-avatar-active > .nav-link,
     .theme-dark-auto .y-app-header .navbar-nav .y-avatar-active > .y-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.show,
-    .theme-dark-auto .navbar .navbar-nav .nav-link.y-tooltip,
     .theme-dark-auto .navbar .navbar-nav .nav-link.y-toast-show,
     .theme-dark-auto .navbar .navbar-nav .show.y-tab-item-link,
-    .theme-dark-auto .navbar .navbar-nav .y-tab-item-link.y-tooltip,
     .theme-dark-auto .navbar .navbar-nav .y-tab-item-link.y-toast-show,
     .theme-dark-auto .navbar .navbar-nav .nav-link.y-tab-pane,
     .theme-dark-auto .navbar .navbar-nav .y-tab-pane.y-tab-item-link,
-    .theme-dark-auto .navbar .navbar-nav .nav-link.y-popover,
-    .theme-dark-auto .navbar .navbar-nav .y-popover.y-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.y-offcanvas-show,
     .theme-dark-auto .navbar .navbar-nav .y-offcanvas-show.y-tab-item-link,
     .theme-dark-auto .navbar .navbar-nav .nav-link.y-modal-show,
@@ -16005,15 +15957,11 @@ Navbar
     .theme-dark-auto .navbar .navbar-nav .nav-link.y-el-show,
     .theme-dark-auto .navbar .navbar-nav .y-el-show.y-tab-item-link,
     .theme-dark-auto .y-app-header .navbar-nav .nav-link.show,
-    .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-tooltip,
     .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-toast-show,
     .theme-dark-auto .y-app-header .navbar-nav .show.y-tab-item-link,
-    .theme-dark-auto .y-app-header .navbar-nav .y-tab-item-link.y-tooltip,
     .theme-dark-auto .y-app-header .navbar-nav .y-tab-item-link.y-toast-show,
     .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-tab-pane,
     .theme-dark-auto .y-app-header .navbar-nav .y-tab-pane.y-tab-item-link,
-    .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-popover,
-    .theme-dark-auto .y-app-header .navbar-nav .y-popover.y-tab-item-link,
     .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-offcanvas-show,
     .theme-dark-auto .y-app-header .navbar-nav .y-offcanvas-show.y-tab-item-link,
     .theme-dark-auto .y-app-header .navbar-nav .nav-link.y-modal-show,
@@ -17224,7 +17172,7 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.disabled, .navbar-dark .navbar-nav .nav-link.y-tab-item-link-disabled, .navbar-dark .navbar-nav .disabled.y-tab-item-link, .navbar-dark .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .navbar-dark .navbar-nav .nav-link.y-button-disabled, .navbar-dark .navbar-nav .y-button-disabled.y-tab-item-link, .y-app-header-theme-dark .navbar-nav .nav-link.disabled, .y-app-header-theme-dark .navbar-nav .nav-link.y-tab-item-link-disabled, .y-app-header-theme-dark .navbar-nav .disabled.y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-tab-item-link.y-tab-item-link-disabled, .y-app-header-theme-dark .navbar-nav .nav-link.y-button-disabled, .y-app-header-theme-dark .navbar-nav .y-button-disabled.y-tab-item-link {
   color: var(--y-disabled-color);
 }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .y-tooltip > .nav-link, .navbar-dark .navbar-nav .y-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .y-tab-item-link, .navbar-dark .navbar-nav .y-tooltip > .y-tab-item-link, .navbar-dark .navbar-nav .y-toast-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-tab-pane > .nav-link, .navbar-dark .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar-dark .navbar-nav .y-popover > .nav-link, .navbar-dark .navbar-nav .y-popover > .y-tab-item-link, .navbar-dark .navbar-nav .y-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-modal-show > .nav-link, .navbar-dark .navbar-nav .y-modal-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar-dark .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-el-show > .nav-link, .navbar-dark .navbar-nav .y-el-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-tooltip > .nav-link, .y-app-header-theme-dark .navbar-nav .y-toast-show > .nav-link, .y-app-header-theme-dark .navbar-nav .show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-tooltip > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-tab-pane > .nav-link, .y-app-header-theme-dark .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-popover > .nav-link, .y-app-header-theme-dark .navbar-nav .y-popover > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-offcanvas-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-modal-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-el-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-el-show > .y-tab-item-link,
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .y-toast-show > .nav-link, .navbar-dark .navbar-nav .show > .y-tab-item-link, .navbar-dark .navbar-nav .y-toast-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-tab-pane > .nav-link, .navbar-dark .navbar-nav .y-tab-pane > .y-tab-item-link, .navbar-dark .navbar-nav .y-offcanvas-show > .nav-link, .navbar-dark .navbar-nav .y-offcanvas-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-modal-show > .nav-link, .navbar-dark .navbar-nav .y-modal-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-modal-backdrop-show > .nav-link, .navbar-dark .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .navbar-dark .navbar-nav .y-el-show > .nav-link, .navbar-dark .navbar-nav .y-el-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-toast-show > .nav-link, .y-app-header-theme-dark .navbar-nav .show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-toast-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-tab-pane > .nav-link, .y-app-header-theme-dark .navbar-nav .y-tab-pane > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-offcanvas-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-offcanvas-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-modal-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-modal-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-modal-backdrop-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-modal-backdrop-show > .y-tab-item-link, .y-app-header-theme-dark .navbar-nav .y-el-show > .nav-link, .y-app-header-theme-dark .navbar-nav .y-el-show > .y-tab-item-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .y-tab-item-link-active > .nav-link,
 .navbar-dark .navbar-nav .active > .y-tab-item-link,
@@ -17254,15 +17202,11 @@ Navbar dark
 .y-app-header-theme-dark .navbar-nav .y-avatar-active > .nav-link,
 .y-app-header-theme-dark .navbar-nav .y-avatar-active > .y-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .nav-link.y-tooltip,
 .navbar-dark .navbar-nav .nav-link.y-toast-show,
 .navbar-dark .navbar-nav .show.y-tab-item-link,
-.navbar-dark .navbar-nav .y-tab-item-link.y-tooltip,
 .navbar-dark .navbar-nav .y-tab-item-link.y-toast-show,
 .navbar-dark .navbar-nav .nav-link.y-tab-pane,
 .navbar-dark .navbar-nav .y-tab-pane.y-tab-item-link,
-.navbar-dark .navbar-nav .nav-link.y-popover,
-.navbar-dark .navbar-nav .y-popover.y-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.y-offcanvas-show,
 .navbar-dark .navbar-nav .y-offcanvas-show.y-tab-item-link,
 .navbar-dark .navbar-nav .nav-link.y-modal-show,
@@ -17272,15 +17216,11 @@ Navbar dark
 .navbar-dark .navbar-nav .nav-link.y-el-show,
 .navbar-dark .navbar-nav .y-el-show.y-tab-item-link,
 .y-app-header-theme-dark .navbar-nav .nav-link.show,
-.y-app-header-theme-dark .navbar-nav .nav-link.y-tooltip,
 .y-app-header-theme-dark .navbar-nav .nav-link.y-toast-show,
 .y-app-header-theme-dark .navbar-nav .show.y-tab-item-link,
-.y-app-header-theme-dark .navbar-nav .y-tab-item-link.y-tooltip,
 .y-app-header-theme-dark .navbar-nav .y-tab-item-link.y-toast-show,
 .y-app-header-theme-dark .navbar-nav .nav-link.y-tab-pane,
 .y-app-header-theme-dark .navbar-nav .y-tab-pane.y-tab-item-link,
-.y-app-header-theme-dark .navbar-nav .nav-link.y-popover,
-.y-app-header-theme-dark .navbar-nav .y-popover.y-tab-item-link,
 .y-app-header-theme-dark .navbar-nav .nav-link.y-offcanvas-show,
 .y-app-header-theme-dark .navbar-nav .y-offcanvas-show.y-tab-item-link,
 .y-app-header-theme-dark .navbar-nav .nav-link.y-modal-show,
@@ -21005,11 +20945,11 @@ a.badge, a.y-badge {
   outline: none;
   box-shadow: none;
 }
-.btn-action:hover, .btn-action.show, .btn-action.y-tooltip, .btn-action.y-toast-show, .btn-action.y-tab-pane, .btn-action.y-popover, .btn-action.y-offcanvas-show, .btn-action.y-modal-show, .btn-action.y-modal-backdrop-show, .btn-action.y-el-show {
+.btn-action:hover, .btn-action.show, .btn-action.y-toast-show, .btn-action.y-tab-pane, .btn-action.y-offcanvas-show, .btn-action.y-modal-show, .btn-action.y-modal-backdrop-show, .btn-action.y-el-show {
   color: var(--y-body-color);
   background: var(--y-active-bg);
 }
-.btn-action.show, .btn-action.y-tooltip, .btn-action.y-toast-show, .btn-action.y-tab-pane, .btn-action.y-popover, .btn-action.y-offcanvas-show, .btn-action.y-modal-show, .btn-action.y-modal-backdrop-show, .btn-action.y-el-show {
+.btn-action.show, .btn-action.y-toast-show, .btn-action.y-tab-pane, .btn-action.y-offcanvas-show, .btn-action.y-modal-show, .btn-action.y-modal-backdrop-show, .btn-action.y-el-show {
   color: var(--y-primary);
 }
 .btn-action .icon, .btn-action .y-icon {
@@ -21829,7 +21769,7 @@ Card list group
   min-width: 25rem;
   display: none;
 }
-.dropdown-menu.card.show, .card.show.y-autocomplete-dropdown, .dropdown-menu.card.y-tooltip, .card.y-tooltip.y-autocomplete-dropdown, .dropdown-menu.card.y-toast-show, .card.y-toast-show.y-autocomplete-dropdown, .dropdown-menu.card.y-tab-pane, .card.y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.card.y-popover, .card.y-popover.y-autocomplete-dropdown, .dropdown-menu.card.y-offcanvas-show, .card.y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.card.y-modal-show, .card.y-modal-show.y-autocomplete-dropdown, .dropdown-menu.card.y-modal-backdrop-show, .card.y-modal-backdrop-show.y-autocomplete-dropdown, .card.show.y-menu, .card.y-menu.y-tooltip, .card.y-menu.y-toast-show, .card.y-menu.y-tab-pane, .card.y-menu.y-popover, .card.y-menu.y-offcanvas-show, .card.y-menu.y-modal-show, .card.y-menu.y-modal-backdrop-show, .dropdown-menu.show.y-card, .show.y-card.y-autocomplete-dropdown, .dropdown-menu.y-card.y-tooltip, .y-card.y-tooltip.y-autocomplete-dropdown, .dropdown-menu.y-card.y-toast-show, .y-card.y-toast-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-tab-pane, .y-card.y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.y-card.y-popover, .y-card.y-popover.y-autocomplete-dropdown, .dropdown-menu.y-card.y-offcanvas-show, .y-card.y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-modal-show, .y-card.y-modal-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-modal-backdrop-show, .y-card.y-modal-backdrop-show.y-autocomplete-dropdown, .show.y-card.y-menu, .y-card.y-menu.y-tooltip, .y-card.y-menu.y-toast-show, .y-card.y-menu.y-tab-pane, .y-card.y-menu.y-popover, .y-card.y-menu.y-offcanvas-show, .y-card.y-menu.y-modal-show, .y-card.y-menu.y-modal-backdrop-show, .dropdown-menu.card.y-el-show, .card.y-el-show.y-autocomplete-dropdown, .card.y-el-show.y-menu, .dropdown-menu.y-el-show.y-card, .y-el-show.y-card.y-autocomplete-dropdown, .y-el-show.y-card.y-menu {
+.dropdown-menu.card.show, .card.show.y-autocomplete-dropdown, .dropdown-menu.card.y-toast-show, .card.y-toast-show.y-autocomplete-dropdown, .dropdown-menu.card.y-tab-pane, .card.y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.card.y-offcanvas-show, .card.y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.card.y-modal-show, .card.y-modal-show.y-autocomplete-dropdown, .dropdown-menu.card.y-modal-backdrop-show, .card.y-modal-backdrop-show.y-autocomplete-dropdown, .card.show.y-menu, .card.y-menu.y-toast-show, .card.y-menu.y-tab-pane, .card.y-menu.y-offcanvas-show, .card.y-menu.y-modal-show, .card.y-menu.y-modal-backdrop-show, .dropdown-menu.show.y-card, .show.y-card.y-autocomplete-dropdown, .dropdown-menu.y-card.y-toast-show, .y-card.y-toast-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-tab-pane, .y-card.y-tab-pane.y-autocomplete-dropdown, .dropdown-menu.y-card.y-offcanvas-show, .y-card.y-offcanvas-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-modal-show, .y-card.y-modal-show.y-autocomplete-dropdown, .dropdown-menu.y-card.y-modal-backdrop-show, .y-card.y-modal-backdrop-show.y-autocomplete-dropdown, .show.y-card.y-menu, .y-card.y-menu.y-toast-show, .y-card.y-menu.y-tab-pane, .y-card.y-menu.y-offcanvas-show, .y-card.y-menu.y-modal-show, .y-card.y-menu.y-modal-backdrop-show, .dropdown-menu.card.y-el-show, .card.y-el-show.y-autocomplete-dropdown, .card.y-el-show.y-menu, .dropdown-menu.y-el-show.y-card, .y-el-show.y-card.y-autocomplete-dropdown, .y-el-show.y-card.y-menu {
   display: flex;
 }
 
@@ -23199,10 +23139,8 @@ Legend
 }
 .list-group-hoverable .list-group-item:hover .list-group-item-actions,
 .list-group-hoverable .list-group-item-actions.show,
-.list-group-hoverable .list-group-item-actions.y-tooltip,
 .list-group-hoverable .list-group-item-actions.y-toast-show,
 .list-group-hoverable .list-group-item-actions.y-tab-pane,
-.list-group-hoverable .list-group-item-actions.y-popover,
 .list-group-hoverable .list-group-item-actions.y-offcanvas-show,
 .list-group-hoverable .list-group-item-actions.y-modal-show,
 .list-group-hoverable .list-group-item-actions.y-modal-backdrop-show,
@@ -23414,25 +23352,17 @@ Dimmer
 }
 .nav-vertical .nav-link.active, .nav-vertical .nav-link.y-tab-item-link-active, .nav-vertical .active.y-tab-item-link, .nav-vertical .y-tab-item-link.y-tab-item-link-active, .nav-vertical .nav-link.y-tab-pane, .nav-vertical .y-tab-pane.y-tab-item-link, .nav-vertical .nav-link.y-step-item-active, .nav-vertical .y-step-item-active.y-tab-item-link, .nav-vertical .nav-link.u-carousel-item-active, .nav-vertical .u-carousel-item-active.y-tab-item-link, .nav-vertical .nav-link.y-button-active, .nav-vertical .y-button-active.y-tab-item-link, .nav-vertical .nav-link.y-breadcrumb-item-active, .nav-vertical .y-breadcrumb-item-active.y-tab-item-link, .nav-vertical .nav-link.y-avatar-active, .nav-vertical .y-avatar-active.y-tab-item-link,
 .nav-vertical .nav-item.show .nav-link,
-.nav-vertical .nav-item.y-tooltip .nav-link,
 .nav-vertical .nav-item.y-toast-show .nav-link,
 .nav-vertical .nav-item.show .y-tab-item-link,
-.nav-vertical .nav-item.y-tooltip .y-tab-item-link,
 .nav-vertical .nav-item.y-toast-show .y-tab-item-link,
 .nav-vertical .show.y-tab-item .nav-link,
-.nav-vertical .y-tab-item.y-tooltip .nav-link,
 .nav-vertical .y-tab-item.y-toast-show .nav-link,
 .nav-vertical .show.y-tab-item .y-tab-item-link,
-.nav-vertical .y-tab-item.y-tooltip .y-tab-item-link,
 .nav-vertical .y-tab-item.y-toast-show .y-tab-item-link,
 .nav-vertical .nav-item.y-tab-pane .nav-link,
 .nav-vertical .nav-item.y-tab-pane .y-tab-item-link,
 .nav-vertical .y-tab-pane.y-tab-item .nav-link,
 .nav-vertical .y-tab-pane.y-tab-item .y-tab-item-link,
-.nav-vertical .nav-item.y-popover .nav-link,
-.nav-vertical .nav-item.y-popover .y-tab-item-link,
-.nav-vertical .y-popover.y-tab-item .nav-link,
-.nav-vertical .y-popover.y-tab-item .y-tab-item-link,
 .nav-vertical .nav-item.y-offcanvas-show .nav-link,
 .nav-vertical .nav-item.y-offcanvas-show .y-tab-item-link,
 .nav-vertical .y-offcanvas-show.y-tab-item .nav-link,
@@ -23471,25 +23401,17 @@ Dimmer
 }
 .nav-bordered .nav-link.active, .nav-bordered .nav-link.y-tab-item-link-active, .nav-bordered .active.y-tab-item-link, .nav-bordered .y-tab-item-link.y-tab-item-link-active, .nav-bordered .nav-link.y-tab-pane, .nav-bordered .y-tab-pane.y-tab-item-link, .nav-bordered .nav-link.y-step-item-active, .nav-bordered .y-step-item-active.y-tab-item-link, .nav-bordered .nav-link.u-carousel-item-active, .nav-bordered .u-carousel-item-active.y-tab-item-link, .nav-bordered .nav-link.y-button-active, .nav-bordered .y-button-active.y-tab-item-link, .nav-bordered .nav-link.y-breadcrumb-item-active, .nav-bordered .y-breadcrumb-item-active.y-tab-item-link, .nav-bordered .nav-link.y-avatar-active, .nav-bordered .y-avatar-active.y-tab-item-link,
 .nav-bordered .nav-item.show .nav-link,
-.nav-bordered .nav-item.y-tooltip .nav-link,
 .nav-bordered .nav-item.y-toast-show .nav-link,
 .nav-bordered .nav-item.show .y-tab-item-link,
-.nav-bordered .nav-item.y-tooltip .y-tab-item-link,
 .nav-bordered .nav-item.y-toast-show .y-tab-item-link,
 .nav-bordered .show.y-tab-item .nav-link,
-.nav-bordered .y-tab-item.y-tooltip .nav-link,
 .nav-bordered .y-tab-item.y-toast-show .nav-link,
 .nav-bordered .show.y-tab-item .y-tab-item-link,
-.nav-bordered .y-tab-item.y-tooltip .y-tab-item-link,
 .nav-bordered .y-tab-item.y-toast-show .y-tab-item-link,
 .nav-bordered .nav-item.y-tab-pane .nav-link,
 .nav-bordered .nav-item.y-tab-pane .y-tab-item-link,
 .nav-bordered .y-tab-pane.y-tab-item .nav-link,
 .nav-bordered .y-tab-pane.y-tab-item .y-tab-item-link,
-.nav-bordered .nav-item.y-popover .nav-link,
-.nav-bordered .nav-item.y-popover .y-tab-item-link,
-.nav-bordered .y-popover.y-tab-item .nav-link,
-.nav-bordered .y-popover.y-tab-item .y-tab-item-link,
 .nav-bordered .nav-item.y-offcanvas-show .nav-link,
 .nav-bordered .nav-item.y-offcanvas-show .y-tab-item-link,
 .nav-bordered .y-offcanvas-show.y-tab-item .nav-link,
@@ -27670,6 +27592,26 @@ body:has(.y-offcanvas-no-scroll) {
   visibility: hidden !important;
 }
 
+.y-popup {
+  --y-popup-offset: 8px;
+  width: max-content;
+  max-width: calc(100vw - var(--y-popup-offset) * 2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  scale: 0.98;
+  transition: opacity 0.15s, scale 0.15s ease;
+}
+.y-popup-show {
+  pointer-events: all;
+  opacity: 1;
+  scale: 1;
+}
+.y-popup-arrow {
+  position: absolute;
+}
 .y-stamp-size-sm {
   --u-stamp-size: 5rem;
 }
