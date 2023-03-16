@@ -10640,7 +10640,7 @@ textarea.form-control-lg, textarea.y-textarea-size-lg, textarea.y-file-upload-si
   height: 75% !important;
 }
 
-.h-100, .y-slider-vertical, .y-card-media-element-position-end > *, .y-card-media-element-position-start > *, .y-card-media-element-position-bottom > *, .y-card-media-element-position-top > *, .y-card-media, .y-el-h-100 {
+.h-100, .y-card-media-element-position-end > *, .y-card-media-element-position-start > *, .y-card-media-element-position-bottom > *, .y-card-media-element-position-top > *, .y-card-media, .y-el-h-100 {
   height: 100% !important;
 }
 
@@ -26870,7 +26870,7 @@ Antialiasing
 /* Give origins 0 height/width so they don't interfere with clicking the
  * connect elements.
  */
-.noUi-vertical .noUi-origin, .y-slider-vertical .noUi-origin {
+.noUi-vertical .noUi-origin {
   top: -100%;
   width: 0;
 }
@@ -26913,11 +26913,11 @@ Antialiasing
   top: -6px;
 }
 
-.noUi-vertical, .y-slider-vertical {
+.noUi-vertical {
   width: 18px;
 }
 
-.noUi-vertical .noUi-handle, .y-slider-vertical .noUi-handle {
+.noUi-vertical .noUi-handle {
   width: 28px;
   height: 34px;
   right: -6px;
@@ -26953,7 +26953,7 @@ Antialiasing
   cursor: ew-resize;
 }
 
-.noUi-vertical .noUi-draggable, .y-slider-vertical .noUi-draggable {
+.noUi-vertical .noUi-draggable {
   cursor: ns-resize;
 }
 
@@ -26987,16 +26987,15 @@ Antialiasing
   left: 17px;
 }
 
-.noUi-vertical .noUi-handle:before, .y-slider-vertical .noUi-handle:before,
-.noUi-vertical .noUi-handle:after,
-.y-slider-vertical .noUi-handle:after {
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
   width: 14px;
   height: 1px;
   left: 6px;
   top: 14px;
 }
 
-.noUi-vertical .noUi-handle:after, .y-slider-vertical .noUi-handle:after {
+.noUi-vertical .noUi-handle:after {
   top: 17px;
 }
 
@@ -27145,7 +27144,7 @@ Antialiasing
   bottom: 120%;
 }
 
-.noUi-vertical .noUi-tooltip, .y-slider-vertical .noUi-tooltip {
+.noUi-vertical .noUi-tooltip {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   top: 50%;
@@ -27159,7 +27158,7 @@ Antialiasing
   bottom: 10px;
 }
 
-.noUi-vertical .noUi-origin > .noUi-tooltip, .y-slider-vertical .noUi-origin > .noUi-tooltip {
+.noUi-vertical .noUi-origin > .noUi-tooltip {
   -webkit-transform: translate(0, -18px);
   transform: translate(0, -18px);
   top: auto;
