@@ -64,6 +64,6 @@
 			</CardBody>
 		</Card>
 		<El textAlign="center" mt="3"
-			>Don't have account yet? <a href="./sign-up.html" tabindex="-1">Sign up</a></El>
+			>Don't have account yet? <a href="./sign-up" tabindex="-1">Sign up</a></El>
 	</El>
 </El>
