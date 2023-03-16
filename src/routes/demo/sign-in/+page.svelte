@@ -35,7 +35,7 @@
 				<Label d="flex" justifyContent="between">
 					<El textAlign="start">Password</El>
 					<El textAlign="end">
-						<a href="./forgot-password.html">I forgot password</a>
+						<a href="./forgot-password">I forgot password</a>
 					</El>
 				</Label>
 				<Input type={textType} placeholder="Your password">
