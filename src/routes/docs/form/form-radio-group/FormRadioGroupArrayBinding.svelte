@@ -8,10 +8,10 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value: any = undefined
+	let value: string | undefined = undefined
 </script>
 
-<FormRadioGroup label="Select Language" bind:value {items} let:item let:index>
+<FormRadioGroup label="Select Language" key="code" bind:value {items} let:item let:index>
 	{(index || 0) + 1}- {item.text} ({item.code})
 </FormRadioGroup>
 

@@ -8,7 +8,7 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value = [items[1], items[3]]
+	let value = [items[1].code, items[3].code]
 </script>
 
 <FormCheckboxGroup label="Select Language" key="code" bind:value {items} let:item let:index>
