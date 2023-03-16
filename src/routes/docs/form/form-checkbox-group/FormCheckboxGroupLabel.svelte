@@ -11,7 +11,7 @@
 	let value = [items[1], items[3]]
 </script>
 
-<FormCheckboxGroup label="Select Language" bind:value {items} let:item let:index>
+<FormCheckboxGroup label="Select Language" key="code" bind:value {items} let:item let:index>
 	{(index || 0) + 1}- {item.text}
 </FormCheckboxGroup>
 
