@@ -24,10 +24,8 @@
 <El class="page page-center" style="height:100vh;">
 	<El container class="container-tight">
 		<El textAlign="center" mb="4">
-			<El tag="a" href="." class="navbar-brand navbar-brand-autodark"
-				><img src="/images/svelte.svg" height="36" alt="" class="me-2" />
-				<El tag="span" class="h1">YeSvelte</El>
-			</El>
+			<img src="/images/svelte.svg" height="36" alt="" />
+			<El tag="span" class="h1" ms="2">YeSvelte</El>
 		</El>
 		<Card size="md">
 			<CardBody>
@@ -51,11 +49,11 @@
 				<Divider>OR</Divider>
 
 				<El row>
-					<El col="6"
-						><Button col="12"
-							><Icon name="brand-github" />
-							Login with Github</Button
-						></El>
+					<El col="6">
+						<Button col="12">
+							<Icon name="brand-github" />
+							Login with Github</Button>
+					</El>
 					<El col="6"
 						><Button col="12">
 							<Icon name="brand-twitter" color="twitter" />
