@@ -27,6 +27,7 @@
 			size,
 			items,
 			state,
+			name,
 		}
 
 		props = {
@@ -35,7 +36,6 @@
 			label,
 			hint,
 			state,
-			name,
 		}
 	}
 </script>

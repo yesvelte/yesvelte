@@ -38,6 +38,8 @@
 	onMount(() => {
 		if (!element) return
 
+		if (name) element.setAttribute('name', name)
+
 		const options: Options = {
 			start: knobs.map((knob) => knob.value),
 			tooltips: knobs.map((knob) => knob.tooltip ?? false),
