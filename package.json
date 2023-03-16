@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.60",
+	"version": "0.0.2-next.64",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -50,11 +50,13 @@
 		"@types/prismjs": "^1.26.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"cssnano": "^5.1.15",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"gh-pages": "^5.0.0",
 		"param-case": "^3.0.4",
+		"postcss-filter-rules": "^0.6.2",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"prismjs": "^1.29.0",

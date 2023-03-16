@@ -12,7 +12,10 @@
 	export let min: $$Props['min'] = undefined
 	export let max: $$Props['max'] = undefined
 	export let step: $$Props['step'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let connect: $$Props['connect'] = undefined
+
+	// name has no usage in this component....
 
 	let knobs: SliderKnobType[] = []
 	let element: HTMLElement
@@ -34,6 +37,8 @@
 
 	onMount(() => {
 		if (!element) return
+
+		if (name) element.setAttribute('name', name)
 
 		const options: Options = {
 			start: knobs.map((knob) => knob.value),

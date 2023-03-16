@@ -15,6 +15,7 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	let element: HTMLSelectElement
@@ -84,7 +85,7 @@
 	onDestroy(unbind)
 </script>
 
-<El tag="select" bind:element {...$$restProps} {...props}>
+<El tag="select" bind:element {name} {...$$restProps} {...props}>
 	{#each items || [] as item, index (getKey(item, index))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
 		<option value={index} selected={value === item}>

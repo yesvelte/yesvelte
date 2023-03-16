@@ -12,6 +12,7 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let description: $$Props['description'] = undefined
 	export let inline: $$Props['inline'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let text: $$Props['text'] = undefined
 	export let value: $$Props['value'] = false
 	export let reverse: $$Props['reverse'] = false
@@ -41,6 +42,7 @@
 			role,
 			disabled,
 			type,
+			name
 		}
 	}
 </script>
