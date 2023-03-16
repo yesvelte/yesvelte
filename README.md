@@ -37,7 +37,7 @@ YeSvelte components have default styles which is based on tabler. which you can 
 
 ## Demo
 
-Check out the [documentation website](https://www.yesvelte.com/) for live demos of each component and detailed usage instructions.
+Check out the [documentation website](https://www.yesvelte.com) for live demos of each component and detailed usage instructions.
 
 ## Playground in REPL
 

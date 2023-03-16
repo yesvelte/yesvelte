@@ -17,6 +17,7 @@
 		}
 
 		props = {
+			tag: 'li',
 			componentName,
 			href,
 			'aria-current': `${active ?? 'page'}`,

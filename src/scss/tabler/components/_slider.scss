@@ -8,11 +8,7 @@ $props: (
 		'.noUi-target',
 		'.noUi-txt-dir-ltr'
 	),
-	color: generate_props($theme_colors, ('.text-')),
-	'vertical': (
-		'.noUi-vertical',
-		'.h-100'
-	)
+	color: generate_props($theme_colors, ('.text-'))
 );
 
 .#{$prefix-slider} {

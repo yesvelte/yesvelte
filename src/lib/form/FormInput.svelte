@@ -21,6 +21,7 @@
 	export let value: $$Props['value'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
@@ -46,6 +47,7 @@
 		borderFlush,
 		mask,
 		maskOptions,
+		name,
 	}
 </script>
 

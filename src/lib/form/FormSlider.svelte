@@ -9,7 +9,6 @@
 	export let tag: $$Props['tag'] = 'input'
 	export let required: $$Props['required'] = undefined
 	export let color: $$Props['color'] = undefined
-	export let vertical: $$Props['vertical'] = undefined
 	export let connect: $$Props['connect'] = undefined
 	export let min: $$Props['min'] = undefined
 	export let max: $$Props['max'] = undefined
@@ -17,6 +16,7 @@
 	export let state: $$Props['state'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let props: $$Props = {}
 	let sliderProps: $$Props = {}
@@ -34,11 +34,11 @@
 		required,
 		state,
 		color,
-		vertical,
 		connect,
 		min,
 		max,
 		step,
+		name,
 	}
 </script>
 
