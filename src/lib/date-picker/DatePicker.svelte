@@ -17,6 +17,7 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	const dispatch = createEventDispatcher()
@@ -78,6 +79,7 @@
 			componentName,
 			placeholder,
 			disabled,
+			name,
 		}
 	}
 	onMount(() => {

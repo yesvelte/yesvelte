@@ -19,7 +19,7 @@ Once installed, you can import the components and use them in your Svelte applic
 	import { Button } from 'yesvelte'
 </script>
 
-<button>Hello YeSvelte</button>
+<button>Hello YeSvelte!</button>
 ```
 
 ## Styles
@@ -29,10 +29,10 @@ YeSvelte components have default styles which is based on tabler. which you can 
 ```svelte
 <script>
 	import { Button } from 'yesvelte'
-	import 'yesvelte/css/tabler.css'
+	import 'yesvelte/css/tabler.min.css'
 </script>
 
-<Button color="primary">Hello World!</Button>
+<Button color="primary">Hello YeSvelte!</Button>
 ```
 
 ## Demo

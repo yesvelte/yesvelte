@@ -9,4 +9,5 @@ export interface SwitchProps extends Partial<ElProps> {
 	disabled?: boolean
 	description?: string
 	type?: string
+	name?: string
 }
