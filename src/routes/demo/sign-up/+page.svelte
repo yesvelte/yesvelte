@@ -1,16 +1,5 @@
 <script lang="ts">
-	import {
-		El,
-		FormInput,
-		Button,
-		Card,
-		Divider,
-		Icon,
-		CardBody,
-		Label,
-		Input,
-		Checkbox,
-	} from 'yesvelte'
+	import { El, FormInput, Button, Card, Icon, CardBody, Label, Input, Checkbox } from 'yesvelte'
 
 	let icon = 'eye'
 	let textType = 'password'
