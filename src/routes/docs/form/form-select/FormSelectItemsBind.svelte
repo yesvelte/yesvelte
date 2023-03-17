@@ -29,12 +29,10 @@
 		},
 	]
 
-	let defaultId = '1'
-	let value: any = items.find((x) => x.id === defaultId)
-
-	$: selectedId = value?.id
+	let value: any = '1'
 </script>
 
-<FormSelect label="Fruit" bind:value {items} let:item let:index>{item.id} - {item.name}</FormSelect>
+<FormSelect label="Fruit" key="id" bind:value {items} let:item let:index
+	>{item.id} - {item.name}</FormSelect>
 
-<i>Selected Id: {selectedId} - value: {JSON.stringify(value)}</i>
+<i>Selected Id: {value} - value: {JSON.stringify(items.find((item) => item.id === value))}</i>

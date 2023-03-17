@@ -8,10 +8,10 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value: any = undefined
+	let value: string | undefined = undefined
 </script>
 
-<RadioGroup bind:value {items} let:item let:index>
+<RadioGroup bind:value {items} key="code" let:item let:index>
 	{(index || 0) + 1}- {item.text} ({item.code})
 </RadioGroup>
 

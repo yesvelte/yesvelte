@@ -15,6 +15,7 @@
 	export let required: $$Props['required'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
 
 	let selectProps: SelectProps = {}
@@ -27,6 +28,7 @@
 			size,
 			items,
 			state,
+			key,
 			name,
 		}
 

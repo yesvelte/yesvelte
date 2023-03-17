@@ -8,10 +8,16 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value: any[] = []
+	let value: string[] = ['css']
 </script>
 
-<FormCheckboxGroup label="Select Language" bind:value {items} let:item let:index>
+<FormCheckboxGroup
+	label="Select Language"
+	key={(item) => item.code}
+	bind:value
+	{items}
+	let:item
+	let:index>
 	{(index || 0) + 1}- {item.text} ({item.code})
 </FormCheckboxGroup>
 
