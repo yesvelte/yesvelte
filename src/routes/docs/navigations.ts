@@ -390,32 +390,32 @@ export const navigations: Navigation[] = [
 			{
 				route: example_path + '/sign-in',
 				title: 'Sign in',
-				icon: 'app-window',
+				icon: 'tabler:app-window',
 				description: 'A sample sign in page implemented with YeSvelte components.',
 			},
 			{
 				route: example_path + '/sign-in-illustration',
 				title: 'Sign in with illustration',
-				icon: 'app-window',
+				icon: 'tabler:app-window',
 				description:
 					'A sample sign in page with illustration implemented with YeSvelte components.',
 			},
 			{
 				route: example_path + '/sign-in-cover',
 				title: 'Sign in with cover',
-				icon: 'app-window',
+				icon: 'tabler:app-window',
 				description: 'A sample sign in page with cover image implemented with YeSvelte components.',
 			},
 			{
 				route: example_path + '/sign-up',
 				title: 'Sign up',
-				icon: 'app-window',
+				icon: 'tabler:app-window',
 				description: 'A sample sign up page implemented with YeSvelte components.',
 			},
 			{
 				route: example_path + '/forgot-password',
 				title: 'Forgot password',
-				icon: 'app-window',
+				icon: 'tabler:app-window',
 				description: 'A sample forgot password page implemented with YeSvelte components.',
 			},
 		],
