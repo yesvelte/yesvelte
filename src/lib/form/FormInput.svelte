@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -22,6 +24,8 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
+
+	const forwardEvents = forwardEventsBuilder(get_current_component())
 
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
@@ -47,6 +51,7 @@
 		borderFlush,
 		mask,
 		maskOptions,
+		forwardEvents,
 		name,
 	}
 </script>

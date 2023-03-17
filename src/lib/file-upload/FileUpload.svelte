@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FileUploadProps, FileUploadWrapperProps } from './FileUpload.types'
 
@@ -13,10 +15,11 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let files: $$Props['files'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLInputElement
 
-	let props: $$Props = { componentName, placeholder, disabled }
+	let props: $$Props = { componentName, placeholder, disabled, forwardEvents }
 	let cssProps: $$Props = { state }
 	let wrapperCssProps: FileUploadWrapperProps = { size }
 
@@ -48,7 +51,7 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El bind:element {...$$restProps} {...props} {cssProps} on:change={onChange} on:change />
+	<El bind:element {...$$restProps} {...props} {cssProps} on:change={onChange} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

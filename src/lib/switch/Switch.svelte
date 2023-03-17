@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { SwitchProps } from './Switch.types'
@@ -19,6 +21,7 @@
 	export let checked: $$Props['checked'] = false
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -38,11 +41,12 @@
 			tag,
 			checked,
 			componentName,
+			forwardEvents,
 			text,
 			role,
 			disabled,
 			type,
-			name
+			name,
 		}
 	}
 </script>

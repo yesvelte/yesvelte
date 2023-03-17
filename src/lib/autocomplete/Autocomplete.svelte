@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 	import TomSelect from 'tom-select'
 	import type { RecursivePartial, TomSettings } from 'tom-select/dist/types/types'
 	import { El } from '../el'
-	import { classname } from '../internal'
+	import { classname, forwardEventsBuilder } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
 
 	type $$Props = AutocompleteProps
@@ -17,6 +18,7 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLSelectElement
 	let instance: TomSelect
@@ -85,7 +87,7 @@
 	onDestroy(unbind)
 </script>
 
-<El tag="select" bind:element {name} {...$$restProps} {...props}>
+<El {forwardEvents} tag="select" bind:element {name} {...$$restProps} {...props}>
 	{#each items || [] as item, index (getKey(item, index))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
 		<option value={index} selected={value === item}>

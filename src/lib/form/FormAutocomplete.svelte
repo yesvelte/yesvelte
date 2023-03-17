@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { Autocomplete } from '../autocomplete'
 	import type { FormAutocompleteProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -17,6 +19,8 @@
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
 
+	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
+
 	let props: $$Props = {}
 	let autocompleteProps: $$Props = {}
 
@@ -33,6 +37,7 @@
 			items,
 			key,
 			placeholder,
+			forwardEvents,
 			name,
 			size,
 			state,
