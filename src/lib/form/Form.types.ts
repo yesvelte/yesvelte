@@ -20,6 +20,7 @@ export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputPr
 
 export interface FormTextAreaProps extends Partial<FormInputProps> {
 	rows?: number | string
+	cols?: number | string
 }
 export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> {}
 
