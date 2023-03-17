@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { El } from '$lib'
-	import { classname } from '$lib/internal'
+	import { El } from '../el'
+	import { classname } from '../internal'
 	import {
 		computePosition,
 		type Placement,
