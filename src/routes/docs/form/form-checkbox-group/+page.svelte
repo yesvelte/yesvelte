@@ -6,6 +6,7 @@
 	import FormCheckboxGroupArrayBinding from './FormCheckboxGroupArrayBinding.svelte'
 	import FormCheckboxGroupInline from './FormCheckboxGroupInline.svelte'
 	import FormCheckboxGroupLayout from './FormCheckboxGroupLayout.svelte'
+	import FormCheckboxGroupKey from './FormCheckboxGroupKey.svelte'
 </script>
 
 <Page title="FormCheckboxGroup">
@@ -23,6 +24,12 @@
 	<Doc title="Custom label">
 		<Preview src="./FormCheckboxGroupLabel.svelte">
 			<FormCheckboxGroupLabel />
+		</Preview>
+	</Doc>
+
+	<Doc title="Key">
+		<Preview src="./FormCheckboxGroupKey.svelte">
+			<FormCheckboxGroupKey />
 		</Preview>
 	</Doc>
 

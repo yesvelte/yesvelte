@@ -8,10 +8,10 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value = items[1]
+	let value = items[1].code
 </script>
 
-<RadioGroup bind:value {items} let:item let:index>
+<RadioGroup bind:value {items} key="code" let:item let:index>
 	{(index || 0) + 1}- {item.text}
 </RadioGroup>
 

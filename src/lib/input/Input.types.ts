@@ -27,4 +27,10 @@ export interface InputProps extends Partial<ElProps> {
 	mask?: string
 	name?: string
 	maskOptions?: object
+	min?: string | number
+	max?: string | number
+	minlength?: string | number
+	maxlength?: string | number
+	pattern?: string
+	step?: string | number
 }

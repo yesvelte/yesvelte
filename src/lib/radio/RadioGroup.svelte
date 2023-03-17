@@ -14,6 +14,7 @@
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	let element: HTMLElement
@@ -28,16 +29,29 @@
 		}
 	}
 
+	$: getKey = (item: any) => {
+		if (key) {
+			return typeof key === 'string' ? item[key] : key(item)
+		} else {
+			return item
+		}
+	}
+
 	const onChange = (event: any) => {
 		const selectedIndex = event.target.value
-		value = items && selectedIndex ? items[selectedIndex] : undefined
+		value = items && selectedIndex ? getKey(items[selectedIndex]) : undefined
 	}
 </script>
 
 <El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Radio {...props} value={index} checked={value === item} on:change={onChange} on:change>
+			<Radio
+				{...props}
+				value={index}
+				checked={value === getKey(item)}
+				on:change={onChange}
+				on:change>
 				<slot {index} {item}>{item}</slot>
 			</Radio>
 		{/each}

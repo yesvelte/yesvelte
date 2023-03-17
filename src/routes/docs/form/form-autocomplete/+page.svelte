@@ -86,7 +86,7 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Custom Key" description="You can choose a key to increase performance.">
+	<Doc title="Custom Key">
 		<Preview src="./FormAutocompleteKey.svelte">
 			<FormAutocompleteKey />
 		</Preview>

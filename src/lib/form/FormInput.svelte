@@ -22,6 +22,12 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
+	export let min: $$Props['min'] = undefined
+	export let max: $$Props['max'] = undefined
+	export let minlength: $$Props['minlength'] = undefined
+	export let maxlength: $$Props['maxlength'] = undefined
+	export let pattern: $$Props['pattern'] = undefined
+	export let step: $$Props['step'] = undefined
 
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
@@ -48,6 +54,12 @@
 		mask,
 		maskOptions,
 		name,
+		min,
+		max,
+		minlength,
+		maxlength,
+		pattern,
+		step,
 	}
 </script>
 
