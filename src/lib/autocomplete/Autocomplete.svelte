@@ -34,8 +34,8 @@
 		settings = {
 			dropdownClass: classname(componentName + '-dropdown'),
 			optionClass: classname(componentName + '-option'),
-			onChange(key) {
-				value = items?.[key as any]
+			onChange(newValue) {
+				value = newValue
 			},
 			onInitialize() {
 				loaded = true
@@ -48,14 +48,12 @@
 		instance && update('value', value)
 	}
 
-	function getKey(item: any, fallback: any) {
-		if (!key) return fallback
+	function getKey(item: any) {
+		if (!key) return item
 
 		if (typeof key == 'function') return key(item)
 
-		const computed = typeof item === 'object' ? item[key] : item
-
-		return `${typeof computed}:${computed}`
+		return typeof item === 'object' ? item[key] : item
 	}
 
 	function bind() {
@@ -86,9 +84,9 @@
 </script>
 
 <El tag="select" bind:element {name} {...$$restProps} {...props}>
-	{#each items || [] as item, index (getKey(item, index))}
+	{#each items || [] as item, index (getKey(item))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-		<option value={index} selected={value === item}>
+		<option value={getKey(item)} selected={value === getKey(item)}>
 			<slot {index} {item}>{item}</slot>
 		</option>
 	{/each}
