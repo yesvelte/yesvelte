@@ -1,5 +1,5 @@
-import type { ElProps } from '$lib/el'
-import type { PopupProps } from '$lib/popup'
+import type { ElProps } from '../el'
+import type { PopupProps } from '../popup'
 
 export interface PopoverProps extends PopupProps {
 	title?: string
