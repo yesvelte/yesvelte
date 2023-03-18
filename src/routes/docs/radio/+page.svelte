@@ -7,6 +7,7 @@
 	import RadioReverse from './RadioReverse.svelte'
 	import RadioExample from './RadioExample.svelte'
 	import RadioDescription from './RadioDescription.svelte'
+	import RadioEvents from './RadioEvents.svelte'
 </script>
 
 <Page title="Radio">
@@ -40,6 +41,12 @@
 	<Doc title="Disabled">
 		<Preview src="./RadioDisabled.svelte">
 			<RadioDisabled />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./RadioEvents.svelte">
+			<RadioEvents />
 		</Preview>
 	</Doc>
 

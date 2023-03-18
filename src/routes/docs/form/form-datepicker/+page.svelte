@@ -4,6 +4,7 @@
 	import FormDatePickerDisabled from './FormDatePickerDisabled.svelte'
 	import FormDatePickerLabel from './FormDatePickerLabel.svelte'
 	import FormDatePickerMessage from './FormDatePickerMessage.svelte'
+	import FormDatePickerEvents from './FormDatePickerEvents.svelte'
 	import FormDatePickerRequired from './FormDatePickerRequired.svelte'
 </script>
 
@@ -19,6 +20,12 @@
 	<Doc title="Label">
 		<Preview src="./FormDatePickerLabel.svelte">
 			<FormDatePickerLabel />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FormDatePickerEvents.svelte">
+			<FormDatePickerEvents />
 		</Preview>
 	</Doc>
 

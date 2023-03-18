@@ -8,6 +8,7 @@
 	import SelectSizes from './SelectSizes.svelte'
 	import SelectDisabled from './SelectDisabled.svelte'
 	import SelectStates from './SelectStates.svelte'
+	import SelectEvents from './SelectEvents.svelte'
 </script>
 
 <Page
@@ -52,6 +53,12 @@
 	<Doc title="Disabled">
 		<Preview src="./SelectDisabled.svelte">
 			<div class="custom-class"><SelectDisabled /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./SelectEvents.svelte">
+			<div class="custom-class"><SelectEvents /></div>
 		</Preview>
 	</Doc>
 

@@ -2,6 +2,8 @@
 	import DatePicker from '../date-picker/DatePicker.svelte'
 	import FormField from './FormField.svelte'
 	import type { FormDatePickerProps } from './Form.types'
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = FormDatePickerProps
 
@@ -16,6 +18,8 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
+
+	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let props: $$Props = {}
 	let datePickerProps: $$Props = {}
@@ -36,6 +40,7 @@
 			state,
 			borderRounded,
 			borderFlush,
+			forwardEvents,
 			name,
 		}
 	}

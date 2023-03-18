@@ -25,8 +25,8 @@
 	export let ariaLabel: $$Props['aria-label'] = undefined
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
-
-	const forwardEvents = forwardEventsBuilder(get_current_component())
+	export let  forwardEvents = forwardEventsBuilder(get_current_component())
+	
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}

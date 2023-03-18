@@ -10,6 +10,7 @@
 	import InputStates from './InputStates.svelte'
 	import InputBorderShapes from './InputBorderShapes.svelte'
 	import InputMasks from './InputMasks.svelte'
+	import InputEvents from './InputEvents.svelte'
 </script>
 
 <Page title="Input">
@@ -64,6 +65,12 @@
 		</p>
 		<Preview src="./InputDisabled.svelte">
 			<div class="custom-class"><InputDisabled /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./InputEvents.svelte">
+			<InputEvents />
 		</Preview>
 	</Doc>
 

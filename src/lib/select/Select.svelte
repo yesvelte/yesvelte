@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { SelectProps } from './Select.types'
 
@@ -17,6 +19,7 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -26,6 +29,7 @@
 
 		props = {
 			componentName,
+			forwardEvents,
 			value,
 			disabled,
 			placeholder,

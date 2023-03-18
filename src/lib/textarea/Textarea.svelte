@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TextareaProps } from './Textarea.types'
 
@@ -16,6 +18,7 @@
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
@@ -30,6 +33,7 @@
 
 		props = {
 			componentName,
+			forwardEvents,
 			placeholder,
 			disabled,
 			readonly,

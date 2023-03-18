@@ -7,6 +7,7 @@
 	import TextareaPlaceholder from './TextareaPlaceholder.svelte'
 	import TextareaSizes from './TextareaSizes.svelte'
 	import TextareaBorderShapes from './TextareaBorderShapes.svelte'
+	import TextareaEvents from './TextareaEvents.svelte'
 </script>
 
 <Page
@@ -59,6 +60,14 @@
 		<Preview src="./TextareaPlaceholder.svelte">
 			<div class="custom-class">
 				<TextareaPlaceholder />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./TextareaEvents.svelte">
+			<div class="custom-class">
+				<TextareaEvents />
 			</div>
 		</Preview>
 	</Doc>
