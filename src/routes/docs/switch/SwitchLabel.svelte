@@ -4,4 +4,4 @@
 	let checked = false
 </script>
 
-<Switch reverse bind:checked label="Switch: {checked}" />
+<Switch bind:checked label="Switch: {checked}" />
