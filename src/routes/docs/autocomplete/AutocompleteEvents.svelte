@@ -1,9 +1,12 @@
 <script>
 	import { Autocomplete } from 'yesvelte'
 
-	let clicked = 0
+	let changed = 0
 </script>
 
-<Autocomplete on:click={() => (clicked += 1)} placeholder="Click Me!" />
+<Autocomplete
+	items={['a', 'b', 'c', 'd', 'e', 'f']}
+	on:change={() => (changed += 1)}
+	placeholder="Change My Value!" />
 
-clicked: {clicked}
+changed: {changed}

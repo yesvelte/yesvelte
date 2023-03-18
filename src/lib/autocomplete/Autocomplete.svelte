@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { createEventDispatcher, get_current_component } from 'svelte/internal'
 	import TomSelect from 'tom-select'
 	import type { RecursivePartial, TomSettings } from 'tom-select/dist/types/types'
 	import { El } from '../el'
@@ -20,6 +20,8 @@
 	export let value: $$Props['value'] = undefined
 	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
+	const dispatch = createEventDispatcher()
+
 	let element: HTMLSelectElement
 	let instance: TomSelect
 	let loaded = false
@@ -38,6 +40,7 @@
 			optionClass: classname(componentName + '-option'),
 			onChange(newValue) {
 				value = newValue
+				dispatch('changed', value)
 			},
 			onInitialize() {
 				loaded = true

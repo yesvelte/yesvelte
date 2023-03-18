@@ -47,7 +47,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...autocompleteProps} bind:value let:item let:index>
+	<Autocomplete {...autocompleteProps} on:changed bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
 	</Autocomplete>
 	<slot name="hint" />
