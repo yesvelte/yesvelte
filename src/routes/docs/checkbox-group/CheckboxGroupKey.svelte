@@ -11,7 +11,13 @@
 	let value = ['html']
 </script>
 
-<CheckboxGroup bind:value {items} key="code" let:item let:index>
+<!-- key is a string -->
+<CheckboxGroup inline bind:value {items} key="code" let:item let:index>
+	{(index || 0) + 1}- {item.text}
+</CheckboxGroup>
+
+<!-- key is a function -->
+<CheckboxGroup inline bind:value {items} key={(item) => item.code} let:item let:index>
 	{(index || 0) + 1}- {item.text}
 </CheckboxGroup>
 

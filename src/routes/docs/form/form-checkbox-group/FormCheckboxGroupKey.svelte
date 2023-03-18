@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormRadioGroup } from 'yesvelte'
+	import { FormCheckboxGroup } from 'yesvelte'
 
 	let items = [
 		{ text: 'HTML', code: 'html' },
@@ -8,10 +8,16 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value = items[1].code
+	let value = [items[1].code, items[3].code]
 </script>
 
-<FormRadioGroup
+<!-- key is string -->
+<FormCheckboxGroup label="Select Language" key="code" bind:value {items} let:item let:index>
+	{(index || 0) + 1}- {item.text}
+</FormCheckboxGroup>
+
+<!-- key is function -->
+<FormCheckboxGroup
 	label="Select Language"
 	key={(item) => item.code}
 	bind:value
@@ -19,6 +25,6 @@
 	let:item
 	let:index>
 	{(index || 0) + 1}- {item.text}
-</FormRadioGroup>
+</FormCheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

@@ -11,7 +11,13 @@
 	let value = items[1].code
 </script>
 
-<RadioGroup bind:value {items} key="code" let:item let:index>
+<!-- key is a string -->
+<RadioGroup inline bind:value {items} key="code" let:item let:index>
+	{(index || 0) + 1}- {item.text}
+</RadioGroup>
+
+<!-- key is a function -->
+<RadioGroup inline bind:value {items} key={(item) => item.code} let:item let:index>
 	{(index || 0) + 1}- {item.text}
 </RadioGroup>
 

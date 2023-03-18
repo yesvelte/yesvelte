@@ -17,6 +17,7 @@ export interface RadioGroupProps extends Partial<ElProps> {
 	color?: Colors
 	inline?: boolean
 	reverse?: boolean
+	key?: string | ((items: any) => string | number)
 	items?: Array<any>
 	name?: string
 }

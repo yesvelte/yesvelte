@@ -5,6 +5,7 @@
 	import FormSelectState from './FormSelectState.svelte'
 	import FormSelectHint from './FormSelectHint.svelte'
 	import FormSelectItemsBind from './FormSelectItemsBind.svelte'
+	import FormSelectKey from './FormSelectKey.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -19,6 +20,12 @@
 	<Doc title="Label">
 		<Preview src="./FormSelectDefault.svelte">
 			<FormSelectDefault />
+		</Preview>
+	</Doc>
+
+	<Doc title="Key">
+		<Preview src="./FormSelectKey.svelte">
+			<FormSelectKey />
 		</Preview>
 	</Doc>
 

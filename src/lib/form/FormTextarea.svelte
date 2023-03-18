@@ -23,6 +23,9 @@
 	export let value: $$Props['value'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let minlength: $$Props['minlength'] = undefined
+	export let maxlength: $$Props['maxlength'] = undefined
+	export let cols: $$Props['cols'] = undefined
 
 	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
@@ -52,6 +55,9 @@
 			forwardEvents,
 			rows,
 			name,
+			minlength,
+			maxlength,
+			cols,
 		}
 	}
 </script>

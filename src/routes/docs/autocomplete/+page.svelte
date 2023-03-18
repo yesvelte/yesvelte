@@ -71,7 +71,9 @@
 			You can use <code>key</code> prop to set a custom key for the input element.
 		</p>
 		<Preview src="./AutocompleteKey.svelte">
-			<AutocompleteKey />
+			<div class="custom-class">
+				<AutocompleteKey />
+			</div>
 		</Preview>
 	</Doc>
 </Page>

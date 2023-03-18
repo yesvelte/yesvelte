@@ -1,4 +1,5 @@
 export const base_path = '/docs'
+export const example_path = '/demo'
 
 export interface Navigation {
 	title?: string
@@ -393,6 +394,43 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-textarea',
 				title: 'FormTextarea',
 				icon: 'mdi:form-textarea',
+			},
+		],
+	},
+	{
+		title: 'Examples',
+		id: 'menu-examples',
+		children: [
+			{
+				route: example_path + '/authentication/sign-in',
+				title: 'Sign in',
+				icon: 'tabler:app-window',
+				description: 'A sample sign in page implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-in-illustration',
+				title: 'Sign in with illustration',
+				icon: 'tabler:app-window',
+				description:
+					'A sample sign in page with illustration implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-in-cover',
+				title: 'Sign in with cover',
+				icon: 'tabler:app-window',
+				description: 'A sample sign in page with cover image implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-up',
+				title: 'Sign up',
+				icon: 'tabler:app-window',
+				description: 'A sample sign up page implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/forgot-password',
+				title: 'Forgot password',
+				icon: 'tabler:app-window',
+				description: 'A sample forgot password page implemented with YeSvelte components.',
 			},
 		],
 	},
