@@ -37,7 +37,7 @@
 			items,
 			key,
 			placeholder,
-			forwardEvents,
+			// forwardEvents,
 			name,
 			size,
 			state,

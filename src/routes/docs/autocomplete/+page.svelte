@@ -34,11 +34,12 @@
 		</Preview>
 	</Doc>
 
-	<!-- <Doc title="Events">
+	<Doc title="Events">
+		<p slot="description">Autocomplete only supports <code>changed</code> event.</p>
 		<Preview src="./AutocompleteEvents.svelte">
 			<AutocompleteEvents />
 		</Preview>
-	</Doc> -->
+	</Doc>
 
 	<Doc title="Size">
 		<Preview src="./AutocompleteSizes.svelte">

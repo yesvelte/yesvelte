@@ -35,6 +35,7 @@
 
 		props = {
 			componentName,
+			forwardEvents,
 			placeholder,
 			disabled,
 			accept,

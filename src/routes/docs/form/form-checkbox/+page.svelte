@@ -5,6 +5,7 @@
 	import FormCheckboxDescription from './FormCheckboxDescription.svelte'
 	import FormCheckboxReverse from './FormCheckboxReverse.svelte'
 	import FormCheckboxRequired from './FormCheckboxRequired.svelte'
+	import FormCheckboxEvents from './FormCheckboxEvents.svelte'
 </script>
 
 <Page title="FormCheckbox">
@@ -23,6 +24,12 @@
 	<Doc title="Description">
 		<Preview src="./FormCheckboxDescription.svelte">
 			<FormCheckboxDescription />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FormCheckboxEvents.svelte">
+			<FormCheckboxEvents />
 		</Preview>
 	</Doc>
 

@@ -5,6 +5,7 @@
 	import FormSwitchDescription from './FormSwitchDescription.svelte'
 	import FormSwitchReverse from './FormSwitchReverse.svelte'
 	import FormSwitchRequired from './FormSwitchRequired.svelte'
+	import FormSwitchEvents from './FormSwitchEvents.svelte'
 </script>
 
 <Page title="FormSwitch">
@@ -19,6 +20,12 @@
 	<Doc title="Label">
 		<Preview src="./FormSwitchDefault.svelte">
 			<FormSwitchDefault />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FormSwitchEvents.svelte">
+			<FormSwitchEvents />
 		</Preview>
 	</Doc>
 
