@@ -23,7 +23,6 @@
 	export let name: $$Props['name'] = undefined
 	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
-	$: console.log({ forwardEvents })
 	let element: HTMLInputElement
 	onMount(async () => {
 		const Inputmask = await import('inputmask')
