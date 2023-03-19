@@ -2,6 +2,7 @@
 	import { Page, Doc, Preview } from '$components'
 	import PaginationDefault from './PaginationDefault.svelte'
 	import PaginationHref from './PaginationHref.svelte'
+	import PaginationProps from './PaginationProps.svelte'
 </script>
 
 <Page title="Pagination">
@@ -18,6 +19,12 @@
 		<p slot="description" />
 		<Preview src="./PaginationHref.svelte">
 			<PaginationHref />
+		</Preview>
+	</Doc>
+	<Doc title="Props">
+		<p slot="description" />
+		<Preview src="./PaginationProps.svelte">
+			<PaginationProps />
 		</Preview>
 	</Doc>
 </Page>

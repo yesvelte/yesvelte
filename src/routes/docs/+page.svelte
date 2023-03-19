@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { Page } from '$components'
+	import { Pagination } from '$lib'
 	import { navigations } from './navigations'
 </script>
+
+<Pagination hasFirst hasLast from={1} to={10} hasNext hasPrev />
 
 <Page title="YeSvelte UI Component Library">
 	<header>

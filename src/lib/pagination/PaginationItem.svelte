@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte'
 	import { El, type ElProps } from '../el'
 	import type { PaginationItemProps } from './Pagination.types'
 
@@ -8,6 +9,12 @@
 	export let href: $$Props['href'] = undefined
 	export let active: $$Props['active'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
+
+	const dispatch = createEventDispatcher()
+	function onClick() {
+		if (disabled) return
+		dispatch('click')
+	}
 
 	$: cssProps = {
 		active,
@@ -22,7 +29,7 @@
 	}
 </script>
 
-<El {...$$restProps} {componentName} {cssProps}>
+<El {...$$restProps} {componentName} {cssProps} on:click={onClick}>
 	<El {...linkProps}>
 		<slot />
 	</El>
