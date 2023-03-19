@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { RadioProps } from './Radio.types'
 
@@ -15,6 +17,7 @@
 	export let readonly: $$Props['readonly'] = undefined
 	export let checked: $$Props['checked'] = false
 	export let value: $$Props['value'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let labelForId: $$Props['for'] = undefined
 	export { labelForId as for }
@@ -34,6 +37,7 @@
 			readonly,
 			value,
 			checked,
+			forwardEvents,
 			name: name ?? inputElement?.id,
 		}
 	}

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { SelectProps } from './Select.types'
 
@@ -11,11 +13,13 @@
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
 	export let value: $$Props['value'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -25,6 +29,7 @@
 
 		props = {
 			componentName,
+			forwardEvents,
 			value,
 			disabled,
 			placeholder,
@@ -32,9 +37,17 @@
 		}
 	}
 
+	$: getKey = (item: any) => {
+		if (key) {
+			return typeof key === 'string' ? item[key] : key(item)
+		} else {
+			return item
+		}
+	}
+
 	const onChange = (event: any) => {
 		const selectedIndex = event.target.value
-		value = items && selectedIndex ? items[selectedIndex] : undefined
+		value = items && selectedIndex ? getKey(items[selectedIndex]) : undefined
 	}
 </script>
 
@@ -44,7 +57,7 @@
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
-			<option value={index} selected={value === item}>
+			<option value={index} selected={value === getKey(item)}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}

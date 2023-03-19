@@ -7,6 +7,7 @@
 	import FileUploadMultiple from './FileUploadMultiple.svelte'
 	import FileUploadSizes from './FileUploadSizes.svelte'
 	import FileUploadValue from './FileUploadValue.svelte'
+	import FileUploadEvents from './FileUploadEvents.svelte'
 </script>
 
 <Page title="File Upload">
@@ -31,6 +32,12 @@
 		<p slot="description">Set FileUpload disabled.</p>
 		<Preview src="./FileUploadDisabled.svelte">
 			<FileUploadDisabled />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FileUploadEvents.svelte">
+			<FileUploadEvents />
 		</Preview>
 	</Doc>
 

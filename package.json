@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.64",
+	"version": "0.0.2-next.72",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -71,7 +71,7 @@
 		"svelte": "^3.54.0"
 	},
 	"dependencies": {
-		"@popperjs/core": "^2.11.6",
+		"@floating-ui/dom": "^1.2.3",
 		"change-case": "^4.1.2",
 		"iconify-icon": "^1.0.5",
 		"inputmask": "^5.0.7",

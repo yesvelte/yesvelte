@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { El, type ElProps } from '../el'
 	import type { CheckboxProps } from './Checkbox.types'
 
@@ -15,6 +17,7 @@
 	export let name: $$Props['name'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLElement
 	let checkboxProps: Partial<ElProps>
@@ -33,6 +36,7 @@
 	$: checkboxProps = {
 		...$$restProps,
 		componentName,
+		forwardEvents,
 		disabled,
 		checked,
 		value,

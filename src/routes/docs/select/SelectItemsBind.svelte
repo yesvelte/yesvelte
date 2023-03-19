@@ -29,12 +29,9 @@
 		},
 	]
 
-	let defaultId = '1'
-	let value: any = items.find((x) => x.id === defaultId)
-
-	$: selectedId = value?.id
+	let value: string = '1'
 </script>
 
-<Select bind:value {items} let:item let:index>{item.id} - {item.name}</Select>
+<Select bind:value {items} key="id" let:item let:index>{item.id} - {item.name}</Select>
 
-<i>Selected Id: {selectedId} - value: {JSON.stringify(value)}</i>
+<i>Selected Id: {value} - value: {JSON.stringify(items.find((item) => item.id === value))}</i>

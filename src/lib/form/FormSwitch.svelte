@@ -2,6 +2,8 @@
 	import FormField from './FormField.svelte'
 	import { Switch, type SwitchProps } from '../switch'
 	import type { FormSwitchProps } from './Form.types'
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = FormSwitchProps
 
@@ -19,6 +21,8 @@
 	export let checked: $$Props['checked'] = undefined
 	export let inline: $$Props['inline'] = undefined
 
+	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
+
 	let props: $$Props = {}
 	let switchProps: SwitchProps = {}
 
@@ -35,10 +39,11 @@
 			color,
 			inline,
 			description,
+			forwardEvents,
 			reverse,
 			checked,
 			disabled,
-			name
+			name,
 		}
 	}
 </script>

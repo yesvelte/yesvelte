@@ -12,6 +12,7 @@
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let name: $$Props['name'] = undefined
+	export let key: $$Props['key'] = undefined
 
 	let checkboxGroupProps: $$Props = {}
 	$: checkboxGroupProps = {
@@ -19,7 +20,8 @@
 		inline,
 		items,
 		reverse,
-		name
+		name,
+		key,
 	}
 </script>
 

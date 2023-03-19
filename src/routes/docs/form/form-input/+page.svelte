@@ -6,6 +6,7 @@
 	import FormInputState from './FormInputState.svelte'
 	import FormInputMask from './FormInputMask.svelte'
 	import FormInputFieldset from './FormInputFieldset.svelte'
+	import FormInputEvents from './FormInputEvents.svelte'
 </script>
 
 <Page
@@ -40,6 +41,12 @@
 		</p>
 		<Preview src="./FormInputState.svelte">
 			<FormInputState />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FormInputEvents.svelte">
+			<FormInputEvents />
 		</Preview>
 	</Doc>
 
