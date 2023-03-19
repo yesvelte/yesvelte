@@ -337,6 +337,7 @@ export interface ElProps extends CssProps {
 	tag?: HTMLTags
 	element?: HTMLElement
 	componentName?: string
+	forwardEvents?: (node: HTMLElement | SVGElement) => { destroy: () => void }
 	cssProps?: object
 	value?: unknown
 	title?: string

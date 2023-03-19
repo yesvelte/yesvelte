@@ -1,0 +1,32 @@
+$popup-arrow-placements: ('bottom', 'top', 'left', 'right');
+
+.#{$prefix-popup} {
+	--y-popup-offset: 8px;
+
+	width: max-content;
+	max-width: calc(100vw - calc(var(--y-popup-offset) * 2));
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+
+	pointer-events: none;
+	scale: 0.98;
+	transition: opacity 0.15s, scale 0.15s ease;
+
+	&-show {
+		pointer-events: all;
+		opacity: 1;
+		scale: 1;
+	}
+
+	&-arrow {
+		position: absolute;
+	}
+
+	@each $placement in $popup-arrow-placements {
+		&.#{$prefix-popup}-arrow-placement-#{$placement} {
+			@extend [data-popper-placement^='#{$placement}'];
+		}
+	}
+}

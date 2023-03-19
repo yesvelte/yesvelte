@@ -7,6 +7,7 @@
 	import CheckboxInline from './CheckboxInline.svelte'
 	import CheckboxDisabled from './CheckboxDisabled.svelte'
 	import CheckboxIndeterminate from './CheckboxIndeterminate.svelte'
+	import CheckboxEvents from './CheckboxEvents.svelte'
 </script>
 
 <Page title="Checkbox">
@@ -46,6 +47,12 @@
 	<Doc title="Disabled">
 		<Preview src="./CheckboxDisabled.svelte">
 			<CheckboxDisabled />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./CheckboxEvents.svelte">
+			<CheckboxEvents />
 		</Preview>
 	</Doc>
 

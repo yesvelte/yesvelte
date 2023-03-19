@@ -3,6 +3,7 @@
 	import FormFileUploadLayout from './FormFileUploadLayout.svelte'
 	import FormFileUploadDefault from './FormFileUploadDefault.svelte'
 	import FormFileUploadHint from './FormFileUploadHint.svelte'
+	import FormFileUploadEvents from './FormFileUploadEvents.svelte'
 </script>
 
 <Page title="FormFileUpload">
@@ -32,6 +33,12 @@
 			</p>
 			<Preview src="./FormFileUploadHint.svelte">
 				<FormFileUploadHint />
+			</Preview>
+		</Doc>
+
+		<Doc title="Events">
+			<Preview src="./FormFileUploadEvents.svelte">
+				<FormFileUploadEvents />
 			</Preview>
 		</Doc>
 

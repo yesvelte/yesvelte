@@ -52,6 +52,8 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] Pagination
 - [ ] FloatingButton (or adding floating action feature to exisiting Button component)
 - [ ] Toast
+- [x] Popover
+- [x] Tooltip
 
 #### New Form Components
 
@@ -77,9 +79,7 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 
 #### New Components
 
-- [ ] Tooltip
 - [ ] ProgressGroup
-- [ ] Popover
 - [ ] Treeview
 - [ ] Menu
 - [ ] Placeholder/Skeleton

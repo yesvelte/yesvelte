@@ -1,4 +1,5 @@
 export const base_path = '/docs'
+export const example_path = '/demo'
 
 export interface Navigation {
 	title?: string
@@ -228,6 +229,13 @@ export const navigations: Navigation[] = [
 					'The Pagination component enables the user to select a specific page from a range of pages.',
 			},
 			{
+				route: base_path + '/popover',
+				title: 'Popover',
+				icon: 'mdi:tooltip-image',
+				description:
+					'Popovers are used to provide additional information on elements where a simple tooltip is not sufficient',
+			},
+			{
 				route: base_path + '/progress',
 				title: 'Progress',
 				icon: 'vaadin:progressbar',
@@ -318,6 +326,13 @@ export const navigations: Navigation[] = [
 				title: 'Textarea',
 				icon: 'mdi:form-textarea',
 			},
+			{
+				route: base_path + '/tooltip',
+				title: 'Tooltip',
+				icon: 'mdi:tooltip-text',
+				description:
+					'Tooltips are text labels which appear when a user hovers over an interface element.',
+			},
 		],
 	},
 	{
@@ -386,6 +401,43 @@ export const navigations: Navigation[] = [
 				route: base_path + '/form/form-textarea',
 				title: 'FormTextarea',
 				icon: 'mdi:form-textarea',
+			},
+		],
+	},
+	{
+		title: 'Examples',
+		id: 'menu-examples',
+		children: [
+			{
+				route: example_path + '/authentication/sign-in',
+				title: 'Sign in',
+				icon: 'tabler:app-window',
+				description: 'A sample sign in page implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-in-illustration',
+				title: 'Sign in with illustration',
+				icon: 'tabler:app-window',
+				description:
+					'A sample sign in page with illustration implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-in-cover',
+				title: 'Sign in with cover',
+				icon: 'tabler:app-window',
+				description: 'A sample sign in page with cover image implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/sign-up',
+				title: 'Sign up',
+				icon: 'tabler:app-window',
+				description: 'A sample sign up page implemented with YeSvelte components.',
+			},
+			{
+				route: example_path + '/authentication/forgot-password',
+				title: 'Forgot password',
+				icon: 'tabler:app-window',
+				description: 'A sample forgot password page implemented with YeSvelte components.',
 			},
 		],
 	},
