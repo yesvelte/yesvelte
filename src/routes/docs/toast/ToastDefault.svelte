@@ -7,10 +7,8 @@
 		<Avatar size="xs">
 			<El tag="img" src="/images/avatar.png" />
 		</Avatar>
-		<strong class="me-auto ms-2">Mallory Hulme</strong>
-		<small>11 mins ago</small>
+		<El tag="strong" me="auto" ms="2">Mallory Hulme</El>
+		<El tag="small">11 mins ago</El>
 	</ToastHeader>
-	<ToastBody>
-		<div>Hello, world! This is a toast message.</div>
-	</ToastBody>
+	<ToastBody>Hello, world! This is a toast message.</ToastBody>
 </Toast>

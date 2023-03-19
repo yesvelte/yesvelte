@@ -1,10 +1,29 @@
 $toast-props: (
-	null: '.toast',
+	null: '.toast' '.m-3',
 	close: '.btn-close' '.ms-2',
 	body: '.toast-body',
 	header: '.toast-header',
 	show: '.show',
-	container: '.toast-container'
+	container: (
+		null: '.toast-container',
+		placement: (
+			top: (
+				null: '.top-0' '.start-50' '.translate-middle-x',
+				start: '.top-0' '.start-0',
+				end: '.top-0' '.end-0'
+			),
+			bottom: (
+				null: '.bottom-0' '.start-50' '.translate-middle-x',
+				start: '.bottom-0' '.start-0',
+				end: '.bottom-0' '.end-0'
+			),
+			middle: (
+				null: '.top-50' '.start-50' '.translate-middle',
+				start: '.top-50' '.start-0' '.translate-middle-y',
+				end: '.top-50' '.end-0' '.translate-middle-y'
+			)
+		)
+	)
 );
 
 .#{$prefix-toast} {

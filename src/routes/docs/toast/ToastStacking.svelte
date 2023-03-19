@@ -1,30 +1,58 @@
-<script>
-	import { ToastContainer, ToastBody, Toast, ToastHeader, Avatar, El } from 'yesvelte'
+<script lang="ts">
+	import {
+		Button,
+		ToastContainer,
+		ToastBody,
+		Toast,
+		ToastHeader,
+		FormSelect,
+		Avatar,
+		El,
+	} from 'yesvelte'
+
+	let placements = [
+		'top',
+		'bottom',
+		'middle',
+		'top-start',
+		'top-end',
+		'bottom-start',
+		'bottom-end',
+		'middle-start',
+		'middle-end',
+	]
+
+	let length = 0
+	function addToast() {
+		length += 1
+	}
+
+	let placement: any = 'top'
 </script>
 
-<ToastContainer>
-	<Toast show>
-		<ToastHeader>
-			<Avatar size="xs">
-				<El tag="img" src="/images/avatar.png" />
-			</Avatar>
-			<strong class="me-auto ms-2">Dunn Slane</strong>
-			<small>11 mins ago</small>
-		</ToastHeader>
-		<ToastBody>
-			<div>Hello, world! This is a toast message.</div>
-		</ToastBody>
-	</Toast>
-	<Toast show>
-		<ToastHeader>
-			<Avatar size="xs">
-				<El tag="img" src="/images/avatar.png" />
-			</Avatar>
-			<strong class="me-auto ms-2">Mallory Hulme</strong>
-			<small>7 mins ago</small>
-		</ToastHeader>
-		<ToastBody>
-			<div>This is another toast message.</div>
-		</ToastBody>
-	</Toast>
+<El row my="3">
+	<El col="3">
+		<Button color="primary" on:click={addToast}>Add Toast</Button>
+	</El>
+	<FormSelect
+		col="3"
+		ms="auto"
+		items={placements}
+		placeholder="Choose placement"
+		bind:value={placement} />
+</El>
+
+<ToastContainer {placement}>
+	{#each Array.from({ length }) as item}
+		<Toast show>
+			<ToastHeader>
+				<Avatar size="xs">
+					<El tag="img" src="/images/avatar.png" />
+				</Avatar>
+				<El fontWeight="bold" me="auto" ms="2">Mallory Hulme</El>
+				<El fontSize="4">7 mins ago</El>
+			</ToastHeader>
+			<ToastBody>This is another toast message.</ToastBody>
+		</Toast>
+	{/each}
 </ToastContainer>

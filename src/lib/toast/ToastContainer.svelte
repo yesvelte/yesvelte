@@ -5,8 +5,13 @@
 	type $$Props = ToastContainerProps
 
 	export let componentName: $$Props['componentName'] = 'toast-container'
+	export let placement: $$Props['placement'] = undefined
+
+	$: cssProps = {
+		placement
+	}
 </script>
 
-<El {...$$restProps} {componentName}>
+<El {...$$restProps} {componentName} {cssProps}>
 	<slot />
 </El>
