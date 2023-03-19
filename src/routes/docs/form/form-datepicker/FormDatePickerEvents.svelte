@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DatePicker } from 'yesvelte'
+	import { FormDatePicker } from 'yesvelte'
 
 	let value: Date
 	let changed: Date
@@ -14,5 +14,5 @@
 	}
 </script>
 
-<DatePicker on:click={onClick} bind:value on:changed={onChange} />
+<FormDatePicker label="Datepicker" on:click={onClick} bind:value on:changed={onChange} />
 <i>value: {value}, changed: {changed}, clicked: {clicked}</i>

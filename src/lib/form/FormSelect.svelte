@@ -2,6 +2,8 @@
 	import FormField from './FormField.svelte'
 	import type { FormSelectProps } from './Form.types'
 	import { Select, type SelectProps } from '../select'
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = FormSelectProps
 
@@ -17,6 +19,8 @@
 	export let state: $$Props['state'] = undefined
 	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
+
+	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let selectProps: SelectProps = {}
 	let props: $$Props = {}
@@ -34,6 +38,7 @@
 
 		props = {
 			componentName,
+			forwardEvents,
 			required,
 			label,
 			hint,

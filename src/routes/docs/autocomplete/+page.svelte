@@ -3,6 +3,7 @@
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
 	import AutocompleteDisabled from './AutocompleteDisabled.svelte'
+	import AutocompleteEvents from './AutocompleteEvents.svelte'
 	import AutocompleteKey from './AutocompleteKey.svelte'
 	import AutocompleteObject from './AutocompleteObject.svelte'
 	import AutocompletePlaceholder from './AutocompletePlaceholder.svelte'
@@ -30,6 +31,13 @@
 	<Doc title="Placeholder">
 		<Preview src="./AutocompletePlaceholder.svelte">
 			<AutocompletePlaceholder />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<p slot="description">Autocomplete only supports <code>changed</code> event.</p>
+		<Preview src="./AutocompleteEvents.svelte">
+			<AutocompleteEvents />
 		</Preview>
 	</Doc>
 

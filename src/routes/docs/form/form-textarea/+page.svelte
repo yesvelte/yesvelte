@@ -4,6 +4,7 @@
 	import FormTextareaDefault from './FormTextareaDefault.svelte'
 	import FormTextareaHint from './FormTextareaHint.svelte'
 	import FormTextareaState from './FormTextareaState.svelte'
+	import FormTextareaEvents from './FormTextareaEvents.svelte'
 </script>
 
 <Page title="FormTextarea">
@@ -26,6 +27,12 @@
 		</p>
 		<Preview src="./FormTextareaHint.svelte">
 			<FormTextareaHint />
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./FormTextareaEvents.svelte">
+			<FormTextareaEvents />
 		</Preview>
 	</Doc>
 

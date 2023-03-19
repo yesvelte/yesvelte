@@ -2,6 +2,7 @@
 	import { Page, Doc, Preview } from '$components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
+	import FormAutocompleteEvents from './FormAutocompleteEvents.svelte'
 	import FormAutocompleteKey from './FormAutocompleteKey.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
@@ -62,6 +63,13 @@
 			<FormAutocompleteStates />
 		</Preview>
 	</Doc>
+
+	<!-- <Doc title="Events">
+		<p slot="description">FormAutocomplete only supports <code>changed</code> event.</p>
+		<Preview src="./FormAutocompleteEvents.svelte">
+			<FormAutocompleteEvents />
+		</Preview>
+	</Doc> -->
 
 	<Doc
 		title="Hint/Validation Message"
