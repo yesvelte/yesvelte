@@ -15,7 +15,7 @@
 	export let description: $$Props['description'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let name: $$Props['name'] = undefined
-	export let text: $$Props['text'] = undefined
+	export let label: $$Props['label'] = undefined
 	export let value: $$Props['value'] = false
 	export let reverse: $$Props['reverse'] = false
 	export let checked: $$Props['checked'] = false
@@ -41,8 +41,8 @@
 			tag,
 			checked,
 			componentName,
+      label,
 			forwardEvents,
-			text,
 			role,
 			disabled,
 			type,
@@ -53,10 +53,12 @@
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
 	<El bind:id {...$$restProps} {cssProps} {...props} on:change={onChange} on:change />
-	{#if text || $$slots['default']}
+	{#if label || $$slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			<slot>
-				{text}
+				{#if label}
+					{label}
+				{/if}
 			</slot>
 		</Label>
 	{/if}
