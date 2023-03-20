@@ -3,6 +3,7 @@
 	import PaginationDefault from './PaginationDefault.svelte'
 	import PaginationHref from './PaginationHref.svelte'
 	import PaginationProps from './PaginationProps.svelte'
+	import PaginationSlots from './PaginationSlots.svelte'
 </script>
 
 <Page title="Pagination">
@@ -25,6 +26,12 @@
 		<p slot="description" />
 		<Preview src="./PaginationProps.svelte">
 			<PaginationProps />
+		</Preview>
+	</Doc>
+	<Doc title="Custom Slots">
+		<p slot="description" />
+		<Preview src="./PaginationSlots.svelte">
+			<PaginationSlots />
 		</Preview>
 	</Doc>
 </Page>

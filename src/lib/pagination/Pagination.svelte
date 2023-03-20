@@ -26,29 +26,39 @@
 	<slot>
 		{#if hasFirst}
 			<PaginationItem disabled={value == firstPage} on:click={() => (value = firstPage)}>
-				<Icon name="chevrons-left" />
+				<slot name="first">
+					<Icon name="chevrons-left" />
+				</slot>
 			</PaginationItem>
 		{/if}
 		{#if hasPrev}
 			<PaginationItem disabled={value == 1} on:click={() => (value -= 1)}>
-				<Icon name="chevron-left" />
+				<slot name="prev">
+					<Icon name="chevron-left" />
+				</slot>
 			</PaginationItem>
 		{/if}
 
 		{#each pages as page}
 			<PaginationItem active={value === page} on:click={() => (value = page)}>
-				{page}
+				<slot name="page" {page}>
+					{page}
+				</slot>
 			</PaginationItem>
 		{/each}
 
 		{#if hasNext}
 			<PaginationItem disabled={value == lastPage} on:click={() => (value += 1)}>
-				<Icon name="chevron-right" />
+				<slot name="next">
+					<Icon name="chevron-right" />
+				</slot>
 			</PaginationItem>
 		{/if}
 		{#if hasLast}
 			<PaginationItem disabled={value == lastPage} on:click={() => (value = lastPage)}>
-				<Icon name="chevrons-right" />
+				<slot name="last">
+					<Icon name="chevrons-right" />
+				</slot>
 			</PaginationItem>
 		{/if}
 	</slot>
