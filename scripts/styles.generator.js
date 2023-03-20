@@ -31,13 +31,13 @@ function compile(file) {
 	return css
 }
 
-const prefix = '.y-';
+const prefixes = ['.y-', '.noUi-'];
 
 async function clean(css) {
 	return postcss([
 		postcssFilterRules({ // clean rules
 			filter: (selector, parts) => {
-				return selector.startsWith(prefix) || !selector.startsWith('.')
+				return prefixes.some(prefix => selector.startsWith(prefix)) || !selector.startsWith('.')
 			}
 		}),
 		cssNano({ preset: 'default' }) // minify

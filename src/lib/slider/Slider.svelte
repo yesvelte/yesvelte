@@ -45,6 +45,7 @@
 			tooltips: knobs.map((knob) => knob.tooltip ?? false),
 			connect: [connect ?? false, ...knobs.map((knob) => knob.connect ?? false)],
 			step,
+			// cssClasses, TODO: update class names and scss file.
 			range: {
 				min: min ?? 0,
 				max: max ?? 100,
