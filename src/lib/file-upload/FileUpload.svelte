@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FileUploadProps, FileUploadWrapperProps } from './FileUpload.types'
 
@@ -18,7 +16,7 @@
 
 	let element: HTMLInputElement
 
-	let props: $$Props = { componentName, placeholder, disabled, forwardEvents }
+	let props: $$Props = { componentName, placeholder, disabled }
 	let cssProps: $$Props = { state }
 	let wrapperCssProps: FileUploadWrapperProps = { size }
 

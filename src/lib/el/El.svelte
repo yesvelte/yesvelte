@@ -24,7 +24,7 @@
 	export let ariaLabel: $$Props['aria-label'] = undefined
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
-	
+
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}
@@ -353,13 +353,49 @@
 </script>
 
 {#if $$slots.default}
-	<svelte:element this={tag} on:click on:change on:focus on:blur on:input bind:this={element} {...$$restProps} {...elProps}>
+	<svelte:element
+		this={tag}
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}>
 		<slot />
 	</svelte:element>
 {:else if tag === 'input'}
-	<input on:click on:change on:focus on:blur on:input bind:this={element} {...$$restProps} {...elProps} bind:value />
+	<input
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}
+		bind:value />
 {:else if tag === 'textarea'}
-	<textarea on:click on:change on:focus on:blur on:input bind:this={element} {...$$restProps} {...elProps} bind:value />
+	<textarea
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}
+		bind:value />
 {:else}
-	<svelte:element this={tag} on:click on:change on:focus on:blur on:input bind:this={element} {...$$restProps} {...elProps} />
+	<svelte:element
+		this={tag}
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps} />
 {/if}
