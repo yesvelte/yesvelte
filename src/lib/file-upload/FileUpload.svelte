@@ -15,7 +15,6 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let files: $$Props['files'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLInputElement
 
@@ -35,7 +34,6 @@
 
 		props = {
 			componentName,
-			forwardEvents,
 			placeholder,
 			disabled,
 			accept,
@@ -47,7 +45,14 @@
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={wrapperCssProps}>
+<El
+	componentName="{componentName}-wrapper"
+	on:click
+	on:change
+	on:input
+	on:focus
+	on:blur
+	cssProps={wrapperCssProps}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
