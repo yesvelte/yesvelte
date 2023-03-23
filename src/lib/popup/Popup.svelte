@@ -108,7 +108,7 @@
 	async function bind() {
 		if (window) {
 			// this code is to prevent error in Svelte REPL
-			window.process = { env: { NODE_ENV: 'production' } }
+			window.process = { env: { NODE_ENV: 'production' } } as any
 		}
 
 		prevTarget = targetEl
