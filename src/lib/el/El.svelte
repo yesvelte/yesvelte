@@ -25,8 +25,9 @@
 	export let ariaLabel: $$Props['aria-label'] = undefined
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
-	export let  forwardEvents = forwardEventsBuilder(get_current_component())
-	
+	export let show: $$Props['show'] = undefined
+	export let forwardEvents = forwardEventsBuilder(get_current_component())
+
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}
@@ -340,6 +341,8 @@
 
 		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
 
+		classes += animateClasses || ''
+
 		elProps = {
 			id,
 			class: classes,
@@ -352,6 +355,65 @@
 			style,
 		}
 	}
+
+	//#region animation
+	let animateClasses: string | undefined
+	let animateTimeout: NodeJS.Timeout
+	$: animate(show)
+	function animate(show: any) {
+		if (!element) return
+
+		if (show == undefined) return
+
+		function change(state: string) {
+			clearTimeout(animateTimeout)
+			animateClasses = ` y-${componentName}-show-${state}`
+		}
+
+		function duration() {
+			try {
+				const style = window.getComputedStyle(element!)
+
+				const duration = [
+					style.animationDelay,
+					style.transitionDelay,
+					style.animationDuration,
+					style.transitionDuration,
+				].map((item = '0s') => parseFloat(item) * (/ms/g.test(item) ? 1 : 1000))
+
+				return Math.max(...duration.slice(0, 2)) + Math.max(...duration.slice(2))
+			} catch {
+				return 0
+			}
+		}
+
+		function next(callback: Function) {
+			requestAnimationFrame(() => setTimeout(() => callback(), 5))
+		}
+
+		if (show) {
+			next(() => {
+				change('open')
+				next(() => {
+					change('opening')
+					next(() => {
+						animateTimeout = setTimeout(() => change('opened'), duration())
+					})
+				})
+			})
+		} else {
+			next(() => {
+				change('close')
+				next(() => {
+					change('closing')
+					next(() => {
+						animateTimeout = setTimeout(() => change('closed'), duration())
+					})
+				})
+			})
+		}
+	}
+	//#endregion
 </script>
 
 {#if $$slots.default}
