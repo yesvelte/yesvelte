@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { SelectProps } from './Select.types'
 
@@ -19,7 +17,6 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -29,7 +26,6 @@
 
 		props = {
 			componentName,
-			forwardEvents,
 			value,
 			disabled,
 			placeholder,
@@ -51,7 +47,18 @@
 	}
 </script>
 
-<El tag="select" bind:value {...$$restProps} {...props} {cssProps} on:change={onChange}>
+<El
+	tag="select"
+	on:click
+	on:change
+	on:input
+	on:focus
+	on:blur
+	bind:value
+	{...$$restProps}
+	{...props}
+	{cssProps}
+	on:change={onChange}>
 	{#if items}
 		{#if value == undefined}
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
