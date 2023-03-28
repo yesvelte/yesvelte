@@ -10,7 +10,6 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let ghost: $$Props['ghost'] = undefined
 	export let href: $$Props['href'] = undefined
-	export let icon: $$Props['icon'] = undefined
 	export let link: $$Props['link'] = undefined
 	export let loading: $$Props['loading'] = undefined
 	export let outline: $$Props['outline'] = undefined
@@ -19,8 +18,13 @@
 	export let target: $$Props['target'] = undefined
 	export let type: $$Props['type'] = undefined
 
-	let cssProps: $$Props = {}
+	let cssProps: any = {}
 	let props: $$Props = {}
+
+	let element: HTMLElement
+
+	$: icon = !(element?.textContent ?? true)
+
 	$: {
 		cssProps = {
 			active,
@@ -45,6 +49,6 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...props} on:click>
+<El bind:element {...$$restProps} {cssProps} {...props} on:click>
 	<slot />
 </El>

@@ -8,18 +8,20 @@
 
 	export let componentName: $$Props['componentName'] = 'tab-item'
 	export let tag: $$Props['tag'] = 'li'
-	export let icon: $$Props['icon'] = undefined;
 	export let active: $$Props['active'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 
 	const tab = {}
 	const { registerTab, selectTab, selectedTab } = getContext<TabsContext>(TABS)
 
+	let element: HTMLElement
+
 	registerTab(tab)
 
 	$: active ? selectTab(tab) : null
+	$: icon = !(element?.textContent ?? true)
 
-	let cssProps: TabItemProps = {}
+	let cssProps: any = {}
 	$: {
 		cssProps = {
 			disabled,
@@ -30,7 +32,7 @@
 </script>
 
 <El {...$$restProps} {tag} {componentName} on:click={() => (!disabled ? selectTab(tab) : null)}>
-	<El tag="button" componentName="{componentName}-link" {cssProps}>
+	<El bind:element tag="button" componentName="{componentName}-link" {cssProps}>
 		<slot />
 	</El>
 </El>

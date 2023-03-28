@@ -3,9 +3,9 @@
 </script>
 
 <ButtonGroup col="auto">
-	<Button icon><Icon name="bold" /></Button>
-	<Button icon><Icon name="italic" /></Button>
-	<Button icon><Icon name="link" /></Button>
-	<Button icon><Icon name="heart" /></Button>
-	<Button icon><Icon name="underline" /></Button>
+	<Button><Icon name="bold" /></Button>
+	<Button><Icon name="italic" /></Button>
+	<Button><Icon name="link" /></Button>
+	<Button><Icon name="heart" /></Button>
+	<Button><Icon name="underline" /></Button>
 </ButtonGroup>
