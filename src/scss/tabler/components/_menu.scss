@@ -1,7 +1,42 @@
-$menu-props: (
-	null: '.dropdown-menu'
+// $menu-props: (
+// 	null: '.dropdown-menu'
+// );
+
+// .#{$prefix-menu} {
+// 	@include apply-props($menu-props);
+// }
+
+$menu-item-props: (
+	null: '.nav-link',
+	wrapper: (
+		null: '.nav-item',
+		active: '.active',
+		disabled: '.disabled'
+	),
+	end: '.ms-auto',
+	dropdown: '.dropdown-toggle',
+	icon: '.nav-link-icon',
+	title: '.nav-link-title'
 );
 
 .#{$prefix-menu} {
-	@include apply-props($menu-props);
+	&.#{$prefix-menu}-navbar {
+		@extend .navbar-nav;
+	}
+
+	&.#{$prefix-menu}-dropdown {
+		@extend .dropdown-menu;
+	}
+
+	&.#{$prefix-popup}-show {
+		@extend .show;
+	}
+
+	&-item {
+		@include apply-props($menu-item-props);
+
+		&-title {
+			text-decoration: none;
+		}
+	}
 }
