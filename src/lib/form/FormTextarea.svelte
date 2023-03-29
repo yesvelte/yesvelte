@@ -2,8 +2,6 @@
 	import FormField from './FormField.svelte'
 	import { Textarea } from '../textarea'
 	import type { FormTextAreaProps } from './Form.types'
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = FormTextAreaProps
 
@@ -27,7 +25,6 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let cols: $$Props['cols'] = undefined
 
-	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let props: $$Props = {}
 	let teaxtareaProps: $$Props = {}
@@ -52,7 +49,6 @@
 			state,
 			borderRounded,
 			borderFlush,
-			forwardEvents,
 			rows,
 			name,
 			minlength,
@@ -64,6 +60,14 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Textarea {...teaxtareaProps} bind:value />
+	<Textarea
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur 
+		{...teaxtareaProps} 
+		bind:value 
+	/>
 	<slot name="hint" />
 </FormField>

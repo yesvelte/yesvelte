@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { onMount } from 'svelte'
-	import { forwardEventsBuilder } from '../internal'
 	import { El } from '../el'
 	import type { InputProps, InputWrapperProps } from './Input.types'
 
@@ -21,7 +19,6 @@
 	export let type: $$Props['type'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let name: $$Props['name'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -67,7 +64,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" bind:value bind:element {forwardEvents} {...$$restProps} {...props} {cssProps} />
+	<El
+		tag="input"
+		bind:value
+		bind:element
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...$$restProps}
+		{...props}
+		{cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

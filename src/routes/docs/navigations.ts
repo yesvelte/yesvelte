@@ -327,6 +327,13 @@ export const navigations: Navigation[] = [
 				icon: 'mdi:form-textarea',
 			},
 			{
+				route: base_path + '/toast',
+				title: 'Toast',
+				icon: 'mdi:alert-circle-outline',
+				description:
+					'Toasts are lightweight alert boxes which display for a few seconds after a user has taken an action, to inform them of the state or outcome.',
+			},
+			{
 				route: base_path + '/tooltip',
 				title: 'Tooltip',
 				icon: 'mdi:tooltip-text',

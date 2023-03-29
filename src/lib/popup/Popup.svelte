@@ -106,6 +106,11 @@
 	}
 
 	async function bind() {
+		if (window) {
+			// this code is to prevent error in Svelte REPL
+			window.process = { env: { NODE_ENV: 'production' } }
+		}
+
 		prevTarget = targetEl
 
 		if (typeof window !== 'undefined') document.addEventListener('click', onOutside)

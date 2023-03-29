@@ -5,8 +5,7 @@
 </script>
 
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-	import { classname, forwardEventsBuilder } from '../internal'
+	import { classname } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
 
 	type $$Props = Partial<ElProps>
@@ -25,8 +24,7 @@
 	export let ariaLabel: $$Props['aria-label'] = undefined
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
-	export let  forwardEvents = forwardEventsBuilder(get_current_component())
-	
+
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}
@@ -355,13 +353,49 @@
 </script>
 
 {#if $$slots.default}
-	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...elProps}>
+	<svelte:element
+		this={tag}
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}>
 		<slot />
 	</svelte:element>
 {:else if tag === 'input'}
-	<input use:forwardEvents bind:this={element} {...$$restProps} {...elProps} bind:value />
+	<input
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}
+		bind:value />
 {:else if tag === 'textarea'}
-	<textarea use:forwardEvents bind:this={element} {...$$restProps} {...elProps} bind:value />
+	<textarea
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps}
+		bind:value />
 {:else}
-	<svelte:element this={tag} use:forwardEvents bind:this={element} {...$$restProps} {...elProps} />
+	<svelte:element
+		this={tag}
+		on:click
+		on:change
+		on:focus
+		on:blur
+		on:input
+		bind:this={element}
+		{...$$restProps}
+		{...elProps} />
 {/if}

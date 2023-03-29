@@ -76,7 +76,7 @@
 	</p></Page>
 
 <style>
-	.custom-class > :global(.u-table-parent) {
+	.custom-class > :global(.y-table-parent) {
 		overflow-x: auto;
 	}
 </style>

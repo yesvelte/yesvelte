@@ -21,7 +21,7 @@ $card-stamp-sizes: (
 
 	@each $key, $value in $card-stamp-sizes {
 		&-size-#{$key} {
-			--u-stamp-size: #{$value};
+			--#{$prefix}stamp-size: #{$value};
 		}
 	}
 
@@ -41,7 +41,7 @@ $card-stamp-sizes: (
 
 		.#{$prefix}icon {
 			transform: rotate(-10deg);
-			left: calc(var(--u-stamp-size) * -0.25);
+			left: calc(var(--#{$prefix}stamp-size) * -0.25);
 		}
 	}
 
@@ -52,8 +52,8 @@ $card-stamp-sizes: (
 
 		.#{$prefix}icon {
 			top: auto;
-			left: calc(var(--u-stamp-size) * -0.25);
-			bottom: calc(var(--u-stamp-size) * -0.25);
+			left: calc(var(--#{$prefix}stamp-size) * -0.25);
+			bottom: calc(var(--#{$prefix}stamp-size) * -0.25);
 		}
 	}
 
@@ -64,7 +64,7 @@ $card-stamp-sizes: (
 
 		.#{$prefix}icon {
 			transform: rotate(-10deg);
-			top: calc(100% - (var(--u-stamp-size) * 0.75));
+			top: calc(100% - (var(--#{$prefix}stamp-size) * 0.75));
 		}
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.76",
+	"version": "0.0.2-next.83",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -19,7 +19,7 @@
 	"homepage": "https://www.yesvelte.com",
 	"bugs": {
 		"url": "https://github.com/yesvelte/yesvelte/issues",
-		"email": "ap@momentaj.io"
+		"email": "ap@momentaj.com"
 	},
 	"repository": {
 		"type": "git",
