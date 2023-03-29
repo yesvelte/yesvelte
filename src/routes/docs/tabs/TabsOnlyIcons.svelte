@@ -16,13 +16,13 @@
 	<Tabs>
 		<CardHeader>
 			<TabList>
-				<TabItem icon active>
+				<TabItem active>
 					<Icon name="home" />
 				</TabItem>
-				<TabItem icon>
+				<TabItem>
 					<Icon name="user" />
 				</TabItem>
-				<TabItem icon ms="auto">
+				<TabItem ms="auto">
 					<Icon name="settings" />
 				</TabItem>
 			</TabList>

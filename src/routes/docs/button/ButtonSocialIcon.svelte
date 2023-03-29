@@ -2,42 +2,42 @@
 	import { Button, Icon } from 'yesvelte'
 </script>
 
-<Button icon color="facebook">
+<Button color="facebook">
 	<Icon name="brand-facebook" />
 </Button>
-<Button icon color="twitter">
+<Button color="twitter">
 	<Icon name="brand-twitter" />
 </Button>
-<Button icon color="google">
+<Button color="google">
 	<Icon name="brand-google" />
 </Button>
-<Button icon color="youtube">
+<Button color="youtube">
 	<Icon name="brand-youtube" />
 </Button>
-<Button icon color="vimeo">
+<Button color="vimeo">
 	<Icon name="brand-vimeo" />
 </Button>
-<Button icon color="dribbble">
+<Button color="dribbble">
 	<Icon name="brand-dribbble" />
 </Button>
-<Button icon color="github">
+<Button color="github">
 	<Icon name="brand-github" />
 </Button>
-<Button icon color="instagram">
+<Button color="instagram">
 	<Icon name="brand-instagram" />
 </Button>
-<Button icon color="pinterest">
+<Button color="pinterest">
 	<Icon name="brand-pinterest" />
 </Button>
-<Button icon color="vk">
+<Button color="vk">
 	<Icon name="brand-vk" />
 </Button>
-<Button icon color="rss">
+<Button color="rss">
 	<Icon name="rss" />
 </Button>
-<Button icon color="flickr">
+<Button color="flickr">
 	<Icon name="brand-flickr" />
 </Button>
-<Button icon color="bitbucket">
+<Button color="bitbucket">
 	<Icon name="brand-bitbucket" />
 </Button>
