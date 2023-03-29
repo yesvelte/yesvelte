@@ -288,13 +288,13 @@
 					</FormField>
 					<FormField label="Toolbar">
 						<ButtonGroup col="12">
-							<Button icon><Icon name="bold" /></Button>
-							<Button icon><Icon name="italic" /></Button>
-							<Button icon><Icon name="link" /></Button>
-							<Button icon><Icon name="copy" /></Button>
-							<Button icon><Icon name="cut" /></Button>
-							<Button icon><Icon name="file-plus" /></Button>
-							<Button icon><Icon name="file-minus" /></Button>
+							<Button><Icon name="bold" /></Button>
+							<Button><Icon name="italic" /></Button>
+							<Button><Icon name="link" /></Button>
+							<Button><Icon name="copy" /></Button>
+							<Button><Icon name="cut" /></Button>
+							<Button><Icon name="file-plus" /></Button>
+							<Button><Icon name="file-minus" /></Button>
 						</ButtonGroup>
 					</FormField>
 				</El>
