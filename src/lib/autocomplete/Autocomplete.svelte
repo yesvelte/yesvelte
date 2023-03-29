@@ -77,8 +77,7 @@
 		}
 
 		if (key == 'value') {
-			const index = items?.findIndex((item) => item === value)
-			instance.setValue(`${index || ''}`, true)
+			instance.setValue(`${value || ''}`, true)
 		}
 	}
 
@@ -90,7 +89,7 @@
 <El tag="select" bind:element {name} {...$$restProps} {...props}>
 	{#each items || [] as item, index (getKey(item))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-		<option value={getKey(item)} selected={value === getKey(item)}>
+		<option value={getKey(item)} selected={value == getKey(item)}>
 			<slot {index} {item}>{item}</slot>
 		</option>
 	{/each}
