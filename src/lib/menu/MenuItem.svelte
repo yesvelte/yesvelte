@@ -9,7 +9,6 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let active: $$Props['active'] = undefined
 	export let divider: $$Props['divider'] = undefined
-	export let dropdown: $$Props['dropdown'] = undefined
 	export let icon: $$Props['icon'] = undefined
 	export let title: $$Props['title'] = undefined
 
@@ -19,10 +18,11 @@
 		componentName: componentName + '-wrapper',
 	}
 
+	$: dropdown = $$slots['default'] && !$$slots['end']
 	$: cssProps = {
 		disabled,
-		active,
 		dropdown,
+		active,
 		divider,
 	}
 </script>

@@ -1,17 +1,8 @@
-// $menu-props: (
-// 	null: '.dropdown-menu'
-// );
-
-// .#{$prefix-menu} {
-// 	@include apply-props($menu-props);
-// }
-
 $menu-item-props: (
-	null: '.nav-link',
 	wrapper: (
-		null: '.nav-item',
 		active: '.active',
-		disabled: '.disabled'
+		disabled: '.disabled',
+		dropdown: '.dropdown'
 	),
 	end: '.ms-auto',
 	dropdown: '.dropdown-toggle',
@@ -19,24 +10,61 @@ $menu-item-props: (
 	title: '.nav-link-title'
 );
 
+$menu-navbar-props: (
+	null: '.navbar-nav',
+	item: (
+		null: '.nav-link',
+		wrapper: '.nav-item'
+	)
+);
+
+$menu-dropdown-props: (
+	null: '.dropdown-menu',
+	item: '.dropdown-item'
+);
+
 .#{$prefix-menu} {
-	&.#{$prefix-menu}-navbar {
-		@extend .navbar-nav;
-	}
-
-	&.#{$prefix-menu}-dropdown {
-		@extend .dropdown-menu;
-	}
-
 	&.#{$prefix-popup}-show {
 		@extend .show;
+	}
+
+	&-item-end {
+		.#{$prefix-badge} {
+			position: static !important;
+			transform: none !important;
+		}
 	}
 
 	&-item {
 		@include apply-props($menu-item-props);
 
+		cursor: pointer;
+
 		&-title {
 			text-decoration: none;
 		}
+	}
+}
+
+.#{$prefix-menu}-navbar {
+	@extend .navbar-nav;
+
+	.#{$prefix-menu}-item {
+		@extend .nav-link;
+	}
+	.#{$prefix-menu}-item-wrapper {
+		@extend .nav-item;
+	}
+}
+
+.#{$prefix-menu}-dropdown {
+	@extend .dropdown-menu;
+
+	.#{$prefix-menu}-navbar & {
+		width: 100% !important;
+	}
+
+	.#{$prefix-menu}-item {
+		@extend .dropdown-item;
 	}
 }

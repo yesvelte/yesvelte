@@ -323,6 +323,86 @@
 					<Menu>
 						<MenuItem title="Card" icon="user">
 							<Badge slot="end">New</Badge>
+							<Menu>
+								<MenuItem title="Card" icon="user">
+									<Badge slot="end">New</Badge>
+								</MenuItem>
+								<MenuItem title="Card" icon="user">
+									<Badge slot="end">New</Badge>
+								</MenuItem>
+								<MenuItem title="Card" icon="user">
+									<Badge slot="end">New</Badge>
+								</MenuItem>
+								<MenuItem title="Card" icon="user">
+									<Badge slot="end">New</Badge>
+								</MenuItem>
+								<MenuItem title="Card" icon="user">
+									<Badge slot="end">New</Badge>
+									<Menu>
+										<MenuItem title="Card" icon="user">
+											<Badge slot="end">New</Badge>
+										</MenuItem>
+										<MenuItem title="Card" icon="user">
+											<Badge slot="end">New</Badge>
+											<Menu>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+											</Menu>
+										</MenuItem>
+										<MenuItem title="Card" icon="user">
+											<Badge slot="end">New</Badge>
+										</MenuItem>
+										<MenuItem title="Card" icon="user">
+											<Badge slot="end">New</Badge>
+											<Menu>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+												<MenuItem title="Card" icon="user">
+													<Badge slot="end">New</Badge>
+												</MenuItem>
+											</Menu>
+										</MenuItem>
+										<MenuItem title="Card" icon="user">
+											<Badge slot="end">New</Badge>
+										</MenuItem>
+									</Menu>
+								</MenuItem>
+							</Menu>
+						</MenuItem>
+						<MenuItem title="Card" icon="user">
+							<Badge slot="end">New</Badge>
+						</MenuItem>
+						<MenuItem title="Card" icon="user">
+							<Badge slot="end">New</Badge>
+						</MenuItem>
+						<MenuItem title="Card" icon="user">
+							<Badge slot="end">New</Badge>
+						</MenuItem>
+						<MenuItem title="Card" icon="user">
+							<Badge slot="end">New</Badge>
 						</MenuItem>
 					</Menu>
 				</MenuItem>
