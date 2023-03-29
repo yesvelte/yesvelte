@@ -156,7 +156,7 @@
 			<El row>
 				<El colXl="4" colLg="12">
 					<Label>Static</Label>
-					<El>Input value</El>
+					<El mb="3">Input value</El>
 					<FormInput label="Text" placeholder="Input Placeholder" />
 					<FormInput label="Password" placeholder="Input Placeholder" type="password" />
 					<FormInput label="Disabled" disabled value="Well, she turned me into a newt." />
@@ -196,8 +196,8 @@
 						<Label slot="label">Input with help icon</Label>
 						<El d="flex">
 							<Input placeholder="Search for..." me="2" />
-							<El alignSelf="center"><Icon name="question-mark" /></El>
-							<Popover trigger="click">
+							<El alignSelf="center" class="form-help"><Icon name="question-mark" /></El>
+							<Popover trigger="click" placement="top">
 								<PopoverBody>
 									<p>
 										ZIP Code must be US or CDN format. You can use an extended ZIP+4 code to
@@ -297,6 +297,42 @@
 							<Button><Icon name="file-minus" /></Button>
 						</ButtonGroup>
 					</FormField>
+					<FormField label="Payment method">
+						<Radio name="payment" checked>
+							<span class="payment payment-visa me-1 mb-1" />
+							ending in <strong>7998</strong>
+						</Radio>
+						<Radio name="payment">
+							<span class="payment payment-master me-1" />
+							ending in <strong>7998</strong>
+						</Radio>
+						<Radio name="payment">
+							<span class="payment payment-paypal me-1" />
+							ending in <strong>7998</strong>
+						</Radio>
+					</FormField>
+					<FormField label="Project Manager">
+						<El alignItems="center" d="flex" mb="2">
+							<Checkbox checked />
+							<Avatar ms="2"><img src="/images/avatars/1.jpg" /></Avatar>
+							<El tag="span" mx="2">John Smith</El>
+						</El>
+						<El alignItems="center" d="flex" mb="2">
+							<Checkbox />
+							<Avatar ms="2"><img src="/images/avatars/3.jpg" /></Avatar>
+							<El tag="span" mx="2">Jack Doe</El>
+						</El>
+						<El alignItems="center" d="flex" mb="2">
+							<Checkbox />
+							<Avatar ms="2"><img src="/images/avatars/2.jpg" /></Avatar>
+							<El tag="span" mx="2">Jane Smith</El>
+						</El>
+						<El alignItems="center" d="flex" mb="2">
+							<Checkbox />
+							<Avatar ms="2"><img src="/images/avatars/6.jpg" /></Avatar>
+							<El tag="span" mx="2">James Edwards</El>
+						</El>
+					</FormField>
 				</El>
 				<El colXl="4" colLg="12">
 					<FormRadioGroup label="Radios" bind:value={radioValue} items={radioItems} />
@@ -357,18 +393,10 @@
 						</FormField>
 					</FormField>
 					<FormFileUpload label="Custom File Input" />
-					<FormField label="Date of birth">
-						<El row>
-							<El col="5">
-								<FormSelect bind:value={selectedDate.month} items={monthItems} />
-							</El>
-							<El col="3">
-								<FormSelect bind:value={selectedDate.day} items={dayItems} />
-							</El>
-							<El col="4">
-								<FormSelect bind:value={selectedDate.year} items={yearItems} />
-							</El>
-						</El>
+					<FormField label="Date of birth" row g="2">
+						<FormSelect col="5" bind:value={selectedDate.month} items={monthItems} />
+						<FormSelect col="3" bind:value={selectedDate.day} items={dayItems} />
+						<FormSelect col="4" bind:value={selectedDate.year} items={yearItems} />
 					</FormField>
 					<FormInput label="Text mask" mask="datetime" maskOptions={dateOptions} />
 					<FormInput label="Telephone mask" mask="(999) 999-9999" {maskOptions} />
@@ -401,24 +429,22 @@
 							<ProgressBar color="success" indeterminate />
 						</Progress>
 					</FormField>
-					<FormField label="Form buttons">
-						<El row>
-							<El col="6" pe="2">
-								<Button col="12">
-									<Icon name="brand-github" />
-									Login with Github
-								</Button>
-							</El>
-							<El col="6" ps="2">
-								<Button col="12">
-									<Icon name="brand-twitter" color="twitter" />
-									Login with Twitter
-								</Button>
-							</El>
+					<FormField row label="Form buttons" g="2">
+						<El col="6">
+							<Button col="12">
+								<Icon name="brand-github" />
+								Login with Github
+							</Button>
+						</El>
+						<El col="6">
+							<Button col="12">
+								<Icon name="brand-twitter" color="twitter" />
+								Login with Twitter
+							</Button>
 						</El>
 					</FormField>
 					<FormAutocomplete items={tags} label="Tags input" />
-					<FormAutocomplete items={itemsWithImage} label="Select with avatars" let:item>
+					<FormAutocomplete key="name" items={itemsWithImage} label="Select with avatars" let:item>
 						<El>
 							<Avatar>
 								<img src={item.img} alt="" />
@@ -540,7 +566,7 @@
 				<CardBody>
 					<El row>
 						<El col="auto">
-							<Avatar size="md"><img src="/images/avatars/2.jpg" /></Avatar>
+							<Avatar size="md"><img src="/images/avatars/6.jpg" /></Avatar>
 						</El>
 						<El col>
 							<FormInput label="Email-Address" placeholder="your-email@domain.com" />
@@ -712,3 +738,45 @@ But that's the difference in our opinions." />
 		</El>
 	</El>
 </El>
+
+<style>
+	.form-help {
+		display: inline-flex;
+		font-weight: var(--tblr-font-weight-bold);
+		align-items: center;
+		justify-content: center;
+		width: 1.125rem;
+		height: 1.125rem;
+		font-size: 0.75rem;
+		color: var(--tblr-muted);
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background: var(--tblr-gray-100);
+		border-radius: 100rem;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	.payment {
+		width: 2.49999rem;
+		height: 1.5rem;
+		display: inline-block;
+		background: no-repeat center/100% 100%;
+		vertical-align: middle;
+		font-style: normal;
+		box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+		border-radius: 2px;
+	}
+	.payment-visa {
+		background-image: url('/images/visa.svg');
+	}
+	.payment-master {
+		background-image: url('/images/mastercard.svg');
+	}
+	.payment-paypal {
+		background-image: url('/images/paypal.svg');
+	}
+</style>
