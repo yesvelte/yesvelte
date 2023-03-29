@@ -13,5 +13,6 @@ export interface PopupProps extends Partial<ElProps> {
 	placement?: Placement | AlignedPlacement
 	trigger?: 'click' | 'hover' | 'focus'
 	popupOffset?: number
+	persistent?: boolean
 	arrow?: boolean
 }

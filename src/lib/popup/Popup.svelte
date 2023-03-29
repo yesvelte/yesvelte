@@ -16,6 +16,7 @@
 	export let target: $$Props['target'] = undefined
 	export let placement: $$Props['placement'] = undefined
 	export let trigger: $$Props['trigger'] = undefined
+	export let persistent: $$Props['persistent'] = undefined
 	export let popupOffset: $$Props['popupOffset'] = undefined
 	export let arrow: boolean = false
 	export let componentName: string = 'popup'
@@ -88,6 +89,7 @@
 	}
 
 	function onOutside(event: Event) {
+		if (persistent) return
 		if (!show) return
 		if (event.composedPath().some((path) => path == popupEl || path == targetEl)) {
 			return

@@ -26,7 +26,7 @@
 </script>
 
 {#if insideMenu}
-	<Popup {...$$restProps} trigger="click" placement="right-start" {...props} {cssProps}>
+	<Popup {...$$restProps} persistent trigger="click" placement="right-start" {...props} {cssProps}>
 		<slot />
 	</Popup>
 {:else}
