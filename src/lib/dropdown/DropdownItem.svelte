@@ -14,7 +14,6 @@
 	export let href: $$Props['href'] = undefined
 
 	$: cssProps = {
-		item: !divider && !header,
 		active,
 		disabled,
 		header,
@@ -31,12 +30,16 @@
 	$: props = {
 		componentName,
 		href,
-		tag: header ? 'h6' : 'a',
+		tag: 'a',
 	}
 </script>
 
 {#if divider}
 	<El tag="hr" componentName="{componentName}-divider" />
+{:else if header}
+	<El tag="h6" componentName="{componentName}-header">
+		<slot />
+	</El>
 {:else}
 	<El {...$$restProps} {...wrapperProps}>
 		<El {...props} {cssProps} on:click>

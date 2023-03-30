@@ -9,7 +9,7 @@ $dropdown-props: (
 		top: '.dropup'
 	),
 	item: (
-		item: '.dropdown-item',
+		null: '.dropdown-item',
 		active: '.active',
 		disabled: '.disabled',
 		divider: '.dropdown-divider',
@@ -20,6 +20,12 @@ $dropdown-props: (
 .#{$prefix-dropdown} {
 	@include apply-props($dropdown-props);
 	display: inline-block;
+
+	&-item {
+		display: inline-flex;
+		@extend .gap-2;
+	}
+
 	&-target {
 		display: contents;
 
