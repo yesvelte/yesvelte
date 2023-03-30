@@ -9,8 +9,8 @@
 		{ id: 'fifth', value: 'Fifth Item' },
 	]
 
-	let value = items[2].id
+	let value = items[2]
 </script>
 
-<Autocomplete {items} key="id" bind:value let:item let:index>{index} - {item.value}</Autocomplete>
+<Autocomplete {items} bind:value let:item let:index>{index} - {item.value}</Autocomplete>
 <i>value: {JSON.stringify(value)}</i>

@@ -49,8 +49,8 @@
 
 	<Doc title="Complex Items">
 		<p slot="description">
-			You can have complex objects as item and you need to use <code>itemKey</code> and
-			<code>itemValue</code> props to extract the data that Autocomplete needs.
+			You can have complex objects as item and using <code>key</code> prop you can extract the data that
+			You need from Autocomplete.
 		</p>
 		<Preview src="./AutocompleteObject.svelte">
 			<AutocompleteObject />

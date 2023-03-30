@@ -26,6 +26,7 @@
 	let loaded = false
 	let props: $$Props
 	let settings: Partial<TomSettings>
+	let indexOfValue: number | undefined = undefined
 	$: {
 		props = {
 			componentName,
@@ -38,7 +39,8 @@
 			dropdownClass: classname(componentName + '-dropdown'),
 			optionClass: classname(componentName + '-option'),
 			onChange(newValue) {
-				value = newValue
+				value = getKey(items[newValue])
+
 				dispatch('changed', value)
 			},
 			onInitialize() {
@@ -48,9 +50,11 @@
 
 		disabled ? instance?.disable() : instance?.enable()
 
-		instance && update('items', items)
-		instance && update('value', value)
+		indexOfValue = items!.findIndex((item) => getKey(item) == value)
 	}
+
+	$: instance && update('items', items)
+	$: instance && update('value', value)
 
 	function getKey(item: any) {
 		if (!key) return item
@@ -77,7 +81,7 @@
 		}
 
 		if (key == 'value') {
-			instance.setValue(`${value || ''}`, true)
+			requestAnimationFrame(() => instance.setValue(`${indexOfValue ?? ''}`, true))
 		}
 	}
 
@@ -89,7 +93,7 @@
 <El tag="select" bind:element {name} {...$$restProps} {...props}>
 	{#each items || [] as item, index (getKey(item))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-		<option value={getKey(item)} selected={value == getKey(item)}>
+		<option value={index} selected={indexOfValue == index}>
 			<slot {index} {item}>{item}</slot>
 		</option>
 	{/each}
