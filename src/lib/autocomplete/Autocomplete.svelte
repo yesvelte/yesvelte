@@ -2,7 +2,7 @@
 	import { onDestroy, onMount } from 'svelte'
 	import { createEventDispatcher } from 'svelte/internal'
 	import TomSelect from 'tom-select'
-	import type { RecursivePartial, TomSettings } from 'tom-select/dist/types/types'
+	import type { RecursivePartial, TomSettings, TomTemplates } from 'tom-select/dist/types/types'
 	import { El } from '../el'
 	import { classname } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
@@ -18,8 +18,12 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let _slots: Record<string, boolean> = $$slots
 
 	const dispatch = createEventDispatcher()
+
+	let customOptions: HTMLElement[] = []
+	let customItems: HTMLElement[] = []
 
 	let element: HTMLSelectElement
 	let instance: TomSelect
@@ -47,6 +51,18 @@
 				loaded = true
 			},
 		} as Partial<TomSettings>
+
+		if (_slots['option'] || _slots['item']) {
+			settings.render ??= {} as TomTemplates
+
+			if (_slots['item']) {
+				settings.render.item = (data) => customItems[data.value]
+			}
+
+			if (_slots['option']) {
+				settings.render.option = (data) => customOptions[data.value]
+			}
+		}
 
 		disabled ? instance?.disable() : instance?.enable()
 
@@ -98,3 +114,20 @@
 		</option>
 	{/each}
 </El>
+
+{#if _slots['option'] || _slots['item']}
+	<div class="d-none">
+		{#each items ?? [] as item, index}
+			{#if _slots['option']}
+				<El bind:element={customOptions[index]}>
+					<slot name="option" {item} />
+				</El>
+			{/if}
+			{#if _slots['item']}
+				<El bind:element={customItems[index]}>
+					<slot name="item" {item} />
+				</El>
+			{/if}
+		{/each}
+	</div>
+{/if}
