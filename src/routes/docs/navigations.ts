@@ -167,6 +167,13 @@ export const navigations: Navigation[] = [
 					'Dots are particularly useful if you want to make an interface element more noticeable.',
 			},
 			{
+				route: base_path + '/dropdown',
+				title: 'Dropdown',
+				icon: 'radix-icons:dropdown-menu',
+				description:
+					'The dropdown component can be used to show a list of menu items when clicking on an element such as a button',
+			},
+			{
 				route: base_path + '/form/form-fieldset',
 				title: 'Fieldset',
 				icon: 'fluent-mdl2:field-empty',
