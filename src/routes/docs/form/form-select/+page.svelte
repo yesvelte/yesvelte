@@ -7,6 +7,7 @@
 	import FormSelectItemsBind from './FormSelectItemsBind.svelte'
 	import FormSelectKey from './FormSelectKey.svelte'
 	import FormSelectEvents from './FormSelectEvents.svelte'
+	import FormSelectObject from './FormSelectObject.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -39,6 +40,12 @@
 	<Doc title="Events">
 		<Preview src="./FormSelectEvents.svelte">
 			<FormSelectEvents />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./FormSelectObject.svelte">
+			<FormSelectObject />
 		</Preview>
 	</Doc>
 
