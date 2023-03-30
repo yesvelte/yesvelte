@@ -9,9 +9,10 @@ import type { ElProps } from '../el'
 import type { AlignedPlacement, Placement } from '@floating-ui/dom'
 
 export interface PopupProps extends Partial<ElProps> {
-	target?: HTMLElement | string
+	target?: Element | string
 	placement?: Placement | AlignedPlacement
 	trigger?: 'click' | 'hover' | 'focus'
 	popupOffset?: number
+	autoClose?: boolean | 'inside' | 'outside'
 	arrow?: boolean
 }
