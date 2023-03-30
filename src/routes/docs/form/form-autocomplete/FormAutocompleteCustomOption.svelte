@@ -16,15 +16,7 @@
 	key={(item) => item.id}
 	bind:value
 	let:item>
-	{item.name}
-
-	<El d="flex" alignItems="center" slot="option">
-		<Avatar me="2">
-			<img src="/images/{item.id}.svg" />
-		</Avatar>
-		{item.name}
-	</El>
-	<El d="flex" alignItems="center" slot="item">
+	<El d="flex" alignItems="center">
 		<Avatar me="2">
 			<img src="/images/{item.id}.svg" />
 		</Avatar>

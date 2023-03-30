@@ -45,13 +45,12 @@
 	<Autocomplete
 		{...autocompleteProps}
 		on:changed
-		_slots={{ option: $$slots['option'], item: $$slots['item'] }}
+		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
 		bind:value
 		let:item
 		let:index>
 		<slot {index} {item}>{item}</slot>
-		<slot name="option" slot="option" {index} {item}>{item}</slot>
-		<slot name="item" slot="item" {index} {item}>{item}</slot>
+		<slot name="selected" slot="selected" {index} {item}>{item}</slot>
 	</Autocomplete>
 	<slot name="hint" />
 </FormField>

@@ -52,17 +52,10 @@
 			},
 		} as Partial<TomSettings>
 
-		if (_slots['option'] || _slots['item']) {
-			settings.render ??= {} as TomTemplates
+		settings.render ??= {} as TomTemplates
 
-			if (_slots['item']) {
-				settings.render.item = (data) => customItems[data.value]
-			}
-
-			if (_slots['option']) {
-				settings.render.option = (data) => customOptions[data.value]
-			}
-		}
+		settings.render.item = (data) => customItems[data.value]
+		settings.render.option = (data) => customOptions[data.value]
 
 		disabled ? instance?.disable() : instance?.enable()
 
@@ -115,19 +108,18 @@
 	{/each}
 </El>
 
-{#if _slots['option'] || _slots['item']}
-	<div class="d-none">
-		{#each items ?? [] as item, index}
-			{#if _slots['option']}
-				<El bind:element={customOptions[index]}>
-					<slot name="option" {item} />
-				</El>
+<div class="d-none">
+	{#each items ?? [] as item, index}
+		<El bind:element={customOptions[index]}>
+			<slot {index} {item}>{item}</slot>
+		</El>
+
+		<El bind:element={customItems[index]}>
+			{#if _slots['selected']}
+				<slot name="selected" {index} {item}>{item}</slot>
+			{:else}
+				<slot {index} {item}>{item}</slot>
 			{/if}
-			{#if _slots['item']}
-				<El bind:element={customItems[index]}>
-					<slot name="item" {item} />
-				</El>
-			{/if}
-		{/each}
-	</div>
-{/if}
+		</El>
+	{/each}
+</div>

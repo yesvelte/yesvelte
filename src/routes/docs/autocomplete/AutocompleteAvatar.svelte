@@ -11,9 +11,7 @@
 </script>
 
 <Autocomplete {items} key={(item) => item.id} bind:value let:item>
-	{item.name}
-
-	<El d="flex" alignItems="center" slot="option">
+	<El d="flex" alignItems="center">
 		<Avatar me="2">
 			<img src="/images/avatar.png" />
 		</Avatar>
@@ -27,7 +25,7 @@
 		border
 		borderRadius="pill"
 		bgColor="light"
-		slot="item">
+		slot="selected">
 		<Avatar shape="circle" size="xs" me="2">
 			<img src="/images/avatar.png" />
 		</Avatar>
