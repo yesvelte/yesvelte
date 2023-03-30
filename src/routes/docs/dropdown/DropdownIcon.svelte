@@ -7,15 +7,15 @@
 
 	<DropdownMenu>
 		<DropdownItem>
-			<Icon me="2" name="home" />
+			<Icon name="home" />
 			Home
 		</DropdownItem>
 		<DropdownItem>
-			<Icon me="2" name="box" />
+			<Icon name="box" />
 			Item 2
 		</DropdownItem>
 		<DropdownItem>
-			<Icon me="2" name="user" />
+			<Icon name="user" />
 			Item 3
 		</DropdownItem>
 	</DropdownMenu>

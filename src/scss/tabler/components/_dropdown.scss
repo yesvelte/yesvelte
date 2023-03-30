@@ -28,6 +28,7 @@ $dropdown-props: (
 
 	&-target {
 		display: contents;
+		cursor: pointer;
 
 		& > * {
 			@extend .dropdown-toggle;
