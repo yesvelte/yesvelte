@@ -32,7 +32,7 @@
 	}
 </script>
 
-<El tag="span" {componentName} {...$$restProps} {cssProps}>
+<El {componentName} {...$$restProps} {cssProps}>
 	{#if loaded}
 		<iconify-icon icon="{pack}:{name}" width="100%" height="100%" />
 	{/if}
