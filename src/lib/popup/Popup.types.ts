@@ -15,4 +15,5 @@ export interface PopupProps extends Partial<ElProps> {
 	popupOffset?: number
 	autoClose?: boolean | 'inside' | 'outside'
 	arrow?: boolean
+	show?: boolean
 }
