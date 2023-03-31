@@ -22,7 +22,7 @@
 	}
 </script>
 
-<El class="page page-center" style="height:100vh;">
+<El class="page page-center" style="height:85vh;">
 	<El container class="container-tight">
 		<Card size="md">
 			<CardBody>
