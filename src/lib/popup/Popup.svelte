@@ -17,8 +17,10 @@
 	export let placement: $$Props['placement'] = undefined
 	export let trigger: $$Props['trigger'] = undefined
 	export let popupOffset: $$Props['popupOffset'] = undefined
-	export let arrow: boolean = false
-	export let componentName: string = 'popup'
+	export let autoClose: $$Props['autoClose'] = 'outside'
+	export let arrow: $$Props['arrow'] = undefined
+	export let componentName: $$Props['componentName'] = 'popup'
+	export let show: $$Props['show'] = undefined
 
 	let popupEl: HTMLElement
 	let targetEl: Element
@@ -30,7 +32,6 @@
 
 	let prevTarget: Element
 
-	let show: boolean = false
 
 	let left: string = ''
 	let top: string = ''
@@ -89,10 +90,18 @@
 
 	function onOutside(event: Event) {
 		if (!show) return
-		if (event.composedPath().some((path) => path == popupEl || path == targetEl)) {
-			return
+		if (autoClose === true || autoClose === 'outside') {
+			if (event.composedPath().some((path) => path == popupEl || path == targetEl)) {
+				return
+			}
+			show = false
 		}
-		show = false
+	}
+
+	function onClickPopup() {
+		if (autoClose === true || autoClose === 'inside') {
+			show = false
+		}
 	}
 
 	function getTargetEl(target: HTMLElement | string | undefined): Element {
@@ -115,6 +124,8 @@
 
 		if (typeof window !== 'undefined') document.addEventListener('click', onOutside)
 
+		popupEl?.addEventListener('click', onClickPopup)
+
 		if (!trigger) trigger = 'click'
 		if (trigger === 'click') targetEl?.addEventListener('click', togglePopup)
 
@@ -133,6 +144,7 @@
 			if (trigger === 'click') prevTarget.removeEventListener('click', togglePopup)
 
 			if (typeof window !== 'undefined') document.removeEventListener('click', onOutside)
+			popupEl?.removeEventListener('click', onClickPopup)
 
 			if (trigger === 'hover') {
 				prevTarget.removeEventListener('mouseenter', showPopup)

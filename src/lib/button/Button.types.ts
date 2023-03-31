@@ -6,7 +6,6 @@ export interface ButtonProps extends Partial<ElProps> {
 	disabled?: boolean
 	ghost?: boolean
 	href?: string
-	icon?: boolean
 	link?: boolean
 	loading?: boolean
 	outline?: boolean

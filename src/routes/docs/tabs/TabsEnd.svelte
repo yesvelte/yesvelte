@@ -24,7 +24,7 @@
 					<Icon name="user" />
 					Profile
 				</TabItem>
-				<TabItem icon ms="auto">
+				<TabItem ms="auto">
 					<Icon name="settings" />
 				</TabItem>
 			</TabList>

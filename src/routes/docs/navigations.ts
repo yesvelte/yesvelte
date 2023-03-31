@@ -167,6 +167,13 @@ export const navigations: Navigation[] = [
 					'Dots are particularly useful if you want to make an interface element more noticeable.',
 			},
 			{
+				route: base_path + '/dropdown',
+				title: 'Dropdown',
+				icon: 'radix-icons:dropdown-menu',
+				description:
+					'The dropdown component can be used to show a list of menu items when clicking on an element such as a button',
+			},
+			{
 				route: base_path + '/form/form-fieldset',
 				title: 'Fieldset',
 				icon: 'fluent-mdl2:field-empty',
@@ -268,6 +275,13 @@ export const navigations: Navigation[] = [
 				icon: 'vaadin:select',
 				description:
 					'Select component is used to let users choose from a predefined set of options. It can be single select or multi select.',
+			},
+			{
+				route: base_path + '/sidebar',
+				title: 'Sidebar',
+				icon: 'mdi:page-layout-sidebar-right',
+				description:
+					'The Sidebar is an expandable and collapsible component that typically acts as a side container to place primary or secondary content alongside the main content.',
 			},
 			{
 				route: base_path + '/stamp',

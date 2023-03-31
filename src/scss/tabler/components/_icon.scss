@@ -28,6 +28,7 @@ $props: (
 
 .#{$prefix-icon} {
 	@include apply-props($props);
+	display: inline-block;
 
 	@each $key, $value in $icon-sizes {
 		&-size-#{$key} {
