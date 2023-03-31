@@ -266,6 +266,24 @@
 							</span>
 						</Input>
 					</FormField>
+					<FormField row label="Form buttons" g="2">
+						<El col="6">
+							<Button col="12">
+								<Icon name="brand-github" />
+								Login with Github
+							</Button>
+						</El>
+						<El col="6">
+							<Button col="12">
+								<Icon name="brand-twitter" color="twitter" />
+								Login with Twitter
+							</Button>
+						</El>
+					</FormField>
+					<FormField label="Advanced select with validation state">
+						<FormSelect items={countries} state="valid" bind:value={countries[2]} />
+						<FormSelect items={countries} state="invalid" bind:value={countries[1]} />
+					</FormField>
 				</El>
 				<El colXl="4" colLg="12">
 					<FormField label="Validation States">
@@ -347,6 +365,51 @@
 							<El tag="span" mx="2">James Edwards</El>
 						</El>
 					</FormField>
+					<FormAutocomplete items={tags} label="Tags input" />
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithImage}
+						label="Select with avatars"
+						bind:value={selectedItemWithAvatar}
+						let:item>
+						<El d="flex" alignItems="center">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
+							</Avatar>
+							{item.name}
+						</El>
+						<El d="flex" alignItems="center" slot="selected">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
+							</Avatar>
+							{item.name}
+						</El>
+					</FormAutocomplete>
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithFlag}
+						label="Select with flags"
+						let:item>
+						<El d="flex" alignItems="center">
+							<El tag="img" width="30" me="2" src={item.flag} />
+							{item.name}
+						</El>
+					</FormAutocomplete>
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithLabel}
+						label="Select with labels"
+						bind:value={selectedItemWithLabel}
+						let:item>
+						<El d="flex" alignItems="center">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
+							{item.name}
+						</El>
+						<El d="flex" alignItems="center" slot="selected">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
+							{item.name}
+						</El>
+					</FormAutocomplete>
 				</El>
 				<El colXl="4" colLg="12">
 					<FormRadioGroup label="Radios" bind:value={radioValue} items={radioItems} />
@@ -442,69 +505,6 @@
 						<Progress>
 							<ProgressBar color="success" indeterminate />
 						</Progress>
-					</FormField>
-					<FormField row label="Form buttons" g="2">
-						<El col="6">
-							<Button col="12">
-								<Icon name="brand-github" />
-								Login with Github
-							</Button>
-						</El>
-						<El col="6">
-							<Button col="12">
-								<Icon name="brand-twitter" color="twitter" />
-								Login with Twitter
-							</Button>
-						</El>
-					</FormField>
-					<FormAutocomplete items={tags} label="Tags input" />
-					<FormAutocomplete
-						key={(item) => item.name}
-						items={itemsWithImage}
-						label="Select with avatars"
-						bind:value={selectedItemWithAvatar}
-						let:item>
-						<El d="flex" alignItems="center">
-							<Avatar size="xs" me="2">
-								<img src={item.img} />
-							</Avatar>
-							{item.name}
-						</El>
-						<El d="flex" alignItems="center" slot="selected">
-							<Avatar size="xs" me="2">
-								<img src={item.img} />
-							</Avatar>
-							{item.name}
-						</El>
-					</FormAutocomplete>
-					<FormAutocomplete
-						key={(item) => item.name}
-						items={itemsWithFlag}
-						label="Select with flags"
-						let:item>
-						<El d="flex" alignItems="center">
-							<El tag="img" width="30" me="2" src={item.flag} />
-							{item.name}
-						</El>
-					</FormAutocomplete>
-					<FormAutocomplete
-						key={(item) => item.name}
-						items={itemsWithLabel}
-						label="Select with labels"
-						bind:value={selectedItemWithLabel}
-						let:item>
-						<El d="flex" alignItems="center">
-							<Badge ghost color="primary" me="1">{item.command}</Badge>
-							{item.name}
-						</El>
-						<El d="flex" alignItems="center" slot="selected">
-							<Badge ghost color="primary" me="1">{item.command}</Badge>
-							{item.name}
-						</El>
-					</FormAutocomplete>
-					<FormField label="Advanced select with validation state">
-						<FormSelect items={countries} state="valid" bind:value={countries[2]} />
-						<FormSelect items={countries} state="invalid" bind:value={countries[1]} />
 					</FormField>
 				</El>
 			</El>
