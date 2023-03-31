@@ -9,6 +9,7 @@
 	import SelectDisabled from './SelectDisabled.svelte'
 	import SelectStates from './SelectStates.svelte'
 	import SelectEvents from './SelectEvents.svelte'
+	import SelectObject from './SelectObject.svelte'
 </script>
 
 <Page
@@ -35,6 +36,12 @@
 	<Doc title="Bind Item">
 		<Preview src="./SelectItemsBind.svelte">
 			<div class="custom-class"><SelectItemsBind /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./SelectObject.svelte">
+			<div class="custom-class"><SelectObject /></div>
 		</Preview>
 	</Doc>
 

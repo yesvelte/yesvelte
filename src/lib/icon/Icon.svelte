@@ -6,9 +6,9 @@
 
 <script lang="ts">
 	import 'iconify-icon'
-	import { classname } from '../internal'
 	import type { IconProps } from './Icon.types'
 	import { onMount } from 'svelte'
+	import { El } from '../el'
 
 	type $$Props = IconProps
 
@@ -19,23 +19,21 @@
 	export let pack: $$Props['pack'] = 'tabler'
 	export let size: $$Props['size'] = undefined
 
-	$: classes = classname(
-		componentName,
-		{
-			color,
-			filled,
-			size,
-		},
-		$$props.class
-	)
-
 	let loaded = false
 
 	onMount(() => {
 		loaded = true
 	})
+
+	$: cssProps = {
+		color,
+		filled,
+		size,
+	}
 </script>
 
-{#if loaded}
-	<iconify-icon icon="{pack}:{name}" {...$$restProps} class={classes} width="100%" height="100%" />
-{/if}
+<El {componentName} {...$$restProps} {cssProps}>
+	{#if loaded}
+		<iconify-icon icon="{pack}:{name}" width="100%" height="100%" />
+	{/if}
+</El>

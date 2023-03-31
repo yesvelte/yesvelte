@@ -47,14 +47,11 @@
 				value.push(getKey(items[selectedIndex]))
 			} else {
 				var _index = value.indexOf(getKey(items[selectedIndex]))
-				console.log('selected not checked', _index)
 				if (_index !== -1) {
 					value.splice(_index, 1)
 				}
 			}
-			// value = value.map(getKey)
 			value = value
-			console.log({ value })
 		}
 	}
 </script>

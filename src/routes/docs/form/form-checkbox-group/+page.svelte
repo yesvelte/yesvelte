@@ -7,6 +7,7 @@
 	import FormCheckboxGroupInline from './FormCheckboxGroupInline.svelte'
 	import FormCheckboxGroupLayout from './FormCheckboxGroupLayout.svelte'
 	import FormCheckboxGroupKey from './FormCheckboxGroupKey.svelte'
+	import FormCheckboxGroupBindObject from './FormCheckboxGroupBindObject.svelte'
 </script>
 
 <Page title="FormCheckboxGroup">
@@ -48,6 +49,12 @@
 	<Doc title="Binding">
 		<Preview src="./FormCheckboxGroupArrayBinding.svelte">
 			<FormCheckboxGroupArrayBinding />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./FormCheckboxGroupBindObject.svelte">
+			<FormCheckboxGroupBindObject />
 		</Preview>
 	</Doc>
 
