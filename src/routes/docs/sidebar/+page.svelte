@@ -3,12 +3,12 @@
 	import SidebarNested from './SidebarNested.svelte'
 	import SidebarHref from './SidebarHref.svelte'
 	import SidebarSimple from './SidebarSimple.svelte'
-
-	import '$lib/css/tabler.css'
 	import SidebarSlots from './SidebarSlots.svelte'
 	import SidebarIcon from './SidebarIcon.svelte'
 	import SidebarActive from './SidebarActive.svelte'
 	import SidebarDisabled from './SidebarDisabled.svelte'
+
+	import '$lib/css/tabler.css'
 </script>
 
 <Page title="Sidebar">
