@@ -58,7 +58,12 @@
 	</El>
 
 	{#if $$slots['default']}
-		<Popup tag="ul" autoClose={false} placement="right-start" componentName="{componentName}-menu">
+		<Popup
+			tag="ul"
+			bind:show={active}
+			autoClose={false}
+			placement="right-start"
+			componentName="{componentName}-menu">
 			<slot />
 		</Popup>
 	{/if}
