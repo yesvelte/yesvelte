@@ -1,0 +1,45 @@
+$dropdown-props: (
+	null: '.dropdown',
+	menu: '.dropdown-menu' '.show',
+	placement: (
+		start: '.dropstart',
+		left: '.dropstart',
+		right: '.dropend',
+		end: '.dropend',
+		top: '.dropup'
+	),
+	item: (
+		null: '.dropdown-item',
+		active: '.active',
+		disabled: '.disabled',
+		divider: '.dropdown-divider',
+		header: '.dropdown-header'
+	)
+);
+
+.#{$prefix-dropdown} {
+	@include apply-props($dropdown-props);
+	display: inline-block;
+
+	&-item {
+		display: inline-flex;
+		@extend .gap-2;
+	}
+
+	&-target {
+		display: contents;
+		cursor: pointer;
+
+		& > * {
+			@extend .dropdown-toggle;
+
+			.#{$prefix-dropdown}-split & {
+				@extend .dropdown-toggle-split;
+			}
+
+			.#{$prefix-dropdown}:not(.#{$prefix-dropdown}-arrow) &::after {
+				display: none;
+			}
+		}
+	}
+}
