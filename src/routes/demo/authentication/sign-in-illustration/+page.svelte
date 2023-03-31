@@ -52,12 +52,12 @@
 								<El col="6">
 									<Button col="12">
 										<Icon name="brand-github" />
-										Login with Github</Button>
+										Github Login</Button>
 								</El>
 								<El col="6">
 									<Button col="12">
 										<Icon name="brand-twitter" color="twitter" />
-										Login with Twitter
+										Twitter Login
 									</Button>
 								</El>
 							</El>
