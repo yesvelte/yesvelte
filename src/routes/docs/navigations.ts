@@ -430,6 +430,12 @@ export const navigations: Navigation[] = [
 		id: 'menu-examples',
 		children: [
 			{
+				route: example_path + '/form-elements',
+				title: 'Form elements',
+				icon: 'tabler:app-window',
+				description: 'A sample page that provides usages of form elements.',
+			},
+			{
 				route: example_path + '/authentication/sign-in',
 				title: 'Sign in',
 				icon: 'tabler:app-window',

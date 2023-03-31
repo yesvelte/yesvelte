@@ -41,6 +41,9 @@
 		CardActions,
 		TableRow,
 		Badge,
+		DropdownMenu,
+		Dropdown,
+		DropdownItem,
 	} from 'yesvelte'
 
 	let items = ['One', 'Two', 'Three']
@@ -182,10 +185,33 @@
 						placeholder="Content..."
 						value="Oh! Come and see the violence inherent in the system! Help, help, I'm being repressed! We shall say 'Ni' again to you, if you do not appease us. I'm not a witch. I'm not a witch. Camelot!" />
 					<FormSelect bind:value={selectedValue} {items} label="Select" />
-					<FormField>
-						<Label slot="label">Input group</Label>
+					<FormField label="Input group">
 						<Input placeholder="Search for...">
 							<Button slot="end">Go!</Button>
+						</Input>
+						<El mb="2" />
+						<Input>
+							<Dropdown placement="bottom-start">
+								<Button slot="target">Action</Button>
+								<DropdownMenu>
+									<DropdownItem>Action</DropdownItem>
+									<DropdownItem>Another Action</DropdownItem>
+								</DropdownMenu>
+							</Dropdown>
+						</Input>
+					</FormField>
+					<FormField>
+						<Input>
+							<ButtonGroup slot="end">
+								<Button>Action</Button>
+								<Dropdown placement="bottom-end">
+									<Button slot="target" />
+									<DropdownMenu>
+										<DropdownItem>Action</DropdownItem>
+										<DropdownItem>Another Action</DropdownItem>
+									</DropdownMenu>
+								</Dropdown>
+							</ButtonGroup>
 						</Input>
 					</FormField>
 					<FormField>
