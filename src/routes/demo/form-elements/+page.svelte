@@ -40,6 +40,7 @@
 		Avatar,
 		CardActions,
 		TableRow,
+		Badge,
 	} from 'yesvelte'
 
 	let items = ['One', 'Two', 'Three']
@@ -128,11 +129,22 @@
 	let countries = ['Poland', 'Germany', 'Czech Republic', 'Brazil']
 	let tags = ['HTML', 'JavaScript', 'CSS', 'jQuery', 'Bootstrap', 'Svelte']
 	let itemsWithImage = [
-		{ name: 'James Cameron', img: '/images/avatars/1.jpg' },
-		{ name: 'Sam Worthington', img: '/images/avatars/2.jpg' },
-		{ name: 'Zoe Saldana', img: '/images/avatars/3.jpg' },
-		{ name: 'Kate Winslet', img: '/images/avatars/4.jpg' },
-		{ name: 'Jamie Flatters', img: '/images/avatars/5.jpg' },
+		{ name: 'John Smith', img: '/images/avatars/1.jpg' },
+		{ name: 'Jane Smith', img: '/images/avatars/2.jpg' },
+		{ name: 'Mike Doe', img: '/images/avatars/3.jpg' },
+		{ name: 'Oscar Edwards', img: '/images/avatars/6.jpg' },
+	]
+	let itemsWithFlag = [
+		{ flag: '/images/flags/pl.svg', name: 'Poland' },
+		{ flag: '/images/flags/de.svg', name: 'Germany' },
+		{ flag: '/images/flags/cz.svg', name: 'Czech Republic' },
+		{ flag: '/images/flags/br.svg', name: 'Brazil' },
+	]
+	let itemsWithLabel = [
+		{ command: 'cmd + c', name: 'Copy' },
+		{ command: 'cmd + v', name: 'Pate' },
+		{ command: 'cmd + x', name: 'Cut' },
+		{ command: 'cmd + z', name: 'Undo' },
 	]
 	let comparisonItems = [
 		'Equals',
@@ -147,6 +159,8 @@
 		'Less than',
 	]
 	let sourceItems = ['Status code', 'JSON body', 'Headers', 'Text body', 'Response time']
+	let selectedItemWithLabel = 'Copy'
+	let selectedItemWithAvatar = itemsWithImage[0].name
 </script>
 
 <El container="xl">
@@ -444,11 +458,47 @@
 						</El>
 					</FormField>
 					<FormAutocomplete items={tags} label="Tags input" />
-					<FormAutocomplete key="name" items={itemsWithImage} label="Select with avatars" let:item>
-						<El>
-							<Avatar>
-								<img src={item.img} alt="" />
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithImage}
+						label="Select with avatars"
+						bind:value={selectedItemWithAvatar}
+						let:item>
+						<El d="flex" alignItems="center">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
 							</Avatar>
+							{item.name}
+						</El>
+						<El d="flex" alignItems="center" slot="selected">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
+							</Avatar>
+							{item.name}
+						</El>
+					</FormAutocomplete>
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithFlag}
+						label="Select with flags"
+						let:item>
+						<El d="flex" alignItems="center">
+							<El tag="img" width="30" me="2" src={item.flag} />
+							{item.name}
+						</El>
+					</FormAutocomplete>
+					<FormAutocomplete
+						key={(item) => item.name}
+						items={itemsWithLabel}
+						label="Select with labels"
+						bind:value={selectedItemWithLabel}
+						let:item>
+						<El d="flex" alignItems="center">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
+							{item.name}
+						</El>
+						<El d="flex" alignItems="center" slot="selected">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
 							{item.name}
 						</El>
 					</FormAutocomplete>
