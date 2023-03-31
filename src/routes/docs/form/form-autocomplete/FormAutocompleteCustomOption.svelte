@@ -17,9 +17,9 @@
 	bind:value
 	let:item>
 	<El d="flex" alignItems="center">
-		<Avatar me="2">
-			<img src="/images/{item.id}.svg" />
-		</Avatar>
+		<El tag="span" me="2">
+			<img src="/images/{item.id}.svg" width="32px" />
+		</El>
 		{item.name}
 	</El>
 </FormAutocomplete>
