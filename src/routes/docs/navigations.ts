@@ -277,6 +277,13 @@ export const navigations: Navigation[] = [
 					'Select component is used to let users choose from a predefined set of options. It can be single select or multi select.',
 			},
 			{
+				route: base_path + '/sidebar',
+				title: 'Sidebar',
+				icon: 'mdi:page-layout-sidebar-right',
+				description:
+					'The Sidebar is an expandable and collapsible component that typically acts as a side container to place primary or secondary content alongside the main content.',
+			},
+			{
 				route: base_path + '/stamp',
 				title: 'Stamp',
 				icon: 'mdi:stamper',

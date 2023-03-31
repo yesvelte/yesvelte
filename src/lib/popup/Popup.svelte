@@ -18,8 +18,9 @@
 	export let trigger: $$Props['trigger'] = undefined
 	export let popupOffset: $$Props['popupOffset'] = undefined
 	export let autoClose: $$Props['autoClose'] = 'outside'
-	export let arrow: boolean = false
-	export let componentName: string = 'popup'
+	export let arrow: $$Props['arrow'] = undefined
+	export let componentName: $$Props['componentName'] = 'popup'
+	export let show: $$Props['show'] = undefined
 
 	let popupEl: HTMLElement
 	let targetEl: Element
@@ -31,7 +32,6 @@
 
 	let prevTarget: Element
 
-	let show: boolean = false
 
 	let left: string = ''
 	let top: string = ''
