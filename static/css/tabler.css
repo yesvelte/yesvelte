@@ -27433,6 +27433,9 @@ Antialiasing
 .y-card-status-size-lg.y-card-status-position-start {
   width: 3px;
 }
+.y-icon {
+  display: inline-block;
+}
 .y-icon-size-xs {
   width: 0.75rem !important;
   height: 0.75rem !important;

@@ -7,6 +7,7 @@
 	import CheckboxGroupReverse from './CheckboxGroupReverse.svelte'
 	import CheckboxGroupLabel from './CheckboxGroupLabel.svelte'
 	import CheckboxGroupColor from './CheckboxGroupColor.svelte'
+	import CheckboxGroupBindObject from './CheckboxGroupBindObject.svelte'
 </script>
 
 <Page title="CheckboxGroup">
@@ -75,6 +76,12 @@
 		</p>
 		<Preview src="./CheckboxGroupItems.svelte">
 			<CheckboxGroupItems />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./CheckboxGroupBindObject.svelte">
+			<CheckboxGroupBindObject />
 		</Preview>
 	</Doc>
 </Page>
