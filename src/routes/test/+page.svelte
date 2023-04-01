@@ -1,5 +1,5 @@
 <script>
-	import { Nav, NavBrand, NavItem, NavToggler, NavTogglerIcon, Navbar } from 'yesvelte'
+	import { Nav, NavBrand, NavItem, NavToggler, NavTogglerIcon, Navbar, Dropdown, Avatar, DropdownMenu, DropdownItem } from 'yesvelte'
 	import 'yesvelte/css/tabler.css'
 </script>
 
