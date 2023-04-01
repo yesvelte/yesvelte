@@ -1,0 +1,55 @@
+$navbar-props: (
+	wrapper: '.navbar' '.navbar-expand-sm',
+	null: '.container-fluid',
+	content: '.navbar-collapse'
+);
+
+.#{$prefix-navbar} {
+	@include apply-props($navbar-props);
+}
+
+$nav-props: (
+	null: '.navbar-nav',
+	item: (
+		null: '.nav-link',
+		wrapper: (
+			null: '.nav-item',
+			dropdown: '.dropdown'
+		),
+		active: '.active',
+		disabled: '.disabled',
+		menu: '.dropdown-menu',
+		dropdown: '.dropdown-toggle',
+		end: '.ms-auto',
+		divider: '.dropdown-divider',
+		icon: '.nav-link-icon',
+		title: '.nav-link-title'
+	),
+	brand: '.navbar-brand',
+	toggler: (
+		null: '.navbar-toggler',
+		icon: '.navbar-toggler-icon'
+	)
+);
+
+.#{$prefix-nav} {
+	@include apply-props($nav-props);
+
+	&-item-menu .#{$prefix-sidebar}-item {
+		@extend .dropdown-item;
+	}
+
+	&-item-menu.#{$prefix-popup}-show {
+		display: block;
+		width: unset;
+	}
+
+	&-item-menu {
+		.#{$prefix-nav}-item {
+			justify-content: start;
+		}
+	}
+	&-item-title {
+		cursor: pointer;
+	}
+}
