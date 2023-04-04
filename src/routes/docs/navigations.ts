@@ -442,6 +442,18 @@ export const navigations: Navigation[] = [
 				description: 'A page to display sample pricing cards.',
 			},
 			{
+				route: example_path + '/pricing-table',
+				title: 'Pricing table',
+				icon: 'tabler:app-window',
+				description: 'A page to display sample pricing table.',
+			},
+			{
+				route: example_path + '/faq',
+				title: 'Frequently Asked Questions',
+				icon: 'tabler:app-window',
+				description: 'A sample FAQ page.',
+			},
+			{
 				route: example_path + '/authentication/sign-in',
 				title: 'Sign in',
 				icon: 'tabler:app-window',
