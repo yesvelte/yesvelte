@@ -1,0 +1,9 @@
+.#{$prefix}table {
+	@extend .table;
+	&-striped {
+		@extend .table-zebra;
+	}
+}
+.#{$prefix}table-wrapper {
+	@extend .overflow-x-auto;
+}
