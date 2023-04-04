@@ -1,6 +1,20 @@
 module.exports = {
 	// prefix: '',
 	content: [],
+	theme: {
+		fontFamily: {
+			sans: [
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'San Francisco',
+				'Segoe UI',
+				'Roboto',
+				'Helvetica Neue',
+				'sans-serif',
+			],
+			mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+		},
+	},
 	plugins: [require('@tailwindcss/typography')],
 	safelist: [
 		{
