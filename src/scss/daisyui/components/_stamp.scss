@@ -1,0 +1,94 @@
+.#{$prefix}stamp {
+	--y-stamp-size: 7rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(var(--y-stamp-size) * 1);
+	height: calc(var(--y-stamp-size) * 1);
+	max-height: 100%;
+	border-top-right-radius: 4px;
+	opacity: 0.2;
+	overflow: hidden;
+	pointer-events: none;
+	& > .y-icon {
+		background: hsla(var(--bc));
+		color: hsla(var(--b1));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100rem;
+		width: calc(var(--y-stamp-size) * 1);
+		height: calc(var(--y-stamp-size) * 1);
+		position: relative;
+		top: calc(var(--y-stamp-size) * -0.25);
+		right: calc(var(--y-stamp-size) * -0.25);
+		font-size: calc(var(--y-stamp-size) * 0.75);
+		transform: rotate(10deg);
+	}
+}
+.#{$prefix}stamp-icon-position-top-start {
+	top: 0;
+	left: 0;
+	.y-icon {
+		transform: rotate(-10deg);
+		left: calc(var(--y-stamp-size) * -0.25);
+	}
+}
+.#{$prefix}stamp-icon-position-bottom-start {
+	bottom: 0;
+	left: 0;
+	top: auto;
+	.y-icon {
+		top: auto;
+		left: calc(var(--y-stamp-size) * -0.25);
+		bottom: calc(var(--y-stamp-size) * -0.25);
+	}
+}
+.#{$prefix}stamp-icon-position-bottom-end {
+	bottom: 0;
+	top: auto;
+	right: 0;
+	.y-icon {
+		transform: rotate(-10deg);
+		top: calc(100% - var(--y-stamp-size) * 0.75);
+	}
+}
+.#{$prefix}stamp-size-sm {
+	--y-stamp-size: 5rem;
+}
+.#{$prefix}stamp-size-md {
+	--y-stamp-size: 6rem;
+}
+.#{$prefix}stamp-size-lg {
+	--y-stamp-size: 7rem;
+}
+.#{$prefix}stamp {
+	// daisyui colors
+	@each $colorName, $daisyuiColorName in $RoleColors {
+		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
+			@extend .bg-#{$daisyuiColorName};
+		}
+	}
+
+	@each $colorName, $daisyuiColorName in $StateColors {
+		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
+			@extend .bg-#{$daisyuiColorName};
+		}
+	}
+
+	// constant colors
+	@each $colorName, $colorVariant in $namedColors {
+		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
+			background-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+
+	// social media colors
+	@each $colorName, $colorVariant in $socialColors {
+		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
+			background-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+}
