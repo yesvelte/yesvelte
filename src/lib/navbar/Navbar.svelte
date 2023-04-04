@@ -12,10 +12,10 @@
 
 <El {...$$restProps} componentName="{componentName}-wrapper" {cssProps}>
 	<El {componentName}>
-		<slot name="start" />
 		<El componentName="{componentName}-content">
-			<slot />
+			<El componentName="{componentName}-items" tag="ul">
+				<slot />
+			</El>
 		</El>
-		<slot name="end" />
 	</El>
 </El>

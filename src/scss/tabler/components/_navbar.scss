@@ -1,15 +1,8 @@
 $navbar-props: (
 	wrapper: '.navbar' '.navbar-expand-sm',
 	null: '.container-fluid',
-	content: '.navbar-collapse'
-);
-
-.#{$prefix-navbar} {
-	@include apply-props($navbar-props);
-}
-
-$nav-props: (
-	null: '.navbar-nav',
+	content: '.navbar-collapse',
+	items: '.navbar-nav',
 	item: (
 		null: '.nav-link',
 		wrapper: (
@@ -24,18 +17,13 @@ $nav-props: (
 		divider: '.dropdown-divider',
 		icon: '.nav-link-icon',
 		title: '.nav-link-title'
-	),
-	brand: '.navbar-brand',
-	toggler: (
-		null: '.navbar-toggler',
-		icon: '.navbar-toggler-icon'
 	)
 );
 
-.#{$prefix-nav} {
-	@include apply-props($nav-props);
+.#{$prefix-navbar} {
+	@include apply-props($navbar-props);
 
-	&-item-menu .#{$prefix-sidebar}-item {
+	&-item-menu .#{$prefix-navbar}-item {
 		@extend .dropdown-item;
 	}
 
@@ -45,8 +33,8 @@ $nav-props: (
 	}
 
 	&-item-menu {
-		.#{$prefix-nav}-item {
-			justify-content: start;
+		.#{$prefix-navbar}-item {
+			justify-content: start !important;
 		}
 	}
 	&-item-title {

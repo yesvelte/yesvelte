@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { Icon } from '../icon'
 	import { El, type ElProps } from '../el'
-	import type { NavItemProps } from './Navbar.types'
+	import type { NavbarItemProps } from './Navbar.types'
 	import { Popup } from '../popup'
 
-	type $$Props = NavItemProps
+	type $$Props = NavbarItemProps
 
-	export let componentName: $$Props['componentName'] = 'nav-item'
+	export let componentName: $$Props['componentName'] = 'navbar-item'
 	export let disabled: $$Props['disabled'] = undefined
 	export let active: $$Props['active'] = undefined
 	export let divider: $$Props['divider'] = undefined
