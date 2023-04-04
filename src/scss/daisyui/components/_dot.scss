@@ -1,0 +1,75 @@
+.#{$prefix}dot {
+	@extend .bg-base-content;
+	@extend .w-2;
+	@extend .h-2;
+	@extend .relative;
+	@extend .inline-block;
+	@extend .rounded-full;
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}dot-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}dot-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}dot-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}dot-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+	}
+}
+
+.#{$prefix}dot-animated:before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background: inherit;
+	border-radius: inherit;
+	opacity: 0.6;
+	animation: 1s linear 2s backwards infinite status-pulsate-tertiary;
+}
+@keyframes status-pulsate-tertiary {
+	25% {
+		transform: scale(1, 1);
+	}
+	80% {
+		transform: scale(3, 3);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(3, 3);
+		opacity: 0;
+	}
+}
+//pulse
+
+.#{$prefix}dot-indicator .#{$prefix}dot-indicator-circle:nth-child(1) {
+	animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+	@extend .absolute;
+	@extend .inset-0;
+	@extend .bg-inherit;
+	border-radius: inherit;
+}
+@keyframes ping {
+	75%,
+	100% {
+		transform: scale(3);
+		opacity: 0;
+	}
+}
