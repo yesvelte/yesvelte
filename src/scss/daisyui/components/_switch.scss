@@ -1,19 +1,54 @@
-.#{$prefix}switch {
-    @extend .toggle;
+.#{$prefix}switch-wrapper {
+	@extend .grid;
+	@extend .gap-x-3;
+	grid-template-columns: auto 1fr;
+	.#{$prefix}switch-label {
+		@extend .col-start-2;
+	}
+	.#{$prefix}switch-description {
+		@extend .text-sm;
+		@extend .opacity-70;
+		@extend .col-start-2;
+		@extend .row-start-2;
+	}
 }
 
+.#{$prefix}switch {
+	@extend .toggle;
+}
+
+// reverse
+.#{$prefix}switch-wrapper-reverse {
+	.#{$prefix}switch {
+		@extend .rotate-180;
+	}
+}
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $RoleColors {
-    .#{$prefix}switch-color-#{$colorName} {
-        @extend .toggle-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}switch-color-#{$colorName} {
+		@extend .toggle-#{$daisyuiColorName};
+	}
 }
 
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}switch-color-#{$colorName} {
-        @extend .toggle-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}switch-color-#{$colorName} {
+		@extend .toggle-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}switch-color-#{$colorName}:checked {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}switch-color-#{$colorName}:checked {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+	}
 }
