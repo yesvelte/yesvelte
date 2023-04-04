@@ -1,0 +1,24 @@
+$displays: none inline inline-block block grid table-cell table-row flex inline-flex table !default;
+$displays-sizes: (
+	'sm': '576px',
+	'md': '768px',
+	'lg': '992px',
+	'xl': '1200px',
+	'xxl': '1400px'
+) !default;
+
+@each $display in $displays {
+	.#{$prefix}el-d-#{$display} {
+		display: #{$display};
+	}
+}
+
+@each $sizeName, $sizeValue in $displays-sizes {
+	@media (min-width: #{$sizeValue}) {
+		@each $display in $displays {
+			.#{$prefix}el-d-#{$sizeName}-#{$display} {
+				display: #{$display};
+			}
+		}
+	}
+}
