@@ -18,7 +18,7 @@ navigations.forEach((item) => {
 
 export function load(params: any) {
 	const route = params.url.pathname
-	let currentRout: Navigation = {}
+	let currentRout: Partial<Navigation> = {}
 	Object.keys(routeMap).forEach((k) => {
 		if (route === k || route + '/' === k) {
 			currentRout = routeMap[k]
