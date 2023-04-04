@@ -1,64 +1,65 @@
 .#{$prefix}form-input {
-    @extend .form-control;
-    @extend .mb-2;
-    .#{$prefix}label {
-        @extend .label;
-    }
+	@extend .form-control;
+	@extend .mb-2;
+	.#{$prefix}label {
+		@extend .label;
+	}
 }
 .#{$prefix}input {
-    @extend .input;
-    @extend .input-bordered;
-    @extend .w-full;
+	@extend .input;
+	@extend .input-bordered;
+	@extend .w-full;
 }
 
+@each $size in (sm md lg) {
+	.#{$prefix}input-size-#{$size} {
+		@extend .input-#{$size};
+	}
+}
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $RoleColors {
-    .#{$prefix}input-color-#{$colorName} {
-        @extend .btn-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}input-color-#{$colorName} {
+		@extend .input-#{$daisyuiColorName};
+	}
 }
 
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}input-color-#{$colorName} {
-        @extend .btn-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}input-color-#{$colorName} {
+		@extend .input-#{$daisyuiColorName};
+	}
 }
 
 // constant colors
-@each $colorName,
-$colorVariant in $namedColors {
-    .#{$prefix}input-color-#{$colorName}:not(.#{$prefix}input-disabled) {
-        background-color: map-get($colorVariant, "default");
-        border-color: map-get($colorVariant, "default");
-        color: map-get($colorVariant, "content");
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}input-color-#{$colorName}:not(.#{$prefix}input-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
 
-        &:focus {
-            background-color: map-get($colorVariant, "focus");
-            border-color: map-get($colorVariant, "focus");
-        }
-    }
+		&:focus {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
+	}
 }
 
 // social media colors
-@each $colorName,
-$colorVariant in $socialColors {
-    .#{$prefix}input-color-#{$colorName}:not(.#{$prefix}input-disabled) {
-        background-color: map-get($colorVariant, "default");
-        border-color: map-get($colorVariant, "default");
-        color: map-get($colorVariant, "content");
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}input-color-#{$colorName}:not(.#{$prefix}input-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
 
-        &:focus {
-            background-color: map-get($colorVariant, "focus");
-            border-color: map-get($colorVariant, "focus");
-        }
+		&:focus {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
 
-        &.#{$prefix}input-outline {
-            background-color: transparent;
-            border-color: map-get($colorVariant, "default");
-            color: map-get($colorVariant, "default");
-        }
-    }
+		&.#{$prefix}input-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
 }
