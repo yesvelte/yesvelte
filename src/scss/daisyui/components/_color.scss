@@ -36,3 +36,10 @@
 		color: map-get($colorVariant, 'default');
 	}
 }
+
+//bg opacity
+@each $opacity in (10 25 50 75) {
+	.#{$prefix}el-bg-opacity-#{$opacity} {
+		@extend .bg-opacity-#{$opacity};
+	}
+}
