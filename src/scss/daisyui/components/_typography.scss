@@ -1,23 +1,34 @@
 .markdown {
 	@extend .prose;
 }
-html {
-	font-size: 0.875rem;
-	line-height: 1.4285714286;
-}
 h1 {
-	@extend .text-4xl;
-	@extend .font-bold;
+	@extend .text-2xl;
+	font-weight: 600;
 	margin-bottom: 0.5rem;
 }
 h2 {
-	@extend .text-2xl;
-	@extend .font-bold;
+	@extend .text-lg;
+	font-weight: 600;
 	margin-bottom: 0.5rem;
 }
 h3 {
-	@extend .text-xl;
-	@extend .font-bold;
+	@extend .text-base;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+h4 {
+	@extend .text-sm;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+h5 {
+	@extend .text-xs;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+h6 {
+	font-size: 0.625rem;
+	font-weight: 600;
 	margin-bottom: 0.5rem;
 }
 code {
