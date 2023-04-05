@@ -7,8 +7,7 @@ $navbar-props: (
 		)
 	),
 	null: '.container-fluid',
-	content: '.navbar-collapse',
-	items: '.navbar-nav',
+	content: '.navbar-nav',
 	item: (
 		null: '.nav-link',
 		wrapper: (
@@ -45,6 +44,7 @@ $navbar-props: (
 	&-item-menu.#{$prefix-popup}-show {
 		display: block;
 		width: unset;
+		z-index: 1031;
 	}
 
 	&-item-menu {

@@ -64,7 +64,7 @@
 			<Popup
 				tag="ul"
 				bind:show={active}
-				autoClose={false}
+				autoClose
 				placement="bottom-start"
 				componentName="{componentName}-menu">
 				<slot />
