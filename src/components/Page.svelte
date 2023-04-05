@@ -15,7 +15,7 @@
 </svelte:head>
 
 <El row>
-	<El position="relative" colMd="2" d="none" dMd="inline-block">
+	<El position="relative" colLg="2" d="none" dLg="inline-block">
 		<Sidebar pt="2" position="absolute">
 			{#each navigations as navigation}
 				{#if navigation.children}
@@ -41,7 +41,7 @@
 			{/each}
 		</Sidebar>
 	</El>
-	<El colMd="8" colSm="12" pt="3" ps="3">
+	<El colLg="8" colSm="12" pt="3">
 		<Card size="lg">
 			<CardBody>
 				<El tag="h1">{title}</El>
@@ -52,7 +52,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El colMd="2" d="none" dMd="inline-block">
+	<El colLg="2" d="none" dLg="inline-block">
 		<ToC />
 	</El>
 </El>
