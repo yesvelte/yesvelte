@@ -4,9 +4,10 @@
 
 	type $$Props = NavbarProps
 	export let componentName: $$Props['componentName'] = 'navbar'
+	export let theme: $$Props['theme'] = undefined
 
 	$: cssProps = {
-		//
+		theme,
 	}
 </script>
 

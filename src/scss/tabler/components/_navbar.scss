@@ -1,5 +1,11 @@
 $navbar-props: (
-	wrapper: '.navbar' '.navbar-expand-sm',
+	wrapper: (
+		null: '.navbar' '.navbar-expand-sm',
+		theme: (
+			dark: '.navbar-dark',
+			light: '.navbar-light'
+		)
+	),
 	null: '.container-fluid',
 	content: '.navbar-collapse',
 	items: '.navbar-nav',
@@ -20,6 +26,15 @@ $navbar-props: (
 	)
 );
 
+.#{$prefix-navbar}-wrapper {
+	@extend .d-none;
+	@extend .d-sm-block;
+
+	&-show {
+		@extend .d-block;
+	}
+}
+
 .#{$prefix-navbar} {
 	@include apply-props($navbar-props);
 
@@ -37,6 +52,11 @@ $navbar-props: (
 			justify-content: start !important;
 		}
 	}
+
+	.#{$prefix-navbar}-wrapper-theme-dark &-item-menu {
+		@extend .dropdown-menu-dark;
+	}
+
 	&-item-title {
 		cursor: pointer;
 	}
