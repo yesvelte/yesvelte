@@ -4,14 +4,14 @@ export const prerender = true
 
 let result = ''
 
-function GetNodes(navs: Navigation[]) {
+function GetNodes(navs: Navigation[], prefix = '') {
 	navs.forEach((navigation) => {
 		if (navigation.children && navigation.children.length > 0) {
-			GetNodes(navigation.children)
+			GetNodes(navigation.children, navigation.route)
 		} else {
 			result += `
           <url>
-            <loc>https://www.yesvelte.com${navigation.route}</loc>
+            <loc>https://www.yesvelte.com${prefix + navigation.route}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
           </url>`

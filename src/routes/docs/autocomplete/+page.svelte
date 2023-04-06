@@ -9,6 +9,8 @@
 	import AutocompletePlaceholder from './AutocompletePlaceholder.svelte'
 	import AutocompleteSizes from './AutocompleteSizes.svelte'
 	import AutocompleteStates from './AutocompleteStates.svelte'
+	import AutocompleteAvatar from './AutocompleteAvatar.svelte'
+	import AutocompleteFlags from './AutocompleteFlags.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -49,8 +51,8 @@
 
 	<Doc title="Complex Items">
 		<p slot="description">
-			You can have complex objects as item and you need to use <code>itemKey</code> and
-			<code>itemValue</code> props to extract the data that Autocomplete needs.
+			You can have complex objects as item and using <code>key</code> prop you can extract the data that
+			You need from Autocomplete.
 		</p>
 		<Preview src="./AutocompleteObject.svelte">
 			<AutocompleteObject />
@@ -74,6 +76,22 @@
 		<Preview src="./AutocompleteKey.svelte">
 			<div class="custom-class">
 				<AutocompleteKey />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="With Avatar">
+		<p slot="description">You can use any component inside Autocomplete like this:</p>
+		<Preview src="./AutocompleteAvatar.svelte">
+			<div class="custom-class">
+				<AutocompleteAvatar />
+			</div>
+		</Preview>
+	</Doc>
+	<Doc title="Custom Options">
+		<Preview src="./AutocompleteFlags.svelte">
+			<div class="custom-class">
+				<AutocompleteFlags />
 			</div>
 		</Preview>
 	</Doc>

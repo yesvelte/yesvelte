@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -21,8 +19,6 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 
-	const forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
-
 	let props: $$Props = {}
 	let fileUploadProps: $$Props = {}
 
@@ -36,7 +32,6 @@
 
 	$: fileUploadProps = {
 		tag,
-		forwardEvents,
 		placeholder,
 		disabled,
 		required,
@@ -50,7 +45,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<FileUpload {...fileUploadProps} bind:files>
+	<FileUpload on:click on:change on:input on:focus on:blur {...fileUploadProps} bind:files>
 		<slot />
 	</FileUpload>
 	<slot name="hint" />

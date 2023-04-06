@@ -5,8 +5,6 @@
 	import moment from 'moment'
 	import type { DatePickerProps } from './DatePicker.types'
 	import { El } from '../el'
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = DatePickerProps
 
@@ -21,7 +19,6 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	const dispatch = createEventDispatcher()
 
@@ -80,7 +77,6 @@
 
 		props = {
 			componentName,
-			forwardEvents,
 			placeholder,
 			disabled,
 			name,
@@ -104,7 +100,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" {value} bind:element {...$$restProps} {cssProps} {...props} />
+	<El
+		tag="input"
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{value}
+		bind:element
+		{...$$restProps}
+		{cssProps}
+		{...props} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

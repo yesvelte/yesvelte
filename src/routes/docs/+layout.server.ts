@@ -5,12 +5,12 @@ export interface IHash {
 const routeMap: IHash = {}
 
 navigations.forEach((item) => {
-	if (item.route) {
+	if (!item.children) {
 		routeMap[item.route] = item
 	} else {
 		item.children?.forEach((child) => {
 			if (child.route) {
-				routeMap[child.route] = child
+				routeMap[item.route + child.route] = child
 			}
 		})
 	}
@@ -18,7 +18,7 @@ navigations.forEach((item) => {
 
 export function load(params: any) {
 	const route = params.url.pathname
-	let currentRout: Navigation = {}
+	let currentRout: Partial<Navigation> = {}
 	Object.keys(routeMap).forEach((k) => {
 		if (route === k || route + '/' === k) {
 			currentRout = routeMap[k]

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { SwitchProps } from './Switch.types'
@@ -21,7 +19,6 @@
 	export let checked: $$Props['checked'] = false
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
-	export let forwardEvents: $$Props['forwardEvents'] = forwardEventsBuilder(get_current_component())
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -41,8 +38,7 @@
 			tag,
 			checked,
 			componentName,
-      label,
-			forwardEvents,
+			label,
 			role,
 			disabled,
 			type,
@@ -52,7 +48,17 @@
 </script>
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
-	<El bind:id {...$$restProps} {cssProps} {...props} on:change={onChange} on:change />
+	<El
+		bind:id
+		{...$$restProps}
+		{cssProps}
+		{...props}
+		on:change={onChange}
+		on:change
+		on:click
+		on:focus
+		on:input
+		on:blur />
 	{#if label || $$slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			<slot>
