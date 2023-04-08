@@ -357,11 +357,16 @@
 	//#region animation
 	let animateClasses: string | undefined
 	let animateTimeout: NodeJS.Timeout
-	$: animate(show)
+	$: element && animate(show)
 	function animate(show: any) {
 		if (!element) return
 
-		if (show == undefined) return
+		if (!('show' in $$props)) return
+
+		if (!animateClasses) {
+			show ? change('opened') : change('closed')
+			return
+		}
 
 		function change(state: string) {
 			clearTimeout(animateTimeout)

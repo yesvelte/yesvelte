@@ -2,7 +2,6 @@ $offcanvas-placements: 'start' 'end' 'top' 'bottom';
 
 $props: (
 	null: '.offcanvas',
-	show: '.show',
 	placement: generate_props($offcanvas-placements, ('.offcanvas-')),
 	header: (
 		null: '.offcanvas-header',
@@ -16,6 +15,7 @@ $props: (
 	@include apply-props($props);
 
 	&-backdrop {
+		display: none;
 		width: 100vw !important;
 		height: 100vh !important;
 		background: rgba(0, 0, 0, 0.6);
@@ -25,6 +25,45 @@ $props: (
 		bottom: 0 !important;
 		right: 0 !important;
 		z-index: 999;
+	}
+
+	&-show {
+		&-close,
+		&-closing,
+		&-open,
+		&-opening,
+		&-opened {
+			visibility: visible;
+		}
+		&-opening,
+		&-opened {
+			transform: translateX(0) !important;
+		}
+	}
+
+	&-backdrop-show {
+		&-opening,
+		&-closing {
+			transition: 0.3s ease-out;
+		}
+
+		&-open,
+		&-closing {
+			display: block;
+			opacity: 0;
+		}
+
+		&-close,
+		&-opening,
+		&-opened {
+			display: block;
+			opacity: var(--y-backdrop-opacity);
+		}
+
+		&-closed {
+			display: none;
+			opacity: 0;
+		}
 	}
 }
 
