@@ -4,6 +4,10 @@
 	import FormSelectColumn from './FormSelectColumn.svelte'
 	import FormSelectState from './FormSelectState.svelte'
 	import FormSelectHint from './FormSelectHint.svelte'
+	import FormSelectItemsBind from './FormSelectItemsBind.svelte'
+	import FormSelectKey from './FormSelectKey.svelte'
+	import FormSelectEvents from './FormSelectEvents.svelte'
+	import FormSelectObject from './FormSelectObject.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -21,15 +25,39 @@
 		</Preview>
 	</Doc>
 
+	<Doc title="Key">
+		<Preview src="./FormSelectKey.svelte">
+			<FormSelectKey />
+		</Preview>
+	</Doc>
+
 	<Doc title="Hint/Validation Message">
 		<Preview src="./FormSelectHint.svelte">
 			<FormSelectHint />
 		</Preview>
 	</Doc>
 
+	<Doc title="Events">
+		<Preview src="./FormSelectEvents.svelte">
+			<FormSelectEvents />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./FormSelectObject.svelte">
+			<FormSelectObject />
+		</Preview>
+	</Doc>
+
 	<Doc title="State">
 		<Preview src="./FormSelectState.svelte">
 			<FormSelectState />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind Item">
+		<Preview src="./FormSelectItemsBind.svelte">
+			<FormSelectItemsBind />
 		</Preview>
 	</Doc>
 

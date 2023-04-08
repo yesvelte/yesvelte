@@ -2,63 +2,63 @@
 	import { Button, Icon } from 'yesvelte'
 </script>
 
-<Button icon color="primary">
+<Button color="primary">
 	<Icon name="settings" />
 </Button>
-<Button icon color="secondary">
+<Button color="secondary">
 	<Icon name="settings" />
 </Button>
-<Button icon color="success">
+<Button color="success">
 	<Icon name="settings" />
 </Button>
-<Button icon color="warning">
+<Button color="warning">
 	<Icon name="settings" />
 </Button>
-<Button icon color="danger">
+<Button color="danger">
 	<Icon name="settings" />
 </Button>
-<Button icon color="info">
+<Button color="info">
 	<Icon name="settings" />
 </Button>
-<Button icon color="light">
+<Button color="light">
 	<Icon name="settings" />
 </Button>
-<Button icon color="dark">
+<Button color="dark">
 	<Icon name="settings" />
 </Button>
-<Button icon color="azure">
+<Button color="azure">
 	<Icon name="settings" />
 </Button>
-<Button icon color="blue">
+<Button color="blue">
 	<Icon name="settings" />
 </Button>
-<Button icon color="indigo">
+<Button color="indigo">
 	<Icon name="settings" />
 </Button>
-<Button icon color="purple">
+<Button color="purple">
 	<Icon name="settings" />
 </Button>
-<Button icon color="pink">
+<Button color="pink">
 	<Icon name="settings" />
 </Button>
-<Button icon color="red">
+<Button color="red">
 	<Icon name="settings" />
 </Button>
-<Button icon color="orange">
+<Button color="orange">
 	<Icon name="settings" />
 </Button>
-<Button icon color="yellow">
+<Button color="yellow">
 	<Icon name="settings" />
 </Button>
-<Button icon color="lime">
+<Button color="lime">
 	<Icon name="settings" />
 </Button>
-<Button icon color="green">
+<Button color="green">
 	<Icon name="settings" />
 </Button>
-<Button icon color="teal">
+<Button color="teal">
 	<Icon name="settings" />
 </Button>
-<Button icon color="cyan">
+<Button color="cyan">
 	<Icon name="settings" />
 </Button>

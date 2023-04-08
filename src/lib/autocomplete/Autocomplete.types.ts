@@ -9,5 +9,7 @@ export interface AutocompleteProps extends Partial<ElProps> {
 	placeholder?: string
 	size?: InputSizes
 	state?: InputStates
+	name?: string
 	value?: string | any | any[]
+	_slots?: Record<string, boolean>
 }

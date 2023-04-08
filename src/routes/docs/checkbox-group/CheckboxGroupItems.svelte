@@ -23,10 +23,10 @@
 			value: 'ap',
 		},
 	]
-	let value: string[] = []
+	let value: string[] = ['p', 'a']
 </script>
 
-<CheckboxGroup {items} bind:value let:item let:index>
+<CheckboxGroup {items} key={(item) => item.value} bind:value let:item let:index>
 	{index}- <b>{item.name}</b> ({item.value})
 </CheckboxGroup>
 

@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.55",
+	"version": "0.0.2-next.95",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -16,10 +16,10 @@
 		"yesvelte",
 		"tabler"
 	],
-	"homepage": "https://www.yesvelte.com/",
+	"homepage": "https://www.yesvelte.com",
 	"bugs": {
 		"url": "https://github.com/yesvelte/yesvelte/issues",
-		"email": "ap@momentaj.io"
+		"email": "ap@momentaj.com"
 	},
 	"repository": {
 		"type": "git",
@@ -30,8 +30,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "npm run style && svelte-kit sync && svelte-package",
-		"build:site": "vite build",
-		"publish": "npm run style && npm run build && npm publish ./package/",
+		"build:site": "npm run style && vite build",
+		"publish": "npm run build && npm publish ./package/",
 		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -53,11 +53,13 @@
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"daisyui": "^2.51.0",
+		"cssnano": "^5.1.15",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"gh-pages": "^5.0.0",
 		"param-case": "^3.0.4",
+		"postcss-filter-rules": "^0.6.2",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"prismjs": "^1.29.0",
@@ -74,7 +76,7 @@
 		"svelte": "^3.54.0"
 	},
 	"dependencies": {
-		"@popperjs/core": "^2.11.6",
+		"@floating-ui/dom": "^1.2.3",
 		"change-case": "^4.1.2",
 		"iconify-icon": "^1.0.5",
 		"inputmask": "^5.0.7",

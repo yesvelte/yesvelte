@@ -61,7 +61,7 @@
 </script>
 
 <El {...wrapperProps}>
-	<El {...checkboxProps} bind:element on:change={onChange} on:change />
+	<El {...checkboxProps} bind:element on:change={onChange} on:input on:click on:focus on:blur on:change />
 	{#if label || $$slots['default']}
 		<El {...labelProps}>
 			<slot>

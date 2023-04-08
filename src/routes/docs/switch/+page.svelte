@@ -5,6 +5,7 @@
 	import SwitchDescription from './SwitchDescription.svelte'
 	import SwitchDisabled from './SwitchDisabled.svelte'
 	import SwitchInline from './SwitchInline.svelte'
+	import SwitchLabel from './SwitchLabel.svelte'
 	import SwitchReverse from './SwitchReverse.svelte'
 </script>
 
@@ -15,6 +16,12 @@ toggle, or on/off switch, though aesthetically different than a Switch.">
 	<Doc title="Default">
 		<Preview src="./SwitchDefault.svelte">
 			<SwitchDefault />
+		</Preview>
+	</Doc>
+
+	<Doc title="Label">
+		<Preview src="./SwitchLabel.svelte">
+			<SwitchLabel />
 		</Preview>
 	</Doc>
 

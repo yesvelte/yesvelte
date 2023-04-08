@@ -8,8 +8,10 @@
 	export let color: $$Props['color'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let items: $$Props['items'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-radio-group'
 
 	let radioGroupProps: $$Props = {}
@@ -19,6 +21,8 @@
 			inline,
 			reverse,
 			items,
+			name,
+			key,
 		}
 	}
 </script>

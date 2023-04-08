@@ -7,7 +7,7 @@
 	let checked4 = false
 </script>
 
-<Switch bind:checked={checked1} text="Switch 1: {checked1}" />
-<Switch bind:checked={checked2} text="Switch 2: {checked2}" />
-<Switch bind:checked={checked3} disabled text="Switch disabled 3: {checked3}" />
-<Switch bind:checked={checked4} disabled text="Switch disabled 4: {checked4}" />
+<Switch bind:checked={checked1} label="Switch 1: {checked1}" />
+<Switch bind:checked={checked2} label="Switch 2: {checked2}" />
+<Switch bind:checked={checked3} disabled label="Switch disabled 3: {checked3}" />
+<Switch bind:checked={checked4} disabled label="Switch disabled 4: {checked4}" />

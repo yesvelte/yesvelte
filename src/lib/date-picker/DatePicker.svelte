@@ -17,6 +17,7 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
 
 	const dispatch = createEventDispatcher()
@@ -78,6 +79,7 @@
 			componentName,
 			placeholder,
 			disabled,
+			name,
 		}
 	}
 	onMount(() => {
@@ -98,7 +100,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" {value} bind:element {...$$restProps} {cssProps} {...props} />
+	<El
+		tag="input"
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{value}
+		bind:element
+		{...$$restProps}
+		{cssProps}
+		{...props} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

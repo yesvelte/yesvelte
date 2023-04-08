@@ -5,8 +5,9 @@
 
 	type $$Props = FormSelectProps
 
-	export let items: $$Props['items']
+	export let items: $$Props['items'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let label: $$Props['label'] = undefined
@@ -14,6 +15,7 @@
 	export let required: $$Props['required'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
 
 	let selectProps: SelectProps = {}
@@ -26,6 +28,8 @@
 			size,
 			items,
 			state,
+			key,
+			name,
 		}
 
 		props = {
@@ -40,7 +44,16 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Select {...selectProps} bind:value let:item let:index>
+	<Select
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...selectProps}
+		bind:value
+		let:item
+		let:index>
 		<slot {index} {item}>{item}</slot>
 	</Select>
 	<slot name="hint" />

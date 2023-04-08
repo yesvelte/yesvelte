@@ -13,10 +13,12 @@
 	export let maskOptions: $$Props['maskOptions'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
+	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -50,7 +52,9 @@
 			placeholder,
 			disabled,
 			readonly,
+			required,
 			type,
+			name,
 		}
 	}
 </script>
@@ -60,7 +64,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" bind:value bind:element {...$$restProps} {...props} {cssProps} />
+	<El
+		tag="input"
+		bind:value
+		bind:element
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...$$restProps}
+		{...props}
+		{cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

@@ -60,7 +60,7 @@
 								<ul class="list-unstyled">
 									{#each navigation.children as menu}
 										<li>
-											- <a href={menu.route}>{menu.title}</a>
+											- <a href={navigation.route + menu.route}>{menu.title}</a>
 										</li>
 									{/each}
 								</ul>

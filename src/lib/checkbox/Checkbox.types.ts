@@ -16,6 +16,8 @@ export interface CheckboxGroupProps extends Partial<ElProps> {
 	inline?: boolean
 	color?: Colors
 	items?: Array<any>
+	name?: string
+	key?: string | (any) => string | number
 	reverse?: boolean
 	value?: Array<any>
 }

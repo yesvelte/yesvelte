@@ -41,6 +41,11 @@
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
 	<El
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
 		tag="input"
 		{...{ type: 'radio' }}
 		bind:element={inputElement}

@@ -3,11 +3,14 @@
 
 	import AutocompleteDefault from './AutocompleteDefault.svelte'
 	import AutocompleteDisabled from './AutocompleteDisabled.svelte'
+	import AutocompleteEvents from './AutocompleteEvents.svelte'
 	import AutocompleteKey from './AutocompleteKey.svelte'
 	import AutocompleteObject from './AutocompleteObject.svelte'
 	import AutocompletePlaceholder from './AutocompletePlaceholder.svelte'
 	import AutocompleteSizes from './AutocompleteSizes.svelte'
 	import AutocompleteStates from './AutocompleteStates.svelte'
+	import AutocompleteAvatar from './AutocompleteAvatar.svelte'
+	import AutocompleteFlags from './AutocompleteFlags.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -33,6 +36,13 @@
 		</Preview>
 	</Doc>
 
+	<Doc title="Events">
+		<p slot="description">Autocomplete only supports <code>changed</code> event.</p>
+		<Preview src="./AutocompleteEvents.svelte">
+			<AutocompleteEvents />
+		</Preview>
+	</Doc>
+
 	<Doc title="Size">
 		<Preview src="./AutocompleteSizes.svelte">
 			<div class="custom-class"><AutocompleteSizes /></div>
@@ -41,8 +51,8 @@
 
 	<Doc title="Complex Items">
 		<p slot="description">
-			You can have complex objects as item and you need to use <code>itemKey</code> and
-			<code>itemValue</code> props to extract the data that Autocomplete needs.
+			You can have complex objects as item and using <code>key</code> prop you can extract the data that
+			You need from Autocomplete.
 		</p>
 		<Preview src="./AutocompleteObject.svelte">
 			<AutocompleteObject />
@@ -64,7 +74,25 @@
 			You can use <code>key</code> prop to set a custom key for the input element.
 		</p>
 		<Preview src="./AutocompleteKey.svelte">
-			<AutocompleteKey />
+			<div class="custom-class">
+				<AutocompleteKey />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="With Avatar">
+		<p slot="description">You can use any component inside Autocomplete like this:</p>
+		<Preview src="./AutocompleteAvatar.svelte">
+			<div class="custom-class">
+				<AutocompleteAvatar />
+			</div>
+		</Preview>
+	</Doc>
+	<Doc title="Custom Options">
+		<Preview src="./AutocompleteFlags.svelte">
+			<div class="custom-class">
+				<AutocompleteFlags />
+			</div>
 		</Preview>
 	</Doc>
 </Page>

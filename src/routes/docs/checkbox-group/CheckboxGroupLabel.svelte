@@ -8,10 +8,10 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value = [items[1]]
+	let value = ['html']
 </script>
 
-<CheckboxGroup bind:value {items} let:item let:index>
+<CheckboxGroup bind:value {items} key="code" let:item let:index>
 	{(index || 0) + 1}- {item.text}
 </CheckboxGroup>
 

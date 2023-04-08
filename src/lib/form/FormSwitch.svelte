@@ -7,6 +7,7 @@
 
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-switch'
@@ -17,6 +18,7 @@
 	export let value: $$Props['value'] = undefined
 	export let checked: $$Props['checked'] = undefined
 	export let inline: $$Props['inline'] = undefined
+
 
 	let props: $$Props = {}
 	let switchProps: SwitchProps = {}
@@ -37,13 +39,23 @@
 			reverse,
 			checked,
 			disabled,
+			name,
 		}
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Switch {...switchProps} bind:checked bind:value on:change>
+	<Switch
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...switchProps}
+		bind:checked
+		bind:value
+		on:change>
 		<slot />
 	</Switch>
 	<slot name="hint" />

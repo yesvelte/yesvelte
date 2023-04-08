@@ -19,6 +19,7 @@
 	export let checked: $$Props['checked'] = undefined
 	export let indeterminate: $$Props['indeterminate'] = undefined
 	export let inline: $$Props['inline'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	$: props = {
 		required,
@@ -35,12 +36,13 @@
 		reverse,
 		indeterminate,
 		disabled,
+		name,
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Checkbox {...checkboxProps} bind:checked bind:value on:change>
+	<Checkbox on:click on:input on:focus on:blur {...checkboxProps} bind:checked bind:value on:change>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />

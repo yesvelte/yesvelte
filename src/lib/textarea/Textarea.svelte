@@ -11,6 +11,7 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
 	export let rows: $$Props['rows'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let type: $$Props['type'] = undefined
@@ -34,11 +35,19 @@
 			readonly,
 			type,
 			rows,
+			name,
 		}
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={{ size }}>
+<El
+	on:click
+	on:change
+	on:input
+	on:focus
+	on:blur
+	componentName="{componentName}-wrapper"
+	cssProps={{ size }}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}

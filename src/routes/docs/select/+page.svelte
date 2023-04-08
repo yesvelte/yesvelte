@@ -2,10 +2,14 @@
 	import { Page, Doc, Preview } from '$components'
 	import SelectDefault from './SelectDefault.svelte'
 	import SelectItems from './SelectItems.svelte'
+	import SelectKey from './SelectKey.svelte'
+	import SelectItemsBind from './SelectItemsBind.svelte'
 	import SelectPlaceholder from './SelectPlaceholder.svelte'
 	import SelectSizes from './SelectSizes.svelte'
 	import SelectDisabled from './SelectDisabled.svelte'
 	import SelectStates from './SelectStates.svelte'
+	import SelectEvents from './SelectEvents.svelte'
+	import SelectObject from './SelectObject.svelte'
 </script>
 
 <Page
@@ -20,6 +24,24 @@
 	<Doc title="Items">
 		<Preview src="./SelectItems.svelte">
 			<div class="custom-class"><SelectItems /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Key">
+		<Preview src="./SelectKey.svelte">
+			<div class="custom-class"><SelectKey /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind Item">
+		<Preview src="./SelectItemsBind.svelte">
+			<div class="custom-class"><SelectItemsBind /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./SelectObject.svelte">
+			<div class="custom-class"><SelectObject /></div>
 		</Preview>
 	</Doc>
 
@@ -38,6 +60,12 @@
 	<Doc title="Disabled">
 		<Preview src="./SelectDisabled.svelte">
 			<div class="custom-class"><SelectDisabled /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Events">
+		<Preview src="./SelectEvents.svelte">
+			<div class="custom-class"><SelectEvents /></div>
 		</Preview>
 	</Doc>
 

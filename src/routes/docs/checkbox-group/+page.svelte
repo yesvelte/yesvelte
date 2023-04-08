@@ -1,11 +1,13 @@
 <script>
 	import { Page, Doc, Preview } from '$components'
 	import CheckboxGroupInline from './CheckboxGroupInline.svelte'
+	import CheckboxGroupKey from './CheckboxGroupKey.svelte'
 	import CheckboxGroupItems from './CheckboxGroupItems.svelte'
 	import CheckboxGroupDefault from './CheckboxGroupDefault.svelte'
 	import CheckboxGroupReverse from './CheckboxGroupReverse.svelte'
 	import CheckboxGroupLabel from './CheckboxGroupLabel.svelte'
 	import CheckboxGroupColor from './CheckboxGroupColor.svelte'
+	import CheckboxGroupBindObject from './CheckboxGroupBindObject.svelte'
 </script>
 
 <Page title="CheckboxGroup">
@@ -26,6 +28,15 @@
 		</p>
 		<Preview src="./CheckboxGroupLabel.svelte">
 			<CheckboxGroupLabel />
+		</Preview>
+	</Doc>
+
+	<Doc title="Key">
+		<p slot="description">
+			Using key prop you can to choose which field of object should bind to <code>value</code>.
+		</p>
+		<Preview src="./CheckboxGroupKey.svelte">
+			<CheckboxGroupKey />
 		</Preview>
 	</Doc>
 
@@ -65,6 +76,12 @@
 		</p>
 		<Preview src="./CheckboxGroupItems.svelte">
 			<CheckboxGroupItems />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./CheckboxGroupBindObject.svelte">
+			<CheckboxGroupBindObject />
 		</Preview>
 	</Doc>
 </Page>

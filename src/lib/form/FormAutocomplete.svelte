@@ -10,6 +10,7 @@
 	export let items: $$Props['items'] = []
 	export let key: $$Props['key'] = undefined
 	export let label: $$Props['label'] = undefined
+	export let name: $$Props['name'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
@@ -32,6 +33,7 @@
 			items,
 			key,
 			placeholder,
+			name,
 			size,
 			state,
 		}
@@ -40,8 +42,15 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...autocompleteProps} bind:value let:item let:index>
+	<Autocomplete
+		{...autocompleteProps}
+		on:changed
+		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
+		bind:value
+		let:item
+		let:index>
 		<slot {index} {item}>{item}</slot>
+		<slot name="selected" slot="selected" {index} {item}>{item}</slot>
 	</Autocomplete>
 	<slot name="hint" />
 </FormField>

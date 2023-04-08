@@ -15,6 +15,7 @@
 	export let value: $$Props['value'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	let props: $$Props = {}
 	let datePickerProps: $$Props = {}
@@ -35,13 +36,22 @@
 			state,
 			borderRounded,
 			borderFlush,
+			name,
 		}
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<DatePicker {...datePickerProps} bind:value on:changed>
+	<DatePicker
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...datePickerProps}
+		bind:value
+		on:changed>
 		<slot />
 	</DatePicker>
 	<slot name="hint" />

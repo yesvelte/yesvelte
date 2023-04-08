@@ -141,14 +141,14 @@
 </Page>
 
 <style>
-	.custom-class :global([class*='u-el-col']) {
+	.custom-class :global([class*='y-el-col']) {
 		background-color: rgba(238, 130, 238, 0.1);
 		border: 1px solid rgba(238, 130, 238, 0.5);
 		text-align: center;
 		padding-top: 0.75rem;
 		padding-bottom: 0.75rem;
 	}
-	.custom-class :global([class*='u-el-row']) {
+	.custom-class :global([class*='y-el-row']) {
 		margin-bottom: 0.75rem;
 	}
 </style>

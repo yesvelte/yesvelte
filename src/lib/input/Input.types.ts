@@ -17,6 +17,7 @@ export interface InputProps extends Partial<ElProps> {
 	disabled?: boolean
 	placeholder?: string
 	readonly?: boolean
+	required?: boolean
 	size?: InputSizes
 	value?: unknown
 	state?: InputStates
@@ -24,5 +25,12 @@ export interface InputProps extends Partial<ElProps> {
 	borderFlush?: boolean
 	type?: InputTypes
 	mask?: string
+	name?: string
 	maskOptions?: object
+	min?: string | number
+	max?: string | number
+	minlength?: string | number
+	maxlength?: string | number
+	pattern?: string
+	step?: string | number
 }

@@ -17,7 +17,7 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Breadcrumb variations">
+	<Doc title="Separator">
 		<p slot="description">
 			If you wish to use different separators, set the <code>separator</code> prop. Depending on the
 			aesthetics of your design, you can choose dots, bullets or arrows.
@@ -28,7 +28,7 @@
 	</Doc>
 
 	<Doc
-		title="Breadcrumb in Header"
+		title="Header"
 		description="If you wish to use breadcrumbs in headers, place them above the headers.">
 		<Preview src="./BreadcrumbHeader.svelte">
 			<BreadcrumbHeader />
