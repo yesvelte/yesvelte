@@ -25,6 +25,7 @@
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
 	export let show: $$Props['show'] = undefined
+	export let showConfig: $$Props['showConfig'] = undefined
 
 	let classes: string | undefined
 	let defaultCssProps: CssProps
@@ -341,6 +342,8 @@
 
 		classes += animateClasses || ''
 
+		const styles = `${style || ''};${animateStyles || ''}`
+
 		elProps = {
 			id,
 			class: classes,
@@ -350,21 +353,22 @@
 			ariaCurrent,
 			ariaLabel,
 			ariaValuenow,
-			style,
+			style: styles,
 		}
 	}
 
 	//#region animation
-	let animateClasses: string | undefined
+	let animateClasses: string | undefined = ' '
+	let animateStyles: string | undefined = ' '
 	let animateTimeout: NodeJS.Timeout
 	$: element && animate(show)
 	function animate(show: any) {
-		if (!element) return
-
 		if (!('show' in $$props)) return
 
-		if (!animateClasses) {
-			show ? change('opened') : change('closed')
+		if (animateClasses == ' ') {
+			next(() => {
+				show ? change('opened') : change('closed')
+			})
 			return
 		}
 
@@ -396,21 +400,51 @@
 
 		if (show) {
 			next(() => {
+				if (showConfig == 'height') {
+					animateStyles = `; max-height: 0;`
+				}
+
 				change('open')
+
 				next(() => {
+					if (showConfig == 'height') {
+						animateStyles = `; max-height: ${element!.scrollHeight}px;`
+					}
+
 					change('opening')
+
 					next(() => {
-						animateTimeout = setTimeout(() => change('opened'), duration())
+						animateTimeout = setTimeout(() => {
+							if (showConfig == 'height') {
+								animateStyles = ' '
+							}
+							change('opened')
+						}, duration())
 					})
 				})
 			})
 		} else {
 			next(() => {
+				if (showConfig == 'height') {
+					animateStyles = `; max-height: ${element!.scrollHeight}px;`
+				}
+
 				change('close')
+
 				next(() => {
+					if (showConfig == 'height') {
+						animateStyles = `; max-height: 0;`
+					}
+
 					change('closing')
+
 					next(() => {
-						animateTimeout = setTimeout(() => change('closed'), duration())
+						animateTimeout = setTimeout(() => {
+							if (showConfig == 'height') {
+								animateStyles = ' '
+							}
+							change('closed')
+						}, duration())
 					})
 				})
 			})

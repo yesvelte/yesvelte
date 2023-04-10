@@ -348,4 +348,5 @@ export interface ElProps extends CssProps {
 	'aria-valuenow'?: number
 	style?: string
 	show?: boolean
+	showConfig?: 'height'
 }

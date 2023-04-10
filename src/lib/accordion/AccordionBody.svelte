@@ -13,10 +13,12 @@
 	$: props = {
 		componentName,
 	}
+
+	$: show = $ctx.open
 </script>
 
-{#if $ctx.open}
-	<El {...$$restProps} {...props}>
+<El {...$$restProps} {...props} {show} showConfig="height">
+	<div>
 		<slot />
-	</El>
-{/if}
+	</div>
+</El>
