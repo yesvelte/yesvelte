@@ -1,6 +1,7 @@
 <script>
 	import { Page, Doc, Preview } from '$components'
 	import FloatingButton from './FloatingButton.svelte'
+	import FloatingButtonMultiple from './FloatingButtonMultiple.svelte'
 	import FloatingDefault from './FloatingDefault.svelte'
 	import FloatingOffset from './FloatingOffset.svelte'
 	import FloatingPlacement from './FloatingPlacement.svelte'
@@ -25,6 +26,11 @@
 	<Doc title="Button">
 		<Preview src="./FloatingButton.svelte">
 			<FloatingButton />
+		</Preview>
+	</Doc>
+	<Doc title="Button Multiple">
+		<Preview src="./FloatingButtonMultiple.svelte">
+			<FloatingButtonMultiple />
 		</Preview>
 	</Doc>
 </Page>
