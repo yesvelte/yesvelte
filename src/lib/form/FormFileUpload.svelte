@@ -39,13 +39,13 @@
 		state,
 		multiple,
 		accept,
-		name
+		name,
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<FileUpload {...fileUploadProps} bind:files on:change>
+	<FileUpload on:click on:change on:input on:focus on:blur {...fileUploadProps} bind:files>
 		<slot />
 	</FileUpload>
 	<slot name="hint" />

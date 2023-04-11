@@ -100,7 +100,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" {value} bind:element {...$$restProps} {cssProps} {...props} />
+	<El
+		tag="input"
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{value}
+		bind:element
+		{...$$restProps}
+		{cssProps}
+		{...props} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

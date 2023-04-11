@@ -42,7 +42,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Checkbox {...checkboxProps} bind:checked bind:value on:change>
+	<Checkbox on:click on:input on:focus on:blur {...checkboxProps} bind:checked bind:value on:change>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />

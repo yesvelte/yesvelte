@@ -15,6 +15,7 @@
 	export let required: $$Props['required'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
 
 	let selectProps: SelectProps = {}
@@ -27,6 +28,7 @@
 			size,
 			items,
 			state,
+			key,
 			name,
 		}
 
@@ -42,7 +44,16 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Select {...selectProps} bind:value let:item let:index>
+	<Select
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...selectProps}
+		bind:value
+		let:item
+		let:index>
 		<slot {index} {item}>{item}</slot>
 	</Select>
 	<slot name="hint" />

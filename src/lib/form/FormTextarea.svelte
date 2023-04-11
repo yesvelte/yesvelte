@@ -21,6 +21,10 @@
 	export let value: $$Props['value'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
+	export let minlength: $$Props['minlength'] = undefined
+	export let maxlength: $$Props['maxlength'] = undefined
+	export let cols: $$Props['cols'] = undefined
+
 
 	let props: $$Props = {}
 	let teaxtareaProps: $$Props = {}
@@ -47,12 +51,23 @@
 			borderFlush,
 			rows,
 			name,
+			minlength,
+			maxlength,
+			cols,
 		}
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Textarea {...teaxtareaProps} bind:value />
+	<Textarea
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur 
+		{...teaxtareaProps} 
+		bind:value 
+	/>
 	<slot name="hint" />
 </FormField>

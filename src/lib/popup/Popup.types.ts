@@ -5,13 +5,15 @@
 // export let arrow: boolean = false
 // export let componentName: string = 'popup'
 
-import type { ElProps } from '$lib/el'
+import type { ElProps } from '../el'
 import type { AlignedPlacement, Placement } from '@floating-ui/dom'
 
 export interface PopupProps extends Partial<ElProps> {
-	target?: HTMLElement | string
+	target?: Element | string
 	placement?: Placement | AlignedPlacement
 	trigger?: 'click' | 'hover' | 'focus'
 	popupOffset?: number
+	autoClose?: boolean | 'inside' | 'outside'
 	arrow?: boolean
+	show?: boolean
 }

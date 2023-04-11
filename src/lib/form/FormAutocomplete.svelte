@@ -42,8 +42,15 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Autocomplete {...autocompleteProps} bind:value let:item let:index>
+	<Autocomplete
+		{...autocompleteProps}
+		on:changed
+		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
+		bind:value
+		let:item
+		let:index>
 		<slot {index} {item}>{item}</slot>
+		<slot name="selected" slot="selected" {index} {item}>{item}</slot>
 	</Autocomplete>
 	<slot name="hint" />
 </FormField>

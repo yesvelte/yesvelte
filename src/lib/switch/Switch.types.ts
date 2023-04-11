@@ -3,7 +3,7 @@ import type { Colors, ElProps } from '../el'
 export interface SwitchProps extends Partial<ElProps> {
 	color?: Colors
 	inline?: boolean
-	text?: string
+	label?: string
 	checked?: boolean
 	reverse?: boolean
 	disabled?: boolean

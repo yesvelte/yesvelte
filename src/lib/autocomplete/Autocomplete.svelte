@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte'
+	import { createEventDispatcher } from 'svelte/internal'
 	import TomSelect from 'tom-select'
-	import type { RecursivePartial, TomSettings } from 'tom-select/dist/types/types'
+	import type { RecursivePartial, TomSettings, TomTemplates } from 'tom-select/dist/types/types'
 	import { El } from '../el'
 	import { classname } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
@@ -17,12 +18,19 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let _slots: Record<string, boolean> = $$slots
+
+	const dispatch = createEventDispatcher()
+
+	let customOptions: HTMLElement[] = []
+	let customItems: HTMLElement[] = []
 
 	let element: HTMLSelectElement
 	let instance: TomSelect
 	let loaded = false
 	let props: $$Props
 	let settings: Partial<TomSettings>
+	let indexOfValue: number | undefined = undefined
 	$: {
 		props = {
 			componentName,
@@ -34,28 +42,35 @@
 		settings = {
 			dropdownClass: classname(componentName + '-dropdown'),
 			optionClass: classname(componentName + '-option'),
-			onChange(key) {
-				value = items?.[key as any]
+			onChange(newValue) {
+				value = getKey(items[newValue])
+
+				dispatch('changed', value)
 			},
 			onInitialize() {
 				loaded = true
 			},
 		} as Partial<TomSettings>
 
+		settings.render ??= {} as TomTemplates
+
+		settings.render.item = (data) => customItems[data.value]
+		settings.render.option = (data) => customOptions[data.value]
+
 		disabled ? instance?.disable() : instance?.enable()
 
-		instance && update('items', items)
-		instance && update('value', value)
+		indexOfValue = items!.findIndex((item) => getKey(item) == value)
 	}
 
-	function getKey(item: any, fallback: any) {
-		if (!key) return fallback
+	$: instance && update('items', items)
+	$: instance && update('value', value)
+
+	function getKey(item: any) {
+		if (!key) return item
 
 		if (typeof key == 'function') return key(item)
 
-		const computed = typeof item === 'object' ? item[key] : item
-
-		return `${typeof computed}:${computed}`
+		return typeof item === 'object' ? item[key] : item
 	}
 
 	function bind() {
@@ -75,8 +90,7 @@
 		}
 
 		if (key == 'value') {
-			const index = items?.findIndex((item) => item === value)
-			instance.setValue(`${index || ''}`, true)
+			requestAnimationFrame(() => instance.setValue(`${indexOfValue ?? ''}`, true))
 		}
 	}
 
@@ -86,10 +100,26 @@
 </script>
 
 <El tag="select" bind:element {name} {...$$restProps} {...props}>
-	{#each items || [] as item, index (getKey(item, index))}
+	{#each items || [] as item, index (getKey(item))}
 		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-		<option value={index} selected={value === item}>
+		<option value={index} selected={indexOfValue == index}>
 			<slot {index} {item}>{item}</slot>
 		</option>
 	{/each}
 </El>
+
+<div class="d-none">
+	{#each items ?? [] as item, index}
+		<El bind:element={customOptions[index]}>
+			<slot {index} {item}>{item}</slot>
+		</El>
+
+		<El bind:element={customItems[index]}>
+			{#if _slots['selected']}
+				<slot name="selected" {index} {item}>{item}</slot>
+			{:else}
+				<slot {index} {item}>{item}</slot>
+			{/if}
+		</El>
+	{/each}
+</div>

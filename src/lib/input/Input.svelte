@@ -54,7 +54,7 @@
 			readonly,
 			required,
 			type,
-			name
+			name,
 		}
 	}
 </script>
@@ -64,7 +64,18 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El tag="input" bind:value bind:element {...$$restProps} {...props} {cssProps} />
+	<El
+		tag="input"
+		bind:value
+		bind:element
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...$$restProps}
+		{...props}
+		{cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

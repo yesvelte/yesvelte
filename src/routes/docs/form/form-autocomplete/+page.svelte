@@ -1,7 +1,9 @@
 <script>
 	import { Page, Doc, Preview } from '$components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
+	import FormAutocompleteCustomOption from './FormAutocompleteCustomOption.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
+	import FormAutocompleteEvents from './FormAutocompleteEvents.svelte'
 	import FormAutocompleteKey from './FormAutocompleteKey.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
@@ -14,8 +16,8 @@
 
 <Page title="FormAutocomplete">
 	<p slot="description">
-		FormAutocomplete supports all props and events of <a href="/docs/components/autocompletes"
-			>Autocomplete</a> and also have some additional features
+		FormAutocomplete supports all props and events of <a href="/docs/autocomplete">Autocomplete</a> and
+		also have some additional features
 	</p>
 
 	<Doc title="Label">
@@ -44,9 +46,8 @@
 
 	<Doc title="Complex Items">
 		<p slot="description">
-			You can have complex objects as item and you need to use <code>itemKey</code> and
-			<code>itemValue</code>
-			props to extract the data that Autocomplete needs
+			You can have complex objects as item and you can use <code>key</code>
+			prop to extract the data that you need from Autocomplete.
 		</p>
 		<Preview src="./FormAutocompleteObject.svelte">
 			<FormAutocompleteObject />
@@ -63,11 +64,26 @@
 		</Preview>
 	</Doc>
 
+	<Doc title="Events">
+		<p slot="description">FormAutocomplete only supports <code>changed</code> event.</p>
+		<Preview src="./FormAutocompleteEvents.svelte">
+			<FormAutocompleteEvents />
+		</Preview>
+	</Doc>
+
 	<Doc
 		title="Hint/Validation Message"
 		description="You can set a message below of Autocomplete like this">
 		<Preview src="./FormAutocompleteMessage.svelte">
 			<FormAutocompleteMessage />
+		</Preview>
+	</Doc>
+
+	<Doc
+		title="Custom Object & Item"
+		description="You can customize options of FormAutocomplete like this:">
+		<Preview src="./FormAutocompleteCustomOption.svelte">
+			<FormAutocompleteCustomOption />
 		</Preview>
 	</Doc>
 
@@ -86,7 +102,7 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Custom Key" description="You can choose a key to increase performance.">
+	<Doc title="Custom Key">
 		<Preview src="./FormAutocompleteKey.svelte">
 			<FormAutocompleteKey />
 		</Preview>

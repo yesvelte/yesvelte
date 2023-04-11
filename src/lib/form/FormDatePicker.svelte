@@ -43,7 +43,15 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<DatePicker {...datePickerProps} bind:value on:changed>
+	<DatePicker
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		{...datePickerProps}
+		bind:value
+		on:changed>
 		<slot />
 	</DatePicker>
 	<slot name="hint" />

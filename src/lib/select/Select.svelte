@@ -11,6 +11,7 @@
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
 	export let value: $$Props['value'] = undefined
+	export let key: $$Props['key'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
@@ -32,19 +33,38 @@
 		}
 	}
 
+	$: getKey = (item: any) => {
+		if (key) {
+			return typeof key === 'string' ? item[key] : key(item)
+		} else {
+			return item
+		}
+	}
+
 	const onChange = (event: any) => {
 		const selectedIndex = event.target.value
-		value = items && selectedIndex ? items[selectedIndex] : undefined
+		value = items && selectedIndex ? getKey(items[selectedIndex]) : undefined
 	}
 </script>
 
-<El tag="select" bind:value {...$$restProps} {...props} {cssProps} on:change={onChange}>
+<El
+	tag="select"
+	on:click
+	on:change
+	on:input
+	on:focus
+	on:blur
+	bind:value
+	{...$$restProps}
+	{...props}
+	{cssProps}
+	on:change={onChange}>
 	{#if items}
 		{#if value == undefined}
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
-			<option value={index} selected={value === item}>
+			<option value={index} selected={value === getKey(item)}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}

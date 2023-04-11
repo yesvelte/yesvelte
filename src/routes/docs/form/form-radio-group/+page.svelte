@@ -6,6 +6,8 @@
 	import FormRadioGroupArrayBinding from './FormRadioGroupArrayBinding.svelte'
 	import FormRadioGroupInline from './FormRadioGroupInline.svelte'
 	import FormRadioGroupReverse from './FormRadioGroupReverse.svelte'
+	import FormRadioGroupKey from './FormRadioGroupKey.svelte'
+	import FormRadioGroupBindObject from './FormRadioGroupBindObject.svelte'
 </script>
 
 <Page title="FormRadioGroup">
@@ -18,6 +20,12 @@
 	<Doc title="Label">
 		<Preview src="./FormRadioGroupLabel.svelte">
 			<FormRadioGroupLabel />
+		</Preview>
+	</Doc>
+
+	<Doc title="Key">
+		<Preview src="./FormRadioGroupKey.svelte">
+			<FormRadioGroupKey />
 		</Preview>
 	</Doc>
 
@@ -46,6 +54,12 @@
 
 		<Preview src="./FormRadioGroupArrayBinding.svelte">
 			<FormRadioGroupArrayBinding />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./FormRadioGroupBindObject.svelte">
+			<FormRadioGroupBindObject />
 		</Preview>
 	</Doc>
 </Page>

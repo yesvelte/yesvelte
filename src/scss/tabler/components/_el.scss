@@ -129,7 +129,10 @@ $props: (
 	my: generate_props($margin-sizes, ('.my-')),
 	col: generate_props($col-sizes, ('.col-')),
 	w: generate_props($width-height-sizes, ('.w-')),
-	h: generate_props($width-height-sizes, ('.h-'))
+	h: generate_props($width-height-sizes, ('.h-')),
+	g: generate_props($gap-sizes, ('.g-')),
+	gx: generate_props($gap-sizes, ('.gx-')),
+	gy: generate_props($gap-sizes, ('.gy-'))
 );
 
 $props-null: (
@@ -140,7 +143,10 @@ $props-null: (
 
 $props-extend: (
 	border: generate_props($border-positions, ('.border-')),
-	col: generate_props($breakpoints, ('.col-'))
+	col: generate_props($breakpoints, ('.col-')),
+	g: generate_props($breakpoints, ('.g-')),
+	gy: generate_props($breakpoints, ('.gy-')),
+	gx: generate_props($breakpoints, ('.gx-'))
 );
 
 .#{$prefix-el} {

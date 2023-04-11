@@ -6,6 +6,8 @@
 	import RadioGroupArrayBinding from './RadioGroupArrayBinding.svelte'
 	import RadioGroupInline from './RadioGroupInline.svelte'
 	import RadioGroupReverse from './RadioGroupReverse.svelte'
+	import RadioGroupBindObject from './RadioGroupBindObject.svelte'
+	import RadioGroupKey from './RadioGroupKey.svelte'
 </script>
 
 <Page title="RadioGroup">
@@ -57,12 +59,24 @@
 		</Preview>
 	</Doc>
 
+	<Doc title="Key">
+		<Preview src="./RadioGroupKey.svelte">
+			<RadioGroupKey />
+		</Preview>
+	</Doc>
+
 	<Doc title="Binding">
 		<p slot="description">
 			Set an array of objects to <code>items</code> property and define <code>label</code>.
 		</p>
 		<Preview src="./RadioGroupArrayBinding.svelte">
 			<RadioGroupArrayBinding />
+		</Preview>
+	</Doc>
+
+	<Doc title="Bind as Object">
+		<Preview src="./RadioGroupBindObject.svelte">
+			<RadioGroupBindObject />
 		</Preview>
 	</Doc>
 </Page>

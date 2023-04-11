@@ -47,6 +47,11 @@ Check this [REPL](https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?versi
 
 Review our [ROADMAP](https://github.com/yesvelte/yesvelte/blob/dev/ROADMAP.md/).
 
-## Questions, Feedback, and Suggestions
+## Community & Support
 
-Looking for a place to chat about YeSvelte and connect with other developers? Check out our [Reddit community](https://www.reddit.com/r/yesvelte/)! We welcome your questions, feedback, and suggestions.
+Use these channels to be part of the community, ask for help while using YeSvelte, or just learn more about it:
+
+- [Reddit](https://www.reddit.com/r/yesvelte): This is the main channel to join the community. You can ask for help, showcase your work with YeSvelte, and stay up to date.
+- [Discord](https://discord.gg/KqC8D6xM9y)
+- [GitHub Issues](https://github.com/yesvelte/yesvelte/issues): for sending in any issues you face or bugs you find while using YeSvelte.
+- [GitHub Discussions](https://github.com/yesvelte/yesvelte/discussions): for joining discussions and submitting your ideas.

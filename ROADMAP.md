@@ -47,11 +47,11 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] Textarea
 - [x] Table
 - [x] Slider
-- [ ] RangeSlider
+- [x] RangeSlider
 - [ ] ColorPicker
-- [ ] Pagination
+- [x] Pagination
 - [ ] FloatingButton (or adding floating action feature to exisiting Button component)
-- [ ] Toast
+- [x] Toast
 - [x] Popover
 - [x] Tooltip
 

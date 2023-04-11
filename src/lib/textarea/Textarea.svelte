@@ -40,7 +40,14 @@
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={{ size }}>
+<El
+	on:click
+	on:change
+	on:input
+	on:focus
+	on:blur
+	componentName="{componentName}-wrapper"
+	cssProps={{ size }}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
