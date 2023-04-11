@@ -42,7 +42,7 @@
 		</Sidebar>
 	</El>
 	<El colLg="8" colSm="12" pt="3">
-		<Card size="lg">
+		<Card size="md">
 			<CardBody>
 				<El tag="h1">{title}</El>
 				<slot name="description">
