@@ -2,6 +2,7 @@
 	"name": "yesvelte",
 	"version": "0.0.2-next.95",
 	"description": "YeSvelte UI component library for Svelte",
+	"sideEffects": false,
 	"keywords": [
 		"svelte",
 		"sveltejs",
