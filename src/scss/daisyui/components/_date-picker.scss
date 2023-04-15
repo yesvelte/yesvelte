@@ -1,0 +1,64 @@
+.#{$prefix}date-picker {
+	@extend .input;
+	@extend .input-bordered;
+	@extend .w-full;
+}
+.#{$prefix}date-picker-border-rounded {
+	@extend .rounded-full;
+}
+.#{$prefix}date-picker-border-flush {
+	@extend .border-transparent;
+}
+
+@each $size in (sm md lg) {
+	.#{$prefix}date-picker-size-#{$size} {
+		@extend .input-#{$size};
+	}
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}date-picker-color-#{$colorName} {
+		@extend .input-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}date-picker-color-#{$colorName} {
+		@extend .input-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}date-picker-color-#{$colorName}:not(.#{$prefix}date-picker-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+
+		&:focus {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}date-picker-color-#{$colorName}:not(.#{$prefix}date-picker-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+
+		&:focus {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
+
+		&.#{$prefix}date-picker-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
+}

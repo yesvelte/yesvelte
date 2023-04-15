@@ -1,0 +1,25 @@
+.#{$prefix}checkbox {
+    @extend .checkbox;
+}
+
+.#{$prefix}checkbox-wrapper {
+    display: flex;
+    place-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+// daisyui colors
+@each $colorName,
+$daisyuiColorName in $RoleColors {
+    .#{$prefix}checkbox-color-#{$colorName} {
+        @extend .checkbox-#{$daisyuiColorName};
+    }
+}
+
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}checkbox-color-#{$colorName} {
+        @extend .checkbox-#{$daisyuiColorName};
+    }
+}

@@ -12,6 +12,7 @@
 	import type { PopupProps } from './Popup.types'
 
 	type $$Props = PopupProps
+	$: console.log('popup')
 
 	export let target: $$Props['target'] = undefined
 	export let placement: $$Props['placement'] = undefined
@@ -31,7 +32,6 @@
 	let arrowY: string | undefined = undefined
 
 	let prevTarget: Element
-
 
 	let left: string = ''
 	let top: string = ''

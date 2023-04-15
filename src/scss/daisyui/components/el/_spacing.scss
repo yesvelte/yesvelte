@@ -1,0 +1,64 @@
+$margin-sizes: (
+	'0': 0,
+	'1': 0.25rem,
+	'2': 0.5rem,
+	'3': 1rem,
+	'4': 2rem,
+	'5': 4rem,
+	'auto': auto
+) !default;
+$margin-positions: (
+	'': '',
+	't': '-top',
+	's': '-left',
+	'e': '-right',
+	'b': '-bottom'
+) !default;
+
+$padding-sizes: (
+	'0': 0,
+	'1': 0.25rem,
+	'2': 0.5rem,
+	'3': 1rem,
+	'4': 2rem,
+	'5': 4rem
+) !default;
+$padding-positions: (
+	'': '',
+	't': '-top',
+	's': '-left',
+	'e': '-right',
+	'b': '-bottom'
+) !default;
+
+@each $size-name, $size-value in $margin-sizes {
+	@each $position-name, $position-value in $margin-positions {
+		.#{$prefix}el-m#{$position-name}-#{$size-name} {
+			margin#{$position-value}: #{$size-value};
+		}
+	}
+	.#{$prefix}el-mx-#{$size-name} {
+		margin-left: #{$size-value};
+		margin-right: #{$size-value};
+	}
+	.#{$prefix}el-my-#{$size-name} {
+		margin-top: #{$size-value};
+		margin-bottom: #{$size-value};
+	}
+}
+
+@each $size-name, $size-value in $padding-sizes {
+	@each $position-name, $position-value in $padding-positions {
+		.#{$prefix}el-p#{$position-name}-#{$size-name} {
+			padding#{$position-value}: #{$size-value};
+		}
+	}
+	.#{$prefix}el-px-#{$size-name} {
+		padding-left: #{$size-value};
+		padding-right: #{$size-value};
+	}
+	.#{$prefix}el-py-#{$size-name} {
+		padding-top: #{$size-value};
+		padding-bottom: #{$size-value};
+	}
+}

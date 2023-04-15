@@ -1,0 +1,13 @@
+.#{$prefix}steps {
+	@extend .w-full;
+	@extend .steps;
+	&-vertical {
+		@extend .steps-vertical;
+	}
+}
+.#{$prefix}step-item {
+	@extend .step;
+	&-active {
+		@extend .step-primary;
+	}
+}
