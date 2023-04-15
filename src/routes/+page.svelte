@@ -7,12 +7,34 @@
 		GithubIcon,
 		RedditIcon,
 	} from '$components/icons'
+	import { StepItem, Steps } from '$lib'
 
 	let icon = 'copy'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 	let discordLink = 'https://discord.gg/gD4de625'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
+
+	let items = [
+		{
+			text: '1',
+			description: '1description',
+			href: '1href',
+		},
+		{
+			text: '2',
+			description: '2description',
+			href: '2href',
+		},
+		{
+			text: '3',
+			description: '3description',
+			active: true,
+			href: '3href',
+		},
+	]
+
+	let activeStep
 
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
@@ -35,6 +57,12 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
+
+<Steps {items} let:index let:item>
+	<StepItem {...item}>
+		{item.description}
+	</StepItem>
+</Steps>
 
 <div class="home-page">
 	<div class="header">
