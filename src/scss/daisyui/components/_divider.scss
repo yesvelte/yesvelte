@@ -1,0 +1,45 @@
+.#{$prefix}divider {
+	@extend .divider;
+}
+.#{$prefix}divider-direction-vertical {
+	@extend .divider-horizontal;
+	margin: 0 0.5rem;
+}
+
+.#{$prefix}divider-alignment-start {
+	&:before {
+		content: none;
+	}
+}
+.#{$prefix}divider-alignment-end {
+	&:after {
+		content: none;
+	}
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}divider-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}divider-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}divider-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}divider-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}

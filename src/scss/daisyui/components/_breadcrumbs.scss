@@ -1,0 +1,35 @@
+.#{$prefix}breadcrumb {
+	@extend .list-none;
+	@extend .p-0;
+	@extend .m-0;
+	@extend .flex;
+	@extend .items-center;
+	& .#{$prefix}breadcrumb-item {
+		@extend .flex;
+		@extend .items-center;
+		& + *:before {
+			content: '';
+			margin-left: 0.5rem;
+			margin-right: 0.75rem;
+			display: block;
+			height: 0.375rem;
+			width: 0.375rem;
+			--tw-rotate: 45deg;
+			transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+				skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+				scaleY(var(--tw-scale-y));
+			opacity: 0.4;
+			border-top: 1px solid;
+			border-right: 1px solid;
+			background-color: transparent;
+		}
+		& > a {
+			@extend .flex;
+			@extend .cursor-pointer;
+			@extend .items-center;
+			&:hover {
+				@extend .underline;
+			}
+		}
+	}
+}

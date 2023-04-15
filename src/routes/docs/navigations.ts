@@ -225,6 +225,13 @@ export const navigations: Navigation[] = [
 					'The Modal component is a basic way to present content above an enclosing view.',
 			},
 			{
+				route: '/navbar',
+				title: 'Navbar',
+				icon: 'tabler:layout-navbar',
+				description:
+					'The navbar component can be used to show a list of navigation links positioned on the top side of your page based on multiple layouts, sizes, and dropdowns.',
+			},
+			{
 				route: '/offcanvas',
 				title: 'Offcanvas',
 				icon: 'mdi:page-layout-sidebar-right',

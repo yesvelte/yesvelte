@@ -1,0 +1,68 @@
+.#{$prefix}modal {
+	@extend .modal;
+	background: none;
+	z-index: 1055; // the same z-index as bootstrap
+}
+.#{$prefix}modal-show {
+	@extend .modal-open;
+}
+.#{$prefix}modal-container {
+	width: 100%;
+	margin: 1rem;
+}
+.#{$prefix}modal-content {
+	@extend .modal-box;
+	margin: 0 auto;
+}
+.#{$prefix}modal-title {
+	@extend .font-bold;
+	@extend .my-2;
+	@extend .text-xl;
+}
+.#{$prefix}modal-footer {
+	@extend .modal-action;
+}
+.#{$prefix}modal-body {
+	@extend .py-4;
+}
+.#{$prefix}modal-close {
+	@extend .btn;
+	@extend .btn-circle;
+	@extend .btn-sm;
+	@extend .absolute;
+	@extend .top-4;
+	@extend .right-4;
+	&:after {
+		content: '×';
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+	}
+}
+.#{$prefix}modal-size-lg .#{$prefix}modal-content {
+	max-width: 720px;
+}
+.#{$prefix}modal-size-md .#{$prefix}modal-content {
+	max-width: 540px;
+}
+.#{$prefix}modal-size-sm .#{$prefix}modal-content {
+	max-width: 380px;
+}
+.#{$prefix}modal-placement-top {
+	place-items: start;
+}
+.#{$prefix}modal-backdrop-show {
+	z-index: 1050; // the same z-index as bootstrap
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+	--tw-bg-opacity: 0.4;
+}
+.#{$prefix}modal-absolute,
+.#{$prefix}modal-backdrop-show.#{$prefix}modal-backdrop-absolute {
+	@extend .absolute;
+}
