@@ -1,6 +1,5 @@
 <script>
-	import CardBody from '$lib/card/CardBody.svelte'
-	import { Card, Dot, Floating } from 'yesvelte'
+	import { Card, Dot, Floating, CardBody } from 'yesvelte'
 </script>
 
 <Card>

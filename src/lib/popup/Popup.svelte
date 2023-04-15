@@ -12,7 +12,6 @@
 	import type { PopupProps } from './Popup.types'
 
 	type $$Props = PopupProps
-	$: console.log('popup')
 
 	export let target: $$Props['target'] = undefined
 	export let placement: $$Props['placement'] = undefined

@@ -1,9 +1,5 @@
 <script>
-	import Avatar from '$lib/avatar/Avatar.svelte'
-	import Dropdown from '$lib/dropdown/Dropdown.svelte'
-	import DropdownItem from '$lib/dropdown/DropdownItem.svelte'
-	import DropdownMenu from '$lib/dropdown/DropdownMenu.svelte'
-	import { El, Navbar, NavbarItem } from 'yesvelte'
+	import { El, Navbar, NavbarItem, Avatar, Dropdown, DropdownItem, DropdownMenu } from 'yesvelte'
 </script>
 
 <El row alignItems="center" justifyContent="between">
