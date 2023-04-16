@@ -1,16 +1,14 @@
 <script lang="ts">
-	import CardFooter from '$lib/card/CardFooter.svelte'
-	import CardHeader from '$lib/card/CardHeader.svelte'
-	import CheckboxGroup from '$lib/checkbox/CheckboxGroup.svelte'
-	import DatePicker from '$lib/date-picker/DatePicker.svelte'
-	import FormCheckboxGroup from '$lib/form/FormCheckboxGroup.svelte'
-	import FormFileUpload from '$lib/form/FormFileUpload.svelte'
-	import FormRadioGroup from '$lib/form/FormRadioGroup.svelte'
-	import Popover from '$lib/popover/Popover.svelte'
-	import Radio from '$lib/radio/Radio.svelte'
-	import TableCell from '$lib/table/TableCell.svelte'
-	import TableHead from '$lib/table/TableHead.svelte'
 	import {
+		CardFooter,
+		DatePicker,
+		FormCheckboxGroup,
+		FormFileUpload,
+		FormRadioGroup,
+		Popover,
+		Radio,
+		TableCell,
+		TableHead,
 		El,
 		FormInput,
 		Button,

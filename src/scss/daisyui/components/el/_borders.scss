@@ -1,0 +1,81 @@
+$border-sizes: (
+	'': '1px',
+	'-0': '0px',
+	'-1': '1px',
+	'-2': '2px',
+	'-3': '3px',
+	'-4': '4px',
+	'-5': '5px'
+) !default;
+$border-positions: (
+	'': '',
+	'-top': '-top',
+	'-start': '-left',
+	'-end': '-right',
+	'-bottom': '-bottom'
+) !default;
+
+@each $size-name, $size-value in $border-sizes {
+	@each $position-name, $position-value in $border-positions {
+		.#{$prefix}el-border#{$position-name}#{$size-name} {
+			border#{$position-value}-style: solid;
+			border#{$position-value}-width: #{$size-value};
+		}
+	}
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}el-border-color-#{$colorName} {
+		@extend .border-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}el-border-color-#{$colorName} {
+		@extend .border-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}el-border-color-#{$colorName} {
+		border-color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}el-border-color-#{$colorName} {
+		border-color: map-get($colorVariant, 'default');
+	}
+}
+
+$border-radius-positions: (
+	'': '',
+	'-top': '-t',
+	'-start': '-l',
+	'-end': '-r',
+	'-bottom': '-b',
+	'-pill': '-full'
+) !default;
+$border-radius-sizes: (
+	'-0': '-none',
+	'-1': '-sm',
+	'-2': '',
+	'-3': '-lg'
+) !default;
+
+@each $radius-name, $radius-position in $border-radius-positions {
+	.#{$prefix}el-border-radius#{$radius-name} {
+		@extend .rounded#{$radius-position};
+	}
+}
+.#{$prefix}el-border-radius-circle {
+	border-radius: 50%;
+}
+@each $size-name, $size-value in $border-radius-sizes {
+	.#{$prefix}el-border-round-size#{$size-name} {
+		@extend .rounded#{$size-value};
+	}
+}
