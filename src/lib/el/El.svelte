@@ -395,7 +395,7 @@
 		}
 
 		function next(callback: Function) {
-			requestAnimationFrame(() => setTimeout(() => callback(), 5))
+			requestAnimationFrame(() => setTimeout(() => callback(), 0))
 		}
 
 		if (show) {
