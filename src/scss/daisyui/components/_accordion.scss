@@ -35,7 +35,28 @@
 	&-header-button:not(.collapsed):not(&-header-button-collapsed) {
 		@extend .font-bold;
 	}
+
 	&-body {
-		padding: 1rem 1.25rem;
+		div {
+			padding: 1rem 1.25rem;
+		}
+
+		&-show {
+			&-open,
+			&-close {
+				overflow: hidden;
+			}
+
+			&-opening,
+			&-closing {
+				overflow: hidden;
+				transition: all 0.3s ease-out;
+			}
+
+			&-closed {
+				overflow: hidden;
+				max-height: 0;
+			}
+		}
 	}
 }
