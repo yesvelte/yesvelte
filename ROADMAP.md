@@ -48,9 +48,8 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 - [x] Table
 - [x] Slider
 - [x] RangeSlider
-- [ ] ColorPicker
 - [x] Pagination
-- [ ] FloatingButton (or adding floating action feature to exisiting Button component)
+- [x] FloatingButton (or adding floating action feature to exisiting Button component)
 - [x] Toast
 - [x] Popover
 - [x] Tooltip
@@ -80,6 +79,7 @@ The vision of YeSvelte is to provide a highly customizable and lightweight UI co
 #### New Components
 
 - [ ] ProgressGroup
+- [ ] ColorPicker
 - [ ] Treeview
 - [ ] Menu
 - [ ] Placeholder/Skeleton

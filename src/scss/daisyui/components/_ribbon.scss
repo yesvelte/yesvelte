@@ -1,0 +1,103 @@
+.#{$prefix}ribbon {
+	@extend .absolute;
+	@extend .-top-1;
+	@extend .right-4;
+	@extend .z-10;
+	@extend .bg-neutral;
+	@extend .text-neutral-content;
+	@extend .rounded;
+	@extend .rounded-tl-none;
+	@extend .py-1;
+	@extend .px-2;
+	@extend .flex;
+	@extend .items-center;
+	@extend .justify-center;
+	min-height: 2rem;
+	min-width: 2rem;
+	&:before {
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		width: 0;
+		height: 0;
+		content: '';
+		filter: brightness(70%);
+		border: calc(0.25rem * 0.5) solid;
+		border-color: inherit;
+		border-top-color: transparent;
+		border-right-color: transparent;
+	}
+	&.#{$prefix}ribbon-element-position-top:before {
+		top: 0;
+		right: 100%;
+		bottom: auto;
+		border-color: inherit;
+		border-top-color: transparent;
+		border-left-color: transparent;
+	}
+
+	// daisyui colors
+	@each $colorName, $daisyuiColorName in $RoleColors {
+		&.#{$prefix}ribbon-bg-color-#{$colorName} {
+			@extend .bg-#{$daisyuiColorName};
+			@extend .border-#{$daisyuiColorName};
+		}
+	}
+
+	@each $colorName, $daisyuiColorName in $StateColors {
+		&.#{$prefix}ribbon-bg-color-#{$colorName} {
+			@extend .bg-#{$daisyuiColorName};
+			@extend .border-#{$daisyuiColorName};
+		}
+	}
+
+	// constant colors
+	@each $colorName, $colorVariant in $namedColors {
+		&.#{$prefix}ribbon-bg-color-#{$colorName} {
+			background-color: map-get($colorVariant, 'default');
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+
+	// social media colors
+	@each $colorName, $colorVariant in $socialColors {
+		&.#{$prefix}ribbon-bg-color-#{$colorName} {
+			background-color: map-get($colorVariant, 'default');
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+
+	&.#{$prefix}ribbon-element-position-start {
+		@extend .right-auto;
+		@extend .-left-1;
+		@extend .top-4;
+		&:before {
+			top: auto;
+			bottom: 100%;
+			left: 0;
+			right: auto;
+			border-color: inherit;
+			border-top-color: transparent;
+			border-left-color: transparent;
+		}
+	}
+
+	&.#{$prefix}ribbon-element-position-end {
+		@extend .-right-1;
+		@extend .left-auto;
+		@extend .top-4;
+		@extend .bottom-auto;
+		@extend .rounded-tl;
+		@extend .rounded-tr-none;
+	}
+	&.#{$prefix}ribbon-element-position-bottom {
+		@extend .-right-1;
+		@extend .left-auto;
+		@extend .top-auto;
+		@extend .bottom-4;
+		@extend .rounded-tl;
+		@extend .rounded-tr-none;
+	}
+}

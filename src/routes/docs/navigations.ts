@@ -190,6 +190,12 @@ export const navigations: Navigation[] = [
 				description: 'FileUpload component is used for collecting files from local device of user.',
 			},
 			{
+				route: '/floating',
+				title: 'Floating',
+				icon: 'material-symbols:apps',
+				description: 'A floating component appears in front of all screen content.',
+			},
+			{
 				route: '/icon',
 				title: 'Icon',
 				icon: 'tabler:star',
@@ -223,6 +229,13 @@ export const navigations: Navigation[] = [
 				icon: 'vaadin:modal',
 				description:
 					'The Modal component is a basic way to present content above an enclosing view.',
+			},
+			{
+				route: '/navbar',
+				title: 'Navbar',
+				icon: 'tabler:layout-navbar',
+				description:
+					'The navbar component can be used to show a list of navigation links positioned on the top side of your page based on multiple layouts, sizes, and dropdowns.',
 			},
 			{
 				route: '/offcanvas',

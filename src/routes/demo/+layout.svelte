@@ -2,6 +2,6 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
+	<link rel="stylesheet" href="/css/daisyui.min.css" />
 </svelte:head>
 <slot />

@@ -1,0 +1,19 @@
+.#{$prefix}select {
+	@extend .w-full;
+	@extend .select;
+	@extend .select-bordered;
+}
+.#{$prefix}select-size-sm {
+	@extend .select-sm;
+}
+.#{$prefix}select-size-lg {
+	@extend .select-lg;
+}
+
+.#{$prefix}select-state-valid {
+	@extend .select-success;
+}
+
+.#{$prefix}select-state-invalid {
+	@extend .select-error;
+}
