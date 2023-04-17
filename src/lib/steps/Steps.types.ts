@@ -13,4 +13,5 @@ export interface StepItemProps extends Partial<ElProps> {
 	afterActive?: boolean
 	active?: boolean
 	href?: string
+	color?: Colors
 }

@@ -8,6 +8,7 @@
 	export let componentName: $$Props['componentName'] = 'step-item'
 	export let href: $$Props['href'] = undefined
 	export let active: $$Props['active'] = undefined
+	export let color: $$Props['color'] = undefined
 
 	let index: number = 0
 
@@ -24,22 +25,23 @@
 		}
 	})
 
+	$: if (active) $activeIndex = index
+
 	$: {
 		cssProps = {
-			active,
+			beforeActive: $activeIndex > index,
+			afterActive: $activeIndex < index,
+			active: $activeIndex === index,
+			color,
 		}
 		props = {
 			tag: href ? 'a' : 'span',
 			componentName,
 			href,
-			beforeActive: $activeIndex > index,
-			afterActive: $activeIndex < index,
-			active: $activeIndex === index,
 		}
 	}
 </script>
 
 <El {...$$restProps} {cssProps} {...props} on:click>
-	(active: {props.active})
 	<slot />
 </El>

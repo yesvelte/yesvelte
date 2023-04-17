@@ -7,7 +7,6 @@
 		GithubIcon,
 		RedditIcon,
 	} from '$components/icons'
-	import { StepItem, Steps } from '$lib'
 
 	let icon = 'copy'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
@@ -33,8 +32,6 @@
 		},
 	]
 
-	let activeStep
-
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
 		icon = 'check'
@@ -56,12 +53,6 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
-
-<Steps {items} activeIndex={1} let:index let:item>
-	<StepItem>
-		{item.description}
-	</StepItem>
-</Steps>
 
 <div class="home-page">
 	<div class="header">

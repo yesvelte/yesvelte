@@ -8,6 +8,7 @@
 	import StepsHorizontal from './StepsHorizontal.svelte'
 	import StepsVertical from './StepsVertical.svelte'
 	import StepsVerticalDescription from './StepsVerticalDescription.svelte'
+	import StepsBind from './StepsBind.svelte'
 </script>
 
 <Page
@@ -70,6 +71,12 @@
 	<Doc title="Steps with Click event">
 		<Preview src="./StepsClick.svelte">
 			<StepsClick />
+		</Preview>
+	</Doc>
+
+	<Doc title="Steps Bind Value">
+		<Preview src="./StepsBind.svelte">
+			<StepsBind />
 		</Preview>
 	</Doc>
 </Page>
