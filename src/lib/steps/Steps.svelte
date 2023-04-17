@@ -3,6 +3,7 @@
 	import type { StepsProps } from './Steps.types'
 	import StepItem from './StepItem.svelte'
 	import { setContext, type SvelteComponent } from 'svelte'
+	import { writable } from 'svelte/store'
 
 	type $$Props = StepsProps
 
@@ -14,46 +15,46 @@
 	export let componentName: $$Props['componentName'] = 'checkbox-group'
 	export let vertical: $$Props['vertical'] = undefined
 	export let items: $$Props['items'] = undefined
-	export let name: $$Props['name'] = undefined
 	export let counter: $$Props['counter'] = undefined
 	export let activeIndex: number = 0
-	export let activeItem: any = undefined
 
 	let element: HTMLElement
 	let props: $$Props = {}
 
 	let components: Array<{ this: SvelteComponent; props: any }> = []
 
+	const active = writable(activeIndex)
+
 	$: props = {
-		name: name ?? element?.id,
 		color,
 		vertical,
 		counter,
 	}
 
 	function register(component: SvelteComponent, props: any) {
-		console.log('register', {component, props})
-		if (props.active) {
-			components.map((comp) => {
-				comp.this.$$set({ active: props.active })
-				// comp.props['active'] = true
-			})
-		}
 		components = [...components, { this: component, props }]
+		const index = components.length
+		if (props.active) {
+			activeIndex = component.length
+		}
+		return index
 	}
 
 	function unregister(component: SvelteComponent) {
 		components = components.filter((comp) => comp.this !== component)
 	}
 
-	setContext('STEPS', { register, unregister })
+	$: active.set(activeIndex)
+	setContext('STEPS', { register, unregister, active })
 </script>
 
 <El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index}
 			<slot {item} {index}>
-				<!-- <StepItem {...components[index].props} /> -->
+				<StepItem>
+					<!--  -->
+				</StepItem>
 			</slot>
 			<!-- <StepItem
 				{...props}

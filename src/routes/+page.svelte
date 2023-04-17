@@ -29,7 +29,6 @@
 		{
 			text: '3',
 			description: '3description',
-			active: true,
 			href: '3href',
 		},
 	]
@@ -58,8 +57,8 @@
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
 
-<Steps {items} let:index let:item>
-	<StepItem {...item}>
+<Steps {items} activeIndex={1} let:index let:item>
+	<StepItem>
 		{item.description}
 	</StepItem>
 </Steps>

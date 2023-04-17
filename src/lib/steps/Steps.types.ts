@@ -6,10 +6,11 @@ export interface StepsProps extends Partial<ElProps> {
 	vertical?: boolean
 	items?: any[]
 	activeIndex?: number
-	activeItem?: any
 }
 
 export interface StepItemProps extends Partial<ElProps> {
+	beforeActive?: boolean
+	afterActive?: boolean
 	active?: boolean
 	href?: string
 }
