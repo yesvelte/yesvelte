@@ -1,0 +1,74 @@
+.#{$prefix}avatar {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	--#{$prefix}avatar-size: 40px;
+	width: var(--#{$prefix}avatar-size);
+	aspect-ratio: 1/1;
+	text-transform: uppercase;
+	vertical-align: bottom;
+	@extend .rounded;
+	@extend .bg-neutral;
+	@extend .text-neutral-content;
+	img {
+		border-radius: inherit;
+	}
+	.#{$prefix}badge {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: translate(10%, 10%);
+		border: 2px solid hsl(var(--b1));
+	}
+	.#{$prefix}badge:empty {
+		padding: 0;
+		height: 0.8rem;
+		aspect-ratio: 1/1;
+	}
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}avatar-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName}-content;
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}avatar-color-#{$colorName} {
+		@extend .bg-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName}-content;
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}avatar-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}avatar-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+	}
+}
+
+// shapes
+@each $shape, $radius in ('-pill': '-xl', '-rounded': '', '-tile': '-none', '-circle': '-full') {
+	.#{$prefix}avatar-shape#{$shape} {
+		@extend .rounded#{$radius};
+	}
+}
+
+// sizes
+@each $name, $size in ('-xs': '24', '-sm': '32', '': '40', '-md': '64', '-lg': '88', '-xl': '112') {
+	.#{$prefix}avatar-size#{$name} {
+		--#{$prefix}avatar-size: #{$size}px;
+	}
+}

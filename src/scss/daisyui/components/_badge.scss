@@ -1,0 +1,71 @@
+.#{$prefix}badge {
+	@extend .badge;
+	gap: 0.5rem;
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}badge-color-#{$colorName} {
+		@extend .badge-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}badge-color-#{$colorName} {
+		@extend .badge-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}badge-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+
+		&.#{$prefix}badge-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}badge-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+
+		&.#{$prefix}badge-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
+}
+
+.#{$prefix}badge-ghost {
+	@extend .badge-ghost;
+}
+
+.#{$prefix}badge-tile {
+	border-radius: 0;
+}
+
+.#{$prefix}badge-pill {
+	border-radius: 10rem;
+}
+
+.#{$prefix}badge-outline {
+	@extend .badge-outline;
+}
+
+.#{$prefix}badge-size-lg {
+	@extend .badge-lg;
+}
+
+.#{$prefix}badge-size-sm {
+	@extend .badge-sm;
+}

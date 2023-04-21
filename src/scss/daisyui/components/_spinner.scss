@@ -1,0 +1,71 @@
+.#{$prefix}spinner-animate-border {
+	--y-spinner-width: 1.5rem;
+	--y-spinner-height: 1.5rem;
+	--y-spinner-vertical-align: -0.125em;
+	--y-spinner-border-width: 2px;
+	--y-spinner-animation-speed: 0.75s;
+	--y-spinner-animation-name: spinner-border;
+	border: var(--y-spinner-border-width) solid currentcolor;
+	border-right-color: transparent;
+	display: inline-block;
+	width: var(--y-spinner-width);
+	height: var(--y-spinner-height);
+	vertical-align: var(--y-spinner-vertical-align);
+	border-radius: 50%;
+	animation: var(--y-spinner-animation-speed) linear infinite var(--y-spinner-animation-name);
+}
+.#{$prefix}spinner-animate-grow {
+	--y-spinner-width: 1.5rem;
+	--y-spinner-height: 1.5rem;
+	--y-spinner-vertical-align: -0.125em;
+	--y-spinner-animation-speed: 0.75s;
+	--y-spinner-animation-name: spinner-grow;
+	background-color: currentcolor;
+	opacity: 0;
+	display: inline-block;
+	width: var(--y-spinner-width);
+	height: var(--y-spinner-height);
+	vertical-align: var(--y-spinner-vertical-align);
+	border-radius: 50%;
+	animation: var(--y-spinner-animation-speed) linear infinite var(--y-spinner-animation-name);
+}
+@keyframes spinner-border {
+	to {
+		transform: rotate(360deg) /* rtl:ignore */;
+	}
+}
+@keyframes spinner-grow {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		opacity: 1;
+		transform: none;
+	}
+}
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}spinner-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}spinner-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}spinner-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}spinner-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}

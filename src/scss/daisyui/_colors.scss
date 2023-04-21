@@ -1,0 +1,192 @@
+$RoleColors: (
+	'primary': 'primary',
+	'secondary': 'secondary',
+	'accent': 'accent'
+);
+
+$StateColors: (
+	'success': 'success',
+	'info': 'info',
+	'warning': 'warning',
+	'danger': 'error'
+);
+
+$namedColors: (
+	'light': (
+		'value': hsl(210 40% 98% / var(--color-value-opacity)),
+		'default': hsl(210 40% 98% / var(--tw-bg-opacity)),
+		'focus': hsl(210 40% 88% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 0% / var(--tw-text-opacity))
+	),
+	'dark': (
+		'value': hsl(220 34.1% 17.3% / var(--color-value-opacity)),
+		'default': hsl(220 34.1% 17.3% / var(--tw-bg-opacity)),
+		'focus': hsl(220 34.1% 7.3% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'blue': (
+		'value': hsl(212.6 71.9% 44.7% / var(--color-value-opacity)),
+		'default': hsl(212.6 71.9% 44.7% / var(--tw-bg-opacity)),
+		'focus': hsl(212.6 71.9% 34.7% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'azure': (
+		'value': hsl(207.2 72.6% 57.1% / var(--color-value-opacity)),
+		'default': hsl(207.2 72.6% 57.1% / var(--tw-bg-opacity)),
+		'focus': hsl(207.2 72.6% 47.1% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'indigo': (
+		'value': hsl(228.3 80.9% 59% / var(--color-value-opacity)),
+		'default': hsl(228.3 80.9% 59% / var(--tw-bg-opacity)),
+		'focus': hsl(228.3 80.9% 49% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'purple': (
+		'value': hsl(288.3 56.3% 51.6% / var(--color-value-opacity)),
+		'default': hsl(288.3 56.3% 51.6% / var(--tw-bg-opacity)),
+		'focus': hsl(288.3 56.3% 41.6% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'pink': (
+		'value': hsl(339 66.5% 52% / var(--color-value-opacity)),
+		'default': hsl(339 66.5% 52% / var(--tw-bg-opacity)),
+		'focus': hsl(339 66.5% 42% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'red': (
+		'value': hsl(0 65.7% 53.1% / var(--color-value-opacity)),
+		'default': hsl(0 65.7% 53.1% / var(--tw-bg-opacity)),
+		'focus': hsl(0 65.7% 43.1% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'orange': (
+		'value': hsl(24 94.5% 49.8% / var(--color-value-opacity)),
+		'default': hsl(24 94.5% 49.8% / var(--tw-bg-opacity)),
+		'focus': hsl(24 94.5% 39.8% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'yellow': (
+		'value': hsl(38.9 100% 48% / var(--color-value-opacity)),
+		'default': hsl(38.9 100% 48% / var(--tw-bg-opacity)),
+		'focus': hsl(38.9 100% 38% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'lime': (
+		'value': hsl(85.2 78.6% 40.4% / var(--color-value-opacity)),
+		'default': hsl(85.2 78.6% 40.4% / var(--tw-bg-opacity)),
+		'focus': hsl(85.2 78.6% 30.4% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'green': (
+		'value': hsl(129.5 58.4% 44.3% / var(--color-value-opacity)),
+		'default': hsl(129.5 58.4% 44.3% / var(--tw-bg-opacity)),
+		'focus': hsl(129.5 58.4% 34.3% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'teal': (
+		'value': hsl(162.1 86.5% 34.9% / var(--color-value-opacity)),
+		'default': hsl(162.1 86.5% 34.9% / var(--tw-bg-opacity)),
+		'focus': hsl(162.1 86.5% 24.9% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'cyan': (
+		'value': hsl(188.2 77.8% 40.6% / var(--color-value-opacity)),
+		'default': hsl(188.2 77.8% 40.6% / var(--tw-bg-opacity)),
+		'focus': hsl(188.2 77.8% 30.6% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	)
+);
+
+$socialColors: (
+	'facebook': (
+		'value': hsl(213.9 89.3% 52.2% / var(--color-value-opacity)),
+		'default': hsl(213.9 89.3% 52.2% / var(--tw-bg-opacity)),
+		'focus': hsl(213.9 89.3% 42.2% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'twitter': (
+		'value': hsl(202.8 89.1% 53.1% / var(--color-value-opacity)),
+		'default': hsl(202.8 89.1% 53.1% / var(--tw-bg-opacity)),
+		'focus': hsl(202.8 89.1% 43.1% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'linkedin': (
+		'value': hsl(210 90.2% 40% / var(--color-value-opacity)),
+		'default': hsl(210 90.2% 40% / var(--tw-bg-opacity)),
+		'focus': hsl(210 90.2% 30% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'google': (
+		'value': hsl(5 68.9% 55.9% / var(--color-value-opacity)),
+		'default': hsl(5 68.9% 55.9% / var(--tw-bg-opacity)),
+		'focus': hsl(5 68.9% 45.9% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'youtube': (
+		'value': hsl(0 100% 50% / var(--color-value-opacity)),
+		'default': hsl(0 100% 50% / var(--tw-bg-opacity)),
+		'focus': hsl(0 100% 40% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'vimeo': (
+		'value': hsl(194.7 83.2% 51% / var(--color-value-opacity)),
+		'default': hsl(194.7 83.2% 51% / var(--tw-bg-opacity)),
+		'focus': hsl(194.7 83.2% 41% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'dribbble': (
+		'value': hsl(336.8 79% 60.8% / var(--color-value-opacity)),
+		'default': hsl(336.8 79% 60.8% / var(--tw-bg-opacity)),
+		'focus': hsl(336.8 79% 50.8% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'github': (
+		'value': hsl(0 2.1% 9.2% / var(--color-value-opacity)),
+		'default': hsl(0 2.1% 9.2% / var(--tw-bg-opacity)),
+		'focus': hsl(0 2.1% -0.8% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'instagram': (
+		'value': hsl(348.7 75.2% 57.3% / var(--color-value-opacity)),
+		'default': hsl(348.7 75.2% 57.3% / var(--tw-bg-opacity)),
+		'focus': hsl(348.7 75.2% 47.3% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'pinterest': (
+		'value': hsl(353.4 91.9% 38.6% / var(--color-value-opacity)),
+		'default': hsl(353.4 91.9% 38.6% / var(--tw-bg-opacity)),
+		'focus': hsl(353.4 91.9% 28.6% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'vk': (
+		'value': hsl(212.2 28.4% 52.4% / var(--color-value-opacity)),
+		'default': hsl(212.2 28.4% 52.4% / var(--tw-bg-opacity)),
+		'focus': hsl(212.2 28.4% 42.4% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'rss': (
+		'value': hsl(38.8 100% 50% / var(--color-value-opacity)),
+		'default': hsl(38.8 100% 50% / var(--tw-bg-opacity)),
+		'focus': hsl(38.8 100% 40% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'flickr': (
+		'value': hsl(213 100% 43.1% / var(--color-value-opacity)),
+		'default': hsl(213 100% 43.1% / var(--tw-bg-opacity)),
+		'focus': hsl(213 100% 33.1% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'bitbucket': (
+		'value': hsl(215.9 100% 40% / var(--color-value-opacity)),
+		'default': hsl(215.9 100% 40% / var(--tw-bg-opacity)),
+		'focus': hsl(215.9 100% 30% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	),
+	'tabler': (
+		'value': hsl(212.6 71.9% 44.7% / var(--color-value-opacity)),
+		'default': hsl(212.6 71.9% 44.7% / var(--tw-bg-opacity)),
+		'focus': hsl(212.6 71.9% 34.7% / var(--tw-bg-opacity)),
+		'content': hsl(0 0% 100% / var(--tw-text-opacity))
+	)
+);

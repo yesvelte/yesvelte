@@ -1,0 +1,15 @@
+.#{$prefix}textarea {
+	@extend .w-full;
+	@extend .textarea;
+	@extend .textarea-bordered;
+}
+.#{$prefix}textarea-state-valid {
+	@extend .textarea-success;
+}
+
+.#{$prefix}textarea-state-invalid {
+	@extend .textarea-error;
+}
+.#{$prefix}form-textarea-hint {
+	@extend .label-text-alt;
+}

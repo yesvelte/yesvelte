@@ -1,0 +1,56 @@
+.#{$prefix}status {
+	@extend .badge;
+	--color-value-opacity: 1;
+	--tw-bg-opacity: 0.1;
+	--tw-border-opacity: 0;
+	gap: 0.5rem;
+	&.#{$prefix}status-lite {
+		--tw-bg-opacity: 0;
+		--tw-border-opacity: 0.2;
+		@extend .border-base-content;
+		@extend .text-base-content;
+	}
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}status-color-#{$colorName} {
+		@extend .badge-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}status-color-#{$colorName} {
+		@extend .badge-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}status-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'value');
+		--tw-border-opacity: 0;
+
+		&.#{$prefix}status-outline {
+			background-color: transparent;
+			color: map-get($colorVariant, 'content');
+		}
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}status-color-#{$colorName} {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'value');
+		--tw-border-opacity: 0;
+
+		&.#{$prefix}status-outline {
+			background-color: transparent;
+			color: map-get($colorVariant, 'content');
+		}
+	}
+}

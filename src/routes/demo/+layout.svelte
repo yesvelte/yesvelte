@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/tabler.css" />
+	<link rel="stylesheet" href="/css/daisyui.min.css" />
 </svelte:head>
 <El container="xl" d="flex" justifyContent="between" mt="4">
 	<El justifyContent="start" w="auto"><h1>{currentNav?.title}</h1></El>

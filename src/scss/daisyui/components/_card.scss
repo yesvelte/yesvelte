@@ -1,0 +1,32 @@
+.#{$prefix}card {
+	@extend .card;
+	@extend .card-bordered;
+	@extend .block;
+	@extend .bg-base-100;
+}
+.#{$prefix}card-header {
+	@extend .pt-3;
+	@extend .px-3;
+	@extend .bg-base-200;
+	@extend .rounded-t-xl;
+	border-bottom: var(--tab-border, 1px) solid hsl(var(--b3));
+}
+.#{$prefix}card-title {
+	@extend .card-title;
+	@extend .pb-3;
+}
+.#{$prefix}card-borderless {
+	@extend .border-none;
+}
+.#{$prefix}card-body {
+	padding: 1rem;
+}
+.#{$prefix}card-size-sm > .#{$prefix}card-body {
+	padding: 1rem;
+}
+.#{$prefix}card-size-md > .#{$prefix}card-body {
+	padding: 2.5rem;
+}
+.#{$prefix}card-size-lg > .#{$prefix}card-body {
+	padding: 4rem;
+}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import El from '$lib/el/El.svelte'
 	import { Slider, SliderKnob } from 'yesvelte'
 
 	let value: number = 30

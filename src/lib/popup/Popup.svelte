@@ -32,7 +32,6 @@
 
 	let prevTarget: Element
 
-
 	let left: string = ''
 	let top: string = ''
 

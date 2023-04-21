@@ -6,7 +6,7 @@ import postcss from 'postcss'
 import postcssFilterRules from 'postcss-filter-rules'
 
 // TODO: Optimize (only compile one)
-const files = ['tabler']
+const files = ['tabler', 'daisyui']
 
 function compile(file) {
 	console.log(`Compiling ${file}...`)
@@ -31,17 +31,20 @@ function compile(file) {
 	return css
 }
 
-const prefixes = ['.y-', '.noUi-'];
+const prefixes = ['.y-', '.noUi-']
 
 async function clean(css) {
 	return postcss([
-		postcssFilterRules({ // clean rules
+		postcssFilterRules({
+			// clean rules
 			filter: (selector, parts) => {
-				return prefixes.some(prefix => selector.startsWith(prefix)) || !selector.startsWith('.')
-			}
+				return prefixes.some((prefix) => selector.startsWith(prefix)) || !selector.startsWith('.')
+			},
 		}),
-		cssNano({ preset: 'default' }) // minify
-	]).process(css, { from: undefined }).then(result => result.css)
+		cssNano({ preset: 'default' }), // minify
+	])
+		.process(css, { from: undefined })
+		.then((result) => result.css)
 }
 
 for (const file of files) {
@@ -57,7 +60,7 @@ for (const file of files) {
 	}
 	fs.writeFileSync(`./src/lib/css/${file}.css`, css, {})
 
-	clean(css).then(minCss => {
+	clean(css).then((minCss) => {
 		fs.writeFileSync(`./static/css/${file}.min.css`, minCss, {})
 		fs.writeFileSync(`./src/lib/css/${file}.min.css`, minCss, {})
 	})

@@ -1,0 +1,20 @@
+$align-items: start center end !default;
+@each $position in $align-items {
+	.#{$prefix}el-align-items-#{$position} {
+		@extend .items-#{$position};
+	}
+}
+
+$justify-content: start center end around between evenly !default;
+@each $position in $justify-content {
+	.#{$prefix}el-justify-content-#{$position} {
+		@extend .justify-#{$position};
+	}
+}
+
+$orders: first last 1 2 3 4 5 6 !default;
+@each $order in $orders {
+	.#{$prefix}el-order-#{$order} {
+		@extend .order-#{$order};
+	}
+}
