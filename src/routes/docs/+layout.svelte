@@ -25,7 +25,7 @@
 
 <svelte:head>
 	{#if theme === 'tabler'}
-		<link rel="stylesheet" href="/css/tabler.min.css" />
+		<link rel="stylesheet" href="/css/tabler.css" />
 	{:else if theme === 'daisyui'}
 		<link rel="stylesheet" href="/css/daisyui.min.css" />
 	{/if}

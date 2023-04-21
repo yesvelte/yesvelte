@@ -7,7 +7,7 @@
 </script>
 
 <El mt="3" mb="2">
-	<El tag="h2" class="link-primary">
+	<El tag="h2">
 		<El tag="a" href="#{href}" textColor="primary">#</El>
 		<El d="inline" data-href={encodeURIComponent(href)} id={href}>
 			{title}
