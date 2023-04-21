@@ -11,23 +11,18 @@
 <svelte:head>
 	<link rel="stylesheet" href="/css/tabler.css" />
 </svelte:head>
-
-<El>
-	<El class="container-xl" d="flex" justifyContent="between" mt="4">
-		<El justifyContent="start" w="auto"><h1>{currentNav?.title}</h1></El>
-		<El justifyContent="end" w="auto">
-			<slot name="pageTop" />
-		</El>
+<El container="xl" d="flex" justifyContent="between" mt="4">
+	<El justifyContent="start" w="auto"><h1>{currentNav?.title}</h1></El>
+	<El justifyContent="end" w="auto">
+		<slot name="pageTop" />
 	</El>
 </El>
-<El class="page-body">
-	<El class="container-xl">
-		<slot />
-	</El>
+<El container="xl" class="page-body">
+	<slot />
 </El>
 
 <style>
-	.page-body :global(.u-card) {
+	.page-body :global(.y-card) {
 		margin-bottom: 40px;
 	}
 </style>

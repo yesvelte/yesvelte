@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CardBody from '$lib/card/CardBody.svelte'
-	import { El, Card, Accordions, AccordionBody, Accordion, TableCell, Button, Icon } from 'yesvelte'
+	import { El, Card, Accordions, AccordionBody, Accordion } from 'yesvelte'
 </script>
 
 <Card>

@@ -454,6 +454,12 @@ export const navigations: Navigation[] = [
 				description: 'A sample FAQ page.',
 			},
 			{
+				route: example_path + '/widgets',
+				title: 'Widgets',
+				icon: 'tabler:app-window',
+				description: 'A sample page that provides samples of different widgets.',
+			},
+			{
 				route: example_path + '/authentication/sign-in',
 				title: 'Sign in',
 				icon: 'tabler:app-window',
