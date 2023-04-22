@@ -454,6 +454,30 @@ export const navigations: Navigation[] = [
 				description: 'A sample page that provides usages of form elements.',
 			},
 			{
+				route: '/pricing-cards',
+				title: 'Pricing cards',
+				icon: 'tabler:app-window',
+				description: 'A page to display sample pricing cards.',
+			},
+			{
+				route: '/pricing-table',
+				title: 'Pricing table',
+				icon: 'tabler:app-window',
+				description: 'A page to display sample pricing table.',
+			},
+			{
+				route: '/faq',
+				title: 'Frequently Asked Questions',
+				icon: 'tabler:app-window',
+				description: 'A sample FAQ page.',
+			},
+			{
+				route: '/widgets',
+				title: 'Widgets',
+				icon: 'tabler:app-window',
+				description: 'A sample page that provides samples of different widgets.',
+			},
+			{
 				route: '/authentication/sign-in',
 				title: 'Sign in',
 				icon: 'tabler:app-window',
