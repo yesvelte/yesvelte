@@ -30,6 +30,9 @@ $props: (
 	@include apply-props($props);
 	display: inline-block;
 
+	min-width: 1rem !important;
+	min-height: 1rem !important;
+
 	@each $key, $value in $icon-sizes {
 		&-size-#{$key} {
 			width: #{$value} !important;
