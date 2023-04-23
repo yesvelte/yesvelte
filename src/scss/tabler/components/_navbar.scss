@@ -1,6 +1,6 @@
 $navbar-props: (
 	wrapper: (
-		null: '.navbar' '.navbar-expand-sm',
+		null: '.navbar' '.navbar-expand',
 		theme: (
 			dark: '.navbar-dark',
 			light: '.navbar-light'
@@ -26,11 +26,9 @@ $navbar-props: (
 );
 
 .#{$prefix-navbar}-wrapper {
-	@extend .d-none;
-	@extend .d-sm-block;
-
+	display: none;
 	&-show {
-		@extend .d-block;
+		display: block;
 	}
 }
 

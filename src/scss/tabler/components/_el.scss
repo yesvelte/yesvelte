@@ -45,6 +45,8 @@ $justify-content: start center end around between evenly !default;
 $align-self: start center end !default;
 $row-cols-sizes: 1 2 3 4 5 6 auto !default;
 $container-breakpoints: null fluid sm md lg xl xxl;
+$font-weights: light lighter normal semibold bold bolder;
+$font-sizes: 0 1 2 3 4 5 !default;
 
 .border {
 	border-width: var(--#{$prefix}border-width) !important;
@@ -132,7 +134,9 @@ $props: (
 	h: generate_props($width-height-sizes, ('.h-')),
 	g: generate_props($gap-sizes, ('.g-')),
 	gx: generate_props($gap-sizes, ('.gx-')),
-	gy: generate_props($gap-sizes, ('.gy-'))
+	gy: generate_props($gap-sizes, ('.gy-')),
+	font-weight: generate_props($font-weights, ('.fw-')),
+	font-size: generate_props($font-sizes, ('.fs-'))
 );
 
 $props-null: (

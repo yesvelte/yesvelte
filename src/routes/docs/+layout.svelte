@@ -2,24 +2,27 @@
 	import {
 		El,
 		Icon,
-		Navbar,
-		NavbarItem,
-		FormSwitch,
-		FormSelect,
-		Dropdown,
-		DropdownMenu,
-		DropdownItem,
 		Button,
 		Select,
+		Navbar,
+		NavbarItem,
+		Offcanvas,
+		OffcanvasHeader,
 	} from 'yesvelte'
-	import { navigations } from './navigations'
+	import { page } from '$app/stores'
+	import SidebarNavigations from '$components/SidebarNavigations.svelte'
+	import Logo from '$components/Logo.svelte'
 
 	let dark: boolean = false
 	let theme: 'tabler' | 'daisyui' = 'tabler'
 
+	let offcanvasOpen = false
+
+	$: pathname = $page.url.pathname
+
 	$: containerProps = {
 		'data-theme': dark ? 'dark' : 'light',
-		class: 'y-app' + (dark ? ' y-app-theme-dark' : ''),
+		class: 'y-docs-wrapper y-app' + (dark ? ' y-app-theme-dark' : ''),
 	}
 </script>
 
@@ -33,88 +36,77 @@
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
 
-<El container="fluid" {...containerProps}>
-	<El row alignItems="center" justifyContent="start">
-		<El col="2" p="2" px="3" tag="a" href="/" textColor="secondary" fontSize="1">
-			<El tag="h1" mb="0">YeSvelte</El>
-		</El>
-		<El row col colLg="8" pe="4" justifyContent="between" alignItems="center">
-			<El col />
-			<!-- <Navbar col row d="none">
-				{#each navigations as navigation}
-					{#if navigation.children}
-						<NavbarItem title={navigation.title} icon={navigation.icon}>
-							{#each navigation.children ?? [] as menu}
-								{@const [pack, icon] = (menu.icon ?? ':').split(':')}
-								<NavbarItem
-									icon={menu.icon}
-									title={menu.title}
-									href={navigation.route + menu.route}>
-									<Icon slot="start" {pack} name={icon} />
-								</NavbarItem>
-							{/each}
-						</NavbarItem>
-					{:else}
-						<NavbarItem href="#{navigation.id}" icon={navigation.icon} title={navigation.title} />
-					{/if}
-				{/each}
-			</Navbar> -->
-
-			<El mt="3" row alignItems="end" style="width: 250px">
-				<El col="10">
-					<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
-				</El>
-				<El col="2">
-					<Button outline on:click={() => (dark = !dark)}>
-						{#if dark}
-							<Icon name="sun" />
-						{:else}
-							<Icon name="moon" />
-						{/if}
-					</Button>
+<El {...containerProps}>
+	<Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
+		<OffcanvasHeader p="3">
+			<Logo />
+		</OffcanvasHeader>
+		<SidebarNavigations p="3" position="static" {pathname} />
+	</Offcanvas>
+	<Navbar theme={dark ? 'dark' : 'light'} show class="y-docs-navbar">
+		<NavbarItem dMd="none" icon="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+		<Logo d="none" dMd="block" mx="3" mt="3" />
+		<Logo dMd="none" mt="3" />
+		<El position="absolute" d="flex" alignItems="center" class="y-docs-navbar-container">
+			<El container="lg" d="flex" alignItems="center" justifyContent="between">
+				<El />
+				<El row>
+					<El col="auto">
+						<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+					</El>
+					<El col>
+						<Button outline on:click={() => (dark = !dark)}>
+							{#if dark}
+								<Icon name="sun" />
+							{:else}
+								<Icon name="moon" />
+							{/if}
+						</Button>
+					</El>
 				</El>
 			</El>
-
-			<Dropdown d="none" arrow={false}>
-				<Button slot="target">
-					<Icon name="palette" />
-				</Button>
-				<DropdownMenu>
-					<DropdownItem header>Light</DropdownItem>
-					<DropdownItem
-						on:click={() => {
-							dark = false
-							theme = 'daisyui'
-						}}>DaisyUI</DropdownItem>
-					<DropdownItem
-						on:click={() => {
-							dark = false
-							theme = 'tabler'
-						}}>
-						Tabler
-					</DropdownItem>
-					<DropdownItem divider />
-					<DropdownItem header>Dark</DropdownItem>
-					<DropdownItem
-						on:click={() => {
-							dark = true
-							theme = 'daisyui'
-						}}>
-						DaisyUI
-					</DropdownItem>
-					<DropdownItem
-						on:click={() => {
-							dark = true
-							theme = 'tabler'
-						}}>
-						Tabler
-					</DropdownItem>
-				</DropdownMenu>
-			</Dropdown>
+		</El>
+	</Navbar>
+	<El d="none" dMd="block" class="y-docs-sidebar">
+		<SidebarNavigations position="static" bottom="0" {pathname} />
+	</El>
+	<El class="y-docs-page">
+		<El mx="auto" container="lg">
+			<slot />
 		</El>
 	</El>
-
-	<El row>
-		<slot />
-	</El>
 </El>
+
+<style>
+	:global(.y-docs-page) {
+		margin-left: 0px;
+	}
+	:global(.y-docs-sidebar) {
+		width: 240px;
+		margin-top: 64px;
+		/* background-color: white; */
+		position: absolute;
+	}
+
+	:global(.y-docs-offcanvas) {
+		position: absolute;
+		width: 240px !important;
+	}
+
+	:global(.y-docs-navbar-container) {
+		left: 240px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	:global(.y-docs-sidebar) > :global(*) {
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		:global(.y-docs-page) {
+			margin-left: 240px;
+		}
+	}
+</style>
