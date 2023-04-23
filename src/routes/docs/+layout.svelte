@@ -43,7 +43,7 @@
 		</OffcanvasHeader>
 		<SidebarNavigations p="3" position="static" {pathname} />
 	</Offcanvas>
-	<Navbar theme={dark ? 'dark' : 'light'} show class="y-docs-navbar">
+	<Navbar theme={dark ? 'dark' : 'light'} class="y-docs-navbar">
 		<NavbarItem dMd="none" icon="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
 		<Logo d="none" dMd="block" mx="3" mt="3" />
 		<Logo dMd="none" mt="3" />
@@ -82,7 +82,7 @@
 		margin-left: 0px;
 	}
 	:global(.y-docs-sidebar) {
-		width: 240px;
+		/* width: 240px; */
 		margin-top: 64px;
 		/* background-color: white; */
 		position: absolute;
@@ -90,23 +90,23 @@
 
 	:global(.y-docs-offcanvas) {
 		position: absolute;
-		width: 240px !important;
+		width: 270px !important;
 	}
 
 	:global(.y-docs-navbar-container) {
-		left: 240px;
+		left: 270px;
 		right: 0;
 		top: 0;
 		bottom: 0;
 	}
 
 	:global(.y-docs-sidebar) > :global(*) {
-		width: 100%;
+		width: 270px !important;
 	}
 
 	@media (min-width: 768px) {
 		:global(.y-docs-page) {
-			margin-left: 240px;
+			margin-left: 270px;
 		}
 	}
 </style>
