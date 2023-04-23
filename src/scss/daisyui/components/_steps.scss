@@ -10,4 +10,7 @@
 	&-active {
 		@extend .step-primary;
 	}
+	&-before-active {
+		@extend .step-primary;
+	}
 }

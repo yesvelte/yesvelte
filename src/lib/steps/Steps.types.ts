@@ -5,7 +5,7 @@ export interface StepsProps extends Partial<ElProps> {
 	counter?: boolean
 	vertical?: boolean
 	items?: any[]
-	activeIndex?: number
+	active?: number
 }
 
 export interface StepItemProps extends Partial<ElProps> {

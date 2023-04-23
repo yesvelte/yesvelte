@@ -14,9 +14,9 @@
 		},
 	]
 
-	let activeIndex: number | undefined = 1
+	let active: number | undefined = 1
 </script>
 
-<Steps {items} bind:activeIndex let:index let:item>
-	<StepItem on:click={() => (activeIndex = index)}>{item.text}</StepItem>
+<Steps {items} bind:active let:index let:item>
+	<StepItem on:click={() => (active = index)}>{item.text}</StepItem>
 </Steps>

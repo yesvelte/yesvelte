@@ -15,13 +15,13 @@
 	export let vertical: $$Props['vertical'] = undefined
 	export let items: $$Props['items'] = undefined
 	export let counter: $$Props['counter'] = undefined
-	export let activeIndex: number = 0
+	export let active: number = 0
 
 	let element: HTMLElement
 
 	let components: number[] = []
 
-	const active = writable(activeIndex)
+	const activeStore = writable(active)
 
 	$: cssProps = {
 		color,
@@ -33,7 +33,7 @@
 		const index = components.length
 		components = [...components, index]
 		if (props.active) {
-			activeIndex = index
+			active = index
 		}
 		return index
 	}
@@ -42,9 +42,9 @@
 		components = components.filter((comp, index) => index !== idx)
 	}
 
-	$: active.set(activeIndex)
+	$: activeStore.set(active)
 
-	setContext('STEPS', { register, unregister, active })
+	setContext('STEPS', { register, unregister, active: activeStore })
 </script>
 
 <El {componentName} bind:element {...$$restProps} {cssProps}>
