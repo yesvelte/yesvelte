@@ -6,6 +6,7 @@
 
 <style>
 	:global(.y-logo) {
+		margin: 0;
 		/* color: #2773bf; */
 	}
 </style>
