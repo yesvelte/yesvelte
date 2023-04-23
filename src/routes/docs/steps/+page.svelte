@@ -8,6 +8,8 @@
 	import StepsHorizontal from './StepsHorizontal.svelte'
 	import StepsVertical from './StepsVertical.svelte'
 	import StepsVerticalDescription from './StepsVerticalDescription.svelte'
+	import StepsBind from './StepsBind.svelte'
+	import StepsItems from './StepsItems.svelte'
 </script>
 
 <Page
@@ -18,15 +20,6 @@
 			<StepsDefault />
 		</Preview>
 	</Doc>
-
-	<!-- TODO: add tooltip example after adding Tooltip component -->
-	<!-- <Doc title="Tooltip">
-		<Preview src="./StepsDots.svelte">
-			<div class="custom-class">
-				<StepsDots />
-			</div>
-		</Preview>
-	</Doc> -->
 
 	<Doc title="Color">
 		<p slot="description">
@@ -55,11 +48,11 @@
 		</Preview>
 	</Doc>
 
-	<!-- <Doc title="Without title">
+	<Doc title="Without title">
 		<Preview src="./StepsWithoutTitle.svelte">
 			<StepsWithoutTitle />
 		</Preview>
-	</Doc> -->
+	</Doc>
 
 	<Doc title="Steps with numbers">
 		<Preview src="./StepsCounter.svelte">
@@ -70,6 +63,18 @@
 	<Doc title="Steps with Click event">
 		<Preview src="./StepsClick.svelte">
 			<StepsClick />
+		</Preview>
+	</Doc>
+
+	<Doc title="Steps Items">
+		<Preview src="./StepsItems.svelte">
+			<StepsItems />
+		</Preview>
+	</Doc>
+
+	<Doc title="Steps Bind Value">
+		<Preview src="./StepsBind.svelte">
+			<StepsBind />
 		</Preview>
 	</Doc>
 </Page>
