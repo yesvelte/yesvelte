@@ -6,6 +6,7 @@
 	import NavbarBrand from './NavbarBrand.svelte'
 	import NavbarAvatar from './NavbarAvatar.svelte'
 	import NavbarAvatarJustify from './NavbarAvatarJustify.svelte'
+	import NavbarFullExample from './NavbarFullExample.svelte'
 </script>
 
 <Page title="Navbar">
@@ -42,4 +43,19 @@
 			<NavbarAvatarJustify />
 		</Preview>
 	</Doc>
+
+	<Doc title="Full Example">
+		<Preview src="./NavbarFullExample.svelte">
+			<div class="custom-class">
+				<NavbarFullExample />
+			</div>
+		</Preview>
+	</Doc>
 </Page>
+
+<style>
+	.custom-class {
+		height: 400px;
+		margin: -16px -24px;
+	}
+</style>

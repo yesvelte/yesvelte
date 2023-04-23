@@ -25,13 +25,6 @@ $navbar-props: (
 	)
 );
 
-.#{$prefix-navbar}-wrapper {
-	display: none;
-	&-show {
-		display: block;
-	}
-}
-
 .#{$prefix-navbar} {
 	@include apply-props($navbar-props);
 
