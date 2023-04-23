@@ -39,14 +39,11 @@
 <El {...containerProps}>
 	<Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
 		<OffcanvasHeader p="3">
-			<Logo />
+			<Logo mb="0" />
 		</OffcanvasHeader>
 		<SidebarNavigations p="3" position="static" {pathname} />
 	</Offcanvas>
 	<Navbar theme={dark ? 'dark' : 'light'} class="y-docs-navbar">
-		<NavbarItem dMd="none" icon="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
-		<Logo d="none" dMd="block" mx="3" mt="3" />
-		<Logo dMd="none" mt="3" />
 		<El position="absolute" d="flex" alignItems="center" class="y-docs-navbar-container">
 			<El container="lg" d="flex" alignItems="center" justifyContent="between">
 				<El />
@@ -66,6 +63,9 @@
 				</El>
 			</El>
 		</El>
+		<NavbarItem dMd="none" icon="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+		<Logo d="none" dMd="block" mx="3" mt="2" />
+		<Logo dMd="none" mt="2" />
 	</Navbar>
 	<El d="none" dMd="block" class="y-docs-sidebar">
 		<SidebarNavigations position="static" bottom="0" {pathname} />
@@ -82,31 +82,49 @@
 		margin-left: 0px;
 	}
 	:global(.y-docs-sidebar) {
-		/* width: 240px; */
-		margin-top: 64px;
-		/* background-color: white; */
+		margin-top: 56px;
 		position: absolute;
 	}
 
 	:global(.y-docs-offcanvas) {
 		position: absolute;
-		width: 270px !important;
+		width: 300px !important;
 	}
 
 	:global(.y-docs-navbar-container) {
-		left: 270px;
+		left: 0;
 		right: 0;
 		top: 0;
 		bottom: 0;
 	}
-
 	:global(.y-docs-sidebar) > :global(*) {
 		width: 270px !important;
+	}
+
+	:global(.y-sidebar-wrapper) {
+		padding: 8px !important;
+	}
+
+	:global(.y-docs-offcanvas) :global(.y-sidebar-wrapper) {
+		width: auto;
+	}
+
+	:global(.y-offcanvas-header) {
+		padding-top: 12px !important;
+		padding-bottom: 12px !important;
+	}
+
+	:global(.y-preview-body) {
+		overflow: auto;
 	}
 
 	@media (min-width: 768px) {
 		:global(.y-docs-page) {
 			margin-left: 270px;
+		}
+
+		:global(.y-docs-navbar-container) {
+			left: 270px;
 		}
 	}
 </style>
