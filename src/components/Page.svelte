@@ -23,7 +23,7 @@
 			</CardBody>
 		</Card>
 	</El>
-	<El colLg="2" d="none" dMd="inline-block">
+	<El colLg="2" d="none" dLg="inline-block">
 		<ToC />
 	</El>
 </El>
