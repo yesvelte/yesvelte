@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Page } from '$components'
+	import { El } from 'yesvelte'
 	import { navigations } from './navigations'
 </script>
 
@@ -51,10 +52,10 @@
 				YeSvelte!
 			</p>
 
-			<div class="mt-4">
-				<div class="row">
+			<El mt="4">
+				<El row>
 					{#each navigations as navigation}
-						<div class="col-sm-6">
+						<El colSm="6">
 							<h2>{navigation.title}</h2>
 							{#if navigation.children}
 								<ul class="list-unstyled">
@@ -65,10 +66,16 @@
 									{/each}
 								</ul>
 							{/if}
-						</div>
+						</El>
 					{/each}
-				</div>
-			</div>
+				</El>
+			</El>
 		</div>
 	</main>
 </Page>
+
+<style>
+	.list-unstyled {
+		list-style-type: none;
+	}
+</style>
