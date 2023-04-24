@@ -3,7 +3,7 @@ select.#{$prefix}autocomplete-loaded {
 }
 .#{$prefix}autocomplete {
 	@extend .relative;
-	.ts-control {
+	&-control {
 		position: relative;
 		display: flex;
 		gap: 0.5rem;
@@ -49,7 +49,7 @@ select.#{$prefix}autocomplete-loaded {
 		}
 	}
 	&.disabled {
-		.ts-control {
+		.#{$prefix}autocomplete-control {
 			cursor: not-allowed;
 			--tw-border-opacity: 1;
 			border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
@@ -61,15 +61,15 @@ select.#{$prefix}autocomplete-loaded {
 }
 
 @each $size in (sm md lg) {
-	.#{$prefix}autocomplete-size-#{$size} .ts-control {
+	.#{$prefix}autocomplete-size-#{$size} .#{$prefix}autocomplete-control {
 		@extend .input-#{$size};
 	}
 }
 
-.#{$prefix}autocomplete-state-valid .ts-control {
+.#{$prefix}autocomplete-state-valid .#{$prefix}autocomplete-control {
 	@extend .input-success;
 }
 
-.#{$prefix}autocomplete-state-invalid .ts-control {
+.#{$prefix}autocomplete-state-invalid .#{$prefix}autocomplete-control {
 	@extend .input-error;
 }
