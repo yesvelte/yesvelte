@@ -15,12 +15,11 @@
 	export let name: $$Props['name'] = undefined
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let id: $$Props['id'] = undefined
 
 	let element: HTMLElement
 	let checkboxProps: Partial<ElProps>
 	let labelProps: Partial<ElProps>
-
-	$: id = element?.id
 
 	$: wrapperProps = {
 		componentName: componentName + '-wrapper',
@@ -61,7 +60,16 @@
 </script>
 
 <El {...wrapperProps}>
-	<El {...checkboxProps} bind:element on:change={onChange} on:input on:click on:focus on:blur on:change />
+	<El
+		{...checkboxProps}
+		bind:id
+		bind:element
+		on:change={onChange}
+		on:input
+		on:click
+		on:focus
+		on:blur
+		on:change />
 	{#if label || $$slots['default']}
 		<El {...labelProps}>
 			<slot>

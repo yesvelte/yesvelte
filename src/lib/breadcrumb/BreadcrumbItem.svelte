@@ -19,14 +19,17 @@
 		props = {
 			tag: 'li',
 			componentName,
-			href,
 			'aria-current': `${active ?? 'page'}`,
 		}
 	}
 </script>
 
 <El {...$$restProps} {cssProps} {...props}>
-	<El tag="a" componentName="breadcrumb-inner">
+	{#if href}
+		<El tag="a" {href} componentName="{componentName}-inner">
+			<slot />
+		</El>
+	{:else}
 		<slot />
-	</El>
+	{/if}
 </El>

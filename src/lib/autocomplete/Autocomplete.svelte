@@ -42,6 +42,8 @@
 		settings = {
 			dropdownClass: classname(componentName + '-dropdown'),
 			optionClass: classname(componentName + '-option'),
+			controlClass: classname(componentName + '-control'),
+
 			onChange(newValue) {
 				value = getKey(items[newValue])
 
@@ -108,7 +110,7 @@
 	{/each}
 </El>
 
-<div class="d-none">
+<El d="none">
 	{#each items ?? [] as item, index}
 		<El bind:element={customOptions[index]}>
 			<slot {index} {item}>{item}</slot>
@@ -122,4 +124,4 @@
 			{/if}
 		</El>
 	{/each}
-</div>
+</El>

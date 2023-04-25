@@ -27,6 +27,7 @@ $table-props: (
 .#{$prefix-table} {
 	@include apply-props($table-props);
 
+	margin-bottom: unset !important;
 	&-wrap > :not(caption) > * > * {
 		white-space: unset;
 	}

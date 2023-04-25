@@ -1,0 +1,25 @@
+.#{$prefix}radio {
+    @extend .radio;
+}
+
+.#{$prefix}radio-wrapper {
+    display: flex;
+    place-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+// daisyui colors
+@each $colorName,
+$daisyuiColorName in $RoleColors {
+    .#{$prefix}radio-color-#{$colorName} {
+        @extend .radio-#{$daisyuiColorName};
+    }
+}
+
+@each $colorName,
+$daisyuiColorName in $StateColors {
+    .#{$prefix}radio-color-#{$colorName} {
+        @extend .radio-#{$daisyuiColorName};
+    }
+}

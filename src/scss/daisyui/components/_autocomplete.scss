@@ -1,0 +1,75 @@
+select.#{$prefix}autocomplete-loaded {
+	display: none;
+}
+.#{$prefix}autocomplete {
+	@extend .relative;
+	&-control {
+		position: relative;
+		display: flex;
+		gap: 0.5rem;
+		@extend .input;
+		@extend .input-bordered;
+		@extend .w-full;
+		@extend .mb-2;
+		background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+			linear-gradient(135deg, currentColor 50%, transparent 50%);
+		background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16px) calc(1px + 50%);
+		background-size: 4px 4px, 4px 4px;
+		background-repeat: no-repeat;
+		.item {
+			display: flex;
+			align-items: center;
+		}
+	}
+	input {
+		@extend .grow;
+		background-color: transparent;
+		outline: none;
+	}
+	&-dropdown {
+		@extend .absolute;
+		@extend .shadow-xl;
+		@extend .p-2;
+		@extend .rounded-xl;
+		@extend .bg-base-100;
+		@extend .w-full;
+		z-index: 999;
+		.#{$prefix}autocomplete-option {
+			border-radius: var(--rounded-btn, 0.5rem);
+			gap: 0.75rem;
+			padding: 0.5rem 1rem;
+			font-size: 0.875rem;
+			line-height: 1.25rem;
+			color: currentColor;
+			&.active {
+				cursor: pointer;
+				--tw-bg-opacity: 0.1;
+				background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+			}
+		}
+	}
+	&.disabled {
+		.#{$prefix}autocomplete-control {
+			cursor: not-allowed;
+			--tw-border-opacity: 1;
+			border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+			--tw-bg-opacity: 1;
+			background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+			--tw-text-opacity: 0.2;
+		}
+	}
+}
+
+@each $size in (sm md lg) {
+	.#{$prefix}autocomplete-size-#{$size} .#{$prefix}autocomplete-control {
+		@extend .input-#{$size};
+	}
+}
+
+.#{$prefix}autocomplete-state-valid .#{$prefix}autocomplete-control {
+	@extend .input-success;
+}
+
+.#{$prefix}autocomplete-state-invalid .#{$prefix}autocomplete-control {
+	@extend .input-error;
+}

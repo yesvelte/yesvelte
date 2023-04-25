@@ -1,0 +1,14 @@
+*,
+:after,
+:before {
+	border: 0 solid hsl(var(--b3));
+}
+p {
+	@extend .mb-4;
+}
+:root {
+	font-size: 16px;
+}
+body {
+	font-size: 0.875rem;
+}

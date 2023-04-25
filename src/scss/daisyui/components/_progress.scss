@@ -1,0 +1,108 @@
+.#{$prefix}progress {
+	@extend .relative;
+	@extend .flex;
+	@extend .bg-base-200;
+	border-radius: var(--rounded-badge, 1.9rem);
+	overflow: hidden;
+	height: 0.5rem;
+	.#{$prefix}progress-bar-visually-hidden {
+		@extend .sr-only;
+	}
+}
+.#{$prefix}progress-separated {
+	@extend .gap-1;
+}
+
+.#{$prefix}progress-bar {
+	@extend .text-xs;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	--tw-bg-opacity: 1;
+	background-color: hsl(var(--n) / var(--tw-bg-opacity));
+
+	// daisyui colors
+	@each $colorName, $daisyuiColorName in $RoleColors {
+		&.#{$prefix}progress-bar-color-#{$colorName} {
+			@extend .bg-#{$daisyuiColorName};
+		}
+	}
+
+	@each $colorName, $daisyuiColorName in $StateColors {
+		&.#{$prefix}progress-bar-color-#{$colorName} {
+			@extend .bg-#{$daisyuiColorName};
+		}
+	}
+
+	// constant colors
+	@each $colorName, $colorVariant in $namedColors {
+		&.#{$prefix}progress-bar-color-#{$colorName} {
+			background-color: map-get($colorVariant, 'default');
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+
+	// social media colors
+	@each $colorName, $colorVariant in $socialColors {
+		&.#{$prefix}progress-bar-color-#{$colorName} {
+			background-color: map-get($colorVariant, 'default');
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'content');
+		}
+	}
+}
+
+.#{$prefix}progress-size-sm {
+	height: 0.25rem;
+}
+.#{$prefix}progress-size-md {
+	height: 0.5rem;
+}
+.#{$prefix}progress-size-lg {
+	height: 15px;
+}
+
+.#{$prefix}progress-bar-striped,
+.#{$prefix}progress-bar-striped-animated {
+	background-image: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-size: 0.5rem 0.5rem;
+}
+.#{$prefix}progress-bar-striped-animated {
+	animation: 1s linear infinite progress-bar-stripes;
+}
+@keyframes progress-bar-stripes {
+	0% {
+		background-position-x: 0.5rem;
+	}
+}
+.#{$prefix}progress-bar-indeterminate:before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	background-color: inherit;
+	will-change: left, right;
+	animation: progress-indeterminate 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+@keyframes progress-indeterminate {
+	0% {
+		right: 100%;
+		left: -35%;
+	}
+	100%,
+	60% {
+		right: -90%;
+		left: 100%;
+	}
+}
