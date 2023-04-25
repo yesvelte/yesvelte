@@ -13,6 +13,7 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let files: $$Props['files'] = undefined
+	export let id: $$Props['id'] = undefined
 
 	let element: HTMLInputElement
 
@@ -43,19 +44,23 @@
 	}
 </script>
 
-<El
-	componentName="{componentName}-wrapper"
-	on:click
-	on:change
-	on:input
-	on:focus
-	on:blur
-	cssProps={wrapperCssProps}>
+<El componentName="{componentName}-wrapper" cssProps={wrapperCssProps}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El bind:element {...$$restProps} {...props} {cssProps} on:change={onChange} />
+	<El
+		on:click
+		on:change
+		on:input
+		on:focus
+		on:blur
+		bind:id
+		bind:element
+		{...$$restProps}
+		{...props}
+		{cssProps}
+		on:change={onChange} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

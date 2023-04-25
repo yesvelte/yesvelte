@@ -20,6 +20,7 @@
 
 	let selectProps: SelectProps = {}
 	let props: $$Props = {}
+	let id: string;
 
 	$: {
 		selectProps = {
@@ -38,6 +39,7 @@
 			label,
 			hint,
 			state,
+			id
 		}
 	}
 </script>
@@ -52,6 +54,7 @@
 		on:blur
 		{...selectProps}
 		bind:value
+		bind:id
 		let:item
 		let:index>
 		<slot {index} {item}>{item}</slot>

@@ -20,6 +20,7 @@
 	export let inline: $$Props['inline'] = undefined
 
 
+	let id: string
 	let props: $$Props = {}
 	let switchProps: SwitchProps = {}
 
@@ -29,6 +30,7 @@
 			label,
 			hint,
 			state,
+			id,
 			componentName,
 		}
 
@@ -52,6 +54,7 @@
 		on:input
 		on:focus
 		on:blur
+		bind:id
 		{...switchProps}
 		bind:checked
 		bind:value

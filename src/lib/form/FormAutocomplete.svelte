@@ -17,6 +17,7 @@
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
 
+	let id: string
 	let props: $$Props = {}
 	let autocompleteProps: $$Props = {}
 
@@ -26,6 +27,7 @@
 			label,
 			hint,
 			state,
+			id,
 		}
 
 		autocompleteProps = {
@@ -47,6 +49,7 @@
 		on:changed
 		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
 		bind:value
+		bind:id
 		let:item
 		let:index>
 		<slot {index} {item}>{item}</slot>
