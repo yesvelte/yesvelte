@@ -19,6 +19,7 @@
 	export let checked: $$Props['checked'] = false
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
+	export let _slots: Record<string, boolean> = $$slots
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -59,7 +60,7 @@
 		on:focus
 		on:input
 		on:blur />
-	{#if label || $$slots['default']}
+	{#if label || _slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			<slot>
 				{#if label}
@@ -68,7 +69,7 @@
 			</slot>
 		</Label>
 	{/if}
-	{#if description || $$slots['description']}
+	{#if description || _slots['description']}
 		<El componentName="{componentName}-description">
 			<slot name="description">
 				{description}

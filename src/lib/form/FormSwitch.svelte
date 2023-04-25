@@ -55,8 +55,10 @@
 		{...switchProps}
 		bind:checked
 		bind:value
-		on:change>
+		on:change
+		_slots={{ default: $$slots['default'], description: $$slots['description'] }}>
 		<slot />
+		<slot name="description" slot="description" />
 	</Switch>
 	<slot name="hint" />
 </FormField>
