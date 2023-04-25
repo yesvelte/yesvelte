@@ -17,8 +17,8 @@
 	$: show = $ctx.open
 </script>
 
-<El {...$$restProps} {...props} {show} showConfig="height">
-	<div>
+<El {...$$restProps} {...props} {show}>
+	<El componentName="{componentName}-inner">
 		<slot />
-	</div>
+	</El>
 </El>

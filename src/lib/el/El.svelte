@@ -5,7 +5,9 @@
 </script>
 
 <script lang="ts">
-	import { classname } from '../internal'
+	import { onMount } from 'svelte'
+
+	import { classname, createAnimationStore } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
 
 	type $$Props = Partial<ElProps>
@@ -25,8 +27,8 @@
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
 	export let show: $$Props['show'] = undefined
-	export let showConfig: $$Props['showConfig'] = undefined
 
+	let animate: any | undefined = undefined
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}
@@ -204,6 +206,15 @@
 	//#endregion
 
 	$: {
+		if (animate && show === false) {
+			animate.leave()
+		}
+
+		if (animate && show === true) {
+			animate.enter()
+		}
+	}
+	$: {
 		defaultCssProps = {
 			// background properties
 			bgColor,
@@ -340,9 +351,9 @@
 
 		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
 
-		classes += animateClasses || ''
+		classes += $animate?.classes || ''
 
-		const styles = `${style || ''};${animateStyles || ''}`
+		const styles = `${style || ''};${$animate?.styles || ''}`
 
 		elProps = {
 			id,
@@ -357,100 +368,15 @@
 		}
 	}
 
-	//#region animation
-	let animateClasses: string | undefined = ' '
-	let animateStyles: string | undefined = ' '
-	let animateTimeout: NodeJS.Timeout
-	$: element && animate(show)
-	function animate(show: any) {
-		if (!('show' in $$props)) return
-
-		if (animateClasses == ' ') {
-			next(() => {
-				show ? change('opened') : change('closed')
-			})
-			return
-		}
-
-		function change(state: string) {
-			clearTimeout(animateTimeout)
-			animateClasses = ` y-${componentName}-show-${state}`
-		}
-
-		function duration() {
-			try {
-				const style = window.getComputedStyle(element!)
-
-				const duration = [
-					style.animationDelay,
-					style.transitionDelay,
-					style.animationDuration,
-					style.transitionDuration,
-				].map((item = '0s') => parseFloat(item) * (/ms/g.test(item) ? 1 : 1000))
-
-				return Math.max(...duration.slice(0, 2)) + Math.max(...duration.slice(2))
-			} catch {
-				return 0
-			}
-		}
-
-		function next(callback: Function) {
-			requestAnimationFrame(() => setTimeout(() => callback(), 5))
-		}
-
-		if (show) {
-			next(() => {
-				if (showConfig == 'height') {
-					animateStyles = `; max-height: 0;`
-				}
-
-				change('open')
-
-				next(() => {
-					if (showConfig == 'height') {
-						animateStyles = `; max-height: ${element!.scrollHeight}px;`
-					}
-
-					change('opening')
-
-					next(() => {
-						animateTimeout = setTimeout(() => {
-							if (showConfig == 'height') {
-								animateStyles = ' '
-							}
-							change('opened')
-						}, duration())
-					})
-				})
-			})
-		} else {
-			next(() => {
-				if (showConfig == 'height') {
-					animateStyles = `; max-height: ${element!.scrollHeight}px;`
-				}
-
-				change('close')
-
-				next(() => {
-					if (showConfig == 'height') {
-						animateStyles = `; max-height: 0;`
-					}
-
-					change('closing')
-
-					next(() => {
-						animateTimeout = setTimeout(() => {
-							if (showConfig == 'height') {
-								animateStyles = ' '
-							}
-							change('closed')
-						}, duration())
-					})
-				})
+	onMount(() => {
+		if (element) {
+			animate = createAnimationStore({
+				element,
+				componentName,
+				show,
 			})
 		}
-	}
-	//#endregion
+	})
 </script>
 
 {#if $$slots.default}

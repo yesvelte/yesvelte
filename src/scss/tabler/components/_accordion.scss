@@ -10,7 +10,8 @@ $accordion-props: (
 	null: '.accordion-item',
 	header: (
 		button: (
-			null: '.accordion-button'
+			null: '.accordion-button',
+			collapsed: '.collapsed'
 		)
 	)
 );
@@ -33,7 +34,9 @@ $accordion-props: (
 }
 
 .#{$prefix-accordion}-body {
-	& > div {
+	--show-config: height;
+
+	&-inner {
 		@extend .accordion-body;
 	}
 

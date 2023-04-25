@@ -15,6 +15,7 @@
 	setContext('TOAST', { hide })
 </script>
 
+{show}
 <El {...$$restProps} {componentName} {show}>
 	<slot />
 </El>
