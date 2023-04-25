@@ -19,7 +19,6 @@
 	export let checked: $$Props['checked'] = undefined
 	export let inline: $$Props['inline'] = undefined
 
-
 	let props: $$Props = {}
 	let switchProps: SwitchProps = {}
 
