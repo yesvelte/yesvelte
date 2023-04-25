@@ -58,4 +58,8 @@
 		height: 400px;
 		margin: -16px -24px;
 	}
+
+	:global(.y-preview-body) {
+		overflow-x: auto;
+	}
 </style>

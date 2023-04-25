@@ -113,11 +113,6 @@
 		padding-top: 12px !important;
 		padding-bottom: 12px !important;
 	}
-
-	:global(.y-preview-body) {
-		overflow: auto;
-	}
-
 	@media (min-width: 768px) {
 		:global(.y-docs-page) {
 			margin-left: 270px;
