@@ -19,6 +19,7 @@
 	export let type: $$Props['type'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let name: $$Props['name'] = undefined
+	export let id: $$Props['id'] = undefined
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -68,6 +69,7 @@
 		tag="input"
 		bind:value
 		bind:element
+		bind:id
 		on:click
 		on:change
 		on:input

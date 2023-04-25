@@ -8,6 +8,7 @@
 
 	export let componentName: $$Props['componentName'] = 'form-field'
 	export let label: $$Props['label'] = undefined
+	export let id: $$Props['id'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let state: $$Props['state'] = undefined
@@ -16,7 +17,7 @@
 <El {...$$restProps} {componentName}>
 	<slot name="label">
 		{#if label}
-			<Label {required}>{label}</Label>
+			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
 	<slot />

@@ -19,6 +19,7 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 
+	let id: string
 	let props: $$Props = {}
 	let fileUploadProps: $$Props = {}
 
@@ -27,6 +28,7 @@
 		label,
 		hint,
 		state,
+		id,
 		componentName,
 	}
 
@@ -45,7 +47,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<FileUpload on:click on:change on:input on:focus on:blur {...fileUploadProps} bind:files>
+	<FileUpload bind:id on:click on:change on:input on:focus on:blur {...fileUploadProps} bind:files>
 		<slot />
 	</FileUpload>
 	<slot name="hint" />
