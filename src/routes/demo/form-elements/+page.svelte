@@ -164,10 +164,10 @@
 	let selectedItemWithAvatar = itemsWithImage[0].name
 </script>
 
-<Card title="Form Elements" mb="3">
+<Card title="Form elements" mb="3">
 	<CardBody>
 		<El row>
-			<El colXl="4" colLg="12">
+			<El colXl="4" colMd="6" col="12">
 				<Label>Static</Label>
 				<El mb="3">Input value</El>
 				<FormInput label="Text" placeholder="Input Placeholder" />
@@ -198,16 +198,17 @@
 				</FormField>
 				<FormField>
 					<Input>
-						<ButtonGroup slot="end">
+						<svelte:fragment slot="end">
 							<Button>Action</Button>
-							<Dropdown placement="bottom-end">
+
+							<Dropdown placement="bottom-start">
 								<Button slot="target" />
 								<DropdownMenu>
 									<DropdownItem>Action</DropdownItem>
 									<DropdownItem>Another Action</DropdownItem>
 								</DropdownMenu>
 							</Dropdown>
-						</ButtonGroup>
+						</svelte:fragment>
 					</Input>
 				</FormField>
 				<FormField>
@@ -307,7 +308,7 @@
 					<FormSelect items={countries} state="invalid" bind:value={countries[1]} />
 				</FormField>
 			</El>
-			<El colXl="4" colLg="12">
+			<El colXl="4" colMd="6" col="12">
 				<FormField label="Validation States">
 					<Input placeholder="Valid State.." state="valid" />
 					<Input placeholder="Invalid State" state="invalid" mt="2" />
@@ -431,7 +432,7 @@
 					</El>
 				</FormAutocomplete>
 			</El>
-			<El colXl="4" colLg="12">
+			<El colXl="4" colMd="6" col="12">
 				<FormRadioGroup label="Radios" bind:value={radioValue} items={radioItems} />
 				<FormRadioGroup label="Inline Radios" inline bind:value={radioValue} items={radioItems} />
 				<FormField label="Checkboxes">

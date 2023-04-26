@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-	<title>{$page.data.metaData.title ?? title}</title>
-	<meta name="description" content={$page.data.metaData.description ?? description} />
+	<title>{$page.data.metaData?.title ?? title}</title>
+	<meta name="description" content={$page.data.metaData?.description ?? description} />
 </svelte:head>
 
 <El row py="3">

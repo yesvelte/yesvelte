@@ -467,7 +467,7 @@ export const navigations: Navigation[] = [
 			},
 			{
 				route: '/faq',
-				title: 'Frequently Asked Questions',
+				title: 'FAQs',
 				icon: 'tabler:app-window',
 				description: 'A sample FAQ page.',
 			},
