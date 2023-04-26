@@ -22,7 +22,7 @@
 	}
 </script>
 
-<El class="page page-center" style="height:85vh;">
+<El style="height:85vh;">
 	<El container="lg">
 		<El row m="0" alignItems="center" g="4">
 			<El colLg>
