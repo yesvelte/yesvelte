@@ -3,7 +3,7 @@
 	background: none;
 	z-index: 1055; // the same z-index as bootstrap
 }
-.#{$prefix}modal-show {
+.#{$prefix}modal-show-opened {
 	@extend .modal-open;
 }
 .#{$prefix}modal-container {

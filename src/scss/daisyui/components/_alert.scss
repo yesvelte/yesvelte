@@ -4,6 +4,28 @@
     justify-content: start;
 }
 
+.#{$prefix}alert-show {
+    &-opening,
+    &-closing {
+        transition: all 0.5s ease-out;
+    }
+
+    &-open,
+    &-closing {
+        opacity: 0;
+    }
+
+    &-close,
+    &-opening,
+    &-opened {
+        opacity: 1;
+    }
+
+    &-closed {
+        display: none;
+    }
+}
+
 .#{$prefix}alert-title {
     font-weight: bold;
 }
