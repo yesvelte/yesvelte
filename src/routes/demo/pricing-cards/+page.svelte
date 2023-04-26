@@ -4,7 +4,7 @@
 
 <El row>
 	<El colLg="3" colSm="6">
-		<Card>
+		<Card mb="3">
 			<CardBody textAlign="center" p="4">
 				<El textMuted textTransform="uppercase">Free</El>
 				<El fontWeight="bold" my="3" class="display-5">$0</El>
@@ -20,7 +20,7 @@
 		</Card>
 	</El>
 	<El colLg="3" colSm="6">
-		<Card>
+		<Card mb="3">
 			<CardBody textAlign="center" p="4">
 				<El textMuted textTransform="uppercase">PREMIUM</El>
 				<El fontWeight="bold" my="3" class="display-5">$49</El>
@@ -39,7 +39,7 @@
 		</Card>
 	</El>
 	<El colLg="3" colSm="6">
-		<Card>
+		<Card mb="3">
 			<CardBody textAlign="center" p="4">
 				<El textMuted textTransform="uppercase">ENTERPRISE</El>
 				<El fontWeight="bold" my="3" class="display-5">$99</El>
@@ -55,7 +55,7 @@
 		</Card>
 	</El>
 	<El colLg="3" colSm="6">
-		<Card>
+		<Card mb="3">
 			<CardBody textAlign="center" p="4">
 				<El textMuted textTransform="uppercase">UNLIMITED</El>
 				<El fontWeight="bold" my="3" class="display-5">$139</El>
@@ -71,7 +71,7 @@
 		</Card>
 	</El>
 	<El col="12" mt="3">
-		<Card>
+		<Card mb="3">
 			<CardBody row p="4" alignItems="center">
 				<El col>
 					<El tag="h3">Enterprise-ready. Reach out for a custom quote.</El>
