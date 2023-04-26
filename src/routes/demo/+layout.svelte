@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { El } from 'yesvelte'
+	import Layout from '$components/Layout.svelte'
 	import { navigations } from '../../routes/docs/navigations'
 	import { page } from '$app/stores'
 
@@ -16,15 +17,17 @@
 		})
 </script>
 
-<El container="xl">
-	<El d="flex" my="3">
-		{#if currentNav?.title}
-			<El tag="h1">
-				{currentNav?.title}
-			</El>
-		{/if}
+<Layout>
+	<El container="xl">
+		<El d="flex" my="3">
+			{#if currentNav?.title}
+				<El tag="h1">
+					{currentNav?.title}
+				</El>
+			{/if}
+		</El>
+		<div class="page-body">
+			<slot />
+		</div>
 	</El>
-	<div class="page-body">
-		<slot />
-	</div>
-</El>
+</Layout>
