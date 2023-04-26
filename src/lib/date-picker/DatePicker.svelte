@@ -19,6 +19,7 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let id: $$Props['id'] = undefined
 
 	const dispatch = createEventDispatcher()
 
@@ -109,6 +110,7 @@
 		on:blur
 		{value}
 		bind:element
+		bind:id
 		{...$$restProps}
 		{cssProps}
 		{...props} />

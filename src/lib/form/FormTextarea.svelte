@@ -25,7 +25,7 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let cols: $$Props['cols'] = undefined
 
-
+	let id: string
 	let props: $$Props = {}
 	let teaxtareaProps: $$Props = {}
 
@@ -58,16 +58,8 @@
 	}
 </script>
 
-<FormField {...props} {...$$restProps}>
+<FormField {id} {...props} {...$$restProps}>
 	<slot name="label" />
-	<Textarea
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur 
-		{...teaxtareaProps} 
-		bind:value 
-	/>
+	<Textarea bind:id on:click on:change on:input on:focus on:blur {...teaxtareaProps} bind:value />
 	<slot name="hint" />
 </FormField>

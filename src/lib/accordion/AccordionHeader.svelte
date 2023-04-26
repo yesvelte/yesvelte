@@ -23,6 +23,8 @@
 		}
 	}
 
+	$: show = $ctx.open
+
 	const onClick = () => {
 		dispatch('click')
 		if ($parentCtx.persistent) {
@@ -34,7 +36,7 @@
 	}
 </script>
 
-<El {...$$restProps} {...props}>
+<El {...$$restProps} {...props} {show}>
 	<El tag="button" componentName={componentName + '-button'} on:click={onClick} {cssProps}>
 		<slot />
 	</El>

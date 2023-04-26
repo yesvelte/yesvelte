@@ -29,6 +29,7 @@
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
 
+	let id: string
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
 
@@ -38,6 +39,7 @@
 		hint,
 		state,
 		componentName,
+		id,
 	}
 
 	$: inputProps = {
@@ -65,7 +67,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Input on:click on:change on:input on:focus on:blur {...inputProps} bind:value>
+	<Input bind:id on:click on:change on:input on:focus on:blur {...inputProps} bind:value>
 		<slot />
 	</Input>
 	<slot name="hint" />

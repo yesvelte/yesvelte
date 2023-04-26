@@ -9,15 +9,52 @@ $accordions-props: (
 $accordion-props: (
 	null: '.accordion-item',
 	header: (
-		null: '.accordion-header',
 		button: (
 			null: '.accordion-button',
 			collapsed: '.collapsed'
 		)
-	),
-	body: '.accordion-body'
+	)
 );
 
 .#{$prefix-accordion} {
 	@include apply-props($accordion-props);
+}
+
+.#{$prefix-accordion}-header {
+	&-show {
+		&-opened button::after {
+			transform: none !important;
+		}
+		&-closed button::after {
+			opacity: 1 !important;
+			background-image: var(--#{$prefix-accordion}-btn-active-icon) !important;
+			transform: var(--#{$prefix-accordion}-btn-icon-transform) !important;
+		}
+	}
+}
+
+.#{$prefix-accordion}-body {
+	--show-config: height;
+
+	&-inner {
+		@extend .accordion-body;
+	}
+
+	&-show {
+		&-open,
+		&-close {
+			overflow: hidden;
+		}
+
+		&-opening,
+		&-closing {
+			overflow: hidden;
+			transition: all 0.3s ease-out;
+		}
+
+		&-closed {
+			overflow: hidden;
+			max-height: 0;
+		}
+	}
 }

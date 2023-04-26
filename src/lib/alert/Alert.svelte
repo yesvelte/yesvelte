@@ -23,27 +23,25 @@
 	}
 </script>
 
-{#if open}
-	<El {...$$restProps} {cssProps} {...props} role="alert">
-		{#if icon || $$slots.start}
-			<El componentName="{componentName}-start">
-				<slot name="start">
-					<Icon size="xl" name={icon} />
-				</slot>
+<El {...$$restProps} {cssProps} {...props} role="alert" show={open}>
+	{#if icon || $$slots.start}
+		<El componentName="{componentName}-start">
+			<slot name="start">
+				<Icon size="xl" name={icon} />
+			</slot>
+		</El>
+	{/if}
+	<El componentName="{componentName}-body">
+		{#if title || $$slots['title']}
+			<El componentName="{componentName}-title">
+				<slot name="title">{title}</slot>
 			</El>
 		{/if}
-		<El componentName="{componentName}-body">
-			{#if title || $$slots['title']}
-				<El componentName="{componentName}-title">
-					<slot name="title">{title}</slot>
-				</El>
-			{/if}
-			<div>
-				<slot />
-			</div>
-		</El>
-		{#if dismissible}
-			<El componentName="{componentName}-close" on:click={() => (open = false)} />
-		{/if}
+		<div>
+			<slot />
+		</div>
 	</El>
-{/if}
+	{#if dismissible}
+		<El componentName="{componentName}-close" on:click={() => (open = false)} />
+	{/if}
+</El>
