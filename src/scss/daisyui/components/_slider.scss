@@ -1,0 +1,167 @@
+.#{$prefix}slider {
+	appearance: none;
+	background-color: transparent;
+	height: 1.25rem;
+	padding: 0;
+	width: 100%;
+}
+.noUi-horizontal {
+	height: 1.25rem;
+	padding: 0.5rem 0;
+}
+
+.noUi-target,
+.#{$prefix}slider {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: hsl(var(--bc));
+}
+.noUi-target,
+.#{$prefix}slider {
+	position: relative;
+}
+.noUi-target,
+.noUi-target *,
+.#{$prefix}slider,
+.#{$prefix}slider * {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-ms-touch-action: none;
+	touch-action: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.noUi-base {
+	background: hsl(var(--b3));
+	border-radius: 1rem;
+}
+
+.noUi-base,
+.noUi-connects {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.noUi-target,
+.noUi-target *,
+.#{$prefix}slider,
+.#{$prefix}slider * {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-ms-touch-action: none;
+	touch-action: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.noUi-connects {
+	border-radius: 3px;
+	overflow: hidden;
+	z-index: 0;
+}
+.noUi-horizontal .noUi-origin {
+	height: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-ms-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform-style: preserve-3d;
+	transform-style: flat;
+	width: 100%;
+	will-change: transform;
+	z-index: 1;
+}
+.noUi-horizontal .noUi-handle {
+	height: 1rem;
+	margin: 1px px 1px 0 0;
+	right: -0.5rem;
+	top: -0.37rem;
+	width: 1rem;
+}
+.noUi-handle {
+	background: currentColor;
+	border: 2px solid hsl(var(--b1));
+	border-radius: var(--rounded-badge);
+	height: 1rem;
+	outline: 0;
+	width: 1rem;
+	cursor: default;
+}
+.noUi-handle {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+}
+.noUi-touch-area {
+	height: 100%;
+	width: 100%;
+}
+.noUi-connect {
+	background: currentColor;
+}
+.noUi-horizontal .noUi-tooltip {
+	bottom: 120%;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+.noUi-tooltip {
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	color: #000;
+	display: block;
+	padding: 5px;
+	position: absolute;
+	text-align: center;
+	white-space: nowrap;
+}
+.noUi-handle.noUi-active,
+.noUi-handle:focus {
+	box-shadow: 0 0 0 1px hsl(var(--b1)), 0 0 0 3px currentColor;
+}
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}slider-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}slider-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}slider-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}slider-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
+}

@@ -1,0 +1,10 @@
+.#{$prefix}pagination {
+	@extend .btn-group;
+	& > * {
+		@extend .btn;
+		& > * {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

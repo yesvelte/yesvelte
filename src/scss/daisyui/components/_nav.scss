@@ -6,3 +6,58 @@
 		@extend .p-2;
 	}
 }
+.#{$prefix}navbar-wrapper {
+	--#{$prefix}dropdown-bg: hsl(var(--b1) / var(--tw-bg-opacity, 1));
+	--#{$prefix}dropdown-color: hsl(var(--bc) / var(--tw-text-opacity, 1));
+	@extend .py-2;
+	min-height: 3.5rem;
+	background-color: var(--#{$prefix}dropdown-bg);
+	color: var(--#{$prefix}dropdown-color);
+	&-theme-dark {
+		--#{$prefix}dropdown-bg: hsl(var(--n) / var(--tw-bg-opacity, 1));
+		--#{$prefix}dropdown-color: hsl(var(--nc) / var(--tw-text-opacity, 1));
+	}
+}
+.#{$prefix}navbar {
+	@extend .px-2;
+	@extend .flex;
+	@extend .justify-between;
+	@extend .items-center;
+	&-content {
+		@extend .list-none;
+		@extend .flex;
+		@extend .flex-row;
+		@extend .items-stretch;
+		@extend .m-0;
+		@extend .p-0;
+	}
+	&-item {
+		@extend .p-2;
+		@extend .flex;
+		@extend .gap-2;
+		@extend .relative;
+		@extend .rounded-btn;
+		@extend .cursor-pointer;
+		min-height: 2rem;
+		min-width: 2rem;
+		&-icon {
+			opacity: 0.7;
+		}
+		&-menu {
+			@extend .absolute;
+			@extend .hidden;
+			@extend .list-none;
+			@extend .m-0;
+			@extend .p-2;
+			@extend .rounded-box;
+			border: 1px solid hsl(var(--bc) / 0.1);
+			background-color: var(--#{$prefix}dropdown-bg);
+			color: var(--#{$prefix}dropdown-color);
+			&.#{$prefix}popup-show {
+				display: block;
+				z-index: 1031; /* just reusing tabler's value to avoid further problems */
+				transform: translateY(1rem);
+			}
+		}
+	}
+}

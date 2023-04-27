@@ -1,0 +1,14 @@
+.#{$prefix}popup:not(.#{$prefix}popup-show) {
+	@extend .hidden;
+}
+.#{$prefix}popup {
+	position: absolute;
+	left: 0;
+	top: 0;
+	--#{$prefix}-popup-offset: 8px;
+	max-width: calc(100vw - var(--#{$prefix}-popup-offset) * 2);
+	width: max-content;
+}
+.#{$prefix}popup-arrow {
+	position: absolute;
+}

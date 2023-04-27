@@ -19,6 +19,7 @@
 	@extend .border-none;
 }
 .#{$prefix}card-body {
+	@extend .relative;
 	padding: 1rem;
 }
 .#{$prefix}card-size-sm > .#{$prefix}card-body {

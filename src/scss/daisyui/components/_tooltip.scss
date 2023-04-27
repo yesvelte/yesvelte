@@ -1,0 +1,122 @@
+.#{$prefix}tooltip {
+	--#{$prefix}tooltip-zindex: 1080;
+	--#{$prefix}tooltip-max-width: 200px;
+	--#{$prefix}tooltip-padding-x: 0.5rem;
+	--#{$prefix}tooltip-padding-y: 0.25rem;
+	--#{$prefix}tooltip-margin: ;
+	--#{$prefix}tooltip-font-size: 0.765625rem;
+	--#{$prefix}tooltip-color: hsl(var(--nc));
+	--#{$prefix}tooltip-bg: hsl(var(--n));
+	--#{$prefix}tooltip-border-radius: 0.25rem;
+	--#{$prefix}tooltip-opacity: 0.9;
+	--#{$prefix}tooltip-arrow-width: 0.8rem;
+	--#{$prefix}tooltip-arrow-height: 0.4rem;
+	word-wrap: break-word;
+	display: block;
+	font-family: var(--#{$prefix}font-sans-serif);
+	font-size: var(--#{$prefix}tooltip-font-size);
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-break: auto;
+	line-height: 1.4285714286;
+	margin: var(--#{$prefix}tooltip-margin);
+	padding: var(--#{$prefix}tooltip-arrow-height);
+	text-align: left;
+	text-align: start;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	white-space: normal;
+	word-break: normal;
+	word-spacing: normal;
+	z-index: var(--#{$prefix}tooltip-zindex);
+}
+.#{$prefix}tooltip-inner {
+	background-color: var(--#{$prefix}tooltip-bg);
+	border-radius: var(--#{$prefix}tooltip-border-radius);
+	color: var(--#{$prefix}tooltip-color);
+	max-width: var(--#{$prefix}tooltip-max-width);
+	padding: var(--#{$prefix}tooltip-padding-y) var(--#{$prefix}tooltip-padding-x);
+	text-align: center;
+}
+.#{$prefix}tooltip .#{$prefix}tooltip-arrow {
+	display: block;
+	height: var(--#{$prefix}tooltip-arrow-height);
+	width: var(--#{$prefix}tooltip-arrow-width);
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-top.#{$prefix}tooltip .tooltip-arrow,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-top.#{$prefix}tooltip .#{$prefix}tooltip-arrow,
+[data-popper-placement^='top'].#{$prefix}tooltip .tooltip-arrow,
+[data-popper-placement^='top'].#{$prefix}tooltip .#{$prefix}tooltip-arrow {
+	bottom: 0;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-right.#{$prefix}tooltip .tooltip-arrow,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-right.#{$prefix}tooltip .#{$prefix}tooltip-arrow,
+[data-popper-placement^='right'].#{$prefix}tooltip .tooltip-arrow,
+[data-popper-placement^='right'].#{$prefix}tooltip .#{$prefix}tooltip-arrow {
+	height: var(--#{$prefix}tooltip-arrow-width);
+	left: 0;
+	width: var(--#{$prefix}tooltip-arrow-height);
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-bottom.#{$prefix}tooltip .tooltip-arrow,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-bottom.#{$prefix}tooltip .#{$prefix}tooltip-arrow,
+[data-popper-placement^='bottom'].#{$prefix}tooltip .tooltip-arrow,
+[data-popper-placement^='bottom'].#{$prefix}tooltip .#{$prefix}tooltip-arrow {
+	top: 0;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-left.#{$prefix}tooltip .tooltip-arrow,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-left.#{$prefix}tooltip .#{$prefix}tooltip-arrow,
+[data-popper-placement^='left'].#{$prefix}tooltip .tooltip-arrow,
+[data-popper-placement^='left'].#{$prefix}tooltip .#{$prefix}tooltip-arrow {
+	height: var(--#{$prefix}tooltip-arrow-width);
+	right: 0;
+	width: var(--#{$prefix}tooltip-arrow-height);
+}
+.#{$prefix}tooltip .tooltip-arrow:before,
+.#{$prefix}tooltip .#{$prefix}tooltip-arrow:before {
+	border-color: transparent;
+	border-style: solid;
+	content: '';
+	position: absolute;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-bottom.#{$prefix}tooltip .tooltip-arrow:before,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-bottom.#{$prefix}tooltip
+	.#{$prefix}tooltip-arrow:before,
+[data-popper-placement^='bottom'].#{$prefix}tooltip .tooltip-arrow:before,
+[data-popper-placement^='bottom'].#{$prefix}tooltip .#{$prefix}tooltip-arrow:before {
+	border-bottom-color: var(--#{$prefix}tooltip-bg);
+	border-width: 0 calc(var(--#{$prefix}tooltip-arrow-width) * 0.5)
+		var(--#{$prefix}tooltip-arrow-height);
+	bottom: -1px;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-top.#{$prefix}tooltip .tooltip-arrow:before,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-top.#{$prefix}tooltip
+	.#{$prefix}tooltip-arrow:before,
+[data-popper-placement^='top'].#{$prefix}tooltip .tooltip-arrow:before,
+[data-popper-placement^='top'].#{$prefix}tooltip .#{$prefix}tooltip-arrow:before {
+	border-top-color: var(--#{$prefix}tooltip-bg);
+	border-width: var(--#{$prefix}tooltip-arrow-height)
+		calc(var(--#{$prefix}tooltip-arrow-width) * 0.5) 0;
+	top: -1px;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-right.#{$prefix}tooltip .tooltip-arrow:before,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-right.#{$prefix}tooltip
+	.#{$prefix}tooltip-arrow:before,
+[data-popper-placement^='right'].#{$prefix}tooltip .tooltip-arrow:before,
+[data-popper-placement^='right'].#{$prefix}tooltip .#{$prefix}tooltip-arrow:before {
+	border-right-color: var(--#{$prefix}tooltip-bg);
+	border-width: calc(var(--#{$prefix}tooltip-arrow-width) * 0.5)
+		var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * 0.5) 0;
+	right: -1px;
+}
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-left.#{$prefix}tooltip .tooltip-arrow:before,
+.#{$prefix}popup.#{$prefix}popup-arrow-placement-left.#{$prefix}tooltip
+	.#{$prefix}tooltip-arrow:before,
+[data-popper-placement^='left'].#{$prefix}tooltip .tooltip-arrow:before,
+[data-popper-placement^='left'].#{$prefix}tooltip .#{$prefix}tooltip-arrow:before {
+	border-left-color: var(--#{$prefix}tooltip-bg);
+	border-width: calc(var(--#{$prefix}tooltip-arrow-width) * 0.5) 0
+		calc(var(--#{$prefix}tooltip-arrow-width) * 0.5) var(--#{$prefix}tooltip-arrow-height);
+	left: -1px;
+}
