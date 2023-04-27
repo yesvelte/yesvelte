@@ -1,0 +1,38 @@
+.#{$prefix}dropdown {
+	@extend .inline-block;
+}
+.#{$prefix}dropdown-menu {
+	@extend .absolute;
+	@extend .menu;
+	@extend .bg-base-100;
+	@extend .rounded-box;
+	@extend .shadow-xl;
+	@extend .border;
+	@extend .border-base-content\/5;
+	min-width: 11rem;
+	z-index: 1;
+}
+.#{$prefix}dropdown-item-header {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: 1rem;
+	@extend .opacity-70;
+}
+.#{$prefix}dropdown-arrow .#{$prefix}dropdown-target {
+	position: relative;
+	& > :after {
+		position: relative;
+		display: block;
+		height: 0.5rem;
+		width: 0.5rem;
+		--tw-translate-y: -50%;
+		--tw-rotate: 45deg;
+		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+			skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+			scaleY(var(--tw-scale-y));
+		content: '';
+		transform-origin: 75% 75%;
+		box-shadow: 2px 2px;
+		pointer-events: none;
+	}
+}

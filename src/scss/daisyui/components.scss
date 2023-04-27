@@ -12,6 +12,7 @@
 @import './components/sidebar';
 
 @import './components/nav';
+@import './components/pagination';
 @import './components/accordion';
 @import './components/alert';
 @import './components/avatar';
@@ -31,9 +32,11 @@
 @import './components/icon';
 // @import './components/label';
 // @import './components/menu';
-// @import './components/offcanvas';
+@import './components/offcanvas';
 // @import './components/page';
-// @import './components/popover';
+@import './components/popover';
+@import './components/popup';
+@import './components/dropdown';
 // @import './components/preview';
 @import './components/progress';
 @import './components/ribbon';
@@ -42,9 +45,10 @@
 @import './components/status';
 @import './components/table';
 @import './components/tabs';
-// @import './components/toast';
-// @import './components/tooltip';
+@import './components/toast';
+@import './components/tooltip';
 @import './components/steps';
+@import './components/slider';
 
 // // Inputs
 @import './components/autocomplete';

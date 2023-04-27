@@ -1,90 +1,87 @@
 .#{$prefix}button {
-    @extend .btn;
-    gap: 0.5rem;
+	@extend .btn;
+	gap: 0.5rem;
+	flex-wrap: nowrap;
+	white-space: nowrap;
 }
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $RoleColors {
-    .#{$prefix}button-color-#{$colorName} {
-        @extend .btn-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}button-color-#{$colorName} {
+		@extend .btn-#{$daisyuiColorName};
+	}
 }
 
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}button-color-#{$colorName} {
-        @extend .btn-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}button-color-#{$colorName} {
+		@extend .btn-#{$daisyuiColorName};
+	}
 }
 
 // constant colors
-@each $colorName,
-$colorVariant in $namedColors {
-    .#{$prefix}button-color-#{$colorName}:not(.#{$prefix}button-disabled) {
-        background-color: map-get($colorVariant, "default");
-        border-color: map-get($colorVariant, "default");
-        color: map-get($colorVariant, "content");
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}button-color-#{$colorName}:not(.#{$prefix}button-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
 
-        &:hover {
-            background-color: map-get($colorVariant, "focus");
-            border-color: map-get($colorVariant, "focus");
-        }
+		&:hover {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
 
-        &.#{$prefix}button-outline {
-            background-color: transparent;
-            border-color: map-get($colorVariant, "default");
-            color: map-get($colorVariant, "default");
-        }
-    }
+		&.#{$prefix}button-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
 }
 
 // social media colors
-@each $colorName,
-$colorVariant in $socialColors {
-    .#{$prefix}button-color-#{$colorName}:not(.#{$prefix}button-disabled) {
-        background-color: map-get($colorVariant, "default");
-        border-color: map-get($colorVariant, "default");
-        color: map-get($colorVariant, "content");
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}button-color-#{$colorName}:not(.#{$prefix}button-disabled) {
+		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
 
-        &:hover {
-            background-color: map-get($colorVariant, "focus");
-            border-color: map-get($colorVariant, "focus");
-        }
+		&:hover {
+			background-color: map-get($colorVariant, 'focus');
+			border-color: map-get($colorVariant, 'focus');
+		}
 
-        &.#{$prefix}button-outline {
-            background-color: transparent;
-            border-color: map-get($colorVariant, "default");
-            color: map-get($colorVariant, "default");
-        }
-    }
+		&.#{$prefix}button-outline {
+			background-color: transparent;
+			border-color: map-get($colorVariant, 'default');
+			color: map-get($colorVariant, 'default');
+		}
+	}
 }
 
 .#{$prefix}button-disabled {
-    @extend .btn-disabled;
+	@extend .btn-disabled;
 }
 
 .#{$prefix}button-ghost {
-    @extend .btn-ghost;
+	@extend .btn-ghost;
 }
 
 .#{$prefix}button-tile {
-    border-radius: 0
+	border-radius: 0;
 }
 
 .#{$prefix}button-pill {
-    border-radius: 10rem;
+	border-radius: 10rem;
 }
 
 .#{$prefix}button-outline {
-    @extend .btn-outline;
+	@extend .btn-outline;
 }
 
-
 .#{$prefix}button-size-lg {
-    @extend .btn-lg;
+	@extend .btn-lg;
 }
 
 .#{$prefix}button-size-sm {
-    @extend .btn-sm;
+	@extend .btn-sm;
 }

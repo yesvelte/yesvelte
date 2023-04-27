@@ -1,3 +1,13 @@
 .#{$prefix}sidebar-item-menu {
 	@extend .menu;
 }
+.#{$prefix}sidebar-wrapper .#{$prefix}sidebar .#{$prefix}sidebar-item-menu {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	color: inherit;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+	position: static;
+}
