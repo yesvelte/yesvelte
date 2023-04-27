@@ -1,6 +1,6 @@
 $navbar-props: (
 	wrapper: (
-		null: '.navbar' '.navbar-expand-sm',
+		null: '.navbar' '.navbar-expand',
 		theme: (
 			dark: '.navbar-dark',
 			light: '.navbar-light'
@@ -24,15 +24,6 @@ $navbar-props: (
 		title: '.nav-link-title'
 	)
 );
-
-.#{$prefix-navbar}-wrapper {
-	@extend .d-none;
-	@extend .d-sm-block;
-
-	&-show {
-		@extend .d-block;
-	}
-}
 
 .#{$prefix-navbar} {
 	@include apply-props($navbar-props);

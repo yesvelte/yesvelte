@@ -1,18 +1,14 @@
 $modal-props: (
 	null: (
-		'.modal',
-		'.fade'
+		'.modal'
 	),
 	container: '.modal-dialog',
 	backdrop: (
 		null: (
-			'.modal-backdrop',
-			'.fade'
+			'.modal-backdrop'
 		),
-		show: '.show',
 		absolute: '.position-absolute'
 	),
-	show: '.show',
 	absolute: '.position-absolute',
 	close: '.btn-close',
 	body: '.modal-body',
@@ -37,10 +33,8 @@ $modal-props: (
 		pointer-events: none;
 		width: 100%;
 		height: 100%;
-	}
-
-	&-show {
-		display: block;
+		display: none;
+		opacity: 0;
 	}
 
 	&-size-full {
@@ -52,6 +46,57 @@ $modal-props: (
 	@each $size in sm, lg, xl {
 		&-size-#{$size} .#{$prefix-modal-container} {
 			@extend .modal-#{$size};
+		}
+	}
+
+	&-show {
+		&-opening,
+		&-closing {
+			transition: all 0.5s ease-out;
+		}
+
+		&-open,
+		&-closing {
+			display: block;
+			opacity: 0;
+			transform: translate(0, -10%);
+		}
+
+		&-close,
+		&-opening,
+		&-opened {
+			display: block;
+			opacity: 1;
+		}
+
+		&-closed {
+			display: none;
+			opacity: 0;
+		}
+	}
+
+	&-backdrop-show {
+		&-opening,
+		&-closing {
+			transition: all 0.5s ease-out;
+		}
+
+		&-open,
+		&-closing {
+			display: block;
+			opacity: 0;
+		}
+
+		&-close,
+		&-opening,
+		&-opened {
+			display: block;
+			opacity: var(--y-backdrop-opacity);
+		}
+
+		&-closed {
+			display: none;
+			opacity: 0;
 		}
 	}
 }

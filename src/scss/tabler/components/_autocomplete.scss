@@ -9,7 +9,7 @@ select.#{$prefix-autocomplete}-loaded {
 }
 
 $props: (
-	null: '.form-select',
+	null: '.form-select' '.ts-wrapper',
 	dropdown: (
 		'.dropdown-menu',
 		'.w-100'
@@ -23,6 +23,9 @@ $props: (
 	state: (
 		valid: '.is-valid',
 		invalid: '.is-invalid'
+	),
+	control: (
+		'.ts-control'
 	)
 );
 

@@ -36,6 +36,7 @@
 		</El>
 	</El>
 	<El col="12" colLg="6" colXl="8" d="none" dLg="block" justifyContent="center" m="0" p="0">
-		<El class="bg-cover min-vh-100" style="background-image: url(/images/sign-in-cover.jpg);" />
+		<!-- <El class="bg-cover min-vh-100" style="background-image: url(/images/sign-in-cover.jpg);" /> -->
+		<El tag="img" h="100" style="object-fit: cover;" src="/images/sign-in-cover.jpg" />
 	</El>
 </El>

@@ -47,12 +47,18 @@
 		placement,
 		scrollable,
 		size,
-		show,
 		absolute,
 	}
 </script>
 
-<El {...$$restProps} {componentName} {cssProps} on:click={() => close()} tabindex="0" role="dialog">
+<El
+	{...$$restProps}
+	{componentName}
+	{cssProps}
+	on:click={() => close()}
+	tabindex="0"
+	role="dialog"
+	{show}>
 	<El componentName="{componentName}-container">
 		<El componentName="{componentName}-content" on:click={onClickContent}>
 			{#if title}
@@ -74,5 +80,5 @@
 	</El>
 </El>
 {#if backdrop}
-	<El componentName="{componentName}-backdrop" cssProps={{ show, absolute }} />
+	<El componentName="{componentName}-backdrop" cssProps={{ absolute }} {show} />
 {/if}

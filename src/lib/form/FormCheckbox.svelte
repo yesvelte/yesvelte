@@ -21,11 +21,14 @@
 	export let inline: $$Props['inline'] = undefined
 	export let name: $$Props['name'] = undefined
 
+	let id: string
+
 	$: props = {
 		required,
 		label,
 		hint,
 		state,
+		id,
 		componentName,
 	}
 
@@ -42,7 +45,16 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Checkbox on:click on:input on:focus on:blur {...checkboxProps} bind:checked bind:value on:change>
+	<Checkbox
+		bind:id
+		on:click
+		on:input
+		on:focus
+		on:blur
+		{...checkboxProps}
+		bind:checked
+		bind:value
+		on:change>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />

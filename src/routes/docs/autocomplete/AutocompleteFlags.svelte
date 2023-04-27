@@ -11,7 +11,7 @@
 </script>
 
 <Autocomplete {items} key="flag" bind:value let:item>
-	<El>
+	<El d="flex">
 		<El tag="img" width="30" me="2" src="/images/flags/{item.flag}.svg" />
 		{item.name}
 	</El>

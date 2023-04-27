@@ -23,6 +23,10 @@ $props: (
 	& > .#{$prefix}icon {
 		margin: 0 !important;
 	}
+	& > .#{$prefix-icon} {
+		--#{$prefix}icon-size: unset;
+	}
+
 
 	&.#{$prefix-button}-link {
 		background-color: transparent;

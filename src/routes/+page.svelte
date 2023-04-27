@@ -14,6 +14,24 @@
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
 
+	let items = [
+		{
+			text: '1',
+			description: '1description',
+			href: '1href',
+		},
+		{
+			text: '2',
+			description: '2description',
+			href: '2href',
+		},
+		{
+			text: '3',
+			description: '3description',
+			href: '3href',
+		},
+	]
+
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
 		icon = 'check'

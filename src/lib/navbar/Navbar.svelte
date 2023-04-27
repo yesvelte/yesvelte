@@ -12,7 +12,7 @@
 </script>
 
 <El {...$$restProps} componentName="{componentName}-wrapper" {cssProps}>
-	<El componentName="{componentName}">
+	<El {componentName}>
 		<El componentName="{componentName}-content" tag="ul">
 			<slot />
 		</El>

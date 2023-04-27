@@ -10,4 +10,5 @@ export interface SwitchProps extends Partial<ElProps> {
 	description?: string
 	type?: string
 	name?: string
+	_slots?: Record<string, boolean>
 }

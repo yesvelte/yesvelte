@@ -7,8 +7,6 @@
 	import SidebarIcon from './SidebarIcon.svelte'
 	import SidebarActive from './SidebarActive.svelte'
 	import SidebarDisabled from './SidebarDisabled.svelte'
-
-	import '$lib/css/tabler.css'
 </script>
 
 <Page title="Sidebar">

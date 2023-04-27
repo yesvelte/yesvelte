@@ -3,7 +3,6 @@ $toast-props: (
 	close: '.btn-close' '.ms-2',
 	body: '.toast-body',
 	header: '.toast-header',
-	show: '.show',
 	container: (
 		null: '.toast-container',
 		placement: (
@@ -28,4 +27,28 @@ $toast-props: (
 
 .#{$prefix-toast} {
 	@include apply-props($toast-props);
+
+	display: block !important;
+
+	&-show {
+		&-opening,
+		&-closing {
+			transition: all 0.5s ease-out;
+		}
+
+		&-open,
+		&-closing {
+			opacity: 0;
+		}
+
+		&-close,
+		&-opening,
+		&-opened {
+			opacity: 1;
+		}
+
+		&-closed {
+			display: none !important;
+		}
+	}
 }

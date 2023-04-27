@@ -22,7 +22,7 @@
 
 	let element: HTMLElement
 	let props: OffcanvasProps = { componentName, ...$$restProps }
-	let cssProps: OffcanvasProps = { placement, show }
+	let cssProps: OffcanvasProps = { placement }
 
 	const handleEscapeKey = (event: any) => {
 		if (element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
@@ -46,7 +46,7 @@
 	})
 
 	$: {
-		cssProps = { placement, show }
+		cssProps = { placement }
 		if (element && show) {
 			window.setTimeout(function () {
 				element.focus()
@@ -58,13 +58,13 @@
 </script>
 
 <El componentName="{componentName}-wrapper">
-	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0">
+	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0" {show}>
 		<slot />
 	</El>
+	{#if backdrop}
+		<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} {show} />
+	{/if}
 	{#if show}
-		{#if backdrop}
-			<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} />
-		{/if}
 		{#if noScroll}
 			<El componentName="{componentName}-no-scroll" />
 		{/if}

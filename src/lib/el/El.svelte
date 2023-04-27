@@ -5,7 +5,9 @@
 </script>
 
 <script lang="ts">
-	import { classname } from '../internal'
+	import { onMount } from 'svelte'
+
+	import { classname, createAnimationStore } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
 
 	type $$Props = Partial<ElProps>
@@ -24,7 +26,9 @@
 	export let ariaLabel: $$Props['aria-label'] = undefined
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
+	export let show: $$Props['show'] = undefined
 
+	let animate: any | undefined = undefined
 	let classes: string | undefined
 	let defaultCssProps: CssProps
 	let elProps = {}
@@ -202,6 +206,15 @@
 	//#endregion
 
 	$: {
+		if (animate && show === false) {
+			animate.leave()
+		}
+
+		if (animate && show === true) {
+			animate.enter()
+		}
+	}
+	$: {
 		defaultCssProps = {
 			// background properties
 			bgColor,
@@ -338,6 +351,10 @@
 
 		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
 
+		classes += $animate?.classes || ''
+
+		const styles = `${style || ''};${$animate?.styles || ''}`
+
 		elProps = {
 			id,
 			class: classes,
@@ -347,9 +364,19 @@
 			ariaCurrent,
 			ariaLabel,
 			ariaValuenow,
-			style,
+			style: styles,
 		}
 	}
+
+	onMount(() => {
+		if (element) {
+			animate = createAnimationStore({
+				element,
+				componentName,
+				show,
+			})
+		}
+	})
 </script>
 
 {#if $$slots.default}

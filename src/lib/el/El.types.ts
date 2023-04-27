@@ -347,4 +347,5 @@ export interface ElProps extends CssProps {
 	'aria-label'?: string
 	'aria-valuenow'?: number
 	style?: string
+	show?: boolean
 }

@@ -1,0 +1,15 @@
+$prefix-el: $prefix + 'el';
+
+.#{$prefix-el} {
+	&-text-transform {
+		&-uppercase {
+			@extend .uppercase;
+		}
+		&-lowercase {
+			@extend .lowercase;
+		}
+		&-capitalize {
+			@extend .capitalize;
+		}
+	}
+}

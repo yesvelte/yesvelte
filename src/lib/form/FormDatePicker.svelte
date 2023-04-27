@@ -17,6 +17,7 @@
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
 
+	let id: string
 	let props: $$Props = {}
 	let datePickerProps: $$Props = {}
 
@@ -26,6 +27,7 @@
 			label,
 			hint,
 			state,
+			id,
 		}
 
 		datePickerProps = {
@@ -44,6 +46,7 @@
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
 	<DatePicker
+		bind:id
 		on:click
 		on:change
 		on:input

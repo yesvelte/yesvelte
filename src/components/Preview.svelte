@@ -10,6 +10,7 @@
 		CardBody,
 	} from 'yesvelte'
 	import Prism from './Prism.svelte'
+	import { classname } from 'yesvelte/internal'
 
 	export let markup: string | undefined = undefined
 	export let script: string | undefined = undefined
@@ -39,7 +40,7 @@
 
 		<TabContent>
 			<TabPanel>
-				<CardBody>
+				<CardBody class={classname('preview-body')}>
 					<slot />
 				</CardBody>
 			</TabPanel>

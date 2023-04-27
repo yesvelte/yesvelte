@@ -1,5 +1,5 @@
 $props: (
-	null: '.alert' '.d-flex',
+	null: '.alert',
 	title: '.alert-title',
 	dismissible: '.alert-dismissible',
 	close: '.btn-close',
@@ -10,6 +10,30 @@ $props: (
 
 .#{$prefix-alert} {
 	@include apply-props($props);
+
+	display: flex;
+
+	&-show {
+		&-opening,
+		&-closing {
+			transition: all 0.5s ease-out;
+		}
+
+		&-open,
+		&-closing {
+			opacity: 0;
+		}
+
+		&-close,
+		&-opening,
+		&-opened {
+			opacity: 1;
+		}
+
+		&-closed {
+			display: none;
+		}
+	}
 
 	.#{$prefix-alert}-start {
 		height: unset !important;
