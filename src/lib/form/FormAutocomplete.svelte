@@ -47,6 +47,7 @@
 	<Autocomplete
 		{...autocompleteProps}
 		on:changed
+		on:input
 		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
 		bind:value
 		bind:id
