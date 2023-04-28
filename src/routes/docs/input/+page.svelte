@@ -11,6 +11,8 @@
 	import InputBorderShapes from './InputBorderShapes.svelte'
 	import InputMasks from './InputMasks.svelte'
 	import InputEvents from './InputEvents.svelte'
+	import InputValidateOnBlur from './InputValidateOnBlur.svelte'
+	import InputValidateOnType from './InputValidateOnType.svelte'
 </script>
 
 <Page title="Input">
@@ -115,6 +117,18 @@
 		</p>
 		<Preview src="./InputMasks.svelte">
 			<div class="custom-class"><InputMasks /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Validate on Blur">
+		<Preview src="./InputValidateOnBlur.svelte">
+			<div class="custom-class"><InputValidateOnBlur /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Validate on Type">
+		<Preview src="./InputValidateOnType.svelte">
+			<div class="custom-class"><InputValidateOnType /></div>
 		</Preview>
 	</Doc>
 </Page>
