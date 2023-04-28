@@ -12,6 +12,7 @@
 	import { page } from '$app/stores'
 	import SidebarNavigations from '$components/SidebarNavigations.svelte'
 	import Logo from '$components/Logo.svelte'
+	import { browser } from '$app/environment'
 
 	let dark: boolean = false
 	let theme: 'tabler' | 'daisyui' = 'tabler'
@@ -20,9 +21,20 @@
 
 	$: pathname = $page.url.pathname
 
+	$: {
+		pathname
+		offcanvasOpen = false
+	}
+
 	$: containerProps = {
 		'data-theme': dark ? 'dark' : 'light',
 		class: 'y-docs-wrapper y-app' + (dark ? ' y-app-theme-dark' : ''),
+	}
+
+	$: if (browser) {
+		Object.keys(containerProps).map((key) => {
+			document.body.setAttribute(key, containerProps[key])
+		})
 	}
 </script>
 
@@ -35,8 +47,8 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
+<svelte:body {...containerProps} />
 
-<El {...containerProps}>
 	<Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
 		<OffcanvasHeader p="3">
 			<Logo mb="0" />
@@ -75,7 +87,6 @@
 			<slot />
 		</El>
 	</El>
-</El>
 
 <style>
 	:global(.y-docs-page) {
