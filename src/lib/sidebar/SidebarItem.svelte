@@ -21,7 +21,7 @@
 
 	let props: Partial<ElProps>
 	$: props = {
-		tag: 'a',
+		tag: href ? 'a' : 'div',
 		href,
 		componentName,
 	}
@@ -35,7 +35,7 @@
 </script>
 
 <El {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
-	<El on:click tag="a" {...props} {cssProps}>
+	<El on:click {...props} {cssProps}>
 		{#if icon || $$slots['start']}
 			<El tag="span" componentName="{componentName}-icon">
 				<slot name="start">
