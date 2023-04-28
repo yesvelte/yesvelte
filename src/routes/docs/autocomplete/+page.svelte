@@ -11,6 +11,7 @@
 	import AutocompleteStates from './AutocompleteStates.svelte'
 	import AutocompleteAvatar from './AutocompleteAvatar.svelte'
 	import AutocompleteFlags from './AutocompleteFlags.svelte'
+	import AutocompleteOnInput from './AutocompleteOnInput.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -37,9 +38,17 @@
 	</Doc>
 
 	<Doc title="Events">
-		<p slot="description">Autocomplete only supports <code>changed</code> event.</p>
+		<p slot="description">
+			Autocomplete only supports <code>changed</code> and <code>input</code> events.
+		</p>
 		<Preview src="./AutocompleteEvents.svelte">
 			<AutocompleteEvents />
+		</Preview>
+	</Doc>
+
+	<Doc title="Input Event">
+		<Preview src="./AutocompleteOnInput.svelte">
+			<AutocompleteOnInput />
 		</Preview>
 	</Doc>
 

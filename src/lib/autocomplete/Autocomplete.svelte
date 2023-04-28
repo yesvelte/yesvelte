@@ -43,7 +43,9 @@
 			dropdownClass: classname(componentName + '-dropdown'),
 			optionClass: classname(componentName + '-option'),
 			controlClass: classname(componentName + '-control'),
-
+			onType(str) {
+				dispatch('input', str)
+			},
 			onChange(newValue) {
 				value = getKey(items[newValue])
 
