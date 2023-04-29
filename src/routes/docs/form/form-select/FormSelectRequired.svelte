@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FormSelect } from 'yesvelte'
+	import { Button, FormSelect } from 'yesvelte'
 
 	let hint = ''
 	let state: 'invalid' | undefined = undefined
@@ -27,3 +27,5 @@
 	bind:value
 	on:blur={validate}
 	on:change={validate} />
+<br />
+<Button disabled={state === 'invalid'} color="primary">Submit</Button>

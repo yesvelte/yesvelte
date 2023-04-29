@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { El, Select } from 'yesvelte'
+	import { tick } from 'svelte'
+	import { Button, El, Select } from 'yesvelte'
 
 	let hint = ''
 	let state: 'invalid' | undefined = undefined
 	let value: string | undefined = undefined
 
-	function validate() {
+	async function validate() {
+		await tick()
 		if (!value) {
 			hint = 'This is required'
 			state = 'invalid'
@@ -20,4 +22,5 @@
 
 <El tag="strong">Choose a Language: (required)</El>
 <Select {items} {state} bind:value on:blur={validate} on:change={validate} />
-<El tag="small">{hint}</El>
+<El tag="small">{hint}</El><br />
+<Button disabled={state === 'invalid'} color="primary">Submit</Button>

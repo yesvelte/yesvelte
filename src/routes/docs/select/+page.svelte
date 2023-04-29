@@ -10,7 +10,7 @@
 	import SelectStates from './SelectStates.svelte'
 	import SelectEvents from './SelectEvents.svelte'
 	import SelectObject from './SelectObject.svelte'
-	import SelectRequired from './SelectDynamicItems.svelte'
+	import SelectRequired from './SelectRequired.svelte'
 	import SelectDynamicItems from './SelectDynamicItems.svelte'
 </script>
 
