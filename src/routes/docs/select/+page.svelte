@@ -10,6 +10,8 @@
 	import SelectStates from './SelectStates.svelte'
 	import SelectEvents from './SelectEvents.svelte'
 	import SelectObject from './SelectObject.svelte'
+	import SelectRequired from './SelectDynamicItems.svelte'
+	import SelectDynamicItems from './SelectDynamicItems.svelte'
 </script>
 
 <Page
@@ -72,6 +74,18 @@
 	<Doc title="States">
 		<Preview src="./SelectStates.svelte">
 			<div class="custom-class"><SelectStates /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Required">
+		<Preview src="./SelectRequired.svelte">
+			<div class="custom-class"><SelectRequired /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Dynamic Items">
+		<Preview src="./SelectDynamicItems.svelte">
+			<div class="custom-class"><SelectDynamicItems /></div>
 		</Preview>
 	</Doc>
 </Page>
