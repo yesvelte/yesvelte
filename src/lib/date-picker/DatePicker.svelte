@@ -26,7 +26,7 @@
 	let element: HTMLElement
 	let instance: Litepicker | undefined = undefined
 
-	$: instance?.setDate(value)
+	$: if (value) instance?.setDate(value)
 
 	let settings: ILPConfiguration
 	$: settings = {
