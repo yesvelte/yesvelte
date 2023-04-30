@@ -125,7 +125,6 @@
 
 		popupEl?.addEventListener('click', onClickPopup)
 
-		if (!trigger) trigger = 'click'
 		if (trigger === 'click') targetEl?.addEventListener('click', togglePopup)
 
 		if (trigger === 'hover') {

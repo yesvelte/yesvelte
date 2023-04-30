@@ -21,6 +21,6 @@
 	}
 </script>
 
-<Popup {...$$restProps} {...props} {cssProps}>
+<Popup trigger="click" {...$$restProps} {...props} {cssProps}>
 	<slot />
 </Popup>
