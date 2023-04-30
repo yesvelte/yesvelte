@@ -12,6 +12,7 @@
 	}
 
 	function onInput(query: string) {
+		console.log('onInput', query)
 		var url = 'https://api.github.com/search/repositories?q=' + encodeURIComponent(query)
 
 		fetch(url)

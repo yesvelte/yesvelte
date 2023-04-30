@@ -62,6 +62,7 @@
 		</El>
 		{#if $$slots['default']}
 			<Popup
+				trigger="click"
 				tag="ul"
 				bind:show={active}
 				autoClose

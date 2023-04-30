@@ -12,4 +12,5 @@ export interface AutocompleteProps extends Partial<ElProps> {
 	name?: string
 	value?: string | any | any[]
 	_slots?: Record<string, boolean>
+	readonly?: boolean
 }
