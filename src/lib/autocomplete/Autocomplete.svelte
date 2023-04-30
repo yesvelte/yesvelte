@@ -46,7 +46,7 @@
 			// if(multiple) {
 			// ....
 			// } else {
-				if(query.length === 0) {
+			if (query.length === 0) {
 				value = undefined
 			}
 			// }
@@ -55,6 +55,7 @@
 
 	function onFocus() {
 		if (readonly) return
+		if (disabled) return
 
 		show = true
 	}
@@ -64,6 +65,9 @@
 		query = ''
 		value = getKey(item)
 		inputEl.focus()
+		// if (!multiple) {
+		show = false
+		// }
 
 		dispatch('changed', value)
 		// if(multiple) {
@@ -77,7 +81,6 @@
 			items.filter((i) => value !== getKey(i)),
 			{
 				extract(input) {
-					console.log(input, getKey(input))
 					return JSON.stringify(getKey(input))
 				},
 			}
@@ -87,15 +90,16 @@
 	$: cssProps = {
 		state,
 		size,
+		disabled,
 	}
 
-	$: if(show && inputEl) inputEl.focus()
+	$: if (show && inputEl) inputEl.focus()
 
-	$: noResult = options.length === 0 && query.length > 0 && items.length > 0
+	$: noResult = options.length === 0
 </script>
 
-<El componentName="{componentName}-wrapper" tabindex="0" on:focus={onFocus} {cssProps}>
-	<El {...$$restProps} {componentName}>
+<El componentName="{componentName}-wrapper">
+	<El {...$$restProps} {componentName} {cssProps} {disabled} tabindex="0" on:focus={onFocus}>
 		{#if Array.isArray(value)}
 			{#each value as val, index}
 				{@const item = items.find((x) => getKey(x) == val)}
@@ -110,13 +114,14 @@
 				{/if}
 			{/each}
 		{:else}
-			{@const item = items.find((x) => getKey(x) == value)}
+			{@const index = items.findIndex((x) => getKey(x) == value)}
+			{@const item = items[index]}
 			{#if item}
 				<El componentName="{componentName}-item">
 					{#if _slots['selected']}
-						<slot name="selected" {item} index={0}>{item}</slot>
+						<slot name="selected" {item} {index}>{item}</slot>
 					{:else}
-						<slot {item} index={0}>{item}</slot>
+						<slot {item} {index}>{item}</slot>
 					{/if}
 				</El>
 			{/if}
@@ -129,6 +134,7 @@
 			{readonly}
 			bind:value={query}
 			on:blur
+			on:focus={onFocus}
 			on:change
 			on:click
 			on:keydown={onKeyDown}

@@ -9,6 +9,7 @@ $props: (
 		'.w-100'
 	),
 	option: '.dropdown-item',
+	disabled: '.disabled',
 	size: (
 		sm: '.form-select-sm',
 		md: '.form-select',
@@ -36,6 +37,8 @@ $props: (
 
 	&-dropdown {
 		top: calc(100% + 4px);
+		overflow-y: auto;
+		max-height: 450px !important;
 	}
 
 	&-wrapper {
@@ -48,6 +51,7 @@ $props: (
 		flex: 1;
 		padding: 0;
 		outline: none;
+		background-color: transparent;
 	}
 
 	// &-item {
