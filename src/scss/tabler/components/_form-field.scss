@@ -1,13 +1,10 @@
 //
 // FormField
 //
-$props-form-field: (
-	null: '.mb-3'
-);
 
 .#{$prefix-form-field} {
-	@include apply-props($props-form-field);
-
+	@extend .mb-3;
+	
 	&-hint {
 		margin-top: 0.25rem;
 		font-size: 85.714285%;
@@ -24,34 +21,41 @@ $props-form-field: (
 	}
 }
 
+$form-field-props: (
+	null: '.#{$prefix-form-field}',
+	hint: '.#{$prefix-form-field}-hint',
+	state-valid: '.#{$prefix-form-field}-state-valid',
+	state-invalid: '.#{$prefix-form-field}-state-invalid'
+);
+
 .#{$prefix-form-input} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-checkbox} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-checkbox-group} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-file-upload} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-radio-group} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-switch} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-select} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
 
 .#{$prefix-form-textarea} {
-	@extend .#{$prefix-form-field};
+	@include apply-props($form-field-props);
 }
