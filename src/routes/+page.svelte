@@ -10,27 +10,10 @@
 
 	let icon = 'copy'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
-	let discordLink = 'https://discord.gg/gD4de625'
+	let discordLink = 'https://discord.com/invite/EKeEayhj'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
 
-	let items = [
-		{
-			text: '1',
-			description: '1description',
-			href: '1href',
-		},
-		{
-			text: '2',
-			description: '2description',
-			href: '2href',
-		},
-		{
-			text: '3',
-			description: '3description',
-			href: '3href',
-		},
-	]
 
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
@@ -70,7 +53,7 @@
 				rel="noreferrer"
 				target="_blank"
 				title="Reddit link"
-				href="https://reddit.com/r/yesvelte">
+				href={redditLink}>
 				<RedditIcon />
 			</a>
 		</div>
