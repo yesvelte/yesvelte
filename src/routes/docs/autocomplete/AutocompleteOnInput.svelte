@@ -17,7 +17,7 @@
 		fetch(url)
 			.then((response) => response.json())
 			.then((json) => {
-				items = json.items
+				items = json?.items ?? []
 			})
 			.catch(() => {
 				items = []
