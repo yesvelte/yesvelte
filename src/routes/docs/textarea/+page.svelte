@@ -8,6 +8,7 @@
 	import TextareaSizes from './TextareaSizes.svelte'
 	import TextareaBorderShapes from './TextareaBorderShapes.svelte'
 	import TextareaEvents from './TextareaEvents.svelte'
+	import TextareaValidation from './TextareaValidation.svelte'
 </script>
 
 <Page
@@ -60,6 +61,14 @@
 		<Preview src="./TextareaPlaceholder.svelte">
 			<div class="custom-class">
 				<TextareaPlaceholder />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Validation">
+		<Preview src="./TextareaValidation.svelte">
+			<div class="custom-class">
+				<TextareaValidation />
 			</div>
 		</Preview>
 	</Doc>
