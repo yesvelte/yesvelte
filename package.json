@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.125",
+	"version": "0.0.2-next.126",
 	"description": "YeSvelte UI component library for Svelte",
 	"sideEffects": false,
 	"keywords": [
