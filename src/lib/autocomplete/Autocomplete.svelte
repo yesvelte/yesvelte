@@ -75,6 +75,16 @@
 		// }
 	}
 
+	function onBlur() {
+		setTimeout(() => {
+			show = false
+		}, 200)
+	}
+
+	function onClick() {
+		if (!show) show = true
+	}
+
 	$: options = fuzzy
 		.filter(
 			query,
@@ -99,7 +109,7 @@
 </script>
 
 <El componentName="{componentName}-wrapper">
-	<El {...$$restProps} {componentName} {cssProps} {disabled} tabindex="0" on:focus={onFocus}>
+	<El {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
 		{#if Array.isArray(value)}
 			{#each value as val, index}
 				{@const item = items.find((x) => getKey(x) == val)}
@@ -133,12 +143,15 @@
 			{disabled}
 			{readonly}
 			bind:value={query}
+			on:blur={onBlur}
 			on:blur
 			on:focus={onFocus}
+			on:focus
 			on:change
 			on:click
 			on:keydown={onKeyDown}
-			on:input={onInput} />
+			on:input={onInput} 
+			on:input />
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
