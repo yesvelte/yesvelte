@@ -8,14 +8,13 @@
 
 	type $$Props = SliderProps
 
+	export let componentName: $$Props['componentName'] = 'slider'
 	export let color: $$Props['color'] = undefined
 	export let min: $$Props['min'] = undefined
 	export let max: $$Props['max'] = undefined
 	export let step: $$Props['step'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let connect: $$Props['connect'] = undefined
-
-	// name has no usage in this component....
 
 	let knobs: SliderKnobType[] = []
 	let element: HTMLElement
@@ -45,7 +44,45 @@
 			tooltips: knobs.map((knob) => knob.tooltip ?? false),
 			connect: [connect ?? false, ...knobs.map((knob) => knob.connect ?? false)],
 			step,
-			// cssClasses, TODO: update class names and scss file.
+			cssPrefix: '',
+			cssClasses: {
+				active: classname(componentName + '-active')!,
+				background: classname(componentName + '-background')!,
+				base: classname(componentName + '-base')!,
+				connect: classname(componentName + '-connect')!,
+				connects: classname(componentName + '-connects')!,
+				drag: classname(componentName + '-drag')!,
+				draggable: classname(componentName + '-draggable')!,
+				handle: classname(componentName + '-handle')!,
+				handleLower: classname(componentName + '-handle-lower')!,
+				handleUpper: classname(componentName + '-handle-upper')!,
+				horizontal: classname(componentName + '-horizontal')!,
+				ltr: classname(componentName + '-ltr')!,
+				marker: classname(componentName + '-marker')!,
+				markerHorizontal: classname(componentName + '-marker-horizontal')!,
+				markerLarge: classname(componentName + '-marker-large')!,
+				markerNormal: classname(componentName + '-marker-normal')!,
+				markerSub: classname(componentName + '-marker-sub')!,
+				markerVertical: classname(componentName + '-marker-vertical')!,
+				origin: classname(componentName + '-origin')!,
+				pips: classname(componentName + '-pips')!,
+				pipsHorizontal: classname(componentName + '-pips-horizontal')!,
+				pipsVertical: classname(componentName + '-pips-vertical')!,
+				rtl: classname(componentName + '-rtl')!,
+				tap: classname(componentName + '-tap')!,
+				target: classname(componentName + '-target')!,
+				textDirectionLtr: classname(componentName + '-text-direction-ltr')!,
+				tooltip: classname(componentName + '-tooltip')!,
+				textDirectionRtl: classname(componentName + '-text-direction-rtl')!,
+				touchArea: classname(componentName + '-touchArea')!,
+				value: classname(componentName + '-value')!,
+				valueHorizontal: classname(componentName + '-value-horizontal')!,
+				valueLarge: classname(componentName + '-value-large')!,
+				valueNormal: classname(componentName + '-value-normal')!,
+				valueSub: classname(componentName + '-value-sub')!,
+				valueVertical: classname(componentName + '-value-vertical')!,
+				vertical: classname(componentName + '-vertical')!,
+			},
 			range: {
 				min: min ?? 0,
 				max: max ?? 100,

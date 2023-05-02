@@ -5,12 +5,12 @@
 	padding: 0;
 	width: 100%;
 }
-.noUi-horizontal {
+.y-slider-horizontal {
 	height: 1.25rem;
 	padding: 0.5rem 0;
 }
 
-.noUi-target,
+.y-slider-target,
 .#{$prefix}slider {
 	background: none;
 	border: 0;
@@ -18,12 +18,12 @@
 	box-shadow: none;
 	color: hsl(var(--bc));
 }
-.noUi-target,
+.y-slider-target,
 .#{$prefix}slider {
 	position: relative;
 }
-.noUi-target,
-.noUi-target *,
+.y-slider-target,
+.y-slider-target *,
 .#{$prefix}slider,
 .#{$prefix}slider * {
 	-webkit-touch-callout: none;
@@ -37,20 +37,20 @@
 	-moz-user-select: none;
 	user-select: none;
 }
-.noUi-base {
+.y-slider-base {
 	background: hsl(var(--b3));
 	border-radius: 1rem;
 }
 
-.noUi-base,
-.noUi-connects {
+.y-slider-base,
+.y-slider-connects {
 	height: 100%;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
-.noUi-target,
-.noUi-target *,
+.y-slider-target,
+.y-slider-target *,
 .#{$prefix}slider,
 .#{$prefix}slider * {
 	-webkit-touch-callout: none;
@@ -64,17 +64,17 @@
 	-moz-user-select: none;
 	user-select: none;
 }
-.noUi-connects {
+.y-slider-connects {
 	border-radius: 3px;
 	overflow: hidden;
 	z-index: 0;
 }
-.noUi-horizontal .noUi-origin {
+.y-slider-horizontal .y-slider-origin {
 	height: 0;
 }
 
-.noUi-connect,
-.noUi-origin {
+.y-slider-connect,
+.y-slider-origin {
 	height: 100%;
 	position: absolute;
 	right: 0;
@@ -88,14 +88,14 @@
 	will-change: transform;
 	z-index: 1;
 }
-.noUi-horizontal .noUi-handle {
+.y-slider-horizontal .y-slider-handle {
 	height: 1rem;
 	margin: 1px px 1px 0 0;
 	right: -0.5rem;
 	top: -0.37rem;
 	width: 1rem;
 }
-.noUi-handle {
+.y-slider-handle {
 	background: currentColor;
 	border: 2px solid hsl(var(--b1));
 	border-radius: var(--rounded-badge);
@@ -104,26 +104,26 @@
 	width: 1rem;
 	cursor: default;
 }
-.noUi-handle {
+.y-slider-handle {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	position: absolute;
 }
-.noUi-touch-area {
+.y-slider-touch-area {
 	height: 100%;
 	width: 100%;
 }
-.noUi-connect {
+.y-slider-connect {
 	background: currentColor;
 }
-.noUi-horizontal .noUi-tooltip {
+.y-slider-horizontal .y-slider-tooltip {
 	bottom: 120%;
 	left: 50%;
 	-webkit-transform: translate(-50%);
 	transform: translate(-50%);
 }
 
-.noUi-tooltip {
+.y-slider-tooltip {
 	background: #fff;
 	border: 1px solid #d9d9d9;
 	border-radius: 3px;
@@ -134,8 +134,8 @@
 	text-align: center;
 	white-space: nowrap;
 }
-.noUi-handle.noUi-active,
-.noUi-handle:focus {
+.y-slider-handle.y-slider-active,
+.y-slider-handle:focus {
 	box-shadow: 0 0 0 1px hsl(var(--b1)), 0 0 0 3px currentColor;
 }
 
