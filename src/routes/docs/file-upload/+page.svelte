@@ -8,6 +8,7 @@
 	import FileUploadSizes from './FileUploadSizes.svelte'
 	import FileUploadValue from './FileUploadValue.svelte'
 	import FileUploadEvents from './FileUploadEvents.svelte'
+	import FileUploadValidation from './FileUploadValidation.svelte'
 </script>
 
 <Page title="File Upload">
@@ -52,6 +53,12 @@
 		<p slot="description">Allows User to select multiple files.</p>
 		<Preview src="./FileUploadMultiple.svelte">
 			<FileUploadMultiple />
+		</Preview>
+	</Doc>
+
+	<Doc title="Validation">
+		<Preview src="./FileUploadValidation.svelte">
+			<FileUploadValidation />
 		</Preview>
 	</Doc>
 
