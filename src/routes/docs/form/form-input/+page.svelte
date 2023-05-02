@@ -7,6 +7,8 @@
 	import FormInputMask from './FormInputMask.svelte'
 	import FormInputFieldset from './FormInputFieldset.svelte'
 	import FormInputEvents from './FormInputEvents.svelte'
+	import FormInputValidateOnBlur from './FormInputValidateOnBlur.svelte'
+	import FormInputValidateOnInput from './FormInputValidateOnInput.svelte'
 </script>
 
 <Page
@@ -60,6 +62,17 @@
 		</p>
 		<Preview src="./FormInputMask.svelte">
 			<FormInputMask />
+		</Preview>
+	</Doc>
+
+	<Doc title="Validate on Blur">
+		<Preview src="./FormInputValidateOnBlur.svelte">
+			<FormInputValidateOnBlur />
+		</Preview>
+	</Doc>
+	<Doc title="Validate on Input">
+		<Preview src="./FormInputValidateOnInput.svelte">
+			<FormInputValidateOnInput />
 		</Preview>
 	</Doc>
 
