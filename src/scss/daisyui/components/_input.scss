@@ -17,6 +17,12 @@
 .#{$prefix}input-state-invalid {
 	@extend .input-error;
 }
+.#{$prefix}input-border-rounded {
+	@extend .rounded-full;
+}
+.#{$prefix}input-border-flush {
+	@extend .border-transparent;
+}
 
 @each $size in (sm md lg) {
 	.#{$prefix}input-size-#{$size} {
