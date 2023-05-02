@@ -8,6 +8,8 @@
 	import FormSelectKey from './FormSelectKey.svelte'
 	import FormSelectEvents from './FormSelectEvents.svelte'
 	import FormSelectObject from './FormSelectObject.svelte'
+	import FormSelectDynamicItems from './FormSelectDynamicItems.svelte'
+	import FormSelectRequired from './FormSelectRequired.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -52,6 +54,18 @@
 	<Doc title="State">
 		<Preview src="./FormSelectState.svelte">
 			<FormSelectState />
+		</Preview>
+	</Doc>
+
+	<Doc title="Required">
+		<Preview src="./FormSelectRequired.svelte">
+			<FormSelectRequired />
+		</Preview>
+	</Doc>
+
+	<Doc title="Dynamic Items">
+		<Preview src="./FormSelectDynamicItems.svelte">
+			<FormSelectDynamicItems />
 		</Preview>
 	</Doc>
 
