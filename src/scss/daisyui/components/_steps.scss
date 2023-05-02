@@ -14,3 +14,62 @@
 		@extend .step-primary;
 	}
 }
+
+// daisyui colors
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-active:after,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-active:before,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-before-active:before,
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
+		@extend .bg-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName}-content;
+	}
+}
+
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-active:after,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-active:before,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-before-active:before,
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
+		@extend .bg-#{$daisyuiColorName};
+		@extend .text-#{$daisyuiColorName}-content;
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-active:after,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-active:before,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-before-active:before,
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-active:after,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-active:before,
+	.#{$prefix}steps-color-#{$colorName}
+		.#{$prefix}step-item-before-active
+		+ .#{$prefix}step-item-before-active:before,
+	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
+		background-color: map-get($colorVariant, 'default');
+		color: map-get($colorVariant, 'content');
+	}
+}
