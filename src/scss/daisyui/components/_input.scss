@@ -11,6 +11,13 @@
 	@extend .w-full;
 }
 
+.#{$prefix}input-state-valid {
+	@extend .input-success;
+}
+.#{$prefix}input-state-invalid {
+	@extend .input-error;
+}
+
 @each $size in (sm md lg) {
 	.#{$prefix}input-size-#{$size} {
 		@extend .input-#{$size};
