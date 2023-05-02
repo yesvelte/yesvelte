@@ -60,6 +60,7 @@
 	{#if $$slots['default']}
 		<Popup
 			tag="ul"
+			trigger="click"
 			bind:show={active}
 			autoClose={false}
 			placement="right-start"
