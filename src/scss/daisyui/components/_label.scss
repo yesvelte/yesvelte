@@ -1,0 +1,8 @@
+.#{$prefix}label {
+	@extend .mb-2;
+}
+.#{$prefix}label-required:after {
+	color: hsl(var(--er));
+	content: '＊';
+	margin-left: 0.25rem;
+}
