@@ -7,3 +7,11 @@
 .#{$prefix}table-wrapper {
 	@extend .overflow-x-auto;
 }
+
+.#{$prefix}table.#{$prefix}el-border-0 {
+	&:where(:not(.table-zebra):not(.#{$prefix}table-striped))
+		:where(thead, tbody, tfoot)
+		:where(tr:not(:last-child) :where(th, td)) {
+		border-color: transparent;
+	}
+}
