@@ -29,6 +29,21 @@
 	border-radius: 50%;
 	animation: var(--y-spinner-animation-speed) linear infinite var(--y-spinner-animation-name);
 }
+.#{$prefix}spinner-size-sm {
+	--y-spinner-width: 1rem;
+	--y-spinner-height: 1rem;
+	--y-spinner-border-width: 1px;
+}
+.#{$prefix}spinner-size-md {
+	--y-spinner-width: 1.5rem;
+	--y-spinner-height: 1.5rem;
+	--y-spinner-border-width: 2px;
+}
+.#{$prefix}spinner-size-lg {
+	--y-spinner-width: 2rem;
+	--y-spinner-height: 2rem;
+	--y-spinner-border-width: 2px;
+}
 @keyframes spinner-border {
 	to {
 		transform: rotate(360deg) /* rtl:ignore */;
