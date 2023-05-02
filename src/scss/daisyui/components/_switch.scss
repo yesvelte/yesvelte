@@ -17,6 +17,28 @@
 	@extend .toggle;
 }
 
+.#{$prefix}switch-wrapper-inline {
+	display: inline-flex;
+}
+.#{$prefix}switch-wrapper-reverse {
+	text-align: right;
+	justify-content: end;
+	grid-template-columns: 1fr auto;
+	.#{$prefix}switch {
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+	.#{$prefix}switch-label {
+		grid-column-start: 1;
+		grid-row-start: 1;
+	}
+	.#{$prefix}switch-description {
+		@extend .text-sm;
+		@extend .opacity-70;
+		grid-column-start: 1;
+	}
+}
+
 // reverse
 .#{$prefix}switch-wrapper-reverse {
 	.#{$prefix}switch {
