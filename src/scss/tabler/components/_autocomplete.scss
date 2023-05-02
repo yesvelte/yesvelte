@@ -8,7 +8,10 @@ $props: (
 		'.dropdown-menu',
 		'.w-100'
 	),
-	option: '.dropdown-item',
+	option: (
+		null: '.dropdown-item',
+		no-result: '.disabled'
+	),
 	disabled: '.disabled',
 	size: (
 		sm: '.form-select-sm',
