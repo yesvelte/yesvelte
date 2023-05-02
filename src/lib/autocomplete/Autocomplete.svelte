@@ -1,129 +1,166 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte'
-	import { createEventDispatcher } from 'svelte/internal'
-	import TomSelect from 'tom-select'
-	import type { RecursivePartial, TomSettings, TomTemplates } from 'tom-select/dist/types/types'
+	import { createEventDispatcher } from 'svelte'
+	import fuzzy from 'fuzzy'
+
 	import { El } from '../el'
+	import { Popup } from '../popup'
 	import { classname } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
 
 	type $$Props = AutocompleteProps
 
-	export let componentName: $$Props['componentName'] = 'autocomplete'
-	export let disabled: $$Props['disabled'] = undefined
-	export let items: $$Props['items'] = []
-	export let key: $$Props['key'] = undefined
+	export let componentName: string = 'autocomplete'
+	export let items: NonNullable<$$Props['items']> = []
 	export let placeholder: $$Props['placeholder'] = undefined
-	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
-	export let name: $$Props['name'] = undefined
+	export let size: $$Props['size'] = undefined
+	export let _slots: $$Props['_slots'] = $$slots
+	export let key: $$Props['key'] = undefined
+	export let disabled: $$Props['disabled'] = undefined
+	export let readonly: $$Props['readonly'] = undefined
 	export let value: $$Props['value'] = undefined
-	export let _slots: Record<string, boolean> = $$slots
 
 	const dispatch = createEventDispatcher()
 
-	let customOptions: HTMLElement[] = []
-	let customItems: HTMLElement[] = []
-
-	let element: HTMLSelectElement
-	let instance: TomSelect
-	let loaded = false
-	let props: $$Props
-	let settings: Partial<TomSettings>
-	let indexOfValue: number | undefined = undefined
-	$: {
-		props = {
-			componentName,
-			disabled,
-			placeholder,
-			cssProps: { loaded, size, state },
-		}
-
-		settings = {
-			dropdownClass: classname(componentName + '-dropdown'),
-			optionClass: classname(componentName + '-option'),
-			controlClass: classname(componentName + '-control'),
-			onType(str) {
-				dispatch('input', str)
-			},
-			onChange(newValue) {
-				value = getKey(items[newValue])
-
-				dispatch('changed', value)
-			},
-			onInitialize() {
-				loaded = true
-			},
-		} as Partial<TomSettings>
-
-		settings.render ??= {} as TomTemplates
-
-		settings.render.item = (data) => customItems[data.value]
-		settings.render.option = (data) => customOptions[data.value]
-
-		disabled ? instance?.disable() : instance?.enable()
-
-		indexOfValue = items!.findIndex((item) => getKey(item) == value)
-	}
-
-	$: instance && update('items', items)
-	$: instance && update('value', value)
-
-	function getKey(item: any) {
-		if (!key) return item
-
-		if (typeof key == 'function') return key(item)
-
-		return typeof item === 'object' ? item[key] : item
-	}
-
-	function bind() {
-		if (!element) return
-		instance = new TomSelect(element, settings as RecursivePartial<TomSettings>)
-	}
-
-	function unbind() {
-		instance?.destroy()
-	}
-
-	function update(key: string, input: any) {
-		if (key == 'items') {
-			instance.clear(true)
-			instance.clearOptions()
-			requestAnimationFrame(() => instance.sync())
-		}
-
-		if (key == 'value') {
-			requestAnimationFrame(() => instance.setValue(`${indexOfValue ?? ''}`, true))
+	$: getKey = (item: any) => {
+		if (key) {
+			return typeof key === 'string' ? item[key] : key(item)
+		} else {
+			return item
 		}
 	}
 
-	onMount(bind)
+	let inputEl: HTMLElement
+	let query = ''
+	let show = false
+	let noResult = false
 
-	onDestroy(unbind)
+	function onInput(e: any) {
+		dispatch('input', query)
+	}
+
+	function onKeyDown(e) {
+		if (readonly) return
+
+		if (e.key === 'Backspace') {
+			// if(multiple) {
+			// ....
+			// } else {
+			if (query.length === 0) {
+				value = undefined
+			}
+			// }
+		}
+	}
+
+	function onFocus() {
+		if (readonly) return
+		if (disabled) return
+
+		show = true
+	}
+
+	function onSelect(item: any) {
+		if (readonly) return
+		query = ''
+		value = getKey(item)
+		inputEl.focus()
+		// if (!multiple) {
+		show = false
+		// }
+
+		dispatch('changed', value)
+		// if(multiple) {
+		//     ...
+		// }
+	}
+
+	function onBlur() {
+		setTimeout(() => {
+			show = false
+		}, 200)
+	}
+
+	function onClick() {
+		if (!show) show = true
+	}
+
+	$: options = fuzzy
+		.filter(
+			query,
+			items.filter((i) => value !== getKey(i)),
+			{
+				extract(input) {
+					return JSON.stringify(getKey(input))
+				},
+			}
+		)
+		.map((item) => item.original)
+
+	$: cssProps = {
+		state,
+		size,
+		disabled,
+	}
+
+	$: if (show && inputEl) inputEl.focus()
+
+	$: noResult = options.length === 0
 </script>
 
-<El tag="select" bind:element {name} {...$$restProps} {...props}>
-	{#each items || [] as item, index (getKey(item))}
-		<!-- DON'T USE 'El' INSTEAD OF 'option' -->
-		<option value={index} selected={indexOfValue == index}>
-			<slot {index} {item}>{item}</slot>
-		</option>
-	{/each}
-</El>
-
-<El d="none">
-	{#each items ?? [] as item, index}
-		<El bind:element={customOptions[index]}>
-			<slot {index} {item}>{item}</slot>
-		</El>
-
-		<El bind:element={customItems[index]}>
-			{#if _slots['selected']}
-				<slot name="selected" {index} {item}>{item}</slot>
-			{:else}
-				<slot {index} {item}>{item}</slot>
+<El componentName="{componentName}-wrapper">
+	<El {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
+		{#if Array.isArray(value)}
+			{#each value as val, index}
+				{@const item = items.find((x) => getKey(x) == val)}
+				{#if item}
+					<El componentName="{componentName}-item">
+						{#if _slots['selected']}
+							<slot name="selected" {item} {index}>{item}</slot>
+						{:else}
+							<slot {item} {index}>{item}</slot>
+						{/if}
+					</El>
+				{/if}
+			{/each}
+		{:else}
+			{@const index = items.findIndex((x) => getKey(x) == value)}
+			{@const item = items[index]}
+			{#if item}
+				<El componentName="{componentName}-item">
+					{#if _slots['selected']}
+						<slot name="selected" {item} {index}>{item}</slot>
+					{:else}
+						<slot {item} {index}>{item}</slot>
+					{/if}
+				</El>
 			{/if}
-		</El>
-	{/each}
+		{/if}
+		<input
+			class={classname(`${componentName}-input`)}
+			bind:this={inputEl}
+			placeholder={value ? undefined : placeholder}
+			{disabled}
+			{readonly}
+			bind:value={query}
+			on:blur={onBlur}
+			on:blur
+			on:focus={onFocus}
+			on:focus
+			on:change
+			on:click
+			on:keydown={onKeyDown}
+			on:input={onInput} 
+			on:input />
+	</El>
+	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
+		{#if noResult}
+			<El componentName="{componentName}-option">No result</El>
+		{/if}
+		{#each options as item, index}
+			<El on:click={() => onSelect(item)} componentName="{componentName}-option">
+				<slot {item} {index}>{item}</slot>
+			</El>
+		{/each}
+	</Popup>
 </El>
