@@ -15,3 +15,8 @@
 		border-color: transparent;
 	}
 }
+.#{$prefix}table-hover {
+	:where(thead, tbody, tfoot) :where(tr:hover :where(th, td)) {
+		@extend .bg-base-200;
+	}
+}
