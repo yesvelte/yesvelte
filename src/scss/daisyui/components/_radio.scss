@@ -9,6 +9,15 @@
 	padding: 0.2rem 0;
 }
 
+.#{$prefix}radio-wrapper-inline {
+	display: inline-flex;
+}
+.#{$prefix}radio-wrapper-reverse {
+	text-align: right;
+	justify-content: end;
+	flex-direction: row-reverse;
+}
+
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}radio-color-#{$colorName} {
