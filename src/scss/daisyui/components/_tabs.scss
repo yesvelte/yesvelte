@@ -12,3 +12,29 @@
 .#{$prefix}tab-item-link-active {
 	@extend .tab-active;
 }
+
+.#{$prefix}tabs-vertical {
+	display: flex;
+	flex-direction: row;
+	.y-card-header {
+		padding-bottom: 1rem;
+		padding-right: 0rem !important;
+	}
+	.y-tab-list {
+		flex-direction: column;
+		.y-tab-item,
+		.y-tab-item > * {
+			width: 100%;
+		}
+		.y-tab-item-link {
+			justify-content: left;
+			border-bottom-color: transparent;
+		}
+		.y-tab-item-link.y-tab-item-link-active:not(.tab-disabled):not([disabled]) {
+			border-right: 0;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: var(--tab-radius, 0.5rem);
+			border-bottom: var(--tab-border, 1px) solid var(--tab-border-color);
+		}
+	}
+}
