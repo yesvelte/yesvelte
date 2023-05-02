@@ -3,6 +3,14 @@
 	@extend .steps;
 	&-vertical {
 		@extend .steps-vertical;
+		& .#{$prefix}step-item {
+			grid-template-rows: 40px 1fr;
+			&:before {
+				grid-row-end: -1;
+				margin-top: calc(100% + 3px);
+				--tw-translate-y: calc(-100% - 16px);
+			}
+		}
 	}
 }
 .#{$prefix}step-item {
@@ -12,6 +20,10 @@
 	}
 	&-before-active {
 		@extend .step-primary;
+	}
+	& > .#{$prefix}el {
+		grid-column-start: 2;
+		text-align: left;
 	}
 }
 
