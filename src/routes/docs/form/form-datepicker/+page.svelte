@@ -6,6 +6,7 @@
 	import FormDatePickerMessage from './FormDatePickerMessage.svelte'
 	import FormDatePickerEvents from './FormDatePickerEvents.svelte'
 	import FormDatePickerRequired from './FormDatePickerRequired.svelte'
+	import FormDatePickerValidate from './FormDatePickerValidate.svelte'
 </script>
 
 <Page title="FormDatePicker">
@@ -44,6 +45,12 @@
 	<Doc title="Hint/Validation Message">
 		<Preview src="./FormDatePickerMessage.svelte">
 			<FormDatePickerMessage />
+		</Preview>
+	</Doc>
+
+	<Doc title="Validation Example">
+		<Preview src="./FormDatePickerValidate.svelte">
+			<FormDatePickerValidate />
 		</Preview>
 	</Doc>
 

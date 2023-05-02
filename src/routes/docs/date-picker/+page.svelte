@@ -9,6 +9,7 @@
 	import DatepickerFormat from './DatepickerFormat.svelte'
 	import DatepickerRounded from './DatepickerRounded.svelte'
 	import DatepickerSizes from './DatepickerSizes.svelte'
+	import DatepickerValidate from './DatepickerValidate.svelte'
 	import DatepickerValue from './DatepickerValue.svelte'
 </script>
 
@@ -75,6 +76,11 @@
 	<Doc title="Events">
 		<Preview src="./DatepickerEvents.svelte">
 			<DatepickerEvents />
+		</Preview>
+	</Doc>
+	<Doc title="Validate">
+		<Preview src="./DatepickerValidate.svelte">
+			<DatepickerValidate />
 		</Preview>
 	</Doc>
 </Page>
