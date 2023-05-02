@@ -6,7 +6,7 @@
 }
 
 .#{$prefix}tab-item-link {
-	@extend .tab, .tab-lifted;
+	@extend .tab, .tab-lifted, .gap-2;
 }
 
 .#{$prefix}tab-item-link-active {
