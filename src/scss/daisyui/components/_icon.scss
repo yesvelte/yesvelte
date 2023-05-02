@@ -1,57 +1,53 @@
 $icon-sizes: (
-    xs: 0.75rem,
-    sm: 0.875rem,
-    md: 1rem,
-    lg: 1.25rem,
-    xl: 1.5rem,
-    1x: 1rem,
-    2x: 2rem,
-    3x: 3rem,
-    4x: 4rem,
-    5x: 5rem,
-    6x: 6rem,
-    7x: 7rem,
-    8x: 8rem,
-    9x: 9rem
+	xs: 0.75rem,
+	sm: 0.875rem,
+	md: 1rem,
+	lg: 1.25rem,
+	xl: 1.5rem,
+	1x: 1rem,
+	2x: 2rem,
+	3x: 3rem,
+	4x: 4rem,
+	5x: 5rem,
+	6x: 6rem,
+	7x: 7rem,
+	8x: 8rem,
+	9x: 9rem
 );
 
 .#{$prefix}icon {
-    --u-icon-size: 1.25rem;
-    width: var(--u-icon-size);
-    height: var(--u-icon-size);
-    font-size: var(--u-icon-size);
+	--u-icon-size: 1.25rem;
+	width: var(--u-icon-size);
+	height: var(--u-icon-size);
+	font-size: var(--u-icon-size);
+	display: inline-block;
+	@each $key, $value in $icon-sizes {
+		&-size-#{$key} {
+			--u-icon-size: #{$value};
+		}
+	}
 
-    @each $key,
-    $value in $icon-sizes {
-        &-size-#{$key} {
-            --u-icon-size: #{$value};
-        }
-    }
-
-    * {
-        stroke-width: 1.5px;
-    }
+	* {
+		stroke-width: 1.5px;
+	}
 }
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $RoleColors {
-    .#{$prefix}icon-color-#{$colorName} {
-        @extend .text-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}icon-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
 }
 
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}icon-color-#{$colorName} {
-        @extend .text-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}icon-color-#{$colorName} {
+		@extend .text-#{$daisyuiColorName};
+	}
 }
 
 // constant colors
-@each $colorName,
-$colorVariant in $namedColors {
-    .#{$prefix}icon-color-#{$colorName} {
-        color: map-get($colorVariant, "default");
-    }
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}icon-color-#{$colorName} {
+		color: map-get($colorVariant, 'default');
+	}
 }
