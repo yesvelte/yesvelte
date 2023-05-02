@@ -7,3 +7,9 @@
 	border-top-left-radius: var(--rounded-btn, 0.5rem);
 	border-top-right-radius: var(--rounded-btn, 0.5rem);
 }
+.#{$prefix}input-wrapper input[type='checkbox'] {
+	@extend .checkbox;
+}
+.#{$prefix}input-wrapper input[type='radio'] {
+	@extend .radio;
+}
