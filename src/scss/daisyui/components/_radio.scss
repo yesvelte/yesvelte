@@ -34,13 +34,19 @@
 // constant colors
 @each $colorName, $colorVariant in $namedColors {
 	.#{$prefix}radio-color-#{$colorName} {
-		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		&:checked {
+			background-color: map-get($colorVariant, 'default');
+		}
 	}
 }
 
 // social media colors
 @each $colorName, $colorVariant in $socialColors {
 	.#{$prefix}radio-color-#{$colorName} {
-		background-color: map-get($colorVariant, 'default');
+		border-color: map-get($colorVariant, 'default');
+		&:checked {
+			background-color: map-get($colorVariant, 'default');
+		}
 	}
 }
