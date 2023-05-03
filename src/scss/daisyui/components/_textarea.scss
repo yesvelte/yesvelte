@@ -13,3 +13,19 @@
 .#{$prefix}form-textarea-hint {
 	@extend .label-text-alt;
 }
+.#{$prefix}textarea-size-sm {
+	@extend .textarea-sm;
+}
+.#{$prefix}textarea-size-md {
+	@extend .textarea-md;
+}
+.#{$prefix}textarea-size-lg {
+	@extend .textarea-lg;
+}
+
+.#{$prefix}textarea-border-rounded {
+	@extend .rounded-full;
+}
+.#{$prefix}textarea-border-flush {
+	@extend .border-transparent;
+}
