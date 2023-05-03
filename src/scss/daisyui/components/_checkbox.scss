@@ -9,6 +9,15 @@
 	padding: 0.2rem 0;
 }
 
+.#{$prefix}checkbox-wrapper-inline {
+	display: inline-flex;
+}
+.#{$prefix}checkbox-wrapper-reverse {
+	text-align: right;
+	justify-content: end;
+	flex-direction: row-reverse;
+}
+
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}checkbox-color-#{$colorName} {
