@@ -1,15 +1,18 @@
 .#{$prefix}card {
 	@extend .card;
 	@extend .card-bordered;
+	border-color: hsl(var(--b3) / var(--tw-border-opacity));
 	@extend .block;
 	@extend .bg-base-100;
 }
 .#{$prefix}card-header {
 	@extend .pt-3;
 	@extend .px-3;
-	@extend .bg-base-200;
 	@extend .rounded-t-xl;
 	border-bottom: var(--tab-border, 1px) solid hsl(var(--b3));
+	&-light {
+		@extend .bg-base-200;
+	}
 }
 .#{$prefix}card-title {
 	@extend .card-title;
