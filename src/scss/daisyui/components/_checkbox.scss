@@ -1,25 +1,53 @@
 .#{$prefix}checkbox {
-    @extend .checkbox;
+	@extend .checkbox;
 }
 
 .#{$prefix}checkbox-wrapper {
-    display: flex;
-    place-items: center;
-    gap: 0.5rem;
-    padding: 0.2rem 0;
+	display: flex;
+	place-items: center;
+	gap: 0.5rem;
+	padding: 0.2rem 0;
 }
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $RoleColors {
-    .#{$prefix}checkbox-color-#{$colorName} {
-        @extend .checkbox-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $RoleColors {
+	.#{$prefix}checkbox-color-#{$colorName} {
+		@extend .checkbox-#{$daisyuiColorName};
+	}
 }
 
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}checkbox-color-#{$colorName} {
-        @extend .checkbox-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}checkbox-color-#{$colorName} {
+		@extend .checkbox-#{$daisyuiColorName};
+	}
+}
+
+// constant colors
+@each $colorName, $colorVariant in $namedColors {
+	.#{$prefix}checkbox-color-#{$colorName} {
+		border-color: map-get($colorVariant, 'default');
+		--chkbg: #{map-get($colorVariant, 'hsl')};
+		--chkfg: #{map-get($colorVariant, 'contentHsl')};
+		&:checked {
+			background-color: map-get($colorVariant, 'default');
+		}
+		&:focus-visible {
+			outline-color: map-get($colorVariant, 'default');
+		}
+	}
+}
+
+// social media colors
+@each $colorName, $colorVariant in $socialColors {
+	.#{$prefix}checkbox-color-#{$colorName} {
+		border-color: map-get($colorVariant, 'default');
+		--chkbg: #{map-get($colorVariant, 'hsl')};
+		--chkfg: #{map-get($colorVariant, 'contentHsl')};
+		&:checked {
+			background-color: map-get($colorVariant, 'default');
+		}
+		&:focus-visible {
+			outline-color: map-get($colorVariant, 'default');
+		}
+	}
 }
