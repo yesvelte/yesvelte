@@ -8,6 +8,7 @@
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
 	import FormAutocompleteObject from './FormAutocompleteObject.svelte'
+	import FormAutocompleteOnInput from './FormAutocompleteOnInput.svelte'
 	import FormAutocompletePlaceholder from './FormAutocompletePlaceholder.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
 	import FormAutocompleteSizes from './FormAutocompleteSizes.svelte'
@@ -65,9 +66,13 @@
 	</Doc>
 
 	<Doc title="Events">
-		<p slot="description">FormAutocomplete only supports <code>changed</code> event.</p>
 		<Preview src="./FormAutocompleteEvents.svelte">
 			<FormAutocompleteEvents />
+		</Preview>
+	</Doc>
+	<Doc title="On Input">
+		<Preview src="./FormAutocompleteOnInput.svelte">
+			<FormAutocompleteOnInput />
 		</Preview>
 	</Doc>
 
