@@ -31,3 +31,9 @@
 .#{$prefix}card-size-lg > .#{$prefix}card-body {
 	padding: 4rem;
 }
+.#{$prefix}card-rotate-right {
+	transform: rotate(1.5deg);
+}
+.#{$prefix}card-rotate-left {
+	transform: rotate(-1.5deg);
+}
