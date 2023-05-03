@@ -1,5 +1,6 @@
 .#{$prefix}button {
 	@extend .btn;
+	position: relative;
 	gap: 0.5rem;
 	flex-wrap: nowrap;
 	white-space: nowrap;
@@ -84,4 +85,31 @@
 
 .#{$prefix}button-size-sm {
 	@extend .btn-sm;
+}
+
+.#{$prefix}button-loading {
+	color: transparent !important;
+	pointer-events: none;
+	&:after {
+		--y-btn-icon-size: 1.25rem;
+		animation: spinner-border 0.75s linear infinite;
+		border-right-color: currentcolor;
+		border: 2px solid;
+		border-radius: 100rem;
+		border-right: 2px solid transparent;
+		content: '';
+		display: inline-block;
+		height: var(--y-btn-icon-size);
+		left: calc(50% - var(--y-btn-icon-size) / 2);
+		position: absolute;
+		top: calc(50% - var(--y-btn-icon-size) / 2);
+		vertical-align: text-bottom;
+		width: var(--y-btn-icon-size);
+		color: white;
+	}
+}
+@keyframes spinner-border {
+	to {
+		transform: rotate(360deg) /* rtl:ignore */;
+	}
 }
