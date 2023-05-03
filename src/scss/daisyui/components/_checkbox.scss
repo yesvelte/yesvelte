@@ -3,10 +3,16 @@
 }
 
 .#{$prefix}checkbox-wrapper {
-	display: flex;
-	place-items: center;
-	gap: 0.5rem;
-	padding: 0.2rem 0;
+	@extend .grid;
+	@extend .gap-x-3;
+	grid-template-columns: auto 1fr;
+	& > *:not(:first-child) {
+		grid-column-start: 2;
+	}
+	.#{$prefix}checkbox-description {
+		@extend .text-sm;
+		@extend .opacity-70;
+	}
 }
 
 .#{$prefix}checkbox-wrapper-inline {
@@ -15,7 +21,20 @@
 .#{$prefix}checkbox-wrapper-reverse {
 	text-align: right;
 	justify-content: end;
-	flex-direction: row-reverse;
+	grid-template-columns: 1fr auto;
+	.#{$prefix}checkbox {
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+	.#{$prefix}checkbox-label {
+		grid-column-start: 1;
+		grid-row-start: 1;
+	}
+	.#{$prefix}checkbox-description {
+		@extend .text-sm;
+		@extend .opacity-70;
+		grid-column-start: 1;
+	}
 }
 
 // daisyui colors

@@ -1,20 +1,18 @@
+.#{$prefix}switch {
+	@extend .toggle;
+}
+
 .#{$prefix}switch-wrapper {
 	@extend .grid;
 	@extend .gap-x-3;
 	grid-template-columns: auto 1fr;
-	.#{$prefix}switch-label {
-		@extend .col-start-2;
+	& > *:not(:first-child) {
+		grid-column-start: 2;
 	}
-	.#{$prefix}switch-description {
+	.#{$prefix}checkbox-description {
 		@extend .text-sm;
 		@extend .opacity-70;
-		@extend .col-start-2;
-		@extend .row-start-2;
 	}
-}
-
-.#{$prefix}switch {
-	@extend .toggle;
 }
 
 .#{$prefix}switch-wrapper-inline {
