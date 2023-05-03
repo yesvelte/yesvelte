@@ -9,6 +9,7 @@
 .#{$prefix}navbar-wrapper {
 	--#{$prefix}dropdown-bg: hsl(var(--b1) / var(--tw-bg-opacity, 1));
 	--#{$prefix}dropdown-color: hsl(var(--bc) / var(--tw-text-opacity, 1));
+	position: relative;
 	@extend .py-2;
 	min-height: 3.5rem;
 	background-color: var(--#{$prefix}dropdown-bg);
