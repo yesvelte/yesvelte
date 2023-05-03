@@ -69,3 +69,30 @@
 .#{$prefix}badge-size-sm {
 	@extend .badge-sm;
 }
+
+.#{$prefix}badge-blink {
+	animation: blink 2s infinite;
+}
+
+.#{$prefix}badge:empty {
+	height: 0.75rem;
+	width: 0.75rem;
+	padding: 0;
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+.#{$prefix}badge-notification {
+	position: absolute;
+	top: 0;
+	right: 0;
+	translate: 50% -50%;
+	z-index: 1;
+}
