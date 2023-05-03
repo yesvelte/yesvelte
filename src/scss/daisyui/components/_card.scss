@@ -54,3 +54,29 @@
 .#{$prefix}card-rotate-left {
 	transform: rotate(-1.5deg);
 }
+
+.#{$prefix}card-media {
+	width: 100%;
+	height: 100%;
+	> * {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.#{$prefix}card-media-element-position-top > * {
+	border-top-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-top-right-radius: calc(var(--rounded-box, 1rem) - 1px);
+}
+.#{$prefix}card-media-element-position-bottom > * {
+	border-bottom-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-bottom-right-radius: calc(var(--rounded-box, 1rem) - 1px);
+}
+.#{$prefix}card-media-element-position-start > * {
+	border-top-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-bottom-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+}
+.#{$prefix}card-media-element-position-end > * {
+	border-top-right-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-bottom-right-radius: calc(var(--rounded-box, 1rem) - 1px);
+}
