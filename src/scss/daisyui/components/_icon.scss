@@ -21,6 +21,7 @@ $icon-sizes: (
 	height: var(--u-icon-size);
 	font-size: var(--u-icon-size);
 	display: inline-block;
+	flex-shrink: 0;
 	@each $key, $value in $icon-sizes {
 		&-size-#{$key} {
 			--u-icon-size: #{$value};
