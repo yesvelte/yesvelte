@@ -8,10 +8,24 @@
 .#{$prefix}card-header {
 	@extend .pt-3;
 	@extend .px-3;
-	@extend .rounded-t-xl;
+	border-top-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-top-right-radius: calc(var(--rounded-box, 1rem) - 1px);
 	border-bottom: var(--tab-border, 1px) solid hsl(var(--b3));
 	&-light {
 		@extend .bg-base-200;
+	}
+}
+.#{$prefix}card-footer {
+	@extend .p-3;
+
+	border-bottom-left-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-bottom-right-radius: calc(var(--rounded-box, 1rem) - 1px);
+	border-top: var(--tab-border, 1px) solid hsl(var(--b3));
+	@extend .bg-base-200;
+	&-transparent {
+		padding-top: 0;
+		border-top-color: transparent;
+		@extend .bg-transparent;
 	}
 }
 .#{$prefix}card-title {
