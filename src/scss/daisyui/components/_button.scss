@@ -1,4 +1,5 @@
 .#{$prefix}button {
+	--color-value-opacity: 1;
 	@extend .btn;
 	position: relative;
 	gap: 0.5rem;
@@ -59,12 +60,97 @@
 	}
 }
 
-.#{$prefix}button-disabled {
-	@extend .btn-disabled;
-}
-
 .#{$prefix}button-ghost {
 	@extend .btn-ghost;
+
+	// daisyui colors
+	@each $colorName, $daisyuiColorName in $RoleColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			@extend .text-#{$daisyuiColorName};
+		}
+	}
+
+	@each $colorName, $daisyuiColorName in $StateColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			@extend .text-#{$daisyuiColorName};
+		}
+	}
+
+	// constant colors
+	@each $colorName, $colorVariant in $namedColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			background-color: transparent;
+			border-color: transparent;
+			color: map-get($colorVariant, 'value');
+			&:hover {
+				background-color: hsl(var(--bc) / var(--tw-bg-opacity, 0.2));
+				border-color: transparent;
+				color: map-get($colorVariant, 'value');
+			}
+		}
+	}
+
+	// social media colors
+	@each $colorName, $colorVariant in $socialColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			background-color: transparent;
+			border-color: transparent;
+			color: map-get($colorVariant, 'default');
+			&:hover {
+				background-color: hsl(var(--bc) / var(--tw-bg-opacity, 0.2));
+				border-color: transparent;
+				color: map-get($colorVariant, 'default');
+			}
+		}
+	}
+}
+
+.#{$prefix}button-link {
+	@extend .btn-link;
+	// daisyui colors
+	@each $colorName, $daisyuiColorName in $RoleColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			@extend .text-#{$daisyuiColorName};
+		}
+	}
+
+	@each $colorName, $daisyuiColorName in $StateColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			@extend .text-#{$daisyuiColorName};
+		}
+	}
+
+	// constant colors
+	@each $colorName, $colorVariant in $namedColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			background-color: transparent;
+			border-color: transparent;
+			color: map-get($colorVariant, 'value');
+			&:hover {
+				background-color: transparent;
+				border-color: transparent;
+				color: map-get($colorVariant, 'value');
+			}
+		}
+	}
+
+	// social media colors
+	@each $colorName, $colorVariant in $socialColors {
+		&.#{$prefix}button-color-#{$colorName} {
+			background-color: transparent;
+			border-color: transparent;
+			color: map-get($colorVariant, 'default');
+			&:hover {
+				background-color: transparent;
+				border-color: transparent;
+				color: map-get($colorVariant, 'default');
+			}
+		}
+	}
+}
+
+.#{$prefix}button-disabled {
+	@extend .btn-disabled;
 }
 
 .#{$prefix}button-tile {
