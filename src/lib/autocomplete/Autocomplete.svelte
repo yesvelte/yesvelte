@@ -34,8 +34,10 @@
 	let query = ''
 	let show = false
 	let noResult = false
+	let timer: any
 
 	function onInput(e: any) {
+		console.log('dispatch on input')
 		dispatch('input', query)
 	}
 
@@ -57,7 +59,10 @@
 		if (readonly) return
 		if (disabled) return
 
-		show = true
+		if (!show)
+			timer = setTimeout(() => {
+				show = true
+			}, 200)
 	}
 
 	function onSelect(item: any) {
@@ -75,14 +80,22 @@
 		// }
 	}
 
-	function onBlur() {
-		setTimeout(() => {
+	function onBlur(e) {
+		timer = setTimeout(() => {
 			show = false
 		}, 200)
 	}
 
 	function onClick() {
-		if (!show) show = true
+		if (readonly) return
+		if (disabled) return
+
+		if (timer) {
+			timer = clearTimeout(timer)
+		}
+
+		show = !show
+		if (show) inputEl.focus()
 	}
 
 	$: options = fuzzy
@@ -102,8 +115,6 @@
 		size,
 		disabled,
 	}
-
-	$: if (show && inputEl) inputEl.focus()
 
 	$: noResult = options.length === 0
 </script>
@@ -147,15 +158,13 @@
 			on:blur
 			on:focus={onFocus}
 			on:focus
-			on:change
 			on:click
 			on:keydown={onKeyDown}
-			on:input={onInput} 
-			on:input />
+			on:input={onInput} />
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
-			<El componentName="{componentName}-option">No result</El>
+			<El componentName="{componentName}-option" cssProps={{noResult: true}}>No result</El>
 		{/if}
 		{#each options as item, index}
 			<El on:click={() => onSelect(item)} componentName="{componentName}-option">
