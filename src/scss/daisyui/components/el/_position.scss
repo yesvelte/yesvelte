@@ -1,0 +1,7 @@
+$positions: static fixed absolute relative sticky !default;
+
+@each $position in $positions {
+	.#{$prefix}el-position-#{$position} {
+		position: #{$position};
+	}
+}
