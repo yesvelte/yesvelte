@@ -1,0 +1,73 @@
+/* styles for documentation site */
+
+.y-docs-page {
+    margin-left: 0px;
+}
+.y-docs-sidebar {
+    margin-top: 56px;
+    position: absolute;
+}
+
+.y-docs-offcanvas {
+    position: absolute;
+    width: 300px !important;
+}
+
+.y-offcanvas-show-closed {
+    display: none;
+}
+
+.y-docs-navbar-container {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.y-docs-sidebar > * {
+    width: 270px !important;
+}
+
+.y-sidebar-wrapper {
+    padding: 8px !important;
+}
+
+.y-docs-offcanvas .y-sidebar-wrapper {
+    width: auto;
+}
+
+.y-offcanvas-header {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.y-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.y-el-d-none {
+    display: none;
+}
+
+.y-el-d-block {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .y-docs-page {
+        margin-left: 270px;
+    }
+
+    .y-docs-navbar-container {
+        left: 270px;
+    }
+
+    .y-el-d-md-none {
+        display: none;
+    }
+    
+    .y-el-d-md-block {
+        display: block;
+    }
+    
+}
