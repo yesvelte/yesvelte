@@ -1,3 +1,6 @@
 .#{$prefix}button-group {
 	@extend .btn-group;
 }
+.#{$prefix}button-group-vertical {
+	@extend .btn-group-vertical;
+}

@@ -17,3 +17,6 @@
 .#{$prefix}select-state-invalid {
 	@extend .select-error;
 }
+.#{$prefix}form-select {
+	margin-bottom: 1rem;
+}
