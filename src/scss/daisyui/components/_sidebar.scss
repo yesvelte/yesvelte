@@ -22,7 +22,12 @@
 		background-color: hsl(var(--bc) / var(--tw-bg-opacity));
 		--tw-bg-opacity: 0.1;
 	}
+	&-active:not(.#{$prefix}sidebar-item-dropdown) {
+		background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+		--tw-bg-opacity: 0.1;
+	}
 }
+
 .#{$prefix}sidebar-item-icon {
 	height: 1.25rem;
 	width: 1.25rem;
