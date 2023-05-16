@@ -1,6 +1,11 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+	import { forwardEventsRegister } from '../internal'
+
 	import { El } from '../el'
 	import type { LabelProps } from './Label.types'
+
+	forwardEventsRegister(get_current_component())
 
 	type $$Props = LabelProps
 

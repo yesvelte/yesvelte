@@ -11,3 +11,7 @@ $pagination-props: (
 .#{$prefix-pagination} {
 	@include apply-props($pagination-props);
 }
+
+.#{$prefix-pagination}-item {
+	flex-shrink: 0;
+}

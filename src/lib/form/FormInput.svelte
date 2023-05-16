@@ -1,7 +1,12 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+	import { forwardEventsRegister } from '../internal'
+
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
+
+	forwardEventsRegister(get_current_component())
 
 	type $$Props = FormInputProps
 
@@ -67,7 +72,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Input bind:id on:click on:change on:input on:focus on:blur {...inputProps} bind:value>
+	<Input bind:id {...inputProps} bind:value>
 		<slot />
 	</Input>
 	<slot name="hint" />

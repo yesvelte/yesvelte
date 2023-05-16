@@ -1,7 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
+	import { forwardEventsRegister } from '../internal'
+
 	import { El } from '../el'
 	import type { InputProps, InputWrapperProps } from './Input.types'
+
+	forwardEventsRegister(get_current_component())
 
 	type $$Props = InputProps
 
@@ -65,19 +70,7 @@
 		<slot name="start" />
 	{/if}
 	<slot />
-	<El
-		tag="input"
-		bind:value
-		bind:element
-		bind:id
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
-		{...$$restProps}
-		{...props}
-		{cssProps} />
+	<El tag="input" bind:value bind:element bind:id {...$$restProps} {...props} {cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

@@ -1,8 +1,13 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+	import { forwardEventsRegister } from '../internal'
+
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { FormFieldProps } from './Form.types'
 	import type { LabelProps } from '../label/Label.types'
+
+	forwardEventsRegister(get_current_component())
 
 	type $$Props = FormFieldProps
 
