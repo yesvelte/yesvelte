@@ -7,8 +7,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 
-	import { classname, createAnimationStore } from '../internal'
+	import { classname, createAnimationStore, forwardEventsBuilder } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = Partial<ElProps>
 
@@ -27,6 +28,7 @@
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
 	export let show: $$Props['show'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let animate: any | undefined = undefined
 	let classes: string | undefined
@@ -202,6 +204,17 @@
 	export let alignSelf: $$Props['alignSelf'] = undefined
 	export let justifyContent: $$Props['justifyContent'] = undefined
 	//#endregion
+
+	//#endregion
+
+	//#region Forward Events
+
+	const myForwardEvents = forwardEventsBuilder(get_current_component())
+
+	const forwardEvents0 = forwardEvents?.[0] ?? (() => {})
+	const forwardEvents1 = forwardEvents?.[1] ?? (() => {})
+	const forwardEvents2 = forwardEvents?.[2] ?? (() => {})
+	const forwardEvents3 = forwardEvents?.[3] ?? (() => {})
 
 	//#endregion
 
@@ -382,11 +395,11 @@
 {#if $$slots.default}
 	<svelte:element
 		this={tag}
-		on:click
-		on:change
-		on:focus
-		on:blur
-		on:input
+		use:forwardEvents0
+		use:forwardEvents1
+		use:forwardEvents2
+		use:forwardEvents3
+		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
 		{...elProps}>
@@ -394,22 +407,22 @@
 	</svelte:element>
 {:else if tag === 'input'}
 	<input
-		on:click
-		on:change
-		on:focus
-		on:blur
-		on:input
+		use:forwardEvents0
+		use:forwardEvents1
+		use:forwardEvents2
+		use:forwardEvents3
+		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
 		{...elProps}
 		bind:value />
 {:else if tag === 'textarea'}
 	<textarea
-		on:click
-		on:change
-		on:focus
-		on:blur
-		on:input
+		use:forwardEvents0
+		use:forwardEvents1
+		use:forwardEvents2
+		use:forwardEvents3
+		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
 		{...elProps}
@@ -417,11 +430,11 @@
 {:else}
 	<svelte:element
 		this={tag}
-		on:click
-		on:change
-		on:focus
-		on:blur
-		on:input
+		use:forwardEvents0
+		use:forwardEvents1
+		use:forwardEvents2
+		use:forwardEvents3
+		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
 		{...elProps} />

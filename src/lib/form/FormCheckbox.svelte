@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { forwardEventsBuilder } from '$lib/internal'
+	import { get_current_component } from 'svelte/internal'
 	import { Checkbox } from '../checkbox'
 	import type { FormCheckboxProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -20,6 +22,7 @@
 	export let indeterminate: $$Props['indeterminate'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let name: $$Props['name'] = undefined
+	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let id: string
 
@@ -47,14 +50,10 @@
 	<slot name="label" />
 	<Checkbox
 		bind:id
-		on:click
-		on:input
-		on:focus
-		on:blur
 		{...checkboxProps}
 		bind:checked
 		bind:value
-		on:change>
+		forwardEvents={[forwardEventsBuilder(get_current_component()), ...(forwardEvents ?? [])]}>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />
