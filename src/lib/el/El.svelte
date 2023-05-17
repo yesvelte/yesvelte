@@ -9,7 +9,7 @@
 
 	import { classname, createAnimationStore, forwardEventsBuilder } from '../internal'
 	import type { CssProps, ElProps } from './El.types'
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, noop } from 'svelte/internal'
 
 	type $$Props = Partial<ElProps>
 
@@ -28,7 +28,7 @@
 	export let ariaValuenow: $$Props['aria-valuenow'] = undefined
 	export let style: $$Props['style'] = undefined
 	export let show: $$Props['show'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = []
+	export let components: $$Props['components'] = []
 
 	let animate: any | undefined = undefined
 	let classes: string | undefined
@@ -211,10 +211,12 @@
 
 	const myForwardEvents = forwardEventsBuilder(get_current_component())
 
-	const forwardEvents0 = forwardEvents?.[0] ?? (() => {})
-	const forwardEvents1 = forwardEvents?.[1] ?? (() => {})
-	const forwardEvents2 = forwardEvents?.[2] ?? (() => {})
-	const forwardEvents3 = forwardEvents?.[3] ?? (() => {})
+	// I know this is not a good solution...
+	const forwardEvents0 = components?.[0] ? forwardEventsBuilder(components[0]) : noop
+	const forwardEvents1 = components?.[1] ? forwardEventsBuilder(components[1]) : noop
+	const forwardEvents2 = components?.[2] ? forwardEventsBuilder(components[2]) : noop
+	const forwardEvents3 = components?.[3] ? forwardEventsBuilder(components[3]) : noop
+	const forwardEvents4 = components?.[4] ? forwardEventsBuilder(components[4]) : noop
 
 	//#endregion
 
@@ -399,6 +401,7 @@
 		use:forwardEvents1
 		use:forwardEvents2
 		use:forwardEvents3
+		use:forwardEvents4
 		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
@@ -411,6 +414,7 @@
 		use:forwardEvents1
 		use:forwardEvents2
 		use:forwardEvents3
+		use:forwardEvents4
 		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
@@ -422,6 +426,7 @@
 		use:forwardEvents1
 		use:forwardEvents2
 		use:forwardEvents3
+		use:forwardEvents4
 		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}
@@ -434,6 +439,7 @@
 		use:forwardEvents1
 		use:forwardEvents2
 		use:forwardEvents3
+		use:forwardEvents4
 		use:myForwardEvents
 		bind:this={element}
 		{...$$restProps}

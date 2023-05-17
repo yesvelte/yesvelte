@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import Radio from './Radio.svelte'
 	import type { RadioGroupProps } from './Radio.types'
@@ -16,6 +17,8 @@
 	export let reverse: $$Props['reverse'] = undefined
 	export let key: $$Props['key'] = undefined
 	export let value: $$Props['value'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let element: HTMLElement
 	let props: $$Props = {}
@@ -43,7 +46,7 @@
 	}
 </script>
 
-<El {componentName} bind:element {...$$restProps}>
+<El {componentName} {components} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
 			<Radio

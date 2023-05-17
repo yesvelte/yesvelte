@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
 	import { get_current_component } from 'svelte/internal'
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
@@ -30,9 +29,9 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
-
-	export let forwardEvents: any[] = []
-
+	
+	const components = [get_current_component(), ...($$props.components ?? [])]
+	
 	let id: string
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
@@ -71,12 +70,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Input
-		bind:id
-		forwardEvents={[forwardEventsBuilder(get_current_component()), ...forwardEvents]}
-		on:click={() => console.log('click from formInput')}
-		{...inputProps}
-		bind:value>
+	<Input bind:id {components} {...inputProps} bind:value>
 		<slot />
 	</Input>
 	<slot name="hint" />

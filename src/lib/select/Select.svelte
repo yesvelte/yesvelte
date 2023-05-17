@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { SelectProps } from './Select.types'
 
@@ -17,6 +18,8 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -49,11 +52,7 @@
 
 <El
 	tag="select"
-	on:click
-	on:change
-	on:input
-	on:focus
-	on:blur
+	{components}
 	bind:value
 	{...$$restProps}
 	{...props}

@@ -1,3 +1,5 @@
+import type { SvelteComponent } from 'svelte'
+
 // Theme Colors
 export type ThemeColors =
 	| 'primary'
@@ -337,7 +339,7 @@ export interface ElProps extends CssProps {
 	tag?: HTMLTags
 	element?: HTMLElement
 	componentName?: string
-	forwardEvents?: ((node: HTMLElement | SVGElement) => { destroy: () => void })[]
+	components?: SvelteComponent[]
 	cssProps?: object
 	value?: unknown
 	title?: string

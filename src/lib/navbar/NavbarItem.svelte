@@ -3,6 +3,7 @@
 	import { El, type ElProps } from '../el'
 	import type { NavbarItemProps } from './Navbar.types'
 	import { Popup } from '../popup'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = NavbarItemProps
 
@@ -13,6 +14,8 @@
 	export let icon: $$Props['icon'] = undefined
 	export let title: $$Props['title'] = undefined
 	export let href: $$Props['href'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let wrapperProps: Partial<ElProps>
 	$: wrapperProps = {
@@ -35,7 +38,7 @@
 	}
 </script>
 
-<El {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
+<El {...$$restProps} {components} {...wrapperProps} cssProps={{ dropdown }}>
 	{#if divider}
 		<El tag="hr" componentName="{componentName}-divider" />
 	{:else}

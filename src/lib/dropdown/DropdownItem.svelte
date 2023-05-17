@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { DropdownItemProps } from './Dropdown.types'
 
@@ -12,6 +13,8 @@
 	export let disabled: $$Props['disabled'] = undefined
 
 	export let href: $$Props['href'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	$: cssProps = {
 		active,
@@ -35,13 +38,13 @@
 </script>
 
 {#if divider}
-	<El tag="hr" componentName="{componentName}-divider" />
+	<El {components} tag="hr" componentName="{componentName}-divider" />
 {:else if header}
-	<El tag="h6" componentName="{componentName}-header">
+	<El {components} tag="h6" componentName="{componentName}-header">
 		<slot />
 	</El>
 {:else}
-	<El {...$$restProps} {...wrapperProps}>
+	<El {components} {...$$restProps} {...wrapperProps}>
 		<El {...props} {cssProps} on:click>
 			<slot />
 		</El>

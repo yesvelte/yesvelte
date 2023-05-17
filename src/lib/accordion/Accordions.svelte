@@ -4,6 +4,9 @@
 	import { El } from '../el'
 	import type { AccordionsProps } from './Accordion.types'
 
+	import { get_current_component } from 'svelte/internal'
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	type $$Props = AccordionsProps
 
 	export let componentName: $$Props['componentName'] = 'accordions'
@@ -17,6 +20,6 @@
 	}
 </script>
 
-<El {...$$restProps} {...props}>
+<El {components} {...$$restProps} {...props}>
 	<slot />
 </El>

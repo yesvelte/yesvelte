@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Icon } from '../icon'
 	import type { AlertProps } from './Alert.types'
@@ -13,6 +14,8 @@
 	export let open: $$Props['open'] = true
 	export let title: $$Props['title'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	let cssProps: AlertProps = {}
 	let props: AlertProps = {}
 	$: {
@@ -23,7 +26,7 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...props} role="alert" show={open}>
+<El {components} {...$$restProps} {cssProps} {...props} role="alert" show={open}>
 	{#if icon || $$slots.start}
 		<El componentName="{componentName}-start">
 			<slot name="start">

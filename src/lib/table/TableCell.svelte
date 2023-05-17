@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TableCellProps } from './Table.types'
 
@@ -10,6 +11,8 @@
 	export let color: $$Props['color'] = undefined
 	export let truncate: $$Props['truncate'] = undefined
 	export let active: $$Props['active'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let head = getContext('TABLE:HEAD') ?? false
 
@@ -24,6 +27,6 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {componentName} {tag}>
+<El {components} {...$$restProps} {cssProps} {componentName} {tag}>
 	<slot />
 </El>

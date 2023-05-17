@@ -9,6 +9,7 @@
 	import type { IconProps } from './Icon.types'
 	import { onMount } from 'svelte'
 	import { El } from '../el'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = IconProps
 
@@ -18,6 +19,8 @@
 	export let name: $$Props['name'] = undefined
 	export let pack: $$Props['pack'] = 'tabler'
 	export let size: $$Props['size'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let loaded = false
 
@@ -32,7 +35,7 @@
 	}
 </script>
 
-<El {componentName} {...$$restProps} {cssProps}>
+<El {componentName} {components} {...$$restProps} {cssProps}>
 	{#if loaded}
 		<iconify-icon icon="{pack}:{name}" width="100%" height="100%" />
 	{/if}

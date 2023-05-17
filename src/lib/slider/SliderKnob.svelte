@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import type { SliderContext, SliderKnobProps, SliderKnobType } from './Slider.types'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = SliderKnobProps
 
 	export let value: $$Props['value'] = 0
 	export let connect: $$Props['connect'] = false
 	export let tooltip: $$Props['tooltip'] = false
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	const { register, unregister, values, setValue } = getContext<SliderContext>('SLIDER')
 

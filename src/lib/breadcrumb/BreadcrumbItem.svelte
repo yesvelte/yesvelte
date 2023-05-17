@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { BreadcrumbItemProps } from './Breadcrumb.types'
 
@@ -7,6 +8,8 @@
 	export let componentName: $$Props['componentName'] = 'breadcrumb-item'
 	export let active: $$Props['active'] = undefined
 	export let href: $$Props['href'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
@@ -24,7 +27,7 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...props}>
+<El {components} {...$$restProps} {cssProps} {...props}>
 	{#if href}
 		<El tag="a" {href} componentName="{componentName}-inner">
 			<slot />

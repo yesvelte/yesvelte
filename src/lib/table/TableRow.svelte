@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { El } from '../el'
+	import { get_current_component } from 'svelte/internal'
 	import type { TableRowProps } from './Table.types'
 
 	type $$Props = TableRowProps
@@ -9,6 +10,8 @@
 	export let color: $$Props['color'] = undefined
 	export let active: $$Props['active'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	let cssProps: $$Props = {}
 	$: cssProps = {
 		color,
@@ -16,6 +19,6 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {componentName} {tag}>
+<El {components} {...$$restProps} {cssProps} {componentName} {tag}>
 	<slot />
 </El>

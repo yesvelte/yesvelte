@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { SwitchProps } from './Switch.types'
@@ -20,6 +21,9 @@
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
 	export let _slots: Record<string, boolean> = $$slots
+
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -55,11 +59,7 @@
 		{cssProps}
 		{...props}
 		on:change={onChange}
-		on:change
-		on:click
-		on:focus
-		on:input
-		on:blur />
+		{components} />
 	{#if label || _slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			{#if _slots['default']}

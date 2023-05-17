@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { forwardEventsBuilder } from '$lib/internal'
 	import { get_current_component } from 'svelte/internal'
 	import { Checkbox } from '../checkbox'
 	import type { FormCheckboxProps } from './Form.types'
@@ -25,6 +24,7 @@
 	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let id: string
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	$: props = {
 		required,
@@ -48,12 +48,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Checkbox
-		bind:id
-		{...checkboxProps}
-		bind:checked
-		bind:value
-		forwardEvents={[forwardEventsBuilder(get_current_component()), ...(forwardEvents ?? [])]}>
+	<Checkbox bind:id {...checkboxProps} bind:checked bind:value {components}>
 		<slot />
 	</Checkbox>
 	<slot name="hint" />

@@ -3,7 +3,6 @@
 	import { El } from '../el'
 	import type { InputProps, InputWrapperProps } from './Input.types'
 	import { get_current_component } from 'svelte/internal'
-	import { forwardEventsBuilder } from '$lib/internal'
 
 	type $$Props = InputProps
 
@@ -22,7 +21,8 @@
 	export let value: $$Props['value'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let id: $$Props['id'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = []
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -73,7 +73,7 @@
 		bind:value
 		bind:element
 		bind:id
-		forwardEvents={[forwardEventsBuilder(get_current_component()), ...(forwardEvents ?? [])]}
+		{components}
 		{...$$restProps}
 		{...props}
 		{cssProps} />

@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { onDestroy, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
@@ -12,6 +13,7 @@
 
 	export let componentName: $$Props['componentName'] = 'tabs'
 	export let vertical: $$Props['vertical'] = undefined
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	const tabs: Array<any> = []
 	const panels: Array<any> = []
@@ -61,6 +63,6 @@
 	}
 </script>
 
-<El {...$$restProps} {componentName} {cssProps}>
+<El {components} {...$$restProps} {componentName} {cssProps}>
 	<slot />
 </El>
