@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { setContext } from 'svelte'
+	import { get_current_component } from 'svelte/internal'
 
 	import { El, type ElProps } from '../el'
 
@@ -7,10 +8,12 @@
 
 	export let tag: $$Props['tag'] = 'thead'
 	export let componentName: $$Props['componentName'] = 'table-head'
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 
 	setContext('TABLE:HEAD', true)
 </script>
 
-<El {...$$restProps} {componentName} {tag}>
+<El {components} {...$$restProps} {componentName} {tag}>
 	<slot />
 </El>

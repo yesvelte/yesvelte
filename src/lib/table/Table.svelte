@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { El } from '../el'
+	import { get_current_component } from 'svelte/internal'
 	import type { TableProps } from './Table.types'
 
 	type $$Props = TableProps
@@ -12,6 +13,8 @@
 	export let wrap: $$Props['wrap'] = undefined
 	export let responsive: $$Props['responsive'] = undefined
 	export let size: $$Props['size'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	$: cssProps = {
 		color,
@@ -32,7 +35,7 @@
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={parentCssProps}>
+<El {components} componentName="{componentName}-wrapper" cssProps={parentCssProps}>
 	<El {...$$restProps} {cssProps} {...otherProps}>
 		<slot />
 	</El>

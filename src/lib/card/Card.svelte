@@ -4,6 +4,8 @@
 	import CardTitle from './CardTitle.svelte'
 	import type { CardProps } from './Card.types'
 
+	import { get_current_component } from 'svelte/internal'
+	
 	type $$Props = CardProps
 
 	export let componentName: $$Props['componentName'] = 'card'
@@ -19,6 +21,7 @@
 	export let state: $$Props['state'] = undefined
 	export let size: $$Props['size'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
 	let cssProps: CardProps = {}
 	let props: CardProps = {}
 	let statusCssProps: any = {}
@@ -42,7 +45,7 @@
 	}
 </script>
 
-<El {...$$restProps} {cssProps} {...props}>
+<El {components} {...$$restProps} {cssProps} {...props}>
 	{#if status}
 		<El componentName={componentName + '-status'} cssProps={statusCssProps} />
 	{/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import type Litepicker from 'litepicker'
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
@@ -21,6 +22,7 @@
 	export let value: $$Props['value'] = undefined
 	export let id: $$Props['id'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
 	const dispatch = createEventDispatcher()
 
 	let element: HTMLElement
@@ -103,11 +105,7 @@
 	<slot />
 	<El
 		tag="input"
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
+		{components}
 		{value}
 		bind:element
 		bind:id

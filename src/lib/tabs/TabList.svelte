@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TabListProps } from './Tab.types'
 
@@ -10,6 +11,8 @@
 
 	let cssProps: TabListProps = {}
 	let props: TabListProps = {}
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	$: {
 		cssProps = {
 			grow,
@@ -22,6 +25,6 @@
 	}
 </script>
 
-<El {...$$restProps} {...props} {componentName} {cssProps}>
+<El {components} {...$$restProps} {...props} {componentName} {cssProps}>
 	<slot />
 </El>

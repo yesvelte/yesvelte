@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { getContext } from 'svelte'
 	import { El } from '../el'
 	import type { TabPanelProps, TabsContext } from './Tab.types'
@@ -10,6 +11,8 @@
 	export let role: $$Props['role'] = 'tabpanel'
 
 	const panel = {}
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	const { registerPanel, selectedPanel } = getContext<TabsContext>(TABS)
 	registerPanel(panel)
 
@@ -23,7 +26,7 @@
 </script>
 
 {#if $selectedPanel === panel}
-	<El {...$$restProps} {...props}>
+	<El {components} {...$$restProps} {...props}>
 		<slot />
 	</El>
 {/if}

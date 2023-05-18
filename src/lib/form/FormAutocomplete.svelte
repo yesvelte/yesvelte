@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { Autocomplete } from '../autocomplete'
 	import type { FormAutocompleteProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -16,6 +17,8 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
+	
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let id: string
 	let props: $$Props = {}
@@ -48,6 +51,7 @@
 		{...autocompleteProps}
 		on:changed
 		on:input
+		{components}
 		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
 		bind:value
 		bind:id

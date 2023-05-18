@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SpinnerProps } from './Spinner.types'
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 
 	type $$Props = SpinnerProps
@@ -12,6 +13,7 @@
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	$: {
 		cssProps = {
@@ -27,6 +29,6 @@
 	}
 </script>
 
-<El tag="span" {...$$restProps} {cssProps} {...props}>
+<El {components} tag="span" {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

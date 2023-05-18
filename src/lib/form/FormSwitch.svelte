@@ -3,6 +3,8 @@
 	import { Switch, type SwitchProps } from '../switch'
 	import type { FormSwitchProps } from './Form.types'
 
+	import { get_current_component } from 'svelte/internal'
+
 	type $$Props = FormSwitchProps
 
 	export let label: $$Props['label'] = undefined
@@ -19,6 +21,7 @@
 	export let checked: $$Props['checked'] = undefined
 	export let inline: $$Props['inline'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let id: string
 	let props: $$Props = {}
@@ -49,16 +52,11 @@
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
 	<Switch
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
 		bind:id
 		{...switchProps}
 		bind:checked
 		bind:value
-		on:change
+		{components}
 		_slots={{ default: $$slots['default'], description: $$slots['description'] }}>
 		<slot />
 		<slot name="description" slot="description" />

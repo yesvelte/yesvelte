@@ -3,6 +3,7 @@
 	import { El } from '../el'
 	import type { PaginationProps } from './Pagination.types'
 	import PaginationItem from './PaginationItem.svelte'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = PaginationProps
 
@@ -17,12 +18,14 @@
 
 	export let value: $$Props['value'] = from
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	$: firstPage = from
 	$: lastPage = to
 	$: pages = Array.from({ length: 1 + to! - from! }, (_, i) => i + from!)
 </script>
 
-<El {...$$restProps} {componentName}>
+<El {...$$restProps} {componentName} {components}>
 	<slot>
 		{#if hasFirst}
 			<PaginationItem disabled={value == firstPage} on:click={() => (value = firstPage)}>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import FormField from './FormField.svelte'
 	import type { FormRadioGroupProps } from './Form.types'
 	import RadioGroup from '../radio/RadioGroup.svelte'
@@ -13,6 +14,8 @@
 	export let value: $$Props['value'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-radio-group'
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let radioGroupProps: $$Props = {}
 	$: {
@@ -29,7 +32,7 @@
 
 <FormField {...$$restProps} {componentName}>
 	<slot name="label" />
-	<RadioGroup {...radioGroupProps} bind:value let:item let:index>
+	<RadioGroup {components} {...radioGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
 	</RadioGroup>
 	<slot name="hint" />

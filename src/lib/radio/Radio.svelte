@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { RadioProps } from './Radio.types'
 
@@ -15,6 +16,8 @@
 	export let readonly: $$Props['readonly'] = undefined
 	export let checked: $$Props['checked'] = false
 	export let value: $$Props['value'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let labelForId: $$Props['for'] = undefined
 	export { labelForId as for }
@@ -41,18 +44,13 @@
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
 	<El
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
+		{components}
 		tag="input"
 		{...{ type: 'radio' }}
 		bind:element={inputElement}
 		{...$$restProps}
 		{...otherProps}
-		{cssProps}
-		on:change />
+		{cssProps} />
 	{#if label || $$slots['default']}
 		<El tag="label" componentName="{componentName}-label" {...{ for: labelForId }}>
 			<slot>
