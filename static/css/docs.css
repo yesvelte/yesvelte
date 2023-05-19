@@ -1,10 +1,25 @@
 /* styles for documentation site */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body > div {
+    height: 100%;
+}
 
 .y-docs-page {
     margin-left: 0px;
+    height: calc(100% - 56px);
+    overflow: auto;
 }
 .y-docs-sidebar {
-    margin-top: 56px;
+    /* margin-top: 56px; */
+    height: calc(100% - 56px);
+    overflow: hidden;
     position: absolute;
 }
 
@@ -29,6 +44,8 @@
 
 .y-sidebar-wrapper {
     padding: 8px !important;
+    height: 100%;
+    overflow: auto;
 }
 
 .y-docs-offcanvas .y-sidebar-wrapper {
