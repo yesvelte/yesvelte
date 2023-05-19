@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FileUploadProps, FileUploadWrapperProps } from './FileUpload.types'
-
+	
 	type $$Props = FileUploadProps
 
 	export let componentName: $$Props['componentName'] = 'input'
@@ -14,7 +15,8 @@
 	export let state: $$Props['state'] = undefined
 	export let files: $$Props['files'] = undefined
 	export let id: $$Props['id'] = undefined
-
+	
+	const components = [get_current_component(), ...($$props.components ?? [])]
 	let element: HTMLInputElement
 
 	let props: $$Props = { componentName, placeholder, disabled }
@@ -50,11 +52,7 @@
 	{/if}
 	<slot />
 	<El
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
+		{components}
 		bind:id
 		bind:element
 		{...$$restProps}

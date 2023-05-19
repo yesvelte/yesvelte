@@ -6,8 +6,10 @@
 	import { Button } from '../button'
 	import ModalTitle from './ModalTitle.svelte'
 	import ModalHeader from './ModalHeader.svelte'
+	import { get_current_component } from 'svelte/internal'
 
 	const dispatch = createEventDispatcher()
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	type $$Props = ModalProps
 
@@ -55,6 +57,7 @@
 	{...$$restProps}
 	{componentName}
 	{cssProps}
+	{components}
 	on:click={() => close()}
 	tabindex="0"
 	role="dialog"

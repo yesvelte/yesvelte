@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { createEventDispatcher } from 'svelte'
 	import fuzzy from 'fuzzy'
 
@@ -21,6 +22,7 @@
 	export let value: $$Props['value'] = undefined
 
 	const dispatch = createEventDispatcher()
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	$: getKey = (item: any) => {
 		if (key) {
@@ -119,7 +121,7 @@
 	$: noResult = options.length === 0
 </script>
 
-<El componentName="{componentName}-wrapper">
+<El {components} componentName="{componentName}-wrapper">
 	<El {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
 		{#if Array.isArray(value)}
 			{#each value as val, index}
@@ -164,7 +166,7 @@
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
-			<El componentName="{componentName}-option" cssProps={{noResult: true}}>No result</El>
+			<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
 		{/if}
 		{#each options as item, index}
 			<El on:click={() => onSelect(item)} componentName="{componentName}-option">

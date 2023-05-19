@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
-
+	
 	type $$Props = FormFileUploadProps
-
+	
 	export let componentName: $$Props['componentName'] = 'form-input'
 	export let tag: $$Props['tag'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
@@ -19,6 +20,8 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
+	
 	let id: string
 	let props: $$Props = {}
 	let fileUploadProps: $$Props = {}
@@ -47,7 +50,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<FileUpload bind:id on:click on:change on:input on:focus on:blur {...fileUploadProps} bind:files>
+	<FileUpload {components} bind:id {...fileUploadProps} bind:files>
 		<slot />
 	</FileUpload>
 	<slot name="hint" />

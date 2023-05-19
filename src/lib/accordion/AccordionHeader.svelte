@@ -3,6 +3,9 @@
 	import { El } from '../el'
 	import type { AccordionContext, AccordionsContext, AccordionHeaderProps } from './Accordion.types'
 
+	import { get_current_component } from 'svelte/internal'
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	const dispatch = createEventDispatcher()
 
 	type $$Props = AccordionHeaderProps
@@ -36,7 +39,7 @@
 	}
 </script>
 
-<El {...$$restProps} {...props} {show}>
+<El {components} {...$$restProps} {...props} {show}>
 	<El tag="button" componentName={componentName + '-button'} on:click={onClick} {cssProps}>
 		<slot />
 	</El>

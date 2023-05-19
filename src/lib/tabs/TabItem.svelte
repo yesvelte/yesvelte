@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { getContext } from 'svelte'
 	import { El } from '../el'
 	import type { TabItemProps, TabsContext } from './Tab.types'
@@ -10,6 +11,7 @@
 	export let tag: $$Props['tag'] = 'li'
 	export let active: $$Props['active'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	const tab = {}
 	const { registerTab, selectTab, selectedTab } = getContext<TabsContext>(TABS)
@@ -31,7 +33,12 @@
 	}
 </script>
 
-<El {...$$restProps} {tag} {componentName} on:click={() => (!disabled ? selectTab(tab) : null)}>
+<El
+	{components}
+	{...$$restProps}
+	{tag}
+	{componentName}
+	on:click={() => (!disabled ? selectTab(tab) : null)}>
 	<El bind:element tag="button" componentName="{componentName}-link" {cssProps}>
 		<slot />
 	</El>

@@ -1,13 +1,14 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { PopoverBodyProps } from './Popover.types'
 
 	type $$Props = PopoverBodyProps
 
-    export let componentName: $$Props['componentName'] = 'popover-body'
-    
+	export let componentName: $$Props['componentName'] = 'popover-body'
+	const components = [get_current_component(), ...($$props.components ?? [])]
 </script>
 
-<El {...$$restProps} {componentName}>
+<El {components} {...$$restProps} {componentName}>
 	<slot />
 </El>

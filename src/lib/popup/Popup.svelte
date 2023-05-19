@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { El } from '../el'
+	import { get_current_component } from 'svelte/internal'
 	import { classname } from '../internal'
 	import {
 		computePosition,
@@ -21,6 +22,8 @@
 	export let arrow: $$Props['arrow'] = undefined
 	export let componentName: $$Props['componentName'] = 'popup'
 	export let show: $$Props['show'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let popupEl: HTMLElement
 	let targetEl: Element
@@ -182,7 +185,7 @@
 	}
 </script>
 
-<El bind:element={popupEl} {...$$restProps} {...popupProps}>
+<El {components} bind:element={popupEl} {...$$restProps} {...popupProps}>
 	{#if arrow}
 		<El bind:element={arrowEl} {...arrowProps} />
 	{/if}

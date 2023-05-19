@@ -2,6 +2,7 @@
 	import { onMount, setContext, createEventDispatcher } from 'svelte'
 	import { El } from '../el'
 	import type { OffcanvasProps } from './Offcanvas.types'
+	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = OffcanvasProps
 
@@ -13,6 +14,8 @@
 	export let show: $$Props['show'] = undefined
 
 	const dispatch = createEventDispatcher()
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	const close = () => {
 		show = false
 		dispatch('close')
@@ -57,7 +60,7 @@
 	}
 </script>
 
-<El componentName="{componentName}-wrapper">
+<El {components} componentName="{componentName}-wrapper">
 	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0" {show}>
 		<slot />
 	</El>

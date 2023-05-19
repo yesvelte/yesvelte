@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
+
 	import { El, type ElProps } from '../el'
 	import type { CheckboxProps } from './Checkbox.types'
 
@@ -16,6 +18,8 @@
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let id: $$Props['id'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let element: HTMLElement
 	let checkboxProps: Partial<ElProps>
@@ -60,16 +64,7 @@
 </script>
 
 <El {...wrapperProps}>
-	<El
-		{...checkboxProps}
-		bind:id
-		bind:element
-		on:change={onChange}
-		on:input
-		on:click
-		on:focus
-		on:blur
-		on:change />
+	<El {...checkboxProps} bind:id bind:element on:change={onChange} {components} />
 	{#if label || $$slots['default']}
 		<El {...labelProps}>
 			<slot>

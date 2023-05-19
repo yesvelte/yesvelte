@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import FormField from './FormField.svelte'
 	import type { FormSelectProps } from './Form.types'
 	import { Select, type SelectProps } from '../select'
@@ -18,9 +19,11 @@
 	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
 
+	const components = [get_current_component(), ...($$props.components ?? [])]
+
 	let selectProps: SelectProps = {}
 	let props: $$Props = {}
-	let id: string;
+	let id: string
 
 	$: {
 		selectProps = {
@@ -39,24 +42,14 @@
 			label,
 			hint,
 			state,
-			id
+			id,
 		}
 	}
 </script>
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Select
-		on:click
-		on:change
-		on:input
-		on:focus
-		on:blur
-		{...selectProps}
-		bind:value
-		bind:id
-		let:item
-		let:index>
+	<Select {components} {...selectProps} bind:value bind:id let:item let:index>
 		<slot {index} {item}>{item}</slot>
 	</Select>
 	<slot name="hint" />

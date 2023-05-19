@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -28,7 +29,9 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
-
+	
+	const components = [get_current_component(), ...($$props.components ?? [])]
+	
 	let id: string
 	let props: $$Props = {}
 	let inputProps: $$Props = {}
@@ -67,7 +70,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
-	<Input bind:id on:click on:change on:input on:focus on:blur {...inputProps} bind:value>
+	<Input bind:id {components} {...inputProps} bind:value>
 		<slot />
 	</Input>
 	<slot name="hint" />

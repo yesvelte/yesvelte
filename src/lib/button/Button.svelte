@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { ButtonProps } from './Button.types'
 
@@ -17,6 +18,8 @@
 	export let size: $$Props['size'] = undefined
 	export let target: $$Props['target'] = undefined
 	export let type: $$Props['type'] = undefined
+
+	const components = [get_current_component(), ...($$props.components ?? [])]
 
 	let cssProps: any = {}
 	let props: $$Props = {}
@@ -49,6 +52,6 @@
 	}
 </script>
 
-<El bind:element {...$$restProps} {cssProps} {...props} on:click>
+<El {components} bind:element {...$$restProps} {cssProps} {...props} on:click>
 	<slot />
 </El>
