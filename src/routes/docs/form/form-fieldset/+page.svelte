@@ -2,6 +2,8 @@
 	import { Page, Doc, Preview } from '$components'
 	import FieldsetDefault from './FieldsetDefault.svelte'
 	import FieldsetExample from './FieldsetExample.svelte'
+	import FieldsetLegendProp from './FieldsetLegendProp.svelte'
+	import FieldsetLegendSlot from './FieldsetLegendSlot.svelte'
 </script>
 
 <Page
@@ -15,6 +17,16 @@
 	<Doc title="Layout" description="A simple usage using form comonents">
 		<Preview src="./FieldsetExample.svelte">
 			<FieldsetExample />
+		</Preview>
+	</Doc>
+	<Doc title="Legend (prop)">
+		<Preview src="./FieldsetLegendProp.svelte">
+			<FieldsetLegendProp />
+		</Preview>
+	</Doc>
+	<Doc title="Legend (slot)">
+		<Preview src="./FieldsetLegendSlot.svelte">
+			<FieldsetLegendSlot />
 		</Preview>
 	</Doc>
 </Page>

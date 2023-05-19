@@ -9,6 +9,10 @@ import type { DatePickerProps } from '../date-picker/DatePicker.types'
 import type { FileUploadProps } from '../file-upload/FileUpload.types'
 import type { SliderProps } from '../slider/Slider.types'
 
+export interface FieldsetProps extends ElProps {
+	legend?: string
+}
+
 export interface FormFieldProps extends Partial<ElProps> {
 	label?: string
 	required?: boolean
