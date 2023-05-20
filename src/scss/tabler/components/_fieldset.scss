@@ -4,4 +4,12 @@
 
 .#{$prefix-fieldset} {
 	@extend .form-fieldset;
+
+	&-legend {
+		margin-top: -1.8rem;
+		font-size: 1rem;
+		background-color: #fdfdfdc2;
+		width: auto;
+		position: absolute;
+	}
 }
