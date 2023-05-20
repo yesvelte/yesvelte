@@ -24,10 +24,43 @@ export function load(params: any) {
 			currentRout = routeMap[k]
 		}
 	})
+
+	let nextItem
+	let prevItem
+
+	navigations.forEach((navigation) => {
+		if (route.startsWith(navigation.route)) {
+			if (navigation.children) {
+				for (let i = 0; i < navigation.children.length; i++) {
+					const child = navigation.children[i]
+
+					if (navigation.route + child.route === route) {
+						prevItem = navigation.children[i - 1]
+						nextItem = navigation.children[i + 1]
+
+						if (nextItem) {
+							nextItem.href = navigation.route + nextItem.route
+						}
+
+						if (prevItem) {
+							prevItem.href = navigation.route + prevItem.route
+						}
+					}
+				}
+			} else if (route === navigation.route) {
+				return true
+			}
+		}
+	})
+
 	return {
 		metaData: {
 			title: currentRout?.title,
 			description: currentRout?.description,
+		},
+		links: {
+			nextItem,
+			prevItem,
 		},
 	}
 }
