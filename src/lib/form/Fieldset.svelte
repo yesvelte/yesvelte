@@ -15,19 +15,20 @@
 		cssProps = {}
 		props = {
 			componentName,
+			tag: 'fieldset',
 		}
 	}
 </script>
 
 <El {components} {...$$restProps} {cssProps} {...props}>
 	{#if $$slots['legend'] || legend}
-	<El tag="legend" componentName="{componentName}-legend">
-	<slot name="legend">
-		{#if legend}
-			{legend}
-		{/if}
-	</slot>
-</El>
-{/if}
+		<El tag="legend" componentName="{componentName}-legend">
+			<slot name="legend">
+				{#if legend}
+					{legend}
+				{/if}
+			</slot>
+		</El>
+	{/if}
 	<slot />
 </El>
