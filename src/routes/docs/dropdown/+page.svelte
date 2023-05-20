@@ -20,61 +20,89 @@
 
 	<Doc title="Default">
 		<Preview src="./DropdownDefault.svelte">
-			<DropdownDefault />
+			<div class="custom-class">
+				<DropdownDefault />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Variants">
 		<Preview src="./DropdownVariants.svelte">
-			<DropdownVariants />
+			<div class="custom-class">
+				<DropdownVariants />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Event">
 		<Preview src="./DropdownEvent.svelte">
-			<DropdownEvent />
+			<div class="custom-class">
+				<DropdownEvent />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Auto close">
 		<Preview src="./DropdownAutoClose.svelte">
-			<DropdownAutoClose />
+			<div class="custom-class">
+				<DropdownAutoClose />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Header">
 		<Preview src="./DropdownHeader.svelte">
-			<DropdownHeader />
+			<div class="custom-class">
+				<DropdownHeader />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Divider">
 		<Preview src="./DropdownDivider.svelte">
-			<DropdownDivider />
+			<div class="custom-class">
+				<DropdownDivider />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Placement">
 		<Preview src="./DropdownPlacement.svelte">
-			<DropdownPlacement />
+			<div class="custom-class">
+				<DropdownPlacement />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="No Arrow">
 		<Preview src="./DropdownNoArrow.svelte">
-			<DropdownNoArrow />
+			<div class="custom-class">
+				<DropdownNoArrow />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Avatar & href">
 		<Preview src="./DropdownHref.svelte">
-			<DropdownHref />
+			<div class="custom-class">
+				<DropdownHref />
+			</div>
 		</Preview>
 	</Doc>
 
 	<Doc title="With Icon">
 		<Preview src="./DropdownIcon.svelte">
-			<DropdownIcon />
+			<div class="custom-class">
+				<DropdownIcon />
+			</div>
 		</Preview>
 	</Doc>
 </Page>
+
+<style>
+	.custom-class {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+</style>
