@@ -4,7 +4,7 @@
 
 .#{$prefix-form-field} {
 	@extend .mb-3;
-	
+
 	&-hint {
 		margin-top: 0.25rem;
 		font-size: 85.714285%;
@@ -45,6 +45,10 @@ $form-field-props: (
 }
 
 .#{$prefix-form-radio-group} {
+	@include apply-props($form-field-props);
+}
+
+.#{$prefix-form-editor} {
 	@include apply-props($form-field-props);
 }
 

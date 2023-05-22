@@ -1,6 +1,7 @@
 export { default as FormAutocomplete } from './FormAutocomplete.svelte'
 export { default as Fieldset } from './Fieldset.svelte'
 export { default as FormInput } from './FormInput.svelte'
+export { default as FormEditor } from './FormEditor.svelte'
 export { default as FormField } from './FormField.svelte'
 export { default as FormSwitch } from './FormSwitch.svelte'
 export { default as FormTextarea } from './FormTextarea.svelte'

@@ -8,6 +8,7 @@ import type { CheckboxProps, CheckboxGroupProps } from '../checkbox/Checkbox.typ
 import type { DatePickerProps } from '../date-picker/DatePicker.types'
 import type { FileUploadProps } from '../file-upload/FileUpload.types'
 import type { SliderProps } from '../slider/Slider.types'
+import type { EditorProps } from '$lib/editor/Editor.types'
 
 export interface FieldsetProps extends ElProps {
 	legend?: string
@@ -19,6 +20,8 @@ export interface FormFieldProps extends Partial<ElProps> {
 	hint?: string
 	state?: InputStates
 }
+
+export interface FormEditorProps extends Partial<FormFieldProps>, Partial<EditorProps> {}
 
 export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
 
