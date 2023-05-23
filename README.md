@@ -11,7 +11,6 @@ npm install yesvelte@next
 ```
 
 ## Usage
-
 Once installed, you can import the components and use them in your Svelte application:
 
 ```html
