@@ -1,4 +1,5 @@
 <script>
+	import { browser } from '$app/environment'
 	import Logo from '$components/Logo.svelte'
 	import {
 		CopyIcon,
@@ -32,6 +33,8 @@
 	} from '$lib'
 	import Card from '$lib/card/Card.svelte'
 
+	let dark = false
+	let theme = 'tabler'
 	let icon = 'clipboard'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 	let discordLink = 'https://discord.gg/Rr8JVGZd'
@@ -57,6 +60,17 @@
 		},
 	]
 
+	$: containerProps = {
+		'data-theme': dark ? 'dark' : 'light',
+		class: 'y-app' + (dark ? ' y-app-theme-dark' : ''),
+	}
+
+	$: if (browser) {
+		Object.keys(containerProps).map((key) => {
+			document.body.setAttribute(key, containerProps[key])
+		})
+	}
+
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
 		icon = 'check'
@@ -77,7 +91,13 @@
 		content="YeSvelte is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, YeSvelte is the perfect complement to any CSS framework." />
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
-	<link rel="stylesheet" href="/css/tabler.min.css" />
+
+	{#if theme === 'tabler'}
+		<link rel="stylesheet" href="/css/tabler.min.css" />
+	{:else if theme === 'daisyui'}
+		<link rel="stylesheet" href="/css/daisyui.min.css" />
+	{/if}
+
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -85,9 +105,10 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<El class="overflow-auto" h="100">
+<svelte:body {...containerProps} />
+<El class="overflow-auto hide-scrollbar-in-mobile" h="100">
 	<El position="relative" bgColor="primary" textColor="light" p="3">
-		<Navbar {redditLink} {githubLink} {discordLink} {replLink} />
+		<Navbar bind:dark bind:theme {redditLink} {githubLink} {discordLink} {replLink} />
 		<El mx="auto" container="xl">
 			<El
 				d="flex"
@@ -125,7 +146,7 @@
 						<El me="4">npm i yesvelte@next</El>
 						<Icon name={icon} />
 					</El>
-					<Button href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs">
 						<Icon name="book" />
 						Get Started
 					</Button>
@@ -140,7 +161,7 @@
 				fill-rule="evenodd"
 				clip-rule="evenodd"
 				d="M2160 261H0V0.807678C360 80.1044 720 119.753 1080 119.753C1440 119.753 1800 80.1044 2160 0.807678V261Z"
-				fill="#f1f5f9" />
+				fill={dark ? '#1a2234' : '#f1f5f9'} />
 		</svg>
 	</El>
 	<El pt="5" pb="4" dMd="none" />
@@ -276,11 +297,15 @@
 			</Button>
 		</El>
 	</El>
-	<El class="bg-color-gradient py-60px py-md-100px">
+	<El class="{dark ? 'bg-color-gradient-dark' : 'bg-color-gradient-light'} py-60px py-md-100px">
 		<El class="font-size-large" mb="5" textAlign="center">100 widgets and controls</El>
 		<El container="xl" mx="auto" row g="4">
 			<El col="12" colMd="6">
-				<El shadow borderRoundSize="3" tag="img" src="/images/screenshot-1.png" />
+				<El
+					shadow
+					borderRoundSize="3"
+					tag="img"
+					src="/images/screenshot-1{dark ? '-dark' : ''}.png" />
 			</El>
 			<El col="12" colMd="6" h="100">
 				<Card border="0" class="bg-color-transparent">
@@ -339,7 +364,7 @@
 			</El>
 		</El>
 	</El>
-	<El class="py-60px py-md-100px bg-color-white">
+	<El class="py-60px py-md-100px {dark ? 'bg-color-dark' : 'bg-color-white'}">
 		<El class="font-size-large" mb="5" textAlign="center">Working with YeSvelte is simple</El>
 		<El row justifyContent="evenly" mx="auto" container="xl">
 			<El col="12" colMd="4" class="w-md-max-content">
@@ -498,7 +523,7 @@
 				fill-rule="evenodd"
 				clip-rule="evenodd"
 				d="M2160 0H0V262.5C360 182.5 720 142.5 1080 142.5C1440 142.5 1800 182.5 2160 262.5V0Z"
-				fill="white" />
+				fill={dark ? '#1a2234' : 'white'} />
 		</svg>
 	</El>
 	<El bgColor="dark" class="py-60px py-md-100px" textColor="light">
@@ -661,7 +686,7 @@
 					Yesvelt tools are used by thousands of developers around the world.
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
-					<Button href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs">
 						<Icon name="book" />
 						Get Started
 					</Button>
@@ -698,7 +723,7 @@
 			</El>
 		</El>
 	</El>
-	<El class="bg-color-white" py="5">
+	<El class={dark ? 'bg-color-dark' : 'bg-color-white'} py="5">
 		<El
 			container="xl"
 			mx="auto"
@@ -758,7 +783,7 @@
 			</El>
 		</El>
 	</El>
-	<El class="bg-color-white" borderTop>
+	<El class={dark ? 'bg-color-dark' : 'bg-color-white'} borderTop>
 		<El
 			mx="auto"
 			py="4"
@@ -797,6 +822,10 @@
 		font-family: Inter;
 	}
 
+	:global(.hide-scrollbar-in-mobile) {
+		margin-right: -17px;
+	}
+
 	:global(.cursor-pointer) {
 		cursor: pointer;
 	}
@@ -829,13 +858,17 @@
 		background-color: transparent !important;
 	}
 
-	:global(.bg-color-gradient) {
+	:global(.bg-color-gradient-light) {
 		background: linear-gradient(
 			180deg,
 			rgba(233, 233, 245, 0) 0%,
 			#f0f0ff 76.58%,
 			rgb(255, 255, 255) 98.77%
 		);
+	}
+
+	:global(.bg-color-gradient-dark) {
+		background: linear-gradient(180deg, rgb(19 19 20 / 0%) 0%, #242446 76.58%, #1a2234 98.77%);
 	}
 
 	:global(.max-w-278px) {
@@ -873,6 +906,9 @@
 		background-color: white;
 	}
 
+	:global(.bg-color-dark) {
+		background-color: #1a2234;
+	}
 	:global(.-mt-11rem) {
 		margin-top: -11rem;
 	}
@@ -931,6 +967,10 @@
 	}
 
 	@media (min-width: 768px) {
+		:global(.hide-scrollbar-in-mobile) {
+			margin-right: 0;
+		}
+
 		:global(.p-md-4) {
 			padding: 2rem !important;
 		}
