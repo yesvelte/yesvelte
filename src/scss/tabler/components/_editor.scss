@@ -1,0 +1,36 @@
+@import 'quill/dist/quill.snow';
+
+.#{$prefix-editor} {
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		&:not(.#{$prefix-editor}-wrapper-loaded) {
+			border: 1px solid #ccc;
+		}
+
+		&-height-sm {
+			height: 150px !important;
+		}
+
+		&-height-md {
+			height: 200px !important;
+		}
+
+		&-height-lg {
+			height: 250px !important;
+		}
+
+		&-height-xl {
+			height: 300px !important;
+		}
+
+		&-state-valid {
+			@extend .is-valid;
+		}
+
+		&-state-invalid {
+			@extend .is-invalid;
+		}
+	}
+}

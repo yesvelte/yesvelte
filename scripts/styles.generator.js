@@ -31,7 +31,7 @@ function compile(file) {
 	return css
 }
 
-const prefixes = ['.y-'] 
+const prefixes = ['.y-', '.ql-'] 
 
 async function clean(css) {
 	return postcss([

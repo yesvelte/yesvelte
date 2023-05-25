@@ -177,6 +177,12 @@ export const navigations: Navigation[] = [
 					'The dropdown component can be used to show a list of menu items when clicking on an element such as a button',
 			},
 			{
+				route: '/editor',
+				title: 'Editor',
+				icon: 'gala:editor',
+				description: 'The editor component is used to enable users write Rich Text content.',
+			},
+			{
 				route: '/form/form-fieldset',
 				title: 'Fieldset',
 				icon: 'fluent-mdl2:field-empty',
@@ -398,6 +404,11 @@ export const navigations: Navigation[] = [
 				route: '/form/form-datepicker',
 				title: 'FormDatePicker',
 				icon: 'material-symbols:date-range-outline',
+			},
+			{
+				route: '/form/form-editor',
+				title: 'FormEditor',
+				icon: 'gala:editor',
 			},
 			{
 				route: '/form/form-fieldset',
