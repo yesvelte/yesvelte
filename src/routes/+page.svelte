@@ -8,6 +8,7 @@
 		GithubIcon,
 		RedditIcon,
 	} from '$components/icons'
+	import Navbar from '$components/landing-page/Navbar.svelte'
 	import {
 		Accordion,
 		AccordionBody,
@@ -18,6 +19,9 @@
 		CardHeader,
 		CardTitle,
 		Checkbox,
+		Dropdown,
+		DropdownItem,
+		DropdownMenu,
 		El,
 		Icon,
 		TabContent,
@@ -82,35 +86,14 @@
 </svelte:head>
 
 <El class="overflow-auto" h="100">
-	<El position="relative" bgColor="indigo" textColor="light" p="4">
-		<El container="xl" mx="auto" position="absolute" start="0" end="0" top="0" p="3">
-			<El id="navbar" d="flex" justifyContent="between" alignItems="center">
-				<Logo />
-
-				<El vAlign="middle" d="block" dMd="none">
-					<Icon size="xl" name="menu-2" />
-				</El>
-				<El d="none" dMd="flex" alignItems="center">
-					<Button p="2" class="px-lg-3" link textColor="light">
-						<Icon name="brand-github-filled" />Github</Button>
-					<Button p="2" class="px-lg-3" link textColor="light">
-						<Icon name="brand-reddit" />Reddit</Button>
-					<Button p="2" class="px-lg-3" link textColor="light">
-						<Icon name="brand-discord-filled" />Discord</Button>
-					<Button p="2" class="px-lg-3" link textColor="light">Try on Repl</Button>
-					<Button p="2" class="px-lg-3" color="light" ms="3" outline>
-						Tabler
-						<Icon name="chevron-down" />
-					</Button>
-				</El>
-			</El>
-		</El>
+	<El position="relative" bgColor="primary" textColor="light" p="3">
+		<Navbar {redditLink} {githubLink} {discordLink} {replLink} />
 		<El mx="auto" container="xl">
 			<El
 				d="flex"
 				alignItems="center"
 				justifyContent="center"
-				class="flex-direction-column max-width-940px py-100px py-md-240px"
+				class="flex-direction-column max-width-940px py-100px pt-md-240px pb-md-170px"
 				textAlign="center"
 				mx="auto"
 				end="0"
@@ -129,15 +112,16 @@
 						border
 						py="2"
 						px="3"
-						class="width-320px"
+						class="max-w-320px"
 						borderColor="light"
 						bgColor="light"
 						borderRoundSize="2"
 						bgOpacity="10"
 						d="flex"
+						w="100"
 						justifyContent="between"
 						alignItems="center">
-						<El>npm i yesvelte@next</El>
+						<El me="4">npm i yesvelte@next</El>
 						<Icon name="clipboard" />
 					</El>
 					<Button href="/docs">
@@ -148,7 +132,7 @@
 			</El>
 		</El>
 	</El>
-	<El bgColor="indigo">
+	<El d="none" dMd="block" bgColor="primary" position="relative">
 		<svg viewBox="0 0 2160 261" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				id="Wave"
@@ -158,12 +142,19 @@
 				fill="#f1f5f9" />
 		</svg>
 	</El>
+	<El pt="5" pb="4" dMd="none" />
 	<El container="xl" class="-mt-11rem" id="cards">
 		<El p="3" row g="3" class="max-width-1000px" mx="auto">
 			{#each cardsData as item, index}
 				<El col="12" colMd="6">
-					<Card h="100" class="flex-direction-column">
-						<CardBody gap="3" px="4" d="flex">
+					<Card>
+						<CardBody
+							class="flex-direction-column flex-direction-md-row"
+							textAlign="center"
+							textAlignMd="start"
+							gap="3"
+							px="4"
+							d="flex">
 							<El>
 								{#if index === 0}
 									<svg
@@ -271,7 +262,7 @@
 							</El>
 							<El class="flex-1">
 								<CardTitle>{item.title}</CardTitle>
-								{item.body}
+								<El textMuted>{item.body}</El>
 							</El>
 						</CardBody>
 					</Card>
@@ -279,7 +270,7 @@
 			{/each}
 		</El>
 		<El mt="3" pt="2" textAlign="center">
-			<Button>
+			<Button href="/docs">
 				Explore all features <Icon name="arrow-right" />
 			</Button>
 		</El>
@@ -565,31 +556,38 @@
 	</El>
 	<El bgColor="dark" class="py-60px py-md-100px" textColor="light">
 		<El mx="auto" row g="3" gMd="5" container="xl">
-			<Card dMd="none" shadow textColor="dark">
-				<CardBody>
-					OMG! I cannot believe that I have got too many response from my employe. I owe these guys.
-					Already used their service for my business & also refered.
-				</CardBody>
-				<CardBody>
-					<El d="flex" alignItems="center">
-						<Avatar>
-							<El tag="img" src="/images/avatar.png" />
-						</Avatar>
-						<El ms="3">
-							<El tag="strong">Jance Copper</El>
-							<El textMuted>Co-founder Atls</El>
+			<El col="12">
+				<Card dMd="none" shadow textColor="dark">
+					<CardBody>
+						OMG! I cannot believe that I have got too many response from my employe. I owe these
+						guys. Already used their service for my business & also refered.
+					</CardBody>
+					<CardBody>
+						<El d="flex" alignItems="center">
+							<Avatar>
+								<El tag="img" src="/images/avatar.png" />
+							</Avatar>
+							<El ms="3">
+								<El tag="strong">Jance Copper</El>
+								<El textMuted>Co-founder Atls</El>
+							</El>
+							<El ms="auto">
+								{#each Array.from({ length: 5 }) as i}
+									<Icon name="star-filled" color="yellow" />
+								{/each}
+							</El>
 						</El>
-						<El ms="auto">
-							{#each Array.from({ length: 5 }) as i}
-								<Icon name="star-filled" color="yellow" />
-							{/each}
-						</El>
-					</El>
-				</CardBody>
-			</Card>
+					</CardBody>
+				</Card>
+			</El>
 
 			<El d="none" dMd="block" col="12" colMd="8" position="relative">
-				<Card position="absolute" class="max-w-500px" start="0" bottom="0" shadow textColor="dark">
+				<Card
+					position="absolute"
+					class="max-w-md-350px start-10percent"
+					bottom="0"
+					shadow
+					textColor="dark">
 					<CardBody>
 						OMG! I cannot believe that I have got too many response from my employe. I owe these
 						guys. Already used their service for my business & also refered.
@@ -613,7 +611,7 @@
 				</Card>
 				<Card
 					position="absolute"
-					class="max-w-500px start-20percent bottom-20percent"
+					class="max-w-md-350px start-30percent bottom-30percent"
 					shadow
 					textColor="dark">
 					<CardBody>
@@ -638,8 +636,8 @@
 					</CardBody>
 				</Card>
 			</El>
-			<El col="12" colMd="4">
-				<El textColor="yellow" class="font-size-14px pt-40px pt-md-0">Feedback</El>
+			<El col="12" colMd="4" class="pt-40px pt-md-0">
+				<El textColor="yellow" class="font-size-14px">Feedback</El>
 				<El class="font-size-24px" mt="3">What our users say about us</El>
 				<El class="font-size-18px" my="4">
 					Search all the open positions on the web. Get your own personalized salary estimate.
@@ -652,13 +650,13 @@
 		</El>
 	</El>
 
-	<El py="5" bgColor="indigo" textColor="light">
+	<El py="5" bgColor="primary" textColor="light">
 		<El row container="xl" mx="auto" g="5">
 			<El col="12" colMd="8">
-				<El class="font-size-medium" textTransform="uppercase">
+				<El class="font-size-24px" textTransform="uppercase">
 					Deliver your upcoming project faster
 				</El>
-				<El class="font-size-18px">
+				<El class="font-size-16px">
 					Yesvelt tools are used by thousands of developers around the world.
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
@@ -670,7 +668,7 @@
 						border
 						py="2"
 						px="3"
-						class="width-320px"
+						class="max-w-md-350px"
 						borderColor="light"
 						bgColor="light"
 						borderRoundSize="2"
@@ -678,13 +676,13 @@
 						d="flex"
 						justifyContent="between"
 						alignItems="center">
-						<El>npm i yesvelte@next</El>
+						<El me="4">npm i yesvelte@next</El>
 						<Icon name="clipboard" />
 					</El>
 				</El>
 			</El>
 			<El col="12" colMd="4">
-				<Card bgColor="dark" bgOpacity="50" borderColor="dark" borderRoundSize="3">
+				<Card bgColor="dark" bgOpacity="25" borderColor="dark" borderRoundSize="3">
 					<CardBody>
 						<El>Showcase</El>
 						<El my="3">Check out some great examples of Yesvelte products in actions.</El>
@@ -699,15 +697,23 @@
 		</El>
 	</El>
 	<El class="bg-color-white" py="5">
-		<El container="xl" mx="auto" row justifyContent="between" alignItems="start">
-			<El col="12" colMd="auto">
+		<El
+			container="xl"
+			mx="auto"
+			px="4"
+			d="flex"
+			gap="4"
+			class="flex-direction-column-reverse flex-direction-md-row"
+			justifyContent="between"
+			alignItems="start">
+			<El textAlign="center" textAlignMd="start" col="12" colMd="auto">
 				<Logo />
-				<El class="max-w-278px" mt="3" pt="2">
+				<El class="max-w-md-278px" mt="3" pt="2">
 					Join our newsletter to stay up to date on features and releases.
 				</El>
 			</El>
 
-			<El col="12" colMd="auto" row ms="auto" g="4">
+			<El col="12" colMd="auto" row g="4">
 				<El col="6" colMd="auto" d="flex" class="flex-direction-column" gap="3">
 					<El mb="2"><b>About</b></El>
 					<El>About Us</El>
@@ -756,7 +762,8 @@
 			py="4"
 			container="xl"
 			d="flex"
-			class="flex-direction-md-column"
+			gap="4"
+			class="flex-direction-column flex-direction-md-row"
 			alignItems="center"
 			justifyContent="between">
 			<El>&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved</El>
@@ -770,6 +777,10 @@
 </El>
 
 <style>
+	:global(:root) {
+		--y-primary: #4a62bf !important;
+		--y-primary-rgb: 74, 98, 191 !important;
+	}
 	:global(.wave) {
 		position: absolute;
 		left: 0%;
@@ -800,6 +811,14 @@
 		padding-bottom: 60px;
 	}
 
+	:global(.y-tab-list) {
+		overflow: hidden;
+		flex-wrap: nowrap !important;
+	}
+	:global(.y-tab-item-link) {
+		white-space: nowrap;
+	}
+
 	:global(.bg-color-transparent) {
 		background-color: transparent !important;
 	}
@@ -823,11 +842,15 @@
 	:global(.pl-96px) {
 		padding-left: 96px !important;
 	}
-	:global(.start-20percent) {
-		left: 20% !important;
+
+	:global(.start-10percent) {
+		left: 10% !important;
 	}
-	:global(.bottom-20percent) {
-		bottom: 20% !important;
+	:global(.start-30percent) {
+		left: 30% !important;
+	}
+	:global(.bottom-30percent) {
+		bottom: 30% !important;
 	}
 	:global(.pt-100px) {
 		padding-top: 100px;
@@ -858,6 +881,9 @@
 	:global(.flex-direction-column) {
 		flex-direction: column;
 	}
+	:global(.flex-direction-column-reverse) {
+		flex-direction: column-reverse;
+	}
 
 	:global(.max-width-940px) {
 		max-width: 940px;
@@ -866,8 +892,8 @@
 		max-width: 1000px;
 	}
 
-	:global(.width-320px) {
-		width: 320px;
+	:global(.max-w-320px) {
+		max-width: 320px;
 	}
 
 	:global(.font-size-large) {
@@ -899,6 +925,18 @@
 	}
 
 	@media (min-width: 768px) {
+		:global(.p-md-4) {
+			padding: 2rem !important;
+		}
+
+		:global(.max-w-md-350px) {
+			max-width: 350px;
+		}
+
+		:global(.max-w-md-278px) {
+			max-width: 278px;
+		}
+
 		:global(.flex-direction-md-row) {
 			flex-direction: row;
 		}
@@ -906,9 +944,18 @@
 			flex-direction: column;
 		}
 
-		:global(.py-md-240px) {
+		:global(.pt-md-0) {
+			padding-top: 0 !important;
+		}
+		:global(.pt-md-240px) {
 			padding-top: 240px !important;
-			padding-bottom: 240px !important;
+		}
+		:global(.pb-md-240px) {
+			padding-bottom: 170px !important;
+		}
+
+		:global(.y-el-text-align-md-start[style]) {
+			text-align: start !important;
 		}
 
 		:global(.py-md-100px) {
