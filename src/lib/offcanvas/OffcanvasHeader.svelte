@@ -19,7 +19,7 @@
 	}
 </script>
 
-<El {componentName} {components}>
+<El {...$$restProps} {componentName} {components}>
 	{#if title}
 		<El componentName="{componentName}-title">{title}</El>
 	{:else}
