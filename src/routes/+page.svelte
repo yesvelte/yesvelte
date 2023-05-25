@@ -804,12 +804,6 @@
 </El>
 
 <style>
-	:global(::-webkit-scrollbar) {
-		height: unset;
-		transition: unset;
-		width: unset;
-	}
-
 	:global(:root) {
 		--y-primary: #4a62bf !important;
 		--y-primary-rgb: 74, 98, 191 !important;
@@ -829,7 +823,7 @@
 	}
 
 	:global(.hide-scrollbar-in-mobile) {
-		margin-right: -1rem;
+		margin-right: -17px;
 	}
 
 	:global(.cursor-pointer) {
