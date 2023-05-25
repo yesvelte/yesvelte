@@ -32,7 +32,7 @@
 	} from '$lib'
 	import Card from '$lib/card/Card.svelte'
 
-	let icon = 'copy'
+	let icon = 'clipboard'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 	let discordLink = 'https://discord.gg/Rr8JVGZd'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
@@ -62,7 +62,7 @@
 		icon = 'check'
 
 		setTimeout(() => {
-			icon = 'copy'
+			icon = 'clipboard'
 		}, 3000)
 	}
 </script>
@@ -112,7 +112,7 @@
 						border
 						py="2"
 						px="3"
-						class="max-w-320px"
+						class="max-w-320px cursor-pointer"
 						borderColor="light"
 						bgColor="light"
 						borderRoundSize="2"
@@ -120,9 +120,10 @@
 						d="flex"
 						w="100"
 						justifyContent="between"
-						alignItems="center">
+						alignItems="center"
+						on:click={copy}>
 						<El me="4">npm i yesvelte@next</El>
-						<Icon name="clipboard" />
+						<Icon name={icon} />
 					</El>
 					<Button href="/docs">
 						<Icon name="book" />
@@ -668,16 +669,17 @@
 						border
 						py="2"
 						px="3"
-						class="max-w-md-350px"
+						class="max-w-md-350px cursor-pointer"
 						borderColor="light"
 						bgColor="light"
 						borderRoundSize="2"
 						bgOpacity="10"
 						d="flex"
 						justifyContent="between"
-						alignItems="center">
+						alignItems="center"
+						on:click={copy}>
 						<El me="4">npm i yesvelte@next</El>
-						<Icon name="clipboard" />
+						<Icon name={icon} />
 					</El>
 				</El>
 			</El>
@@ -793,6 +795,10 @@
 	}
 	:global(body) {
 		font-family: Inter;
+	}
+
+	:global(.cursor-pointer) {
+		cursor: pointer;
 	}
 
 	:global(.py-100px) {
