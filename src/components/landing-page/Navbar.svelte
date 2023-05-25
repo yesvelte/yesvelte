@@ -13,6 +13,8 @@
 		OffcanvasHeader,
 	} from '$lib'
 
+	export let theme = 'tabler'
+	export let dark = false
 	export let redditLink = ''
 	export let githubLink = ''
 	export let replLink = ''
@@ -30,20 +32,33 @@
 			<Icon size="xl" name="menu-2" />
 		</El>
 		<El d="none" dMd="flex" alignItems="center">
-			<Button href={githubLink} p="3" link textColor="light">
+			<Button target="_blank" href={githubLink} p="3" link textColor="light">
 				<Icon name="brand-github-filled" />Github</Button>
-			<Button href={redditLink} p="3" link textColor="light">
+			<Button target="_blank" href={redditLink} p="3" link textColor="light">
 				<Icon name="brand-reddit" />Reddit</Button>
-			<Button href={discordLink} p="3" link textColor="light">
+			<Button target="_blank" href={discordLink} p="3" link textColor="light">
 				<Icon name="brand-discord-filled" />Discord</Button>
-			<Button href={replLink} p="3" link textColor="light">Try on Repl</Button>
-			<Dropdown p="3">
-				<Button slot="target" color="light" outline>Tabler</Button>
+			<Button target="_blank" href={replLink} p="3" link textColor="light">Try on Repl</Button>
+			<Dropdown p="3" placement="bottom-end">
+				<Button slot="target" color="light" outline>
+					{#if theme === 'tabler'}
+						Tabler
+					{:else}
+						DaisyUI
+					{/if}
+				</Button>
 				<DropdownMenu>
-					<DropdownItem>Tabler</DropdownItem>
-					<DropdownItem>DaisyUI</DropdownItem>
+					<DropdownItem on:click={() => (theme = 'tabler')}>Tabler</DropdownItem>
+					<DropdownItem on:click={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
+			<Button outline color="light" on:click={() => (dark = !dark)}>
+				{#if dark}
+					<Icon name="sun" />
+				{:else}
+					<Icon name="moon" />
+				{/if}
+			</Button>
 		</El>
 	</El>
 </El>
@@ -53,19 +68,34 @@
 		<Logo height="34" />
 	</OffcanvasHeader>
 	<OffcanvasBody>
-		<Button href={githubLink} p="3" link textColor="light">
+		<Button target="_blank" href={githubLink} p="3" link textColor="light">
 			<Icon name="brand-github-filled" />Github</Button>
-		<Button href={redditLink} p="3" link textColor="light">
+		<Button target="_blank" href={redditLink} p="3" link textColor="light">
 			<Icon name="brand-reddit" />Reddit</Button>
-		<Button href={discordLink} p="3" link textColor="light">
+		<Button target="_blank" href={discordLink} p="3" link textColor="light">
 			<Icon name="brand-discord-filled" />Discord</Button>
-		<Button href={replLink} p="3" link textColor="light">Try on Repl</Button>
-		<Dropdown p="3" w="100">
-			<Button w="100" slot="target" color="light" outline>Tabler</Button>
-			<DropdownMenu>
-				<DropdownItem>Tabler</DropdownItem>
-				<DropdownItem>DaisyUI</DropdownItem>
-			</DropdownMenu>
-		</Dropdown>
+		<Button target="_blank" href={replLink} p="3" link textColor="light">Try on Repl</Button>
+		<El class="w-100" d="flex" alignItems="center">
+			<Dropdown p="3" class="flex-1">
+				<Button w="100" slot="target" color="light" outline>
+					{#if theme === 'tabler'}
+						Tabler
+					{:else}
+						DaisyUI
+					{/if}
+				</Button>
+				<DropdownMenu>
+					<DropdownItem on:click={() => (theme = 'tabler')}>Tabler</DropdownItem>
+					<DropdownItem on:click={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
+				</DropdownMenu>
+			</Dropdown>
+			<Button outline color="light" on:click={() => (dark = !dark)}>
+				{#if dark}
+					<Icon name="sun" />
+				{:else}
+					<Icon name="moon" />
+				{/if}
+			</Button>
+		</El>
 	</OffcanvasBody>
 </Offcanvas>
