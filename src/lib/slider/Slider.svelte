@@ -17,7 +17,10 @@
 	export let name: $$Props['name'] = undefined
 	export let connect: $$Props['connect'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let knobs: SliderKnobType[] = []
 	let element: HTMLElement

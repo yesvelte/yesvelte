@@ -15,7 +15,10 @@
 	export let name: $$Props['name'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-radio-group'
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let radioGroupProps: $$Props = {}
 	$: {

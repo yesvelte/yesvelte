@@ -9,7 +9,10 @@
 	export let active: $$Props['active'] = undefined
 	export let href: $$Props['href'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}

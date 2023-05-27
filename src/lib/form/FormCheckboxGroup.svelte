@@ -15,7 +15,10 @@
 	export let name: $$Props['name'] = undefined
 	export let key: $$Props['key'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	let checkboxGroupProps: $$Props = {}
 	$: checkboxGroupProps = {
 		color,

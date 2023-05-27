@@ -8,7 +8,10 @@
 	export let componentName: $$Props['componentName'] = 'avatar-list'
 	export let stacked: $$Props['stacked'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}

@@ -21,7 +21,10 @@
 	export let checked: $$Props['checked'] = undefined
 	export let inline: $$Props['inline'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let id: string
 	let props: $$Props = {}

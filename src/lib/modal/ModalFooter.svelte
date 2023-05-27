@@ -5,7 +5,10 @@
 	type $$Props = ElProps
 
 	export let componentName: $$Props['componentName'] = 'modal-footer'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 </script>
 
 <El {...$$restProps} {componentName} {components}>

@@ -14,7 +14,10 @@
 	export let open: $$Props['open'] = true
 	export let title: $$Props['title'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: AlertProps = {}
 	let props: AlertProps = {}

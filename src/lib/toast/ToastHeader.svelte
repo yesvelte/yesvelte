@@ -11,7 +11,10 @@
 	export let tag: $$Props['tag'] = 'div'
 	export let showCloseButton: $$Props['showCloseButton'] = true
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	const { hide } = getContext<ToastContext>('TOAST')
 
 	let buttonOtherProps: Partial<ButtonProps>

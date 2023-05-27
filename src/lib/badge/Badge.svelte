@@ -4,7 +4,7 @@
 	import type { BadgeProps } from './Badge.types'
 
 	type $$Props = BadgeProps
-	
+
 	export let componentName: $$Props['componentName'] = 'badge'
 	export let tag: $$Props['tag'] = 'span'
 	export let color: $$Props['color'] = undefined
@@ -16,9 +16,12 @@
 	export let tile: $$Props['tile'] = undefined
 	export let blink: $$Props['blink'] = undefined
 	export let notification: $$Props['notification'] = undefined
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
+
 	let cssProps: BadgeProps = {}
 	let props: BadgeProps = {}
 	$: cssProps = {

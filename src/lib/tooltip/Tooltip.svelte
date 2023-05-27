@@ -12,7 +12,10 @@
 	export let trigger: $$Props['trigger'] = 'hover'
 	export let text: $$Props['text'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	$: props = {
 		componentName,
 		arrow,

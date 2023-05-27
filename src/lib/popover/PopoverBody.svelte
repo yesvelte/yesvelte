@@ -6,7 +6,10 @@
 	type $$Props = PopoverBodyProps
 
 	export let componentName: $$Props['componentName'] = 'popover-body'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 </script>
 
 <El {components} {...$$restProps} {componentName}>

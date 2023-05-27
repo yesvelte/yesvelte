@@ -7,7 +7,10 @@
 
 	export let componentName: $$Props['componentName'] = 'toast-container'
 	export let placement: $$Props['placement'] = undefined
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: cssProps = {
 		placement,

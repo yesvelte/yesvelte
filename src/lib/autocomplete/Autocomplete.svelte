@@ -22,7 +22,10 @@
 	export let value: $$Props['value'] = undefined
 
 	const dispatch = createEventDispatcher()
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['input', 'changed'] },
+		...($$props.components ?? []),
+	]
 
 	$: getKey = (item: any) => {
 		if (key) {
@@ -39,7 +42,6 @@
 	let timer: any
 
 	function onInput(e: any) {
-		console.log('dispatch on input')
 		dispatch('input', query)
 	}
 

@@ -6,7 +6,10 @@
 	type $$Props = SidebarProps
 	export let componentName: $$Props['componentName'] = 'sidebar'
 	export let theme: $$Props['theme'] = undefined
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: cssProps = {
 		theme,

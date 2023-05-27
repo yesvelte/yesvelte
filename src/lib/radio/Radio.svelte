@@ -17,7 +17,10 @@
 	export let checked: $$Props['checked'] = false
 	export let value: $$Props['value'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let labelForId: $$Props['for'] = undefined
 	export { labelForId as for }

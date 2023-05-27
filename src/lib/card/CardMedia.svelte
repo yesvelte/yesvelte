@@ -7,8 +7,11 @@
 
 	export let componentName: $$Props['componentName'] = 'card-media'
 	export let elementPosition: $$Props['elementPosition'] = 'top'
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: CardMediaProps = {}
 	$: cssProps = { elementPosition }

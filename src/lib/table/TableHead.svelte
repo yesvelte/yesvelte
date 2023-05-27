@@ -8,8 +8,10 @@
 
 	export let tag: $$Props['tag'] = 'thead'
 	export let componentName: $$Props['componentName'] = 'table-head'
-	const components = [get_current_component(), ...($$props.components ?? [])]
-
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	setContext('TABLE:HEAD', true)
 </script>

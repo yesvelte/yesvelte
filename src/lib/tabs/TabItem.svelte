@@ -11,7 +11,10 @@
 	export let tag: $$Props['tag'] = 'li'
 	export let active: $$Props['active'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const tab = {}
 	const { registerTab, selectTab, selectedTab } = getContext<TabsContext>(TABS)

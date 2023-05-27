@@ -3,9 +3,9 @@
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
-	
+
 	type $$Props = FormFileUploadProps
-	
+
 	export let componentName: $$Props['componentName'] = 'form-input'
 	export let tag: $$Props['tag'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
@@ -20,8 +20,11 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
+
 	let id: string
 	let props: $$Props = {}
 	let fileUploadProps: $$Props = {}

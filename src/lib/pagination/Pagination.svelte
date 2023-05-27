@@ -18,7 +18,10 @@
 
 	export let value: $$Props['value'] = from
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: firstPage = from
 	$: lastPage = to

@@ -5,7 +5,10 @@
 	import type { AccordionsProps } from './Accordion.types'
 
 	import { get_current_component } from 'svelte/internal'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	type $$Props = AccordionsProps
 

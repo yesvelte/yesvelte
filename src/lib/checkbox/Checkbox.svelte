@@ -19,7 +19,10 @@
 	export let value: $$Props['value'] = undefined
 	export let id: $$Props['id'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let element: HTMLElement
 	let checkboxProps: Partial<ElProps>

@@ -212,11 +212,21 @@
 	const myForwardEvents = forwardEventsBuilder(get_current_component())
 
 	// I know this is not a good solution...
-	const forwardEvents0 = components?.[0] ? forwardEventsBuilder(components[0]) : noop
-	const forwardEvents1 = components?.[1] ? forwardEventsBuilder(components[1]) : noop
-	const forwardEvents2 = components?.[2] ? forwardEventsBuilder(components[2]) : noop
-	const forwardEvents3 = components?.[3] ? forwardEventsBuilder(components[3]) : noop
-	const forwardEvents4 = components?.[4] ? forwardEventsBuilder(components[4]) : noop
+	const forwardEvents0 = components?.[0]
+		? forwardEventsBuilder(components[0].component, components[0].except)
+		: noop
+	const forwardEvents1 = components?.[1]
+		? forwardEventsBuilder(components[1].component, components[1].except)
+		: noop
+	const forwardEvents2 = components?.[2]
+		? forwardEventsBuilder(components[2].component, components[2].except)
+		: noop
+	const forwardEvents3 = components?.[3]
+		? forwardEventsBuilder(components[3].component, components[3].except)
+		: noop
+	const forwardEvents4 = components?.[4]
+		? forwardEventsBuilder(components[4].component, components[4].except)
+		: noop
 
 	//#endregion
 

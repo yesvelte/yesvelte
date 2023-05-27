@@ -18,7 +18,10 @@
 	export let counter: $$Props['counter'] = undefined
 	export let active: number = 0
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let element: HTMLElement
 

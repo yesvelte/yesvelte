@@ -14,7 +14,10 @@
 
 	let targetEl: HTMLElement
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	const context: DropdownContext = writable({})
 	setContext('DROPDOWN', context)
 

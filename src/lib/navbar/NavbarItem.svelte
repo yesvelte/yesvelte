@@ -15,7 +15,10 @@
 	export let title: $$Props['title'] = undefined
 	export let href: $$Props['href'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let wrapperProps: Partial<ElProps>
 	$: wrapperProps = {

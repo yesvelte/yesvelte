@@ -12,7 +12,10 @@
 
 	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const onClick = () => {
 		if (ctx && ctx.close) ctx.close()

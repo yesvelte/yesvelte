@@ -19,7 +19,10 @@
 	export let key: $$Props['key'] = undefined
 	export let componentName: $$Props['componentName'] = 'form-select'
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let selectProps: SelectProps = {}
 	let props: $$Props = {}

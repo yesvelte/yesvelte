@@ -12,7 +12,10 @@
 	export let disabled: $$Props['disabled'] = undefined
 
 	const dispatch = createEventDispatcher()
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['click'] },
+		...($$props.components ?? []),
+	]
 
 	function onClick() {
 		if (disabled) return

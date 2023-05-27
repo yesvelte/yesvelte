@@ -5,7 +5,7 @@
 	import type { CardProps } from './Card.types'
 
 	import { get_current_component } from 'svelte/internal'
-	
+
 	type $$Props = CardProps
 
 	export let componentName: $$Props['componentName'] = 'card'
@@ -21,7 +21,10 @@
 	export let state: $$Props['state'] = undefined
 	export let size: $$Props['size'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	let cssProps: CardProps = {}
 	let props: CardProps = {}
 	let statusCssProps: any = {}

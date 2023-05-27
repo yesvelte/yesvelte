@@ -4,7 +4,10 @@
 	import type { AccordionContext, AccordionsContext, AccordionHeaderProps } from './Accordion.types'
 
 	import { get_current_component } from 'svelte/internal'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['click'] },
+		...($$props.components ?? []),
+	]
 
 	const dispatch = createEventDispatcher()
 

@@ -8,7 +8,10 @@
 	export let componentName: $$Props['componentName'] = 'card-footer'
 	export let transparent: $$Props['transparent'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	let cssProps: CardFooterProps = {}
 
 	$: cssProps = { transparent }

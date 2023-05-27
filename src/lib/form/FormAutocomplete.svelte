@@ -17,8 +17,11 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
+
+	const components = [
+		{ component: get_current_component(), except: ['input', 'changed'] },
+		...($$props.components ?? []),
+	]
 
 	let id: string
 	let props: $$Props = {}

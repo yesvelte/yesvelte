@@ -9,7 +9,10 @@
 	export let connect: $$Props['connect'] = false
 	export let tooltip: $$Props['tooltip'] = false
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const { register, unregister, values, setValue } = getContext<SliderContext>('SLIDER')
 

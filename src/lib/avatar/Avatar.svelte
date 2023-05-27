@@ -11,7 +11,10 @@
 	export let shape: $$Props['shape'] = undefined
 	export let size: $$Props['size'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}

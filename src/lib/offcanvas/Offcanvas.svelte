@@ -14,7 +14,10 @@
 	export let show: $$Props['show'] = undefined
 
 	const dispatch = createEventDispatcher()
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['close'] },
+		...($$props.components ?? []),
+	]
 
 	const close = () => {
 		show = false

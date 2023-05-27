@@ -13,7 +13,10 @@
 
 	export let componentName: $$Props['componentName'] = 'tabs'
 	export let vertical: $$Props['vertical'] = undefined
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const tabs: Array<any> = []
 	const panels: Array<any> = []
