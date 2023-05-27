@@ -7,6 +7,8 @@
 	import DatepickerEvents from './DatepickerEvents.svelte'
 	import DatepickerFlush from './DatepickerFlush.svelte'
 	import DatepickerFormat from './DatepickerFormat.svelte'
+	import DatepickerRange from './DatepickerRange.svelte'
+	import DatepickerRangeMultiple from './DatepickerRangeMultiple.svelte'
 	import DatepickerRounded from './DatepickerRounded.svelte'
 	import DatepickerSizes from './DatepickerSizes.svelte'
 	import DatepickerValidate from './DatepickerValidate.svelte'
@@ -59,6 +61,18 @@
 	<Doc title="Disabled">
 		<Preview src="./DatepickerDisabled.svelte">
 			<DatepickerDisabled />
+		</Preview>
+	</Doc>
+
+	<Doc title="Range">
+		<Preview src="./DatepickerRange.svelte">
+			<DatepickerRange />
+		</Preview>
+	</Doc>
+
+	<Doc title="Range With 2 months">
+		<Preview src="./DatepickerRangeMultiple.svelte">
+			<DatepickerRangeMultiple />
 		</Preview>
 	</Doc>
 

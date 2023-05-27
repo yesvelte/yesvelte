@@ -8,6 +8,7 @@ export interface DatePickerProps extends Partial<ElProps> {
 	options?: Partial<ILPConfiguration>
 	disabled?: boolean
 	placeholder?: string
+	range?: boolean
 	size?: InputSizes
 	state?: InputStates
 	name?: string
