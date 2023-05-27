@@ -20,7 +20,7 @@
 	export let hint: $$Props['hint'] = undefined
 
 	const components = [
-		{ component: get_current_component(), except: [] },
+		{ component: get_current_component(), except: ['changed'] },
 		...($$props.components ?? []),
 	]
 	let id: string
