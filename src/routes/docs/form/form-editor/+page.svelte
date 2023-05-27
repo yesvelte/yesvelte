@@ -4,6 +4,7 @@
 	import FormEditorCustomToolbar from './FormEditorCustomToolbar.svelte'
 
 	import FormEditorDefault from './FormEditorDefault.svelte'
+	import FormEditorHeight from './FormEditorHeight.svelte'
 	import FormEditorLayout from './FormEditorLayout.svelte'
 	import FormEditorPlaceholder from './FormEditorPlaceholder.svelte'
 	import FormEditorReadonly from './FormEditorReadonly.svelte'
@@ -24,6 +25,11 @@
 	<Doc title="Readonly">
 		<Preview src="./FormEditorReadonly.svelte">
 			<FormEditorReadonly />
+		</Preview>
+	</Doc>
+	<Doc title="Height" description="Available options for height prop are: 'sm', 'md', 'lg', 'xl'.">
+		<Preview src="./FormEditorHeight.svelte">
+			<FormEditorHeight />
 		</Preview>
 	</Doc>
 	<Doc title="Change Event">

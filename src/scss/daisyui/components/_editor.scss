@@ -1,0 +1,66 @@
+@import 'quill/dist/quill.snow';
+
+.#{$prefix}form-input {
+	@extend .form-control;
+	@extend .mb-2;
+	.#{$prefix}label {
+		@extend .label;
+	}
+}
+
+.#{$prefix}editor {
+	&-wrapper {
+		@extend .flex;
+		@extend .flex-col;
+
+		&:not(.#{$prefix}editor-wrapper-loaded) {
+			border: 1px solid #ccc;
+		}
+
+		&-height-sm {
+			height: 150px !important;
+		}
+
+		&-height-md {
+			height: 200px !important;
+		}
+
+		&-height-lg {
+			height: 250px !important;
+		}
+
+		&-height-xl {
+			height: 300px !important;
+		}
+
+		&-state-valid {
+			@extend .input-success;
+		}
+
+		&-state-invalid {
+			@extend .input-error;
+		}
+
+		.ql-toolbar.ql-snow {
+			@extend .textarea-bordered;
+			border-top-left-radius: var(--rounded-btn, 0.5rem);
+			border-top-right-radius: var(--rounded-btn, 0.5rem);
+		}
+
+		.ql-container.ql-snow {
+			@extend .textarea-bordered;
+			border-bottom-left-radius: var(--rounded-btn, 0.5rem);
+			border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+		}
+
+		.ql-toolbar.ql-snow .ql-fill {
+			fill: hsl(var(--bc)) !important;
+		}
+		.ql-toolbar.ql-snow .ql-stroke {
+			stroke: hsl(var(--bc)) !important;
+		}
+		.ql-toolbar.ql-snow .ql-picker {
+			color: hsl(var(--bc)) !important;
+		}
+	}
+}

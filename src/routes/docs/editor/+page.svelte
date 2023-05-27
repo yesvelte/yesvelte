@@ -4,6 +4,7 @@
 	import EditorCustomToolbar from './EditorCustomToolbar.svelte'
 
 	import EditorDefault from './EditorDefault.svelte'
+	import EditorHeight from './EditorHeight.svelte'
 	import EditorPlaceholder from './EditorPlaceholder.svelte'
 	import EditorReadonly from './EditorReadonly.svelte'
 </script>
@@ -22,6 +23,11 @@
 	<Doc title="Readonly">
 		<Preview src="./EditorReadonly.svelte">
 			<EditorReadonly />
+		</Preview>
+	</Doc>
+	<Doc title="Height" description="Available options for height prop are: 'sm', 'md', 'lg', 'xl'.">
+		<Preview src="./EditorHeight.svelte">
+			<EditorHeight />
 		</Preview>
 	</Doc>
 	<Doc title="Change Event">
