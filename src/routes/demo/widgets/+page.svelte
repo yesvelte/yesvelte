@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Avatar from '$lib/avatar/Avatar.svelte'
-	import CardBody from '$lib/card/CardBody.svelte'
-	import CardTitle from '$lib/card/CardTitle.svelte'
-	import Dot from '$lib/dot/Dot.svelte'
 	import {
 		El,
 		Card,
+		Avatar,
+		CardBody,
+		CardTitle,
+		Dot,
 		Progress,
 		ProgressBar,
 		Icon,
@@ -14,7 +14,6 @@
 		DropdownItem,
 		Button,
 		CardMedia,
-		Label,
 	} from 'yesvelte'
 </script>
 

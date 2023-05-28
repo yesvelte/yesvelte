@@ -1,11 +1,9 @@
 <script>
-	import CardFooter from '$lib/card/CardFooter.svelte'
 	import {
 		Fieldset,
 		FormInput,
-		FormDatePicker,
 		FormTextarea,
-		FormSwitch,
+		CardFooter,
 		Card,
 		CardBody,
 		El,
