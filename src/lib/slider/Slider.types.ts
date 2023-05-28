@@ -27,4 +27,5 @@ export interface SliderKnobProps extends Partial<ElProps> {
 	connect?: boolean
 	value?: number
 	tooltip?: boolean
+	name?: string
 }

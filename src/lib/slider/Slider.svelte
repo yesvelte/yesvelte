@@ -4,8 +4,9 @@
 	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
 	import { writable } from 'svelte/store'
 	import type { SliderKnobType, SliderProps } from './Slider.types'
-	import { classname } from '$lib/internal'
+	import { classname } from '../internal'
 	import { get_current_component } from 'svelte/internal'
+	import { El } from '../el'
 
 	type $$Props = SliderProps
 
@@ -112,6 +113,7 @@
 	setContext('SLIDER', { register, unregister, setValue, values })
 </script>
 
-<!-- ForwardEvents -->
-<div class={classname('slider', { color })} bind:this={element} />
-<slot />
+<El {components} componentName="{componentName}-wrapper">
+	<div class={classname('slider', { color })} bind:this={element} />
+	<slot />
+</El>
