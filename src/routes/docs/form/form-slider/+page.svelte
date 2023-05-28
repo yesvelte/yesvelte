@@ -3,6 +3,7 @@
 	import FormSliderColor from './FormSliderColor.svelte'
 	import FormSliderConnect from './FormSliderConnect.svelte'
 	import FormSliderDefault from './FormSliderDefault.svelte'
+	import FormSliderInForm from './FormSliderInForm.svelte'
 	import FormSliderMultipleKnobs from './FormSliderMultipleKnobs.svelte'
 	import FormSliderRange from './FormSliderRange.svelte'
 	import FormSliderTwoKnobs from './FormSliderTwoKnobs.svelte'
@@ -55,6 +56,12 @@
 	<Doc title="With Form">
 		<Preview src="./FormSliderWithForm.svelte">
 			<FormSliderWithForm />
+		</Preview>
+	</Doc>
+
+	<Doc title="With Form (submit)">
+		<Preview src="./FormSliderInForm.svelte">
+			<FormSliderInForm />
 		</Preview>
 	</Doc>
 </Page>
