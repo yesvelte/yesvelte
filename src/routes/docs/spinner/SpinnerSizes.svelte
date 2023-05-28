@@ -2,11 +2,11 @@
 	import { Spinner } from 'yesvelte'
 </script>
 
-<Spinner animate="border" size="md" color="primary" />
-<Spinner animate="border" size="md" color="secondary" />
-<Spinner animate="border" size="md" color="danger" />
-<Spinner animate="border" size="md" color="warning" />
-<Spinner animate="border" size="sm" color="primary" />
-<Spinner animate="border" size="sm" color="secondary" />
-<Spinner animate="border" size="sm" color="danger" />
-<Spinner animate="border" size="sm" color="warning" />
+<Spinner size="md" color="primary" />
+<Spinner size="md" color="secondary" />
+<Spinner size="md" color="danger" />
+<Spinner size="md" color="warning" />
+<Spinner size="sm" color="primary" />
+<Spinner size="sm" color="secondary" />
+<Spinner size="sm" color="danger" />
+<Spinner size="sm" color="warning" />

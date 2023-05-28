@@ -9,7 +9,7 @@
 	export let color: $$Props['color'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let role: $$Props['role'] = 'status'
-	export let animate: $$Props['animate'] = undefined
+	export let animate: $$Props['animate'] = 'border'
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
