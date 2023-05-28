@@ -32,5 +32,27 @@
 		&-state-invalid {
 			@extend .is-invalid;
 		}
+
+		.ql-toolbar.ql-snow {
+			border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+			border-top-right-radius: var(--#{$prefix}border-radius);
+			border-top-left-radius: var(--#{$prefix}border-radius);
+		}
+
+		.ql-container.ql-snow {
+			border: var(--#{$prefix}border-width) solid var(--#{$prefix}border-color);
+			border-bottom-right-radius: var(--#{$prefix}border-radius);
+			border-bottom-left-radius: var(--#{$prefix}border-radius);
+		}
+
+		.ql-toolbar.ql-snow .ql-fill {
+			fill: var(--#{$prefix}muted) !important;
+		}
+		.ql-toolbar.ql-snow .ql-stroke {
+			stroke: var(--#{$prefix}muted) !important;
+		}
+		.ql-snow .ql-picker {
+			color: var(--#{$prefix}muted) !important;
+		}
 	}
 }
