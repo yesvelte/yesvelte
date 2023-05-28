@@ -10,6 +10,7 @@
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
+	export let range: $$Props['range'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
@@ -39,6 +40,7 @@
 			required,
 			size,
 			state,
+			range,
 			borderRounded,
 			borderFlush,
 			name,
