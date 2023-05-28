@@ -1,4 +1,4 @@
-import type { ElProps } from '$lib/el'
+import type { ElProps } from '../el'
 
 export interface PaginationProps extends Partial<ElProps> {
 	hasFirst?: boolean

@@ -1,15 +1,9 @@
 <script>
 	import { browser } from '$app/environment'
+
 	import Logo from '$components/Logo.svelte'
-	import {
-		CopyIcon,
-		CheckIcon,
-		DiscordIcon,
-		DocsIcon,
-		GithubIcon,
-		RedditIcon,
-	} from '$components/icons'
 	import Navbar from '$components/landing-page/Navbar.svelte'
+
 	import {
 		Accordion,
 		AccordionBody,
@@ -20,9 +14,7 @@
 		CardHeader,
 		CardTitle,
 		Checkbox,
-		Dropdown,
-		DropdownItem,
-		DropdownMenu,
+		Card,
 		El,
 		Icon,
 		TabContent,
@@ -30,8 +22,7 @@
 		TabList,
 		TabPanel,
 		Tabs,
-	} from '$lib'
-	import Card from '$lib/card/Card.svelte'
+	} from 'yesvelte'
 
 	let dark = false
 	let theme = 'tabler'
