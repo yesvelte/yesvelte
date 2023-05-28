@@ -90,7 +90,7 @@
 		width: 5rem;
 		height: 5rem;
 		margin: 0.25rem;
-		background-color: #f8f9fa;
+		background-color: #ff99aa10;
 	}
 	.radius-sample > :global(.y-el:last-child) {
 		width: 7rem !important;
