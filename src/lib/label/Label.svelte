@@ -11,7 +11,10 @@
 	let fore: $$Props['for'] = undefined
 	export { fore as for }
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}

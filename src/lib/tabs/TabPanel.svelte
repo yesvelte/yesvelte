@@ -11,7 +11,10 @@
 	export let role: $$Props['role'] = 'tabpanel'
 
 	const panel = {}
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const { registerPanel, selectedPanel } = getContext<TabsContext>(TABS)
 	registerPanel(panel)

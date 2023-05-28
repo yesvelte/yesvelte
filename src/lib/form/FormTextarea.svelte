@@ -4,9 +4,9 @@
 	import type { FormTextAreaProps } from './Form.types'
 
 	import { get_current_component } from 'svelte/internal'
-	
+
 	type $$Props = FormTextAreaProps
-	
+
 	export let componentName: $$Props['componentName'] = 'form-textarea'
 	export let tag: $$Props['tag'] = 'textarea'
 	export let disabled: $$Props['disabled'] = undefined
@@ -26,8 +26,11 @@
 	export let minlength: $$Props['minlength'] = undefined
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let cols: $$Props['cols'] = undefined
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	let id: string
 	let props: $$Props = {}
 	let teaxtareaProps: $$Props = {}

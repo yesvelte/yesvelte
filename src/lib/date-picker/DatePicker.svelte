@@ -23,7 +23,10 @@
 	export let value: $$Props['value'] = range ? [] : undefined
 	export let id: $$Props['id'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['changed'] },
+		...($$props.components ?? []),
+	]
 	const dispatch = createEventDispatcher()
 
 	let element: HTMLElement

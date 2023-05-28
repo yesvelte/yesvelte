@@ -7,7 +7,10 @@
 	export let componentName: $$Props['componentName'] = 'navbar'
 	export let theme: $$Props['theme'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: cssProps = {
 		theme,

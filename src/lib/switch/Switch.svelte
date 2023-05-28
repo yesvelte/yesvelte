@@ -22,8 +22,10 @@
 	export let type: $$Props['type'] = 'checkbox'
 	export let _slots: Record<string, boolean> = $$slots
 
-
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -53,13 +55,7 @@
 </script>
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
-	<El
-		bind:id
-		{...$$restProps}
-		{cssProps}
-		{...props}
-		on:change={onChange}
-		{components} />
+	<El bind:id {...$$restProps} {cssProps} {...props} on:change={onChange} {components} />
 	{#if label || _slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			{#if _slots['default']}

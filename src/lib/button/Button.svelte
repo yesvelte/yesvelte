@@ -19,7 +19,10 @@
 	export let target: $$Props['target'] = undefined
 	export let type: $$Props['type'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: any = {}
 	let props: $$Props = {}

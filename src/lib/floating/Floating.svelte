@@ -10,7 +10,10 @@
 	export let offset: $$Props['offset'] = 0
 	export let placement: $$Props['placement'] = 'end-bottom'
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let element: HTMLElement
 

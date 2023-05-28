@@ -29,9 +29,12 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
+
 	let id: string
 	let props: $$Props = {}
 	let inputProps: $$Props = {}

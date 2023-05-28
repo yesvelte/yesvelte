@@ -4,15 +4,18 @@
 	import type { DotProps } from './Dot.types'
 
 	type $$Props = DotProps
-	
+
 	export let animated: $$Props['animated'] = undefined
 	export let color: $$Props['color'] = undefined
 	export let componentName: $$Props['componentName'] = 'dot'
 	export let indicator: $$Props['indicator'] = undefined
 	export let tag: $$Props['tag'] = 'span'
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
+
 	let cssProps: DotProps = {}
 	let props: DotProps = {}
 	$: {

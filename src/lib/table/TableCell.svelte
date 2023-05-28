@@ -12,7 +12,10 @@
 	export let truncate: $$Props['truncate'] = undefined
 	export let active: $$Props['active'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let head = getContext('TABLE:HEAD') ?? false
 

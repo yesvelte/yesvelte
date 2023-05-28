@@ -22,7 +22,10 @@
 	export let name: $$Props['name'] = undefined
 	export let id: $$Props['id'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let element: HTMLInputElement
 	onMount(async () => {

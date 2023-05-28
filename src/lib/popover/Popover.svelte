@@ -12,7 +12,10 @@
 	export let title: $$Props['title'] = undefined
 	export let trigger: $$Props['trigger'] = 'click'
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: props = {
 		componentName,

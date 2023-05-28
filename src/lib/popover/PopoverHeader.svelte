@@ -6,7 +6,10 @@
 	type $$Props = PopoverHeaderProps
 
 	export let componentName: $$Props['componentName'] = 'popover-header'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 </script>
 
 <El {components} {...$$restProps} {componentName}>

@@ -19,8 +19,11 @@
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+	const components = [
+		{ component: get_current_component(), except: ['changed'] },
+		...($$props.components ?? []),
+	]
+
 	let id: string
 	let props: $$Props = {}
 	let datePickerProps: $$Props = {}

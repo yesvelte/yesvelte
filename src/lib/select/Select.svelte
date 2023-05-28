@@ -19,7 +19,10 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}

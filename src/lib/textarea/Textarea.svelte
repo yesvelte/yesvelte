@@ -21,7 +21,10 @@
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: {
 		cssProps = {

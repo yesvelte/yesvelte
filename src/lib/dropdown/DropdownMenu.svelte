@@ -5,10 +5,13 @@
 	import { getContext } from 'svelte'
 
 	type $$Props = DropdownMenuProps
-	
+
 	export let componentName: $$Props['componentName'] = 'dropdown-menu'
-	
-	const components = [get_current_component(), ...($$props.components ?? [])]
+
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	const context = getContext<DropdownContext>('DROPDOWN')
 
 	$: cssProps = {

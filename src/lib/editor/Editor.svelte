@@ -25,7 +25,10 @@
 		'code-block',
 	]
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['changed'] },
+		...($$props.components ?? []),
+	]
 	const dispatch = createEventDispatcher()
 
 	let element: HTMLDivElement
@@ -78,8 +81,7 @@
 	}
 </script>
 
-<!-- {components} -->
-<El {cssProps} componentName="{componentName}-wrapper">
+<El {components} {cssProps} componentName="{componentName}-wrapper">
 	<El {componentName} bind:element />
 </El>
 

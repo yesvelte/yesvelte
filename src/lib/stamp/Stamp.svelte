@@ -13,7 +13,10 @@
 	export let size: $$Props['size'] = 'md'
 	export let icon: $$Props['icon'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: StampProps = {}
 	let otherProps: StampProps = {}

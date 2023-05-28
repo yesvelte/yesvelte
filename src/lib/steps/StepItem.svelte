@@ -16,7 +16,10 @@
 	let cssProps: object = {}
 	let props: $$Props = {}
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	const { register, unregister, active: activeIndex } = getContext<any>('STEPS')
 

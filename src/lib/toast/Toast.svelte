@@ -9,7 +9,10 @@
 	export let componentName: $$Props['componentName'] = 'toast'
 	export let show: $$Props['show'] = false
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 	function hide() {
 		show = false
 	}
@@ -17,6 +20,6 @@
 	setContext('TOAST', { hide })
 </script>
 
-<El {components}  {...$$restProps} {componentName} {show}>
+<El {components} {...$$restProps} {componentName} {show}>
 	<slot />
 </El>

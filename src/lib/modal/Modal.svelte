@@ -9,7 +9,10 @@
 	import { get_current_component } from 'svelte/internal'
 
 	const dispatch = createEventDispatcher()
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: ['close'] },
+		...($$props.components ?? []),
+	]
 
 	type $$Props = ModalProps
 

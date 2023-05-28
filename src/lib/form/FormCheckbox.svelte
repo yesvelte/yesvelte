@@ -24,7 +24,10 @@
 	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let id: string
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	$: props = {
 		required,

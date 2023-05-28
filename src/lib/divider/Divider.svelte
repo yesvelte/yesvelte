@@ -10,7 +10,10 @@
 	export let direction: $$Props['direction'] = undefined
 	export let alignment: $$Props['alignment'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: DividerProps = {}
 	let props: DividerProps = {}

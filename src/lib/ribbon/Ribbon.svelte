@@ -10,7 +10,10 @@
 	export let bgColor: $$Props['bgColor'] = undefined
 	export let elementPosition: $$Props['elementPosition'] = 'end'
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let cssProps: RibbonProps = {}
 	let otherProps: RibbonProps = {}

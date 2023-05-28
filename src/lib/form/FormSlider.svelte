@@ -4,9 +4,9 @@
 	import FormField from './FormField.svelte'
 
 	import { get_current_component } from 'svelte/internal'
-	
+
 	type $$Props = FormSliderProps
-	
+
 	export let componentName: $$Props['componentName'] = 'form-input'
 	export let tag: $$Props['tag'] = 'input'
 	export let required: $$Props['required'] = undefined
@@ -20,8 +20,11 @@
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
-	
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
+
 	let props: $$Props = {}
 	let sliderProps: $$Props = {}
 

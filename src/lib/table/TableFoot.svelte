@@ -6,7 +6,10 @@
 
 	export let tag: $$Props['tag'] = 'tfoot'
 	export let componentName: $$Props['componentName'] = 'table-foot'
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 </script>
 
 <El {components} {...$$restProps} {componentName} {tag}>

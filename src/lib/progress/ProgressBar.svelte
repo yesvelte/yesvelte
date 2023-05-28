@@ -12,7 +12,10 @@
 	export let label: $$Props['label'] = undefined
 	export let indeterminate: $$Props['indeterminate'] = undefined
 
-	const components = [get_current_component(), ...($$props.components ?? [])]
+	const components = [
+		{ component: get_current_component(), except: [] },
+		...($$props.components ?? []),
+	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
