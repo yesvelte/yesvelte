@@ -43,3 +43,11 @@
 		@extend .bg-opacity-#{$opacity};
 	}
 }
+
+.#{$prefix}el-theme-dark {
+	@extend [data-theme='dark'];
+}
+
+.#{$prefix}el-theme-light {
+	@extend [data-theme='light'];
+}

@@ -331,6 +331,9 @@ export interface CssProps {
 
 	// Justify Content
 	justifyContent?: JustifyContentTypes
+
+	// Theme
+	theme?: 'dark' | 'light'
 }
 
 export interface ElProps extends CssProps {

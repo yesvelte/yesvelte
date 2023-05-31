@@ -249,4 +249,12 @@ $props-extend: (
 			}
 		}
 	}
+
+	&-theme-dark {
+		@extend [data-bs-theme='dark'];
+	}
+
+	&-theme-light {
+		@extend [data-bs-theme='light'];
+	}
 }

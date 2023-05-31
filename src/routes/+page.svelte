@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment'
 
 	import Logo from '$components/Logo.svelte'
@@ -24,7 +24,7 @@
 		Tabs,
 	} from 'yesvelte'
 
-	let dark = false
+	let dark: boolean | undefined = undefined
 	let theme = 'tabler'
 	let icon = 'clipboard'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
@@ -52,8 +52,7 @@
 	]
 
 	$: containerProps = {
-		'data-theme': dark ? 'dark' : 'light',
-		class: 'y-app' + (dark ? ' y-app-theme-dark' : ''),
+		class: dark === true ? ' y-el-theme-dark' : dark === false ? 'y-el-theme-light' : '',
 	}
 
 	$: if (browser) {

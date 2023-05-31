@@ -14,7 +14,7 @@
 	import Logo from '$components/Logo.svelte'
 	import { browser } from '$app/environment'
 
-	let dark: boolean = false
+	let dark: boolean | undefined = undefined
 	let theme: 'tabler' | 'daisyui' = 'tabler'
 
 	let offcanvasOpen = false
@@ -27,8 +27,9 @@
 	}
 
 	$: containerProps = {
-		'data-theme': dark ? 'dark' : 'light',
-		class: 'y-docs-wrapper y-app' + (dark ? ' y-app-theme-dark' : ''),
+		class:
+			'y-docs-wrapper' +
+			(dark === true ? ' y-el-theme-dark' : dark === false ? ' y-el-theme-light' : ''),
 	}
 
 	$: if (browser) {

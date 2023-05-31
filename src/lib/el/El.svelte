@@ -205,6 +205,11 @@
 	export let justifyContent: $$Props['justifyContent'] = undefined
 	//#endregion
 
+	//#region theme
+	export let theme: $$Props['theme'] = undefined
+
+	//#endregion
+
 	//#endregion
 
 	//#region Forward Events
@@ -371,6 +376,8 @@
 			alignItems,
 			alignSelf,
 			justifyContent,
+			// theme
+			theme,
 		}
 		classes = classname(elComponentName, defaultCssProps, $$props.class)
 

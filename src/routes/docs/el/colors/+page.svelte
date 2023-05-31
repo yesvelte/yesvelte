@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Page, Doc, Preview } from '$components'
+	import { Alert } from '$lib'
+	import ColorsDark from './ColorsDark.svelte'
 	import ColorsNamed from './ColorsNamed.svelte'
 	import ColorsSocial from './ColorsSocial.svelte'
 	import ColorsTheme from './ColorsTheme.svelte'
@@ -69,6 +71,21 @@ layout.">
 				<ColorsSocial />
 			</div>
 		</Preview>
+	</Doc>
+
+	<Doc title="Dark Mode">
+		<p slot="description">
+			YeSvelte components supports <code>theme</code> prop, which you can set a section of the page
+			to dark mode by changing
+			<code>theme</code> prop.
+		</p>
+
+		<Preview src="./ColorsDark.svelte">
+			<ColorsDark />
+		</Preview>
+		<Alert color="warning" mt="3">
+			Going to Light mode from Dark mode, is not supported in tabler theme.
+		</Alert>
 	</Doc>
 </Page>
 
