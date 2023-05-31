@@ -37,7 +37,7 @@
 		{:else}
 			<SidebarItem
 				active={pathname.startsWith(navigation.route ?? '')}
-				href="#{navigation.id}"
+				href={navigation.route}
 				icon={navigation.icon}
 				title={navigation.title} />
 		{/if}

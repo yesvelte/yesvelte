@@ -12,6 +12,12 @@ export interface Navigation {
 
 export const navigations: Navigation[] = [
 	{
+		title: 'Installation',
+		id: 'installation',
+		route: '/docs/installation',
+		icon: 'download'
+	},
+	{
 		title: 'Core Features',
 		id: 'core-features',
 		route: '/docs',
@@ -64,6 +70,13 @@ export const navigations: Navigation[] = [
 				icon: 'fluent:color-background-24-regular',
 				description:
 					'Enhance the visual appeal of your projects with the help of the background customization options. This page provides detailed documentation and examples to guide you.',
+			},
+			{
+				route: '/el/forward-events',
+				title: 'Event Forwarding',
+				icon: 'tabler:speakerphone',
+				description:
+					'All YeSvelte components support event forwarding.',
 			},
 		],
 	},
