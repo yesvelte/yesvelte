@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Page, Doc, Preview } from '$components'
+	import DatePickerFormatter from './DatePickerFormatter.svelte'
 
 	import DatepickerCustom from './DatepickerCustom.svelte'
 	import DatepickerDefault from './DatepickerDefault.svelte'
@@ -24,10 +25,19 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Date format">
+	<Doc title="Formatter">
 		<p slot="description">
-			You can change display format of the date using <code>format</code> prop. The format is based
-			on <a href="https://momentjs.com/docs/#/displaying/format/">Format</a> of Moment.js.
+			You can change display format of the date using <code>formatText</code> prop.
+		</p>
+		<Preview src="./DatepickerFormatter.svelte">
+			<DatePickerFormatter />
+		</Preview>
+	</Doc>
+
+	<Doc title="External library for format">
+		<p slot="description">
+			The formats of this example is based on <a
+				href="https://momentjs.com/docs/#/displaying/format/">Format</a> of Moment.js.
 		</p>
 		<Preview src="./DatepickerFormat.svelte">
 			<DatepickerFormat />

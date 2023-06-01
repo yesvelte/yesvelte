@@ -3,8 +3,10 @@ import type { ElProps } from '../el'
 import type { InputSizes, InputStates } from '../input/Input.types'
 
 export interface DatePickerProps extends Partial<ElProps> {
-	format?: string
+	formatText?: (date: Date) => string
+	formatValue?: (date: Date) => string | Date
 	value?: Date | string | number | Array<Date | string | number>
+	text?: string
 	options?: Partial<ILPConfiguration>
 	disabled?: boolean
 	placeholder?: string
