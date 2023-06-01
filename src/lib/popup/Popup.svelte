@@ -37,11 +37,14 @@
 	let arrowY: string | undefined = undefined
 
 	let prevTarget: Element
+	let timer: any;
 
 	let left: string = ''
 	let top: string = ''
 
 	function showPopup() {
+		if(timer && trigger === 'hover') clearTimeout(timer)
+			
 		show = true
 
 		let middleware = []
@@ -86,7 +89,14 @@
 	}
 
 	function hidePopup() {
-		show = false
+		if (trigger === 'hover') {
+			
+			timer = setTimeout(() => {
+				show = false
+			}, 300)
+		} else {
+			show = false
+		}
 	}
 
 	const togglePopup = () => {
@@ -136,6 +146,9 @@
 		if (trigger === 'hover') {
 			targetEl?.addEventListener('mouseenter', showPopup)
 			targetEl?.addEventListener('mouseleave', hidePopup)
+
+			popupEl?.addEventListener('mouseenter', showPopup)
+			popupEl?.addEventListener('mouseleave', hidePopup)
 		}
 		if (trigger === 'focus') {
 			targetEl?.addEventListener('focus', showPopup)
@@ -153,6 +166,9 @@
 			if (trigger === 'hover') {
 				prevTarget.removeEventListener('mouseenter', showPopup)
 				prevTarget.removeEventListener('mouseleave', hidePopup)
+
+				popupEl?.removeEventListener('mouseenter', showPopup)
+				popupEl?.removeEventListener('mouseleave', hidePopup)
 			}
 			if (trigger === 'focus') {
 				prevTarget.removeEventListener('focus', showPopup)
