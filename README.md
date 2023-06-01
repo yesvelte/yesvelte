@@ -11,6 +11,7 @@ npm install yesvelte@next
 ```
 
 ## Usage
+
 Once installed, you can import the components and use them in your Svelte application:
 
 ```html
@@ -28,8 +29,11 @@ YeSvelte components have default styles which is based on tabler. which you can 
 ```svelte
 <script>
 	import { Button } from 'yesvelte'
-	import 'yesvelte/css/tabler.min.css'
 </script>
+
+<svelte:head>
+	<link rel="stylesheet" href="https://unpkg.com/yesvelte@next/css/tabler.min.css" />
+</svelte:head>
 
 <Button color="primary">Hello YeSvelte!</Button>
 ```
