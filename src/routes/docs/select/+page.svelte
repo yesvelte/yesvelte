@@ -12,6 +12,8 @@
 	import SelectObject from './SelectObject.svelte'
 	import SelectRequired from './SelectRequired.svelte'
 	import SelectDynamicItems from './SelectDynamicItems.svelte'
+	import SelectMultiple from './SelectMultiple.svelte'
+	import SelectItemsMultiple from './SelectItemsMultiple.svelte'
 </script>
 
 <Page
@@ -62,6 +64,17 @@
 	<Doc title="Disabled">
 		<Preview src="./SelectDisabled.svelte">
 			<div class="custom-class"><SelectDisabled /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Multiple">
+		<Preview src="./SelectMultiple.svelte">
+			<div class="custom-class"><SelectMultiple /></div>
+		</Preview>
+	</Doc>
+	<Doc title="Multiple with Object">
+		<Preview src="./SelectItemsMultiple.svelte">
+			<div class="custom-class"><SelectItemsMultiple /></div>
 		</Preview>
 	</Doc>
 

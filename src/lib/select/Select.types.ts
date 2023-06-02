@@ -8,9 +8,11 @@ export type SelectStates = (typeof SELECT_STATES)[number]
 
 export interface SelectProps extends Partial<ElProps> {
 	size?: SelectSizes
+	value?: any | any[]
 	name?: string
 	disabled?: boolean
 	items?: Array<any>
+	multiple?: boolean
 	key?: string | ((item: any) => string | number)
 	placeholder?: string
 	state?: SelectStates
