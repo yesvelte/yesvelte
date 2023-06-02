@@ -7,6 +7,7 @@
 	import { Popup } from '../popup'
 	import { classname } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
+	import { Icon } from '../icon'
 
 	type $$Props = AutocompleteProps
 
@@ -17,7 +18,9 @@
 	export let size: $$Props['size'] = undefined
 	export let _slots: $$Props['_slots'] = $$slots
 	export let key: $$Props['key'] = undefined
+	export let dismissible: $$Props['dismissible'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
 	export let value: $$Props['value'] = undefined
 
@@ -40,6 +43,7 @@
 	let show = false
 	let noResult = false
 	let timer: any
+	let cursorPosition = 0
 
 	function onInput(e: any) {
 		dispatch('input', query)
@@ -49,15 +53,26 @@
 		if (readonly) return
 
 		if (e.key === 'Backspace') {
-			// if(multiple) {
-			// ....
-			// } else {
 			if (query.length === 0) {
-				value = undefined
+				if (multiple) {
+					let currentPosition = cursorPosition
+					value = value.filter((x, index) => index !== cursorPosition)
+
+					cursorPosition = Math.min(currentPosition, value.length - 1)
+				} else {
+					value = undefined
+				}
 			}
-			// }
+		}
+
+		if (e.key == 'ArrowLeft') {
+			cursorPosition = Math.max(0, cursorPosition - 1)
+		} else if (e.key === 'ArrowRight') {
+			cursorPosition = Math.min(cursorPosition + 1, value.length - 1)
 		}
 	}
+
+	$: cursorPosition = multiple ? value.length - 1 : 0
 
 	function onFocus() {
 		if (readonly) return
@@ -72,16 +87,24 @@
 	function onSelect(item: any) {
 		if (readonly) return
 		query = ''
-		value = getKey(item)
 		inputEl.focus()
-		// if (!multiple) {
-		show = false
-		// }
 
-		dispatch('changed', value)
-		// if(multiple) {
-		//     ...
-		// }
+		if (multiple) {
+			if (value.includes(item)) {
+				value = value.filter((x) => x !== item)
+			} else {
+				value = [...value, item]
+			}
+
+			dispatch('changed', value)
+			clearTimeout(timer) // prevent close when selected
+
+			// continue
+		} else {
+			value = getKey(item)
+			show = false
+			dispatch('changed', value)
+		}
 	}
 
 	function onBlur(e) {
@@ -100,6 +123,14 @@
 
 		show = !show
 		if (show) inputEl.focus()
+	}
+
+	function onRemove(item: any) {
+		if (multiple) {
+			value = value.filter((x) => x !== getKey(item))
+		} else {
+			value = undefined
+		}
 	}
 
 	$: options = fuzzy
@@ -129,11 +160,18 @@
 			{#each value as val, index}
 				{@const item = items.find((x) => getKey(x) == val)}
 				{#if item}
-					<El componentName="{componentName}-item">
+					<El
+						componentName="{componentName}-item"
+						cssProps={{ multiple: true, active: cursorPosition === index }}>
 						{#if _slots['selected']}
 							<slot name="selected" {item} {index}>{item}</slot>
 						{:else}
 							<slot {item} {index}>{item}</slot>
+						{/if}
+						{#if dismissible}
+							<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
+								<Icon name="x" />
+							</El>
 						{/if}
 					</El>
 				{/if}
@@ -171,9 +209,12 @@
 			<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
 		{/if}
 		{#each options as item, index}
-			<El on:click={() => onSelect(item)} componentName="{componentName}-option">
-				<slot {item} {index}>{item}</slot>
-			</El>
+			{@const shouldShow = multiple ? !value.includes(getKey(item)) : value !== getKey(item)}
+			{#if shouldShow}
+				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
+					<slot {item} {index}>{item}</slot>
+				</El>
+			{/if}
 		{/each}
 	</Popup>
 </El>
