@@ -19,8 +19,6 @@
 	&-item {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
-		padding: 2px 8px;
 	}
 
 	&-input {
@@ -36,7 +34,6 @@
 		@extend .bg-base-100;
 		width: 100% !important;
 		z-index: 999;
-		top: auto;
 	}
 	&-option {
 		border-radius: var(--rounded-btn, 0.5rem);
