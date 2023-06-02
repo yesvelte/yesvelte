@@ -14,6 +14,7 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let required: $$Props['required'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let key: $$Props['key'] = undefined
@@ -32,6 +33,7 @@
 		selectProps = {
 			placeholder,
 			disabled,
+			multiple,
 			size,
 			items,
 			state,
