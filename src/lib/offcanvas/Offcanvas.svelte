@@ -31,22 +31,31 @@
 	let cssProps: OffcanvasProps = { placement }
 
 	const handleEscapeKey = (event: any) => {
-		if (element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
+		if (show && element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
 			close()
 		}
 	}
 
 	const handleOutsideClick = (event: any) => {
-		if (element && backdrop && !element.contains(event.target) && !event.defaultPrevented) {
+		if (
+			show &&
+			element &&
+			autoClose &&
+			!element.contains(event.target) &&
+			!event.defaultPrevented
+		) {
 			close()
 		}
 	}
 
 	onMount(() => {
-		if (element && autoClose) {
-			element.addEventListener('keyup', handleEscapeKey, true)
+		if (document && autoClose) {
+			document.addEventListener('keyup', handleEscapeKey, true)
+			document.addEventListener('click', handleOutsideClick, true)
+
 			return () => {
-				element.removeEventListener('keyup', handleEscapeKey, true)
+				document.removeEventListener('keyup', handleEscapeKey, true)
+				document.removeEventListener('click', handleOutsideClick, true)
 			}
 		}
 	})
