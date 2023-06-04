@@ -2,7 +2,7 @@
 // FormField
 //
 
-.#{$prefix-form-field} {
+@mixin form-field-mixin {
 	@extend .mb-3;
 
 	&-hint {
@@ -21,45 +21,38 @@
 	}
 }
 
-$form-field-props: (
-	null: '.#{$prefix-form-field}',
-	hint: '.#{$prefix-form-field}-hint',
-	state-valid: '.#{$prefix-form-field}-state-valid',
-	state-invalid: '.#{$prefix-form-field}-state-invalid'
-);
-
 .#{$prefix-form-input} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-checkbox} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-checkbox-group} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-file-upload} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-radio-group} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-editor} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-switch} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-select} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
 
 .#{$prefix-form-textarea} {
-	@include apply-props($form-field-props);
+	@include form-field-mixin;
 }
