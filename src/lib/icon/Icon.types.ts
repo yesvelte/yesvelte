@@ -26,7 +26,6 @@ export type IconPacks = (typeof ICON_PACKS)[number] | string
 export interface IconProps extends Partial<ElProps> {
 	color?: Colors
 	pack?: IconPacks
-	filled?: boolean
 	name?: string
 	size?: IconSizes
 }

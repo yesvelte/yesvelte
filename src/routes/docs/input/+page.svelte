@@ -13,6 +13,7 @@
 	import InputEvents from './InputEvents.svelte'
 	import InputValidateOnBlur from './InputValidateOnBlur.svelte'
 	import InputValidateOnType from './InputValidateOnType.svelte'
+	import InputIcon from './InputIcon.svelte'
 </script>
 
 <Page title="Input">
@@ -83,6 +84,12 @@
 		</p>
 		<Preview src="./InputReadOnly.svelte">
 			<div class="custom-class"><InputReadOnly /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="With Icon">
+		<Preview src="./InputIcon.svelte">
+			<div class="custom-class"><InputIcon /></div>
 		</Preview>
 	</Doc>
 

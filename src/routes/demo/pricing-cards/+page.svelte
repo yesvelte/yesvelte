@@ -33,7 +33,7 @@
 				<El mb="1"><Icon name="x" color="danger" mx="2" />Twitter API</El>
 				<Button col="12" mt="4" mb="2" color="success">Choose plan</Button>
 				<Ribbon bgColor="success" elementPosition="top">
-					<Icon name="star" color="light" filled />
+					<Icon name="star-filled" color="light" />
 				</Ribbon>
 			</CardBody>
 		</Card>
