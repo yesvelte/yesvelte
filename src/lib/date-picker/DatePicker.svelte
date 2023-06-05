@@ -3,14 +3,15 @@
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import type Litepicker from 'litepicker'
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
-	import moment from 'moment'
 	import type { DatePickerProps } from './DatePicker.types'
 	import { El } from '../el'
+	import type { DateTime } from 'litepicker/dist/types/datetime'
 
 	type $$Props = DatePickerProps
 
 	export let componentName: $$Props['componentName'] = 'date-picker'
-	export let format: $$Props['format'] = 'YYYY-MM-DD'
+	export let formatText: $$Props['formatText'] = undefined
+	export let formatValue: $$Props['formatValue'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
@@ -21,6 +22,7 @@
 	export let state: $$Props['state'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let value: $$Props['value'] = range ? [] : undefined
+	export let text: $$Props['text'] = undefined
 	export let id: $$Props['id'] = undefined
 
 	const components = [
@@ -33,12 +35,35 @@
 	let instance: Litepicker | undefined = undefined
 
 	$: if (value) {
+		text = format(new Date(value), 'text') as string
+
+		if (element) element.value = text
+
 		if (range) {
 			instance?.setStartDate(value[0])
 			instance?.setEndDate(value[1])
 		} else {
 			instance?.setDate(value)
 		}
+	}
+
+	function format(date: Date | DateTime | null | undefined, mode = 'value'): Date | string {
+		if (date.toJSDate) date = date.toJSDate()
+
+		if (date) {
+			if (mode === 'value') {
+				if (formatValue) {
+					return formatValue(date)
+				}
+				return date as Date
+			} else {
+				if (formatText) {
+					return formatText(date)
+				}
+				return date.toDateString()
+			}
+		}
+		return ''
 	}
 
 	let settings: ILPConfiguration
@@ -56,40 +81,37 @@
 			nextMonth: `<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>`,
 			reset: '',
 		},
-		// format,
-		format: {
-			parse(date: any) {
-				if (date instanceof Date) return date
-				if (typeof date === 'string') return moment(date, format).toDate()
-				if (typeof date === 'number') return moment(date).toDate()
-				return moment().toDate()
-			},
-			output(date: any) {
-				return moment(date).format(format)
-			},
-		},
 		setup(picker: any) {
 			picker.on('selected', (event: any) => {
 				if (range) {
-					const startDate = instance?.getStartDate()?.toDateString()
-					const startValue = moment(startDate).format(format)
+					const startDate = instance?.getStartDate()
+					const startDateValue = format(startDate)
+					const startDateText = format(startDate, 'text')
 
-					const endDate = instance?.getEndDate()?.toDateString()
-					const endValue = moment(endDate).format(format)
+					const endDate = instance?.getEndDate()
 
-					if (value[0] === startValue && value[1] === endValue) return
+					const endDateValue = format(endDate)
+					const endDateText = format(endDate, 'text')
 
-					value = [startValue, endValue]
+					if (value[0] === startDateValue && value[1] === endDateValue) return
+
+					value = [startDateValue, endDateValue]
+
+					text = startDateText + ' - ' + endDateText
 					dispatch('changed', value)
 				} else {
-					const date = event?.dateInstance?.toDateString()
-					const newValue = moment(date).format(format)
+					const date = event?.dateInstance
+					const dateValue = format(date)
+					const dateText = format(date, 'text')
 
-					if (value === newValue) return
+					if (value === dateValue) return
 
-					value = newValue
+					value = dateValue
+					text = dateText
 					dispatch('changed', value)
 				}
+
+				if (element) element.value = text
 			})
 		},
 	}
@@ -133,7 +155,7 @@
 	<El
 		tag="input"
 		{components}
-		value={range ? value[0] + ' - ' + value[1] : value}
+		value={text}
 		bind:element
 		bind:id
 		{...$$restProps}
