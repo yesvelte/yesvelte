@@ -26,11 +26,21 @@
 		}
 
 		&-state-valid {
-			@extend .is-valid;
+			.ql-toolbar.ql-snow {
+				border-color: var(--#{$prefix}success) !important;
+			}
+			.ql-container.ql-snow {
+				border-color: var(--#{$prefix}success) !important;
+			}
 		}
 
 		&-state-invalid {
-			@extend .is-invalid;
+			.ql-toolbar.ql-snow {
+				border-color: var(--#{$prefix}danger) !important;
+			}
+			.ql-container.ql-snow {
+				border-color: var(--#{$prefix}danger) !important;
+			}
 		}
 
 		.ql-toolbar.ql-snow {

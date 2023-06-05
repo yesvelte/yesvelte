@@ -34,11 +34,25 @@
 		}
 
 		&-state-valid {
-			@extend .input-success;
+			.ql-toolbar.ql-snow {
+				--tw-border-opacity: 1;
+				border-color: hsl(var(--su) / var(--tw-border-opacity));
+			}
+			.ql-container.ql-snow {
+				--tw-border-opacity: 1;
+				border-color: hsl(var(--su) / var(--tw-border-opacity));
+			}
 		}
 
 		&-state-invalid {
-			@extend .input-error;
+			.ql-toolbar.ql-snow {
+				--tw-border-opacity: 1;
+				border-color: hsl(var(--er) / var(--tw-border-opacity));
+			}
+			.ql-container.ql-snow {
+				--tw-border-opacity: 1;
+				border-color: hsl(var(--er) / var(--tw-border-opacity));
+			}
 		}
 
 		.ql-toolbar.ql-snow {
