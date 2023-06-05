@@ -57,7 +57,34 @@ $props: (
 		background-color: transparent;
 	}
 
-	// &-item {
+	&-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 2px 0.5rem;
 
-	// }
+		&-multiple {
+			background-color: #f0f0f0;
+			border-radius: 4px;
+		}
+
+		&-active {
+			background-color: #e0e0e0;
+		}
+
+		&-remove {
+			cursor: pointer;
+		}
+	}
+}
+
+.#{$prefix-el}-theme-dark {
+	.#{$prefix-autocomplete}-item {
+		&-multiple {
+			background-color: #26313f;
+		}
+		&-active {
+			background-color: #2d3948;
+		}
+	}
 }

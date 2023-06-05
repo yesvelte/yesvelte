@@ -14,6 +14,8 @@
 	export let name: $$Props['name'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let required: $$Props['required'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
+	export let dismissible: $$Props['dismissible'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
@@ -41,6 +43,8 @@
 			items,
 			key,
 			placeholder,
+			multiple,
+			dismissible,
 			name,
 			size,
 			state,

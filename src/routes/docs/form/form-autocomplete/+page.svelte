@@ -3,10 +3,12 @@
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
 	import FormAutocompleteCustomOption from './FormAutocompleteCustomOption.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
+	import FormAutocompleteDismissible from './FormAutocompleteDismissible.svelte'
 	import FormAutocompleteEvents from './FormAutocompleteEvents.svelte'
 	import FormAutocompleteKey from './FormAutocompleteKey.svelte'
 	import FormAutocompleteLabel from './FormAutocompleteLabel.svelte'
 	import FormAutocompleteMessage from './FormAutocompleteMessage.svelte'
+	import FormAutocompleteMultiple from './FormAutocompleteMultiple.svelte'
 	import FormAutocompleteObject from './FormAutocompleteObject.svelte'
 	import FormAutocompleteOnInput from './FormAutocompleteOnInput.svelte'
 	import FormAutocompletePlaceholder from './FormAutocompletePlaceholder.svelte'
@@ -62,6 +64,18 @@
 		</p>
 		<Preview src="./FormAutocompleteStates.svelte">
 			<FormAutocompleteStates />
+		</Preview>
+	</Doc>
+
+	<Doc title="Multiple">
+		<Preview src="./FormAutocompleteMultiple.svelte">
+			<FormAutocompleteMultiple />
+		</Preview>
+	</Doc>
+
+	<Doc title="Dismissible">
+		<Preview src="./FormAutocompleteDismissible.svelte">
+			<FormAutocompleteDismissible />
 		</Preview>
 	</Doc>
 
