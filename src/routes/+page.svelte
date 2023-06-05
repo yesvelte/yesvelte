@@ -28,7 +28,7 @@
 	let theme = 'tabler'
 	let icon = 'clipboard'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
-	let discordLink = 'https://discord.gg/ED9MKYbu'
+	let discordLink = 'https://discord.gg/gM2KRXxz'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
 
