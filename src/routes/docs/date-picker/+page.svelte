@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Page, Doc, Preview } from '$components'
-	import DatePickerFormatter from './DatePickerFormatter.svelte'
+	import DatepickerFormatter from './DatepickerFormatter.svelte'
 
 	import DatepickerCustom from './DatepickerCustom.svelte'
 	import DatepickerDefault from './DatepickerDefault.svelte'
@@ -30,7 +30,7 @@
 			You can change display format of the date using <code>formatText</code> prop.
 		</p>
 		<Preview src="./DatepickerFormatter.svelte">
-			<DatePickerFormatter />
+			<DatepickerFormatter />
 		</Preview>
 	</Doc>
 
