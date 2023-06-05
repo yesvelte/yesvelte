@@ -53,7 +53,7 @@
 
 <Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
 	<OffcanvasHeader p="3">
-		<Logo height="32" mb="0" />
+		<Logo href="/" height="32" mb="0" />
 	</OffcanvasHeader>
 	<SidebarNavigations p="3" position="static" {pathname} />
 </Offcanvas>
@@ -78,8 +78,8 @@
 		</El>
 	</El>
 	<NavbarItem dMd="none" icon="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
-	<Logo height="32" d="none" dMd="block" mx="3" mt="2" />
-	<Logo height="32" dMd="none" mt="2" />
+	<Logo href="/" height="32" d="none" dMd="block" mx="3" mt="2" />
+	<Logo href="/" height="32" dMd="none" mt="2" />
 </Navbar>
 <El d="none" dMd="block" class="y-docs-sidebar">
 	<SidebarNavigations position="static" bottom="0" {pathname} />
