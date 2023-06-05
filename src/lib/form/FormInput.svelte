@@ -74,7 +74,9 @@
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
 	<Input bind:id {components} {...inputProps} bind:value>
+		<slot name="start" slot="start" />
 		<slot />
+		<slot name="end" slot="end" />
 	</Input>
 	<slot name="hint" />
 </FormField>

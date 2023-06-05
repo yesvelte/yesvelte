@@ -54,7 +54,9 @@
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />
 	<FileUpload {components} bind:id {...fileUploadProps} bind:files>
+		<slot name="start" slot="start" />
 		<slot />
+		<slot name="end" slot="end" />
 	</FileUpload>
 	<slot name="hint" />
 </FormField>

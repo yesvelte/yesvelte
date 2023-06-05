@@ -8,6 +8,7 @@
 	import FormDatePickerRequired from './FormDatePickerRequired.svelte'
 	import FormDatePickerValidate from './FormDatePickerValidate.svelte'
 	import FormDatePickerRange from './FormDatePickerRange.svelte'
+	import FormDatePickerIcon from './FormDatePickerIcon.svelte'
 </script>
 
 <Page title="FormDatePicker">
@@ -45,6 +46,11 @@
 	<Doc title="Range">
 		<Preview src="./FormDatePickerRange.svelte">
 			<FormDatePickerRange />
+		</Preview>
+	</Doc>
+	<Doc title="Icon">
+		<Preview src="./FormDatePickerIcon.svelte">
+			<FormDatePickerIcon />
 		</Preview>
 	</Doc>
 
