@@ -9,6 +9,7 @@
 	import FormInputEvents from './FormInputEvents.svelte'
 	import FormInputValidateOnBlur from './FormInputValidateOnBlur.svelte'
 	import FormInputValidateOnInput from './FormInputValidateOnInput.svelte'
+	import FormInputIcon from './FormInputIcon.svelte'
 </script>
 
 <Page
@@ -62,6 +63,12 @@
 		</p>
 		<Preview src="./FormInputMask.svelte">
 			<FormInputMask />
+		</Preview>
+	</Doc>
+
+	<Doc title="With Icon">
+		<Preview src="./FormInputIcon.svelte">
+			<FormInputIcon />
 		</Preview>
 	</Doc>
 

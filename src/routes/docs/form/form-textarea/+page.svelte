@@ -6,6 +6,7 @@
 	import FormTextareaState from './FormTextareaState.svelte'
 	import FormTextareaEvents from './FormTextareaEvents.svelte'
 	import FormTextareaValidation from './FormTextareaValidation.svelte'
+	import FormTextareaIcon from './FormTextareaIcon.svelte'
 </script>
 
 <Page title="FormTextarea">
@@ -34,6 +35,12 @@
 	<Doc title="Events">
 		<Preview src="./FormTextareaEvents.svelte">
 			<FormTextareaEvents />
+		</Preview>
+	</Doc>
+
+	<Doc title="With Icon">
+		<Preview src="./FormTextareaIcon.svelte">
+			<FormTextareaIcon />
 		</Preview>
 	</Doc>
 
