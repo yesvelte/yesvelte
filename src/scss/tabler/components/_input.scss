@@ -30,6 +30,11 @@ $props: (
 
 .#{$prefix-input} {
 	@include apply-props($props);
+
+}
+
+::-ms-reveal {
+	display: none;
 }
 
 .#{$prefix-input-wrapper} {
