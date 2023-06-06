@@ -12,6 +12,7 @@ export interface FileUploadProps extends Partial<ElProps> {
 	name?: string
 	files?: FileList
 	state?: InputStates
+	required?: boolean
 	accept?: string
 	multiple?: boolean
 	type?: 'file'

@@ -21,7 +21,6 @@
 	export let indeterminate: $$Props['indeterminate'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let name: $$Props['name'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let id: string
 	const components = [
