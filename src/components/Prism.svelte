@@ -39,14 +39,14 @@
 		margin: 0;
 	}
 
-	:global(.y-el-theme-dark) :global([class*='language-']),
+	:global([data-theme='dark']) :global([class*='language-']),
 	:global([data-bs-theme='dark']) :global([class*='language-']) {
 		background-color: transparent !important;
 		text-shadow: 0 1px #000000;
 		color: white;
 	}
 
-	:global(.y-el-theme-dark) :global([class*='language-']) :global(.token.operator),
+	:global([class*='language-']) :global(.token.operator),
 	:global(.token.entity),
 	:global(.token.url),
 	:global(.language-css) :global(.token.string),

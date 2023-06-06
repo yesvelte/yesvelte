@@ -78,7 +78,7 @@ $props: (
 	}
 }
 
-.#{$prefix-el}-theme-dark {
+[data-bs-theme='dark'] {
 	.#{$prefix-autocomplete}-item {
 		&-multiple {
 			background-color: #26313f;

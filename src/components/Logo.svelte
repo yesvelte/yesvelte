@@ -43,7 +43,8 @@
 		/* color: #2773bf; */
 	}
 
-	:global(.y-el-theme-dark) :global(.y-logo[href]) {
+	:global([data-bs-theme='dark']) :global(.y-logo[href]),
+	:global([data-theme='dark']) :global(.y-logo[href]) {
 		color: #dfdfdf;
 	}
 </style>

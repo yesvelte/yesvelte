@@ -28,7 +28,8 @@
 
 	$: containerProps = {
 		'data-theme': dark ? 'dark' : 'light',
-		class: 'y-docs-wrapper y-app' + (dark ? ' y-app-theme-dark' : ''),
+		'data-bs-theme': dark ? 'dark' : 'light',
+		class: 'y-docs-wrapper',
 	}
 
 	$: if (browser) {
