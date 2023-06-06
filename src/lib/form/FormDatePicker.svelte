@@ -55,7 +55,6 @@
 	<slot name="label" />
 	<DatePicker bind:id {components} {...datePickerProps} bind:value on:changed>
 		<slot name="start" slot="start" />
-		<slot />
 		<slot name="end" slot="end" />
 	</DatePicker>
 	<slot name="hint" />

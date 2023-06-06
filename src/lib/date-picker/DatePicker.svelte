@@ -151,7 +151,6 @@
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
-	<slot />
 	<El
 		tag="input"
 		{components}

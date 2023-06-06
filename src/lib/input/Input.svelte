@@ -22,6 +22,13 @@
 	export let name: $$Props['name'] = undefined
 	export let id: $$Props['id'] = undefined
 
+	export let min: $$Props['min'] = undefined
+	export let max: $$Props['max'] = undefined
+	export let minlength: $$Props['minlength'] = undefined
+	export let maxlength: $$Props['maxlength'] = undefined
+	export let pattern: $$Props['pattern'] = undefined
+	export let step: $$Props['step'] = undefined
+
 	const components = [
 		{ component: get_current_component(), except: [] },
 		...($$props.components ?? []),
@@ -62,24 +69,21 @@
 			required,
 			type,
 			name,
+			min,
+			max,
+			minlength,
+			maxlength,
+			pattern,
+			step,
 		}
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={wrapperCssProps}>
+<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
-	<slot />
-	<El
-		tag="input"
-		bind:value
-		bind:element
-		bind:id
-		{components}
-		{...$$restProps}
-		{...props}
-		{cssProps} />
+	<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

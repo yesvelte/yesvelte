@@ -68,7 +68,6 @@
 	<slot name="label" />
 	<Textarea bind:id {components} {...teaxtareaProps} bind:value>
 		<slot name="start" slot="start" />
-		<slot />
 		<slot name="end" slot="end" />
 	</Textarea>
 	<slot name="hint" />

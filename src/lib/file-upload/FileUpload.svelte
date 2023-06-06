@@ -11,10 +11,12 @@
 	export let accept: $$Props['accept'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
+	export let required: $$Props['required'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let files: $$Props['files'] = undefined
 	export let id: $$Props['id'] = undefined
+
 
 	const components = [
 		{ component: get_current_component(), except: [] },
@@ -43,25 +45,18 @@
 			accept,
 			name,
 			multiple,
+			required,
 			tag: 'input',
 			type: 'file',
 		}
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={wrapperCssProps}>
+<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
 	{#if $$slots.start}
 		<slot name="start" />
 	{/if}
-	<slot />
-	<El
-		{components}
-		bind:id
-		bind:element
-		{...$$restProps}
-		{...props}
-		{cssProps}
-		on:change={onChange} />
+	<El {components} bind:id bind:element {...props} {cssProps} on:change={onChange} />
 	{#if $$slots.end}
 		<slot name="end" />
 	{/if}

@@ -7,7 +7,6 @@
 	type $$Props = FormInputProps
 
 	export let componentName: $$Props['componentName'] = 'form-input'
-	export let tag: $$Props['tag'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
@@ -49,7 +48,6 @@
 	}
 
 	$: inputProps = {
-		tag,
 		placeholder,
 		disabled,
 		readonly,
@@ -75,7 +73,6 @@
 	<slot name="label" />
 	<Input bind:id {components} {...inputProps} bind:value>
 		<slot name="start" slot="start" />
-		<slot />
 		<slot name="end" slot="end" />
 	</Input>
 	<slot name="hint" />
