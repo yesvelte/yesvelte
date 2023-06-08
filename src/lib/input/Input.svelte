@@ -79,16 +79,20 @@
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
-	{#if $$slots.start}
-		<El tag="span" componentName="{componentName}-icon">
-			<slot name="start" />
-		</El>
-	{/if}
+{#if $$slots.start || $$slots.end}
+	<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
+		{#if $$slots.start}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="start" />
+			</El>
+		{/if}
+		<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
+		{#if $$slots.end}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="end" />
+			</El>
+		{/if}
+	</El>
+{:else}
 	<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
-	{#if $$slots.end}
-		<El tag="span" componentName="{componentName}-icon">
-			<slot name="end" />
-		</El>
-	{/if}
-</El>
+{/if}

@@ -12,18 +12,14 @@
 
 <El row>
 	<FormInput {state} {hint} label="Email" placeholder="Enter your email...">
-		<span slot="start">
-			<Icon name="mail" />
-		</span>
+		<Icon slot="start-icon" name="mail" />
 		<Button slot="end" on:click={validate}>
 			<Icon name="check" />
 			<Tooltip>Check if email is valid</Tooltip>
 		</Button>
 	</FormInput>
 	<FormInput col="6" label="Password" required placeholder="Enter your password...">
-		<span slot="start">
-			<Icon name="key" />
-		</span>
+		<Icon slot="start-icon" name="key" />
 	</FormInput>
 	<FormInput
 		state="invalid"
@@ -32,8 +28,6 @@
 		label="Repeat Password"
 		required
 		placeholder="Repeat password...">
-		<span slot="start">
-			<Icon name="key" />
-		</span>
+		<Icon slot="start-icon" name="key" />
 	</FormInput>
 </El>

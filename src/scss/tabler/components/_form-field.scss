@@ -5,6 +5,14 @@
 @mixin form-field-mixin {
 	@extend .mb-3;
 
+	&-group {
+		@extend .input-group;
+	}
+
+	&-icon {
+		@extend .input-group-text;
+	}
+
 	&-hint {
 		margin-top: 0.25rem;
 		font-size: 85.714285%;
@@ -30,6 +38,11 @@
 }
 
 .#{$prefix-form-checkbox-group} {
+	@include form-field-mixin;
+	display: block !important;
+}
+
+.#{$prefix-form-date-picker} {
 	@include form-field-mixin;
 }
 

@@ -4,6 +4,7 @@
 	import type { FormTextAreaProps } from './Form.types'
 
 	import { get_current_component } from 'svelte/internal'
+	import { El } from '../el'
 
 	type $$Props = FormTextAreaProps
 
@@ -65,10 +66,23 @@
 </script>
 
 <FormField {id} {...props} {...$$restProps}>
-	<slot name="label" />
-	<Textarea bind:id {components} {...teaxtareaProps} bind:value>
-		<slot name="start" slot="start" />
-		<slot name="end" slot="end" />
-	</Textarea>
-	<slot name="hint" />
+	<slot name="label" slot="label" />
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="start-icon" />
+				</El>
+			{/if}
+		</slot>
+		<Textarea bind:id {components} {...teaxtareaProps} bind:value />
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="end-icon" />
+				</El>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot name="hint" slot="hint" />
 </FormField>

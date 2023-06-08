@@ -49,9 +49,9 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<Checkbox bind:id {...checkboxProps} bind:checked bind:value {components}>
 		<slot />
 	</Checkbox>
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { Input } from 'yesvelte'
+	import { Icon, Input } from 'yesvelte'
 </script>
 
-<Input size="sm">
-	<span slot="start">Small</span>
+<Input size="sm" placeholder="Small">
+	<Icon name="star" slot="start" />
 </Input>
 
-<Input>
-	<span slot="start">Default</span>
+<Input placeholder="Medium">
+	<Icon name="star" slot="start" />
 </Input>
 
-<Input size="lg">
-	<span slot="start">Large</span>
+<Input size="lg" placeholder="Large">
+	<Icon name="star" slot="start" />
 </Input>

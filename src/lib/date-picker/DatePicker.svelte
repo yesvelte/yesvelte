@@ -147,10 +147,29 @@
 	})
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={{ size }}>
-	{#if $$slots.start}
-		<slot name="start" />
-	{/if}
+{#if $$slots.start || $$slots.end}
+	<El componentName="{componentName}-wrapper" cssProps={{ size }}>
+		{#if $$slots.start}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="start" />
+			</El>
+		{/if}
+		<El
+			tag="input"
+			{components}
+			value={text}
+			bind:element
+			bind:id
+			{...$$restProps}
+			{cssProps}
+			{...props} />
+		{#if $$slots.end}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="end" />
+			</El>
+		{/if}
+	</El>
+{:else}
 	<El
 		tag="input"
 		{components}
@@ -160,7 +179,4 @@
 		{...$$restProps}
 		{cssProps}
 		{...props} />
-	{#if $$slots.end}
-		<slot name="end" />
-	{/if}
-</El>
+{/if}

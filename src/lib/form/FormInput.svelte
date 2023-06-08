@@ -3,6 +3,7 @@
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
+	import { El } from '../el'
 
 	type $$Props = FormInputProps
 
@@ -74,20 +75,18 @@
 	<svelte:fragment slot="group">
 		<slot name="start">
 			{#if $$slots['start-icon']}
-				<span>
+				<El componentName="{componentName}-icon">
 					<slot name="start-icon" />
-				</span>
+				</El>
 			{/if}
 		</slot>
-		<Input bind:id {components} {...inputProps} bind:value>
-			<slot name="start-inner" slot="start" />
-			<slot name="end-inner" slot="end" />
-		</Input>
+		<Input bind:id {components} {...inputProps} bind:value />
+	
 		<slot name="end">
 			{#if $$slots['end-icon']}
-				<span>
+				<El componentName="{componentName}-icon">
 					<slot name="end-icon" />
-				</span>
+				</El>
 			{/if}
 		</slot>
 	</svelte:fragment>

@@ -53,7 +53,7 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<Switch
 		bind:id
 		{...switchProps}
@@ -64,5 +64,5 @@
 		<slot />
 		<slot name="description" slot="description" />
 	</Switch>
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

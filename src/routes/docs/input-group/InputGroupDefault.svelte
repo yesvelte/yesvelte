@@ -3,18 +3,18 @@
 </script>
 
 <FormInput placeholder="Username">
-	<span slot="start">@</span>
+	<span slot="start-icon">@</span>
 </FormInput>
 
 <FormInput placeholder="Recipient's username">
-	<span slot="end">@example.com</span>
+	<span slot="end-icon">@example.com</span>
 </FormInput>
 
 <FormInput placeholder="Your vanity URL">
-	<span slot="start">https://example.com/users/</span>
+	<span slot="start-icon">https://example.com/users/</span>
 </FormInput>
 
 <FormInput placeholder="Amount">
-	<span slot="start">$</span>
-	<span slot="end">.00</span>
+	<span slot="start-icon">$</span>
+	<span slot="end-icon">.00</span>
 </FormInput>
