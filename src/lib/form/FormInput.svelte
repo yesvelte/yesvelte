@@ -70,10 +70,26 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
-	<Input bind:id {components} {...inputProps} bind:value>
-		<slot name="start" slot="start" />
-		<slot name="end" slot="end" />
-	</Input>
-	<slot name="hint" />
+	<slot slot="label" name="label" />
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<span>
+					<slot name="start-icon" />
+				</span>
+			{/if}
+		</slot>
+		<Input bind:id {components} {...inputProps} bind:value>
+			<slot name="start-inner" slot="start" />
+			<slot name="end-inner" slot="end" />
+		</Input>
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<span>
+					<slot name="end-icon" />
+				</span>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot slot="hint" name="hint" />
 </FormField>

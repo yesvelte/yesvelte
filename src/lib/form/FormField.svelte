@@ -26,7 +26,11 @@
 			<Label for={id} {required}>{label}</Label>
 		{/if}
 	</slot>
-	<slot />
+	<slot>
+		<El componentName="{componentName}-group">
+			<slot name="group" />
+		</El>
+	</slot>
 	<slot name="hint">
 		{#if hint}
 			<El componentName={componentName + '-hint'} cssProps={{ state }}>

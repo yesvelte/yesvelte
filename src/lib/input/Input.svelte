@@ -81,10 +81,14 @@
 
 <El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
 	{#if $$slots.start}
-		<slot name="start" />
+		<El tag="span" componentName="{componentName}-icon">
+			<slot name="start" />
+		</El>
 	{/if}
 	<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
 	{#if $$slots.end}
-		<slot name="end" />
+		<El tag="span" componentName="{componentName}-icon">
+			<slot name="end" />
+		</El>
 	{/if}
 </El>
