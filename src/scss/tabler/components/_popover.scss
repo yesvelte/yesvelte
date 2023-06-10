@@ -1,11 +1,13 @@
+@import '../base';
+
 $popover-props: (
 	null: (
-		'.popover',
-		'.bs-popover-auto'
+		'%popover',
+		'%bs-popover-auto'
 	),
-	body: '.popover-body',
-	header: '.popover-header',
-	arrow: '.popover-arrow'
+	body: '%popover-body',
+	header: '%popover-header',
+	arrow: '%popover-arrow'
 );
 
 .#{$prefix-popover} {

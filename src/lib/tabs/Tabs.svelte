@@ -1,3 +1,4 @@
+<!-- @css:tabs -->
 <script context="module">
 	export const TABS = {}
 </script>

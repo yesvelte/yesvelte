@@ -1,3 +1,4 @@
+<!-- @!css:form-slider -->
 <script lang="ts">
 	import { Slider } from '../slider'
 	import type { FormSliderProps } from './Form.types'
@@ -48,6 +49,9 @@
 		name,
 	}
 </script>
+
+<!-- @css:form-field -->
+
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" />

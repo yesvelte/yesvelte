@@ -1,0 +1,589 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-button.y-pagination-item-active {
+  color: var(--y-btn-active-color);
+  background-color: var(--y-btn-active-bg);
+  border-color: var(--y-btn-active-border-color);
+}
+
+.y-button.y-pagination-item-active:focus-visible {
+  box-shadow: var(--y-btn-focus-box-shadow);
+}
+
+.y-button.y-pagination-item-disabled {
+  color: var(--y-btn-disabled-color);
+  pointer-events: none;
+  background-color: var(--y-btn-disabled-bg);
+  border-color: var(--y-btn-disabled-border-color);
+  opacity: var(--y-btn-disabled-opacity);
+}
+
+.y-pagination-item-active.y-autocomplete-option, .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-dropdown-item.y-pagination-item-active {
+  color: var(--y-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--y-dropdown-link-active-bg);
+}
+
+.y-pagination-item-disabled.y-autocomplete-option, .y-sidebar-item-menu .y-pagination-item-disabled.y-sidebar-item, .y-navbar-item-menu .y-navbar-item.y-pagination-item-disabled, .y-dropdown-item.y-pagination-item-disabled {
+  color: var(--y-dropdown-link-disabled-color);
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active {
+  z-index: 1;
+}
+
+.y-pagination-item-disabled.y-tab-item-link, .y-pagination-item-disabled.y-sidebar-item, .y-navbar-item.y-pagination-item-disabled {
+  color: var(--y-nav-link-disabled-color);
+  pointer-events: none;
+  cursor: default;
+}
+
+.y-tab-list .y-pagination-item-disabled.y-tab-item-link, .y-tab-list .y-pagination-item-disabled.y-sidebar-item, .y-tab-list .y-navbar-item.y-pagination-item-disabled {
+  color: var(--y-nav-link-disabled-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.y-tab-list .y-pagination-item-active.y-tab-item-link, .y-tab-list .y-pagination-item-active.y-sidebar-item, .y-tab-list .y-navbar-item.y-pagination-item-active {
+  color: var(--y-nav-tabs-link-active-color);
+  background-color: var(--y-nav-tabs-link-active-bg);
+  border-color: var(--y-nav-tabs-link-active-border-color);
+}
+
+.y-tab-content > .y-pagination-item-active {
+  display: block;
+}
+
+.y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-navbar-content .y-navbar-item.y-pagination-item-active {
+  color: var(--y-navbar-active-color);
+}
+
+.y-card-header > .y-tab-list .y-pagination-item-active.y-tab-item-link, .y-tab-list-card .y-pagination-item-active.y-tab-item-link, .y-card-header > .y-tab-list .y-pagination-item-active.y-sidebar-item, .y-tab-list-card .y-pagination-item-active.y-sidebar-item, .y-card-header > .y-tab-list .y-navbar-item.y-pagination-item-active, .y-tab-list-card .y-navbar-item.y-pagination-item-active {
+  background-color: var(--y-card-bg);
+  border-bottom-color: var(--y-card-bg);
+}
+
+.y-breadcrumb-item.y-pagination-item-active {
+  color: var(--y-breadcrumb-item-active-color);
+}
+
+.y-pagination {
+  --y-pagination-padding-x: 0.25rem;
+  --y-pagination-padding-y: 0.25rem;
+  --y-pagination-font-size: 0.875rem;
+  --y-pagination-color: var(--y-muted);
+  --y-pagination-bg: transparent;
+  --y-pagination-border-width: 0;
+  --y-pagination-border-color: var(--y-border-color);
+  --y-pagination-border-radius: var(--y-border-radius);
+  --y-pagination-hover-color: var(--y-link-hover-color);
+  --y-pagination-hover-bg: var(--y-tertiary-bg);
+  --y-pagination-hover-border-color: var(--y-border-color);
+  --y-pagination-focus-color: var(--y-link-hover-color);
+  --y-pagination-focus-bg: var(--y-secondary-bg);
+  --y-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+  --y-pagination-active-color: #ffffff;
+  --y-pagination-active-bg: var(--y-primary);
+  --y-pagination-active-border-color: var(--y-primary);
+  --y-pagination-disabled-color: var(--y-disabled-color);
+  --y-pagination-disabled-bg: transparent;
+  --y-pagination-disabled-border-color: var(--y-border-color);
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.y-pagination-item-link {
+  position: relative;
+  display: block;
+  padding: var(--y-pagination-padding-y) var(--y-pagination-padding-x);
+  font-size: var(--y-pagination-font-size);
+  color: var(--y-pagination-color);
+  background-color: var(--y-pagination-bg);
+  border: var(--y-pagination-border-width) solid var(--y-pagination-border-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-pagination-item-link {
+    transition: none;
+  }
+}
+.y-pagination-item-link:hover {
+  z-index: 2;
+  color: var(--y-pagination-hover-color);
+  text-decoration: none;
+  background-color: var(--y-pagination-hover-bg);
+  border-color: var(--y-pagination-hover-border-color);
+}
+
+.y-pagination-item-link:focus {
+  z-index: 3;
+  color: var(--y-pagination-focus-color);
+  background-color: var(--y-pagination-focus-bg);
+  outline: 0;
+  box-shadow: var(--y-pagination-focus-box-shadow);
+}
+
+.y-pagination-item-link.y-tab-item-link-active, .y-pagination-item-link.y-tab-pane, .y-pagination-item-link.y-step-item-active, .y-pagination-item-link.y-sidebar-item-active, .y-pagination-item-link.y-pagination-item-active, .y-navbar-item-active.y-pagination-item-link, .y-dropdown-item-active.y-pagination-item-link, .y-button-active.y-pagination-item-link, .y-breadcrumb-item-active.y-pagination-item-link, .y-avatar-active.y-pagination-item-link, .y-tab-item-link-active > .y-pagination-item-link, .y-tab-pane > .y-pagination-item-link, .y-step-item-active > .y-pagination-item-link, .y-sidebar-item-active > .y-pagination-item-link, .y-pagination-item-active > .y-pagination-item-link, .y-navbar-item-active > .y-pagination-item-link, .y-dropdown-item-active > .y-pagination-item-link, .y-button-active > .y-pagination-item-link, .y-breadcrumb-item-active > .y-pagination-item-link, .y-avatar-active > .y-pagination-item-link {
+  z-index: 3;
+  color: var(--y-pagination-active-color);
+  background-color: var(--y-pagination-active-bg);
+  border-color: var(--y-pagination-active-border-color);
+}
+
+.y-pagination-item-link.y-autocomplete-disabled, .y-pagination-item-link.y-autocomplete-option-no-result, .y-pagination-item-link.y-tab-item-link-disabled, .y-pagination-item-link.y-sidebar-item-disabled, .y-pagination-item-link.y-pagination-item-disabled, .y-navbar-item-disabled.y-pagination-item-link, .y-dropdown-item-disabled.y-pagination-item-link, .y-button-disabled.y-pagination-item-link, .y-autocomplete-disabled > .y-pagination-item-link, .y-autocomplete-option-no-result > .y-pagination-item-link, .y-tab-item-link-disabled > .y-pagination-item-link, .y-sidebar-item-disabled > .y-pagination-item-link, .y-pagination-item-disabled > .y-pagination-item-link, .y-navbar-item-disabled > .y-pagination-item-link, .y-dropdown-item-disabled > .y-pagination-item-link, .y-button-disabled > .y-pagination-item-link {
+  color: var(--y-pagination-disabled-color);
+  pointer-events: none;
+  background-color: var(--y-pagination-disabled-bg);
+  border-color: var(--y-pagination-disabled-border-color);
+}
+
+.y-pagination-item:not(:first-child) .y-pagination-item-link {
+  margin-left: 0;
+}
+
+.y-pagination-item:first-child .y-pagination-item-link {
+  border-top-left-radius: var(--y-pagination-border-radius);
+  border-bottom-left-radius: var(--y-pagination-border-radius);
+}
+
+.y-pagination-item:last-child .y-pagination-item-link {
+  border-top-right-radius: var(--y-pagination-border-radius);
+  border-bottom-right-radius: var(--y-pagination-border-radius);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+.y-pagination-item-disabled.y-toast-close, .y-offcanvas-header-btn.y-pagination-item-disabled, .y-modal-close.y-pagination-item-disabled, .y-alert-close.y-pagination-item-disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--y-btn-close-disabled-opacity);
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+.y-sidebar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-navbar-wrapper .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-app-header .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-header .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-header .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-app-header .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-header .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-header .y-navbar-content .y-navbar-item.y-pagination-item-disabled {
+  color: var(--y-disabled-color);
+}
+
+.y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-app-header .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-app-header .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-app-header .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-app-header .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-app-header .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-app-header .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-app-header .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-app-header .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-app-header .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-app-header .y-navbar-content .y-navbar-item.y-pagination-item-active {
+  color: var(--y-body-color) color;
+}
+
+@media not print {
+  .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-navbar-item.y-pagination-item-disabled {
+    color: var(--y-disabled-color);
+  }
+  .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-navbar-item.y-pagination-item-active {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .y-app-header .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-app-header .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-app-header .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-app-header .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-app-header .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-app-header .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-app-header .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active {
+    background: var(--y-navbar-active-bg);
+  }
+  .y-app-header .y-sidebar .y-pagination-item-active.y-tab-item:after, .y-app-header .y-sidebar .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar .y-navbar-item-wrapper.y-pagination-item-active:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .y-app-header.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-app-header.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header.y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-app-header.y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header.y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header.y-app-header-theme-light .y-pagination-item-active.y-tab-item, .y-app-header.y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header.y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-app-header .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-app-header .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header .y-app-header-theme-light .y-pagination-item-active.y-tab-item, .y-app-header .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active {
+    position: relative;
+  }
+  .y-app-header.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header.y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header.y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header.y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header.y-app-header-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header.y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header.y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header .y-app-header-theme-light .y-pagination-item-active.y-tab-item:after, .y-app-header .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.25rem;
+    border: 0 var(--y-border-style) var(--y-navbar-active-border-color);
+    border-bottom-width: 2px;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active {
+  background: var(--y-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper .y-sidebar .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar .y-navbar-item-wrapper.y-pagination-item-active:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-tab-item, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-tab-item, .y-app-header-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-sidebar-wrapper .y-navbar-item-wrapper.y-pagination-item-active, .y-app-header-theme-light.y-navbar-wrapper .y-pagination-item-active.y-tab-item, .y-app-header-theme-light.y-navbar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-navbar-wrapper .y-navbar-item-wrapper.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-sidebar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-tab-item, .y-sidebar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active, .y-navbar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-tab-item, .y-navbar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active {
+  position: relative;
+}
+
+.y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-tab-item:after, .y-app-header-theme-light.y-sidebar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-sidebar-wrapper .y-navbar-item-wrapper.y-pagination-item-active:after, .y-app-header-theme-light.y-navbar-wrapper .y-pagination-item-active.y-tab-item:after, .y-app-header-theme-light.y-navbar-wrapper .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-navbar-wrapper .y-navbar-item-wrapper.y-pagination-item-active:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-sidebar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after, .y-navbar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-tab-item:after, .y-navbar-wrapper .y-app-header-theme-light .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-app-header-theme-light .y-navbar-item-wrapper.y-pagination-item-active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  border: 0 var(--y-border-style) var(--y-navbar-active-border-color);
+  border-bottom-width: 2px;
+}
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+.y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-disabled, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-disabled, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-disabled.y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-disabled.y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-disabled {
+  color: var(--y-disabled-color);
+}
+
+.y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-active > .y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-active > .y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-active > .y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-active > .y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-active > .y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-active, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-active.y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-pagination-item-active.y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-navbar-item.y-pagination-item-active, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-active.y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-pagination-item-active.y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-navbar-item.y-pagination-item-active {
+  color: #ffffff;
+}
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+@media (min-width: 768px) {
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active {
+    background: var(--y-navbar-active-bg);
+  }
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-wrapper.y-pagination-item-active:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-dropdown-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-pagination-item-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-pagination-item-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-navbar-item.y-pagination-item-active, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item.y-pagination-item-active, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-dropdown-item.y-pagination-item-active {
+  background: var(--y-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-pagination-item-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-navbar-item-wrapper.y-pagination-item-active:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-breadcrumb-item.y-pagination-item-active {
+  font-weight: var(--y-breadcrumb-item-active-font-weight);
+}
+
+.y-breadcrumb-item.y-pagination-item-active a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.y-breadcrumb-item.y-pagination-item-disabled {
+  color: var(--y-breadcrumb-item-disabled-color);
+}
+
+.y-breadcrumb-item.y-pagination-item-disabled:before {
+  color: inherit;
+}
+
+.y-breadcrumb-item.y-pagination-item-disabled a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active {
+  z-index: 5;
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+.y-pagination-item-disabled.y-textarea-size-md, .y-pagination-item-disabled.y-textarea, .y-pagination-item-disabled.y-file-upload-size-md, .y-pagination-item-disabled.y-file-upload, .y-pagination-item-disabled.y-date-picker-size-md, .y-pagination-item-disabled.y-date-picker, .y-input-size-md.y-pagination-item-disabled, .y-input.y-pagination-item-disabled {
+  color: var(--y-muted);
+  user-select: none;
+}
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+.y-pagination {
+  user-select: none;
+}
+
+.y-pagination-item-link {
+  min-width: 1.75rem;
+  border-radius: var(--y-border-radius);
+}
+
+.y-pagination-item {
+  text-align: center;
+}
+
+.y-pagination-item:not(.y-tab-item-link-active):not(.y-tab-pane):not(.y-step-item-active):not(.y-sidebar-item-active):not(.y-pagination-item-active):not(.y-navbar-item-active):not(.y-dropdown-item-active):not(.y-button-active):not(.y-breadcrumb-item-active):not(.y-avatar-active) .y-pagination-item-link:hover {
+  background: transparent;
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+.y-pagination-item-active.y-step-item {
+  font-weight: var(--y-font-weight-bold);
+}
+
+.y-pagination-item-active.y-step-item:after {
+  background: var(--y-steps-inactive-color);
+}
+
+.y-pagination-item-active.y-step-item ~ .y-step-item {
+  color: var(--y-disabled-color);
+}
+
+.y-pagination-item-active.y-step-item ~ .y-step-item:after, .y-pagination-item-active.y-step-item ~ .y-step-item:before {
+  background: var(--y-steps-inactive-color);
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+[class^=link-].y-pagination-item-disabled, [class*=" link-"].y-pagination-item-disabled {
+  color: var(--y-disabled-color);
+  pointer-events: none;
+}
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

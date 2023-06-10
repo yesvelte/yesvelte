@@ -1,6 +1,8 @@
+@import '../base';
+
 $label-props: (
-	'': '.form-label',
-	required: '.required'
+	'': '%form-label',
+	required: '%required'
 );
 
 .#{$prefix-label} {

@@ -1,3 +1,4 @@
+<!-- @css:slider -->
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import type { SliderContext, SliderKnobProps, SliderKnobType } from './Slider.types'

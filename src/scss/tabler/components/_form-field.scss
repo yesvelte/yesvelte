@@ -1,9 +1,11 @@
+@import '../base';
+
 //
 // FormField
 //
 
 .#{$prefix-form-field} {
-	@extend .mb-3;
+	@extend %mb-3;
 
 	&-hint {
 		margin-top: 0.25rem;
@@ -22,10 +24,10 @@
 }
 
 $form-field-props: (
-	null: '.#{$prefix-form-field}',
-	hint: '.#{$prefix-form-field}-hint',
-	state-valid: '.#{$prefix-form-field}-state-valid',
-	state-invalid: '.#{$prefix-form-field}-state-invalid'
+	null: '%#{$prefix-form-field}',
+	hint: '%#{$prefix-form-field}-hint',
+	state-valid: '%#{$prefix-form-field}-state-valid',
+	state-invalid: '%#{$prefix-form-field}-state-invalid'
 );
 
 .#{$prefix-form-input} {

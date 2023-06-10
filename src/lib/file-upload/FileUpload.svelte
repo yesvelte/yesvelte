@@ -1,9 +1,13 @@
+	<!-- @css:file-upload -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FileUploadProps, FileUploadWrapperProps } from './FileUpload.types'
 
 	type $$Props = FileUploadProps
+
+
 
 	export let componentName: $$Props['componentName'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined

@@ -1,3 +1,4 @@
+<!-- @css:pagination -->
 <script lang="ts">
 	import { Icon } from '../icon'
 	import { El } from '../el'

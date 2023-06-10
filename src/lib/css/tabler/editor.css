@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-editor-wrapper-state-valid.y-textarea-size-md, .y-editor-wrapper-state-valid.y-textarea, .y-editor-wrapper-state-valid.y-file-upload-size-md, .y-editor-wrapper-state-valid.y-file-upload, .y-editor-wrapper-state-valid.y-date-picker-size-md, .y-editor-wrapper-state-valid.y-date-picker, .y-editor-wrapper-state-valid.y-input-size-md, .y-editor-wrapper-state-valid.y-input {
+  border-color: var(--y-success);
+  padding-right: calc(1.4285714286em + 0.875rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232fb344' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.3571428572em + 0.21875rem) center;
+  background-size: calc(0.7142857143em + 0.4375rem) calc(0.7142857143em + 0.4375rem);
+}
+
+.y-editor-wrapper-state-valid.y-textarea-size-md:focus, .y-editor-wrapper-state-valid.y-textarea:focus, .y-editor-wrapper-state-valid.y-file-upload-size-md:focus, .y-editor-wrapper-state-valid.y-file-upload:focus, .y-editor-wrapper-state-valid.y-date-picker-size-md:focus, .y-editor-wrapper-state-valid.y-date-picker:focus, .y-editor-wrapper-state-valid.y-input-size-md:focus, .y-editor-wrapper-state-valid.y-input:focus {
+  border-color: var(--y-success);
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-success-rgb), 0.25);
+}
+
+textarea.y-editor-wrapper-state-valid.y-textarea-size-md, textarea.y-editor-wrapper-state-valid.y-textarea, textarea.y-editor-wrapper-state-valid.y-file-upload-size-md, textarea.y-editor-wrapper-state-valid.y-file-upload, textarea.y-editor-wrapper-state-valid.y-date-picker-size-md, textarea.y-editor-wrapper-state-valid.y-date-picker, textarea.y-editor-wrapper-state-valid.y-input-size-md, textarea.y-editor-wrapper-state-valid.y-input {
+  padding-right: calc(1.4285714286em + 0.875rem);
+  background-position: top calc(0.3571428572em + 0.21875rem) right calc(0.3571428572em + 0.21875rem);
+}
+
+.y-editor-wrapper-state-valid.y-select-size-md, .y-editor-wrapper-state-valid.y-select, .y-editor-wrapper-state-valid.y-autocomplete-size-md, .y-editor-wrapper-state-valid.y-autocomplete {
+  border-color: var(--y-success);
+}
+
+.y-editor-wrapper-state-valid.y-select-size-md:not([multiple]):not([size]), .y-editor-wrapper-state-valid.y-select:not([multiple]):not([size]), .y-editor-wrapper-state-valid.y-autocomplete-size-md:not([multiple]):not([size]), .y-editor-wrapper-state-valid.y-autocomplete:not([multiple]):not([size]), .y-editor-wrapper-state-valid.y-select-size-md:not([multiple])[size="1"], .y-editor-wrapper-state-valid.y-select:not([multiple])[size="1"], .y-editor-wrapper-state-valid.y-autocomplete-size-md:not([multiple])[size="1"], .y-editor-wrapper-state-valid.y-autocomplete:not([multiple])[size="1"] {
+  --y-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232fb344' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/polyline%3e%3c/svg%3e");
+  padding-right: 4.125rem;
+  background-position: right 0.75rem center, center right 2.25rem;
+  background-size: 16px 12px, calc(0.7142857143em + 0.4375rem) calc(0.7142857143em + 0.4375rem);
+}
+
+.y-editor-wrapper-state-valid.y-select-size-md:focus, .y-editor-wrapper-state-valid.y-select:focus, .y-editor-wrapper-state-valid.y-autocomplete-size-md:focus, .y-editor-wrapper-state-valid.y-autocomplete:focus {
+  border-color: var(--y-success);
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-success-rgb), 0.25);
+}
+
+.y-editor-wrapper-state-valid.y-switch, .y-editor-wrapper-state-valid.y-radio, .y-editor-wrapper-state-valid.y-checkbox-indeterminate, .y-editor-wrapper-state-valid.y-checkbox {
+  border-color: var(--y-success);
+}
+
+.y-editor-wrapper-state-valid.y-switch:checked, .y-editor-wrapper-state-valid.y-radio:checked, .y-editor-wrapper-state-valid.y-checkbox-indeterminate:checked, .y-editor-wrapper-state-valid.y-checkbox:checked {
+  background-color: var(--y-success-text);
+}
+
+.y-editor-wrapper-state-valid.y-switch:focus, .y-editor-wrapper-state-valid.y-radio:focus, .y-editor-wrapper-state-valid.y-checkbox-indeterminate:focus, .y-editor-wrapper-state-valid.y-checkbox:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-success-rgb), 0.25);
+}
+
+.y-editor-wrapper-state-valid.y-switch ~ .y-switch-label, .y-editor-wrapper-state-valid.y-switch ~ .y-radio-label, .y-editor-wrapper-state-valid.y-radio ~ .y-switch-label, .y-editor-wrapper-state-valid.y-radio ~ .y-radio-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-radio-label, .y-editor-wrapper-state-valid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-radio ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-radio-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-checkbox-label {
+  color: var(--y-success-text);
+}
+
+.y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-textarea-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-textarea:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-file-upload-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-file-upload:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-date-picker-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-date-picker:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-input-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-input:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-select-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-select:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-autocomplete-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-valid.y-autocomplete:not(:focus) {
+  z-index: 3;
+}
+
+.y-editor-wrapper-state-invalid.y-textarea-size-md, .y-editor-wrapper-state-invalid.y-textarea, .y-editor-wrapper-state-invalid.y-file-upload-size-md, .y-editor-wrapper-state-invalid.y-file-upload, .y-editor-wrapper-state-invalid.y-date-picker-size-md, .y-editor-wrapper-state-invalid.y-date-picker, .y-editor-wrapper-state-invalid.y-input-size-md, .y-editor-wrapper-state-invalid.y-input {
+  border-color: var(--y-danger);
+  padding-right: calc(1.4285714286em + 0.875rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23d63939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.3571428572em + 0.21875rem) center;
+  background-size: calc(0.7142857143em + 0.4375rem) calc(0.7142857143em + 0.4375rem);
+}
+
+.y-editor-wrapper-state-invalid.y-textarea-size-md:focus, .y-editor-wrapper-state-invalid.y-textarea:focus, .y-editor-wrapper-state-invalid.y-file-upload-size-md:focus, .y-editor-wrapper-state-invalid.y-file-upload:focus, .y-editor-wrapper-state-invalid.y-date-picker-size-md:focus, .y-editor-wrapper-state-invalid.y-date-picker:focus, .y-editor-wrapper-state-invalid.y-input-size-md:focus, .y-editor-wrapper-state-invalid.y-input:focus {
+  border-color: var(--y-danger);
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-danger-rgb), 0.25);
+}
+
+textarea.y-editor-wrapper-state-invalid.y-textarea-size-md, textarea.y-editor-wrapper-state-invalid.y-textarea, textarea.y-editor-wrapper-state-invalid.y-file-upload-size-md, textarea.y-editor-wrapper-state-invalid.y-file-upload, textarea.y-editor-wrapper-state-invalid.y-date-picker-size-md, textarea.y-editor-wrapper-state-invalid.y-date-picker, textarea.y-editor-wrapper-state-invalid.y-input-size-md, textarea.y-editor-wrapper-state-invalid.y-input {
+  padding-right: calc(1.4285714286em + 0.875rem);
+  background-position: top calc(0.3571428572em + 0.21875rem) right calc(0.3571428572em + 0.21875rem);
+}
+
+.y-editor-wrapper-state-invalid.y-select-size-md, .y-editor-wrapper-state-invalid.y-select, .y-editor-wrapper-state-invalid.y-autocomplete-size-md, .y-editor-wrapper-state-invalid.y-autocomplete {
+  border-color: var(--y-danger);
+}
+
+.y-editor-wrapper-state-invalid.y-select-size-md:not([multiple]):not([size]), .y-editor-wrapper-state-invalid.y-select:not([multiple]):not([size]), .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not([multiple]):not([size]), .y-editor-wrapper-state-invalid.y-autocomplete:not([multiple]):not([size]), .y-editor-wrapper-state-invalid.y-select-size-md:not([multiple])[size="1"], .y-editor-wrapper-state-invalid.y-select:not([multiple])[size="1"], .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not([multiple])[size="1"], .y-editor-wrapper-state-invalid.y-autocomplete:not([multiple])[size="1"] {
+  --y-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23d63939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+  padding-right: 4.125rem;
+  background-position: right 0.75rem center, center right 2.25rem;
+  background-size: 16px 12px, calc(0.7142857143em + 0.4375rem) calc(0.7142857143em + 0.4375rem);
+}
+
+.y-editor-wrapper-state-invalid.y-select-size-md:focus, .y-editor-wrapper-state-invalid.y-select:focus, .y-editor-wrapper-state-invalid.y-autocomplete-size-md:focus, .y-editor-wrapper-state-invalid.y-autocomplete:focus {
+  border-color: var(--y-danger);
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-danger-rgb), 0.25);
+}
+
+.y-editor-wrapper-state-invalid.y-switch, .y-editor-wrapper-state-invalid.y-radio, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate, .y-editor-wrapper-state-invalid.y-checkbox {
+  border-color: var(--y-danger);
+}
+
+.y-editor-wrapper-state-invalid.y-switch:checked, .y-editor-wrapper-state-invalid.y-radio:checked, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate:checked, .y-editor-wrapper-state-invalid.y-checkbox:checked {
+  background-color: var(--y-danger-text);
+}
+
+.y-editor-wrapper-state-invalid.y-switch:focus, .y-editor-wrapper-state-invalid.y-radio:focus, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate:focus, .y-editor-wrapper-state-invalid.y-checkbox:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-danger-rgb), 0.25);
+}
+
+.y-editor-wrapper-state-invalid.y-switch ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-radio ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-radio ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-radio ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-checkbox-label {
+  color: var(--y-danger-text);
+}
+
+.y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-textarea-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-textarea:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-file-upload-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-file-upload:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-date-picker-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-date-picker:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-input-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-input:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-textarea-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-textarea-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-file-uploadwrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-file-uploadwrapper > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-date-picker-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-date-picker-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-input-wrapper-size-md > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-select-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-select:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete-size-md:not(:focus), .y-input-wrapper > .y-editor-wrapper-state-invalid.y-autocomplete:not(:focus) {
+  z-index: 4;
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+@media not print {
+  .y-app-theme-dark .y-editor-wrapper-state-invalid.y-textarea-size-md, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-textarea, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-file-upload-size-md, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-file-upload, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-date-picker-size-md, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-date-picker, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-input-size-md, .y-app-theme-dark .y-editor-wrapper-state-invalid.y-input {
+    border-color: var(--y-danger);
+  }
+  .y-app-theme-dark .y-editor-wrapper-state-valid.y-textarea-size-md, .y-app-theme-dark .y-editor-wrapper-state-valid.y-textarea, .y-app-theme-dark .y-editor-wrapper-state-valid.y-file-upload-size-md, .y-app-theme-dark .y-editor-wrapper-state-valid.y-file-upload, .y-app-theme-dark .y-editor-wrapper-state-valid.y-date-picker-size-md, .y-app-theme-dark .y-editor-wrapper-state-valid.y-date-picker, .y-app-theme-dark .y-editor-wrapper-state-valid.y-input-size-md, .y-app-theme-dark .y-editor-wrapper-state-valid.y-input {
+    border-color: var(--y-success);
+  }
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+
+.y-editor-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.y-editor-wrapper:not(.y-editor-wrapper-loaded) {
+  border: 1px solid #ccc;
+}
+.y-editor-wrapper-height-sm {
+  height: 150px !important;
+}
+.y-editor-wrapper-height-md {
+  height: 200px !important;
+}
+.y-editor-wrapper-height-lg {
+  height: 250px !important;
+}
+.y-editor-wrapper-height-xl {
+  height: 300px !important;
+}
+.y-editor-wrapper .ql-toolbar.ql-snow {
+  border: var(--y-border-width) solid var(--y-border-color);
+  border-top-right-radius: var(--y-border-radius);
+  border-top-left-radius: var(--y-border-radius);
+}
+.y-editor-wrapper .ql-container.ql-snow {
+  border: var(--y-border-width) solid var(--y-border-color);
+  border-bottom-right-radius: var(--y-border-radius);
+  border-bottom-left-radius: var(--y-border-radius);
+}
+.y-editor-wrapper .ql-toolbar.ql-snow .ql-fill {
+  fill: var(--y-muted) !important;
+}
+.y-editor-wrapper .ql-toolbar.ql-snow .ql-stroke {
+  stroke: var(--y-muted) !important;
+}
+.y-editor-wrapper .ql-snow .ql-picker {
+  color: var(--y-muted) !important;
+}

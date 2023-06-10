@@ -1,0 +1,679 @@
+@charset "UTF-8";
+/*!
+* Tabler v1.0.0-beta17 (https://tabler.io)
+* @version 1.0.0-beta17
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+*/
+
+.y-avatar-active.y-button {
+  color: var(--tblr-btn-active-color);
+  background-color: var(--tblr-btn-active-bg);
+  border-color: var(--tblr-btn-active-border-color);
+}
+
+.y-avatar-active.y-button:focus-visible {
+  box-shadow: var(--tblr-btn-focus-box-shadow);
+}
+
+.y-avatar-active.y-autocomplete-option, .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-avatar-active.y-dropdown-item {
+  color: var(--tblr-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--tblr-dropdown-link-active-bg);
+}
+
+.y-button-group-vertical > .y-avatar-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button {
+  z-index: 1;
+}
+
+.y-tab-list .y-avatar-active.y-tab-item-link, .y-tab-list .y-avatar-active.y-sidebar-item, .y-tab-list .y-avatar-active.y-navbar-item {
+  color: var(--tblr-nav-tabs-link-active-color);
+  background-color: var(--tblr-nav-tabs-link-active-bg);
+  border-color: var(--tblr-nav-tabs-link-active-border-color);
+}
+
+.y-tab-content > .y-avatar-active {
+  display: block;
+}
+
+.y-sidebar-content .y-avatar-active.y-tab-item-link, .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-sidebar-content .y-avatar-active.y-navbar-item, .y-navbar-content .y-avatar-active.y-tab-item-link, .y-navbar-content .y-avatar-active.y-sidebar-item, .y-navbar-content .y-avatar-active.y-navbar-item {
+  color: var(--tblr-navbar-active-color);
+}
+
+.y-card-header > .y-tab-list .y-avatar-active.y-tab-item-link, .y-tab-list-card .y-avatar-active.y-tab-item-link, .y-card-header > .y-tab-list .y-avatar-active.y-sidebar-item, .y-tab-list-card .y-avatar-active.y-sidebar-item, .y-card-header > .y-tab-list .y-avatar-active.y-navbar-item, .y-tab-list-card .y-avatar-active.y-navbar-item {
+  background-color: var(--tblr-card-bg);
+  border-bottom-color: var(--tblr-card-bg);
+}
+
+.y-avatar-active.y-breadcrumb-item {
+  color: var(--tblr-breadcrumb-item-active-color);
+}
+
+.y-avatar-active > .y-pagination-item-link, .y-avatar-active.y-pagination-item-link {
+  z-index: 3;
+  color: var(--tblr-pagination-active-color);
+  background-color: var(--tblr-pagination-active-bg);
+  border-color: var(--tblr-pagination-active-border-color);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+.y-avatar-shape-rounded {
+  border-radius: var(--tblr-border-radius) !important;
+}
+
+.y-avatar-shape-tile {
+  border-radius: 0 !important;
+}
+
+.y-avatar-shape-pill {
+  border-radius: var(--tblr-border-radius-lg) !important;
+}
+
+.y-avatar-shape-circle {
+  border-radius: 50% !important;
+}
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+.y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-navbar-item, .y-app-header .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-app-header .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-app-header .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-app-header .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-app-header .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-app-header .y-navbar-content .y-avatar-active > .y-navbar-item, .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-app-header .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar-content .y-avatar-active.y-navbar-item, .y-app-header .y-navbar-content .y-avatar-active.y-tab-item-link, .y-app-header .y-navbar-content .y-avatar-active.y-sidebar-item, .y-app-header .y-navbar-content .y-avatar-active.y-navbar-item {
+  color: var(--tblr-body-color) color;
+}
+
+@media not print {
+  .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-avatar-active.y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-avatar-active.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-avatar-active.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-avatar-active.y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-avatar-active.y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-avatar-active.y-navbar-item {
+    color: #fff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .y-app-header .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-app-header .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-app-header .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-app-header .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-app-header .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-app-header .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-app-header .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-app-header .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-app-header .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item {
+    background: var(--tblr-navbar-active-bg);
+  }
+  .y-app-header .y-sidebar .y-avatar-active.y-tab-item:after, .y-app-header .y-sidebar .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar .y-avatar-active.y-navbar-item-wrapper:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header .y-app-header-theme-light .y-avatar-active.y-tab-item, .y-app-header .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header.y-app-header-theme-light .y-avatar-active.y-tab-item, .y-app-header.y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-app-header.y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper {
+    position: relative;
+  }
+  .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header .y-app-header-theme-light .y-avatar-active.y-tab-item:after, .y-app-header .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header.y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header.y-app-header-theme-light .y-avatar-active.y-tab-item:after, .y-app-header.y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header.y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.25rem;
+    border: 0 var(--tblr-border-style) var(--tblr-navbar-active-border-color);
+    border-bottom-width: 2px;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item {
+  background: var(--tblr-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-sidebar .y-avatar-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar .y-avatar-active.y-navbar-item-wrapper:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-tab-item, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-tab-item, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-tab-item, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-tab-item, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-navbar-item-wrapper, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-tab-item, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-navbar-item-wrapper {
+  position: relative;
+}
+
+.y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-tab-item:after, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-app-header-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-tab-item:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-tab-item:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-tab-item:after, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-sidebar-wrapper .y-avatar-active.y-navbar-item-wrapper:after, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-tab-item:after, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-navbar-wrapper .y-avatar-active.y-navbar-item-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  border: 0 var(--tblr-border-style) var(--tblr-navbar-active-border-color);
+  border-bottom-width: 2px;
+}
+
+.y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active > .y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active > .y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active > .y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active > .y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-avatar-active > .y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-avatar-active > .y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-avatar-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-avatar-active.y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-avatar-active.y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active.y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active.y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-avatar-active.y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-avatar-active.y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-avatar-active.y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-avatar-active.y-navbar-item {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item {
+    background: var(--tblr-navbar-active-bg);
+  }
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-avatar-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-avatar-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-avatar-active.y-navbar-item-wrapper:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-avatar-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-avatar-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-avatar-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-avatar-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-avatar-active.y-dropdown-item {
+  background: var(--tblr-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-avatar-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-avatar-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-avatar-active.y-navbar-item-wrapper:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-avatar {
+  --tblr-avatar-size:2.5rem;
+  --tblr-avatar-bg:var(--tblr-bg-surface-secondary);
+  --tblr-avatar-shadow:inset rgba(var(--tblr-body-color-rgb), 0.04) 0 0 0 1px;
+  position: relative;
+  width: var(--tblr-avatar-size);
+  height: var(--tblr-avatar-size);
+  font-size: calc(var(--tblr-avatar-size) / 2.8571428572);
+  font-weight: var(--tblr-font-weight-medium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tblr-muted);
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: var(--tblr-avatar-bg) no-repeat center/cover;
+  border-radius: var(--tblr-border-radius);
+  box-shadow: var(--tblr-avatar-shadow);
+}
+
+.y-avatar svg {
+  width: calc(var(--tblr-avatar-size) / 1.6666666667);
+  height: calc(var(--tblr-avatar-size) / 1.6666666667);
+}
+
+.y-avatar .y-badge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 100rem;
+  box-shadow: 0 0 0 2px var(--tblr-bg-surface);
+}
+
+a.y-avatar {
+  cursor: pointer;
+}
+
+.y-avatar-size-xs {
+  --tblr-avatar-size:1.5rem;
+}
+
+.y-avatar-size-xs .y-badge:empty {
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.y-avatar-size-sm {
+  --tblr-avatar-size:2rem;
+}
+
+.y-avatar-size-sm .y-badge:empty {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.y-avatar-size-md {
+  --tblr-avatar-size:4rem;
+}
+
+.y-avatar-size-md .y-badge:empty {
+  width: 1rem;
+  height: 1rem;
+}
+
+.y-avatar-size-lg {
+  --tblr-avatar-size:5.5rem;
+}
+
+.y-avatar-size-lg .y-badge:empty {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.y-avatar-size-xl {
+  --tblr-avatar-size:7rem;
+}
+
+.y-avatar-size-xl .y-badge:empty {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.y-avatar-list, .y-avatar-group {
+  --tblr-list-gap:0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tblr-list-gap);
+}
+
+.y-avatar-list a.y-avatar:hover, .y-avatar-group a.y-avatar:hover {
+  z-index: 1;
+}
+
+.y-avatar-list-stacked, .y-avatar-group-stacked {
+  display: block;
+  --tblr-list-gap:0;
+}
+
+.y-avatar-list-stacked .y-avatar, .y-avatar-group-stacked .y-avatar {
+  margin-right: calc(-0.5 * var(--tblr-avatar-size)) !important;
+  box-shadow: var(--tblr-avatar-shadow), 0 0 0 2px var(--tblr-card-bg, var(--tblr-bg-surface));
+}
+
+.y-badge .y-avatar {
+  box-sizing: content-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0.5rem 0 -0.5rem;
+}
+
+.y-avatar-active.y-breadcrumb-item {
+  font-weight: var(--tblr-breadcrumb-item-active-font-weight);
+}
+
+.y-avatar-active.y-breadcrumb-item a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.y-button .y-avatar {
+  width: var(--tblr-btn-icon-size);
+  height: var(--tblr-btn-icon-size);
+  margin: 0 calc(var(--tblr-btn-padding-x) / 2) 0 calc(var(--tblr-btn-padding-x) / -4);
+}
+
+.y-button-group-vertical > .y-avatar-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button {
+  z-index: 5;
+}
+
+@keyframes animated-dots {
+}
+
+.y-pagination-item:not(.y-tab-item-link-active):not(.y-tab-pane):not(.y-step-item-active):not(.y-sidebar-item-active):not(.y-pagination-item-active):not(.y-navbar-item-active):not(.y-dropdown-item-active):not(.y-button-active):not(.y-breadcrumb-item-active):not(.y-avatar-active) .y-pagination-item-link:hover {
+  background: 0 0;
+}
+
+@keyframes progress-indeterminate {
+}
+
+.y-avatar-color-blue.y-ribbon {
+  border-color: rgba(var(--tblr-blue-rgb), 0.1) !important;
+}
+
+.y-avatar-color-azure.y-ribbon {
+  border-color: rgba(var(--tblr-azure-rgb), 0.1) !important;
+}
+
+.y-avatar-color-indigo.y-ribbon {
+  border-color: rgba(var(--tblr-indigo-rgb), 0.1) !important;
+}
+
+.y-avatar-color-purple.y-ribbon {
+  border-color: rgba(var(--tblr-purple-rgb), 0.1) !important;
+}
+
+.y-avatar-color-pink.y-ribbon {
+  border-color: rgba(var(--tblr-pink-rgb), 0.1) !important;
+}
+
+.y-avatar-color-red.y-ribbon {
+  border-color: rgba(var(--tblr-red-rgb), 0.1) !important;
+}
+
+.y-avatar-color-orange.y-ribbon {
+  border-color: rgba(var(--tblr-orange-rgb), 0.1) !important;
+}
+
+.y-avatar-color-yellow.y-ribbon {
+  border-color: rgba(var(--tblr-yellow-rgb), 0.1) !important;
+}
+
+.y-avatar-color-lime.y-ribbon {
+  border-color: rgba(var(--tblr-lime-rgb), 0.1) !important;
+}
+
+.y-avatar-color-green.y-ribbon {
+  border-color: rgba(var(--tblr-green-rgb), 0.1) !important;
+}
+
+.y-avatar-color-teal.y-ribbon {
+  border-color: rgba(var(--tblr-teal-rgb), 0.1) !important;
+}
+
+.y-avatar-color-cyan.y-ribbon {
+  border-color: rgba(var(--tblr-cyan-rgb), 0.1) !important;
+}
+
+.y-avatar-active.y-step-item {
+  font-weight: var(--tblr-font-weight-bold);
+}
+
+.y-avatar-active.y-step-item:after {
+  background: var(--tblr-steps-inactive-color);
+}
+
+.y-avatar-active.y-step-item ~ .y-step-item {
+  color: var(--tblr-disabled-color);
+}
+
+.y-avatar-active.y-step-item ~ .y-step-item:after, .y-avatar-active.y-step-item ~ .y-step-item:before {
+  background: var(--tblr-steps-inactive-color);
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+.y-avatar-color-primary {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-primary-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-primary-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-secondary {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-secondary-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-secondary-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-success {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-success-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-success-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-info {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-info-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-info-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-warning {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-warning-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-warning-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-danger {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-danger-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-danger-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-light {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-light-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-light-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-dark {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-dark-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-dark-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-muted {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-muted-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-muted-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-blue {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-blue-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-blue-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-azure {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-azure-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-azure-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-indigo {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-indigo-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-indigo-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-purple {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-purple-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-purple-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-pink {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-pink-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-pink-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-red {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-red-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-red-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-orange {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-orange-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-orange-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-yellow {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-yellow-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-yellow-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-lime {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-lime-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-lime-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-green {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-green-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-green-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-teal {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-teal-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-teal-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-cyan {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-cyan-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-cyan-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-facebook {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-facebook-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-facebook-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-twitter {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-twitter-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-twitter-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-linkedin {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-linkedin-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-linkedin-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-google {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-google-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-google-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-youtube {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-youtube-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-youtube-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-vimeo {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-vimeo-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-vimeo-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-dribbble {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-dribbble-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-dribbble-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-github {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-github-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-github-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-instagram {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-instagram-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-instagram-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-pinterest {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-pinterest-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-pinterest-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-vk {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-vk-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-vk-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-rss {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-rss-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-rss-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-flickr {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-flickr-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-flickr-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-bitbucket {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-bitbucket-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-bitbucket-rgb), var(--tblr-bg-opacity)) !important;
+}
+
+.y-avatar-color-tabler {
+  --tblr-bg-opacity:.1;
+  --tblr-text-opacity:1;
+  color: rgba(var(--tblr-tabler-rgb), var(--tblr-text-opacity)) !important;
+  background-color: rgba(var(--tblr-tabler-rgb), var(--tblr-bg-opacity)) !important;
+}
+.y-avatar > .y-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.y-avatar-tile {
+  border-radius: 0;
+}
+.y-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+.y-button > .y-avatar {
+  margin: 0 !important;
+}

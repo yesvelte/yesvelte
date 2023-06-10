@@ -1,3 +1,5 @@
+@import '../base';
+
 $popup-arrow-placements: ('bottom', 'top', 'left', 'right');
 
 .#{$prefix-popup} {

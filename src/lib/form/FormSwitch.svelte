@@ -1,3 +1,5 @@
+	<!-- @css:form-textarea -->
+
 <script lang="ts">
 	import FormField from './FormField.svelte'
 	import { Switch, type SwitchProps } from '../switch'
@@ -6,6 +8,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = FormSwitchProps
+
 
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined

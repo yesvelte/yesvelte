@@ -1,3 +1,4 @@
+<!-- @css:form-checkbox -->
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { Checkbox } from '../checkbox'

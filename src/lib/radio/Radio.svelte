@@ -1,7 +1,10 @@
+	<!-- @css:radio -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { RadioProps } from './Radio.types'
+
 
 	type $$Props = RadioProps
 

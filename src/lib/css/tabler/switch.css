@@ -1,0 +1,977 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-switch-wrapper {
+  display: block;
+  min-height: 1.25rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-radio-wrapper .y-switch, .y-switch-wrapper .y-checkbox-indeterminate, .y-checkbox-wrapper .y-switch, .y-switch-wrapper .y-checkbox {
+  float: left;
+  margin-left: -1.5rem;
+}
+
+.y-switch-wrapper-reverse {
+  padding-right: 1.5rem;
+  padding-left: 0;
+  text-align: right;
+}
+
+.y-switch-wrapper-reverse .y-switch, .y-switch-wrapper-reverse .y-radio, .y-radio-wrapper-reverse .y-switch, .y-switch-wrapper-reverse .y-checkbox-indeterminate, .y-checkbox-wrapper-reverse .y-switch, .y-switch-wrapper-reverse .y-checkbox {
+  float: right;
+  margin-right: -1.5rem;
+  margin-left: 0;
+}
+
+.y-switch {
+  --y-form-check-bg: var(--y-bg-forms);
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2142857143rem;
+  vertical-align: top;
+  background-color: var(--y-form-check-bg);
+  background-image: var(--y-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--y-border-width) var(--y-border-style) var(--y-border-color-translucent);
+  appearance: none;
+  print-color-adjust: exact;
+}
+
+[type=checkbox].y-switch {
+  border-radius: var(--y-border-radius);
+}
+
+[type=radio].y-switch {
+  border-radius: 50%;
+}
+
+.y-switch:active {
+  filter: brightness(90%);
+}
+
+.y-switch:focus {
+  border-color: #90b5e2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+}
+
+.y-switch:checked {
+  background-color: var(--y-primary);
+  border-color: var(--y-border-color-translucent);
+}
+
+.y-switch:checked[type=checkbox] {
+  --y-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8.5l2.5 2.5l5.5 -5.5'/%3e%3c/svg%3e");
+}
+
+.y-switch:checked[type=radio] {
+  --y-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle r='3' fill='%23ffffff' cx='8' cy='8' /%3e%3c/svg%3e");
+}
+
+[type=checkbox].y-switch:indeterminate {
+  background-color: #206bc4;
+  border-color: #206bc4;
+  --y-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+
+.y-switch:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+
+[disabled].y-switch ~ .y-switch-label, [disabled].y-switch ~ .y-radio-label, [disabled].y-radio ~ .y-switch-label, [disabled].y-checkbox-indeterminate ~ .y-switch-label, [disabled].y-switch ~ .y-checkbox-label, [disabled].y-checkbox ~ .y-switch-label, .y-switch:disabled ~ .y-switch-label, .y-switch:disabled ~ .y-radio-label, .y-radio:disabled ~ .y-switch-label, .y-checkbox-indeterminate:disabled ~ .y-switch-label, .y-switch:disabled ~ .y-checkbox-label, .y-checkbox:disabled ~ .y-switch-label {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.y-switch-wrapper {
+  padding-left: 2.5rem;
+}
+
+.y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  --y-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23e6e7e9'/%3e%3c/svg%3e");
+  width: 2rem;
+  margin-left: -2.5rem;
+  background-image: var(--y-form-switch-bg);
+  background-position: left center;
+  border-radius: 2rem;
+  transition: background-position 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+    transition: none;
+  }
+}
+.y-switch-wrapper .y-switch:focus, .y-switch-wrapper .y-radio:focus, .y-switch-wrapper .y-checkbox-indeterminate:focus, .y-switch-wrapper .y-checkbox:focus {
+  --y-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2390b5e2'/%3e%3c/svg%3e");
+}
+
+.y-switch-wrapper .y-switch:checked, .y-switch-wrapper .y-radio:checked, .y-switch-wrapper .y-checkbox-indeterminate:checked, .y-switch-wrapper .y-checkbox:checked {
+  background-position: right center;
+  --y-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+}
+
+.y-switch-wrapper.y-switch-wrapper-reverse, .y-radio-wrapper-reverse.y-switch-wrapper, .y-checkbox-wrapper-reverse.y-switch-wrapper {
+  padding-right: 2.5rem;
+  padding-left: 0;
+}
+
+.y-switch-wrapper.y-switch-wrapper-reverse .y-switch, .y-switch-wrapper.y-switch-wrapper-reverse .y-radio, .y-radio-wrapper-reverse.y-switch-wrapper .y-switch, .y-radio-wrapper-reverse.y-switch-wrapper .y-radio, .y-switch-wrapper.y-switch-wrapper-reverse .y-checkbox-indeterminate, .y-radio-wrapper-reverse.y-switch-wrapper .y-checkbox-indeterminate, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-switch, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-radio, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper.y-switch-wrapper-reverse .y-checkbox, .y-radio-wrapper-reverse.y-switch-wrapper .y-checkbox, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-checkbox {
+  margin-right: -2.5rem;
+  margin-left: 0;
+}
+
+.y-switch-wrapper-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+[data-bs-theme=dark] .y-switch-wrapper .y-switch:not(:checked):not(:focus), [data-bs-theme=dark] .y-switch-wrapper .y-radio:not(:checked):not(:focus), [data-bs-theme=dark] .y-switch-wrapper .y-checkbox-indeterminate:not(:checked):not(:focus), [data-bs-theme=dark] .y-switch-wrapper .y-checkbox:not(:checked):not(:focus) {
+  --y-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+}
+
+.y-switch.y-textarea-state-valid, .y-select-state-valid.y-switch, .y-file-upload-state-valid.y-switch, .y-date-picker-state-valid.y-switch, .y-autocomplete-state-valid.y-switch, .y-input-state-valid.y-switch, .y-editor-wrapper-state-valid.y-switch {
+  border-color: var(--y-success);
+}
+
+.y-switch.y-textarea-state-valid:checked, .y-select-state-valid.y-switch:checked, .y-file-upload-state-valid.y-switch:checked, .y-date-picker-state-valid.y-switch:checked, .y-autocomplete-state-valid.y-switch:checked, .y-input-state-valid.y-switch:checked, .y-editor-wrapper-state-valid.y-switch:checked {
+  background-color: var(--y-success-text);
+}
+
+.y-switch.y-textarea-state-valid:focus, .y-select-state-valid.y-switch:focus, .y-file-upload-state-valid.y-switch:focus, .y-date-picker-state-valid.y-switch:focus, .y-autocomplete-state-valid.y-switch:focus, .y-input-state-valid.y-switch:focus, .y-editor-wrapper-state-valid.y-switch:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-success-rgb), 0.25);
+}
+
+.y-switch.y-textarea-state-valid ~ .y-switch-label, .y-select-state-valid.y-switch ~ .y-switch-label, .y-switch.y-textarea-state-valid ~ .y-radio-label, .y-select-state-valid.y-switch ~ .y-radio-label, .y-radio.y-textarea-state-valid ~ .y-switch-label, .y-radio.y-select-state-valid ~ .y-switch-label, .y-file-upload-state-valid.y-switch ~ .y-switch-label, .y-file-upload-state-valid.y-switch ~ .y-radio-label, .y-file-upload-state-valid.y-radio ~ .y-switch-label, .y-date-picker-state-valid.y-switch ~ .y-switch-label, .y-date-picker-state-valid.y-switch ~ .y-radio-label, .y-date-picker-state-valid.y-radio ~ .y-switch-label, .y-checkbox-indeterminate.y-textarea-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-select-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-file-upload-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-date-picker-state-valid ~ .y-switch-label, .y-switch.y-textarea-state-valid ~ .y-checkbox-label, .y-select-state-valid.y-switch ~ .y-checkbox-label, .y-file-upload-state-valid.y-switch ~ .y-checkbox-label, .y-date-picker-state-valid.y-switch ~ .y-checkbox-label, .y-checkbox.y-textarea-state-valid ~ .y-switch-label, .y-checkbox.y-select-state-valid ~ .y-switch-label, .y-checkbox.y-file-upload-state-valid ~ .y-switch-label, .y-checkbox.y-date-picker-state-valid ~ .y-switch-label, .y-autocomplete-state-valid.y-switch ~ .y-switch-label, .y-autocomplete-state-valid.y-switch ~ .y-radio-label, .y-autocomplete-state-valid.y-radio ~ .y-switch-label, .y-autocomplete-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-autocomplete-state-valid.y-switch ~ .y-checkbox-label, .y-autocomplete-state-valid.y-checkbox ~ .y-switch-label, .y-input-state-valid.y-switch ~ .y-switch-label, .y-input-state-valid.y-switch ~ .y-radio-label, .y-input-state-valid.y-radio ~ .y-switch-label, .y-input-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-input-state-valid.y-switch ~ .y-checkbox-label, .y-input-state-valid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-valid.y-switch ~ .y-switch-label, .y-editor-wrapper-state-valid.y-switch ~ .y-radio-label, .y-editor-wrapper-state-valid.y-radio ~ .y-switch-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-valid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-switch-label {
+  color: var(--y-success-text);
+}
+
+.y-switch.y-textarea-state-invalid, .y-select-state-invalid.y-switch, .y-file-upload-state-invalid.y-switch, .y-date-picker-state-invalid.y-switch, .y-autocomplete-state-invalid.y-switch, .y-input-state-invalid.y-switch, .y-editor-wrapper-state-invalid.y-switch {
+  border-color: var(--y-danger);
+}
+
+.y-switch.y-textarea-state-invalid:checked, .y-select-state-invalid.y-switch:checked, .y-file-upload-state-invalid.y-switch:checked, .y-date-picker-state-invalid.y-switch:checked, .y-autocomplete-state-invalid.y-switch:checked, .y-input-state-invalid.y-switch:checked, .y-editor-wrapper-state-invalid.y-switch:checked {
+  background-color: var(--y-danger-text);
+}
+
+.y-switch.y-textarea-state-invalid:focus, .y-select-state-invalid.y-switch:focus, .y-file-upload-state-invalid.y-switch:focus, .y-date-picker-state-invalid.y-switch:focus, .y-autocomplete-state-invalid.y-switch:focus, .y-input-state-invalid.y-switch:focus, .y-editor-wrapper-state-invalid.y-switch:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--y-danger-rgb), 0.25);
+}
+
+.y-switch.y-textarea-state-invalid ~ .y-switch-label, .y-select-state-invalid.y-switch ~ .y-switch-label, .y-switch.y-textarea-state-invalid ~ .y-radio-label, .y-select-state-invalid.y-switch ~ .y-radio-label, .y-radio.y-textarea-state-invalid ~ .y-switch-label, .y-radio.y-select-state-invalid ~ .y-switch-label, .y-file-upload-state-invalid.y-switch ~ .y-switch-label, .y-file-upload-state-invalid.y-switch ~ .y-radio-label, .y-file-upload-state-invalid.y-radio ~ .y-switch-label, .y-date-picker-state-invalid.y-switch ~ .y-switch-label, .y-date-picker-state-invalid.y-switch ~ .y-radio-label, .y-date-picker-state-invalid.y-radio ~ .y-switch-label, .y-checkbox-indeterminate.y-textarea-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-select-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-file-upload-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-date-picker-state-invalid ~ .y-switch-label, .y-switch.y-textarea-state-invalid ~ .y-checkbox-label, .y-select-state-invalid.y-switch ~ .y-checkbox-label, .y-file-upload-state-invalid.y-switch ~ .y-checkbox-label, .y-date-picker-state-invalid.y-switch ~ .y-checkbox-label, .y-checkbox.y-textarea-state-invalid ~ .y-switch-label, .y-checkbox.y-select-state-invalid ~ .y-switch-label, .y-checkbox.y-file-upload-state-invalid ~ .y-switch-label, .y-checkbox.y-date-picker-state-invalid ~ .y-switch-label, .y-autocomplete-state-invalid.y-switch ~ .y-switch-label, .y-autocomplete-state-invalid.y-switch ~ .y-radio-label, .y-autocomplete-state-invalid.y-radio ~ .y-switch-label, .y-autocomplete-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-autocomplete-state-invalid.y-switch ~ .y-checkbox-label, .y-autocomplete-state-invalid.y-checkbox ~ .y-switch-label, .y-input-state-invalid.y-switch ~ .y-switch-label, .y-input-state-invalid.y-switch ~ .y-radio-label, .y-input-state-invalid.y-radio ~ .y-switch-label, .y-input-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-input-state-invalid.y-switch ~ .y-checkbox-label, .y-input-state-invalid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-radio ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-switch-label {
+  color: var(--y-danger-text);
+}
+
+.y-switch-color-primary {
+  --y-alert-color: var(--y-primary-text);
+  --y-alert-bg: var(--y-primary-bg-subtle);
+  --y-alert-border-color: var(--y-primary-border-subtle);
+  --y-alert-link-color: var(--y-primary-text);
+}
+
+.y-switch-color-secondary {
+  --y-alert-color: var(--y-secondary-text);
+  --y-alert-bg: var(--y-secondary-bg-subtle);
+  --y-alert-border-color: var(--y-secondary-border-subtle);
+  --y-alert-link-color: var(--y-secondary-text);
+}
+
+.y-switch-color-success {
+  --y-alert-color: var(--y-success-text);
+  --y-alert-bg: var(--y-success-bg-subtle);
+  --y-alert-border-color: var(--y-success-border-subtle);
+  --y-alert-link-color: var(--y-success-text);
+}
+
+.y-switch-color-info {
+  --y-alert-color: var(--y-info-text);
+  --y-alert-bg: var(--y-info-bg-subtle);
+  --y-alert-border-color: var(--y-info-border-subtle);
+  --y-alert-link-color: var(--y-info-text);
+}
+
+.y-switch-color-warning {
+  --y-alert-color: var(--y-warning-text);
+  --y-alert-bg: var(--y-warning-bg-subtle);
+  --y-alert-border-color: var(--y-warning-border-subtle);
+  --y-alert-link-color: var(--y-warning-text);
+}
+
+.y-switch-color-danger {
+  --y-alert-color: var(--y-danger-text);
+  --y-alert-bg: var(--y-danger-bg-subtle);
+  --y-alert-border-color: var(--y-danger-border-subtle);
+  --y-alert-link-color: var(--y-danger-text);
+}
+
+.y-switch-color-light {
+  --y-alert-color: var(--y-light-text);
+  --y-alert-bg: var(--y-light-bg-subtle);
+  --y-alert-border-color: var(--y-light-border-subtle);
+  --y-alert-link-color: var(--y-light-text);
+}
+
+.y-switch-color-dark {
+  --y-alert-color: var(--y-dark-text);
+  --y-alert-bg: var(--y-dark-bg-subtle);
+  --y-alert-border-color: var(--y-dark-border-subtle);
+  --y-alert-link-color: var(--y-dark-text);
+}
+
+.y-switch-color-muted {
+  --y-alert-color: var(--y-muted-text);
+  --y-alert-bg: var(--y-muted-bg-subtle);
+  --y-alert-border-color: var(--y-muted-border-subtle);
+  --y-alert-link-color: var(--y-muted-text);
+}
+
+.y-switch-color-blue {
+  --y-alert-color: var(--y-blue-text);
+  --y-alert-bg: var(--y-blue-bg-subtle);
+  --y-alert-border-color: var(--y-blue-border-subtle);
+  --y-alert-link-color: var(--y-blue-text);
+}
+
+.y-switch-color-azure {
+  --y-alert-color: var(--y-azure-text);
+  --y-alert-bg: var(--y-azure-bg-subtle);
+  --y-alert-border-color: var(--y-azure-border-subtle);
+  --y-alert-link-color: var(--y-azure-text);
+}
+
+.y-switch-color-indigo {
+  --y-alert-color: var(--y-indigo-text);
+  --y-alert-bg: var(--y-indigo-bg-subtle);
+  --y-alert-border-color: var(--y-indigo-border-subtle);
+  --y-alert-link-color: var(--y-indigo-text);
+}
+
+.y-switch-color-purple {
+  --y-alert-color: var(--y-purple-text);
+  --y-alert-bg: var(--y-purple-bg-subtle);
+  --y-alert-border-color: var(--y-purple-border-subtle);
+  --y-alert-link-color: var(--y-purple-text);
+}
+
+.y-switch-color-pink {
+  --y-alert-color: var(--y-pink-text);
+  --y-alert-bg: var(--y-pink-bg-subtle);
+  --y-alert-border-color: var(--y-pink-border-subtle);
+  --y-alert-link-color: var(--y-pink-text);
+}
+
+.y-switch-color-red {
+  --y-alert-color: var(--y-red-text);
+  --y-alert-bg: var(--y-red-bg-subtle);
+  --y-alert-border-color: var(--y-red-border-subtle);
+  --y-alert-link-color: var(--y-red-text);
+}
+
+.y-switch-color-orange {
+  --y-alert-color: var(--y-orange-text);
+  --y-alert-bg: var(--y-orange-bg-subtle);
+  --y-alert-border-color: var(--y-orange-border-subtle);
+  --y-alert-link-color: var(--y-orange-text);
+}
+
+.y-switch-color-yellow {
+  --y-alert-color: var(--y-yellow-text);
+  --y-alert-bg: var(--y-yellow-bg-subtle);
+  --y-alert-border-color: var(--y-yellow-border-subtle);
+  --y-alert-link-color: var(--y-yellow-text);
+}
+
+.y-switch-color-lime {
+  --y-alert-color: var(--y-lime-text);
+  --y-alert-bg: var(--y-lime-bg-subtle);
+  --y-alert-border-color: var(--y-lime-border-subtle);
+  --y-alert-link-color: var(--y-lime-text);
+}
+
+.y-switch-color-green {
+  --y-alert-color: var(--y-green-text);
+  --y-alert-bg: var(--y-green-bg-subtle);
+  --y-alert-border-color: var(--y-green-border-subtle);
+  --y-alert-link-color: var(--y-green-text);
+}
+
+.y-switch-color-teal {
+  --y-alert-color: var(--y-teal-text);
+  --y-alert-bg: var(--y-teal-bg-subtle);
+  --y-alert-border-color: var(--y-teal-border-subtle);
+  --y-alert-link-color: var(--y-teal-text);
+}
+
+.y-switch-color-cyan {
+  --y-alert-color: var(--y-cyan-text);
+  --y-alert-bg: var(--y-cyan-bg-subtle);
+  --y-alert-border-color: var(--y-cyan-border-subtle);
+  --y-alert-link-color: var(--y-cyan-text);
+}
+
+.y-switch-color-facebook {
+  --y-alert-color: var(--y-facebook-text);
+  --y-alert-bg: var(--y-facebook-bg-subtle);
+  --y-alert-border-color: var(--y-facebook-border-subtle);
+  --y-alert-link-color: var(--y-facebook-text);
+}
+
+.y-switch-color-twitter {
+  --y-alert-color: var(--y-twitter-text);
+  --y-alert-bg: var(--y-twitter-bg-subtle);
+  --y-alert-border-color: var(--y-twitter-border-subtle);
+  --y-alert-link-color: var(--y-twitter-text);
+}
+
+.y-switch-color-linkedin {
+  --y-alert-color: var(--y-linkedin-text);
+  --y-alert-bg: var(--y-linkedin-bg-subtle);
+  --y-alert-border-color: var(--y-linkedin-border-subtle);
+  --y-alert-link-color: var(--y-linkedin-text);
+}
+
+.y-switch-color-google {
+  --y-alert-color: var(--y-google-text);
+  --y-alert-bg: var(--y-google-bg-subtle);
+  --y-alert-border-color: var(--y-google-border-subtle);
+  --y-alert-link-color: var(--y-google-text);
+}
+
+.y-switch-color-youtube {
+  --y-alert-color: var(--y-youtube-text);
+  --y-alert-bg: var(--y-youtube-bg-subtle);
+  --y-alert-border-color: var(--y-youtube-border-subtle);
+  --y-alert-link-color: var(--y-youtube-text);
+}
+
+.y-switch-color-vimeo {
+  --y-alert-color: var(--y-vimeo-text);
+  --y-alert-bg: var(--y-vimeo-bg-subtle);
+  --y-alert-border-color: var(--y-vimeo-border-subtle);
+  --y-alert-link-color: var(--y-vimeo-text);
+}
+
+.y-switch-color-dribbble {
+  --y-alert-color: var(--y-dribbble-text);
+  --y-alert-bg: var(--y-dribbble-bg-subtle);
+  --y-alert-border-color: var(--y-dribbble-border-subtle);
+  --y-alert-link-color: var(--y-dribbble-text);
+}
+
+.y-switch-color-github {
+  --y-alert-color: var(--y-github-text);
+  --y-alert-bg: var(--y-github-bg-subtle);
+  --y-alert-border-color: var(--y-github-border-subtle);
+  --y-alert-link-color: var(--y-github-text);
+}
+
+.y-switch-color-instagram {
+  --y-alert-color: var(--y-instagram-text);
+  --y-alert-bg: var(--y-instagram-bg-subtle);
+  --y-alert-border-color: var(--y-instagram-border-subtle);
+  --y-alert-link-color: var(--y-instagram-text);
+}
+
+.y-switch-color-pinterest {
+  --y-alert-color: var(--y-pinterest-text);
+  --y-alert-bg: var(--y-pinterest-bg-subtle);
+  --y-alert-border-color: var(--y-pinterest-border-subtle);
+  --y-alert-link-color: var(--y-pinterest-text);
+}
+
+.y-switch-color-vk {
+  --y-alert-color: var(--y-vk-text);
+  --y-alert-bg: var(--y-vk-bg-subtle);
+  --y-alert-border-color: var(--y-vk-border-subtle);
+  --y-alert-link-color: var(--y-vk-text);
+}
+
+.y-switch-color-rss {
+  --y-alert-color: var(--y-rss-text);
+  --y-alert-bg: var(--y-rss-bg-subtle);
+  --y-alert-border-color: var(--y-rss-border-subtle);
+  --y-alert-link-color: var(--y-rss-text);
+}
+
+.y-switch-color-flickr {
+  --y-alert-color: var(--y-flickr-text);
+  --y-alert-bg: var(--y-flickr-bg-subtle);
+  --y-alert-border-color: var(--y-flickr-border-subtle);
+  --y-alert-link-color: var(--y-flickr-text);
+}
+
+.y-switch-color-bitbucket {
+  --y-alert-color: var(--y-bitbucket-text);
+  --y-alert-bg: var(--y-bitbucket-bg-subtle);
+  --y-alert-border-color: var(--y-bitbucket-border-subtle);
+  --y-alert-link-color: var(--y-bitbucket-text);
+}
+
+.y-switch-color-tabler {
+  --y-alert-color: var(--y-tabler-text);
+  --y-alert-bg: var(--y-tabler-bg-subtle);
+  --y-alert-border-color: var(--y-tabler-border-subtle);
+  --y-alert-link-color: var(--y-tabler-text);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+@media not print {
+  .y-app-theme-dark .y-switch:not(:checked) {
+    background-color: #1a2234;
+    color: #f8fafc;
+    border-color: #243049;
+  }
+}
+
+.y-switch-color-primary {
+  --y-alert-color: var(--y-primary);
+}
+
+.y-switch-color-secondary {
+  --y-alert-color: var(--y-secondary);
+}
+
+.y-switch-color-success {
+  --y-alert-color: var(--y-success);
+}
+
+.y-switch-color-info {
+  --y-alert-color: var(--y-info);
+}
+
+.y-switch-color-warning {
+  --y-alert-color: var(--y-warning);
+}
+
+.y-switch-color-danger {
+  --y-alert-color: var(--y-danger);
+}
+
+.y-switch-color-light {
+  --y-alert-color: var(--y-light);
+}
+
+.y-switch-color-dark {
+  --y-alert-color: var(--y-dark);
+}
+
+.y-switch-color-muted {
+  --y-alert-color: var(--y-muted);
+}
+
+.y-switch-color-blue {
+  --y-alert-color: var(--y-blue);
+}
+
+.y-switch-color-azure {
+  --y-alert-color: var(--y-azure);
+}
+
+.y-switch-color-indigo {
+  --y-alert-color: var(--y-indigo);
+}
+
+.y-switch-color-purple {
+  --y-alert-color: var(--y-purple);
+}
+
+.y-switch-color-pink {
+  --y-alert-color: var(--y-pink);
+}
+
+.y-switch-color-red {
+  --y-alert-color: var(--y-red);
+}
+
+.y-switch-color-orange {
+  --y-alert-color: var(--y-orange);
+}
+
+.y-switch-color-yellow {
+  --y-alert-color: var(--y-yellow);
+}
+
+.y-switch-color-lime {
+  --y-alert-color: var(--y-lime);
+}
+
+.y-switch-color-green {
+  --y-alert-color: var(--y-green);
+}
+
+.y-switch-color-teal {
+  --y-alert-color: var(--y-teal);
+}
+
+.y-switch-color-cyan {
+  --y-alert-color: var(--y-cyan);
+}
+
+.y-switch-color-facebook {
+  --y-alert-color: var(--y-facebook);
+}
+
+.y-switch-color-twitter {
+  --y-alert-color: var(--y-twitter);
+}
+
+.y-switch-color-linkedin {
+  --y-alert-color: var(--y-linkedin);
+}
+
+.y-switch-color-google {
+  --y-alert-color: var(--y-google);
+}
+
+.y-switch-color-youtube {
+  --y-alert-color: var(--y-youtube);
+}
+
+.y-switch-color-vimeo {
+  --y-alert-color: var(--y-vimeo);
+}
+
+.y-switch-color-dribbble {
+  --y-alert-color: var(--y-dribbble);
+}
+
+.y-switch-color-github {
+  --y-alert-color: var(--y-github);
+}
+
+.y-switch-color-instagram {
+  --y-alert-color: var(--y-instagram);
+}
+
+.y-switch-color-pinterest {
+  --y-alert-color: var(--y-pinterest);
+}
+
+.y-switch-color-vk {
+  --y-alert-color: var(--y-vk);
+}
+
+.y-switch-color-rss {
+  --y-alert-color: var(--y-rss);
+}
+
+.y-switch-color-flickr {
+  --y-alert-color: var(--y-flickr);
+}
+
+.y-switch-color-bitbucket {
+  --y-alert-color: var(--y-bitbucket);
+}
+
+.y-switch-color-tabler {
+  --y-alert-color: var(--y-tabler);
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+.y-switch-wrapper {
+  user-select: none;
+}
+
+.y-switch {
+  background-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  transition: background-color 0.3s, background-position 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+    transition: none;
+  }
+}
+.y-switch-label {
+  display: block;
+}
+
+.y-label-required.y-switch-label:after {
+  content: "*";
+  margin-left: 0.25rem;
+  color: #d63939;
+}
+
+.y-switch-description {
+  display: block;
+  color: var(--y-muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/*
+Form switch
+ */
+.y-switch-wrapper .y-switch, .y-switch-wrapper .y-radio, .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  height: 1.125rem;
+  margin-top: 0.0625rem;
+}
+
+/*Correction of Form-check position*/
+.y-switch:checked {
+  border: none;
+}
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+
+.y-switch-color-primary:checked {
+  background-color: #206bc4 !important;
+}
+.y-switch-color-secondary:checked {
+  background-color: #616876 !important;
+}
+.y-switch-color-success:checked {
+  background-color: #2fb344 !important;
+}
+.y-switch-color-info:checked {
+  background-color: #4299e1 !important;
+}
+.y-switch-color-warning:checked {
+  background-color: #f76707 !important;
+}
+.y-switch-color-danger:checked {
+  background-color: #d63939 !important;
+}
+.y-switch-color-light:checked {
+  background-color: #f8fafc !important;
+}
+.y-switch-color-dark:checked {
+  background-color: #1d273b !important;
+}
+.y-switch-color-muted:checked {
+  background-color: #616876 !important;
+}
+.y-switch-color-blue:checked {
+  background-color: #206bc4 !important;
+}
+.y-switch-color-azure:checked {
+  background-color: #4299e1 !important;
+}
+.y-switch-color-indigo:checked {
+  background-color: #4263eb !important;
+}
+.y-switch-color-purple:checked {
+  background-color: #ae3ec9 !important;
+}
+.y-switch-color-pink:checked {
+  background-color: #d6336c !important;
+}
+.y-switch-color-red:checked {
+  background-color: #d63939 !important;
+}
+.y-switch-color-orange:checked {
+  background-color: #f76707 !important;
+}
+.y-switch-color-yellow:checked {
+  background-color: #f59f00 !important;
+}
+.y-switch-color-lime:checked {
+  background-color: #74b816 !important;
+}
+.y-switch-color-green:checked {
+  background-color: #2fb344 !important;
+}
+.y-switch-color-teal:checked {
+  background-color: #0ca678 !important;
+}
+.y-switch-color-cyan:checked {
+  background-color: #17a2b8 !important;
+}
+.y-switch-color-facebook:checked {
+  background-color: #1877F2 !important;
+}
+.y-switch-color-twitter:checked {
+  background-color: #1da1f2 !important;
+}
+.y-switch-color-linkedin:checked {
+  background-color: #0a66c2 !important;
+}
+.y-switch-color-google:checked {
+  background-color: #dc4e41 !important;
+}
+.y-switch-color-youtube:checked {
+  background-color: #ff0000 !important;
+}
+.y-switch-color-vimeo:checked {
+  background-color: #1ab7ea !important;
+}
+.y-switch-color-dribbble:checked {
+  background-color: #ea4c89 !important;
+}
+.y-switch-color-github:checked {
+  background-color: #181717 !important;
+}
+.y-switch-color-instagram:checked {
+  background-color: #e4405f !important;
+}
+.y-switch-color-pinterest:checked {
+  background-color: #bd081c !important;
+}
+.y-switch-color-vk:checked {
+  background-color: #6383a8 !important;
+}
+.y-switch-color-rss:checked {
+  background-color: #ffa500 !important;
+}
+.y-switch-color-flickr:checked {
+  background-color: #0063dc !important;
+}
+.y-switch-color-bitbucket:checked {
+  background-color: #0052cc !important;
+}
+.y-switch-color-tabler:checked {
+  background-color: #206bc4 !important;
+}

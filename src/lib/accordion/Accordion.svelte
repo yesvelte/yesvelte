@@ -1,9 +1,13 @@
+<!-- @css:accordion -->
+
 <script lang="ts">
 	import { getContext, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
 	import AccordionHeader from './AccordionHeader.svelte'
 	import type { AccordionContext, AccordionProps, AccordionsContext } from './Accordion.types'
+
+	import '$lib/css/tabler/accordion.css';
 
 	import { get_current_component } from 'svelte/internal'
 	const components = [

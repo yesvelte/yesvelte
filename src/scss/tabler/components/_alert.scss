@@ -1,11 +1,13 @@
+@import '../base';
+
 $props: (
-	null: '.alert',
-	title: '.alert-title',
-	dismissible: '.alert-dismissible',
-	close: '.btn-close',
-	color: generate_props($theme_colors, ('.alert-')),
-	start: '.alert-icon',
-	important: '.alert-important'
+	null: '%alert',
+	title: '%alert-title',
+	dismissible: '%alert-dismissible',
+	close: '%btn-close',
+	color: generate_props($theme_colors, ('%alert-')),
+	start: '%alert-icon',
+	important: '%alert-important'
 );
 
 .#{$prefix-alert} {
@@ -47,7 +49,7 @@ $props: (
 			color: #fff;
 		}
 		.#{$prefix-alert}-close {
-			@extend .btn-close-white;
+			@extend %btn-close-white;
 		}
 	}
 }

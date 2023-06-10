@@ -1,3 +1,5 @@
+	<!-- @css:table -->
+
 <script lang="ts">
 	import { El, type ElProps } from '../el'
 	import { get_current_component } from 'svelte/internal'

@@ -1,3 +1,5 @@
+	<!-- @css:el -->
+
 <script lang="ts" context="module">
 	let globalCounter = 0
 	const elComponentName = 'el'
@@ -12,6 +14,8 @@
 	import { get_current_component, noop } from 'svelte/internal'
 
 	type $$Props = Partial<ElProps>
+
+
 
 	// default properties
 	export let element: $$Props['element'] = undefined

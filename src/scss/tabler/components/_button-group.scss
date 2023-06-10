@@ -1,15 +1,17 @@
+@import '../base';
+
 $props: (
 	size: (
-		sm: '.btn-group-sm',
-		md: '.btn-group-md',
-		lg: '.btn-group-lg'
+		sm: '%btn-group-sm',
+		md: '%btn-group-md',
+		lg: '%btn-group-lg'
 	),
 	vertical: (
-		null: '.btn-group-vertical',
+		null: '%btn-group-vertical',
 		size: (
-			sm: '.btn-group-vertical-sm',
-			md: '.btn-group-vertical-md',
-			lg: '.btn-group-vertical-lg'
+			sm: '%btn-group-vertical-sm',
+			md: '%btn-group-vertical-md',
+			lg: '%btn-group-vertical-lg'
 		)
 	)
 );
@@ -18,6 +20,6 @@ $props: (
 	@include apply-props($props);
 
 	&:not(.#{$prefix-button-group}-vertical) {
-		@extend .btn-group;
+		@extend %btn-group;
 	}
 }

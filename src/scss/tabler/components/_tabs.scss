@@ -1,22 +1,25 @@
+@import '../base';
+
+
 $tabs-props: (
-	null: '.d-flex',
-	vertical: '.flex-row'
+	null: '%d-flex',
+	vertical: '%flex-row'
 );
 
 $tab-props: (
 	list: (
-		null: '.nav' '.nav-tabs',
-		grow: '.nav-fill',
-		card: '.card-header-tabs'
+		null: '%nav' '%nav-tabs',
+		grow: '%nav-fill',
+		card: '%card-header-tabs'
 	),
-	content: '.tab-content',
-	pane: '.tab-pane' '.show' '.active',
+	content: '%tab-content',
+	pane: '%tab-pane' '%show' '%active',
 	item: (
-		null: '.nav-item',
+		null: '%nav-item',
 		link: (
-			null: '.nav-link',
-			active: '.active',
-			disabled: '.disabled'
+			null: '%nav-link',
+			active: '%active',
+			disabled: '%disabled'
 		)
 	)
 );
@@ -52,10 +55,10 @@ $tab-props: (
 	@include apply-props($tab-props);
 
 	&-item-link:not(.#{$prefix-tab}-item-link-icon) > .#{$prefix-icon} {
-		@extend .me-2;
+		@extend %me-2;
 	}
 }
 
 .#{$prefix-card}-header > .#{$prefix-tab}-list {
-	@extend .card-header-tabs;
+	@extend %card-header-tabs;
 }

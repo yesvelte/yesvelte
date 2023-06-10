@@ -1,3 +1,5 @@
+	<!-- @css:table -->
+
 <script lang="ts">
 	import { getContext } from 'svelte'
 	import { get_current_component } from 'svelte/internal'

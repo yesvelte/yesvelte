@@ -1,3 +1,5 @@
+	<!-- @css:form-file-upload -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { FileUpload } from '../file-upload'
@@ -5,6 +7,7 @@
 	import FormField from './FormField.svelte'
 
 	type $$Props = FormFileUploadProps
+
 
 	export let componentName: $$Props['componentName'] = 'form-input'
 	export let tag: $$Props['tag'] = 'input'

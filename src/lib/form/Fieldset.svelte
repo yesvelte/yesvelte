@@ -1,9 +1,12 @@
+	<!-- @css:file-upload -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FieldsetProps } from './Form.types'
 
 	type $$Props = FieldsetProps
+
 
 	export let componentName: $$Props['componentName'] = 'fieldset'
 	export let legend: $$Props['legend'] = undefined

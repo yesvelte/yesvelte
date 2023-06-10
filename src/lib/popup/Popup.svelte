@@ -1,3 +1,5 @@
+	<!-- @css:popup -->
+
 <script lang="ts">
 	import { El } from '../el'
 	import { get_current_component } from 'svelte/internal'
@@ -37,14 +39,14 @@
 	let arrowY: string | undefined = undefined
 
 	let prevTarget: Element
-	let timer: any;
+	let timer: any
 
 	let left: string = ''
 	let top: string = ''
 
 	function showPopup() {
-		if(timer && trigger === 'hover') clearTimeout(timer)
-			
+		if (timer && trigger === 'hover') clearTimeout(timer)
+
 		show = true
 
 		let middleware = []
@@ -90,7 +92,6 @@
 
 	function hidePopup() {
 		if (trigger === 'hover') {
-			
 			timer = setTimeout(() => {
 				show = false
 			}, 300)

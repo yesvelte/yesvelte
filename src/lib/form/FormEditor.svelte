@@ -1,3 +1,4 @@
+<!-- @css:form-editor -->
 <script lang="ts">
 	import FormField from './FormField.svelte'
 	import { Editor } from '../editor'

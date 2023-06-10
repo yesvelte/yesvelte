@@ -1,3 +1,4 @@
+<!-- @css:date-picker -->
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'

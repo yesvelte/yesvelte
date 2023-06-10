@@ -1,9 +1,13 @@
+	<!-- @css:dropdown -->
+
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { DropdownItemProps } from './Dropdown.types'
 
 	type $$Props = DropdownItemProps
+
 
 	export let componentName: $$Props['componentName'] = 'dropdown-item'
 

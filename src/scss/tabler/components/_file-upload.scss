@@ -1,26 +1,28 @@
+@import '../base';
+
 //
 // File Upload
 //
 
 $file-upload-wrapper-props: (
-	null: '.input-group',
+	null: '%input-group',
 	size: (
-		sm: '.input-group-sm',
-		md: '.input-group',
-		lg: '.input-group-lg'
+		sm: '%input-group-sm',
+		md: '%input-group',
+		lg: '%input-group-lg'
 	)
 );
 
 $file-upload-props: (
-	null: '.form-control',
+	null: '%form-control',
 	size: (
-		sm: '.form-control-sm',
-		md: '.form-control',
-		lg: '.form-control-lg'
+		sm: '%form-control-sm',
+		md: '%form-control',
+		lg: '%form-control-lg'
 	),
 	state: (
-		valid: '.is-valid',
-		invalid: '.is-invalid'
+		valid: '%is-valid',
+		invalid: '%is-invalid'
 	)
 );
 

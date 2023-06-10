@@ -1,7 +1,10 @@
+	<!-- @css:progress -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { ProgressBarProps } from './Progress.types'
+
 
 	type $$Props = ProgressBarProps
 

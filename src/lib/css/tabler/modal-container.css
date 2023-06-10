@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+@keyframes progress-bar-stripes {
+}
+
+.y-modal-container {
+  position: relative;
+  width: auto;
+  margin: var(--y-modal-margin);
+  pointer-events: none;
+}
+
+.y-modal.y-tab-pane .y-modal-container, .y-dropdown-menu.y-modal .y-modal-container, .y-el-show.y-modal .y-modal-container {
+  transform: none;
+}
+
+.y-modal-scrollable .y-modal-container {
+  height: calc(100% - var(--y-modal-margin) * 2);
+}
+
+.y-modal-scrollable .y-modal-container .y-modal-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.y-modal-scrollable .y-modal-container .y-modal-body {
+  overflow-y: auto;
+}
+
+.y-modal-placement-center .y-modal-container {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - var(--y-modal-margin) * 2);
+}
+
+@media (min-width: 576px) {
+  .y-modal-container {
+    max-width: var(--y-modal-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .y-modal-size-sm .y-modal-container {
+    --y-modal-width: 380px;
+  }
+}
+@media (min-width: 992px) {
+  .y-modal-size-lg .y-modal-container,
+  .y-modal-size-xl .y-modal-container {
+    --y-modal-width: 720px;
+  }
+}
+@media (min-width: 1200px) {
+  .y-modal-size-xl .y-modal-container {
+    --y-modal-width: 1140px;
+  }
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+.y-modal-size-full .y-modal-container {
+  max-width: none;
+  margin: 0 0.5rem;
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

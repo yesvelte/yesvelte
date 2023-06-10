@@ -1,5 +1,7 @@
+@import '../base';
+
 $accordions-props: (
-	null: '.accordion'
+	null: '%accordion'
 );
 
 .#{$prefix-accordions} {
@@ -7,11 +9,11 @@ $accordions-props: (
 }
 
 $accordion-props: (
-	null: '.accordion-item',
+	null: '%accordion-item',
 	header: (
 		button: (
-			null: '.accordion-button',
-			collapsed: '.collapsed'
+			null: '%accordion-button',
+			collapsed: '%collapsed'
 		)
 	)
 );
@@ -37,7 +39,7 @@ $accordion-props: (
 	--show-config: height;
 
 	&-inner {
-		@extend .accordion-body;
+		@extend %accordion-body;
 	}
 
 	&-show {

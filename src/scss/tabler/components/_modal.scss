@@ -1,32 +1,34 @@
+@import '../base';
+
 $modal-props: (
 	null: (
-		'.modal'
+		'%modal'
 	),
-	container: '.modal-dialog',
+	container: '%modal-dialog',
 	backdrop: (
 		null: (
-			'.modal-backdrop'
+			'%modal-backdrop'
 		),
-		absolute: '.position-absolute'
+		absolute: '%position-absolute'
 	),
-	absolute: '.position-absolute',
-	close: '.btn-close',
-	body: '.modal-body',
-	content: '.modal-content',
-	footer: '.modal-footer',
-	header: '.modal-header',
-	title: '.modal-title'
+	absolute: '%position-absolute',
+	close: '%btn-close',
+	body: '%modal-body',
+	content: '%modal-content',
+	footer: '%modal-footer',
+	header: '%modal-header',
+	title: '%modal-title'
 );
 
 .#{$prefix-modal} {
 	@include apply-props($modal-props);
 
 	&-placement-center .#{$prefix-modal-container} {
-		@extend .modal-dialog-centered;
+		@extend %modal-dialog-centered;
 	}
 
 	&-scrollable .#{$prefix-modal-container} {
-		@extend .modal-dialog-scrollable;
+		@extend %modal-dialog-scrollable;
 	}
 
 	&-backdrop {
@@ -39,13 +41,13 @@ $modal-props: (
 
 	&-size-full {
 		.#{$prefix-modal-container} {
-			@extend .modal-full-width;
+			@extend %modal-full-width;
 		}
 	}
 
 	@each $size in sm, lg, xl {
 		&-size-#{$size} .#{$prefix-modal-container} {
-			@extend .modal-#{$size};
+			@extend %modal-#{$size};
 		}
 	}
 

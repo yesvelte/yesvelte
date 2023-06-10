@@ -1,0 +1,3045 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-textarea-wrapper-size-md .y-button, .y-textarea-wrapper .y-button, .y-file-uploadwrapper-size-md .y-button, .y-file-uploadwrapper .y-button, .y-date-picker-wrapper-size-md .y-button, .y-date-picker-wrapper .y-button, .y-input-wrapper-size-md .y-button, .y-input-wrapper .y-button {
+  position: relative;
+  z-index: 2;
+}
+
+.y-textarea-wrapper-size-md .y-button:focus, .y-textarea-wrapper .y-button:focus, .y-file-uploadwrapper-size-md .y-button:focus, .y-file-uploadwrapper .y-button:focus, .y-date-picker-wrapper-size-md .y-button:focus, .y-date-picker-wrapper .y-button:focus, .y-input-wrapper-size-md .y-button:focus, .y-input-wrapper .y-button:focus {
+  z-index: 5;
+}
+
+.y-textarea-wrapper-size-lg > .y-button, .y-file-uploadwrapper-size-lg > .y-button, .y-date-picker-wrapper-size-lg > .y-button, .y-input-wrapper-size-lg > .y-button {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  border-radius: 8px;
+}
+
+.y-textarea-wrapper-size-sm > .y-button, .y-file-uploadwrapper-size-sm > .y-button, .y-date-picker-wrapper-size-sm > .y-button, .y-input-wrapper-size-sm > .y-button {
+  padding: 0.125rem 0.25rem;
+  font-size: 0.75rem;
+  border-radius: 2px;
+}
+
+.y-button {
+  --y-btn-padding-x: 1rem;
+  --y-btn-padding-y: 0.4375rem;
+  --y-btn-font-family: var(--y-font-sans-serif);
+  --y-btn-font-size: 0.875rem;
+  --y-btn-font-weight: var(--y-font-weight-medium);
+  --y-btn-line-height: 1.4285714286;
+  --y-btn-color: #1d273b;
+  --y-btn-bg: transparent;
+  --y-btn-border-width: var(--y-border-width);
+  --y-btn-border-color: transparent;
+  --y-btn-border-radius: var(--y-border-radius);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --y-btn-disabled-opacity: 0.4;
+  --y-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--y-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+  padding: var(--y-btn-padding-y) var(--y-btn-padding-x);
+  font-family: var(--y-btn-font-family);
+  font-size: var(--y-btn-font-size);
+  font-weight: var(--y-btn-font-weight);
+  line-height: var(--y-btn-line-height);
+  color: var(--y-btn-color);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: var(--y-btn-border-width) solid var(--y-btn-border-color);
+  border-radius: var(--y-btn-border-radius);
+  background-color: var(--y-btn-bg);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-button {
+    transition: none;
+  }
+}
+.y-button:hover {
+  color: var(--y-btn-hover-color);
+  text-decoration: none;
+  background-color: var(--y-btn-hover-bg);
+  border-color: var(--y-btn-hover-border-color);
+}
+
+.y-button:focus-visible {
+  color: var(--y-btn-hover-color);
+  background-color: var(--y-btn-hover-bg);
+  border-color: var(--y-btn-hover-border-color);
+  outline: 0;
+  box-shadow: var(--y-btn-focus-box-shadow);
+}
+
+* + .y-button:active, .y-button:first-child:active, .y-button.y-tab-item-link-active, .y-button.y-tab-pane, .y-button.y-step-item-active, .y-button.y-sidebar-item-active, .y-button.y-pagination-item-active, .y-button.y-navbar-item-active, .y-button.y-dropdown-item-active, .y-button.y-button-active, .y-breadcrumb-item-active.y-button, .y-avatar-active.y-button, .y-button.y-dropdown-menu, .y-el-show.y-button {
+  color: var(--y-btn-active-color);
+  background-color: var(--y-btn-active-bg);
+  border-color: var(--y-btn-active-border-color);
+}
+
+* + .y-button:active:focus-visible, .y-button:first-child:active:focus-visible, .y-button.y-tab-item-link-active:focus-visible, .y-button.y-tab-pane:focus-visible, .y-button.y-step-item-active:focus-visible, .y-button.y-sidebar-item-active:focus-visible, .y-button.y-pagination-item-active:focus-visible, .y-button.y-navbar-item-active:focus-visible, .y-button.y-dropdown-item-active:focus-visible, .y-button.y-button-active:focus-visible, .y-breadcrumb-item-active.y-button:focus-visible, .y-avatar-active.y-button:focus-visible, .y-button.y-dropdown-menu:focus-visible, .y-el-show.y-button:focus-visible {
+  box-shadow: var(--y-btn-focus-box-shadow);
+}
+
+.y-button:disabled, .y-button.y-autocomplete-disabled, .y-button.y-autocomplete-option-no-result, .y-button.y-tab-item-link-disabled, .y-button.y-sidebar-item-disabled, .y-button.y-pagination-item-disabled, .y-button.y-navbar-item-disabled, .y-button.y-dropdown-item-disabled, .y-button.y-button-disabled, fieldset:disabled .y-button {
+  color: var(--y-btn-disabled-color);
+  pointer-events: none;
+  background-color: var(--y-btn-disabled-bg);
+  border-color: var(--y-btn-disabled-border-color);
+  opacity: var(--y-btn-disabled-opacity);
+}
+
+.y-button-link {
+  --y-btn-font-weight: 400;
+  --y-btn-color: var(--y-link-color);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-link-hover-color);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-color: var(--y-link-hover-color);
+  --y-btn-active-border-color: transparent;
+  --y-btn-disabled-color: #49566c;
+  --y-btn-disabled-border-color: transparent;
+  --y-btn-box-shadow: none;
+  --y-btn-focus-shadow-rgb: 64, 128, 204;
+  text-decoration: none;
+}
+
+.y-button-link:hover, .y-button-link:focus-visible {
+  text-decoration: underline;
+}
+
+.y-button-link:focus-visible {
+  color: var(--y-btn-color);
+}
+
+.y-button-link:hover {
+  color: var(--y-btn-hover-color);
+}
+
+.y-button-size-lg, .y-button-group-size-lg > .y-button {
+  --y-btn-padding-y: 0.5rem;
+  --y-btn-padding-x: 0.75rem;
+  --y-btn-font-size: 1.25rem;
+  --y-btn-border-radius: 8px;
+}
+
+.y-button-size-sm, .y-button-group-size-sm > .y-button {
+  --y-btn-padding-y: 0.125rem;
+  --y-btn-padding-x: 0.25rem;
+  --y-btn-font-size: 0.75rem;
+  --y-btn-border-radius: 2px;
+}
+
+.y-button-active.y-autocomplete-option, .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-navbar-item-menu .y-button-active.y-navbar-item, .y-button-active.y-dropdown-item {
+  color: var(--y-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--y-dropdown-link-active-bg);
+}
+
+.y-button-disabled.y-autocomplete-option, .y-sidebar-item-menu .y-button-disabled.y-sidebar-item, .y-navbar-item-menu .y-button-disabled.y-navbar-item, .y-button-disabled.y-dropdown-item {
+  color: var(--y-dropdown-link-disabled-color);
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.y-button-group:not(.y-button-group-vertical),
+.y-button-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button,
+.y-button-group-vertical > .y-button {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:hover,
+.y-button-group:not(.y-button-group-vertical) > .y-button:focus,
+.y-button-group:not(.y-button-group-vertical) > .y-button:active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active,
+.y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button,
+.y-button-group-vertical > .y-button:hover,
+.y-button-group-vertical > .y-button:focus,
+.y-button-group-vertical > .y-button:active,
+.y-button-group-vertical > .y-button.y-tab-item-link-active,
+.y-button-group-vertical > .y-button.y-tab-pane,
+.y-button-group-vertical > .y-button.y-step-item-active,
+.y-button-group-vertical > .y-button.y-sidebar-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-navbar-item-active,
+.y-button-group-vertical > .y-button.y-dropdown-item-active,
+.y-button-group-vertical > .y-button.y-button-active,
+.y-button-group-vertical > .y-breadcrumb-item-active.y-button,
+.y-button-group-vertical > .y-avatar-active.y-button {
+  z-index: 1;
+}
+
+.y-button-group:not(.y-button-group-vertical) {
+  border-radius: var(--y-border-radius);
+}
+
+.y-button-group:not(.y-button-group-vertical) > * + .y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical) {
+  margin-left: calc(var(--y-border-width) * -1);
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown),
+.y-dropdown-split .y-dropdown-target.y-button-group:not(.y-button-group-vertical) > .y-button:first-child,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:nth-child(n+3),
+.y-button-group:not(.y-button-group-vertical) > * + .y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-dropdown-split .y-dropdown-target > .y-button-size-sm + *, .y-dropdown-split .y-dropdown-target.y-button-group-size-sm > .y-button + * {
+  padding-right: 0.1875rem;
+  padding-left: 0.1875rem;
+}
+
+.y-dropdown-split .y-dropdown-target > .y-button-size-lg + *, .y-dropdown-split .y-dropdown-target.y-button-group-size-lg > .y-button + * {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+
+.y-button-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.y-button-group-vertical > .y-button,
+.y-button-group-vertical > .y-button-group:not(.y-button-group-vertical) {
+  width: 100%;
+}
+
+.y-button-group-vertical > .y-button:not(:first-child),
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical) {
+  margin-top: calc(var(--y-border-width) * -1);
+}
+
+.y-button-group-vertical > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown),
+.y-button-group-vertical > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-button-group-vertical > .y-button ~ .y-button,
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.y-button-disabled.y-tab-item-link, .y-button-disabled.y-sidebar-item, .y-button-disabled.y-navbar-item {
+  color: var(--y-nav-link-disabled-color);
+  pointer-events: none;
+  cursor: default;
+}
+
+.y-tab-list .y-button-disabled.y-tab-item-link, .y-tab-list .y-button-disabled.y-sidebar-item, .y-tab-list .y-button-disabled.y-navbar-item {
+  color: var(--y-nav-link-disabled-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.y-tab-list .y-button-active.y-tab-item-link, .y-tab-list .y-button-active.y-sidebar-item, .y-tab-list .y-button-active.y-navbar-item {
+  color: var(--y-nav-tabs-link-active-color);
+  background-color: var(--y-nav-tabs-link-active-bg);
+  border-color: var(--y-nav-tabs-link-active-border-color);
+}
+
+.y-tab-content > .y-button-active {
+  display: block;
+}
+
+.y-sidebar-content .y-button-active.y-tab-item-link, .y-sidebar-content .y-button-active.y-sidebar-item, .y-sidebar-content .y-button-active.y-navbar-item, .y-navbar-content .y-button-active.y-tab-item-link, .y-navbar-content .y-button-active.y-sidebar-item, .y-navbar-content .y-button-active.y-navbar-item {
+  color: var(--y-navbar-active-color);
+}
+
+.y-card-header > .y-tab-list .y-button-active.y-tab-item-link, .y-tab-list-card .y-button-active.y-tab-item-link, .y-card-header > .y-tab-list .y-button-active.y-sidebar-item, .y-tab-list-card .y-button-active.y-sidebar-item, .y-card-header > .y-tab-list .y-button-active.y-navbar-item, .y-tab-list-card .y-button-active.y-navbar-item {
+  background-color: var(--y-card-bg);
+  border-bottom-color: var(--y-card-bg);
+}
+
+.y-breadcrumb-item.y-button-active {
+  color: var(--y-breadcrumb-item-active-color);
+}
+
+.y-button-active.y-pagination-item-link, .y-button-active > .y-pagination-item-link {
+  z-index: 3;
+  color: var(--y-pagination-active-color);
+  background-color: var(--y-pagination-active-bg);
+  border-color: var(--y-pagination-active-border-color);
+}
+
+.y-button-disabled.y-pagination-item-link, .y-button-disabled > .y-pagination-item-link {
+  color: var(--y-pagination-disabled-color);
+  pointer-events: none;
+  background-color: var(--y-pagination-disabled-bg);
+  border-color: var(--y-pagination-disabled-border-color);
+}
+
+.y-button .y-badge {
+  position: relative;
+  top: -1px;
+}
+
+@keyframes progress-bar-stripes {
+}
+
+.y-button-disabled.y-toast-close, .y-button-disabled.y-offcanvas-header-btn, .y-button-disabled.y-modal-close, .y-alert-close.y-button-disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--y-btn-close-disabled-opacity);
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+.y-button-color-primary.y-button-link {
+  color: #206bc4 !important;
+}
+
+.y-button-color-primary.y-button-link:hover, .y-button-color-primary.y-button-link:focus {
+  color: #1a569d !important;
+}
+
+.y-button-color-secondary.y-button-link {
+  color: #616876 !important;
+}
+
+.y-button-color-secondary.y-button-link:hover, .y-button-color-secondary.y-button-link:focus {
+  color: #4e535e !important;
+}
+
+.y-button-color-success.y-button-link {
+  color: #2fb344 !important;
+}
+
+.y-button-color-success.y-button-link:hover, .y-button-color-success.y-button-link:focus {
+  color: #268f36 !important;
+}
+
+.y-button-color-info.y-button-link {
+  color: #4299e1 !important;
+}
+
+.y-button-color-info.y-button-link:hover, .y-button-color-info.y-button-link:focus {
+  color: #357ab4 !important;
+}
+
+.y-button-color-warning.y-button-link {
+  color: #f76707 !important;
+}
+
+.y-button-color-warning.y-button-link:hover, .y-button-color-warning.y-button-link:focus {
+  color: #c65206 !important;
+}
+
+.y-button-color-danger.y-button-link {
+  color: #d63939 !important;
+}
+
+.y-button-color-danger.y-button-link:hover, .y-button-color-danger.y-button-link:focus {
+  color: #ab2e2e !important;
+}
+
+.y-button-color-light.y-button-link {
+  color: #f8fafc !important;
+}
+
+.y-button-color-light.y-button-link:hover, .y-button-color-light.y-button-link:focus {
+  color: #f9fbfd !important;
+}
+
+.y-button-color-dark.y-button-link {
+  color: #1d273b !important;
+}
+
+.y-button-color-dark.y-button-link:hover, .y-button-color-dark.y-button-link:focus {
+  color: #171f2f !important;
+}
+
+.y-button-color-muted.y-button-link {
+  color: #616876 !important;
+}
+
+.y-button-color-muted.y-button-link:hover, .y-button-color-muted.y-button-link:focus {
+  color: #4e535e !important;
+}
+
+.y-button-color-blue.y-button-link {
+  color: #206bc4 !important;
+}
+
+.y-button-color-blue.y-button-link:hover, .y-button-color-blue.y-button-link:focus {
+  color: #1a569d !important;
+}
+
+.y-button-color-azure.y-button-link {
+  color: #4299e1 !important;
+}
+
+.y-button-color-azure.y-button-link:hover, .y-button-color-azure.y-button-link:focus {
+  color: #357ab4 !important;
+}
+
+.y-button-color-indigo.y-button-link {
+  color: #4263eb !important;
+}
+
+.y-button-color-indigo.y-button-link:hover, .y-button-color-indigo.y-button-link:focus {
+  color: #354fbc !important;
+}
+
+.y-button-color-purple.y-button-link {
+  color: #ae3ec9 !important;
+}
+
+.y-button-color-purple.y-button-link:hover, .y-button-color-purple.y-button-link:focus {
+  color: #8b32a1 !important;
+}
+
+.y-button-color-pink.y-button-link {
+  color: #d6336c !important;
+}
+
+.y-button-color-pink.y-button-link:hover, .y-button-color-pink.y-button-link:focus {
+  color: #ab2956 !important;
+}
+
+.y-button-color-red.y-button-link {
+  color: #d63939 !important;
+}
+
+.y-button-color-red.y-button-link:hover, .y-button-color-red.y-button-link:focus {
+  color: #ab2e2e !important;
+}
+
+.y-button-color-orange.y-button-link {
+  color: #f76707 !important;
+}
+
+.y-button-color-orange.y-button-link:hover, .y-button-color-orange.y-button-link:focus {
+  color: #c65206 !important;
+}
+
+.y-button-color-yellow.y-button-link {
+  color: #f59f00 !important;
+}
+
+.y-button-color-yellow.y-button-link:hover, .y-button-color-yellow.y-button-link:focus {
+  color: #c47f00 !important;
+}
+
+.y-button-color-lime.y-button-link {
+  color: #74b816 !important;
+}
+
+.y-button-color-lime.y-button-link:hover, .y-button-color-lime.y-button-link:focus {
+  color: #5d9312 !important;
+}
+
+.y-button-color-green.y-button-link {
+  color: #2fb344 !important;
+}
+
+.y-button-color-green.y-button-link:hover, .y-button-color-green.y-button-link:focus {
+  color: #268f36 !important;
+}
+
+.y-button-color-teal.y-button-link {
+  color: #0ca678 !important;
+}
+
+.y-button-color-teal.y-button-link:hover, .y-button-color-teal.y-button-link:focus {
+  color: #0a8560 !important;
+}
+
+.y-button-color-cyan.y-button-link {
+  color: #17a2b8 !important;
+}
+
+.y-button-color-cyan.y-button-link:hover, .y-button-color-cyan.y-button-link:focus {
+  color: #128293 !important;
+}
+
+.y-button-color-facebook.y-button-link {
+  color: #1877F2 !important;
+}
+
+.y-button-color-facebook.y-button-link:hover, .y-button-color-facebook.y-button-link:focus {
+  color: #135fc2 !important;
+}
+
+.y-button-color-twitter.y-button-link {
+  color: #1da1f2 !important;
+}
+
+.y-button-color-twitter.y-button-link:hover, .y-button-color-twitter.y-button-link:focus {
+  color: #1781c2 !important;
+}
+
+.y-button-color-linkedin.y-button-link {
+  color: #0a66c2 !important;
+}
+
+.y-button-color-linkedin.y-button-link:hover, .y-button-color-linkedin.y-button-link:focus {
+  color: #08529b !important;
+}
+
+.y-button-color-google.y-button-link {
+  color: #dc4e41 !important;
+}
+
+.y-button-color-google.y-button-link:hover, .y-button-color-google.y-button-link:focus {
+  color: #b03e34 !important;
+}
+
+.y-button-color-youtube.y-button-link {
+  color: #ff0000 !important;
+}
+
+.y-button-color-youtube.y-button-link:hover, .y-button-color-youtube.y-button-link:focus {
+  color: #cc0000 !important;
+}
+
+.y-button-color-vimeo.y-button-link {
+  color: #1ab7ea !important;
+}
+
+.y-button-color-vimeo.y-button-link:hover, .y-button-color-vimeo.y-button-link:focus {
+  color: #1592bb !important;
+}
+
+.y-button-color-dribbble.y-button-link {
+  color: #ea4c89 !important;
+}
+
+.y-button-color-dribbble.y-button-link:hover, .y-button-color-dribbble.y-button-link:focus {
+  color: #bb3d6e !important;
+}
+
+.y-button-color-github.y-button-link {
+  color: #181717 !important;
+}
+
+.y-button-color-github.y-button-link:hover, .y-button-color-github.y-button-link:focus {
+  color: #131212 !important;
+}
+
+.y-button-color-instagram.y-button-link {
+  color: #e4405f !important;
+}
+
+.y-button-color-instagram.y-button-link:hover, .y-button-color-instagram.y-button-link:focus {
+  color: #b6334c !important;
+}
+
+.y-button-color-pinterest.y-button-link {
+  color: #bd081c !important;
+}
+
+.y-button-color-pinterest.y-button-link:hover, .y-button-color-pinterest.y-button-link:focus {
+  color: #970616 !important;
+}
+
+.y-button-color-vk.y-button-link {
+  color: #6383a8 !important;
+}
+
+.y-button-color-vk.y-button-link:hover, .y-button-color-vk.y-button-link:focus {
+  color: #4f6986 !important;
+}
+
+.y-button-color-rss.y-button-link {
+  color: #ffa500 !important;
+}
+
+.y-button-color-rss.y-button-link:hover, .y-button-color-rss.y-button-link:focus {
+  color: #cc8400 !important;
+}
+
+.y-button-color-flickr.y-button-link {
+  color: #0063dc !important;
+}
+
+.y-button-color-flickr.y-button-link:hover, .y-button-color-flickr.y-button-link:focus {
+  color: #004fb0 !important;
+}
+
+.y-button-color-bitbucket.y-button-link {
+  color: #0052cc !important;
+}
+
+.y-button-color-bitbucket.y-button-link:hover, .y-button-color-bitbucket.y-button-link:focus {
+  color: #0042a3 !important;
+}
+
+.y-button-color-tabler.y-button-link {
+  color: #206bc4 !important;
+}
+
+.y-button-color-tabler.y-button-link:hover, .y-button-color-tabler.y-button-link:focus {
+  color: #1a569d !important;
+}
+
+.y-button {
+  gap: 0.5rem !important;
+}
+
+.y-button-size-lg {
+  gap: 1rem !important;
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+.y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-navbar-item, .y-app-header .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-app-header .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-app-header .y-sidebar-content .y-button-disabled.y-navbar-item, .y-app-header .y-navbar-content .y-button-disabled.y-tab-item-link, .y-app-header .y-navbar-content .y-button-disabled.y-sidebar-item, .y-app-header .y-navbar-content .y-button-disabled.y-navbar-item {
+  color: var(--y-disabled-color);
+}
+
+.y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-button-active > .y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-button-active > .y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-button-active > .y-navbar-item, .y-app-header .y-sidebar-content .y-button-active > .y-tab-item-link, .y-app-header .y-sidebar-content .y-button-active > .y-sidebar-item, .y-app-header .y-sidebar-content .y-button-active > .y-navbar-item, .y-app-header .y-navbar-content .y-button-active > .y-tab-item-link, .y-app-header .y-navbar-content .y-button-active > .y-sidebar-item, .y-app-header .y-navbar-content .y-button-active > .y-navbar-item, .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-tab-item-link, .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-navbar-content .y-button-active.y-tab-item-link, .y-sidebar-wrapper .y-navbar-content .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-navbar-content .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar-content .y-button-active.y-tab-item-link, .y-navbar-wrapper .y-sidebar-content .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar-content .y-button-active.y-navbar-item, .y-navbar-wrapper .y-navbar-content .y-button-active.y-tab-item-link, .y-navbar-wrapper .y-navbar-content .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-navbar-content .y-button-active.y-navbar-item, .y-app-header .y-sidebar-content .y-button-active.y-tab-item-link, .y-app-header .y-sidebar-content .y-button-active.y-sidebar-item, .y-app-header .y-sidebar-content .y-button-active.y-navbar-item, .y-app-header .y-navbar-content .y-button-active.y-tab-item-link, .y-app-header .y-navbar-content .y-button-active.y-sidebar-item, .y-app-header .y-navbar-content .y-button-active.y-navbar-item {
+  color: var(--y-body-color) color;
+}
+
+@media not print {
+  .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-disabled.y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-disabled.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-disabled.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-disabled.y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-disabled.y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-disabled.y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-disabled.y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-disabled.y-navbar-item {
+    color: var(--y-disabled-color);
+  }
+  .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active > .y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active > .y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active > .y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-sidebar-content .y-button-active.y-navbar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-sidebar-wrapper .y-navbar-content .y-button-active.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-sidebar-content .y-button-active.y-navbar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-navbar-wrapper .y-navbar-content .y-button-active.y-navbar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-sidebar-content .y-button-active.y-navbar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active.y-tab-item-link, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active.y-sidebar-item, .y-app-theme-dark .y-app-header .y-navbar-content .y-button-active.y-navbar-item {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .y-app-header .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-app-header .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-app-header .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-app-header .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-app-header .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-app-header .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-app-header .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-app-header .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-app-header .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-app-header .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-app-header .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-app-header .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-app-header .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-app-header .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item {
+    background: var(--y-navbar-active-bg);
+  }
+  .y-app-header .y-sidebar .y-button-active.y-tab-item:after, .y-app-header .y-sidebar .y-button-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar .y-button-active.y-navbar-item-wrapper:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-tab-item, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header.y-app-header-theme-light .y-button-active.y-tab-item, .y-app-header.y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header.y-app-header-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-tab-item, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header .y-app-header-theme-light .y-button-active.y-tab-item, .y-app-header .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper, .y-app-header .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper {
+    position: relative;
+  }
+  .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header.y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header.y-app-header-theme-light .y-button-active.y-tab-item:after, .y-app-header.y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header.y-app-header-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header .y-app-header-theme-light .y-button-active.y-tab-item:after, .y-app-header .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-app-header .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.25rem;
+    border: 0 var(--y-border-style) var(--y-navbar-active-border-color);
+    border-bottom-width: 2px;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item {
+  background: var(--y-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-button-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-sidebar .y-button-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar .y-button-active.y-navbar-item-wrapper:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-tab-item, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-tab-item, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-tab-item, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-navbar-item-wrapper, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-tab-item, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-sidebar-item-wrapper, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-navbar-item-wrapper, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-tab-item, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-tab-item, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-tab-item, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-tab-item, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper {
+  position: relative;
+}
+
+.y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-tab-item:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper-theme-light.y-sidebar-wrapper .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper.y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-tab-item:after, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-sidebar-wrapper .y-button-active.y-navbar-item-wrapper:after, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-tab-item:after, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-sidebar-item-wrapper:after, .y-app-header-theme-light.y-navbar-wrapper .y-button-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-sidebar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-tab-item:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-navbar-wrapper-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-tab-item:after, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper:after, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-tab-item:after, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-sidebar-item-wrapper:after, .y-navbar-wrapper .y-app-header-theme-light .y-button-active.y-navbar-item-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  border: 0 var(--y-border-style) var(--y-navbar-active-border-color);
+  border-bottom-width: 2px;
+}
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+.y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-disabled.y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-disabled.y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-disabled.y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-button-disabled.y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-disabled.y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-button-disabled.y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-button-disabled.y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-button-disabled.y-navbar-item {
+  color: var(--y-disabled-color);
+}
+
+.y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active > .y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active > .y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-active > .y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-button-active > .y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-active > .y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-button-active > .y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-button-active > .y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-button-active > .y-navbar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-navbar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active.y-tab-item-link, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active.y-sidebar-item, .y-sidebar-wrapper-theme-dark .y-navbar-content .y-button-active.y-navbar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-sidebar-content .y-button-active.y-navbar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active.y-tab-item-link, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active.y-sidebar-item, .y-navbar-wrapper-theme-dark .y-navbar-content .y-button-active.y-navbar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-active.y-tab-item-link, .y-app-header-theme-dark .y-sidebar-content .y-button-active.y-sidebar-item, .y-app-header-theme-dark .y-sidebar-content .y-button-active.y-navbar-item, .y-app-header-theme-dark .y-navbar-content .y-button-active.y-tab-item-link, .y-app-header-theme-dark .y-navbar-content .y-button-active.y-sidebar-item, .y-app-header-theme-dark .y-navbar-content .y-button-active.y-navbar-item {
+  color: #ffffff;
+}
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+@media (min-width: 768px) {
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-app-header.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item {
+    background: var(--y-navbar-active-bg);
+  }
+  .y-app-header.y-sidebar-wrapper .y-sidebar .y-button-active.y-tab-item:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-button-active.y-sidebar-item-wrapper:after, .y-app-header.y-sidebar-wrapper .y-sidebar .y-button-active.y-navbar-item-wrapper:after {
+    border-bottom-width: 0;
+    border-left-width: 3px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-autocomplete-dropdown .y-button-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-sidebar-item-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-navbar-item-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-menu .y-button-active.y-dropdown-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-autocomplete-option, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-sidebar-item-menu .y-button-active.y-sidebar-item, .y-sidebar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-sidebar-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-navbar-item-menu .y-button-active.y-navbar-item, .y-navbar-item-menu .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-navbar-item, .y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item, .y-navbar-wrapper.y-sidebar-wrapper .y-sidebar .y-dropdown-menu .y-button-active.y-dropdown-item {
+  background: var(--y-navbar-active-bg);
+}
+
+.y-sidebar-wrapper .y-sidebar .y-button-active.y-tab-item:after, .y-sidebar-wrapper .y-sidebar .y-button-active.y-sidebar-item-wrapper:after, .y-sidebar-wrapper .y-sidebar .y-button-active.y-navbar-item-wrapper:after {
+  border-bottom-width: 0;
+  border-left-width: 3px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.y-breadcrumb-item.y-button-active {
+  font-weight: var(--y-breadcrumb-item-active-font-weight);
+}
+
+.y-breadcrumb-item.y-button-active a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.y-breadcrumb-item.y-button-disabled {
+  color: var(--y-breadcrumb-item-disabled-color);
+}
+
+.y-breadcrumb-item.y-button-disabled:before {
+  color: inherit;
+}
+
+.y-breadcrumb-item.y-button-disabled a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.y-button {
+  --y-btn-bg: var(--y-bg-surface);
+  --y-btn-hover-bg: var(--y-bg-surface);
+  --y-btn-icon-size: 1.25rem;
+  --y-btn-bg: var(--y-bg-surface);
+  --y-btn-color: var(--y-body-color);
+  --y-btn-border-color: var(--y-border-color);
+  --y-btn-hover-bg: var(--y-btn-bg);
+  --y-btn-hover-border-color: var(--y-border-color-active);
+  --y-btn-box-shadow: var(--y-shadow-button);
+  --y-btn-active-color: var(--y-primary);
+  --y-btn-active-bg: rgba(var(--y-primary-rgb), 0.04);
+  --y-btn-active-border-color: var(--y-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: var(--y-btn-box-shadow);
+}
+
+.y-button .y-icon {
+  width: var(--y-btn-icon-size);
+  height: var(--y-btn-icon-size);
+  min-width: var(--y-btn-icon-size);
+  margin: 0 calc(var(--y-btn-padding-x) / 2) 0 calc(var(--y-btn-padding-x) / -4);
+  vertical-align: bottom;
+  color: inherit;
+}
+
+.y-button .y-avatar {
+  width: var(--y-btn-icon-size);
+  height: var(--y-btn-icon-size);
+  margin: 0 calc(var(--y-btn-padding-x) / 2) 0 calc(var(--y-btn-padding-x) / -4);
+}
+
+.y-button .y-badge {
+  top: auto;
+}
+
+.y-button-link {
+  color: #206bc4;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.y-button-link .y-icon {
+  color: inherit;
+}
+
+.y-button-link:hover {
+  color: #1a569d;
+  border-color: transparent;
+}
+
+.y-button-color-primary {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-primary-fg);
+  --y-btn-bg: var(--y-primary);
+  --y-btn-hover-color: var(--y-primary-fg);
+  --y-btn-hover-bg: rgba(var(--y-primary-rgb), .8);
+  --y-btn-active-color: var(--y-primary-fg);
+  --y-btn-active-bg: rgba(var(--y-primary-rgb), .8);
+  --y-btn-disabled-bg: var(--y-primary);
+  --y-btn-disabled-color: var(--y-primary-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-primary.y-button-outline {
+  --y-btn-color: var(--y-primary);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-primary);
+  --y-btn-hover-color: var(--y-primary-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-primary);
+  --y-btn-active-color: var(--y-primary-fg);
+  --y-btn-active-bg: var(--y-primary);
+  --y-btn-disabled-color: var(--y-primary);
+  --y-btn-disabled-border-color: var(--y-primary);
+}
+
+.y-button-color-secondary {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-secondary-fg);
+  --y-btn-bg: var(--y-secondary);
+  --y-btn-hover-color: var(--y-secondary-fg);
+  --y-btn-hover-bg: rgba(var(--y-secondary-rgb), .8);
+  --y-btn-active-color: var(--y-secondary-fg);
+  --y-btn-active-bg: rgba(var(--y-secondary-rgb), .8);
+  --y-btn-disabled-bg: var(--y-secondary);
+  --y-btn-disabled-color: var(--y-secondary-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-secondary.y-button-outline {
+  --y-btn-color: var(--y-secondary);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-secondary);
+  --y-btn-hover-color: var(--y-secondary-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-secondary);
+  --y-btn-active-color: var(--y-secondary-fg);
+  --y-btn-active-bg: var(--y-secondary);
+  --y-btn-disabled-color: var(--y-secondary);
+  --y-btn-disabled-border-color: var(--y-secondary);
+}
+
+.y-button-color-success {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-success-fg);
+  --y-btn-bg: var(--y-success);
+  --y-btn-hover-color: var(--y-success-fg);
+  --y-btn-hover-bg: rgba(var(--y-success-rgb), .8);
+  --y-btn-active-color: var(--y-success-fg);
+  --y-btn-active-bg: rgba(var(--y-success-rgb), .8);
+  --y-btn-disabled-bg: var(--y-success);
+  --y-btn-disabled-color: var(--y-success-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-success.y-button-outline {
+  --y-btn-color: var(--y-success);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-success);
+  --y-btn-hover-color: var(--y-success-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-success);
+  --y-btn-active-color: var(--y-success-fg);
+  --y-btn-active-bg: var(--y-success);
+  --y-btn-disabled-color: var(--y-success);
+  --y-btn-disabled-border-color: var(--y-success);
+}
+
+.y-button-color-info {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-info-fg);
+  --y-btn-bg: var(--y-info);
+  --y-btn-hover-color: var(--y-info-fg);
+  --y-btn-hover-bg: rgba(var(--y-info-rgb), .8);
+  --y-btn-active-color: var(--y-info-fg);
+  --y-btn-active-bg: rgba(var(--y-info-rgb), .8);
+  --y-btn-disabled-bg: var(--y-info);
+  --y-btn-disabled-color: var(--y-info-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-info.y-button-outline {
+  --y-btn-color: var(--y-info);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-info);
+  --y-btn-hover-color: var(--y-info-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-info);
+  --y-btn-active-color: var(--y-info-fg);
+  --y-btn-active-bg: var(--y-info);
+  --y-btn-disabled-color: var(--y-info);
+  --y-btn-disabled-border-color: var(--y-info);
+}
+
+.y-button-color-warning {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-warning-fg);
+  --y-btn-bg: var(--y-warning);
+  --y-btn-hover-color: var(--y-warning-fg);
+  --y-btn-hover-bg: rgba(var(--y-warning-rgb), .8);
+  --y-btn-active-color: var(--y-warning-fg);
+  --y-btn-active-bg: rgba(var(--y-warning-rgb), .8);
+  --y-btn-disabled-bg: var(--y-warning);
+  --y-btn-disabled-color: var(--y-warning-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-warning.y-button-outline {
+  --y-btn-color: var(--y-warning);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-warning);
+  --y-btn-hover-color: var(--y-warning-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-warning);
+  --y-btn-active-color: var(--y-warning-fg);
+  --y-btn-active-bg: var(--y-warning);
+  --y-btn-disabled-color: var(--y-warning);
+  --y-btn-disabled-border-color: var(--y-warning);
+}
+
+.y-button-color-danger {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-danger-fg);
+  --y-btn-bg: var(--y-danger);
+  --y-btn-hover-color: var(--y-danger-fg);
+  --y-btn-hover-bg: rgba(var(--y-danger-rgb), .8);
+  --y-btn-active-color: var(--y-danger-fg);
+  --y-btn-active-bg: rgba(var(--y-danger-rgb), .8);
+  --y-btn-disabled-bg: var(--y-danger);
+  --y-btn-disabled-color: var(--y-danger-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-danger.y-button-outline {
+  --y-btn-color: var(--y-danger);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-danger);
+  --y-btn-hover-color: var(--y-danger-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-danger);
+  --y-btn-active-color: var(--y-danger-fg);
+  --y-btn-active-bg: var(--y-danger);
+  --y-btn-disabled-color: var(--y-danger);
+  --y-btn-disabled-border-color: var(--y-danger);
+}
+
+.y-button-color-light {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-light-fg);
+  --y-btn-bg: var(--y-light);
+  --y-btn-hover-color: var(--y-light-fg);
+  --y-btn-hover-bg: rgba(var(--y-light-rgb), .8);
+  --y-btn-active-color: var(--y-light-fg);
+  --y-btn-active-bg: rgba(var(--y-light-rgb), .8);
+  --y-btn-disabled-bg: var(--y-light);
+  --y-btn-disabled-color: var(--y-light-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-light.y-button-outline {
+  --y-btn-color: var(--y-light);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-light);
+  --y-btn-hover-color: var(--y-light-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-light);
+  --y-btn-active-color: var(--y-light-fg);
+  --y-btn-active-bg: var(--y-light);
+  --y-btn-disabled-color: var(--y-light);
+  --y-btn-disabled-border-color: var(--y-light);
+}
+
+.y-button-color-dark {
+  --y-btn-border-color: var(--y-dark-mode-border-color);
+  --y-btn-hover-border-color: var(--y-dark-mode-border-color-active);
+  --y-btn-active-border-color: var(--y-dark-mode-border-color-active);
+  --y-btn-color: var(--y-dark-fg);
+  --y-btn-bg: var(--y-dark);
+  --y-btn-hover-color: var(--y-dark-fg);
+  --y-btn-hover-bg: rgba(var(--y-dark-rgb), .8);
+  --y-btn-active-color: var(--y-dark-fg);
+  --y-btn-active-bg: rgba(var(--y-dark-rgb), .8);
+  --y-btn-disabled-bg: var(--y-dark);
+  --y-btn-disabled-color: var(--y-dark-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-dark.y-button-outline {
+  --y-btn-color: var(--y-dark);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-dark);
+  --y-btn-hover-color: var(--y-dark-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-dark);
+  --y-btn-active-color: var(--y-dark-fg);
+  --y-btn-active-bg: var(--y-dark);
+  --y-btn-disabled-color: var(--y-dark);
+  --y-btn-disabled-border-color: var(--y-dark);
+}
+
+.y-button-color-muted {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-muted-fg);
+  --y-btn-bg: var(--y-muted);
+  --y-btn-hover-color: var(--y-muted-fg);
+  --y-btn-hover-bg: rgba(var(--y-muted-rgb), .8);
+  --y-btn-active-color: var(--y-muted-fg);
+  --y-btn-active-bg: rgba(var(--y-muted-rgb), .8);
+  --y-btn-disabled-bg: var(--y-muted);
+  --y-btn-disabled-color: var(--y-muted-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-muted.y-button-outline {
+  --y-btn-color: var(--y-muted);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-muted);
+  --y-btn-hover-color: var(--y-muted-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-muted);
+  --y-btn-active-color: var(--y-muted-fg);
+  --y-btn-active-bg: var(--y-muted);
+  --y-btn-disabled-color: var(--y-muted);
+  --y-btn-disabled-border-color: var(--y-muted);
+}
+
+.y-button-color-blue {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-blue-fg);
+  --y-btn-bg: var(--y-blue);
+  --y-btn-hover-color: var(--y-blue-fg);
+  --y-btn-hover-bg: rgba(var(--y-blue-rgb), .8);
+  --y-btn-active-color: var(--y-blue-fg);
+  --y-btn-active-bg: rgba(var(--y-blue-rgb), .8);
+  --y-btn-disabled-bg: var(--y-blue);
+  --y-btn-disabled-color: var(--y-blue-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-blue.y-button-outline {
+  --y-btn-color: var(--y-blue);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-blue);
+  --y-btn-hover-color: var(--y-blue-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-blue);
+  --y-btn-active-color: var(--y-blue-fg);
+  --y-btn-active-bg: var(--y-blue);
+  --y-btn-disabled-color: var(--y-blue);
+  --y-btn-disabled-border-color: var(--y-blue);
+}
+
+.y-button-color-azure {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-azure-fg);
+  --y-btn-bg: var(--y-azure);
+  --y-btn-hover-color: var(--y-azure-fg);
+  --y-btn-hover-bg: rgba(var(--y-azure-rgb), .8);
+  --y-btn-active-color: var(--y-azure-fg);
+  --y-btn-active-bg: rgba(var(--y-azure-rgb), .8);
+  --y-btn-disabled-bg: var(--y-azure);
+  --y-btn-disabled-color: var(--y-azure-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-azure.y-button-outline {
+  --y-btn-color: var(--y-azure);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-azure);
+  --y-btn-hover-color: var(--y-azure-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-azure);
+  --y-btn-active-color: var(--y-azure-fg);
+  --y-btn-active-bg: var(--y-azure);
+  --y-btn-disabled-color: var(--y-azure);
+  --y-btn-disabled-border-color: var(--y-azure);
+}
+
+.y-button-color-indigo {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-indigo-fg);
+  --y-btn-bg: var(--y-indigo);
+  --y-btn-hover-color: var(--y-indigo-fg);
+  --y-btn-hover-bg: rgba(var(--y-indigo-rgb), .8);
+  --y-btn-active-color: var(--y-indigo-fg);
+  --y-btn-active-bg: rgba(var(--y-indigo-rgb), .8);
+  --y-btn-disabled-bg: var(--y-indigo);
+  --y-btn-disabled-color: var(--y-indigo-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-indigo.y-button-outline {
+  --y-btn-color: var(--y-indigo);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-indigo);
+  --y-btn-hover-color: var(--y-indigo-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-indigo);
+  --y-btn-active-color: var(--y-indigo-fg);
+  --y-btn-active-bg: var(--y-indigo);
+  --y-btn-disabled-color: var(--y-indigo);
+  --y-btn-disabled-border-color: var(--y-indigo);
+}
+
+.y-button-color-purple {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-purple-fg);
+  --y-btn-bg: var(--y-purple);
+  --y-btn-hover-color: var(--y-purple-fg);
+  --y-btn-hover-bg: rgba(var(--y-purple-rgb), .8);
+  --y-btn-active-color: var(--y-purple-fg);
+  --y-btn-active-bg: rgba(var(--y-purple-rgb), .8);
+  --y-btn-disabled-bg: var(--y-purple);
+  --y-btn-disabled-color: var(--y-purple-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-purple.y-button-outline {
+  --y-btn-color: var(--y-purple);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-purple);
+  --y-btn-hover-color: var(--y-purple-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-purple);
+  --y-btn-active-color: var(--y-purple-fg);
+  --y-btn-active-bg: var(--y-purple);
+  --y-btn-disabled-color: var(--y-purple);
+  --y-btn-disabled-border-color: var(--y-purple);
+}
+
+.y-button-color-pink {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-pink-fg);
+  --y-btn-bg: var(--y-pink);
+  --y-btn-hover-color: var(--y-pink-fg);
+  --y-btn-hover-bg: rgba(var(--y-pink-rgb), .8);
+  --y-btn-active-color: var(--y-pink-fg);
+  --y-btn-active-bg: rgba(var(--y-pink-rgb), .8);
+  --y-btn-disabled-bg: var(--y-pink);
+  --y-btn-disabled-color: var(--y-pink-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-pink.y-button-outline {
+  --y-btn-color: var(--y-pink);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-pink);
+  --y-btn-hover-color: var(--y-pink-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-pink);
+  --y-btn-active-color: var(--y-pink-fg);
+  --y-btn-active-bg: var(--y-pink);
+  --y-btn-disabled-color: var(--y-pink);
+  --y-btn-disabled-border-color: var(--y-pink);
+}
+
+.y-button-color-red {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-red-fg);
+  --y-btn-bg: var(--y-red);
+  --y-btn-hover-color: var(--y-red-fg);
+  --y-btn-hover-bg: rgba(var(--y-red-rgb), .8);
+  --y-btn-active-color: var(--y-red-fg);
+  --y-btn-active-bg: rgba(var(--y-red-rgb), .8);
+  --y-btn-disabled-bg: var(--y-red);
+  --y-btn-disabled-color: var(--y-red-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-red.y-button-outline {
+  --y-btn-color: var(--y-red);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-red);
+  --y-btn-hover-color: var(--y-red-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-red);
+  --y-btn-active-color: var(--y-red-fg);
+  --y-btn-active-bg: var(--y-red);
+  --y-btn-disabled-color: var(--y-red);
+  --y-btn-disabled-border-color: var(--y-red);
+}
+
+.y-button-color-orange {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-orange-fg);
+  --y-btn-bg: var(--y-orange);
+  --y-btn-hover-color: var(--y-orange-fg);
+  --y-btn-hover-bg: rgba(var(--y-orange-rgb), .8);
+  --y-btn-active-color: var(--y-orange-fg);
+  --y-btn-active-bg: rgba(var(--y-orange-rgb), .8);
+  --y-btn-disabled-bg: var(--y-orange);
+  --y-btn-disabled-color: var(--y-orange-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-orange.y-button-outline {
+  --y-btn-color: var(--y-orange);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-orange);
+  --y-btn-hover-color: var(--y-orange-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-orange);
+  --y-btn-active-color: var(--y-orange-fg);
+  --y-btn-active-bg: var(--y-orange);
+  --y-btn-disabled-color: var(--y-orange);
+  --y-btn-disabled-border-color: var(--y-orange);
+}
+
+.y-button-color-yellow {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-yellow-fg);
+  --y-btn-bg: var(--y-yellow);
+  --y-btn-hover-color: var(--y-yellow-fg);
+  --y-btn-hover-bg: rgba(var(--y-yellow-rgb), .8);
+  --y-btn-active-color: var(--y-yellow-fg);
+  --y-btn-active-bg: rgba(var(--y-yellow-rgb), .8);
+  --y-btn-disabled-bg: var(--y-yellow);
+  --y-btn-disabled-color: var(--y-yellow-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-yellow.y-button-outline {
+  --y-btn-color: var(--y-yellow);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-yellow);
+  --y-btn-hover-color: var(--y-yellow-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-yellow);
+  --y-btn-active-color: var(--y-yellow-fg);
+  --y-btn-active-bg: var(--y-yellow);
+  --y-btn-disabled-color: var(--y-yellow);
+  --y-btn-disabled-border-color: var(--y-yellow);
+}
+
+.y-button-color-lime {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-lime-fg);
+  --y-btn-bg: var(--y-lime);
+  --y-btn-hover-color: var(--y-lime-fg);
+  --y-btn-hover-bg: rgba(var(--y-lime-rgb), .8);
+  --y-btn-active-color: var(--y-lime-fg);
+  --y-btn-active-bg: rgba(var(--y-lime-rgb), .8);
+  --y-btn-disabled-bg: var(--y-lime);
+  --y-btn-disabled-color: var(--y-lime-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-lime.y-button-outline {
+  --y-btn-color: var(--y-lime);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-lime);
+  --y-btn-hover-color: var(--y-lime-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-lime);
+  --y-btn-active-color: var(--y-lime-fg);
+  --y-btn-active-bg: var(--y-lime);
+  --y-btn-disabled-color: var(--y-lime);
+  --y-btn-disabled-border-color: var(--y-lime);
+}
+
+.y-button-color-green {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-green-fg);
+  --y-btn-bg: var(--y-green);
+  --y-btn-hover-color: var(--y-green-fg);
+  --y-btn-hover-bg: rgba(var(--y-green-rgb), .8);
+  --y-btn-active-color: var(--y-green-fg);
+  --y-btn-active-bg: rgba(var(--y-green-rgb), .8);
+  --y-btn-disabled-bg: var(--y-green);
+  --y-btn-disabled-color: var(--y-green-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-green.y-button-outline {
+  --y-btn-color: var(--y-green);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-green);
+  --y-btn-hover-color: var(--y-green-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-green);
+  --y-btn-active-color: var(--y-green-fg);
+  --y-btn-active-bg: var(--y-green);
+  --y-btn-disabled-color: var(--y-green);
+  --y-btn-disabled-border-color: var(--y-green);
+}
+
+.y-button-color-teal {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-teal-fg);
+  --y-btn-bg: var(--y-teal);
+  --y-btn-hover-color: var(--y-teal-fg);
+  --y-btn-hover-bg: rgba(var(--y-teal-rgb), .8);
+  --y-btn-active-color: var(--y-teal-fg);
+  --y-btn-active-bg: rgba(var(--y-teal-rgb), .8);
+  --y-btn-disabled-bg: var(--y-teal);
+  --y-btn-disabled-color: var(--y-teal-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-teal.y-button-outline {
+  --y-btn-color: var(--y-teal);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-teal);
+  --y-btn-hover-color: var(--y-teal-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-teal);
+  --y-btn-active-color: var(--y-teal-fg);
+  --y-btn-active-bg: var(--y-teal);
+  --y-btn-disabled-color: var(--y-teal);
+  --y-btn-disabled-border-color: var(--y-teal);
+}
+
+.y-button-color-cyan {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-cyan-fg);
+  --y-btn-bg: var(--y-cyan);
+  --y-btn-hover-color: var(--y-cyan-fg);
+  --y-btn-hover-bg: rgba(var(--y-cyan-rgb), .8);
+  --y-btn-active-color: var(--y-cyan-fg);
+  --y-btn-active-bg: rgba(var(--y-cyan-rgb), .8);
+  --y-btn-disabled-bg: var(--y-cyan);
+  --y-btn-disabled-color: var(--y-cyan-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-cyan.y-button-outline {
+  --y-btn-color: var(--y-cyan);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-cyan);
+  --y-btn-hover-color: var(--y-cyan-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-cyan);
+  --y-btn-active-color: var(--y-cyan-fg);
+  --y-btn-active-bg: var(--y-cyan);
+  --y-btn-disabled-color: var(--y-cyan);
+  --y-btn-disabled-border-color: var(--y-cyan);
+}
+
+.y-button-color-facebook {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-facebook-fg);
+  --y-btn-bg: var(--y-facebook);
+  --y-btn-hover-color: var(--y-facebook-fg);
+  --y-btn-hover-bg: rgba(var(--y-facebook-rgb), .8);
+  --y-btn-active-color: var(--y-facebook-fg);
+  --y-btn-active-bg: rgba(var(--y-facebook-rgb), .8);
+  --y-btn-disabled-bg: var(--y-facebook);
+  --y-btn-disabled-color: var(--y-facebook-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-facebook.y-button-outline {
+  --y-btn-color: var(--y-facebook);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-facebook);
+  --y-btn-hover-color: var(--y-facebook-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-facebook);
+  --y-btn-active-color: var(--y-facebook-fg);
+  --y-btn-active-bg: var(--y-facebook);
+  --y-btn-disabled-color: var(--y-facebook);
+  --y-btn-disabled-border-color: var(--y-facebook);
+}
+
+.y-button-color-twitter {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-twitter-fg);
+  --y-btn-bg: var(--y-twitter);
+  --y-btn-hover-color: var(--y-twitter-fg);
+  --y-btn-hover-bg: rgba(var(--y-twitter-rgb), .8);
+  --y-btn-active-color: var(--y-twitter-fg);
+  --y-btn-active-bg: rgba(var(--y-twitter-rgb), .8);
+  --y-btn-disabled-bg: var(--y-twitter);
+  --y-btn-disabled-color: var(--y-twitter-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-twitter.y-button-outline {
+  --y-btn-color: var(--y-twitter);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-twitter);
+  --y-btn-hover-color: var(--y-twitter-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-twitter);
+  --y-btn-active-color: var(--y-twitter-fg);
+  --y-btn-active-bg: var(--y-twitter);
+  --y-btn-disabled-color: var(--y-twitter);
+  --y-btn-disabled-border-color: var(--y-twitter);
+}
+
+.y-button-color-linkedin {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-linkedin-fg);
+  --y-btn-bg: var(--y-linkedin);
+  --y-btn-hover-color: var(--y-linkedin-fg);
+  --y-btn-hover-bg: rgba(var(--y-linkedin-rgb), .8);
+  --y-btn-active-color: var(--y-linkedin-fg);
+  --y-btn-active-bg: rgba(var(--y-linkedin-rgb), .8);
+  --y-btn-disabled-bg: var(--y-linkedin);
+  --y-btn-disabled-color: var(--y-linkedin-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-linkedin.y-button-outline {
+  --y-btn-color: var(--y-linkedin);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-linkedin);
+  --y-btn-hover-color: var(--y-linkedin-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-linkedin);
+  --y-btn-active-color: var(--y-linkedin-fg);
+  --y-btn-active-bg: var(--y-linkedin);
+  --y-btn-disabled-color: var(--y-linkedin);
+  --y-btn-disabled-border-color: var(--y-linkedin);
+}
+
+.y-button-color-google {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-google-fg);
+  --y-btn-bg: var(--y-google);
+  --y-btn-hover-color: var(--y-google-fg);
+  --y-btn-hover-bg: rgba(var(--y-google-rgb), .8);
+  --y-btn-active-color: var(--y-google-fg);
+  --y-btn-active-bg: rgba(var(--y-google-rgb), .8);
+  --y-btn-disabled-bg: var(--y-google);
+  --y-btn-disabled-color: var(--y-google-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-google.y-button-outline {
+  --y-btn-color: var(--y-google);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-google);
+  --y-btn-hover-color: var(--y-google-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-google);
+  --y-btn-active-color: var(--y-google-fg);
+  --y-btn-active-bg: var(--y-google);
+  --y-btn-disabled-color: var(--y-google);
+  --y-btn-disabled-border-color: var(--y-google);
+}
+
+.y-button-color-youtube {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-youtube-fg);
+  --y-btn-bg: var(--y-youtube);
+  --y-btn-hover-color: var(--y-youtube-fg);
+  --y-btn-hover-bg: rgba(var(--y-youtube-rgb), .8);
+  --y-btn-active-color: var(--y-youtube-fg);
+  --y-btn-active-bg: rgba(var(--y-youtube-rgb), .8);
+  --y-btn-disabled-bg: var(--y-youtube);
+  --y-btn-disabled-color: var(--y-youtube-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-youtube.y-button-outline {
+  --y-btn-color: var(--y-youtube);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-youtube);
+  --y-btn-hover-color: var(--y-youtube-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-youtube);
+  --y-btn-active-color: var(--y-youtube-fg);
+  --y-btn-active-bg: var(--y-youtube);
+  --y-btn-disabled-color: var(--y-youtube);
+  --y-btn-disabled-border-color: var(--y-youtube);
+}
+
+.y-button-color-vimeo {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-vimeo-fg);
+  --y-btn-bg: var(--y-vimeo);
+  --y-btn-hover-color: var(--y-vimeo-fg);
+  --y-btn-hover-bg: rgba(var(--y-vimeo-rgb), .8);
+  --y-btn-active-color: var(--y-vimeo-fg);
+  --y-btn-active-bg: rgba(var(--y-vimeo-rgb), .8);
+  --y-btn-disabled-bg: var(--y-vimeo);
+  --y-btn-disabled-color: var(--y-vimeo-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-vimeo.y-button-outline {
+  --y-btn-color: var(--y-vimeo);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-vimeo);
+  --y-btn-hover-color: var(--y-vimeo-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-vimeo);
+  --y-btn-active-color: var(--y-vimeo-fg);
+  --y-btn-active-bg: var(--y-vimeo);
+  --y-btn-disabled-color: var(--y-vimeo);
+  --y-btn-disabled-border-color: var(--y-vimeo);
+}
+
+.y-button-color-dribbble {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-dribbble-fg);
+  --y-btn-bg: var(--y-dribbble);
+  --y-btn-hover-color: var(--y-dribbble-fg);
+  --y-btn-hover-bg: rgba(var(--y-dribbble-rgb), .8);
+  --y-btn-active-color: var(--y-dribbble-fg);
+  --y-btn-active-bg: rgba(var(--y-dribbble-rgb), .8);
+  --y-btn-disabled-bg: var(--y-dribbble);
+  --y-btn-disabled-color: var(--y-dribbble-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-dribbble.y-button-outline {
+  --y-btn-color: var(--y-dribbble);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-dribbble);
+  --y-btn-hover-color: var(--y-dribbble-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-dribbble);
+  --y-btn-active-color: var(--y-dribbble-fg);
+  --y-btn-active-bg: var(--y-dribbble);
+  --y-btn-disabled-color: var(--y-dribbble);
+  --y-btn-disabled-border-color: var(--y-dribbble);
+}
+
+.y-button-color-github {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-github-fg);
+  --y-btn-bg: var(--y-github);
+  --y-btn-hover-color: var(--y-github-fg);
+  --y-btn-hover-bg: rgba(var(--y-github-rgb), .8);
+  --y-btn-active-color: var(--y-github-fg);
+  --y-btn-active-bg: rgba(var(--y-github-rgb), .8);
+  --y-btn-disabled-bg: var(--y-github);
+  --y-btn-disabled-color: var(--y-github-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-github.y-button-outline {
+  --y-btn-color: var(--y-github);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-github);
+  --y-btn-hover-color: var(--y-github-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-github);
+  --y-btn-active-color: var(--y-github-fg);
+  --y-btn-active-bg: var(--y-github);
+  --y-btn-disabled-color: var(--y-github);
+  --y-btn-disabled-border-color: var(--y-github);
+}
+
+.y-button-color-instagram {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-instagram-fg);
+  --y-btn-bg: var(--y-instagram);
+  --y-btn-hover-color: var(--y-instagram-fg);
+  --y-btn-hover-bg: rgba(var(--y-instagram-rgb), .8);
+  --y-btn-active-color: var(--y-instagram-fg);
+  --y-btn-active-bg: rgba(var(--y-instagram-rgb), .8);
+  --y-btn-disabled-bg: var(--y-instagram);
+  --y-btn-disabled-color: var(--y-instagram-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-instagram.y-button-outline {
+  --y-btn-color: var(--y-instagram);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-instagram);
+  --y-btn-hover-color: var(--y-instagram-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-instagram);
+  --y-btn-active-color: var(--y-instagram-fg);
+  --y-btn-active-bg: var(--y-instagram);
+  --y-btn-disabled-color: var(--y-instagram);
+  --y-btn-disabled-border-color: var(--y-instagram);
+}
+
+.y-button-color-pinterest {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-pinterest-fg);
+  --y-btn-bg: var(--y-pinterest);
+  --y-btn-hover-color: var(--y-pinterest-fg);
+  --y-btn-hover-bg: rgba(var(--y-pinterest-rgb), .8);
+  --y-btn-active-color: var(--y-pinterest-fg);
+  --y-btn-active-bg: rgba(var(--y-pinterest-rgb), .8);
+  --y-btn-disabled-bg: var(--y-pinterest);
+  --y-btn-disabled-color: var(--y-pinterest-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-pinterest.y-button-outline {
+  --y-btn-color: var(--y-pinterest);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-pinterest);
+  --y-btn-hover-color: var(--y-pinterest-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-pinterest);
+  --y-btn-active-color: var(--y-pinterest-fg);
+  --y-btn-active-bg: var(--y-pinterest);
+  --y-btn-disabled-color: var(--y-pinterest);
+  --y-btn-disabled-border-color: var(--y-pinterest);
+}
+
+.y-button-color-vk {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-vk-fg);
+  --y-btn-bg: var(--y-vk);
+  --y-btn-hover-color: var(--y-vk-fg);
+  --y-btn-hover-bg: rgba(var(--y-vk-rgb), .8);
+  --y-btn-active-color: var(--y-vk-fg);
+  --y-btn-active-bg: rgba(var(--y-vk-rgb), .8);
+  --y-btn-disabled-bg: var(--y-vk);
+  --y-btn-disabled-color: var(--y-vk-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-vk.y-button-outline {
+  --y-btn-color: var(--y-vk);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-vk);
+  --y-btn-hover-color: var(--y-vk-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-vk);
+  --y-btn-active-color: var(--y-vk-fg);
+  --y-btn-active-bg: var(--y-vk);
+  --y-btn-disabled-color: var(--y-vk);
+  --y-btn-disabled-border-color: var(--y-vk);
+}
+
+.y-button-color-rss {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-rss-fg);
+  --y-btn-bg: var(--y-rss);
+  --y-btn-hover-color: var(--y-rss-fg);
+  --y-btn-hover-bg: rgba(var(--y-rss-rgb), .8);
+  --y-btn-active-color: var(--y-rss-fg);
+  --y-btn-active-bg: rgba(var(--y-rss-rgb), .8);
+  --y-btn-disabled-bg: var(--y-rss);
+  --y-btn-disabled-color: var(--y-rss-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-rss.y-button-outline {
+  --y-btn-color: var(--y-rss);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-rss);
+  --y-btn-hover-color: var(--y-rss-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-rss);
+  --y-btn-active-color: var(--y-rss-fg);
+  --y-btn-active-bg: var(--y-rss);
+  --y-btn-disabled-color: var(--y-rss);
+  --y-btn-disabled-border-color: var(--y-rss);
+}
+
+.y-button-color-flickr {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-flickr-fg);
+  --y-btn-bg: var(--y-flickr);
+  --y-btn-hover-color: var(--y-flickr-fg);
+  --y-btn-hover-bg: rgba(var(--y-flickr-rgb), .8);
+  --y-btn-active-color: var(--y-flickr-fg);
+  --y-btn-active-bg: rgba(var(--y-flickr-rgb), .8);
+  --y-btn-disabled-bg: var(--y-flickr);
+  --y-btn-disabled-color: var(--y-flickr-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-flickr.y-button-outline {
+  --y-btn-color: var(--y-flickr);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-flickr);
+  --y-btn-hover-color: var(--y-flickr-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-flickr);
+  --y-btn-active-color: var(--y-flickr-fg);
+  --y-btn-active-bg: var(--y-flickr);
+  --y-btn-disabled-color: var(--y-flickr);
+  --y-btn-disabled-border-color: var(--y-flickr);
+}
+
+.y-button-color-bitbucket {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-bitbucket-fg);
+  --y-btn-bg: var(--y-bitbucket);
+  --y-btn-hover-color: var(--y-bitbucket-fg);
+  --y-btn-hover-bg: rgba(var(--y-bitbucket-rgb), .8);
+  --y-btn-active-color: var(--y-bitbucket-fg);
+  --y-btn-active-bg: rgba(var(--y-bitbucket-rgb), .8);
+  --y-btn-disabled-bg: var(--y-bitbucket);
+  --y-btn-disabled-color: var(--y-bitbucket-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-bitbucket.y-button-outline {
+  --y-btn-color: var(--y-bitbucket);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-bitbucket);
+  --y-btn-hover-color: var(--y-bitbucket-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-bitbucket);
+  --y-btn-active-color: var(--y-bitbucket-fg);
+  --y-btn-active-bg: var(--y-bitbucket);
+  --y-btn-disabled-color: var(--y-bitbucket);
+  --y-btn-disabled-border-color: var(--y-bitbucket);
+}
+
+.y-button-color-tabler {
+  --y-btn-border-color: transparent;
+  --y-btn-hover-border-color: transparent;
+  --y-btn-active-border-color: transparent;
+  --y-btn-color: var(--y-tabler-fg);
+  --y-btn-bg: var(--y-tabler);
+  --y-btn-hover-color: var(--y-tabler-fg);
+  --y-btn-hover-bg: rgba(var(--y-tabler-rgb), .8);
+  --y-btn-active-color: var(--y-tabler-fg);
+  --y-btn-active-bg: rgba(var(--y-tabler-rgb), .8);
+  --y-btn-disabled-bg: var(--y-tabler);
+  --y-btn-disabled-color: var(--y-tabler-fg);
+  --y-btn-box-shadow: var(--y-shadow-button), var(--y-shadow-button-inset);
+}
+
+.y-button-color-tabler.y-button-outline {
+  --y-btn-color: var(--y-tabler);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: var(--y-tabler);
+  --y-btn-hover-color: var(--y-tabler-fg);
+  --y-btn-hover-border-color: transparent;
+  --y-btn-hover-bg: var(--y-tabler);
+  --y-btn-active-color: var(--y-tabler-fg);
+  --y-btn-active-bg: var(--y-tabler);
+  --y-btn-disabled-color: var(--y-tabler);
+  --y-btn-disabled-border-color: var(--y-tabler);
+}
+
+.y-button-color-primary.y-button-ghost {
+  --y-btn-color: var(--y-primary);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-primary-fg);
+  --y-btn-hover-bg: var(--y-primary);
+  --y-btn-hover-border-color: var(--y-primary);
+  --y-btn-active-color: var(--y-primary-fg);
+  --y-btn-active-bg: var(--y-primary);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-primary);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-secondary.y-button-ghost {
+  --y-btn-color: var(--y-secondary);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-secondary-fg);
+  --y-btn-hover-bg: var(--y-secondary);
+  --y-btn-hover-border-color: var(--y-secondary);
+  --y-btn-active-color: var(--y-secondary-fg);
+  --y-btn-active-bg: var(--y-secondary);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-secondary);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-success.y-button-ghost {
+  --y-btn-color: var(--y-success);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-success-fg);
+  --y-btn-hover-bg: var(--y-success);
+  --y-btn-hover-border-color: var(--y-success);
+  --y-btn-active-color: var(--y-success-fg);
+  --y-btn-active-bg: var(--y-success);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-success);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-info.y-button-ghost {
+  --y-btn-color: var(--y-info);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-info-fg);
+  --y-btn-hover-bg: var(--y-info);
+  --y-btn-hover-border-color: var(--y-info);
+  --y-btn-active-color: var(--y-info-fg);
+  --y-btn-active-bg: var(--y-info);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-info);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-warning.y-button-ghost {
+  --y-btn-color: var(--y-warning);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-warning-fg);
+  --y-btn-hover-bg: var(--y-warning);
+  --y-btn-hover-border-color: var(--y-warning);
+  --y-btn-active-color: var(--y-warning-fg);
+  --y-btn-active-bg: var(--y-warning);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-warning);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-danger.y-button-ghost {
+  --y-btn-color: var(--y-danger);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-danger-fg);
+  --y-btn-hover-bg: var(--y-danger);
+  --y-btn-hover-border-color: var(--y-danger);
+  --y-btn-active-color: var(--y-danger-fg);
+  --y-btn-active-bg: var(--y-danger);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-danger);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-light.y-button-ghost {
+  --y-btn-color: var(--y-light);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-light-fg);
+  --y-btn-hover-bg: var(--y-light);
+  --y-btn-hover-border-color: var(--y-light);
+  --y-btn-active-color: var(--y-light-fg);
+  --y-btn-active-bg: var(--y-light);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-light);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-dark.y-button-ghost {
+  --y-btn-color: var(--y-dark);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-dark-fg);
+  --y-btn-hover-bg: var(--y-dark);
+  --y-btn-hover-border-color: var(--y-dark);
+  --y-btn-active-color: var(--y-dark-fg);
+  --y-btn-active-bg: var(--y-dark);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-dark);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-muted.y-button-ghost {
+  --y-btn-color: var(--y-muted);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-muted-fg);
+  --y-btn-hover-bg: var(--y-muted);
+  --y-btn-hover-border-color: var(--y-muted);
+  --y-btn-active-color: var(--y-muted-fg);
+  --y-btn-active-bg: var(--y-muted);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-muted);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-blue.y-button-ghost {
+  --y-btn-color: var(--y-blue);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-blue-fg);
+  --y-btn-hover-bg: var(--y-blue);
+  --y-btn-hover-border-color: var(--y-blue);
+  --y-btn-active-color: var(--y-blue-fg);
+  --y-btn-active-bg: var(--y-blue);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-blue);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-azure.y-button-ghost {
+  --y-btn-color: var(--y-azure);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-azure-fg);
+  --y-btn-hover-bg: var(--y-azure);
+  --y-btn-hover-border-color: var(--y-azure);
+  --y-btn-active-color: var(--y-azure-fg);
+  --y-btn-active-bg: var(--y-azure);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-azure);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-indigo.y-button-ghost {
+  --y-btn-color: var(--y-indigo);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-indigo-fg);
+  --y-btn-hover-bg: var(--y-indigo);
+  --y-btn-hover-border-color: var(--y-indigo);
+  --y-btn-active-color: var(--y-indigo-fg);
+  --y-btn-active-bg: var(--y-indigo);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-indigo);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-purple.y-button-ghost {
+  --y-btn-color: var(--y-purple);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-purple-fg);
+  --y-btn-hover-bg: var(--y-purple);
+  --y-btn-hover-border-color: var(--y-purple);
+  --y-btn-active-color: var(--y-purple-fg);
+  --y-btn-active-bg: var(--y-purple);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-purple);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-pink.y-button-ghost {
+  --y-btn-color: var(--y-pink);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-pink-fg);
+  --y-btn-hover-bg: var(--y-pink);
+  --y-btn-hover-border-color: var(--y-pink);
+  --y-btn-active-color: var(--y-pink-fg);
+  --y-btn-active-bg: var(--y-pink);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-pink);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-red.y-button-ghost {
+  --y-btn-color: var(--y-red);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-red-fg);
+  --y-btn-hover-bg: var(--y-red);
+  --y-btn-hover-border-color: var(--y-red);
+  --y-btn-active-color: var(--y-red-fg);
+  --y-btn-active-bg: var(--y-red);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-red);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-orange.y-button-ghost {
+  --y-btn-color: var(--y-orange);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-orange-fg);
+  --y-btn-hover-bg: var(--y-orange);
+  --y-btn-hover-border-color: var(--y-orange);
+  --y-btn-active-color: var(--y-orange-fg);
+  --y-btn-active-bg: var(--y-orange);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-orange);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-yellow.y-button-ghost {
+  --y-btn-color: var(--y-yellow);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-yellow-fg);
+  --y-btn-hover-bg: var(--y-yellow);
+  --y-btn-hover-border-color: var(--y-yellow);
+  --y-btn-active-color: var(--y-yellow-fg);
+  --y-btn-active-bg: var(--y-yellow);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-yellow);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-lime.y-button-ghost {
+  --y-btn-color: var(--y-lime);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-lime-fg);
+  --y-btn-hover-bg: var(--y-lime);
+  --y-btn-hover-border-color: var(--y-lime);
+  --y-btn-active-color: var(--y-lime-fg);
+  --y-btn-active-bg: var(--y-lime);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-lime);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-green.y-button-ghost {
+  --y-btn-color: var(--y-green);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-green-fg);
+  --y-btn-hover-bg: var(--y-green);
+  --y-btn-hover-border-color: var(--y-green);
+  --y-btn-active-color: var(--y-green-fg);
+  --y-btn-active-bg: var(--y-green);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-green);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-teal.y-button-ghost {
+  --y-btn-color: var(--y-teal);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-teal-fg);
+  --y-btn-hover-bg: var(--y-teal);
+  --y-btn-hover-border-color: var(--y-teal);
+  --y-btn-active-color: var(--y-teal-fg);
+  --y-btn-active-bg: var(--y-teal);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-teal);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-cyan.y-button-ghost {
+  --y-btn-color: var(--y-cyan);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-cyan-fg);
+  --y-btn-hover-bg: var(--y-cyan);
+  --y-btn-hover-border-color: var(--y-cyan);
+  --y-btn-active-color: var(--y-cyan-fg);
+  --y-btn-active-bg: var(--y-cyan);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-cyan);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-facebook.y-button-ghost {
+  --y-btn-color: var(--y-facebook);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-facebook-fg);
+  --y-btn-hover-bg: var(--y-facebook);
+  --y-btn-hover-border-color: var(--y-facebook);
+  --y-btn-active-color: var(--y-facebook-fg);
+  --y-btn-active-bg: var(--y-facebook);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-facebook);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-twitter.y-button-ghost {
+  --y-btn-color: var(--y-twitter);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-twitter-fg);
+  --y-btn-hover-bg: var(--y-twitter);
+  --y-btn-hover-border-color: var(--y-twitter);
+  --y-btn-active-color: var(--y-twitter-fg);
+  --y-btn-active-bg: var(--y-twitter);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-twitter);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-linkedin.y-button-ghost {
+  --y-btn-color: var(--y-linkedin);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-linkedin-fg);
+  --y-btn-hover-bg: var(--y-linkedin);
+  --y-btn-hover-border-color: var(--y-linkedin);
+  --y-btn-active-color: var(--y-linkedin-fg);
+  --y-btn-active-bg: var(--y-linkedin);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-linkedin);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-google.y-button-ghost {
+  --y-btn-color: var(--y-google);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-google-fg);
+  --y-btn-hover-bg: var(--y-google);
+  --y-btn-hover-border-color: var(--y-google);
+  --y-btn-active-color: var(--y-google-fg);
+  --y-btn-active-bg: var(--y-google);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-google);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-youtube.y-button-ghost {
+  --y-btn-color: var(--y-youtube);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-youtube-fg);
+  --y-btn-hover-bg: var(--y-youtube);
+  --y-btn-hover-border-color: var(--y-youtube);
+  --y-btn-active-color: var(--y-youtube-fg);
+  --y-btn-active-bg: var(--y-youtube);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-youtube);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-vimeo.y-button-ghost {
+  --y-btn-color: var(--y-vimeo);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-vimeo-fg);
+  --y-btn-hover-bg: var(--y-vimeo);
+  --y-btn-hover-border-color: var(--y-vimeo);
+  --y-btn-active-color: var(--y-vimeo-fg);
+  --y-btn-active-bg: var(--y-vimeo);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-vimeo);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-dribbble.y-button-ghost {
+  --y-btn-color: var(--y-dribbble);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-dribbble-fg);
+  --y-btn-hover-bg: var(--y-dribbble);
+  --y-btn-hover-border-color: var(--y-dribbble);
+  --y-btn-active-color: var(--y-dribbble-fg);
+  --y-btn-active-bg: var(--y-dribbble);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-dribbble);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-github.y-button-ghost {
+  --y-btn-color: var(--y-github);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-github-fg);
+  --y-btn-hover-bg: var(--y-github);
+  --y-btn-hover-border-color: var(--y-github);
+  --y-btn-active-color: var(--y-github-fg);
+  --y-btn-active-bg: var(--y-github);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-github);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-instagram.y-button-ghost {
+  --y-btn-color: var(--y-instagram);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-instagram-fg);
+  --y-btn-hover-bg: var(--y-instagram);
+  --y-btn-hover-border-color: var(--y-instagram);
+  --y-btn-active-color: var(--y-instagram-fg);
+  --y-btn-active-bg: var(--y-instagram);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-instagram);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-pinterest.y-button-ghost {
+  --y-btn-color: var(--y-pinterest);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-pinterest-fg);
+  --y-btn-hover-bg: var(--y-pinterest);
+  --y-btn-hover-border-color: var(--y-pinterest);
+  --y-btn-active-color: var(--y-pinterest-fg);
+  --y-btn-active-bg: var(--y-pinterest);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-pinterest);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-vk.y-button-ghost {
+  --y-btn-color: var(--y-vk);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-vk-fg);
+  --y-btn-hover-bg: var(--y-vk);
+  --y-btn-hover-border-color: var(--y-vk);
+  --y-btn-active-color: var(--y-vk-fg);
+  --y-btn-active-bg: var(--y-vk);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-vk);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-rss.y-button-ghost {
+  --y-btn-color: var(--y-rss);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-rss-fg);
+  --y-btn-hover-bg: var(--y-rss);
+  --y-btn-hover-border-color: var(--y-rss);
+  --y-btn-active-color: var(--y-rss-fg);
+  --y-btn-active-bg: var(--y-rss);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-rss);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-flickr.y-button-ghost {
+  --y-btn-color: var(--y-flickr);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-flickr-fg);
+  --y-btn-hover-bg: var(--y-flickr);
+  --y-btn-hover-border-color: var(--y-flickr);
+  --y-btn-active-color: var(--y-flickr-fg);
+  --y-btn-active-bg: var(--y-flickr);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-flickr);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-bitbucket.y-button-ghost {
+  --y-btn-color: var(--y-bitbucket);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-bitbucket-fg);
+  --y-btn-hover-bg: var(--y-bitbucket);
+  --y-btn-hover-border-color: var(--y-bitbucket);
+  --y-btn-active-color: var(--y-bitbucket-fg);
+  --y-btn-active-bg: var(--y-bitbucket);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-bitbucket);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-color-tabler.y-button-ghost {
+  --y-btn-color: var(--y-tabler);
+  --y-btn-bg: transparent;
+  --y-btn-border-color: transparent;
+  --y-btn-hover-color: var(--y-tabler-fg);
+  --y-btn-hover-bg: var(--y-tabler);
+  --y-btn-hover-border-color: var(--y-tabler);
+  --y-btn-active-color: var(--y-tabler-fg);
+  --y-btn-active-bg: var(--y-tabler);
+  --y-btn-active-border-color: transparent;
+  --y-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --y-btn-disabled-color: var(--y-tabler);
+  --y-btn-disabled-bg: transparent;
+  --y-btn-disabled-border-color: transparent;
+  --y-gradient: none;
+  --y-btn-box-shadow: none;
+}
+
+.y-button-size-sm, .y-button-group-size-sm > .y-button {
+  --y-btn-line-height: 1.5;
+  --y-btn-icon-size: .75rem;
+}
+
+.y-button-size-lg, .y-button-group-size-lg > .y-button {
+  --y-btn-line-height: 1.5;
+  --y-btn-icon-size: 2rem;
+}
+
+.y-button-shape-pill {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  border-radius: 10rem;
+}
+
+[class*=btn-icon].y-button-shape-pill {
+  padding: 0.375rem 15px;
+}
+
+.y-button-shape-tile {
+  border-radius: 0;
+}
+
+.y-button-icon {
+  min-width: calc(var(--y-btn-line-height) * var(--y-btn-font-size) + var(--y-btn-padding-y) * 2 + var(--y-btn-border-width) * 2);
+  min-height: calc(var(--y-btn-line-height) * var(--y-btn-font-size) + var(--y-btn-padding-y) * 2 + var(--y-btn-border-width) * 2);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.y-button-icon .y-icon {
+  margin: calc(-1 * var(--y-btn-padding-x));
+}
+
+.y-button-loading {
+  position: relative;
+  color: transparent !important;
+  text-shadow: none !important;
+  pointer-events: none;
+}
+
+.y-button-loading > * {
+  opacity: 0;
+}
+
+.y-button-loading:after {
+  content: "";
+  display: inline-block;
+  vertical-align: text-bottom;
+  border: 2px var(--y-border-style) currentColor;
+  border-right-color: transparent;
+  border-radius: 100rem;
+  color: var(--y-btn-color);
+  position: absolute;
+  width: var(--y-btn-icon-size);
+  height: var(--y-btn-icon-size);
+  left: calc(50% - var(--y-btn-icon-size) / 2);
+  top: calc(50% - var(--y-btn-icon-size) / 2);
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active,
+.y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button,
+.y-button-group-vertical > .y-button:active,
+.y-button-group-vertical > .y-button.y-tab-item-link-active,
+.y-button-group-vertical > .y-button.y-tab-pane,
+.y-button-group-vertical > .y-button.y-step-item-active,
+.y-button-group-vertical > .y-button.y-sidebar-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-navbar-item-active,
+.y-button-group-vertical > .y-button.y-dropdown-item-active,
+.y-button-group-vertical > .y-button.y-button-active,
+.y-button-group-vertical > .y-breadcrumb-item-active.y-button,
+.y-button-group-vertical > .y-avatar-active.y-button {
+  z-index: 5;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:hover,
+.y-button-group:not(.y-button-group-vertical) > .y-button:focus,
+.y-button-group-vertical > .y-button:hover,
+.y-button-group-vertical > .y-button:focus {
+  z-index: 1;
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+.y-button-disabled.y-textarea-size-md, .y-button-disabled.y-textarea, .y-button-disabled.y-file-upload-size-md, .y-button-disabled.y-file-upload, .y-button-disabled.y-date-picker-size-md, .y-button-disabled.y-date-picker, .y-button-disabled.y-input-size-md, .y-button-disabled.y-input {
+  color: var(--y-muted);
+  user-select: none;
+}
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+.y-pagination-item:not(.y-tab-item-link-active):not(.y-tab-pane):not(.y-step-item-active):not(.y-sidebar-item-active):not(.y-pagination-item-active):not(.y-navbar-item-active):not(.y-dropdown-item-active):not(.y-button-active):not(.y-breadcrumb-item-active):not(.y-avatar-active) .y-pagination-item-link:hover {
+  background: transparent;
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+.y-button-active.y-step-item {
+  font-weight: var(--y-font-weight-bold);
+}
+
+.y-button-active.y-step-item:after {
+  background: var(--y-steps-inactive-color);
+}
+
+.y-button-active.y-step-item ~ .y-step-item {
+  color: var(--y-disabled-color);
+}
+
+.y-button-active.y-step-item ~ .y-step-item:after, .y-button-active.y-step-item ~ .y-step-item:before {
+  background: var(--y-steps-inactive-color);
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+[class^=link-].y-button-disabled, [class*=" link-"].y-button-disabled {
+  color: var(--y-disabled-color);
+  pointer-events: none;
+}
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+.y-button > .y-avatar, .y-button > .y-icon {
+  margin: 0 !important;
+}
+.y-button > .y-icon {
+  --y-icon-size: unset;
+}
+.y-button.y-button-link {
+  background-color: transparent;
+  box-shadow: none;
+}
+.y-button-color-primary.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-primary.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-secondary.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-secondary.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-success.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-success.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-info.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-info.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-warning.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-warning.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-danger.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-danger.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-light.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-light.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-dark.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-dark.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-muted.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-muted.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-blue.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-blue.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-azure.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-azure.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-indigo.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-indigo.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-purple.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-purple.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-pink.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-pink.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-red.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-red.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-orange.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-orange.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-yellow.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-yellow.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-lime.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-lime.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-green.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-green.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-teal.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-teal.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-cyan.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-cyan.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-facebook.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-facebook.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-twitter.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-twitter.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-linkedin.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-linkedin.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-google.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-google.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-youtube.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-youtube.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-vimeo.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-vimeo.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-dribbble.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-dribbble.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-github.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-github.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-instagram.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-instagram.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-pinterest.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-pinterest.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-vk.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-vk.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-rss.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-rss.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-flickr.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-flickr.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-bitbucket.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-bitbucket.y-button-outline {
+  --y-btn-bg: transparent;
+}
+.y-button-color-tabler.y-button-ghost {
+  --y-btn-bg: transparent;
+}
+.y-button-color-tabler.y-button-outline {
+  --y-btn-bg: transparent;
+}

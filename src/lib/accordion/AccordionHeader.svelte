@@ -1,3 +1,4 @@
+<!-- @css:accordion -->
 <script lang="ts">
 	import { createEventDispatcher, getContext } from 'svelte'
 	import { El } from '../el'

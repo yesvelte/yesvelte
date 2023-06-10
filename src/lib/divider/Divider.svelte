@@ -1,9 +1,11 @@
-<script lang="ts">
+	<!-- @css:divider -->
+	<script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { DividerProps } from './Divider.types'
 
 	type $$Props = DividerProps
+
 
 	export let componentName: $$Props['componentName'] = 'divider'
 	export let color: $$Props['color'] = undefined

@@ -1,7 +1,10 @@
+	<!-- @css:spinner -->
+
 <script lang="ts">
 	import type { SpinnerProps } from './Spinner.types'
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
+
 
 	type $$Props = SpinnerProps
 

@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*!
+* Tabler v1.0.0-beta17 (https://tabler.io)
+* @version 1.0.0-beta17
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+*/
+
+.y-accordions {
+  --tblr-accordion-color:var(--tblr-body-color);
+  --tblr-accordion-bg:transparent;
+  --tblr-accordion-transition:color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+  --tblr-accordion-border-color:var(--tblr-border-color-translucent);
+  --tblr-accordion-border-width:var(--tblr-border-width);
+  --tblr-accordion-border-radius:var(--tblr-border-radius);
+  --tblr-accordion-inner-border-radius:calc(var(--tblr-border-radius) - (var(--tblr-border-width)));
+  --tblr-accordion-btn-padding-x:1.25rem;
+  --tblr-accordion-btn-padding-y:1rem;
+  --tblr-accordion-btn-color:var(--tblr-body-color);
+  --tblr-accordion-btn-bg:transparent;
+  --tblr-accordion-btn-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d273b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --tblr-accordion-btn-icon-width:1rem;
+  --tblr-accordion-btn-icon-transform:rotate(-180deg);
+  --tblr-accordion-btn-icon-transition:transform 0.2s ease-in-out;
+  --tblr-accordion-btn-active-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231a569d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --tblr-accordion-btn-focus-border-color:var(--tblr-border-color-translucent);
+  --tblr-accordion-btn-focus-box-shadow:0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+  --tblr-accordion-body-padding-x:1.25rem;
+  --tblr-accordion-body-padding-y:1rem;
+  --tblr-accordion-active-color:inherit;
+  --tblr-accordion-active-bg:transparent;
+}
+
+.y-accordion-header-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--tblr-accordion-btn-padding-y) var(--tblr-accordion-btn-padding-x);
+  font-size: 0.875rem;
+  color: var(--tblr-accordion-btn-color);
+  text-align: left;
+  background-color: var(--tblr-accordion-btn-bg);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--tblr-accordion-transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-accordion-header-button {
+    transition: none;
+  }
+}
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed) {
+  color: var(--tblr-accordion-active-color);
+  background-color: var(--tblr-accordion-active-bg);
+  box-shadow: inset 0 calc(-1 * var(--tblr-accordion-border-width)) 0 var(--tblr-accordion-border-color);
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed)::after {
+  background-image: var(--tblr-accordion-btn-active-icon);
+  transform: var(--tblr-accordion-btn-icon-transform);
+}
+
+.y-accordion-header-button::after {
+  flex-shrink: 0;
+  width: var(--tblr-accordion-btn-icon-width);
+  height: var(--tblr-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--tblr-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--tblr-accordion-btn-icon-width);
+  transition: var(--tblr-accordion-btn-icon-transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-accordion-header-button::after {
+    transition: none;
+  }
+}
+.y-accordion-header-button:hover {
+  z-index: 2;
+}
+
+.y-accordion-header-button:focus {
+  z-index: 3;
+  border-color: var(--tblr-accordion-btn-focus-border-color);
+  outline: 0;
+  box-shadow: var(--tblr-accordion-btn-focus-box-shadow);
+}
+
+.y-accordion {
+  color: var(--tblr-accordion-color);
+  background-color: var(--tblr-accordion-bg);
+  border: var(--tblr-accordion-border-width) solid var(--tblr-accordion-border-color);
+}
+
+.y-accordion:first-of-type {
+  border-top-left-radius: var(--tblr-accordion-border-radius);
+  border-top-right-radius: var(--tblr-accordion-border-radius);
+}
+
+.y-accordion:first-of-type .y-accordion-header-button {
+  border-top-left-radius: var(--tblr-accordion-inner-border-radius);
+  border-top-right-radius: var(--tblr-accordion-inner-border-radius);
+}
+
+.y-accordion:not(:first-of-type) {
+  border-top: 0;
+}
+
+.y-accordion:last-of-type {
+  border-bottom-right-radius: var(--tblr-accordion-border-radius);
+  border-bottom-left-radius: var(--tblr-accordion-border-radius);
+}
+
+.y-accordion:last-of-type .y-accordion-header-button.y-accordion-header-button-collapsed {
+  border-bottom-right-radius: var(--tblr-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--tblr-accordion-inner-border-radius);
+}
+
+.y-accordion-body-inner {
+  padding: var(--tblr-accordion-body-padding-y) var(--tblr-accordion-body-padding-x);
+}
+
+[data-bs-theme=dark] .y-accordion-header-button::after {
+  --tblr-accordion-btn-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --tblr-accordion-btn-active-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+@keyframes progress-bar-stripes {
+}
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+@media not print {
+  .y-app-theme-dark .y-accordion-header-button {
+    color: inherit;
+  }
+  .y-app-theme-dark .y-accordion-header-button:after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+}
+.y-accordions {
+  --tblr-accordion-color:var(--tblr-body-color);
+}
+
+.y-accordion-header-button:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+.y-accordion-header-button:after {
+  opacity: 0.7;
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed) {
+  font-weight: var(--tblr-font-weight-bold);
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed):after {
+  opacity: 1;
+}
+
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+.y-accordion-header-show-opened button::after {
+  transform: none !important;
+}
+.y-accordion-header-show-closed button::after {
+  opacity: 1 !important;
+  background-image: var(--y-accordion-btn-active-icon) !important;
+  transform: var(--y-accordion-btn-icon-transform) !important;
+}
+
+.y-accordion-body {
+  --show-config: height;
+}
+.y-accordion-body-show-open, .y-accordion-body-show-close {
+  overflow: hidden;
+}
+.y-accordion-body-show-opening, .y-accordion-body-show-closing {
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.y-accordion-body-show-closed {
+  overflow: hidden;
+  max-height: 0;
+}
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

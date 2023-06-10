@@ -1,3 +1,4 @@
+<!-- @css:steps -->
 <script lang="ts">
 	import { El } from '../el'
 	import { get_current_component } from 'svelte/internal'

@@ -1,10 +1,12 @@
+@import '../base';
+
 $pagination-props: (
-	null: '.pagination',
+	null: '%pagination',
 	item: (
-		null: '.page-item',
-		link: '.page-link',
-		active: '.active',
-		disabled: '.disabled'
+		null: '%page-item',
+		link: '%page-link',
+		active: '%active',
+		disabled: '%disabled'
 	)
 );
 

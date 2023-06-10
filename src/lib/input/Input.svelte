@@ -1,3 +1,5 @@
+	<!-- @css:input -->
+
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { El } from '../el'
@@ -5,6 +7,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = InputProps
+
 
 	export let componentName: $$Props['componentName'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined

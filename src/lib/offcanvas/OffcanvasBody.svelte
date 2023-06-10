@@ -1,6 +1,9 @@
+	<!-- @css:offcanvas -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El, type ElProps } from '../el'
+
 
 	type $$Props = ElProps
 

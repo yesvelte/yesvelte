@@ -1,6 +1,23 @@
 $prefix: 'y-' !default;
 @import './mixins';
 @import './variables';
-@import '@tabler/core/src/scss/core';
-@import '@tabler/core/src/scss/vendor/nouislider';
+// @import './tabler.min.scss';
+// @import '@tabler/core/src/scss/config';
+
+@import 'bootstrap/scss/functions';
+
+@import '@tabler/core/src/scss/variables';
+@import '@tabler/core/src/scss/utilities';
+@import '@tabler/core/src/scss/mixins';
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+@import '@tabler/core/src/scss/bootstrap-override';
+
+@import './tabler.placeholder.scss';
+
 @import './components';

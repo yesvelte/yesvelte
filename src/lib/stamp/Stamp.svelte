@@ -1,8 +1,11 @@
+	<!-- @css:stamp -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { StampProps } from './Stamp.types'
 	import { Icon } from '../icon'
+
 
 	type $$Props = StampProps
 

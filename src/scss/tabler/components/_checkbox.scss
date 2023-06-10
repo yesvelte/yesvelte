@@ -1,18 +1,20 @@
+@import '../base';
+
 //
 // Date Picker
 //
 
 $checkbox-wrapper-props: (
-	null: '.form-check',
-	inline: '.form-check-inline',
-	reverse: '.form-check-reverse'
+	null: '%form-check',
+	inline: '%form-check-inline',
+	reverse: '%form-check-reverse'
 );
 
 $checkbox-props: (
-	null: '.form-check-input',
+	null: '%form-check-input',
 	wrapper: $checkbox-wrapper-props,
-	label: '.form-check-label',
-	description: '.form-check-description'
+	label: '%form-check-label',
+	description: '%form-check-description'
 );
 
 .#{$prefix-checkbox} {
@@ -33,6 +35,6 @@ $checkbox-props: (
 	}
 
 	&-indeterminate {
-		@extend .form-check-input, [type='checkbox'], :indeterminate;
+		@extend %form-check-input, [type='checkbox'], :indeterminate;
 	}
 }

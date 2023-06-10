@@ -1,3 +1,4 @@
+<!-- @css:form-editor -->
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import DatePicker from '../date-picker/DatePicker.svelte'

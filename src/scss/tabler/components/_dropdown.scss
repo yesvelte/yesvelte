@@ -1,19 +1,21 @@
+@import '../base';
+
 $dropdown-props: (
-	null: '.dropdown',
-	menu: '.dropdown-menu' '.show',
+	null: '%dropdown',
+	menu: '%dropdown-menu' '%show',
 	placement: (
-		start: '.dropstart',
-		left: '.dropstart',
-		right: '.dropend',
-		end: '.dropend',
-		top: '.dropup'
+		start: '%dropstart',
+		left: '%dropstart',
+		right: '%dropend',
+		end: '%dropend',
+		top: '%dropup'
 	),
 	item: (
-		null: '.dropdown-item',
-		active: '.active',
-		disabled: '.disabled',
-		divider: '.dropdown-divider',
-		header: '.dropdown-header'
+		null: '%dropdown-item',
+		active: '%active',
+		disabled: '%disabled',
+		divider: '%dropdown-divider',
+		header: '%dropdown-header'
 	)
 );
 
@@ -23,7 +25,7 @@ $dropdown-props: (
 
 	&-item {
 		display: inline-flex;
-		@extend .gap-2;
+		@extend %gap-2;
 	}
 
 	&-target {
@@ -31,10 +33,10 @@ $dropdown-props: (
 		cursor: pointer;
 
 		& > * {
-			@extend .dropdown-toggle;
+			@extend %dropdown-toggle;
 
 			.#{$prefix-dropdown}-split & {
-				@extend .dropdown-toggle-split;
+				@extend %dropdown-toggle-split;
 			}
 
 			.#{$prefix-dropdown}:not(.#{$prefix-dropdown}-arrow) &::after {

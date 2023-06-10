@@ -1,0 +1,490 @@
+@charset "UTF-8";
+/*!
+* Tabler v1.0.0-beta17 (https://tabler.io)
+* @version 1.0.0-beta17
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+*/
+
+.y-checkbox-wrapper {
+  display: block;
+  min-height: 1.25rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.y-switch-wrapper .y-checkbox-indeterminate, .y-radio-wrapper .y-checkbox-indeterminate, .y-checkbox-wrapper .y-switch, .y-checkbox-wrapper .y-radio, .y-checkbox-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox, .y-radio-wrapper .y-checkbox, .y-checkbox-wrapper .y-checkbox {
+  float: left;
+  margin-left: -1.5rem;
+}
+
+.y-checkbox-wrapper-reverse {
+  padding-right: 1.5rem;
+  padding-left: 0;
+  text-align: right;
+}
+
+.y-switch-wrapper-reverse .y-checkbox-indeterminate, .y-radio-wrapper-reverse .y-checkbox-indeterminate, .y-checkbox-wrapper-reverse .y-switch, .y-checkbox-wrapper-reverse .y-radio, .y-checkbox-wrapper-reverse .y-checkbox-indeterminate, .y-switch-wrapper-reverse .y-checkbox, .y-radio-wrapper-reverse .y-checkbox, .y-checkbox-wrapper-reverse .y-checkbox {
+  float: right;
+  margin-right: -1.5rem;
+  margin-left: 0;
+}
+
+.y-checkbox-indeterminate, .y-checkbox {
+  --tblr-form-check-bg:var(--tblr-bg-forms);
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2142857143rem;
+  vertical-align: top;
+  background-color: var(--tblr-form-check-bg);
+  background-image: var(--tblr-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--tblr-border-width) var(--tblr-border-style) var(--tblr-border-color-translucent);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.y-checkbox-indeterminate, [type=checkbox].y-checkbox {
+  border-radius: var(--tblr-border-radius);
+}
+
+[type=radio].y-checkbox-indeterminate, [type=radio].y-checkbox {
+  border-radius: 50%;
+}
+
+.y-checkbox-indeterminate:active, .y-checkbox:active {
+  filter: brightness(90%);
+}
+
+.y-checkbox-indeterminate:focus, .y-checkbox:focus {
+  border-color: #90b5e2;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+}
+
+.y-checkbox-indeterminate:checked, .y-checkbox:checked {
+  background-color: var(--tblr-primary);
+  border-color: var(--tblr-border-color-translucent);
+}
+
+.y-checkbox-indeterminate:checked, .y-checkbox:checked[type=checkbox] {
+  --tblr-form-check-bg-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8.5l2.5 2.5l5.5 -5.5'/%3e%3c/svg%3e");
+}
+
+.y-checkbox-indeterminate:checked[type=radio], .y-checkbox:checked[type=radio] {
+  --tblr-form-check-bg-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle r='3' fill='%23ffffff' cx='8' cy='8' /%3e%3c/svg%3e");
+}
+
+.y-checkbox-indeterminate, [type=checkbox].y-checkbox:indeterminate {
+  background-color: #206bc4;
+  border-color: #206bc4;
+  --tblr-form-check-bg-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+
+.y-checkbox-indeterminate:disabled, .y-checkbox:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+
+.y-checkbox-indeterminate:disabled ~ .y-switch-label, .y-checkbox-indeterminate:disabled ~ .y-radio-label, .y-switch:disabled ~ .y-checkbox-label, .y-radio:disabled ~ .y-checkbox-label, .y-checkbox-indeterminate:disabled ~ .y-checkbox-label, .y-checkbox:disabled ~ .y-switch-label, .y-checkbox:disabled ~ .y-radio-label, .y-checkbox:disabled ~ .y-checkbox-label, [disabled].y-checkbox-indeterminate ~ .y-switch-label, [disabled].y-checkbox-indeterminate ~ .y-radio-label, [disabled].y-switch ~ .y-checkbox-label, [disabled].y-radio ~ .y-checkbox-label, [disabled].y-checkbox-indeterminate ~ .y-checkbox-label, [disabled].y-checkbox ~ .y-switch-label, [disabled].y-checkbox ~ .y-radio-label, [disabled].y-checkbox ~ .y-checkbox-label {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  --tblr-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23e6e7e9'/%3e%3c/svg%3e");
+  width: 2rem;
+  margin-left: -2.5rem;
+  background-image: var(--tblr-form-switch-bg);
+  background-position: left center;
+  border-radius: 2rem;
+  transition: background-position 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+    transition: none;
+  }
+}
+.y-switch-wrapper .y-checkbox-indeterminate:focus, .y-switch-wrapper .y-checkbox:focus {
+  --tblr-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2390b5e2'/%3e%3c/svg%3e");
+}
+
+.y-switch-wrapper .y-checkbox-indeterminate:checked, .y-switch-wrapper .y-checkbox:checked {
+  background-position: right center;
+  --tblr-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+}
+
+.y-checkbox-wrapper-reverse.y-switch-wrapper {
+  padding-right: 2.5rem;
+  padding-left: 0;
+}
+
+.y-switch-wrapper.y-switch-wrapper-reverse .y-checkbox-indeterminate, .y-radio-wrapper-reverse.y-switch-wrapper .y-checkbox-indeterminate, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-switch, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-radio, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper.y-switch-wrapper-reverse .y-checkbox, .y-radio-wrapper-reverse.y-switch-wrapper .y-checkbox, .y-checkbox-wrapper-reverse.y-switch-wrapper .y-checkbox {
+  margin-right: -2.5rem;
+  margin-left: 0;
+}
+
+.y-checkbox-wrapper-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+[data-bs-theme=dark] .y-switch-wrapper .y-checkbox-indeterminate:not(:checked):not(:focus), [data-bs-theme=dark] .y-switch-wrapper .y-checkbox:not(:checked):not(:focus) {
+  --tblr-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+}
+
+.y-checkbox-indeterminate.y-textarea-state-valid, .y-checkbox-indeterminate.y-select-state-valid, .y-checkbox-indeterminate.y-file-upload-state-valid, .y-checkbox-indeterminate.y-date-picker-state-valid, .y-checkbox.y-textarea-state-valid, .y-checkbox.y-select-state-valid, .y-checkbox.y-file-upload-state-valid, .y-checkbox.y-date-picker-state-valid, .y-autocomplete-state-valid.y-checkbox-indeterminate, .y-autocomplete-state-valid.y-checkbox, .y-input-state-valid.y-checkbox-indeterminate, .y-input-state-valid.y-checkbox, .y-editor-wrapper-state-valid.y-checkbox-indeterminate, .y-editor-wrapper-state-valid.y-checkbox {
+  border-color: var(--tblr-success);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-valid:checked, .y-checkbox-indeterminate.y-select-state-valid:checked, .y-checkbox-indeterminate.y-file-upload-state-valid:checked, .y-checkbox-indeterminate.y-date-picker-state-valid:checked, .y-checkbox.y-textarea-state-valid:checked, .y-checkbox.y-select-state-valid:checked, .y-checkbox.y-file-upload-state-valid:checked, .y-checkbox.y-date-picker-state-valid:checked, .y-autocomplete-state-valid.y-checkbox-indeterminate:checked, .y-autocomplete-state-valid.y-checkbox:checked, .y-input-state-valid.y-checkbox-indeterminate:checked, .y-input-state-valid.y-checkbox:checked, .y-editor-wrapper-state-valid.y-checkbox-indeterminate:checked, .y-editor-wrapper-state-valid.y-checkbox:checked {
+  background-color: var(--tblr-success-text);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-valid:focus, .y-checkbox-indeterminate.y-select-state-valid:focus, .y-checkbox-indeterminate.y-file-upload-state-valid:focus, .y-checkbox-indeterminate.y-date-picker-state-valid:focus, .y-checkbox.y-textarea-state-valid:focus, .y-checkbox.y-select-state-valid:focus, .y-checkbox.y-file-upload-state-valid:focus, .y-checkbox.y-date-picker-state-valid:focus, .y-autocomplete-state-valid.y-checkbox-indeterminate:focus, .y-autocomplete-state-valid.y-checkbox:focus, .y-input-state-valid.y-checkbox-indeterminate:focus, .y-input-state-valid.y-checkbox:focus, .y-editor-wrapper-state-valid.y-checkbox-indeterminate:focus, .y-editor-wrapper-state-valid.y-checkbox:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--tblr-success-rgb), 0.25);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-select-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-textarea-state-valid ~ .y-radio-label, .y-checkbox-indeterminate.y-select-state-valid ~ .y-radio-label, .y-checkbox-indeterminate.y-file-upload-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-file-upload-state-valid ~ .y-radio-label, .y-checkbox-indeterminate.y-date-picker-state-valid ~ .y-switch-label, .y-checkbox-indeterminate.y-date-picker-state-valid ~ .y-radio-label, .y-switch.y-textarea-state-valid ~ .y-checkbox-label, .y-select-state-valid.y-switch ~ .y-checkbox-label, .y-radio.y-textarea-state-valid ~ .y-checkbox-label, .y-radio.y-select-state-valid ~ .y-checkbox-label, .y-file-upload-state-valid.y-switch ~ .y-checkbox-label, .y-file-upload-state-valid.y-radio ~ .y-checkbox-label, .y-date-picker-state-valid.y-switch ~ .y-checkbox-label, .y-date-picker-state-valid.y-radio ~ .y-checkbox-label, .y-checkbox-indeterminate.y-textarea-state-valid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-select-state-valid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-file-upload-state-valid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-date-picker-state-valid ~ .y-checkbox-label, .y-checkbox.y-textarea-state-valid ~ .y-switch-label, .y-checkbox.y-select-state-valid ~ .y-switch-label, .y-checkbox.y-textarea-state-valid ~ .y-radio-label, .y-checkbox.y-select-state-valid ~ .y-radio-label, .y-checkbox.y-file-upload-state-valid ~ .y-switch-label, .y-checkbox.y-file-upload-state-valid ~ .y-radio-label, .y-checkbox.y-date-picker-state-valid ~ .y-switch-label, .y-checkbox.y-date-picker-state-valid ~ .y-radio-label, .y-checkbox.y-textarea-state-valid ~ .y-checkbox-label, .y-checkbox.y-select-state-valid ~ .y-checkbox-label, .y-checkbox.y-file-upload-state-valid ~ .y-checkbox-label, .y-checkbox.y-date-picker-state-valid ~ .y-checkbox-label, .y-autocomplete-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-autocomplete-state-valid.y-checkbox-indeterminate ~ .y-radio-label, .y-autocomplete-state-valid.y-switch ~ .y-checkbox-label, .y-autocomplete-state-valid.y-radio ~ .y-checkbox-label, .y-autocomplete-state-valid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-autocomplete-state-valid.y-checkbox ~ .y-switch-label, .y-autocomplete-state-valid.y-checkbox ~ .y-radio-label, .y-autocomplete-state-valid.y-checkbox ~ .y-checkbox-label, .y-input-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-input-state-valid.y-checkbox-indeterminate ~ .y-radio-label, .y-input-state-valid.y-switch ~ .y-checkbox-label, .y-input-state-valid.y-radio ~ .y-checkbox-label, .y-input-state-valid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-input-state-valid.y-checkbox ~ .y-switch-label, .y-input-state-valid.y-checkbox ~ .y-radio-label, .y-input-state-valid.y-checkbox ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-radio-label, .y-editor-wrapper-state-valid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-radio ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-radio-label, .y-editor-wrapper-state-valid.y-checkbox ~ .y-checkbox-label {
+  color: var(--tblr-success-text);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-invalid, .y-checkbox-indeterminate.y-select-state-invalid, .y-checkbox-indeterminate.y-file-upload-state-invalid, .y-checkbox-indeterminate.y-date-picker-state-invalid, .y-checkbox.y-textarea-state-invalid, .y-checkbox.y-select-state-invalid, .y-checkbox.y-file-upload-state-invalid, .y-checkbox.y-date-picker-state-invalid, .y-autocomplete-state-invalid.y-checkbox-indeterminate, .y-autocomplete-state-invalid.y-checkbox, .y-input-state-invalid.y-checkbox-indeterminate, .y-input-state-invalid.y-checkbox, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate, .y-editor-wrapper-state-invalid.y-checkbox {
+  border-color: var(--tblr-danger);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-invalid:checked, .y-checkbox-indeterminate.y-select-state-invalid:checked, .y-checkbox-indeterminate.y-file-upload-state-invalid:checked, .y-checkbox-indeterminate.y-date-picker-state-invalid:checked, .y-checkbox.y-textarea-state-invalid:checked, .y-checkbox.y-select-state-invalid:checked, .y-checkbox.y-file-upload-state-invalid:checked, .y-checkbox.y-date-picker-state-invalid:checked, .y-autocomplete-state-invalid.y-checkbox-indeterminate:checked, .y-autocomplete-state-invalid.y-checkbox:checked, .y-input-state-invalid.y-checkbox-indeterminate:checked, .y-input-state-invalid.y-checkbox:checked, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate:checked, .y-editor-wrapper-state-invalid.y-checkbox:checked {
+  background-color: var(--tblr-danger-text);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-invalid:focus, .y-checkbox-indeterminate.y-select-state-invalid:focus, .y-checkbox-indeterminate.y-file-upload-state-invalid:focus, .y-checkbox-indeterminate.y-date-picker-state-invalid:focus, .y-checkbox.y-textarea-state-invalid:focus, .y-checkbox.y-select-state-invalid:focus, .y-checkbox.y-file-upload-state-invalid:focus, .y-checkbox.y-date-picker-state-invalid:focus, .y-autocomplete-state-invalid.y-checkbox-indeterminate:focus, .y-autocomplete-state-invalid.y-checkbox:focus, .y-input-state-invalid.y-checkbox-indeterminate:focus, .y-input-state-invalid.y-checkbox:focus, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate:focus, .y-editor-wrapper-state-invalid.y-checkbox:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--tblr-danger-rgb), 0.25);
+}
+
+.y-checkbox-indeterminate.y-textarea-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-select-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-textarea-state-invalid ~ .y-radio-label, .y-checkbox-indeterminate.y-select-state-invalid ~ .y-radio-label, .y-checkbox-indeterminate.y-file-upload-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-file-upload-state-invalid ~ .y-radio-label, .y-checkbox-indeterminate.y-date-picker-state-invalid ~ .y-switch-label, .y-checkbox-indeterminate.y-date-picker-state-invalid ~ .y-radio-label, .y-switch.y-textarea-state-invalid ~ .y-checkbox-label, .y-select-state-invalid.y-switch ~ .y-checkbox-label, .y-radio.y-textarea-state-invalid ~ .y-checkbox-label, .y-radio.y-select-state-invalid ~ .y-checkbox-label, .y-file-upload-state-invalid.y-switch ~ .y-checkbox-label, .y-file-upload-state-invalid.y-radio ~ .y-checkbox-label, .y-date-picker-state-invalid.y-switch ~ .y-checkbox-label, .y-date-picker-state-invalid.y-radio ~ .y-checkbox-label, .y-checkbox-indeterminate.y-textarea-state-invalid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-select-state-invalid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-file-upload-state-invalid ~ .y-checkbox-label, .y-checkbox-indeterminate.y-date-picker-state-invalid ~ .y-checkbox-label, .y-checkbox.y-textarea-state-invalid ~ .y-switch-label, .y-checkbox.y-select-state-invalid ~ .y-switch-label, .y-checkbox.y-textarea-state-invalid ~ .y-radio-label, .y-checkbox.y-select-state-invalid ~ .y-radio-label, .y-checkbox.y-file-upload-state-invalid ~ .y-switch-label, .y-checkbox.y-file-upload-state-invalid ~ .y-radio-label, .y-checkbox.y-date-picker-state-invalid ~ .y-switch-label, .y-checkbox.y-date-picker-state-invalid ~ .y-radio-label, .y-checkbox.y-textarea-state-invalid ~ .y-checkbox-label, .y-checkbox.y-select-state-invalid ~ .y-checkbox-label, .y-checkbox.y-file-upload-state-invalid ~ .y-checkbox-label, .y-checkbox.y-date-picker-state-invalid ~ .y-checkbox-label, .y-autocomplete-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-autocomplete-state-invalid.y-checkbox-indeterminate ~ .y-radio-label, .y-autocomplete-state-invalid.y-switch ~ .y-checkbox-label, .y-autocomplete-state-invalid.y-radio ~ .y-checkbox-label, .y-autocomplete-state-invalid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-autocomplete-state-invalid.y-checkbox ~ .y-switch-label, .y-autocomplete-state-invalid.y-checkbox ~ .y-radio-label, .y-autocomplete-state-invalid.y-checkbox ~ .y-checkbox-label, .y-input-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-input-state-invalid.y-checkbox-indeterminate ~ .y-radio-label, .y-input-state-invalid.y-switch ~ .y-checkbox-label, .y-input-state-invalid.y-radio ~ .y-checkbox-label, .y-input-state-invalid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-input-state-invalid.y-checkbox ~ .y-switch-label, .y-input-state-invalid.y-checkbox ~ .y-radio-label, .y-input-state-invalid.y-checkbox ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-switch ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-radio ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox-indeterminate ~ .y-checkbox-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-switch-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-radio-label, .y-editor-wrapper-state-invalid.y-checkbox ~ .y-checkbox-label {
+  color: var(--tblr-danger-text);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+@media not print {
+  .y-app-theme-dark .y-checkbox-indeterminate:not(:checked), .y-app-theme-dark .y-checkbox:not(:checked) {
+    background-color: #1a2234;
+    color: #f8fafc;
+    border-color: #243049;
+  }
+}
+
+.y-checkbox-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.y-checkbox-indeterminate, .y-checkbox {
+  background-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  transition: background-color 0.3s, background-position 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+    transition: none;
+  }
+}
+.y-checkbox-label {
+  display: block;
+}
+
+.y-label-required.y-checkbox-label:after {
+  content: "*";
+  margin-left: 0.25rem;
+  color: #d63939;
+}
+
+.y-checkbox-description {
+  display: block;
+  color: var(--tblr-muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.y-switch-wrapper .y-checkbox-indeterminate, .y-switch-wrapper .y-checkbox {
+  height: 1.125rem;
+  margin-top: 0.0625rem;
+}
+
+.y-checkbox-indeterminate:checked, .y-checkbox:checked {
+  border: none;
+}
+
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+
+.y-checkbox-color-primary:checked {
+  background-color: #206bc4 !important;
+}
+.y-checkbox-color-secondary:checked {
+  background-color: #616876 !important;
+}
+.y-checkbox-color-success:checked {
+  background-color: #2fb344 !important;
+}
+.y-checkbox-color-info:checked {
+  background-color: #4299e1 !important;
+}
+.y-checkbox-color-warning:checked {
+  background-color: #f76707 !important;
+}
+.y-checkbox-color-danger:checked {
+  background-color: #d63939 !important;
+}
+.y-checkbox-color-light:checked {
+  background-color: #f8fafc !important;
+}
+.y-checkbox-color-dark:checked {
+  background-color: #1d273b !important;
+}
+.y-checkbox-color-muted:checked {
+  background-color: #616876 !important;
+}
+.y-checkbox-color-blue:checked {
+  background-color: #206bc4 !important;
+}
+.y-checkbox-color-azure:checked {
+  background-color: #4299e1 !important;
+}
+.y-checkbox-color-indigo:checked {
+  background-color: #4263eb !important;
+}
+.y-checkbox-color-purple:checked {
+  background-color: #ae3ec9 !important;
+}
+.y-checkbox-color-pink:checked {
+  background-color: #d6336c !important;
+}
+.y-checkbox-color-red:checked {
+  background-color: #d63939 !important;
+}
+.y-checkbox-color-orange:checked {
+  background-color: #f76707 !important;
+}
+.y-checkbox-color-yellow:checked {
+  background-color: #f59f00 !important;
+}
+.y-checkbox-color-lime:checked {
+  background-color: #74b816 !important;
+}
+.y-checkbox-color-green:checked {
+  background-color: #2fb344 !important;
+}
+.y-checkbox-color-teal:checked {
+  background-color: #0ca678 !important;
+}
+.y-checkbox-color-cyan:checked {
+  background-color: #17a2b8 !important;
+}
+.y-checkbox-color-facebook:checked {
+  background-color: #1877F2 !important;
+}
+.y-checkbox-color-twitter:checked {
+  background-color: #1da1f2 !important;
+}
+.y-checkbox-color-linkedin:checked {
+  background-color: #0a66c2 !important;
+}
+.y-checkbox-color-google:checked {
+  background-color: #dc4e41 !important;
+}
+.y-checkbox-color-youtube:checked {
+  background-color: #ff0000 !important;
+}
+.y-checkbox-color-vimeo:checked {
+  background-color: #1ab7ea !important;
+}
+.y-checkbox-color-dribbble:checked {
+  background-color: #ea4c89 !important;
+}
+.y-checkbox-color-github:checked {
+  background-color: #181717 !important;
+}
+.y-checkbox-color-instagram:checked {
+  background-color: #e4405f !important;
+}
+.y-checkbox-color-pinterest:checked {
+  background-color: #bd081c !important;
+}
+.y-checkbox-color-vk:checked {
+  background-color: #6383a8 !important;
+}
+.y-checkbox-color-rss:checked {
+  background-color: #ffa500 !important;
+}
+.y-checkbox-color-flickr:checked {
+  background-color: #0063dc !important;
+}
+.y-checkbox-color-bitbucket:checked {
+  background-color: #0052cc !important;
+}
+.y-checkbox-color-tabler:checked {
+  background-color: #206bc4 !important;
+}
+.y-checkbox-description-color-primary {
+  color: #206bc4 !important;
+}
+.y-checkbox-description-color-secondary {
+  color: #616876 !important;
+}
+.y-checkbox-description-color-success {
+  color: #2fb344 !important;
+}
+.y-checkbox-description-color-info {
+  color: #4299e1 !important;
+}
+.y-checkbox-description-color-warning {
+  color: #f76707 !important;
+}
+.y-checkbox-description-color-danger {
+  color: #d63939 !important;
+}
+.y-checkbox-description-color-light {
+  color: #f8fafc !important;
+}
+.y-checkbox-description-color-dark {
+  color: #1d273b !important;
+}
+.y-checkbox-description-color-muted {
+  color: #616876 !important;
+}
+.y-checkbox-description-color-blue {
+  color: #206bc4 !important;
+}
+.y-checkbox-description-color-azure {
+  color: #4299e1 !important;
+}
+.y-checkbox-description-color-indigo {
+  color: #4263eb !important;
+}
+.y-checkbox-description-color-purple {
+  color: #ae3ec9 !important;
+}
+.y-checkbox-description-color-pink {
+  color: #d6336c !important;
+}
+.y-checkbox-description-color-red {
+  color: #d63939 !important;
+}
+.y-checkbox-description-color-orange {
+  color: #f76707 !important;
+}
+.y-checkbox-description-color-yellow {
+  color: #f59f00 !important;
+}
+.y-checkbox-description-color-lime {
+  color: #74b816 !important;
+}
+.y-checkbox-description-color-green {
+  color: #2fb344 !important;
+}
+.y-checkbox-description-color-teal {
+  color: #0ca678 !important;
+}
+.y-checkbox-description-color-cyan {
+  color: #17a2b8 !important;
+}
+.y-checkbox-description-color-facebook {
+  color: #1877F2 !important;
+}
+.y-checkbox-description-color-twitter {
+  color: #1da1f2 !important;
+}
+.y-checkbox-description-color-linkedin {
+  color: #0a66c2 !important;
+}
+.y-checkbox-description-color-google {
+  color: #dc4e41 !important;
+}
+.y-checkbox-description-color-youtube {
+  color: #ff0000 !important;
+}
+.y-checkbox-description-color-vimeo {
+  color: #1ab7ea !important;
+}
+.y-checkbox-description-color-dribbble {
+  color: #ea4c89 !important;
+}
+.y-checkbox-description-color-github {
+  color: #181717 !important;
+}
+.y-checkbox-description-color-instagram {
+  color: #e4405f !important;
+}
+.y-checkbox-description-color-pinterest {
+  color: #bd081c !important;
+}
+.y-checkbox-description-color-vk {
+  color: #6383a8 !important;
+}
+.y-checkbox-description-color-rss {
+  color: #ffa500 !important;
+}
+.y-checkbox-description-color-flickr {
+  color: #0063dc !important;
+}
+.y-checkbox-description-color-bitbucket {
+  color: #0052cc !important;
+}
+.y-checkbox-description-color-tabler {
+  color: #206bc4 !important;
+}

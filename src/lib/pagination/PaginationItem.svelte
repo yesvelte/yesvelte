@@ -1,3 +1,4 @@
+<!-- @css:pagination -->
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte'
 	import { El, type ElProps } from '../el'

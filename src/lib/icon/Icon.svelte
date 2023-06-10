@@ -1,3 +1,4 @@
+<!-- @css:icon -->
 <script context="module">
 	import { appendCustomStyle } from 'iconify-icon'
 

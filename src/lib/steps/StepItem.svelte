@@ -1,3 +1,4 @@
+<!-- @css:step-item -->
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { getContext, onMount } from 'svelte'

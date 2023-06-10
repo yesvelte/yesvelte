@@ -1,17 +1,19 @@
+@import '../base';
+
 //
 // Select
 //
 
 $props: (
-	null: '.form-select',
+	null: '%form-select',
 	size: (
-		sm: '.form-select-sm',
-		md: '.form-select',
-		lg: '.form-select-lg'
+		sm: '%form-select-sm',
+		md: '%form-select',
+		lg: '%form-select-lg'
 	),
 	state: (
-		valid: '.is-valid',
-		invalid: '.is-invalid'
+		valid: '%is-valid',
+		invalid: '%is-invalid'
 	)
 );
 

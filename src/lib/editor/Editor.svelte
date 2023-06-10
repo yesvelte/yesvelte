@@ -1,3 +1,5 @@
+	<!-- @css:editor -->
+
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte'
 	import type { Quill, QuillOptionsStatic } from 'quill'
@@ -7,6 +9,7 @@
 	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = EditorProps
+
 
 	export let componentName: $$Props['componentName'] = 'editor'
 	export let value: $$Props['value'] = undefined

@@ -1,0 +1,469 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+.y-status {
+  --y-status-height: 1.5rem;
+  --y-status-color: #616876;
+  --y-status-color-rgb: 97, 104, 118;
+  display: inline-flex;
+  align-items: center;
+  height: var(--y-status-height);
+  padding: 0.25rem 0.75rem;
+  gap: 0.5rem;
+  color: var(--y-status-color);
+  background: rgba(var(--y-status-color-rgb), 0.1);
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: normal;
+  border-radius: 100rem;
+  font-weight: var(--y-font-weight-medium);
+  line-height: 1;
+  margin: 0;
+}
+
+.y-status .y-dot {
+  background: var(--y-status-color);
+}
+
+.y-status .y-icon {
+  font-size: 1.25rem;
+}
+
+.y-status-lite {
+  border: var(--y-border-width) var(--y-border-style) var(--y-border-color) !important;
+  background: transparent !important;
+  color: var(--y-body-color) !important;
+}
+
+.y-status-color-primary {
+  --y-status-color: #206bc4;
+  --y-status-color-rgb: 32, 107, 196;
+}
+
+.y-status-color-secondary {
+  --y-status-color: #616876;
+  --y-status-color-rgb: 97, 104, 118;
+}
+
+.y-status-color-success {
+  --y-status-color: #2fb344;
+  --y-status-color-rgb: 47, 179, 68;
+}
+
+.y-status-color-info {
+  --y-status-color: #4299e1;
+  --y-status-color-rgb: 66, 153, 225;
+}
+
+.y-status-color-warning {
+  --y-status-color: #f76707;
+  --y-status-color-rgb: 247, 103, 7;
+}
+
+.y-status-color-danger {
+  --y-status-color: #d63939;
+  --y-status-color-rgb: 214, 57, 57;
+}
+
+.y-status-color-light {
+  --y-status-color: #f8fafc;
+  --y-status-color-rgb: 248, 250, 252;
+}
+
+.y-status-color-dark {
+  --y-status-color: #1d273b;
+  --y-status-color-rgb: 29, 39, 59;
+}
+
+.y-status-color-muted {
+  --y-status-color: #616876;
+  --y-status-color-rgb: 97, 104, 118;
+}
+
+.y-status-color-blue {
+  --y-status-color: #206bc4;
+  --y-status-color-rgb: 32, 107, 196;
+}
+
+.y-status-color-azure {
+  --y-status-color: #4299e1;
+  --y-status-color-rgb: 66, 153, 225;
+}
+
+.y-status-color-indigo {
+  --y-status-color: #4263eb;
+  --y-status-color-rgb: 66, 99, 235;
+}
+
+.y-status-color-purple {
+  --y-status-color: #ae3ec9;
+  --y-status-color-rgb: 174, 62, 201;
+}
+
+.y-status-color-pink {
+  --y-status-color: #d6336c;
+  --y-status-color-rgb: 214, 51, 108;
+}
+
+.y-status-color-red {
+  --y-status-color: #d63939;
+  --y-status-color-rgb: 214, 57, 57;
+}
+
+.y-status-color-orange {
+  --y-status-color: #f76707;
+  --y-status-color-rgb: 247, 103, 7;
+}
+
+.y-status-color-yellow {
+  --y-status-color: #f59f00;
+  --y-status-color-rgb: 245, 159, 0;
+}
+
+.y-status-color-lime {
+  --y-status-color: #74b816;
+  --y-status-color-rgb: 116, 184, 22;
+}
+
+.y-status-color-green {
+  --y-status-color: #2fb344;
+  --y-status-color-rgb: 47, 179, 68;
+}
+
+.y-status-color-teal {
+  --y-status-color: #0ca678;
+  --y-status-color-rgb: 12, 166, 120;
+}
+
+.y-status-color-cyan {
+  --y-status-color: #17a2b8;
+  --y-status-color-rgb: 23, 162, 184;
+}
+
+.y-status-color-facebook {
+  --y-status-color: #1877F2;
+  --y-status-color-rgb: 24, 119, 242;
+}
+
+.y-status-color-twitter {
+  --y-status-color: #1da1f2;
+  --y-status-color-rgb: 29, 161, 242;
+}
+
+.y-status-color-linkedin {
+  --y-status-color: #0a66c2;
+  --y-status-color-rgb: 10, 102, 194;
+}
+
+.y-status-color-google {
+  --y-status-color: #dc4e41;
+  --y-status-color-rgb: 220, 78, 65;
+}
+
+.y-status-color-youtube {
+  --y-status-color: #ff0000;
+  --y-status-color-rgb: 255, 0, 0;
+}
+
+.y-status-color-vimeo {
+  --y-status-color: #1ab7ea;
+  --y-status-color-rgb: 26, 183, 234;
+}
+
+.y-status-color-dribbble {
+  --y-status-color: #ea4c89;
+  --y-status-color-rgb: 234, 76, 137;
+}
+
+.y-status-color-github {
+  --y-status-color: #181717;
+  --y-status-color-rgb: 24, 23, 23;
+}
+
+.y-status-color-instagram {
+  --y-status-color: #e4405f;
+  --y-status-color-rgb: 228, 64, 95;
+}
+
+.y-status-color-pinterest {
+  --y-status-color: #bd081c;
+  --y-status-color-rgb: 189, 8, 28;
+}
+
+.y-status-color-vk {
+  --y-status-color: #6383a8;
+  --y-status-color-rgb: 99, 131, 168;
+}
+
+.y-status-color-rss {
+  --y-status-color: #ffa500;
+  --y-status-color-rgb: 255, 165, 0;
+}
+
+.y-status-color-flickr {
+  --y-status-color: #0063dc;
+  --y-status-color-rgb: 0, 99, 220;
+}
+
+.y-status-color-bitbucket {
+  --y-status-color: #0052cc;
+  --y-status-color-rgb: 0, 82, 204;
+}
+
+.y-status-color-tabler {
+  --y-status-color: #206bc4;
+  --y-status-color-rgb: 32, 107, 196;
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

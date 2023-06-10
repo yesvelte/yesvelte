@@ -1,9 +1,11 @@
+@import '../base';
+
 //
 // Stamp
 //
 
 $props: (
-	null: '.card-stamp'
+	null: '%card-stamp'
 );
 
 $card-stamp-sizes: (
@@ -16,7 +18,7 @@ $card-stamp-sizes: (
 	@include apply-props($props);
 
 	> .icon {
-		@extend .card-stamp-icon;
+		@extend %card-stamp-icon;
 	}
 
 	@each $key, $value in $card-stamp-sizes {
@@ -27,11 +29,11 @@ $card-stamp-sizes: (
 
 	@each $key, $value in $theme-colors {
 		&-bg-color-#{$key} > .icon {
-			@extend .bg-#{$key};
+			@extend %bg-#{$key};
 		}
 
 		&-text-color-#{$key} > .icon {
-			@extend .text-#{$key};
+			@extend %text-#{$key};
 		}
 	}
 

@@ -1,14 +1,16 @@
+@import '../base';
+
 $offcanvas-placements: 'start' 'end' 'top' 'bottom';
 
 $props: (
-	null: '.offcanvas',
-	placement: generate_props($offcanvas-placements, ('.offcanvas-')),
+	null: '%offcanvas',
+	placement: generate_props($offcanvas-placements, ('%offcanvas-')),
 	header: (
-		null: '.offcanvas-header',
-		btn: '.btn-close',
-		title: '.offcanvas-title'
+		null: '%offcanvas-header',
+		btn: '%btn-close',
+		title: '%offcanvas-title'
 	),
-	body: '.offcanvas-body'
+	body: '%offcanvas-body'
 );
 
 .#{$prefix-offcanvas} {

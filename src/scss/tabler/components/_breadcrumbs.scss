@@ -1,3 +1,5 @@
+@import '../base';
+
 $breadcrumb-variants: (
 	dots: '·',
 	arrows: '›',
@@ -5,12 +7,12 @@ $breadcrumb-variants: (
 ) !default;
 
 $breadcrumb-props: (
-	null: '.breadcrumb',
+	null: '%breadcrumb',
 	item: (
-		null: '.breadcrumb-item',
-		active: '.active'
+		null: '%breadcrumb-item',
+		active: '%active'
 	),
-	separator: generate_props($breadcrumb-variants, '.breadcrumb-')
+	separator: generate_props($breadcrumb-variants, '%breadcrumb-')
 );
 
 .#{$prefix-breadcrumb} {

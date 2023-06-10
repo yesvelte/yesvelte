@@ -1,3 +1,4 @@
+<!-- @css:form-field -->
 <script lang="ts">
 	import FormField from './FormField.svelte'
 	import { Textarea } from '../textarea'

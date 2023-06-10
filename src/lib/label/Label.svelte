@@ -1,9 +1,12 @@
+	<!-- @css:label -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { LabelProps } from './Label.types'
 
 	type $$Props = LabelProps
+
 
 	export let componentName: $$Props['componentName'] = 'label'
 	export let required: $$Props['required'] = undefined

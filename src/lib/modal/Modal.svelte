@@ -1,3 +1,4 @@
+<!-- @css:modal -->
 <script lang="ts">
 	import { classname } from '../internal'
 	import { createEventDispatcher } from 'svelte'

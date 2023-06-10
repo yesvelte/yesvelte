@@ -1,3 +1,4 @@
+<!-- @css:navbar -->
 <script lang="ts">
 	import { Icon } from '../icon'
 	import { El, type ElProps } from '../el'

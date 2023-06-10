@@ -1,3 +1,4 @@
+<!-- @css:card -->
 <script lang="ts">
 	import { El } from '../el'
 	import CardHeader from './CardHeader.svelte'

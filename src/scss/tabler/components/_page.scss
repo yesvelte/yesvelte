@@ -1,8 +1,10 @@
+@import '../base';
+
 //
 // Page
 //
 $page-props: (
-	null: '.page-wrapper'
+	null: '%page-wrapper'
 );
 
 .#{$prefix-page} {
@@ -13,7 +15,7 @@ $page-props: (
 // Page Body
 //
 $page-body-props: (
-	null: '.page-body'
+	null: '%page-body'
 );
 
 .#{$prefix-page-body} {
@@ -24,9 +26,9 @@ $page-body-props: (
 // Page Header
 //
 $page-header-props: (
-	null: '.page-header',
-	title: '.page-title',
-	pretitle: '.page-pretitle'
+	null: '%page-header',
+	title: '%page-title',
+	pretitle: '%page-pretitle'
 );
 
 .#{$prefix-page-header} {

@@ -1,7 +1,10 @@
+	<!-- @css:textarea -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TextareaProps } from './Textarea.types'
+
 
 	type $$Props = TextareaProps
 

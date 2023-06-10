@@ -1,9 +1,12 @@
-<script lang="ts">
+	<!-- @css:breadcrumbs -->
+	<script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { BreadcrumbProps } from './Breadcrumb.types'
 
 	type $$Props = BreadcrumbProps
+
+
 
 	export let componentName: $$Props['componentName'] = 'breadcrumb'
 	export let separator: $$Props['separator'] = undefined

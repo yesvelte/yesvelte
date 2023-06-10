@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-accordions {
+  --y-accordion-color: var(--y-body-color);
+  --y-accordion-bg: transparent;
+  --y-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --y-accordion-border-color: var(--y-border-color-translucent);
+  --y-accordion-border-width: var(--y-border-width);
+  --y-accordion-border-radius: var(--y-border-radius);
+  --y-accordion-inner-border-radius: calc(var(--y-border-radius) - (var(--y-border-width)));
+  --y-accordion-btn-padding-x: 1.25rem;
+  --y-accordion-btn-padding-y: 1rem;
+  --y-accordion-btn-color: var(--y-body-color);
+  --y-accordion-btn-bg: transparent;
+  --y-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d273b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --y-accordion-btn-icon-width: 1rem;
+  --y-accordion-btn-icon-transform: rotate(-180deg);
+  --y-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --y-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231a569d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --y-accordion-btn-focus-border-color: var(--y-border-color-translucent);
+  --y-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+  --y-accordion-body-padding-x: 1.25rem;
+  --y-accordion-body-padding-y: 1rem;
+  --y-accordion-active-color: inherit;
+  --y-accordion-active-bg: transparent;
+}
+
+.y-accordion-header-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--y-accordion-btn-padding-y) var(--y-accordion-btn-padding-x);
+  font-size: 0.875rem;
+  color: var(--y-accordion-btn-color);
+  text-align: left;
+  background-color: var(--y-accordion-btn-bg);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--y-accordion-transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-accordion-header-button {
+    transition: none;
+  }
+}
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed) {
+  color: var(--y-accordion-active-color);
+  background-color: var(--y-accordion-active-bg);
+  box-shadow: inset 0 calc(-1 * var(--y-accordion-border-width)) 0 var(--y-accordion-border-color);
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed)::after {
+  background-image: var(--y-accordion-btn-active-icon);
+  transform: var(--y-accordion-btn-icon-transform);
+}
+
+.y-accordion-header-button::after {
+  flex-shrink: 0;
+  width: var(--y-accordion-btn-icon-width);
+  height: var(--y-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--y-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--y-accordion-btn-icon-width);
+  transition: var(--y-accordion-btn-icon-transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-accordion-header-button::after {
+    transition: none;
+  }
+}
+.y-accordion-header-button:hover {
+  z-index: 2;
+}
+
+.y-accordion-header-button:focus {
+  z-index: 3;
+  border-color: var(--y-accordion-btn-focus-border-color);
+  outline: 0;
+  box-shadow: var(--y-accordion-btn-focus-box-shadow);
+}
+
+.y-accordion {
+  color: var(--y-accordion-color);
+  background-color: var(--y-accordion-bg);
+  border: var(--y-accordion-border-width) solid var(--y-accordion-border-color);
+}
+
+.y-accordion:first-of-type {
+  border-top-left-radius: var(--y-accordion-border-radius);
+  border-top-right-radius: var(--y-accordion-border-radius);
+}
+
+.y-accordion:first-of-type .y-accordion-header-button {
+  border-top-left-radius: var(--y-accordion-inner-border-radius);
+  border-top-right-radius: var(--y-accordion-inner-border-radius);
+}
+
+.y-accordion:not(:first-of-type) {
+  border-top: 0;
+}
+
+.y-accordion:last-of-type {
+  border-bottom-right-radius: var(--y-accordion-border-radius);
+  border-bottom-left-radius: var(--y-accordion-border-radius);
+}
+
+.y-accordion:last-of-type .y-accordion-header-button.y-accordion-header-button-collapsed {
+  border-bottom-right-radius: var(--y-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--y-accordion-inner-border-radius);
+}
+
+.y-accordion-body-inner {
+  padding: var(--y-accordion-body-padding-y) var(--y-accordion-body-padding-x);
+}
+
+[data-bs-theme=dark] .y-accordion-header-button::after {
+  --y-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --y-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2379a6dc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+@media not print {
+  .y-app-theme-dark .y-accordion-header-button {
+    color: inherit;
+  }
+  .y-app-theme-dark .y-accordion-header-button:after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+}
+.y-accordions {
+  --y-accordion-color: var(--y-body-color);
+}
+
+.y-accordion-header-button:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.y-accordion-header-button:after {
+  opacity: 0.7;
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed) {
+  font-weight: var(--y-font-weight-bold);
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.y-accordion-header-button:not(.y-accordion-header-button-collapsed):after {
+  opacity: 1;
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+.y-accordion-header-show-opened button::after {
+  transform: none !important;
+}
+.y-accordion-header-show-closed button::after {
+  opacity: 1 !important;
+  background-image: var(--y-accordion-btn-active-icon) !important;
+  transform: var(--y-accordion-btn-icon-transform) !important;
+}
+
+.y-accordion-body {
+  --show-config: height;
+}
+.y-accordion-body-show-open, .y-accordion-body-show-close {
+  overflow: hidden;
+}
+.y-accordion-body-show-opening, .y-accordion-body-show-closing {
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.y-accordion-body-show-closed {
+  overflow: hidden;
+  max-height: 0;
+}
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

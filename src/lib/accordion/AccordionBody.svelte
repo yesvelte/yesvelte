@@ -1,3 +1,5 @@
+<!-- @css:accordion -->
+
 <script lang="ts">
 	import { getContext } from 'svelte'
 	import { El, type ElProps } from '../el'

@@ -1,3 +1,5 @@
+@import '../base';
+
 //
 // Ribbon
 //
@@ -5,9 +7,9 @@
 $ribbonPositions: 'top' 'start' 'bottom' 'end';
 
 $props: (
-	null: '.ribbon',
-	bg-color: generate_props($theme_colors, ('.bg-')),
-	element-position: generate_props($ribbonPositions, ('.ribbon-'))
+	null: '%ribbon',
+	bg-color: generate_props($theme_colors, ('%bg-')),
+	element-position: generate_props($ribbonPositions, ('%ribbon-'))
 );
 
 .#{$prefix-ribbon} {

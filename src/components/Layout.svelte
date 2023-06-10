@@ -13,6 +13,7 @@
 	import SidebarNavigations from '$components/SidebarNavigations.svelte'
 	import Logo from '$components/Logo.svelte'
 	import { browser } from '$app/environment'
+	import '$lib/css/tabler.min.css'
 
 	let dark: boolean = false
 	let theme: 'tabler' | 'daisyui' = 'tabler'

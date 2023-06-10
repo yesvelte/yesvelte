@@ -1,0 +1,710 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-slider {
+  width: 100%;
+  height: 1.25rem;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+}
+
+.y-slider:focus {
+  outline: 0;
+}
+
+.y-slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #f1f5f9, 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+}
+
+.y-slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #f1f5f9, 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+}
+
+.y-slider::-moz-focus-outer {
+  border: 0;
+}
+
+.y-slider::-webkit-slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.375rem;
+  background-color: var(--y-primary);
+  border: 2px var(--y-border-style) #ffffff;
+  border-radius: 1rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-slider::-webkit-slider-thumb {
+    transition: none;
+  }
+}
+.y-slider::-webkit-slider-thumb:active {
+  background-color: #bcd3ed;
+}
+
+.y-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.25rem;
+  color: transparent;
+  cursor: pointer;
+  background-color: var(--y-border-color);
+  border-color: transparent;
+  border-radius: 1rem;
+}
+
+.y-slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--y-primary);
+  border: 2px var(--y-border-style) #ffffff;
+  border-radius: 1rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .y-slider::-moz-range-thumb {
+    transition: none;
+  }
+}
+.y-slider::-moz-range-thumb:active {
+  background-color: #bcd3ed;
+}
+
+.y-slider::-moz-range-track {
+  width: 100%;
+  height: 0.25rem;
+  color: transparent;
+  cursor: pointer;
+  background-color: var(--y-border-color);
+  border-color: transparent;
+  border-radius: 1rem;
+}
+
+.y-slider:disabled {
+  pointer-events: none;
+}
+
+.y-slider:disabled::-webkit-slider-thumb {
+  background-color: var(--y-secondary-color);
+}
+
+.y-slider:disabled::-moz-range-thumb {
+  background-color: var(--y-secondary-color);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+.y-slider-color-primary {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-secondary {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-success {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-info {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-warning {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-danger {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-light {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-dark {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-muted {
+  --y-text-opacity: 1;
+  color: #616876 !important;
+}
+
+.y-slider-color-blue {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-azure {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-indigo {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-purple {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-pink {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-red {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-orange {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-yellow {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-lime {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-green {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-teal {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-cyan {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-facebook {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-twitter {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-linkedin {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-google {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-youtube {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-vimeo {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-dribbble {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-github {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-instagram {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-pinterest {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-vk {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-rss {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-flickr {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-bitbucket {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-tabler {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
+}
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+.y-slider-color-primary {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-secondary {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-success {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-info {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-warning {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-danger {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-light {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-dark {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-muted {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-muted-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-blue {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-azure {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-indigo {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-purple {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-pink {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-red {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-orange {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-yellow {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-lime {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-green {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-teal {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-cyan {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-facebook {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-twitter {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-linkedin {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-google {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-youtube {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-vimeo {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-dribbble {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-github {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-instagram {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-pinterest {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-vk {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-rss {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-flickr {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-bitbucket {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
+}
+
+.y-slider-color-tabler {
+  --y-text-opacity: 1;
+  color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
+}
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-button-group-size-lg > .y-button {
+  --y-btn-padding-y: 0.5rem;
+  --y-btn-padding-x: 0.75rem;
+  --y-btn-font-size: 1.25rem;
+  --y-btn-border-radius: 8px;
+}
+
+.y-button-group-size-sm > .y-button {
+  --y-btn-padding-y: 0.125rem;
+  --y-btn-padding-x: 0.25rem;
+  --y-btn-font-size: 0.75rem;
+  --y-btn-border-radius: 2px;
+}
+
+.y-button-group:not(.y-button-group-vertical),
+.y-button-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button,
+.y-button-group-vertical > .y-button {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:hover,
+.y-button-group:not(.y-button-group-vertical) > .y-button:focus,
+.y-button-group:not(.y-button-group-vertical) > .y-button:active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active,
+.y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button,
+.y-button-group-vertical > .y-button:hover,
+.y-button-group-vertical > .y-button:focus,
+.y-button-group-vertical > .y-button:active,
+.y-button-group-vertical > .y-button.y-tab-item-link-active,
+.y-button-group-vertical > .y-button.y-tab-pane,
+.y-button-group-vertical > .y-button.y-step-item-active,
+.y-button-group-vertical > .y-button.y-sidebar-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-navbar-item-active,
+.y-button-group-vertical > .y-button.y-dropdown-item-active,
+.y-button-group-vertical > .y-button.y-button-active,
+.y-button-group-vertical > .y-breadcrumb-item-active.y-button,
+.y-button-group-vertical > .y-avatar-active.y-button {
+  z-index: 1;
+}
+
+.y-button-group:not(.y-button-group-vertical) {
+  border-radius: var(--y-border-radius);
+}
+
+.y-button-group:not(.y-button-group-vertical) > * + .y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical) {
+  margin-left: calc(var(--y-border-width) * -1);
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown),
+.y-dropdown-split .y-dropdown-target.y-button-group:not(.y-button-group-vertical) > .y-button:first-child,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:nth-child(n+3),
+.y-button-group:not(.y-button-group-vertical) > * + .y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-dropdown-split .y-dropdown-target.y-button-group-size-sm > .y-button + * {
+  padding-right: 0.1875rem;
+  padding-left: 0.1875rem;
+}
+
+.y-dropdown-split .y-dropdown-target.y-button-group-size-lg > .y-button + * {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+
+.y-button-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.y-button-group-vertical > .y-button,
+.y-button-group-vertical > .y-button-group:not(.y-button-group-vertical) {
+  width: 100%;
+}
+
+.y-button-group-vertical > .y-button:not(:first-child),
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical) {
+  margin-top: calc(var(--y-border-width) * -1);
+}
+
+.y-button-group-vertical > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown),
+.y-button-group-vertical > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-button-group-vertical > .y-button ~ .y-button,
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+.y-button-group-size-sm > .y-button {
+  --y-btn-line-height: 1.5;
+  --y-btn-icon-size: .75rem;
+}
+
+.y-button-group-size-lg > .y-button {
+  --y-btn-line-height: 1.5;
+  --y-btn-icon-size: 2rem;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active,
+.y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active,
+.y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button,
+.y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button,
+.y-button-group-vertical > .y-button:active,
+.y-button-group-vertical > .y-button.y-tab-item-link-active,
+.y-button-group-vertical > .y-button.y-tab-pane,
+.y-button-group-vertical > .y-button.y-step-item-active,
+.y-button-group-vertical > .y-button.y-sidebar-item-active,
+.y-button-group-vertical > .y-button.y-pagination-item-active,
+.y-button-group-vertical > .y-button.y-navbar-item-active,
+.y-button-group-vertical > .y-button.y-dropdown-item-active,
+.y-button-group-vertical > .y-button.y-button-active,
+.y-button-group-vertical > .y-breadcrumb-item-active.y-button,
+.y-button-group-vertical > .y-avatar-active.y-button {
+  z-index: 5;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button:hover,
+.y-button-group:not(.y-button-group-vertical) > .y-button:focus,
+.y-button-group-vertical > .y-button:hover,
+.y-button-group-vertical > .y-button:focus {
+  z-index: 1;
+}
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

@@ -1,3 +1,5 @@
+@import '../base';
+
 @import 'quill/dist/quill.snow';
 
 .#{$prefix-editor} {
@@ -26,11 +28,11 @@
 		}
 
 		&-state-valid {
-			@extend .is-valid;
+			@extend %is-valid;
 		}
 
 		&-state-invalid {
-			@extend .is-invalid;
+			@extend %is-invalid;
 		}
 
 		.ql-toolbar.ql-snow {

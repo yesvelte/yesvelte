@@ -1,11 +1,13 @@
+@import '../base';
+
 //
 // App
 //
 $app-props: (
-	null: '.page',
+	null: '%page',
 	theme: (
-		dark: '.theme-dark',
-		light: '.theme-light'
+		dark: '%theme-dark',
+		light: '%theme-light'
 	)
 );
 
@@ -17,7 +19,7 @@ $app-props: (
 // App Body
 //
 $app-body-props: (
-	null: '.page-wrapper'
+	null: '%page-wrapper'
 );
 
 .#{$prefix-app-body} {
@@ -28,10 +30,10 @@ $app-body-props: (
 // App Header
 //
 $app-header-props: (
-	null: '.navbar' '.navbar-expand-md' '.d-print-none',
+	null: '%navbar' '%navbar-expand-md' '%d-print-none',
 	theme: (
-		dark: '.navbar-dark',
-		light: '.navbar-light'
+		dark: '%navbar-dark',
+		light: '%navbar-light'
 	)
 );
 
@@ -43,7 +45,7 @@ $app-header-props: (
 // App Footer
 //
 $app-footer-props: (
-	null: '.footer' '.footer-transparent' '.d-print-none'
+	null: '%footer' '%footer-transparent' '%d-print-none'
 );
 
 .#{$prefix-app-footer} {

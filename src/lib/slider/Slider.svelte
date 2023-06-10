@@ -1,3 +1,4 @@
+<!-- @css:slider -->
 <script lang="ts">
 	import { onDestroy, setContext } from 'svelte'
 	import { onMount } from 'svelte'

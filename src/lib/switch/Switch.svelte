@@ -1,8 +1,11 @@
+	<!-- @css:switch -->
+
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { SwitchProps } from './Switch.types'
+
 
 	type $$Props = SwitchProps
 

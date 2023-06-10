@@ -1,3 +1,4 @@
+<!-- @css:offcanvas -->
 <script lang="ts">
 	import { onMount, setContext, createEventDispatcher } from 'svelte'
 	import { El } from '../el'

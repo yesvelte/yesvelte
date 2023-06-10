@@ -1,3 +1,4 @@
+<!-- @css:select -->
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'

@@ -1,7 +1,10 @@
+	<!-- @css:table -->
+
 <script lang="ts">
 	import { El } from '../el'
 	import { get_current_component } from 'svelte/internal'
 	import type { TableProps } from './Table.types'
+
 
 	type $$Props = TableProps
 

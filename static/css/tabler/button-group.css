@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/*!
+* Tabler v1.0.0-beta17 (https://tabler.io)
+* @version 1.0.0-beta17
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+*/
+
+.y-button-group-size-lg > .y-button {
+  --tblr-btn-padding-y:0.5rem;
+  --tblr-btn-padding-x:0.75rem;
+  --tblr-btn-font-size:1.25rem;
+  --tblr-btn-border-radius:8px;
+}
+
+.y-button-group-size-sm > .y-button {
+  --tblr-btn-padding-y:0.125rem;
+  --tblr-btn-padding-x:0.25rem;
+  --tblr-btn-font-size:0.75rem;
+  --tblr-btn-border-radius:2px;
+}
+
+.y-button-group:not(.y-button-group-vertical), .y-button-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.y-button-group-vertical > .y-button, .y-button-group:not(.y-button-group-vertical) > .y-button {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.y-button-group-vertical > .y-button.y-tab-item-link-active, .y-button-group-vertical > .y-button.y-tab-pane, .y-button-group-vertical > .y-button.y-step-item-active, .y-button-group-vertical > .y-button.y-sidebar-item-active, .y-button-group-vertical > .y-button.y-pagination-item-active, .y-button-group-vertical > .y-button.y-navbar-item-active, .y-button-group-vertical > .y-button.y-dropdown-item-active, .y-button-group-vertical > .y-button.y-button-active, .y-button-group-vertical > .y-breadcrumb-item-active.y-button, .y-button-group-vertical > .y-avatar-active.y-button, .y-button-group-vertical > .y-button:active, .y-button-group-vertical > .y-button:focus, .y-button-group-vertical > .y-button:hover, .y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane, .y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active, .y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-button:active, .y-button-group:not(.y-button-group-vertical) > .y-button:focus, .y-button-group:not(.y-button-group-vertical) > .y-button:hover {
+  z-index: 1;
+}
+
+.y-button-group:not(.y-button-group-vertical) {
+  border-radius: var(--tblr-border-radius);
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical), .y-button-group:not(.y-button-group-vertical) > * + .y-button {
+  margin-left: calc(var(--tblr-border-width) * -1);
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button, .y-dropdown-split .y-dropdown-target.y-button-group:not(.y-button-group-vertical) > .y-button:first-child, .y-button-group:not(.y-button-group-vertical) > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.y-button-group:not(.y-button-group-vertical) > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button, .y-button-group:not(.y-button-group-vertical) > .y-button:nth-child(n+3), .y-button-group:not(.y-button-group-vertical) > * + .y-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-dropdown-split .y-dropdown-target.y-button-group-size-sm > .y-button + * {
+  padding-right: 0.1875rem;
+  padding-left: 0.1875rem;
+}
+
+.y-dropdown-split .y-dropdown-target.y-button-group-size-lg > .y-button + * {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+
+.y-button-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.y-button-group-vertical > .y-button, .y-button-group-vertical > .y-button-group:not(.y-button-group-vertical) {
+  width: 100%;
+}
+
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical), .y-button-group-vertical > .y-button:not(:first-child) {
+  margin-top: calc(var(--tblr-border-width) * -1);
+}
+
+.y-button-group-vertical > .y-button-group:not(:last-child):not(.y-button-group-vertical) > .y-button, .y-button-group-vertical > .y-button:not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown) {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.y-button-group-vertical > .y-button-group:not(:first-child):not(.y-button-group-vertical) > .y-button, .y-button-group-vertical > .y-button ~ .y-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@keyframes progress-bar-stripes {
+}
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+.y-button-group-size-sm > .y-button {
+  --tblr-btn-line-height:1.5;
+  --tblr-btn-icon-size:.75rem;
+}
+
+.y-button-group-size-lg > .y-button {
+  --tblr-btn-line-height:1.5;
+  --tblr-btn-icon-size:2rem;
+}
+
+.y-button-group-vertical > .y-button.y-tab-item-link-active, .y-button-group-vertical > .y-button.y-tab-pane, .y-button-group-vertical > .y-button.y-step-item-active, .y-button-group-vertical > .y-button.y-sidebar-item-active, .y-button-group-vertical > .y-button.y-pagination-item-active, .y-button-group-vertical > .y-button.y-navbar-item-active, .y-button-group-vertical > .y-button.y-dropdown-item-active, .y-button-group-vertical > .y-button.y-button-active, .y-button-group-vertical > .y-breadcrumb-item-active.y-button, .y-button-group-vertical > .y-avatar-active.y-button, .y-button-group-vertical > .y-button:active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-item-link-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-tab-pane, .y-button-group:not(.y-button-group-vertical) > .y-button.y-step-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-sidebar-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-pagination-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-navbar-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-dropdown-item-active, .y-button-group:not(.y-button-group-vertical) > .y-button.y-button-active, .y-button-group:not(.y-button-group-vertical) > .y-breadcrumb-item-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-avatar-active.y-button, .y-button-group:not(.y-button-group-vertical) > .y-button:active {
+  z-index: 5;
+}
+
+.y-button-group-vertical > .y-button:focus, .y-button-group-vertical > .y-button:hover, .y-button-group:not(.y-button-group-vertical) > .y-button:focus, .y-button-group:not(.y-button-group-vertical) > .y-button:hover {
+  z-index: 1;
+}
+
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */

@@ -1,0 +1,459 @@
+@charset "UTF-8";
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
+  direction: ltr;
+}
+*/
+
+.y-table-cell-active {
+  --y-table-accent-bg: var(--y-table-active-bg);
+  color: var(--y-table-active-color);
+}
+
+.y-table-cell-color-primary {
+  --y-table-color: #1d273b;
+  --y-table-bg: #d2e1f3;
+  --y-table-border-color: #c0cee1;
+  --y-table-striped-bg: #c9d8ea;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #c0cee1;
+  --y-table-active-color: #f8fafc;
+  --y-table-hover-bg: #c4d3e5;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-secondary {
+  --y-table-color: #1d273b;
+  --y-table-bg: #dfe1e4;
+  --y-table-border-color: #ccced3;
+  --y-table-striped-bg: #d5d8dc;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #ccced3;
+  --y-table-active-color: #f8fafc;
+  --y-table-hover-bg: #d0d3d7;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-success {
+  --y-table-color: #1d273b;
+  --y-table-bg: #d5f0da;
+  --y-table-border-color: #c3dcca;
+  --y-table-striped-bg: #cce6d2;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #c3dcca;
+  --y-table-active-color: #1d273b;
+  --y-table-hover-bg: #c7e1ce;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-info {
+  --y-table-color: #1d273b;
+  --y-table-bg: #d9ebf9;
+  --y-table-border-color: #c6d7e6;
+  --y-table-striped-bg: #d0e1f0;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #c6d7e6;
+  --y-table-active-color: #1d273b;
+  --y-table-hover-bg: #cbdceb;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-warning {
+  --y-table-color: #1d273b;
+  --y-table-bg: #fde1cd;
+  --y-table-border-color: #e7cebe;
+  --y-table-striped-bg: #f2d8c6;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #e7cebe;
+  --y-table-active-color: #1d273b;
+  --y-table-hover-bg: #ecd3c2;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-danger {
+  --y-table-color: #1d273b;
+  --y-table-bg: #f7d7d7;
+  --y-table-border-color: #e1c5c7;
+  --y-table-striped-bg: #eccecf;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #e1c5c7;
+  --y-table-active-color: #f8fafc;
+  --y-table-hover-bg: #e7cacb;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-light {
+  --y-table-color: #1d273b;
+  --y-table-bg: #f8fafc;
+  --y-table-border-color: #e2e5e9;
+  --y-table-striped-bg: #edeff2;
+  --y-table-striped-color: #1d273b;
+  --y-table-active-bg: #e2e5e9;
+  --y-table-active-color: #1d273b;
+  --y-table-hover-bg: #e8eaee;
+  --y-table-hover-color: #1d273b;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+.y-table-cell-color-dark {
+  --y-table-color: #f8fafc;
+  --y-table-bg: #1d273b;
+  --y-table-border-color: #333c4e;
+  --y-table-striped-bg: #283245;
+  --y-table-striped-color: #f8fafc;
+  --y-table-active-bg: #333c4e;
+  --y-table-active-color: #f8fafc;
+  --y-table-hover-bg: #2d3749;
+  --y-table-hover-color: #f8fafc;
+  color: var(--y-table-color);
+  border-color: var(--y-table-border-color);
+}
+
+@keyframes progress-bar-stripes {
+}
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+
+/* rtl:end:ignore */
+
+/* rtl:options: {
+  "autoRename": true,
+  "stringMap":[ {
+    "name"    : "prev-next",
+    "search"  : "prev",
+    "replace" : "next"
+  } ]
+} */
+
+@keyframes spinner-border {
+}
+
+@keyframes spinner-grow {
+}
+
+@keyframes placeholder-glow {
+}
+@keyframes placeholder-wave {
+}
+
+/* rtl:begin:remove */
+/* rtl:end:remove */
+
+@keyframes pulse {
+}
+@keyframes tada {
+}
+@keyframes rotate-360 {
+}
+@keyframes blink {
+}
+
+/**
+Navbar
+ */
+
+/**
+Navbar brand
+ */
+/**
+Navbar toggler
+ */
+/**
+Navbar light
+ */
+
+/**
+Navbar dark
+ */
+
+/**
+Navbar transparent
+ */
+/**
+Navbar nav
+ */
+
+/**
+Navbar side
+ */
+/**
+Navbar vertical
+ */
+
+/**
+Stacked card
+ */
+
+/**
+Card optinos
+ */
+/**
+Card status
+ */
+
+/**
+Card table
+ */
+/*
+Card code
+ */
+/*
+Card chart
+ */
+/**
+Card avatar
+ */
+/*
+Card list group
+ */
+
+/**
+Form label
+ */
+
+/**
+Form hint
+ */
+/**
+Form select
+ */
+
+/**
+Form control
+ */
+
+/**
+Form help
+ */
+/**
+Input group
+ */
+/**
+Upload files
+ */
+/**
+Icon input
+ */
+/*
+Color Input
+ */
+/**
+Image check
+ */
+/*
+Select group
+ */
+/**
+Alternate version of form select group
+ */
+/**
+Select group
+ */
+/**
+Bootstrap color input
+ */
+/**
+Remove the cancel buttons in Chrome and Safari on macOS.
+ */
+
+/**
+Form control dark theme fix
+ */
+
+/*
+Form check
+ */
+
+/*
+Form switch
+ */
+
+/*Correction of Form-check position*/
+
+/**
+Legend
+ */
+/**
+Inline list
+ */
+/**
+Dimmer
+*/
+@keyframes animated-dots {
+}
+
+@keyframes progress-indeterminate {
+}
+/**
+Progress
+ */
+
+/**
+Progress bar
+ */
+
+/**
+Progressbg
+ */
+
+/**
+Markdown
+ */
+
+@keyframes status-pulsate-main {
+}
+@keyframes status-pulsate-secondary {
+}
+@keyframes status-pulsate-tertiary {
+}
+
+@media not print {
+  .y-app-theme-dark .y-table-cell-color-primary {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #134076;
+    --y-table-border-color: #2a5383;
+    --y-table-striped-bg: #1e497d;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #2a5383;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #244e80;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+  .y-app-theme-dark .y-table-cell-color-secondary {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #3a3e47;
+    --y-table-border-color: #4d5159;
+    --y-table-striped-bg: #444750;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #4d5159;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #484c55;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+  .y-app-theme-dark .y-table-cell-color-success {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #1c6b29;
+    --y-table-border-color: #32793e;
+    --y-table-striped-bg: #277234;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #32793e;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #2d7639;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+  .y-app-theme-dark .y-table-cell-color-info {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #285c87;
+    --y-table-border-color: #3d6c93;
+    --y-table-striped-bg: #32648d;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #3d6c93;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #386890;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+  .y-app-theme-dark .y-table-cell-color-warning {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #943e04;
+    --y-table-border-color: #9e511d;
+    --y-table-striped-bg: #994710;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #9e511d;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #9c4c17;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+  .y-app-theme-dark .y-table-cell-color-danger {
+    --y-table-color: #f8fafc;
+    --y-table-bg: #802222;
+    --y-table-border-color: #8c3838;
+    --y-table-striped-bg: #862d2d;
+    --y-table-striped-color: #f8fafc;
+    --y-table-active-bg: #8c3838;
+    --y-table-active-color: #f8fafc;
+    --y-table-hover-bg: #893232;
+    --y-table-hover-color: #f8fafc;
+    color: var(--y-table-color);
+    border-color: var(--y-table-border-color);
+  }
+}
+
+.y-table-cell-truncate {
+  max-width: 1px;
+  width: 100%;
+}
+
+/**
+Horizontal rules
+ */
+/**
+Hr text
+ */
+
+/**
+Selection
+ */
+
+/**
+Links
+ */
+
+/**
+Subheader
+ */
+/**
+Chart sparkline
+ */
+
+/*
+Scrollable
+*/
+
+/**
+Antialiasing
+ */
+/*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
