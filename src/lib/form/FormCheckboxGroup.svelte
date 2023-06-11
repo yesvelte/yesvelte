@@ -31,9 +31,9 @@
 </script>
 
 <FormField {...$$restProps} {componentName}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<CheckboxGroup {components} {...checkboxGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
 	</CheckboxGroup>
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

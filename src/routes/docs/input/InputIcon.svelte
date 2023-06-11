@@ -1,10 +1,11 @@
-<script>
-	import { Button, El, Icon, Input } from 'yesvelte'
+<script lang="ts">
+	import { El, Icon, Input } from 'yesvelte'
 </script>
 
-<Input placeholder="Enter your Email address...">
-	<span slot="start">
-		<Icon size="sm" name="mail" />
-	</span>
-	<Button slot="end" color="primary">Save</Button>
+<Input placeholder="start icon">
+	<Icon slot="start" name="user" />
+</Input>
+<El p="3" />
+<Input placeholder="end icon">
+	<Icon slot="end" name="user" />
 </Input>

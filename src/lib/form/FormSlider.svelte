@@ -50,9 +50,9 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<Slider {components} {...sliderProps}>
 		<slot />
 	</Slider>
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

@@ -14,6 +14,7 @@
 	import FormAutocompletePlaceholder from './FormAutocompletePlaceholder.svelte'
 	import FormAutocompleteRequired from './FormAutocompleteRequired.svelte'
 	import FormAutocompleteSizes from './FormAutocompleteSizes.svelte'
+	import FormAutocompleteSlots from './FormAutocompleteSlots.svelte'
 	import FormAutocompleteStates from './FormAutocompleteStates.svelte'
 </script>
 
@@ -66,6 +67,11 @@
 			<FormAutocompleteStates />
 		</Preview>
 	</Doc>
+	<!-- <Doc title="Slots">
+		<Preview src="./FormAutocompleteSlots.svelte">
+			<FormAutocompleteSlots />
+		</Preview>
+	</Doc> -->
 
 	<Doc title="Multiple">
 		<Preview src="./FormAutocompleteMultiple.svelte">

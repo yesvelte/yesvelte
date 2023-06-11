@@ -3,16 +3,17 @@
 //
 
 $wrapper-props: (
-	null: '.input-group',
+	null: '.input-icon',
 	size: (
-		sm: '.input-group-sm',
-		md: '.input-group',
-		lg: '.input-group-lg'
+		sm: '.input-icon-sm',
+		md: '.input-icon',
+		lg: '.input-icon-lg'
 	)
 );
 
 $props: (
 	null: '.form-control',
+	icon: '.input-icon-addon',
 	size: (
 		sm: '.form-control-sm',
 		md: '.form-control',
@@ -34,8 +35,4 @@ $props: (
 
 .#{$prefix-date-picker-wrapper} {
 	@include apply-props($wrapper-props);
-
-	& > span {
-		@extend .input-group-text;
-	}
 }

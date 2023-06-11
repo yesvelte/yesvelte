@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { Input } from 'yesvelte'
+	import { FormInput } from 'yesvelte'
 </script>
 
-<Input>
-	<svelte:fragment slot="start">
+<FormInput>
+	<svelte:fragment slot="start-icon">
 		<span>$</span>
 		<span>0.00</span>
 	</svelte:fragment>
-</Input>
+</FormInput>
 
-<Input>
-	<svelte:fragment slot="end">
+<FormInput>
+	<svelte:fragment slot="end-icon">
 		<span>$</span>
 		<span>0.00</span>
 	</svelte:fragment>
-</Input>
+</FormInput>

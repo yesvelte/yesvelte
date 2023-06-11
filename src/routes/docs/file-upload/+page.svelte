@@ -9,6 +9,7 @@
 	import FileUploadValue from './FileUploadValue.svelte'
 	import FileUploadEvents from './FileUploadEvents.svelte'
 	import FileUploadValidation from './FileUploadValidation.svelte'
+	import FileUploadIcons from './FileUploadIcons.svelte'
 </script>
 
 <Page title="File Upload">
@@ -39,6 +40,12 @@
 	<Doc title="Events">
 		<Preview src="./FileUploadEvents.svelte">
 			<FileUploadEvents />
+		</Preview>
+	</Doc>
+
+	<Doc title="Icons">
+		<Preview src="./FileUploadIcons.svelte">
+			<FileUploadIcons />
 		</Preview>
 	</Doc>
 

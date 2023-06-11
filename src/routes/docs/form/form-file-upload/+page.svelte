@@ -6,6 +6,7 @@
 	import FormFileUploadEvents from './FormFileUploadEvents.svelte'
 	import FormFileUploadValidation from './FormFileUploadValidation.svelte'
 	import FormFileUploadIcon from './FormFileUploadIcon.svelte'
+	import FormFileUploadSlots from './FormFileUploadSlots.svelte'
 </script>
 
 <Page title="FormFileUpload">
@@ -47,6 +48,12 @@
 		<Doc title="With Icon">
 			<Preview src="./FormFileUploadIcon.svelte">
 				<FormFileUploadIcon />
+			</Preview>
+		</Doc>
+
+		<Doc title="Slots">
+			<Preview src="./FormFileUploadSlots.svelte">
+				<FormFileUploadSlots />
 			</Preview>
 		</Doc>
 

@@ -11,6 +11,7 @@
 	import FormSelectDynamicItems from './FormSelectDynamicItems.svelte'
 	import FormSelectRequired from './FormSelectRequired.svelte'
 	import FormSelectMultiple from './FormSelectMultiple.svelte'
+	import FormSelectSlots from './FormSelectSlots.svelte'
 </script>
 
 <Page title="FormSelect">
@@ -67,6 +68,12 @@
 	<Doc title="Multiple">
 		<Preview src="./FormSelectMultiple.svelte">
 			<FormSelectMultiple />
+		</Preview>
+	</Doc>
+
+	<Doc title="Slots">
+		<Preview src="./FormSelectSlots.svelte">
+			<FormSelectSlots />
 		</Preview>
 	</Doc>
 

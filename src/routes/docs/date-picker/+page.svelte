@@ -14,6 +14,7 @@
 	import DatepickerSizes from './DatepickerSizes.svelte'
 	import DatepickerValidate from './DatepickerValidate.svelte'
 	import DatepickerValue from './DatepickerValue.svelte'
+	import DatePickerIcon from './DatePickerIcon.svelte'
 </script>
 
 <Page
@@ -59,6 +60,12 @@
 	<Doc title="No border">
 		<Preview src="./DatepickerFlush.svelte">
 			<DatepickerFlush />
+		</Preview>
+	</Doc>
+
+	<Doc title="With Icon">
+		<Preview src="./DatepickerIcon.svelte">
+			<DatePickerIcon />
 		</Preview>
 	</Doc>
 

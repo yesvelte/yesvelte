@@ -3,6 +3,7 @@
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
+	import { El } from '../el'
 
 	type $$Props = FormFileUploadProps
 
@@ -50,10 +51,24 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
-	<FileUpload {components} bind:id {...fileUploadProps} bind:files>
-		<slot name="start" slot="start" />
-		<slot name="end" slot="end" />
-	</FileUpload>
-	<slot name="hint" />
+	<slot name="label" slot="label" />
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="start-icon" />
+				</El>
+			{/if}
+		</slot>
+		<FileUpload {components} bind:id {...fileUploadProps} bind:files />
+
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="end-icon" />
+				</El>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot name="hint" slot="hint" />
 </FormField>

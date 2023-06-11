@@ -3,9 +3,11 @@
 	import DatePicker from '../date-picker/DatePicker.svelte'
 	import FormField from './FormField.svelte'
 	import type { FormDatePickerProps } from './Form.types'
+	import { El } from '../el'
 
 	type $$Props = FormDatePickerProps
 
+	export let componentName: $$Props['componentName'] = 'form-date-picker'
 	export let disabled: $$Props['disabled'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
@@ -30,6 +32,7 @@
 
 	$: {
 		props = {
+			componentName,
 			required,
 			label,
 			hint,
@@ -52,10 +55,24 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
-	<DatePicker bind:id {components} {...datePickerProps} bind:value on:changed>
-		<slot name="start" slot="start" />
-		<slot name="end" slot="end" />
-	</DatePicker>
-	<slot name="hint" />
+	<slot name="label" slot="label" />
+
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="start-icon" />
+				</El>
+			{/if}
+		</slot>
+		<DatePicker bind:id {components} {...datePickerProps} bind:value on:changed />
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="end-icon" />
+				</El>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot name="hint" slot="hint" />
 </FormField>
