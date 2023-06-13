@@ -1,28 +1,28 @@
 $sidebar-props: (
 	null: (
 		wrapper: (
-			null: '.navbar' '.navbar-vertical' '.navbar-expand',
+			null: '%navbar' '%navbar-vertical' '%navbar-expand',
 			theme: (
-				dark: '.navbar-dark',
-				light: '.navbar-light'
+				dark: '%navbar-dark',
+				light: '%navbar-light'
 			)
 		),
-		null: '.navbar-collapse',
-		content: '.navbar-nav'
+		null: '%navbar-collapse',
+		content: '%navbar-nav'
 	),
 	item: (
-		null: '.nav-link',
+		null: '%nav-link',
 		wrapper: (
-			null: '.nav-item',
-			dropdown: '.dropdown'
+			null: '%nav-item',
+			dropdown: '%dropdown'
 		),
-		active: '.active',
-		disabled: '.disabled',
-		menu: '.dropdown-menu',
-		dropdown: '.dropdown-toggle',
-		end: '.ms-auto',
-		icon: '.nav-link-icon',
-		title: '.nav-link-title'
+		active: '%active',
+		disabled: '%disabled',
+		menu: '%dropdown-menu',
+		dropdown: '%dropdown-toggle',
+		end: '%ms-auto',
+		icon: '%nav-link-icon',
+		title: '%nav-link-title'
 	)
 );
 
@@ -30,7 +30,7 @@ $sidebar-props: (
 	@include apply-props($sidebar-props);
 
 	&-item-menu .#{$prefix-sidebar}-item {
-		@extend .dropdown-item;
+		@extend %dropdown-item;
 	}
 
 	&-item-menu.#{$prefix-popup}-show {

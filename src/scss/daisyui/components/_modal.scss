@@ -1,37 +1,37 @@
 .#{$prefix}modal {
-	@extend .modal;
+	@extend %modal;
 	background: none;
 	z-index: 1055; // the same z-index as bootstrap
 }
 .#{$prefix}modal-show-opened {
-	@extend .modal-open;
+	@extend %modal-open;
 }
 .#{$prefix}modal-container {
 	width: 100%;
 	margin: 1rem;
 }
 .#{$prefix}modal-content {
-	@extend .modal-box;
+	@extend %modal-box;
 	margin: 0 auto;
 }
 .#{$prefix}modal-title {
-	@extend .font-bold;
-	@extend .my-2;
-	@extend .text-xl;
+	@extend %font-bold;
+	@extend %my-2;
+	@extend %text-xl;
 }
 .#{$prefix}modal-footer {
-	@extend .modal-action;
+	@extend %modal-action;
 }
 .#{$prefix}modal-body {
-	@extend .py-4;
+	@extend %py-4;
 }
 .#{$prefix}modal-close {
-	@extend .btn;
-	@extend .btn-circle;
-	@extend .btn-sm;
-	@extend .absolute;
-	@extend .top-4;
-	@extend .right-4;
+	@extend %btn;
+	@extend %btn-circle;
+	@extend %btn-sm;
+	@extend %absolute;
+	@extend %top-4;
+	@extend %right-4;
 	&:after {
 		content: '×';
 		display: inline-block;
@@ -64,5 +64,5 @@
 }
 .#{$prefix}modal-absolute,
 .#{$prefix}modal-backdrop-show.#{$prefix}modal-backdrop-absolute {
-	@extend .absolute;
+	@extend %absolute;
 }

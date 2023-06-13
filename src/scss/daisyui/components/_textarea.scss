@@ -1,31 +1,31 @@
 .#{$prefix}textarea {
-	@extend .w-full;
-	@extend .textarea;
-	@extend .textarea-bordered;
+	@extend %w-full;
+	@extend %textarea;
+	@extend %textarea-bordered;
 }
 .#{$prefix}textarea-state-valid {
-	@extend .textarea-success;
+	@extend %textarea-success;
 }
 
 .#{$prefix}textarea-state-invalid {
-	@extend .textarea-error;
+	@extend %textarea-error;
 }
 .#{$prefix}form-textarea-hint {
-	@extend .label-text-alt;
+	@extend %label-text-alt;
 }
 .#{$prefix}textarea-size-sm {
-	@extend .textarea-sm;
+	@extend %textarea-sm;
 }
 .#{$prefix}textarea-size-md {
-	@extend .textarea-md;
+	@extend %textarea-md;
 }
 .#{$prefix}textarea-size-lg {
-	@extend .textarea-lg;
+	@extend %textarea-lg;
 }
 
 .#{$prefix}textarea-border-rounded {
-	@extend .rounded-full;
+	@extend %rounded-full;
 }
 .#{$prefix}textarea-border-flush {
-	@extend .border-transparent;
+	@extend %border-transparent;
 }

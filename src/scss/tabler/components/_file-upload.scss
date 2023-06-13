@@ -3,25 +3,25 @@
 //
 
 $file-upload-wrapper-props: (
-	null: '.input-icon',
+	null: '%input-icon',
 	size: (
-		sm: '.input-icon-sm',
-		md: '.input-icon',
-		lg: '.input-icon-lg'
+		sm: '%input-icon-sm',
+		// md: '%input-icon',
+		lg: '%input-icon-lg'
 	)
 );
 
 $file-upload-props: (
-	null: '.form-control',
-	icon: '.input-icon-addon',
+	null: '%form-control',
+	icon: '%input-icon-addon',
 	size: (
-		sm: '.form-control-sm',
-		md: '.form-control',
-		lg: '.form-control-lg'
+		sm: '%form-control-sm',
+		// md: '%form-control',
+		lg: '%form-control-lg'
 	),
 	state: (
-		valid: '.is-valid',
-		invalid: '.is-invalid'
+		valid: '%is-valid',
+		invalid: '%is-invalid'
 	)
 );
 

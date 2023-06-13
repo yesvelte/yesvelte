@@ -1,5 +1,5 @@
 .#{$prefix}label {
-	@extend .mb-2;
+	@extend %mb-2;
 	display: block;
 }
 .#{$prefix}label-required:after {

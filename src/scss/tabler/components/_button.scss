@@ -1,18 +1,18 @@
 $props: (
-	null: '.btn' '.gap-2',
-	active: '.active',
-	color: generate_props($theme_colors, ('.btn-')),
-	disabled: '.disabled',
-	icon: '.btn-icon',
-	link: '.btn-link',
-	loading: '.btn-loading',
+	null: '%btn' '%gap-2',
+	active: '%active',
+	color: generate_props($theme_colors, ('%btn-')),
+	disabled: '%disabled',
+	icon: '%btn-icon',
+	link: '%btn-link',
+	loading: '%btn-loading',
 	shape: (
-		pill: '.btn-pill',
-		tile: '.btn-square'
+		pill: '%btn-pill',
+		tile: '%btn-square'
 	),
 	size: (
-		sm: '.btn-sm',
-		lg: '.btn-lg' '.gap-3'
+		sm: '%btn-sm',
+		lg: '%btn-lg' '%gap-3'
 	)
 );
 
@@ -27,7 +27,6 @@ $props: (
 		--#{$prefix}icon-size: unset;
 	}
 
-
 	&.#{$prefix-button}-link {
 		background-color: transparent;
 		box-shadow: none;
@@ -35,16 +34,16 @@ $props: (
 
 	@each $key, $value in $theme-colors {
 		&-color-#{$key}.#{$prefix-button}-ghost {
-			@extend .btn-ghost-#{$key};
+			@extend %btn-ghost-#{$key};
 			--#{$prefix}btn-bg: transparent;
 		}
 
 		&-color-#{$key}.#{$prefix-button}-link {
-			@extend .link-#{$key};
+			@extend %link-#{$key};
 		}
 
 		&-color-#{$key}.#{$prefix-button}-outline {
-			@extend .btn-outline-#{$key};
+			@extend %btn-outline-#{$key};
 			--#{$prefix}btn-bg: transparent;
 		}
 	}

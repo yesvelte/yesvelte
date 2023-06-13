@@ -1,42 +1,42 @@
 .#{$prefix}card {
-	@extend .card;
-	@extend .card-bordered;
+	@extend %card;
+	@extend %card-bordered;
 	border-color: hsl(var(--b3) / var(--tw-border-opacity));
-	@extend .block;
-	@extend .bg-base-100;
+	@extend %block;
+	@extend %bg-base-100;
 }
 .#{$prefix}card-header {
-	@extend .pt-3;
-	@extend .px-3;
+	@extend %pt-3;
+	@extend %px-3;
 	border-top-left-radius: calc(var(--rounded-box, 1rem) - 1px);
 	border-top-right-radius: calc(var(--rounded-box, 1rem) - 1px);
 	border-bottom: var(--tab-border, 1px) solid hsl(var(--b3));
 	&-light {
-		@extend .bg-base-200;
+		@extend %bg-base-200;
 	}
 }
 .#{$prefix}card-footer {
-	@extend .p-3;
+	@extend %p-3;
 
 	border-bottom-left-radius: calc(var(--rounded-box, 1rem) - 1px);
 	border-bottom-right-radius: calc(var(--rounded-box, 1rem) - 1px);
 	border-top: var(--tab-border, 1px) solid hsl(var(--b3));
-	@extend .bg-base-200;
+	@extend %bg-base-200;
 	&-transparent {
 		padding-top: 0;
 		border-top-color: transparent;
-		@extend .bg-transparent;
+		@extend %bg-transparent;
 	}
 }
 .#{$prefix}card-title {
-	@extend .card-title;
-	@extend .pb-3;
+	@extend %card-title;
+	@extend %pb-3;
 }
 .#{$prefix}card-borderless {
-	@extend .border-none;
+	@extend %border-none;
 }
 .#{$prefix}card-body {
-	@extend .relative;
+	@extend %relative;
 	padding: 1rem;
 }
 .#{$prefix}card-size-sm > .#{$prefix}card-body {

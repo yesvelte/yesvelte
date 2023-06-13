@@ -1,44 +1,43 @@
 .#{$prefix}alert {
-    @extend .alert;
-    @extend .mb-2;
-    justify-content: start;
+	@extend %alert;
+	@extend %mb-2;
+	justify-content: start;
 }
 
 .#{$prefix}alert-show {
-    &-opening,
-    &-closing {
-        transition: all 0.3s ease-out;
-    }
+	&-opening,
+	&-closing {
+		transition: all 0.3s ease-out;
+	}
 
-    &-open,
-    &-closing {
-        opacity: 0;
-    }
+	&-open,
+	&-closing {
+		opacity: 0;
+	}
 
-    &-close,
-    &-opening,
-    &-opened {
-        opacity: 1;
-    }
+	&-close,
+	&-opening,
+	&-opened {
+		opacity: 1;
+	}
 
-    &-closed {
-        display: none;
-    }
+	&-closed {
+		display: none;
+	}
 }
 
 .#{$prefix}alert-title {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .#{$prefix}alert-body {
-    flex-direction: column;
-    align-items: start;
+	flex-direction: column;
+	align-items: start;
 }
 
 // daisyui colors
-@each $colorName,
-$daisyuiColorName in $StateColors {
-    .#{$prefix}alert-color-#{$colorName} {
-        @extend .alert-#{$daisyuiColorName};
-    }
+@each $colorName, $daisyuiColorName in $StateColors {
+	.#{$prefix}alert-color-#{$colorName} {
+		@extend %alert-#{$daisyuiColorName};
+	}
 }

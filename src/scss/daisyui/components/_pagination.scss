@@ -1,7 +1,7 @@
 .#{$prefix}pagination {
-	@extend .btn-group;
+	@extend %btn-group;
 	& > * {
-		@extend .btn;
+		@extend %btn;
 		& > * {
 			display: flex;
 			align-items: center;

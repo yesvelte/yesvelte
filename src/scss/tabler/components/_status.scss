@@ -1,7 +1,7 @@
 $status-props: (
-	null: '.status',
-	lite: '.status-lite',
-	color: generate_props($theme_colors, ('.status-'))
+	null: '%status',
+	lite: '%status-lite',
+	color: generate_props($theme_colors, ('%status-'))
 );
 
 .#{$prefix-status} {

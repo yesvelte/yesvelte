@@ -1,31 +1,31 @@
 .#{$prefix}date-picker {
-	@extend .input;
-	@extend .input-bordered;
-	@extend .w-full;
+	@extend %input;
+	@extend %input-bordered;
+	@extend %w-full;
 }
 .#{$prefix}date-picker-border-rounded {
-	@extend .rounded-full;
+	@extend %rounded-full;
 }
 .#{$prefix}date-picker-border-flush {
-	@extend .border-transparent;
+	@extend %border-transparent;
 }
 
 @each $size in (sm md lg) {
 	.#{$prefix}date-picker-size-#{$size} {
-		@extend .input-#{$size};
+		@extend %input-#{$size};
 	}
 }
 
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}date-picker-color-#{$colorName} {
-		@extend .input-#{$daisyuiColorName};
+		@extend %input-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}date-picker-color-#{$colorName} {
-		@extend .input-#{$daisyuiColorName};
+		@extend %input-#{$daisyuiColorName};
 	}
 }
 

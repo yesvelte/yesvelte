@@ -1,0 +1,5 @@
+@import './_example.placeholder.scss'; // .classes are converted to %placeholders
+
+.button {
+	@extend %btn;
+}

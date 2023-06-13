@@ -1,31 +1,31 @@
 .#{$prefix}accordion {
-	@extend .border;
-	@extend .border-base-200;
+	@extend %border;
+	@extend %border-base-200;
 	&:not(:first-of-type) {
-		@extend .border-t-0;
+		@extend %border-t-0;
 	}
 	&:first-of-type {
-		@extend .rounded-t-lg;
+		@extend %rounded-t-lg;
 	}
 	&:last-of-type {
-		@extend .rounded-b-lg;
+		@extend %rounded-b-lg;
 	}
 	&-header-button {
-		@extend .rounded-b-lg;
-		@extend .w-full;
-		@extend .flex;
-		@extend .text-left;
-		@extend .justify-between;
+		@extend %rounded-b-lg;
+		@extend %w-full;
+		@extend %flex;
+		@extend %text-left;
+		@extend %justify-between;
 		padding: 1rem 1.25rem;
 		&:after {
 			content: '';
 			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d273b'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-			@extend .w-4;
-			@extend .h-4;
-			@extend .block;
-			@extend .bg-no-repeat;
-			@extend .bg-contain;
-			@extend .opacity-75;
+			@extend %w-4;
+			@extend %h-4;
+			@extend %block;
+			@extend %bg-no-repeat;
+			@extend %bg-contain;
+			@extend %opacity-75;
 			transition: transform 0.2s ease-in-out;
 		}
 		&:not(.collapsed):not(&-collapsed):after {
@@ -33,7 +33,7 @@
 		}
 	}
 	&-header-button:not(.collapsed):not(&-header-button-collapsed) {
-		@extend .font-bold;
+		@extend %font-bold;
 	}
 	&-body {
 		&-inner {

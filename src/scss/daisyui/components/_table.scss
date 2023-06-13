@@ -1,11 +1,11 @@
 .#{$prefix}table {
-	@extend .table;
+	@extend %table;
 	&-striped {
-		@extend .table-zebra;
+		@extend %table-zebra;
 	}
 }
 .#{$prefix}table-wrapper {
-	@extend .overflow-x-auto;
+	@extend %overflow-x-auto;
 }
 
 .#{$prefix}table.#{$prefix}el-border-0 {
@@ -17,6 +17,6 @@
 }
 .#{$prefix}table-hover {
 	:where(thead, tbody, tfoot) :where(tr:hover :where(th, td)) {
-		@extend .bg-base-200;
+		@extend %bg-base-200;
 	}
 }

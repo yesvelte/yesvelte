@@ -8,9 +8,9 @@
 	aspect-ratio: 1/1;
 	text-transform: uppercase;
 	vertical-align: bottom;
-	@extend .rounded;
-	@extend .bg-neutral;
-	@extend .text-neutral-content;
+	@extend %rounded;
+	@extend %bg-neutral;
+	@extend %text-neutral-content;
 	img {
 		border-radius: inherit;
 	}
@@ -31,15 +31,15 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}avatar-color-#{$colorName} {
-		@extend .bg-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName}-content;
+		@extend %bg-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName}-content;
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}avatar-color-#{$colorName} {
-		@extend .bg-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName}-content;
+		@extend %bg-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName}-content;
 	}
 }
 
@@ -62,7 +62,7 @@
 // shapes
 @each $shape, $radius in ('-pill': '-xl', '-rounded': '', '-tile': '-none', '-circle': '-full') {
 	.#{$prefix}avatar-shape#{$shape} {
-		@extend .rounded#{$radius};
+		@extend %rounded#{$radius};
 	}
 }
 

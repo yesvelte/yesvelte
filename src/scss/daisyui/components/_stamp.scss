@@ -66,13 +66,13 @@
 	// daisyui colors
 	@each $colorName, $daisyuiColorName in $RoleColors {
 		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
-			@extend .bg-#{$daisyuiColorName};
+			@extend %bg-#{$daisyuiColorName};
 		}
 	}
 
 	@each $colorName, $daisyuiColorName in $StateColors {
 		&.#{$prefix}stamp-bg-color-#{$colorName} > .y-icon {
-			@extend .bg-#{$daisyuiColorName};
+			@extend %bg-#{$daisyuiColorName};
 		}
 	}
 

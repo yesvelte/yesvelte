@@ -27,13 +27,13 @@ $border-positions: (
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}el-border-color-#{$colorName} {
-		@extend .border-#{$daisyuiColorName};
+		@extend %border-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}el-border-color-#{$colorName} {
-		@extend .border-#{$daisyuiColorName};
+		@extend %border-#{$daisyuiColorName};
 	}
 }
 
@@ -68,7 +68,7 @@ $border-radius-sizes: (
 
 @each $radius-name, $radius-position in $border-radius-positions {
 	.#{$prefix}el-border-radius#{$radius-name} {
-		@extend .rounded#{$radius-position};
+		@extend %rounded#{$radius-position};
 	}
 }
 .#{$prefix}el-border-radius-circle {
@@ -76,6 +76,6 @@ $border-radius-sizes: (
 }
 @each $size-name, $size-value in $border-radius-sizes {
 	.#{$prefix}el-border-round-size#{$size-name} {
-		@extend .rounded#{$size-value};
+		@extend %rounded#{$size-value};
 	}
 }

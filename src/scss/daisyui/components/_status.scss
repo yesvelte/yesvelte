@@ -1,5 +1,5 @@
 .#{$prefix}status {
-	@extend .badge;
+	@extend %badge;
 	--color-value-opacity: 1;
 	--tw-bg-opacity: 0.1;
 	--tw-border-opacity: 0;
@@ -7,23 +7,23 @@
 	&.#{$prefix}status-lite {
 		--tw-bg-opacity: 0;
 		--tw-border-opacity: 0.2;
-		@extend .border-base-content;
-		@extend .text-base-content;
+		@extend %border-base-content;
+		@extend %text-base-content;
 	}
 }
 
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}status-color-#{$colorName} {
-		@extend .badge-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName};
+		@extend %badge-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}status-color-#{$colorName} {
-		@extend .badge-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName};
+		@extend %badge-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 

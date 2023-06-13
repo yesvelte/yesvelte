@@ -1,9 +1,9 @@
 $props: (
-	null: '.status-dot',
-	animated: '.status-dot-animated',
-	indicator: '.status-indicator-animated',
-	color: generate_props($theme_colors, ('.status-')),
-	indicator-circle: '.status-indicator-circle'
+	null: '%status-dot',
+	animated: '%status-dot-animated',
+	indicator: '%status-indicator-animated',
+	color: generate_props($theme_colors, ('%status-')),
+	indicator-circle: '%status-indicator-circle'
 );
 
 .#{$prefix-dot} {

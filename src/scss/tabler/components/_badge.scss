@@ -1,9 +1,9 @@
 $props: (
-	null: '.badge',
-	outline: '.badge-outline',
-	notification: '.badge-notification',
-	blink: '.badge-blink',
-	pill: '.badge-pill' // 'color': generate_props($theme_colors, ('.bg-', '.text-bg-')),
+	null: '%badge',
+	outline: '%badge-outline',
+	notification: '%badge-notification',
+	blink: '%badge-blink',
+	pill: '%badge-pill' // 'color': generate_props($theme_colors, ('%bg-', '%text-bg-')),
 );
 
 .#{$prefix-badge} {
@@ -15,15 +15,15 @@ $props: (
 
 	@each $color, $value in $theme-colors {
 		&-color-#{$color}:not(.#{$prefix-badge}-outline):not(.#{$prefix-badge}-ghost) {
-			@extend .bg-#{$color};
+			@extend %bg-#{$color};
 		}
 
 		&-color-#{$color}.#{$prefix-badge}-outline:not(.#{$prefix-badge}-ghost) {
-			@extend .text-#{$color};
+			@extend %text-#{$color};
 		}
 
 		&-color-#{$color}.#{$prefix-badge}-ghost:not(.#{$prefix-badge}-outline) {
-			@extend .bg-#{$color}-lt;
+			@extend %bg-#{$color}-lt;
 		}
 	}
 }

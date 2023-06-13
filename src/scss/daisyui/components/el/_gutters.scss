@@ -1,32 +1,29 @@
-@import '../../../../styles/tailwind';
-@import 'bootstrap/dist/css/bootstrap-grid';
-
 $breakpoints: sm md lg xl xxl !default;
 $col-sizes: 1 2 3 4 5 6 7 8 9 10 11 12 auto !default;
 
 .#{$prefix}el-row {
-	@extend .row;
+	@extend %row;
 }
 .#{$prefix}el-col {
-	@extend .col;
+	@extend %col;
 }
 
 @each $size in $col-sizes {
 	.#{$prefix}el-col-#{$size} {
-		@extend .col-#{$size};
+		@extend %col-#{$size};
 	}
 	@each $breakpoint in $breakpoints {
 		.#{$prefix}el-col-#{$breakpoint}-#{$size} {
-			@extend .col-#{$breakpoint}-#{$size};
+			@extend %col-#{$breakpoint}-#{$size};
 		}
 
 		@each $size in $col-sizes {
 			.#{$prefix}el-offset-#{$breakpoint}-#{$size} {
-				@extend .offset-#{$breakpoint}-#{$size} !optional;
+				@extend %offset-#{$breakpoint}-#{$size} !optional;
 			}
 
 			.#{$prefix}el-offset-#{$size} {
-				@extend .offset-#{$breakpoint}-#{$size} !optional;
+				@extend %offset-#{$breakpoint}-#{$size} !optional;
 			}
 		}
 	}

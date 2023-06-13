@@ -1,5 +1,5 @@
 [type='file'].#{$prefix}input {
-	@extend .file-input;
-	@extend .file-input-bordered;
+	@extend %file-input;
+	@extend %file-input-bordered;
 	padding: 0;
 }

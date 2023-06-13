@@ -1,7 +1,7 @@
 $prefix: 'y-' !default;
-@import './colors';
-@import 'daisyui/dist/full';
 
+@import './colors';
+@import './_daisyui.placeholder.scss';
 // @import '@tabler/core/src/scss/core';
 // @import '@tabler/core/src/scss/variables';
 // @import '@tabler/core/src/scss/bootstrap-components';

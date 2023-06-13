@@ -3,9 +3,9 @@
 //
 
 $wrapper-props: (
-	null: '.form-check',
-	inline: '.form-check-inline',
-	reverse: '.form-check-reverse'
+	null: '%form-check',
+	inline: '%form-check-inline',
+	reverse: '%form-check-reverse'
 );
 
 .#{$prefix-radio-wrapper} {
@@ -13,9 +13,9 @@ $wrapper-props: (
 }
 
 $props: (
-	null: '.form-check-input',
-	label: '.form-check-label',
-	description: '.form-check-description'
+	null: '%form-check-input',
+	label: '%form-check-label',
+	description: '%form-check-description'
 );
 
 .#{$prefix-radio} {

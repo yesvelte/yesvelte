@@ -1,13 +1,13 @@
 $steps-props: (
-	null: '.steps',
-	color: generate_props($colors, '.steps-'),
-	counter: '.steps-counter',
-	vertical: '.steps-vertical'
+	null: '%steps',
+	color: generate_props($colors, '%steps-'),
+	counter: '%steps-counter',
+	vertical: '%steps-vertical'
 );
 
 $step-item-props: (
-	null: '.step-item',
-	active: '.active'
+	null: '%step-item',
+	active: '%active'
 );
 
 .#{$prefix-steps} {

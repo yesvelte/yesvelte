@@ -4,11 +4,11 @@
 
 $tooltip-props: (
 	null: (
-		'.tooltip',
-		'.bs-tooltip-auto'
+		'%tooltip',
+		'%bs-tooltip-auto'
 	),
-	arrow: '.tooltip-arrow',
-	inner: '.tooltip-inner'
+	arrow: '%tooltip-arrow',
+	inner: '%tooltip-inner'
 );
 
 .#{$prefix-tooltip} {

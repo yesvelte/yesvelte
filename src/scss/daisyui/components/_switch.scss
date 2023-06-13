@@ -1,18 +1,18 @@
 .#{$prefix}switch {
-	@extend .toggle;
+	@extend %toggle;
 }
 
 .#{$prefix}switch-wrapper {
-	@extend .grid;
-	@extend .gap-x-3;
+	@extend %grid;
+	@extend %gap-x-3;
 	margin-bottom: 0.5rem;
 	grid-template-columns: auto 1fr;
 	& > *:not(:first-child) {
 		grid-column-start: 2;
 	}
 	.#{$prefix}checkbox-description {
-		@extend .text-sm;
-		@extend .opacity-70;
+		@extend %text-sm;
+		@extend %opacity-70;
 	}
 }
 
@@ -33,8 +33,8 @@
 		grid-row-start: 1;
 	}
 	.#{$prefix}switch-description {
-		@extend .text-sm;
-		@extend .opacity-70;
+		@extend %text-sm;
+		@extend %opacity-70;
 		grid-column-start: 1;
 	}
 }
@@ -42,20 +42,20 @@
 // reverse
 .#{$prefix}switch-wrapper-reverse {
 	.#{$prefix}switch {
-		@extend .rotate-180;
+		@extend %rotate-180;
 	}
 }
 
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}switch-color-#{$colorName} {
-		@extend .toggle-#{$daisyuiColorName};
+		@extend %toggle-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}switch-color-#{$colorName} {
-		@extend .toggle-#{$daisyuiColorName};
+		@extend %toggle-#{$daisyuiColorName};
 	}
 }
 

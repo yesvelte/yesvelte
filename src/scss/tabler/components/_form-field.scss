@@ -3,15 +3,7 @@
 //
 
 @mixin form-field-mixin {
-	@extend .mb-3;
-
-	&-group {
-		@extend .input-group;
-	}
-
-	&-icon {
-		@extend .input-group-text;
-	}
+	@extend %mb-3;
 
 	&-hint {
 		margin-top: 0.25rem;
@@ -31,6 +23,13 @@
 
 .#{$prefix-form-input} {
 	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
 }
 
 .#{$prefix-form-checkbox} {
@@ -44,10 +43,24 @@
 
 .#{$prefix-form-date-picker} {
 	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
 }
 
 .#{$prefix-form-file-upload} {
 	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
 }
 
 .#{$prefix-form-radio-group} {
@@ -64,8 +77,22 @@
 
 .#{$prefix-form-select} {
 	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
 }
 
 .#{$prefix-form-textarea} {
 	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
 }

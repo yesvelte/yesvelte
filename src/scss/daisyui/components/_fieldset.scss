@@ -1,7 +1,7 @@
 .#{$prefix}fieldset {
-	@extend .p-3;
-	@extend .bg-base-200;
-	@extend .rounded-box;
-	@extend .border;
-	@extend .border-base-300;
+	@extend %p-3;
+	@extend %bg-base-200;
+	@extend %rounded-box;
+	@extend %border;
+	@extend %border-base-300;
 }
