@@ -2,32 +2,27 @@ $prefix: 'y-' !default;
 @import './mixins';
 @import './variables';
 
-@import "bootstrap/scss/functions";
+@import 'bootstrap/scss/functions';
 
-@import "@tabler/core/src/scss/variables";
-@import "@tabler/core/src/scss/variables-dark";
-@import "@tabler/core/src/scss/utilities";
-@import "@tabler/core/src/scss/mixins";
+@import '@tabler/core/src/scss/variables';
+@import '@tabler/core/src/scss/variables-dark';
+@import '@tabler/core/src/scss/utilities';
+@import '@tabler/core/src/scss/mixins';
 
 // Config
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
 
 @import '@tabler/core/src/scss/bootstrap-override';
 
 @import './_tabler.placeholder';
 @import 'quill/dist/quill.snow';
 
-
-
-
-
 @import './components/accordion';
 @import './components/alert';
-// @import './components/app';
 @import './components/avatar';
 @import './components/avatar-list';
 @import './components/badge';
