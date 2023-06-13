@@ -14,7 +14,7 @@
 	import DatepickerSizes from './DatepickerSizes.svelte'
 	import DatepickerValidate from './DatepickerValidate.svelte'
 	import DatepickerValue from './DatepickerValue.svelte'
-	import DatePickerIcon from './DatePickerIcon.svelte'
+	import DatepickerIcon from './DatepickerIcon.svelte'
 </script>
 
 <Page
@@ -65,7 +65,7 @@
 
 	<Doc title="With Icon">
 		<Preview src="./DatepickerIcon.svelte">
-			<DatePickerIcon />
+			<DatepickerIcon />
 		</Preview>
 	</Doc>
 
