@@ -16,7 +16,7 @@
 	export let pathname: string = ''
 </script>
 
-<Sidebar {...$$restProps}>
+<Sidebar class="y-docs-sidebar" {...$$restProps}>
 	{#each navigations as navigation}
 		{#if navigation.children}
 			<SidebarItem
