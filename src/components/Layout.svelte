@@ -46,6 +46,7 @@
 		<link rel="stylesheet" href="/css/tabler.min.css" />
 	{:else if theme === 'daisyui'}
 		<link rel="stylesheet" href="/css/daisyui.min.css" />
+		<link rel="stylesheet" href="/css/daisyui-docs.css" />
 	{/if}
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />

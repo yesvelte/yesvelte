@@ -1,0 +1,26 @@
+/* for daisyui */
+.y-el-gap-2 {
+    gap: 8px;
+}
+.y-el-gap-3 {
+    gap: 16px;
+}
+.y-el-gap-4 {
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .y-el-col-md {
+        flex: 1 0 0% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .y-el-col-lg {
+        flex: 1 0 0% !important;
+    }
+}  
+
+.markdown {
+    max-width: unset !important;
+}
