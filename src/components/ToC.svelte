@@ -4,7 +4,7 @@
 	import { afterNavigate } from '$app/navigation'
 	import { El } from 'yesvelte'
 
-	let sections: any[] = []
+	export let sections: any[] = []
 
 	const init = () => {
 		if (typeof window !== 'undefined') {
@@ -28,7 +28,7 @@
 </script>
 
 {#if sections && sections.length > 0}
-	<El mt="3" mb="5" textMuted sticky="top" id="toc">
+	<El mb="5" textMuted sticky="top" id="toc">
 		<El tag="strong" d="none" dMd="block" my="2">
 			<h4>On this page</h4>
 		</El>
