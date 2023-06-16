@@ -93,7 +93,7 @@
 			if (value.includes(item)) {
 				value = value.filter((x) => x !== item)
 			} else {
-				value = [...value, item]
+				value = [...(value ?? []), getKey(item)]
 			}
 
 			dispatch('changed', value)
