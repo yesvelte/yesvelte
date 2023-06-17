@@ -1,51 +1,23 @@
 /* styles for documentation site */
-html {
-    height: 100%;
-}
-body {
-    height: 100%;
-    overflow: hidden;
+
+.flex-direction-column {
+    flex-direction: column;
+} 
+
+@media (min-width: 768px) {
+    .flex-direction-md-row {
+        flex-direction: row;
+    }
 }
 
-body > div {
-    height: 100%;
-}
-
-.y-docs-page {
-    margin-left: 0px;
-    height: calc(100% - 56px);
-    overflow: auto;
-}
 .y-docs-sidebar {
-    /* margin-top: 56px; */
-    height: calc(100% - 56px);
-    overflow: hidden;
-    position: absolute;
-}
-
-.y-docs-offcanvas {
-    position: absolute;
-    width: 300px !important;
+    position: relative !important;
+    background-color: transparent !important; 
+    box-shadow: none !important;
 }
 
 .y-offcanvas-show-closed {
     display: none;
-}
-
-.y-docs-navbar-container {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-.y-docs-sidebar > * {
-    width: 270px !important;
-}
-
-.y-sidebar-wrapper {
-    padding: 8px !important;
-    height: 100%;
-    overflow: auto;
 }
 
 .y-docs-offcanvas .y-sidebar-wrapper {
@@ -71,13 +43,6 @@ body > div {
 }
 
 @media (min-width: 768px) {
-    .y-docs-page {
-        margin-left: 270px;
-    }
-
-    .y-docs-navbar-container {
-        left: 270px;
-    }
 
     .y-el-d-md-none {
         display: none;
@@ -86,5 +51,4 @@ body > div {
     .y-el-d-md-block {
         display: block;
     }
-    
 }

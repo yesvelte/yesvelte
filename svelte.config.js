@@ -11,7 +11,7 @@ const config = {
 		adapter: adapter({}),
 		prerender: {
 			handleMissingId: 'warn',
-			handleHttpError: 'warn',
+			handleHttpError: 'warn'
 		},
 		alias: {
 			// this will match a file

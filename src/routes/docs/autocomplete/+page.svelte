@@ -14,6 +14,7 @@
 	import AutocompleteOnInput from './AutocompleteOnInput.svelte'
 	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
 	import AutocompleteDismissible from './AutocompleteDismissible.svelte'
+	import AutocompleteMultipleKey from './AutocompleteMultipleKey.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -98,6 +99,14 @@
 		<Preview src="./AutocompleteKey.svelte">
 			<div class="custom-class">
 				<AutocompleteKey />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Custom Key (multiple)">
+		<Preview src="./AutocompleteMultipleKey.svelte">
+			<div class="custom-class">
+				<AutocompleteMultipleKey />
 			</div>
 		</Preview>
 	</Doc>

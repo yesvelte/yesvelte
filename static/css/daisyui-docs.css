@@ -1,0 +1,14 @@
+/* for daisyui */
+.y-el-gap-2 {
+    gap: 8px;
+}
+.y-el-gap-3 {
+    gap: 16px;
+}
+.y-el-gap-4 {
+    gap: 32px;
+}
+
+.markdown {
+    max-width: unset !important;
+}
