@@ -82,7 +82,7 @@
 	</El>
 </El>
 
-<El mx="auto" px="3" container="lg">
+<El mx="auto" px="3" container="lg" style="min-height: calc(100vh - 154px);">
 	<El row>
 		<El style="width: max-content" d="none" dMd="block" colMd="auto">
 			<SidebarNavigations style="margin-left: -1rem;" {pathname} />

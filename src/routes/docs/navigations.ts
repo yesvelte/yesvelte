@@ -12,10 +12,29 @@ export interface Navigation {
 
 export const navigations: Navigation[] = [
 	{
-		title: 'Installation',
-		id: 'installation',
-		route: '/docs/installation',
-		icon: 'download'
+		title: 'Getting Started',
+		id: 'getting-started',
+		route: '/docs',
+		children: [
+			{
+				title: 'Introduction',
+				id: 'introduction',
+				route: '/introduction',
+				icon: 'file-text',
+			},
+			{
+				title: 'Installation',
+				id: 'installation',
+				route: '/installation',
+				icon: 'download',
+			},
+			{
+				title: 'Theming',
+				id: 'theming',
+				route: '/theming',
+				icon: 'color-swatch',
+			},
+		],
 	},
 	{
 		title: 'Core Features',
@@ -75,8 +94,7 @@ export const navigations: Navigation[] = [
 				route: '/el/forward-events',
 				title: 'Event Forwarding',
 				icon: 'tabler:speakerphone',
-				description:
-					'All YeSvelte components support event forwarding.',
+				description: 'All YeSvelte components support event forwarding.',
 			},
 		],
 	},
