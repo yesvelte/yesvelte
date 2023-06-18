@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import {
 		El,
 		FormInput,
@@ -21,6 +22,8 @@
 		textType = textType === 'password' ? 'text' : 'password'
 	}
 </script>
+
+<GithubLink />
 
 <El
 	mt="5"

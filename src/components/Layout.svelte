@@ -6,6 +6,8 @@
 	import { browser } from '$app/environment'
 	import ToC from './ToC.svelte'
 
+	export let wide = false
+
 	let dark: boolean = false
 	let theme: 'tabler' | 'daisyui' = 'tabler'
 
@@ -33,8 +35,8 @@
 
 	$: hasToC = $page.url.pathname !== '/docs' && $page.url.pathname !== '/docs/installation'
 
-	$: nextItem = $page.data.links.nextItem
-	$: prevItem = $page.data.links.prevItem
+	$: nextItem = $page.data.links?.nextItem
+	$: prevItem = $page.data.links?.prevItem
 </script>
 
 <svelte:head>
@@ -82,40 +84,53 @@
 	</El>
 </El>
 
-<El mx="auto" px="3" container="lg" style="min-height: calc(100vh - 154px);">
-	<El row>
-		<El style="width: max-content" d="none" dMd="block" colMd="auto">
-			<SidebarNavigations style="margin-left: -1rem;" {pathname} />
-		</El>
-		<El colLg={hasToC ? '7' : true} colXl={hasToC ? '8' : true} colSm="12" colMd>
-			<El px="2">
+{#if wide}
+	<El mx="auto" px="3" style="min-height: calc(100vh - 154px);">
+		<El row>
+			<El col="auto" style="width: max-content" d="none" dMd="block" colMd="auto">
+				<SidebarNavigations theme="light" style="margin-left: -1rem;" {pathname} />
+			</El>
+			<El col container="xl">
 				<slot />
 			</El>
-
-			<El row mt="3" mb="5">
-				{#if prevItem}
-					<El col="auto" tag="a" href={prevItem.href}>
-						<El class="docs-link" tag="h3" mb="0">
-							<Icon mb="1" name="chevron-left" />
-							{prevItem.title}
-						</El>
-					</El>
-				{/if}
-				{#if nextItem}
-					<El col="auto" ms="auto" justifyContent="end" tag="a" href={nextItem.href}>
-						<El class="docs-link" tag="h3" mb="0">
-							{nextItem.title}
-							<Icon mb="1" name="chevron-right" />
-						</El>
-					</El>
-				{/if}
-			</El>
-		</El>
-		<El colLg d="none" dLg={hasToC ? 'inline-block' : 'none'}>
-			<ToC bind:sections />
 		</El>
 	</El>
-</El>
+{:else}
+	<El mx="auto" px="3" container="lg" style="min-height: calc(100vh - 154px);">
+		<El row>
+			<El style="width: max-content" d="none" dMd="block" colMd="auto">
+				<SidebarNavigations style="margin-left: -1rem;" {pathname} />
+			</El>
+			<El colLg={hasToC ? '7' : true} colXl={hasToC ? '8' : true} colSm="12" colMd>
+				<El px="2">
+					<slot />
+				</El>
+
+				<El row mt="3" mb="5">
+					{#if prevItem}
+						<El col="auto" tag="a" href={prevItem.href}>
+							<El class="docs-link" tag="h3" mb="0">
+								<Icon mb="1" name="chevron-left" />
+								{prevItem.title}
+							</El>
+						</El>
+					{/if}
+					{#if nextItem}
+						<El col="auto" ms="auto" justifyContent="end" tag="a" href={nextItem.href}>
+							<El class="docs-link" tag="h3" mb="0">
+								{nextItem.title}
+								<Icon mb="1" name="chevron-right" />
+							</El>
+						</El>
+					{/if}
+				</El>
+			</El>
+			<El colLg d="none" dLg={hasToC ? 'inline-block' : 'none'}>
+				<ToC bind:sections />
+			</El>
+		</El>
+	</El>
+{/if}
 
 <!-- Footer -->
 <El class={dark ? 'bg-color-dark' : 'bg-color-white'} borderTop>
