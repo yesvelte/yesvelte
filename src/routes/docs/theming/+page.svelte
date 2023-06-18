@@ -50,7 +50,7 @@
 			and for boolean properties, <code>{`.{prefix}-{component}-{key}`}</code> is applied.
 
 			<El border my="3">
-				<Prism language="html" source={`<Button putline>\n\t...\n</Button>`} />
+				<Prism language="html" source={`<Button outline>\n\t...\n</Button>`} />
 			</El>
 
 			will generate:
