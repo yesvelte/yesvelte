@@ -15,6 +15,9 @@
 	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
 	import AutocompleteDismissible from './AutocompleteDismissible.svelte'
 	import AutocompleteMultipleKey from './AutocompleteMultipleKey.svelte'
+	import AutocompleteCreate from './AutocompleteCreate.svelte'
+	import AutocompleteCreateMultiple from './AutocompleteCreateMultiple.svelte'
+	import AutocompleteCreateKey from './AutocompleteCreateKey.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -107,6 +110,30 @@
 		<Preview src="./AutocompleteMultipleKey.svelte">
 			<div class="custom-class">
 				<AutocompleteMultipleKey />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Create Item">
+		<Preview src="./AutocompleteCreate.svelte">
+			<div class="custom-class">
+				<AutocompleteCreate />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Create Item (multiple)">
+		<Preview src="./AutocompleteCreateMultiple.svelte">
+			<div class="custom-class">
+				<AutocompleteCreateMultiple />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Create Item (key)">
+		<Preview src="./AutocompleteCreateKey.svelte">
+			<div class="custom-class">
+				<AutocompleteCreateKey />
 			</div>
 		</Preview>
 	</Doc>

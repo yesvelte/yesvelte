@@ -18,6 +18,7 @@
 	export let size: $$Props['size'] = undefined
 	export let _slots: $$Props['_slots'] = $$slots
 	export let key: $$Props['key'] = undefined
+	export let create: $$Props['create'] = undefined
 	export let dismissible: $$Props['dismissible'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
@@ -31,8 +32,12 @@
 	]
 
 	$: getKey = (item: any) => {
-		if (key) {
-			return typeof key === 'string' ? item[key] : key(item)
+		if (typeof item === 'object') {
+			if (key) {
+				return typeof key === 'string' ? item[key] : key(item)
+			} else {
+				return item
+			}
 		} else {
 			return item
 		}
@@ -70,9 +75,34 @@
 		} else if (e.key === 'ArrowRight') {
 			cursorPosition = Math.min(cursorPosition + 1, value.length - 1)
 		}
+
+		if (e.key == 'Enter') {
+			if (create && !key && options.length === 0) {
+				onCreate()
+			}
+		}
 	}
 
 	$: cursorPosition = multiple ? value.length - 1 : 0
+
+	function onCreate() {
+		dispatch('created', query)
+
+		if (key) {
+			console.log('create is not supported if type is object')
+			return
+		}
+
+		//
+		items = [...items, query]
+
+		if (multiple) {
+			value = [...value, query]
+		} else {
+			value = query
+		}
+		query = ''
+	}
 
 	function onFocus() {
 		if (readonly) return
@@ -206,8 +236,18 @@
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
-			<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
+			{#if create && !key}
+				<El
+					on:click={() => onCreate()}
+					componentName="{componentName}-option"
+					cssProps={{ create: true }}>
+					Create {query}...
+				</El>
+			{:else}
+				<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
+			{/if}
 		{/if}
+
 		{#each options as item, index}
 			{@const shouldShow = multiple ? !value.includes(getKey(item)) : value !== getKey(item)}
 			{#if shouldShow}
