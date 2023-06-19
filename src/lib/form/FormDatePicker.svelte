@@ -14,6 +14,7 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let range: $$Props['range'] = undefined
 	export let required: $$Props['required'] = undefined
+	export let options: $$Props['options'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
@@ -44,6 +45,7 @@
 			placeholder,
 			disabled,
 			required,
+			options,
 			size,
 			state,
 			range,
