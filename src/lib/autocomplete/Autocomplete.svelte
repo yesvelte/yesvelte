@@ -22,7 +22,8 @@
 	export let disabled: $$Props['disabled'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
-	export let value: $$Props['value'] = undefined
+	export let value: $$Props['value'] = multiple ? [] : undefined
+	export let name: $$Props['name'] = undefined
 
 	const dispatch = createEventDispatcher()
 	const components = [
@@ -72,7 +73,7 @@
 		}
 	}
 
-	$: cursorPosition = multiple ? value.length - 1 : 0
+	$: cursorPosition = multiple ? value?.length - 1 : 0
 
 	function onFocus() {
 		if (readonly) return
@@ -209,7 +210,7 @@
 			<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
 		{/if}
 		{#each options as item, index}
-			{@const shouldShow = multiple ? !value.includes(getKey(item)) : value !== getKey(item)}
+			{@const shouldShow = multiple ? !value?.includes(getKey(item)) : value !== getKey(item)}
 			{#if shouldShow}
 				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
 					<slot {item} {index}>{item}</slot>
@@ -218,3 +219,15 @@
 		{/each}
 	</Popup>
 </El>
+
+{#if name}
+	{#if multiple}
+		{#if value}
+			{#each value as val}
+				<input type="hidden" {name} value={val} />
+			{/each}
+		{/if}
+	{:else}
+		<input type="hidden" {name} bind:value />
+	{/if}
+{/if}

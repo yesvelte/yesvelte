@@ -46,13 +46,13 @@
 		if (value === undefined) value = []
 
 		if (items != undefined && items?.length > 0) {
-			const selectedIndex = event.target?.value
+			const selectedValue = event.target?.value
 			const selectedChecked = event.target?.checked
 
 			if (selectedChecked) {
-				value.push(getKey(items[selectedIndex]))
+				value.push(selectedValue)
 			} else {
-				var _index = value.indexOf(getKey(items[selectedIndex]))
+				var _index = value.indexOf(selectedValue)
 				if (_index !== -1) {
 					value.splice(_index, 1)
 				}
@@ -67,7 +67,7 @@
 		{#each items as item, index (index)}
 			<Checkbox
 				{...props}
-				value={index}
+				value={getKey(item)}
 				checked={value?.includes(getKey(item))}
 				on:change={onChange}>
 				<slot {index} {item}>{item}</slot>
