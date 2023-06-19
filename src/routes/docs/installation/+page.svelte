@@ -82,6 +82,17 @@
 		</El>
 	</Doc>
 
+	<Doc title="Template Repository">
+		Easiest way to start working with YeSvelte is using <a
+			href="https://github.com/yesvelte/yesvelte-starter">This Starter Repository</a
+		>. to start using this repo, you can run:
+
+		<pre><code
+				>{'npx degit yesvelte/yesvelte-starter YOUR_PROJECT_NAME;\ncd YOUR_PROJECT_NAME'}</code></pre>
+
+		then follow instrustions of README.md file. and optionally initialize a git repository
+	</Doc>
+
 	<Doc title="Instructions">
 		<p slot="description">
 			To use YeSvelte with {framework} projects, first you should initialize the project, you can use
