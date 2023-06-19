@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import {
 		El,
 		FormInput,
@@ -22,8 +23,18 @@
 	}
 </script>
 
-<El 
-mt="5" col="12" colSm="8" offsetSm="2" colLg="6" offsetLg="3" colXl="4" offsetXl="4" style="height:85vh;">
+<GithubLink />
+
+<El
+	mt="5"
+	col="12"
+	colSm="8"
+	offsetSm="2"
+	colLg="6"
+	offsetLg="3"
+	colXl="4"
+	offsetXl="4"
+	style="height:85vh;">
 	<El container class="container-tight">
 		<Card size="md">
 			<CardBody>
@@ -37,7 +48,7 @@ mt="5" col="12" colSm="8" offsetSm="2" colLg="6" offsetLg="3" colXl="4" offsetXl
 						</El>
 					</El>
 					<Input type={textType} placeholder="Your password">
-						<Button slot="end" on:click={onClick}><Icon name={icon} /></Button>
+						<Icon slot="end" on:click={onClick} name={icon} />
 					</Input>
 				</FormField>
 				<FormCheckbox>Remember me on this device</FormCheckbox>

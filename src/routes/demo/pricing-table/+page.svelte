@@ -1,6 +1,9 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import { El, Card, Table, TableRow, TableBody, TableCell, Button, Icon } from 'yesvelte'
 </script>
+
+<GithubLink />
 
 <Card>
 	<Table mb="0">

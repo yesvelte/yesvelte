@@ -1,7 +1,9 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import { El, FormInput, Button, Card, CardBody, Icon } from 'yesvelte'
 </script>
 
+<GithubLink />
 <El class="page page-center" style="height:85vh;">
 	<El container class="container-tight">
 		<Card size="md">
