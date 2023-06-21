@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import { El, FormInput, Button, Icon, Label, Input, FormField, FormCheckbox } from 'yesvelte'
 
 	let icon = 'eye'
@@ -9,6 +10,8 @@
 		textType = textType === 'password' ? 'text' : 'password'
 	}
 </script>
+
+<GithubLink />
 
 <El row g="0" m="0" style="background-color:white;">
 	<El col="12" colLg="6" colXl="4" justifyContent="center" alignItems="center" d="flex">

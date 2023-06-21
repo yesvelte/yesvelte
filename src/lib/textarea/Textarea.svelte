@@ -61,5 +61,5 @@
 		{/if}
 	</El>
 {:else}
-	<El bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
+	<El {components} bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
 {/if}

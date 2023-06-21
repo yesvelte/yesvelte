@@ -1,6 +1,9 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import { El, Card, CardBody, Button, Icon, Ribbon } from 'yesvelte'
 </script>
+
+<GithubLink />
 
 <El row>
 	<El colLg="3" colSm="6">

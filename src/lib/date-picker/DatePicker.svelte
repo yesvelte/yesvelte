@@ -35,19 +35,22 @@
 	let instance: Litepicker | undefined = undefined
 
 	$: if (value) {
-		text = format(new Date(value), 'text') as string
-
 		if (element) element.value = text
 
 		if (range) {
 			instance?.setStartDate(value[0])
 			instance?.setEndDate(value[1])
+
+			text = (format(value[0], 'text') + ' - ' + format(value[1], 'text')) as string
 		} else {
 			instance?.setDate(value)
+
+			text = format(new Date(value), 'text') as string
 		}
 	}
 
 	function format(date: Date | DateTime | null | undefined, mode = 'value'): Date | string {
+		if (!date) return ' --- '
 		if (date.toJSDate) date = date.toJSDate()
 
 		if (date) {
