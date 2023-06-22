@@ -223,9 +223,11 @@
 {#if name}
 	{#if multiple}
 		{#if value}
-			{#each value as val}
-				<input type="hidden" {name} value={val} />
-			{/each}
+			<select style="display: none" multiple {name}>
+				{#each value as val}
+					<option value={val} selected />
+				{/each}
+			</select>
 		{/if}
 	{:else}
 		<input type="hidden" {name} bind:value />

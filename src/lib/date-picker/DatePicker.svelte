@@ -185,4 +185,6 @@
 {/if}
 
 <!-- TODO: in form datePicker, should move it outside of form field group (right border should be round) -->
-<input type="hidden" {name} {value} />
+{#if value}
+	<input type="hidden" {name} {value} />
+{/if}
