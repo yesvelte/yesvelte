@@ -33,7 +33,7 @@
 
 	let sections: any[] = []
 
-	$: hasToC = $page.url.pathname !== '/docs' && $page.url.pathname !== '/docs/installation'
+	$: hasToC = $page.url.pathname !== '/docs'
 
 	$: nextItem = $page.data.links?.nextItem
 	$: prevItem = $page.data.links?.prevItem
