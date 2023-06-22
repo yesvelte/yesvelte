@@ -5,6 +5,7 @@ $props: (
 	close: '.btn-close',
 	color: generate_props($theme_colors, ('.alert-')),
 	start: '.alert-icon',
+	link: '.alert-link',
 	important: '.alert-important'
 );
 

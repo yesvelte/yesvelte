@@ -3,14 +3,14 @@
 </script>
 
 <Alert color="success">
-	This is a success alert — <a href="/" class="alert-link">check it out</a>!
+	This is a success alert — <a href="/" class="y-alert-link">check it out</a>!
 </Alert>
 <Alert color="info">
-	This is a info alert — <a href="/" class="alert-link">check it out</a>!
+	This is a info alert — <a href="/" class="y-alert-link">check it out</a>!
 </Alert>
 <Alert color="warning">
-	This is a warning alert — <a href="/" class="alert-link">check it out</a>!
+	This is a warning alert — <a href="/" class="y-alert-link">check it out</a>!
 </Alert>
 <Alert color="danger">
-	This is a danger alert — <a href="/" class="alert-link">check it out</a>!
+	This is a danger alert — <a href="/" class="y-alert-link">check it out</a>!
 </Alert>
