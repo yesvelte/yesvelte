@@ -12,7 +12,7 @@
 			target="_blank"
 			href="https://github.com/yesvelte/yesvelte/blob/dev/src/routes{$page.url
 				.pathname}/%2Bpage.svelte">
-			<Icon name="brand-github" />
+			<Icon name="code" />
 		</Button>
 	{/key}
 </El>

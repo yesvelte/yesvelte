@@ -60,38 +60,76 @@
 	<SidebarNavigations p="3" position="static" {pathname} />
 </Offcanvas>
 
-<El bgColor={dark ? 'dark' : 'light'} borderBottom>
-	<El container="lg" d="flex" alignItems="center" justifyContent="between" py="3" px="3">
-		<El d="flex" gap="3" alignItems="center">
-			<Icon dMd="none" size="xl" name="menu-2" on:click={() => (offcanvasOpen = !offcanvasOpen)} />
-			<Logo href="/" height="32" />
-		</El>
-
-		<El d="flex" alignItems="center" gap="2">
-			<El col="auto">
-				<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+{#if !wide}
+	<El bgColor={dark ? 'dark' : 'light'} borderBottom>
+		<El container="lg" d="flex" alignItems="center" justifyContent="between" py="3" px="3">
+			<El d="flex" gap="3" alignItems="center">
+				<Icon
+					dMd="none"
+					size="xl"
+					name="menu-2"
+					on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+				<Logo href="/" height="32" />
 			</El>
-			<El col>
-				<Button outline on:click={() => (dark = !dark)}>
-					{#if dark}
-						<Icon name="sun" />
-					{:else}
-						<Icon name="moon" />
-					{/if}
-				</Button>
+
+			<El d="flex" alignItems="center" gap="2">
+				<El col="auto">
+					<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+				</El>
+				<El col>
+					<Button outline on:click={() => (dark = !dark)}>
+						{#if dark}
+							<Icon name="sun" />
+						{:else}
+							<Icon name="moon" />
+						{/if}
+					</Button>
+				</El>
 			</El>
 		</El>
 	</El>
-</El>
+{/if}
 
 {#if wide}
-	<El mx="auto" px="3" style="min-height: calc(100vh - 154px);">
-		<El row>
-			<El col="auto" style="width: max-content" d="none" dMd="block" colMd="auto">
-				<SidebarNavigations theme="light" style="margin-left: -1rem;" {pathname} />
+	<El mx="auto" style="min-height: calc(100vh - 154px);">
+		<El row g="0">
+			<El d="none" dMd="block" h="auto" bgColor={dark ? 'dark' : 'light'} borderEnd colMd="auto">
+				<Logo href="/" height="40" p="3" />
+
+				<SidebarNavigations style="overflow: hidden" {pathname} />
 			</El>
-			<El col container="xl">
-				<slot />
+			<El col>
+				<El bgColor={dark ? 'dark' : 'light'} borderBottom>
+					<El container="xl" d="flex" alignItems="center" justifyContent="between" py="3" px="3">
+						<El d="flex" gap="3" alignItems="center">
+							<Icon
+								dMd="none"
+								size="xl"
+								name="menu-2"
+								on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+							<Logo dMd="none" href="/" height="32" />
+						</El>
+
+						<El d="flex" alignItems="center" gap="2">
+							<El col="auto">
+								<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+							</El>
+							<El col>
+								<Button outline on:click={() => (dark = !dark)}>
+									{#if dark}
+										<Icon name="sun" />
+									{:else}
+										<Icon name="moon" />
+									{/if}
+								</Button>
+							</El>
+						</El>
+					</El>
+				</El>
+
+				<El container="xl">
+					<slot />
+				</El>
 			</El>
 		</El>
 	</El>
