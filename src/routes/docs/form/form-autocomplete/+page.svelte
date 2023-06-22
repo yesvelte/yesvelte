@@ -1,6 +1,8 @@
 <script>
 	import { Page, Doc, Preview } from '$components'
 	import FormAutocompleteColumn from './FormAutocompleteColumn.svelte'
+	import FormAutocompleteCreate from './FormAutocompleteCreate.svelte'
+	import FormAutocompleteCreateMultiple from './FormAutocompleteCreateMultiple.svelte'
 	import FormAutocompleteCustomOption from './FormAutocompleteCustomOption.svelte'
 	import FormAutocompleteDisabled from './FormAutocompleteDisabled.svelte'
 	import FormAutocompleteDismissible from './FormAutocompleteDismissible.svelte'
@@ -72,6 +74,18 @@
 			<FormAutocompleteSlots />
 		</Preview>
 	</Doc> -->
+
+	<Doc title="Create">
+		<Preview src="./FormAutocompleteCreate.svelte">
+			<FormAutocompleteCreate />
+		</Preview>
+	</Doc>
+
+	<Doc title="Create Multiple">
+		<Preview src="./FormAutocompleteCreateMultiple.svelte">
+			<FormAutocompleteCreateMultiple />
+		</Preview>
+	</Doc>
 
 	<Doc title="Multiple">
 		<Preview src="./FormAutocompleteMultiple.svelte">

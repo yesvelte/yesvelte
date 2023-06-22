@@ -21,9 +21,10 @@
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let create: $$Props['create'] = undefined
 
 	const components = [
-		{ component: get_current_component(), except: ['input', 'changed'] },
+		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
 		...($$props.components ?? []),
 	]
 
@@ -50,6 +51,7 @@
 			name,
 			size,
 			state,
+			create,
 		}
 	}
 </script>
@@ -67,6 +69,7 @@
 		<Autocomplete
 			{...autocompleteProps}
 			on:changed
+			on:created
 			on:input
 			{components}
 			_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
