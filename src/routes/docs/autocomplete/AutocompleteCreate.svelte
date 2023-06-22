@@ -5,6 +5,7 @@
 	let value = ''
 
 	function onCreated({ detail }: CustomEvent<string>) {
+		value = detail
 		items = [...items, detail]
 	}
 </script>

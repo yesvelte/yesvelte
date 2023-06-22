@@ -27,7 +27,7 @@
 
 	const dispatch = createEventDispatcher()
 	const components = [
-		{ component: get_current_component(), except: ['input', 'changed'] },
+		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
 		...($$props.components ?? []),
 	]
 
@@ -51,6 +51,7 @@
 	let cursorPosition = 0
 
 	function onInput(e: any) {
+		if(!show) show = true;
 		dispatch('input', query)
 	}
 
@@ -77,7 +78,7 @@
 		}
 
 		if (e.key == 'Enter') {
-			if (create && !key && options.length === 0) {
+			if (create && options.length === 0) {
 				onCreate()
 			}
 		}
@@ -87,20 +88,6 @@
 
 	function onCreate() {
 		dispatch('created', query)
-
-		if (key) {
-			console.log('create is not supported if type is object')
-			return
-		}
-
-		//
-		items = [...items, query]
-
-		if (multiple) {
-			value = [...value, query]
-		} else {
-			value = query
-		}
 		query = ''
 	}
 
@@ -236,7 +223,7 @@
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
-			{#if create && !key}
+			{#if create}
 				<El
 					on:click={() => onCreate()}
 					componentName="{componentName}-option"

@@ -1,22 +1,24 @@
-<script>
-	import { Autocomplete, El } from 'yesvelte'
+<script lang="ts">
+	import { Autocomplete } from 'yesvelte'
 
 	let items = [
-		{ id: 'first', value: 'First Item' },
-		{ id: 'second', value: 'Second Item' },
-		{ id: 'third', value: 'Third Item' },
-		{ id: 'fourth', value: 'Fourth Item' },
-		{ id: 'fifth', value: 'Fifth Item' },
+		{ id: 1, value: 'First Item' },
+		{ id: 2, value: 'Second Item' },
+		{ id: 3, value: 'Third Item' },
+		{ id: 4, value: 'Fourth Item' },
+		{ id: 5, value: 'Fifth Item' },
 	]
 
-	function onCreated(event) {
-		items = [...items, { id: event.detail, value: event.detail + ' Item' }]
+	function onCreated(event: any) {
+		const id = items.length + 1
+
+		items = [...items, { id, value: event.detail }]
+		value = id
 	}
 
-	let value = ''
+	let value: number | undefined = undefined
 </script>
 
-<El textColor="red" tag="small">Create new items is not supported if type of item is Object</El>
 <Autocomplete create on:created={onCreated} key="id" {items} bind:value let:item>
 	{item.value}
 </Autocomplete>

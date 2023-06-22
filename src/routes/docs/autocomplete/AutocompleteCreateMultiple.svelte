@@ -6,6 +6,7 @@
 
 	function onCreated({ detail }: CustomEvent<string>) {
 		console.log('onCreated')
+		value = [...value, detail]
 		items = [...items, detail]
 	}
 </script>
