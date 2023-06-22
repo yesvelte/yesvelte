@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { Input } from 'yesvelte'
+	import { FormInput } from 'yesvelte'
 </script>
 
-<Input placeholder="Username">
-	<span slot="start">@</span>
-</Input>
+<FormInput placeholder="Username">
+	<span slot="start-icon">@</span>
+</FormInput>
 
-<Input placeholder="Recipient's username">
-	<span slot="end">@example.com</span>
-</Input>
+<FormInput placeholder="Recipient's username">
+	<span slot="end-icon">@example.com</span>
+</FormInput>
 
-<Input placeholder="Your vanity URL">
-	<span slot="start">https://example.com/users/</span>
-</Input>
+<FormInput placeholder="Your vanity URL">
+	<span slot="start-icon">https://example.com/users/</span>
+</FormInput>
 
-<Input placeholder="Amount">
-	<span slot="start">$</span>
-	<span slot="end">.00</span>
-</Input>
+<FormInput placeholder="Amount">
+	<span slot="start-icon">$</span>
+	<span slot="end-icon">.00</span>
+</FormInput>

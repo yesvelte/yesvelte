@@ -21,7 +21,6 @@ $icon-sizes: (
 
 $props: (
 	null: '.icon',
-	filled: '.icon-filled',
 	color: generate_props($theme_colors, ('.text-')),
 	size: generate_props($icon-sizes, ('.icon-size-'))
 );
@@ -30,13 +29,9 @@ $props: (
 	@include apply-props($props);
 	display: inline-block;
 
-	min-width: 1rem !important;
-	min-height: 1rem !important;
-
 	@each $key, $value in $icon-sizes {
 		&-size-#{$key} {
-			width: #{$value} !important;
-			height: #{$value} !important;
+			--#{$prefix-icon}-size: #{$value};
 		}
 	}
 

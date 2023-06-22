@@ -16,6 +16,7 @@
 	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
 
@@ -48,14 +49,19 @@
 	}
 
 	const onChange = (event: any) => {
-		const selectedIndex = event.target.value
-		value = items && selectedIndex ? getKey(items[selectedIndex]) : undefined
+		if (multiple) {
+			value = Array.from(event.target.selectedOptions).map((option) => option.value)
+		} else {
+			const selected = event.target.value
+			value = selected
+		}
 	}
 </script>
 
 <El
 	tag="select"
 	{components}
+	{multiple}
 	bind:value
 	{...$$restProps}
 	{...props}
@@ -66,7 +72,9 @@
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
-			<option value={index} selected={value === getKey(item)}>
+			<option
+				value={getKey(item)}
+				selected={multiple ? value.includes(getKey(item)) : value === getKey(item)}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}

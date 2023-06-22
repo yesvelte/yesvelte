@@ -3,11 +3,11 @@
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
+	import { El } from '../el'
 
 	type $$Props = FormInputProps
 
 	export let componentName: $$Props['componentName'] = 'form-input'
-	export let tag: $$Props['tag'] = 'input'
 	export let disabled: $$Props['disabled'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
@@ -49,7 +49,6 @@
 	}
 
 	$: inputProps = {
-		tag,
 		placeholder,
 		disabled,
 		readonly,
@@ -72,9 +71,24 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
-	<Input bind:id {components} {...inputProps} bind:value>
-		<slot />
-	</Input>
-	<slot name="hint" />
+	<slot slot="label" name="label" />
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="start-icon" />
+				</El>
+			{/if}
+		</slot>
+		<Input bind:id {components} {...inputProps} bind:value />
+	
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="end-icon" />
+				</El>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot slot="hint" name="hint" />
 </FormField>

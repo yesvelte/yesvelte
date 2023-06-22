@@ -3,9 +3,11 @@
 	import { Autocomplete } from '../autocomplete'
 	import type { FormAutocompleteProps } from './Form.types'
 	import FormField from './FormField.svelte'
+	import { El } from '../el'
 
 	type $$Props = FormAutocompleteProps
 
+	export let componentName: $$Props['componentName'] = 'form-autocomplete'
 	export let disabled: $$Props['disabled'] = undefined
 	export let hint: $$Props['hint'] = undefined
 	export let items: $$Props['items'] = []
@@ -14,6 +16,8 @@
 	export let name: $$Props['name'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let required: $$Props['required'] = undefined
+	export let multiple: $$Props['multiple'] = undefined
+	export let dismissible: $$Props['dismissible'] = undefined
 	export let size: $$Props['size'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = undefined
@@ -41,6 +45,8 @@
 			items,
 			key,
 			placeholder,
+			multiple,
+			dismissible,
 			name,
 			size,
 			state,
@@ -49,19 +55,36 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
-	<Autocomplete
-		{...autocompleteProps}
-		on:changed
-		on:input
-		{components}
-		_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
-		bind:value
-		bind:id
-		let:item
-		let:index>
-		<slot {index} {item}>{item}</slot>
-		<slot name="selected" slot="selected" {index} {item}>{item}</slot>
-	</Autocomplete>
-	<slot name="hint" />
+	<slot name="label" slot="label" />
+	<svelte:fragment slot="group">
+		<slot name="start">
+			{#if $$slots['start-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="start-icon" />
+				</El>
+			{/if}
+		</slot>
+		<Autocomplete
+			{...autocompleteProps}
+			on:changed
+			on:input
+			{components}
+			_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
+			bind:value
+			bind:id
+			let:item
+			let:index>
+			<slot {index} {item}>{item}</slot>
+			<slot name="selected" slot="selected" {index} {item}>{item}</slot>
+		</Autocomplete>
+
+		<slot name="end">
+			{#if $$slots['end-icon']}
+				<El componentName="{componentName}-icon">
+					<slot name="end-icon" />
+				</El>
+			{/if}
+		</slot>
+	</svelte:fragment>
+	<slot name="hint" slot="hint" />
 </FormField>

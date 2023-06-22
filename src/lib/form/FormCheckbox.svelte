@@ -21,7 +21,6 @@
 	export let indeterminate: $$Props['indeterminate'] = undefined
 	export let inline: $$Props['inline'] = undefined
 	export let name: $$Props['name'] = undefined
-	export let forwardEvents: $$Props['forwardEvents'] = []
 
 	let id: string
 	const components = [
@@ -50,9 +49,9 @@
 </script>
 
 <FormField {...props} {...$$restProps}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<Checkbox bind:id {...checkboxProps} bind:checked bind:value {components}>
 		<slot />
 	</Checkbox>
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

@@ -1,15 +1,13 @@
 <script>
-	import { Button, Icon, Input } from 'yesvelte'
+	import { Button, FormInput, Icon, Input } from 'yesvelte'
 </script>
 
 <Input placeholder="your domain name">
-	<span slot="end">
-		<Icon name="search" />
-	</span>
+	<Icon slot="end" name="search" />
 </Input>
 
-<Input placeholder="your domain name">
+<FormInput placeholder="your domain name">
 	<Button tag="a" slot="end">
 		<Icon name="search" />
 	</Button>
-</Input>
+</FormInput>

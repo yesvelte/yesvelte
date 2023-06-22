@@ -1,6 +1,8 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import { El, Card, CardBody, Accordions, AccordionBody, Accordion } from 'yesvelte'
 </script>
+<GithubLink />
 
 <Card>
 	<CardBody p="5">

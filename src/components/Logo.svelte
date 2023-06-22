@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
 	import { El } from '$lib'
 
+	export let href: string | undefined = undefined
 	export let height = '55'
 </script>
 
-<El {...$$restProps}>
+<El d="block" {href} tag={href ? 'a' : 'div'} {...$$restProps} class="y-logo">
 	<svg {height} viewBox="0 0 186 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path
 			d="M70.7626 31.6166V40.064H67.3958V31.6166L60.1421 19.0985H63.9067L69.0792 28.2193L74.2823 19.0985H77.9857L70.7626 31.6166Z"
@@ -35,8 +36,15 @@
 </El>
 
 <style>
-	:global(.y-logo) {
+	:global(.y-logo[href]) {
 		margin: 0;
+		color: #202020;
+		z-index: 1;
 		/* color: #2773bf; */
+	}
+
+	:global([data-bs-theme='dark']) :global(.y-logo[href]),
+	:global([data-theme='dark']) :global(.y-logo[href]) {
+		color: #dfdfdf;
 	}
 </style>

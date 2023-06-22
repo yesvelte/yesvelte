@@ -52,7 +52,7 @@ $modal-props: (
 	&-show {
 		&-opening,
 		&-closing {
-			transition: all 0.5s ease-out;
+			transition: all 0.3s ease-out;
 		}
 
 		&-open,
@@ -78,7 +78,7 @@ $modal-props: (
 	&-backdrop-show {
 		&-opening,
 		&-closing {
-			transition: all 0.5s ease-out;
+			transition: all 0.3s ease-out;
 		}
 
 		&-open,
@@ -103,4 +103,5 @@ $modal-props: (
 
 .#{$prefix}body-modal-show {
 	overflow: hidden;
+	padding-right: 1rem;
 }

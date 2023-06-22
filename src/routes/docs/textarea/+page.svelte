@@ -9,6 +9,7 @@
 	import TextareaBorderShapes from './TextareaBorderShapes.svelte'
 	import TextareaEvents from './TextareaEvents.svelte'
 	import TextareaValidation from './TextareaValidation.svelte'
+	import TextareaIcon from './TextareaIcon.svelte'
 </script>
 
 <Page
@@ -53,6 +54,14 @@
 		<Preview src="./TextareaReadonly.svelte">
 			<div class="custom-class">
 				<TextareaReadonly />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="With Icon">
+		<Preview src="./TextareaIcon.svelte">
+			<div class="custom-class">
+				<TextareaIcon />
 			</div>
 		</Preview>
 	</Doc>

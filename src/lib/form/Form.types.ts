@@ -21,33 +21,33 @@ export interface FormFieldProps extends Partial<ElProps> {
 	state?: InputStates
 }
 
-export interface FormEditorProps extends Partial<FormFieldProps>, Partial<EditorProps> {}
+export interface FormEditorProps extends Partial<FormFieldProps>, Partial<EditorProps> { }
 
-export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> {}
+export interface FormInputProps extends Partial<FormFieldProps>, Partial<InputProps> { }
 
 export interface FormTextAreaProps extends Partial<FormInputProps> {
 	rows?: number | string
 	cols?: number | string
 }
-export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> {}
+export interface FormSwitchProps extends Partial<FormFieldProps>, Partial<SwitchProps> { }
 
-export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> {}
+export interface FormRadioGroupProps extends Partial<FormFieldProps>, Partial<RadioGroupProps> { }
 
-export interface FormSelectProps extends Partial<FormFieldProps>, Partial<SelectProps> {}
+export interface FormSelectProps extends Partial<Omit<FormFieldProps, 'value'>>, Partial<SelectProps> { }
 
 export interface FormCheckboxGroupProps
 	extends Partial<Omit<FormFieldProps, 'value'>>,
-		Partial<CheckboxGroupProps> {}
+	Partial<CheckboxGroupProps> { }
 
-export interface FormSliderProps extends Partial<FormFieldProps>, Partial<SliderProps> {}
-export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> {}
+export interface FormSliderProps extends Partial<FormFieldProps>, Partial<SliderProps> { }
+export interface FormCheckboxProps extends Partial<FormFieldProps>, Partial<CheckboxProps> { }
 
 export interface FormDatePickerProps
 	extends Partial<Omit<FormFieldProps, 'value'>>,
-		Partial<DatePickerProps> {}
+	Partial<DatePickerProps> { }
 
-export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> {}
+export interface FormFileUploadProps extends Partial<FormFieldProps>, Partial<FileUploadProps> { }
 
 export interface FormAutocompleteProps
 	extends Partial<Omit<FormFieldProps, 'value'>>,
-		Partial<AutocompleteProps> {}
+	Partial<AutocompleteProps> { }

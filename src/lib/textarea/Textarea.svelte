@@ -46,12 +46,20 @@
 	}
 </script>
 
-<El {components} componentName="{componentName}-wrapper" cssProps={{ size }}>
-	{#if $$slots.start}
-		<slot name="start" />
-	{/if}
-	<El bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
-	{#if $$slots.end}
-		<slot name="end" />
-	{/if}
-</El>
+{#if $$slots.start || $$slots.end}
+	<El {components} componentName="{componentName}-wrapper" cssProps={{ size }}>
+		{#if $$slots.start}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="start" />
+			</El>
+		{/if}
+		<El bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
+		{#if $$slots.end}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="end" />
+			</El>
+		{/if}
+	</El>
+{:else}
+	<El {components} bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
+{/if}

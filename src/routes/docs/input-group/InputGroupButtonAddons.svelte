@@ -1,33 +1,33 @@
 <script lang="ts">
-	import { Button, Input } from 'yesvelte'
+	import { Button, FormInput, Input } from 'yesvelte'
 </script>
 
-<Input>
+<FormInput>
 	<Button slot="start">Button</Button>
-</Input>
+</FormInput>
 
-<Input>
+<FormInput>
 	<Button slot="start" outline color="secondary">Button</Button>
-</Input>
+</FormInput>
 
-<Input placeholder="Recipient's username">
+<FormInput placeholder="Recipient's username">
 	<Button slot="end">Button</Button>
-</Input>
+</FormInput>
 
-<Input placeholder="Recipient's username">
+<FormInput placeholder="Recipient's username">
 	<Button slot="end" outline color="secondary">Button</Button>
-</Input>
+</FormInput>
 
-<Input>
+<FormInput>
 	<svelte:fragment slot="start">
 		<Button outline color="secondary">Button</Button>
 		<Button outline color="secondary">Button</Button>
 	</svelte:fragment>
-</Input>
+</FormInput>
 
-<Input>
+<FormInput>
 	<svelte:fragment slot="end">
 		<Button>Button</Button>
 		<Button>Button</Button>
 	</svelte:fragment>
-</Input>
+</FormInput>

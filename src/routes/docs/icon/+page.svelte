@@ -2,7 +2,6 @@
 	import { Page, Doc, Preview } from '$components'
 	import IconColors from './IconColors.svelte'
 	import IconDefault from './IconDefault.svelte'
-	import IconFilled from './IconFilled.svelte'
 	import IconSizes from './IconSizes.svelte'
 </script>
 
@@ -27,15 +26,6 @@
 		</p>
 		<Preview src="./IconColors.svelte">
 			<IconColors />
-		</Preview>
-	</Doc>
-
-	<Doc title="Filled">
-		<p slot="description">
-			To use a filled icon, set the <code>filled</code> prop to <code>true</code>.
-		</p>
-		<Preview src="./IconFilled.svelte">
-			<IconFilled />
 		</Preview>
 	</Doc>
 

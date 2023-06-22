@@ -16,7 +16,7 @@
 	export let pathname: string = ''
 </script>
 
-<Sidebar {...$$restProps}>
+<Sidebar class="y-docs-sidebar" {...$$restProps}>
 	{#each navigations as navigation}
 		{#if navigation.children}
 			<SidebarItem
@@ -37,7 +37,7 @@
 		{:else}
 			<SidebarItem
 				active={pathname.startsWith(navigation.route ?? '')}
-				href="#{navigation.id}"
+				href={navigation.route}
 				icon={navigation.icon}
 				title={navigation.title} />
 		{/if}

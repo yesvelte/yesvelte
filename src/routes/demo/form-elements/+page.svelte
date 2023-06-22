@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GithubLink from '$components/GithubLink.svelte'
 	import {
 		CardFooter,
 		DatePicker,
@@ -163,6 +164,8 @@
 	let selectedItemWithLabel = 'Copy'
 	let selectedItemWithAvatar = itemsWithImage[0].name
 </script>
+<GithubLink />
+
 
 <Card title="Form elements" mb="3">
 	<CardBody>

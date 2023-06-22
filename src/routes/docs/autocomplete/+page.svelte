@@ -12,6 +12,9 @@
 	import AutocompleteAvatar from './AutocompleteAvatar.svelte'
 	import AutocompleteFlags from './AutocompleteFlags.svelte'
 	import AutocompleteOnInput from './AutocompleteOnInput.svelte'
+	import AutocompleteMultiple from './AutocompleteMultiple.svelte'
+	import AutocompleteDismissible from './AutocompleteDismissible.svelte'
+	import AutocompleteMultipleKey from './AutocompleteMultipleKey.svelte'
 </script>
 
 <Page title="Autocomplete">
@@ -57,6 +60,17 @@
 			<div class="custom-class"><AutocompleteSizes /></div>
 		</Preview>
 	</Doc>
+	<Doc title="Multiple">
+		<Preview src="./AutocompleteMultiple.svelte">
+			<div class="custom-class"><AutocompleteMultiple /></div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Dismissible">
+		<Preview src="./AutocompleteDismissible.svelte">
+			<div class="custom-class"><AutocompleteDismissible /></div>
+		</Preview>
+	</Doc>
 
 	<Doc title="Complex Items">
 		<p slot="description">
@@ -85,6 +99,14 @@
 		<Preview src="./AutocompleteKey.svelte">
 			<div class="custom-class">
 				<AutocompleteKey />
+			</div>
+		</Preview>
+	</Doc>
+
+	<Doc title="Custom Key (multiple)">
+		<Preview src="./AutocompleteMultipleKey.svelte">
+			<div class="custom-class">
+				<AutocompleteMultipleKey />
 			</div>
 		</Preview>
 	</Doc>

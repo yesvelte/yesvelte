@@ -49,7 +49,7 @@
 </script>
 
 <FormField {id} {...props} {...$$restProps}>
-	<slot name="label" />
+	<slot name="label" slot="label" />
 	<Editor bind:id {components} {...editorProps} on:changed bind:value />
-	<slot name="hint" />
+	<slot name="hint" slot="hint" />
 </FormField>

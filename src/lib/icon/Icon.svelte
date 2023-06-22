@@ -15,7 +15,6 @@
 
 	export let componentName: $$Props['componentName'] = 'icon'
 	export let color: $$Props['color'] = undefined
-	export let filled: $$Props['filled'] = false
 	export let name: $$Props['name'] = undefined
 	export let pack: $$Props['pack'] = 'tabler'
 	export let size: $$Props['size'] = undefined
@@ -33,7 +32,6 @@
 
 	$: cssProps = {
 		color,
-		filled,
 		size,
 	}
 </script>

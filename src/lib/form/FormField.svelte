@@ -3,7 +3,6 @@
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { FormFieldProps } from './Form.types'
-	import type { LabelProps } from '../label/Label.types'
 
 	type $$Props = FormFieldProps
 
@@ -21,17 +20,19 @@
 </script>
 
 <El {components} {...$$restProps} {componentName}>
-	<slot name="label">
-		{#if label}
-			<Label for={id} {required}>{label}</Label>
-		{/if}
+	{#if label}
+		<Label for={id} {required}>{label}</Label>
+	{/if}
+	<slot name="label" />
+	<slot>
+		<El componentName="{componentName}-group">
+			<slot name="group" />
+		</El>
 	</slot>
-	<slot />
-	<slot name="hint">
-		{#if hint}
-			<El componentName={componentName + '-hint'} cssProps={{ state }}>
-				{hint}
-			</El>
-		{/if}
-	</slot>
+	<slot name="hint" />
+	{#if hint}
+		<El componentName={componentName + '-hint'} cssProps={{ state }}>
+			{hint}
+		</El>
+	{/if}
 </El>

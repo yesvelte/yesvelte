@@ -33,4 +33,5 @@ export interface InputProps extends Partial<ElProps> {
 	maxlength?: string | number
 	pattern?: string
 	step?: string | number
+	slots?: object
 }

@@ -22,6 +22,13 @@
 	export let name: $$Props['name'] = undefined
 	export let id: $$Props['id'] = undefined
 
+	export let min: $$Props['min'] = undefined
+	export let max: $$Props['max'] = undefined
+	export let minlength: $$Props['minlength'] = undefined
+	export let maxlength: $$Props['maxlength'] = undefined
+	export let pattern: $$Props['pattern'] = undefined
+	export let step: $$Props['step'] = undefined
+
 	const components = [
 		{ component: get_current_component(), except: [] },
 		...($$props.components ?? []),
@@ -62,25 +69,34 @@
 			required,
 			type,
 			name,
+			min,
+			max,
+			minlength,
+			maxlength,
+			pattern,
+			step,
 		}
 	}
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={wrapperCssProps}>
-	{#if $$slots.start}
-		<slot name="start" />
-	{/if}
-	<slot />
+{#if $$slots.start || $$slots.end}
 	<El
-		tag="input"
-		bind:value
-		bind:element
-		bind:id
 		{components}
+		componentName="{componentName}-wrapper"
 		{...$$restProps}
-		{...props}
-		{cssProps} />
-	{#if $$slots.end}
-		<slot name="end" />
-	{/if}
-</El>
+		cssProps={wrapperCssProps}>
+		{#if $$slots.start}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="start" />
+			</El>
+		{/if}
+		<El tag="input" bind:value bind:element bind:id {...props} {cssProps} />
+		{#if $$slots.end}
+			<El tag="span" componentName="{componentName}-icon">
+				<slot name="end" />
+			</El>
+		{/if}
+	</El>
+{:else}
+	<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
+{/if}
