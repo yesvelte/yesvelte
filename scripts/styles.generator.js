@@ -1,6 +1,6 @@
 import postcss from 'postcss'
 import replace from 'postcss-selector-replace'
-import fs from 'fs'
+import { mkdir, stat, writeFile } from 'fs/promises'
 import path from 'path'
 import cssNano from 'cssnano'
 import sass from 'sass'
@@ -8,26 +8,36 @@ import sass from 'sass'
 const defaultThemes = ['tabler', 'daisyui']
 const destinations = ['./static/css', './src/lib/css']
 
-function compileScss(file) {
+async function exists(f) {
+	try {
+		await stat(f)
+		return true
+	} catch {
+		return false
+	}
+}
+
+async function compileScss(file) {
 	// console.log(`Compiling ${file}...`)
-	const { css } = sass.compile(file, {
-		/** @type {import ('sass').FileImporter<'sync'>[]} */
-		importers: [
-			{
-				findFileUrl(url) {
-					if (url.startsWith('@') || url.startsWith('~')) {
-						url = path.resolve('node_modules', url.substring(1))
-					}
-					if (url.startsWith('../../node_modules/')) {
-						url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
-					}
-					return new URL('file://' + url)
+	return sass
+		.compileAsync(file, {
+			/** @type {import ('sass').FileImporter<'sync'>[]} */
+			importers: [
+				{
+					findFileUrl(url) {
+						if (url.startsWith('@') || url.startsWith('~')) {
+							url = path.resolve('node_modules', url.substring(1))
+						}
+						if (url.startsWith('../../node_modules/')) {
+							url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
+						}
+						return new URL('file://' + url)
+					},
 				},
-			},
-		],
-		loadPaths: ['node_modules'],
-	})
-	return css
+			],
+			loadPaths: ['node_modules'],
+		})
+		.then((res) => res.css)
 }
 
 async function classToPlaceholder(css) {
@@ -57,39 +67,40 @@ async function generateStyles(style) {
 	console.log('Generate styles for ' + style + '...\n')
 
 	const before = `./src/scss/${style}/${style}.scss`
-	if (fs.existsSync(before)) {
+	if (await exists(before)) {
 		console.log(`Generate ${style}.placeholder.css...`)
 
-		const beforeCss = compileScss(before)
+		const beforeCss = await compileScss(before)
 
 		const placeholderCss = await classToPlaceholder(beforeCss)
-		fs.writeFileSync(
+		await writeFile(
 			`./src/scss/${style}/_${style}.placeholder.scss`,
 			`/* This file is auto generated, do not edit */\n` + placeholderCss
 		)
 	}
 
 	const index = `./src/scss/${style}/index.scss`
-	if (fs.existsSync(index)) {
+	if (await exists(index)) {
 		console.log(`Generate ${style}.css and ${style}.min.css...`)
 
-		const indexCss = compileScss(index)
+		const indexCss = await compileScss(index)
 
 		for (let destination of destinations) {
-			if (!fs.existsSync(destination)) {
-				fs.mkdirSync(destination)
+			if (!(await exists(destination))) {
+				await mkdir(destination)
 			}
 
-			fs.writeFileSync(`${destination}/${style}.css`, indexCss)
+			await writeFile(`${destination}/${style}.css`, indexCss)
 			console.log(`File "${destination}/${style}.css" successfully created!`)
 
-			minifyCss(indexCss).then((minCss) =>
-				fs.writeFileSync(`${destination}/${style}.min.css`, minCss)
-			)
-			console.log(`File "${destination}/${style}.min.css" successfully created!`)
+			minifyCss(indexCss)
+				.then((minCss) => writeFile(`${destination}/${style}.min.css`, minCss))
+				.then((res) => {
+					console.log(`File "${destination}/${style}.min.css" successfully created!`)
+				})
 		}
 	} else {
-		console.log(`[Error] Theme "${style}" doesn't exists!`)
+		console.log(`[Error] Theme "${style}" doesn'exists!`)
 	}
 	console.log('\n')
 }
