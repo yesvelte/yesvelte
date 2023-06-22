@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, El, Icon, Navbar, NavbarItem } from 'yesvelte'
+	import { El } from 'yesvelte'
 	import Layout from '$components/Layout.svelte'
 	import { navigations } from '../../routes/docs/navigations'
 	import { page } from '$app/stores'
@@ -18,24 +18,15 @@
 		})
 </script>
 
-<!-- <El tag="h2" position="absolute" p="4" top="0" start="0">
-	<Button link on:click={() => history.back()}>Back</Button>
-</El>
-<El pt="5" container="xl">
-	<slot />
-</El> -->
 <Layout wide>
-	<El container="xl">
-		<El d="flex" my="3">
-			{#if currentNav?.title}
-				<El tag="h1">
-					{currentNav?.title}
-				</El>
-			{/if}
+	{#if currentNav?.title}
+		<El d="flex" my="4">
+			<El tag="h1">
+				{currentNav?.title}
+			</El>
 		</El>
-		<El>
-			<slot />
-			
-		</El>
+	{/if}
+	<El>
+		<slot />
 	</El>
 </Layout>
