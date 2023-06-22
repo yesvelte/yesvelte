@@ -51,7 +51,7 @@
 	let cursorPosition = 0
 
 	function onInput(e: any) {
-		if(!show) show = true;
+		if (!show) show = true
 		dispatch('input', query)
 	}
 
@@ -89,6 +89,7 @@
 	function onCreate() {
 		dispatch('created', query)
 		query = ''
+		show = false
 	}
 
 	function onFocus() {
