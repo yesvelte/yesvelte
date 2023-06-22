@@ -17,6 +17,7 @@
 	export let reverse: $$Props['reverse'] = undefined
 	export let key: $$Props['key'] = undefined
 	export let value: $$Props['value'] = undefined
+	export let name: $$Props['name'] = undefined
 
 	const components = [
 		{ component: get_current_component(), except: [] },
@@ -30,7 +31,7 @@
 		props = {
 			inline,
 			reverse,
-			name: element?.id,
+			name: name ?? element?.id,
 			color,
 		}
 	}
@@ -44,8 +45,7 @@
 	}
 
 	const onChange = (event: any) => {
-		const selectedIndex = event.target.value
-		value = items && selectedIndex ? getKey(items[selectedIndex]) : undefined
+		value = event.target.value
 	}
 </script>
 
@@ -54,7 +54,7 @@
 		{#each items as item, index (index)}
 			<Radio
 				{...props}
-				value={index}
+				value={getKey(item)}
 				checked={value === getKey(item)}
 				on:change={onChange}
 				on:change>

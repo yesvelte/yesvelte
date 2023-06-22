@@ -45,7 +45,7 @@
 		} else {
 			instance?.setDate(value)
 
-			text = format(new Date(value), 'text') as string
+			text = format(value, 'text') as string
 		}
 	}
 
@@ -58,12 +58,13 @@
 				if (formatValue) {
 					return formatValue(date)
 				}
-				return date as Date
+				return new Date(date).toISOString()
 			} else {
 				if (formatText) {
 					return formatText(date)
 				}
-				return date.toDateString()
+
+				return new Date(date).toDateString()
 			}
 		}
 		return ''
@@ -134,7 +135,6 @@
 			componentName,
 			placeholder,
 			disabled,
-			name,
 		}
 	}
 	onMount(() => {
@@ -182,4 +182,9 @@
 		{...$$restProps}
 		{cssProps}
 		{...props} />
+{/if}
+
+<!-- TODO: in form datePicker, should move it outside of form field group (right border should be round) -->
+{#if value}
+	<input type="hidden" {name} {value} />
 {/if}

@@ -496,6 +496,12 @@ export const navigations: Navigation[] = [
 				description: 'A sample page that provides usages of form elements.',
 			},
 			{
+				route: '/form',
+				title: 'Form submission',
+				icon: 'tabler:app-window',
+				description: 'A sample page that demonstrate form submission.',
+			},
+			{
 				route: '/pricing-cards',
 				title: 'Pricing cards',
 				icon: 'tabler:app-window',
