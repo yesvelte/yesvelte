@@ -7,9 +7,9 @@
 	import ModalHeaderMedia from './ModalHeaderMedia.svelte'
 	import ModalSize from './ModalSize.svelte'
 	import ModalBackdrop from './ModalBackdrop.svelte'
-	import ModalPersistent from './ModalPersistent.svelte'
 	import ModalScrollable from './ModalScrollable.svelte'
 	import ModalDismissible from './ModalDismissible.svelte'
+	import ModalAutoClose from './ModalAutoClose.svelte'
 </script>
 
 <Page
@@ -50,13 +50,6 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Persistent">
-		<p slot="description">Modal will stay open If user clicks outside modal.</p>
-		<Preview src="./ModalPersistent.svelte">
-			<ModalPersistent />
-		</Preview>
-	</Doc>
-
 	<Doc title="Scrollable">
 		<p slot="description">
 			You can make modal's content scrollable using <code>scrollable</code> prop.
@@ -83,6 +76,16 @@
 		</p>
 		<Preview src="./ModalPlacement.svelte">
 			<ModalPlacement />
+		</Preview>
+	</Doc>
+
+	<Doc title="AutoClose">
+		<p slot="description">
+			Set <code>AutoClose</code> property to <code>true</code> to close Modal when Escape key pressed
+			or clicked outside.
+		</p>
+		<Preview src="./ModalAutoClose.svelte">
+			<ModalAutoClose />
 		</Preview>
 	</Doc>
 
