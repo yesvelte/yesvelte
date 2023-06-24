@@ -29,6 +29,10 @@
 	}
 }
 
+.#{$prefix-form-autocomplete} {
+	@include form-field-mixin;
+}
+
 .#{$prefix-form-input} {
 	@include form-field-mixin;
 }

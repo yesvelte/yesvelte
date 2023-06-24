@@ -56,7 +56,7 @@
 	}
 </script>
 
-<FormField {...props} {...$$restProps}>
+<FormField {componentName} {...props} {...$$restProps}>
 	<slot name="label" slot="label" />
 	<svelte:fragment slot="group">
 		<slot name="start">

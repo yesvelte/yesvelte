@@ -173,8 +173,7 @@
 	$: noResult = options.length === 0
 </script>
 
-<El {components} componentName="{componentName}-wrapper">
-	<El {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
+	<El {components} {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
 		{#if Array.isArray(value)}
 			{#each value as val, index}
 				{@const item = items.find((x) => getKey(x) == val)}
@@ -222,7 +221,6 @@
 			on:click
 			on:keydown={onKeyDown}
 			on:input={onInput} />
-	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
 			{#if create}
