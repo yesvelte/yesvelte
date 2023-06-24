@@ -26,6 +26,8 @@ $props: (
 
 .#{$prefix-autocomplete} {
 	@include apply-props($props);
+	position: relative;
+
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
@@ -42,10 +44,6 @@ $props: (
 		top: calc(100% + 4px);
 		overflow-y: auto;
 		max-height: 450px !important;
-	}
-
-	&-wrapper {
-		position: relative;
 	}
 
 	&-input {

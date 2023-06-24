@@ -50,6 +50,7 @@ $prefix-radio-wrapper: $prefix-radio + '-wrapper' !default;
 $prefix-radio-group: $prefix + 'radio-group' !default;
 $prefix-ribbon: $prefix + 'ribbon' !default;
 $prefix-select: $prefix + 'select' !default;
+$prefix-select-wrapper: $prefix-select + '-wrapper' !default;
 $prefix-sidebar: $prefix + 'sidebar' !default;
 $prefix-spinner: $prefix + 'spinner' !default;
 $prefix-stamp: $prefix + 'stamp' !default;
@@ -68,6 +69,7 @@ $prefix-toast: $prefix + 'toast' !default;
 $prefix-tooltip: $prefix + 'tooltip' !default;
 // Form
 $prefix-form-field: $prefix + 'form-field' !default;
+$prefix-form-autocomplete: $prefix + 'form-autocomplete' !default;
 $prefix-form-fieldset: $prefix + 'form-fieldset' !default;
 $prefix-form-date-picker: $prefix + 'form-date-picker' !default;
 $prefix-form-input: $prefix + 'form-input' !default;

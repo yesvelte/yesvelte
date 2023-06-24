@@ -69,11 +69,11 @@
 			<FormAutocompleteStates />
 		</Preview>
 	</Doc>
-	<!-- <Doc title="Slots">
+	<Doc title="Slots">
 		<Preview src="./FormAutocompleteSlots.svelte">
 			<FormAutocompleteSlots />
 		</Preview>
-	</Doc> -->
+	</Doc>
 
 	<Doc title="Create">
 		<Preview src="./FormAutocompleteCreate.svelte">
