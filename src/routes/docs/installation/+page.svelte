@@ -1,6 +1,8 @@
 <script>
 	import { Doc, Page } from '$components'
+	import Prism from '$components/Prism.svelte'
 	import { Button, El } from '$lib'
+	import Alert from '$lib/alert/Alert.svelte'
 	import Icon from '$lib/icon/Icon.svelte'
 
 	let framework = 'sveltekit'
@@ -13,73 +15,105 @@
 	<p slot="description">
 		To use YeSvelte components, you need to install and setup your environment.
 	</p>
-	<Doc title="Choose Framework">
-		<p>With which svelte framework do you want to use YeSvelte?</p>
-		<El row g="3" textAlign="center">
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (framework = 'svelte')}
-					border
-					borderColor={framework === 'svelte' ? 'primary' : undefined}
-					borderRoundSize="3">Svelte + Vite</El>
-			</El>
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (framework = 'sveltekit')}
-					border
-					borderColor={framework === 'sveltekit' ? 'primary' : undefined}
-					borderRoundSize="3">SvelteKit</El>
-			</El>
-		</El>
-	</Doc>
 
-	<Doc title="Choose Package Manager">
-		<p>Which Package manager do you use?</p>
-		<El row g="3" textAlign="center">
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (packageManager = 'npm')}
-					border
-					borderColor={packageManager === 'npm' ? 'primary' : undefined}
-					borderRoundSize="3">Npm</El>
-			</El>
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (packageManager = 'yarn')}
-					border
-					borderColor={packageManager === 'yarn' ? 'primary' : undefined}
-					borderRoundSize="3">Yarn</El>
-			</El>
-		</El>
-	</Doc>
+	<Doc title="With Sveltekit">
+		<p slot="description">
+			To use YeSvelte with SvelteKit based project, first you should initialize the project, you can
+			use this command to initialize empty SvelteKit project.
 
-	<Doc title="Choose Theme">
-		<p>
-			Currently YeSvelte components supports these themes, Which theme do you prefer for your
-			project?
+			<El tag="h3" mt="2">Install SvelteKit</El>
+
+			<Prism language="css" source="npm init svelte" />
+
+			or using yarn:
+
+			<Prism language="css" source="yarn create svelte" />
+
+			<El tag="h3" mt="2">Install YeSvelte</El>
+
+			then to install YeSvelte components you can use this command:
+
+			<Prism language="css" source="npm install yesvelte@next" />
+
+			or using yarn:
+			<Prism language="css" source="yarn add yesvelte@next" />
+
+			<El tag="h3" mt="2">Import Styles</El>
+			then you should add a link to the css file of your preferred theme in your
+			<code>/src/routes/+layout.svelte</code> file.
+			<br />
+			<Prism
+				language="html"
+				source={`<scr` +
+					`ipt>
+	import tabler from 'yesvelte/css/tabler.min.css?url'
+</script>
+<svelte:head>
+	<link rel='stylesheet' href={tabler}/>
+</svelte:head>`} />
+
+			or to use a cdn:
+			<Prism
+				language="html"
+				source={`<svelte:head>
+    <link rel="stylesheet" href="https://unpkg.com/yesvelte@next/css/tabler.min.css" />
+</svelte:head>`} />
+
+			<Alert mt="3" title="Note:" color="warning">
+				<El textMuted>You can replace 'tabler' with 'daisyui' for a different look and feel.</El>
+			</Alert>
+			Now you should be able to use YeSvelte components in your project!
 		</p>
-		<El row g="3" textAlign="center">
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (theme = 'tabler')}
-					border
-					borderColor={theme === 'tabler' ? 'primary' : undefined}
-					borderRoundSize="3">Tabler</El>
-			</El>
-			<El col="6">
-				<El
-					p="3"
-					on:click={() => (theme = 'daisyui')}
-					border
-					borderColor={theme === 'daisyui' ? 'primary' : undefined}
-					borderRoundSize="3">DaisyUI</El>
-			</El>
-		</El>
+	</Doc>
+
+	<Doc title="With Svelte + Vite">
+		<p slot="description">
+			To use YeSvelte with Svelte based project, first you should initialize the project, you can
+			use this command to initialize empty Svelte project.
+
+			<El tag="h3" mt="2">Install Svelte</El>
+
+			<Prism
+				language="css"
+				source="npm init vite@latest -- --template svelte-ts # or just svelte" />
+
+			or using yarn:
+
+			<Prism language="css" source="yarn create vite --template svelte-ts # or just svelte" />
+
+			<El tag="h3" mt="2">Install YeSvelte</El>
+
+			then to install YeSvelte components you can use this command:
+
+			<Prism language="css" source="npm install yesvelte@next" />
+
+			or using yarn:
+			<Prism language="css" source="yarn add yesvelte@next" />
+
+			<El tag="h3" mt="2">Import Styles</El>
+			then you should add a link to the css file of your preferred theme in your
+			<code>/src/App.svelte</code> file.
+			<br />
+			<Prism
+				language="html"
+				source={`<scr` +
+					`ipt>
+	import tabler from 'yesvelte/css/tabler.min.css?url'
+</script>
+<svelte:head>
+	<link rel='stylesheet' href={tabler}/>
+</svelte:head>`} />
+
+			or to use a cdn:
+			<Prism
+				language="html"
+				source={`<svelte:head>
+    <link rel="stylesheet" href="https://unpkg.com/yesvelte@next/css/tabler.min.css" />
+</svelte:head>`} />
+
+			<br />
+			Now you should be able to use YeSvelte components in your project!
+		</p>
 	</Doc>
 
 	<Doc title="Template Repository">
@@ -87,59 +121,11 @@
 			href="https://github.com/yesvelte/yesvelte-starter">This Starter Repository</a
 		>. to start using this repo, you can run:
 
-		<pre><code
-				>{'npx degit yesvelte/yesvelte-starter YOUR_PROJECT_NAME;\ncd YOUR_PROJECT_NAME'}</code></pre>
-
-		then follow instrustions of README.md file. and optionally initialize a git repository
-	</Doc>
-
-	<Doc title="Instructions">
-		<p slot="description">
-			To use YeSvelte with {framework} projects, first you should initialize the project, you can use
-			this command to initialize empty {framework} project.
-		</p>
-
-		{#if packageManager === 'npm'}
-			{#if framework === 'svelte'}
-				<pre><code>npm init vite@latest -- --template svelte-ts # or just svelte</code></pre>
-			{:else}
-				<pre><code>npm init svelte@next</code></pre>
-			{/if}
-		{:else if framework === 'svelte'}
-			<pre><code>yarn create vite --template svelte-ts # or just svelte</code></pre>
-		{:else}
-			<pre><code>yarn create svelte</code></pre>
-		{/if}
-
-		then to install YeSvelte components you can use this command:
-
-		{#if packageManager === 'npm'}
-			<pre><code>npm install yesvelte@next</code></pre>
-		{:else}
-			<pre><code>yarn add yesvelte@next</code></pre>
-		{/if}
-
-		then you should add a link to the css file of "{theme}" theme in your
-		<code>{framework === 'svelte' ? '/src/App.svelte' : '/src/routes/+layout.svelte'}</code>
-		file.
+		<Prism
+			language="css"
+			source={'npx degit yesvelte/yesvelte-starter YOUR_PROJECT_NAME\ncd YOUR_PROJECT_NAME'} />
 		<br />
-		to use a cdn:
-		<pre><code
-				>&lt;svelte:head&gt;
-    &lt;link rel="stylesheet" href="https://unpkg.com/yesvelte@next/css/{theme}.min.css"&gt;
-&lt;/svelte:head&gt;</code></pre>
-
-		You can use css file from node_modules folder like this:
-		<pre><code
-				>&lt;script&gt;
-    import {theme} from 'yesvelte/css/{theme}.min.css?url';
-&lt;/script&gt;
-
-&lt;svelte:head&gt;
-    &lt;link rel="StyleSheet" href={'{'}{theme}{'}'} /&gt;
-&lt;/svelte:head&gt;</code></pre>
-
-		Now you should be able to use YeSvelte components in your project!
+		then follow instrustions of README.md file. and optionally initialize a git repository
 	</Doc>
 </Page>
 

@@ -11,7 +11,6 @@
 
 	export let componentName: $$Props['componentName'] = 'select'
 	export let items: $$Props['items'] = []
-	export let value: $$Props['value'] = undefined
 	export let key: $$Props['key'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let size: $$Props['size'] = undefined
@@ -19,6 +18,7 @@
 	export let multiple: $$Props['multiple'] = undefined
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
+	export let value: $$Props['value'] = multiple ? [] : undefined
 
 	const components = [
 		{ component: get_current_component(), except: [] },
@@ -74,7 +74,7 @@
 		{#each items as item, index}
 			<option
 				value={getKey(item)}
-				selected={multiple ? value.includes(getKey(item)) : value === getKey(item)}>
+				selected={multiple ? value?.includes(getKey(item)) : value === getKey(item)}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}

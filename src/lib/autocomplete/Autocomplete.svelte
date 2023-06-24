@@ -18,21 +18,27 @@
 	export let size: $$Props['size'] = undefined
 	export let _slots: $$Props['_slots'] = $$slots
 	export let key: $$Props['key'] = undefined
+	export let create: $$Props['create'] = undefined
 	export let dismissible: $$Props['dismissible'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
 	export let multiple: $$Props['multiple'] = undefined
 	export let readonly: $$Props['readonly'] = undefined
-	export let value: $$Props['value'] = undefined
+	export let value: $$Props['value'] = multiple ? [] : undefined
+	export let name: $$Props['name'] = undefined
 
 	const dispatch = createEventDispatcher()
 	const components = [
-		{ component: get_current_component(), except: ['input', 'changed'] },
+		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
 		...($$props.components ?? []),
 	]
 
 	$: getKey = (item: any) => {
-		if (key) {
-			return typeof key === 'string' ? item[key] : key(item)
+		if (typeof item === 'object') {
+			if (key) {
+				return typeof key === 'string' ? item[key] : key(item)
+			} else {
+				return item
+			}
 		} else {
 			return item
 		}
@@ -46,6 +52,7 @@
 	let cursorPosition = 0
 
 	function onInput(e: any) {
+		if (!show) show = true
 		dispatch('input', query)
 	}
 
@@ -70,9 +77,21 @@
 		} else if (e.key === 'ArrowRight') {
 			cursorPosition = Math.min(cursorPosition + 1, value.length - 1)
 		}
+
+		if (e.key == 'Enter') {
+			if (create && options.length === 0) {
+				onCreate()
+			}
+		}
 	}
 
-	$: cursorPosition = multiple ? value.length - 1 : 0
+	$: cursorPosition = multiple ? value?.length - 1 : 0
+
+	function onCreate() {
+		dispatch('created', query)
+		query = ''
+		show = false
+	}
 
 	function onFocus() {
 		if (readonly) return
@@ -206,10 +225,20 @@
 	</El>
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
-			<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
+			{#if create}
+				<El
+					on:click={() => onCreate()}
+					componentName="{componentName}-option"
+					cssProps={{ create: true }}>
+					Create {query}...
+				</El>
+			{:else}
+				<El componentName="{componentName}-option" cssProps={{ noResult: true }}>No result</El>
+			{/if}
 		{/if}
+
 		{#each options as item, index}
-			{@const shouldShow = multiple ? !value.includes(getKey(item)) : value !== getKey(item)}
+			{@const shouldShow = multiple ? !value?.includes(getKey(item)) : value !== getKey(item)}
 			{#if shouldShow}
 				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
 					<slot {item} {index}>{item}</slot>
@@ -218,3 +247,17 @@
 		{/each}
 	</Popup>
 </El>
+
+{#if name}
+	{#if multiple}
+		{#if value}
+			<select style="display: none" multiple {name}>
+				{#each value as val}
+					<option value={val} selected />
+				{/each}
+			</select>
+		{/if}
+	{:else}
+		<input type="hidden" {name} bind:value />
+	{/if}
+{/if}
