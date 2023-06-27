@@ -1,5 +1,6 @@
 .markdown {
 	@extend .prose;
+	max-width: unset;
 }
 h1 {
 	@extend .text-2xl;

@@ -13,3 +13,23 @@ $prefix-el: $prefix + 'el';
 		}
 	}
 }
+
+$text-aligns: 'start', 'center', 'end';
+
+@each $text-align in $text-aligns {
+	.y-el-text-align-#{$text-align} {
+		text-align: #{$text-align};
+		justify-content: #{$text-align};
+	}
+}
+
+@each $sizeName, $sizeValue in $displays-sizes {
+	@media (min-width: #{$sizeValue}) {
+		@each $text-align in $text-aligns {
+			.#{$prefix}el-text-align-#{$sizeName}-#{$text-aligns} {
+				text-align: #{$text-align};
+				justify-content: #{$text-align};
+			}
+		}
+	}
+}
