@@ -62,3 +62,21 @@ $padding-positions: (
 		padding-bottom: #{$size-value};
 	}
 }
+
+$width-height-sizes: 25 50 75 100 !default;
+
+@each $size in $width-height-sizes {
+	.#{$prefix}el-w-#{$size} {
+		width: #{$size + '%'};
+	}
+	.#{$prefix}el-h-#{$size} {
+		height: #{$size + '%'};
+	}
+}
+
+.#{$prefix}el-w-auto {
+	width: auto;
+}
+.#{$prefix}el-h-auto {
+	height: auto;
+}

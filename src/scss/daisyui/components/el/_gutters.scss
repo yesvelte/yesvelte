@@ -3,6 +3,22 @@
 
 $breakpoints: sm md lg xl xxl !default;
 $col-sizes: 1 2 3 4 5 6 7 8 9 10 11 12 auto !default;
+$gap-sizes: 0 1 2 3 4 5 !default;
+
+@each $size in $gap-sizes {
+	.#{$prefix}el-g-#{$size} {
+		@extend .g-#{$size};
+	}
+	.#{$prefix}el-gx-#{$size} {
+		@extend .gx-#{$size};
+	}
+	.#{$prefix}el-gy-#{$size} {
+		@extend .gy-#{$size};
+	}
+	.#{$prefix}el-gap-#{$size} {
+		@extend .gap-#{$size};
+	}
+}
 
 .#{$prefix}el-row {
 	@extend .row;
