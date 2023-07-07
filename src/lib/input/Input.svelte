@@ -98,5 +98,13 @@
 		{/if}
 	</El>
 {:else}
-	<El tag="input" bind:value bind:element bind:id {components} {...props} {cssProps} />
+	<El
+		{...$$restProps}
+		tag="input"
+		bind:value
+		bind:element
+		bind:id
+		{components}
+		{...props}
+		{cssProps} />
 {/if}
