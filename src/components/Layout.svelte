@@ -121,15 +121,20 @@
 					<Logo dMd="none" href="/" height="32" />
 
 					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block">
+						<Icon name="search" slot="start" />
 						<svelte:fragment slot="end">
 							<El tag="kbd">Ctrl</El>
 							<El mx="1" tag="span">+</El>
-							<El tag="kbd" me="1">k</El>
+							<El tag="kbd" me="2">k</El>
 						</svelte:fragment>
 					</Input>
 				</El>
 
 				<El d="flex" alignItems="center" gap="2">
+					<Button dMd="none" on:click={openSearch}>
+						<Icon name="search" />
+					</Button>
+
 					<El col="auto">
 						<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
 					</El>

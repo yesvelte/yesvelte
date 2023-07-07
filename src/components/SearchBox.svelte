@@ -1,5 +1,5 @@
 <script>
-	import { El, Input, Modal, ModalBody, ModalHeader } from 'yesvelte'
+	import { El, Icon, Input, Modal, ModalBody, ModalHeader } from 'yesvelte'
 	import { navigations } from '../routes/docs/navigations'
 
 	export let open = false
@@ -61,14 +61,16 @@
 	}
 </script>
 
-<Modal autoClose bind:show={open}>
+<Modal dismissible autoClose bind:show={open}>
 	<ModalHeader p="0">
 		<Input
 			size="lg"
 			p="3"
 			borderFlush
 			placeholder="Search title or description..."
-			bind:value={query} />
+			bind:value={query}>
+			<Icon ms="3" name="search" slot="start" />
+		</Input>
 	</ModalHeader>
 	<ModalBody>
 		{#each filter(query).slice(0, 5) as item}
