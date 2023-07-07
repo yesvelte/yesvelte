@@ -209,7 +209,7 @@
 </script>
 
 {#if $$slots.start || $$slots.end}
-	<El componentName="{componentName}-wrapper" cssProps={{ size }}>
+	<El {...$$restProps} componentName="{componentName}-wrapper" cssProps={{ size }}>
 		{#if $$slots.start}
 			<El tag="span" componentName="{componentName}-icon">
 				<slot name="start" />
@@ -221,7 +221,6 @@
 			value={text}
 			bind:element
 			bind:id
-			{...$$restProps}
 			{cssProps}
 			{...props} />
 		{#if $$slots.end}
