@@ -58,6 +58,19 @@
 </svelte:head>
 <svelte:body {...containerProps} />
 
+<svelte:window
+	on:keydown={(e) => {
+		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
+			e.preventDefault()
+
+			searchOpen = !searchOpen
+		}
+
+		if (e.code === 'Escape') {
+			searchOpen = false
+		}
+	}} />
+
 <Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
 	<OffcanvasHeader p="3">
 		<Logo href="/" height="40" mb="0" />
@@ -107,7 +120,13 @@
 						on:click={() => (offcanvasOpen = !offcanvasOpen)} />
 					<Logo dMd="none" href="/" height="32" />
 
-					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block" />
+					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block">
+						<svelte:fragment slot="end">
+							<El tag="kbd">Ctrl</El>
+							<El mx="1" tag="span">+</El>
+							<El tag="kbd" me="1">k</El>
+						</svelte:fragment>
+					</Input>
 				</El>
 
 				<El d="flex" alignItems="center" gap="2">
@@ -180,4 +199,4 @@
 	</El>
 </El>
 
-<SearchBox bind:open={searchOpen}/>
+<SearchBox bind:open={searchOpen} />

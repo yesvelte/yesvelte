@@ -9,11 +9,12 @@
 	function filter(query) {
 		if (query.length < 2) return []
 
-		let result = []
+		let result1 = []
+		let result2 = []
 
-		navigations.map((navigation) => {
+		for (let navigation of navigations) {
 			if (navigation.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())) {
-				result.push({
+				result1.push({
 					title: navigation.title,
 					route: navigation.route,
 					description: navigation.description,
@@ -23,7 +24,7 @@
 			if (navigation.children) {
 				for (let child of navigation.children) {
 					if (child.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())) {
-						result.push({
+						result1.push({
 							title: child.title,
 							route: navigation.route + child.route,
 							description: child.description,
@@ -33,8 +34,8 @@
 			}
 
 			if (navigation.description?.toLocaleLowerCase().includes(query.toLocaleLowerCase())) {
-				if (result.findIndex((item) => item.title === navigation.title) === -1) {
-					result.push({
+				if (result1.findIndex((item) => item.title === navigation.title) === -1) {
+					result2.push({
 						title: navigation.title,
 						route: navigation.route,
 						description: navigation.description,
@@ -44,8 +45,8 @@
 			if (navigation.children) {
 				for (let child of navigation.children) {
 					if (child.description?.toLocaleLowerCase().includes(query.toLocaleLowerCase())) {
-						if (result.findIndex((item) => item.title === child.title) === -1) {
-							result.push({
+						if (result1.findIndex((item) => item.title === child.title) === -1) {
+							result2.push({
 								title: child.title,
 								route: navigation.route + child.route,
 								description: child.description,
@@ -54,8 +55,9 @@
 					}
 				}
 			}
-		})
-		return result
+		}
+
+		return [...result1, ...result2]
 	}
 </script>
 
@@ -79,7 +81,7 @@
 				href={item.route}
 				p="2"
 				border
-				borderRoundSize="3">
+				borderRoundSize="2">
 				<El tag="strong">{item.title}</El>
 				{#if item.description}
 					<El textMuted style="word-wrap: no-wrap;">{item.description}</El>
