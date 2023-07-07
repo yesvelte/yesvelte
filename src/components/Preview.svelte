@@ -23,16 +23,16 @@
 		<CardHeader>
 			<TabList>
 				<TabItem active>Preview</TabItem>
-				{#if markup}
+				{#if false && markup}
 					<TabItem>Markup</TabItem>
 				{/if}
-				{#if script}
+				{#if false && script}
 					<TabItem>Script</TabItem>
 				{/if}
-				{#if style}
+				{#if false && style}
 					<TabItem>Style</TabItem>
 				{/if}
-				{#if src && false}
+				{#if src}
 					<TabItem>Source</TabItem>
 				{/if}
 			</TabList>
@@ -44,24 +44,24 @@
 					<slot />
 				</CardBody>
 			</TabPanel>
-			{#if markup}
+			{#if false && markup}
 				<TabPanel>
 					<Prism language="html" source={markup} />
 				</TabPanel>
 			{/if}
-			{#if script}
+			{#if false && script}
 				<TabPanel>
 					<Prism language="javascript" source={script} />
 				</TabPanel>
 			{/if}
-			{#if style}
+			{#if false && style}
 				<TabPanel>
 					<Prism language="css" source={style} />
 				</TabPanel>
 			{/if}
-			{#if src && false}
+			{#if src}
 				<TabPanel>
-					<Prism language="html" source={src} />
+					<Prism language="html" source={[script, markup, style].filter(Boolean).join('\n\n')} />
 				</TabPanel>
 			{/if}
 		</TabContent>
