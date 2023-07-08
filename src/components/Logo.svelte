@@ -38,7 +38,7 @@
 <style>
 	:global(.y-logo[href]) {
 		margin: 0;
-		color: #202020;
+		/* color: #202020; */
 		z-index: 1;
 		/* color: #2773bf; */
 	}

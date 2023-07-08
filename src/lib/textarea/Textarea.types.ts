@@ -16,5 +16,8 @@ export interface TextareaProps extends Partial<ElProps> {
 	borderRounded?: boolean
 	borderFlush?: boolean
 	rows?: number | string
+	minlength?: string
+	maxlength?: string
+	cols?: string
 	type?: string
 }

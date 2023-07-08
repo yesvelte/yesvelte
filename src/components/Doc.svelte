@@ -14,7 +14,8 @@
 			href="#{href}"
 			class="doc-title"
 			data-href={encodeURIComponent(href)}
-			id={href}>
+			id={href}
+			style="scroll-margin-top: 5rem">
 			{title}
 
 			<Icon name="link" />

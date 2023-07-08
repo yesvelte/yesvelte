@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { El, Icon, Button, Select, Offcanvas, OffcanvasHeader } from 'yesvelte'
+	import { El, Icon, Button, Select, Offcanvas, OffcanvasHeader, Input } from 'yesvelte'
 	import { page } from '$app/stores'
 	import SidebarNavigations from '$components/SidebarNavigations.svelte'
 	import Logo from '$components/Logo.svelte'
 	import { browser } from '$app/environment'
 	import ToC from './ToC.svelte'
-
-	export let wide = false
+	import SearchBox from './SearchBox.svelte'
 
 	let dark: boolean = false
 	let theme: 'tabler' | 'daisyui' = 'tabler'
@@ -31,9 +30,15 @@
 		})
 	}
 
+	let searchOpen = false
+
+	function openSearch() {
+		searchOpen = true
+	}
+
 	let sections: any[] = []
 
-	$: hasToC = $page.url.pathname !== '/docs'
+	$: hasToC = sections.length > 0
 
 	$: nextItem = $page.data.links?.nextItem
 	$: prevItem = $page.data.links?.prevItem
@@ -53,6 +58,19 @@
 </svelte:head>
 <svelte:body {...containerProps} />
 
+<svelte:window
+	on:keydown={(e) => {
+		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
+			e.preventDefault()
+
+			searchOpen = !searchOpen
+		}
+
+		if (e.code === 'Escape') {
+			searchOpen = false
+		}
+	}} />
+
 <Offcanvas class="y-docs-offcanvas" backdrop bind:show={offcanvasOpen}>
 	<OffcanvasHeader p="3">
 		<Logo href="/" height="40" mb="0" />
@@ -60,126 +78,130 @@
 	<SidebarNavigations p="3" position="static" {pathname} />
 </Offcanvas>
 
-{#if !wide}
-	<El bgColor={dark ? 'dark' : 'light'} borderBottom>
-		<El container="lg" d="flex" alignItems="center" justifyContent="between" py="3" px="3">
-			<El d="flex" gap="3" alignItems="center">
-				<Icon
-					dMd="none"
-					size="xl"
-					name="menu-2"
-					on:click={() => (offcanvasOpen = !offcanvasOpen)} />
-				<Logo href="/" height="32" />
-			</El>
+<El mx="auto" position="relative" style="min-height: calc(100vh - 70px);">
+	<El
+		position="absolute"
+		top="0"
+		h="100"
+		d="none"
+		dMd="block"
+		bgColor={dark ? 'dark' : 'light'}
+		borderEnd
+		colMd="auto">
+		<El position="sticky" top="0">
+			<Logo href="/" height="40" p="3" />
 
-			<El d="flex" alignItems="center" gap="2">
-				<El col="auto">
-					<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
-				</El>
-				<El col>
-					<Button outline on:click={() => (dark = !dark)}>
-						{#if dark}
-							<Icon name="sun" />
-						{:else}
-							<Icon name="moon" />
-						{/if}
-					</Button>
-				</El>
-			</El>
+			<SidebarNavigations
+				style="overflow-y: auto; overflow-x: hidden; max-height: calc(100vh - 70px)"
+				{pathname} />
 		</El>
 	</El>
-{/if}
+	<El class="y-docs-content" style="min-height: calc(height: 100vh - 154px)">
+		<El
+			position="sticky"
+			style="z-index: 1040"
+			top="0"
+			w="100"
+			bgColor={dark ? 'dark' : 'light'}
+			borderBottom>
+			<El
+				container="xl"
+				d="flex"
+				mx="auto"
+				alignItems="center"
+				justifyContent="between"
+				py="3"
+				px="3">
+				<El d="flex" gap="3" alignItems="center">
+					<Icon
+						dMd="none"
+						size="xl"
+						name="menu-2"
+						on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+					<Logo dMd="none" href="/" height="32" />
 
-{#if wide}
-	<El mx="auto" style="min-height: calc(100vh - 154px);">
-		<El row g="0">
-			<El d="none" dMd="block" h="auto" bgColor={dark ? 'dark' : 'light'} borderEnd colMd="auto">
-				<Logo href="/" height="40" p="3" />
+					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block">
+						<Icon name="search" slot="start" />
+						<svelte:fragment slot="end">
+							<El tag="kbd">Ctrl</El>
+							<El mx="1" tag="span">+</El>
+							<El tag="kbd" me="2">k</El>
+						</svelte:fragment>
+					</Input>
+				</El>
 
-				<SidebarNavigations style="overflow: hidden" {pathname} />
-			</El>
-			<El col>
-				<El bgColor={dark ? 'dark' : 'light'} borderBottom>
-					<El container="xl" d="flex" alignItems="center" justifyContent="between" py="3" px="3">
-						<El d="flex" gap="3" alignItems="center">
-							<Icon
-								dMd="none"
-								size="xl"
-								name="menu-2"
-								on:click={() => (offcanvasOpen = !offcanvasOpen)} />
-							<Logo dMd="none" href="/" height="32" />
-						</El>
+				<El d="flex" alignItems="center" gap="2">
+					<Button dMd="none" on:click={openSearch}>
+						<Icon name="search" />
+					</Button>
 
-						<El d="flex" alignItems="center" gap="2">
-							<El col="auto">
-								<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
-							</El>
-							<El col>
-								<Button outline on:click={() => (dark = !dark)}>
-									{#if dark}
-										<Icon name="sun" />
-									{:else}
-										<Icon name="moon" />
-									{/if}
-								</Button>
-							</El>
-						</El>
+					<El col="auto">
+						<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+					</El>
+					<El col>
+						<Button outline on:click={() => (dark = !dark)}>
+							{#if dark}
+								<Icon name="sun" />
+							{:else}
+								<Icon name="moon" />
+							{/if}
+						</Button>
 					</El>
 				</El>
-
-				<El container="xl">
-					<slot />
-				</El>
 			</El>
 		</El>
-	</El>
-{:else}
-	<El mx="auto" px="3" container="lg" style="min-height: calc(100vh - 154px);">
-		<El row>
-			<El style="width: max-content" d="none" dMd="block" colMd="auto">
-				<SidebarNavigations style="margin-left: -1rem;" {pathname} />
-			</El>
-			<El colLg={hasToC ? '7' : true} colXl={hasToC ? '8' : true} colSm="12" colMd>
-				<El px="2">
-					<slot />
-				</El>
+		<El mx="auto" container="xl">
+			<El row>
+				<El col>
+					<El px="2">
+						<slot />
+					</El>
 
-				<El row mt="3" mb="5">
-					{#if prevItem}
-						<El col="auto" tag="a" href={prevItem.href}>
-							<El class="docs-link" tag="h3" mb="0">
-								<Icon mb="1" name="chevron-left" />
-								{prevItem.title}
+					<El row mt="3" mb="5">
+						{#if prevItem}
+							<El col="auto" tag="a" href={prevItem.href}>
+								<El d="flex" alignItems="center" gap="1" tag="h3" mb="0">
+									<Icon name="chevron-left" />
+									{prevItem.title}
+								</El>
 							</El>
-						</El>
-					{/if}
-					{#if nextItem}
-						<El col="auto" ms="auto" justifyContent="end" tag="a" href={nextItem.href}>
-							<El class="docs-link" tag="h3" mb="0">
-								{nextItem.title}
-								<Icon mb="1" name="chevron-right" />
+						{/if}
+						{#if nextItem}
+							<El col="auto" ms="auto" tag="a" href={nextItem.href}>
+								<El d="flex" alignItems="center" gap="1" tag="h3" mb="0">
+									{nextItem.title}
+									<Icon name="chevron-right" />
+								</El>
 							</El>
-						</El>
-					{/if}
+						{/if}
+					</El>
+				</El>
+				<El
+					col="auto"
+					style="width: max-content;"
+					top="0"
+					d="none"
+					dLg={hasToC ? 'inline-block' : 'none'}>
+					<El position="sticky" style="top: 4rem">
+						<ToC bind:sections />
+					</El>
 				</El>
 			</El>
-			<El colLg d="none" dLg={hasToC ? 'inline-block' : 'none'}>
-				<ToC bind:sections />
+		</El>
+		<!-- Footer -->
+		<El class={dark ? 'bg-color-dark' : 'bg-color-white'} borderTop>
+			<El mx="auto" py="4" gap="3" container="lg" px="3" row>
+				<El textAlign="center" col="12" colSm="auto">
+					&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved
+				</El>
+				<El textAlign="end" ms="auto" col="12" colSm="auto" d="flex" gap="4">
+					<El tag="a" href="https://github.com/yesvelte/yesvelte">Source code</El>
+					<El tag="a" href="https://yesvelte.com/docs">Documentation</El>
+					<!-- <El tag="a" href="#">Cookies Settings</El> -->
+				</El>
 			</El>
-		</El>
-	</El>
-{/if}
-
-<!-- Footer -->
-<El class={dark ? 'bg-color-dark' : 'bg-color-white'} borderTop>
-	<El mx="auto" py="4" gap="3" container="lg" px="3" row>
-		<El textAlign="center" col="12" colSm="auto">
-			&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved
-		</El>
-		<El textAlign="end" ms="auto" col="12" colSm="auto" d="flex" gap="4">
-			<El tag="a" href="#">Privacy Policy</El>
-			<El tag="a" href="#">Terms of Service</El>
-			<El tag="a" href="#">Cookies Settings</El>
 		</El>
 	</El>
 </El>
+
+<SearchBox bind:open={searchOpen} />

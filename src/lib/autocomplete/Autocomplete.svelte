@@ -173,29 +173,37 @@
 	$: noResult = options.length === 0
 </script>
 
-	<El {components} {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
-		{#if Array.isArray(value)}
-			{#each value as val, index}
-				{@const item = items.find((x) => getKey(x) == val)}
-				{#if item}
-					<El
-						componentName="{componentName}-item"
-						cssProps={{ multiple: true, active: cursorPosition === index }}>
-						{#if _slots['selected']}
-							<slot name="selected" {item} {index}>{item}</slot>
-						{:else}
-							<slot {item} {index}>{item}</slot>
-						{/if}
-						{#if dismissible}
-							<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
-								<Icon name="x" />
-							</El>
-						{/if}
-					</El>
-				{/if}
-			{/each}
-		{:else}
-			{@const index = items.findIndex((x) => getKey(x) == value)}
+<El
+	{components}
+	{...$$restProps}
+	{componentName}
+	{cssProps}
+	{disabled}
+	on:click={onClick}
+	on:focus={onFocus}>
+	{#if Array.isArray(value)}
+		{#each value as val, index}
+			{@const item = items.find((x) => getKey(x) == val)}
+			{#if item}
+				<El
+					componentName="{componentName}-item"
+					cssProps={{ multiple: true, active: cursorPosition === index }}>
+					{#if _slots['selected']}
+						<slot name="selected" {item} {index}>{item}</slot>
+					{:else}
+						<slot {item} {index}>{item}</slot>
+					{/if}
+					{#if dismissible}
+						<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
+							<Icon name="x" />
+						</El>
+					{/if}
+				</El>
+			{/if}
+		{/each}
+	{:else}
+		{@const index = items.findIndex((x) => getKey(x) == value)}
+		{#if index > -1}
 			{@const item = items[index]}
 			{#if item}
 				<El componentName="{componentName}-item">
@@ -207,20 +215,21 @@
 				</El>
 			{/if}
 		{/if}
-		<input
-			class={classname(`${componentName}-input`)}
-			bind:this={inputEl}
-			placeholder={value ? undefined : placeholder}
-			{disabled}
-			{readonly}
-			bind:value={query}
-			on:blur={onBlur}
-			on:blur
-			on:focus={onFocus}
-			on:focus
-			on:click
-			on:keydown={onKeyDown}
-			on:input={onInput} />
+	{/if}
+	<input
+		class={classname(`${componentName}-input`)}
+		bind:this={inputEl}
+		placeholder={value ? undefined : placeholder}
+		{disabled}
+		{readonly}
+		bind:value={query}
+		on:blur={onBlur}
+		on:blur
+		on:focus={onFocus}
+		on:focus
+		on:click
+		on:keydown={onKeyDown}
+		on:input={onInput} />
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
 			{#if create}

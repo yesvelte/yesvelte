@@ -4,6 +4,7 @@
 	border-color: hsl(var(--b3) / var(--tw-border-opacity));
 	@extend .block;
 	@extend .bg-base-100;
+	color: hsl(var(--bc)/1);
 }
 .#{$prefix}card-header {
 	@extend .pt-3;
@@ -31,6 +32,7 @@
 .#{$prefix}card-title {
 	@extend .card-title;
 	@extend .pb-3;
+	@extend .block;
 }
 .#{$prefix}card-borderless {
 	@extend .border-none;

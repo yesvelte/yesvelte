@@ -66,5 +66,5 @@
 		{/if}
 	</El>
 {:else}
-	<El {components} bind:id bind:element {...props} {cssProps} on:change={onChange} />
+	<El {...$$restProps} {components} bind:id bind:element {...props} {cssProps} on:change={onChange} />
 {/if}
