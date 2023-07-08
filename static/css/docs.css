@@ -8,6 +8,10 @@
     .flex-direction-md-row {
         flex-direction: row;
     }
+
+    .y-docs-content {
+        margin-left: 241px;
+    }
 }
 
 .y-docs-sidebar {
