@@ -11,6 +11,38 @@
 	@extend .w-full;
 }
 
+.#{$prefix}input-wrapper {
+	position: relative;
+
+	.#{$prefix}input:not(:first-child) {
+		padding-left: 3rem;
+	}
+	.#{$prefix}input:not(:last-child) {
+		padding-right: 3rem;
+	}
+
+	.#{$prefix}input-icon:first-child {
+		left: 0;
+	}
+	.#{$prefix}input-icon:last-child {
+		right: 0;
+	}
+
+	.#{$prefix}input-icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+
+
 .#{$prefix}input-state-valid {
 	@extend .input-success;
 }

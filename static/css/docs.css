@@ -1,5 +1,11 @@
 /* styles for documentation site */
 
+.y-docs-sidebar {
+    position: relative;
+    width: 15rem !important;
+    overflow: auto;
+}
+
 .flex-direction-column {
     flex-direction: column;
 } 
@@ -14,11 +20,6 @@
     }
 }
 
-.y-docs-sidebar {
-    position: relative !important;
-    background-color: transparent !important; 
-    box-shadow: none !important;
-}
 
 .y-offcanvas-show-closed {
     display: none;

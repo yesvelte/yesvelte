@@ -2,6 +2,21 @@
 // Date Picker
 //
 
+[data-bs-theme='dark'] {
+	--litepicker-month-weekday-color: var(--#{$prefix}muted);
+	--litepicker-button-prev-month-color: var(--#{$prefix}muted);
+	--litepicker-button-next-month-color: var(--#{$prefix}muted);
+	--litepicker-button-prev-month-color-hover: var(--#{$prefix}primary);
+	--litepicker-button-next-month-color-hover: var(--#{$prefix}primary);
+	--litepicker-day-color: var(--#{$prefix}body-color);
+	--litepicker-day-color-hover: var(--#{$prefix}primary);
+	--litepicker-is-end-color-bg: var(--#{$prefix}primary);
+	--litepicker-is-today-color: var(--#{$prefix}primary);
+	--litepicker-month-header-color: var(--#{$prefix}body-color);
+	--litepicker-container-months-color-bg: var(--#{$prefix}bg-surface);
+	--litepicker-container-months-box-shadow-color: var(--#{$prefix}bg-surface-dark);
+}
+
 $wrapper-props: (
 	null: '.input-icon',
 	size: (

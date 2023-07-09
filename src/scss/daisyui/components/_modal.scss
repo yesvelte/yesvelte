@@ -13,6 +13,7 @@
 .#{$prefix}modal-content {
 	@extend .modal-box;
 	margin: 0 auto;
+	position: relative;
 }
 .#{$prefix}modal-title {
 	@extend .font-bold;
