@@ -1,3 +1,18 @@
+[data-bs-theme='dark'] {
+	--litepicker-month-weekday-color: hsl(var(--bc));
+	--litepicker-button-prev-month-color: hsl(var(--bc));
+	--litepicker-button-next-month-color: hsl(var(--bc));
+	--litepicker-button-prev-month-color-hover: hsl(var(--p));
+	--litepicker-button-next-month-color-hover: hsl(var(--p));
+	--litepicker-day-color: hsl(var(--nc));
+	--litepicker-day-color-hover: hsl(var(--p));
+	--litepicker-is-end-color-bg: hsl(var(--p));
+	--litepicker-is-today-color: hsl(var(--p));
+	--litepicker-month-header-color: hsl(var(--nc));
+	--litepicker-container-months-color-bg: hsl(var(--b1));
+	--litepicker-container-months-box-shadow-color: hsl(var(--b3));
+}
+
 .#{$prefix}date-picker {
 	@extend .input;
 	@extend .input-bordered;
