@@ -3,6 +3,39 @@
 	@extend .textarea;
 	@extend .textarea-bordered;
 }
+
+.#{$prefix}textarea-wrapper {
+	position: relative;
+
+	.#{$prefix}textarea:not(:first-child) {
+		padding-left: 3rem;
+	}
+	.#{$prefix}textarea:not(:last-child) {
+		padding-right: 3rem;
+	}
+
+	.#{$prefix}textarea-icon:first-child {
+		left: 0;
+	}
+	.#{$prefix}textarea-icon:last-child {
+		right: 0;
+	}
+
+	.#{$prefix}textarea-icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+
+
 .#{$prefix}textarea-state-valid {
 	@extend .textarea-success;
 }

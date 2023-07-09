@@ -81,6 +81,7 @@
 <El mx="auto" position="relative" style="min-height: calc(100vh - 70px);">
 	<El
 		position="absolute"
+		class="y-docs-sidebar"
 		top="0"
 		h="100"
 		d="none"
@@ -99,7 +100,7 @@
 	<El class="y-docs-content" style="min-height: calc(height: 100vh - 154px)">
 		<El
 			position="sticky"
-			style="z-index: 1040"
+			style="z-index: 998"
 			top="0"
 			w="100"
 			bgColor={dark ? 'dark' : 'light'}

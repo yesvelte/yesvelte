@@ -39,7 +39,7 @@
 			<Button target="_blank" href={discordLink} p="3" link textColor="light">
 				<Icon name="brand-discord-filled" />Discord</Button>
 			<Button target="_blank" href={replLink} p="3" link textColor="light">Try on Repl</Button>
-			<Dropdown p="3" placement="bottom-end">
+			<Dropdown autoClose p="3" placement="bottom-end">
 				<Button slot="target" color="light" outline>
 					{#if theme === 'tabler'}
 						Tabler

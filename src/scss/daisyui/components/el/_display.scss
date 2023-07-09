@@ -17,7 +17,7 @@ $displays-sizes: (
 	@media (min-width: #{$sizeValue}) {
 		@each $display in $displays {
 			.#{$prefix}el-d-#{$sizeName}-#{$display} {
-				display: #{$display};
+				display: #{$display} !important;
 			}
 		}
 	}
