@@ -89,10 +89,11 @@
 		bgColor={dark ? 'dark' : 'light'}
 		borderEnd
 		colMd="auto">
-		<El position="sticky" top="0">
+		<El position="fixed" style="width: 15rem">
 			<Logo href="/" height="40" p="3" />
 
 			<SidebarNavigations
+				position="relative"
 				style="overflow-y: auto; overflow-x: hidden; max-height: calc(100vh - 70px)"
 				{pathname} />
 		</El>

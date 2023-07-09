@@ -1,7 +1,8 @@
 /* styles for documentation site */
 
 .y-docs-sidebar {
-    width: 15rem;
+    position: relative;
+    width: 15rem !important;
     overflow: auto;
 }
 
