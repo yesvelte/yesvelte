@@ -137,7 +137,7 @@
 						<El me="4">npm i yesvelte@next</El>
 						<Icon name={icon} />
 					</El>
-					<Button color={dark ? 'dark' : 'light'} href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs/introduction">
 						<Icon name="book" />
 						Get Started
 					</Button>
@@ -283,7 +283,7 @@
 			{/each}
 		</El>
 		<El mt="3" pt="2" textAlign="center">
-			<Button href="/docs">
+			<Button href="/docs/introduction">
 				Explore all features <Icon name="arrow-right" />
 			</Button>
 		</El>
@@ -677,7 +677,7 @@
 					Yesvelt tools are used by thousands of developers around the world.
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
-					<Button color={dark ? 'dark' : 'light'} href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs/introduction">
 						<Icon name="book" />
 						Get Started
 					</Button>
