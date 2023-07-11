@@ -9,11 +9,11 @@ body {
     font-size: 18px !important;
 }
 
-.y-docs-content .y-card-title {
+.y-docs-content .y-docs-card-title {
     font-weight: 700;
     line-height: 2rem;
     font-size: 20px !important;
-    margin-bottom: 12px !important;
+    padding-bottom: 12px !important;
 }
 
 .y-docs-sidebar {

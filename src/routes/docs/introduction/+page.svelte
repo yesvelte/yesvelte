@@ -25,28 +25,28 @@
 		<El d="flex" gap="3" style="flex-wrap: wrap;">
 			<Card style="flex:1;min-width: 450px;">
 				<CardBody>
-					<CardTitle>Rapid application development:</CardTitle>
+					<CardTitle class="y-docs-card-title">Rapid application development:</CardTitle>
 					With YeSvelte, you can easily and quickly build enterprise-grade web applications, without
 					worrying about the specifics of a CSS framework.
 				</CardBody>
 			</Card>
 			<Card style="flex:1;min-width: 450px;">
 				<CardBody>
-					<CardTitle>CSS Framework independence:</CardTitle>
+					<CardTitle class="y-docs-card-title">CSS Framework independence:</CardTitle>
 					YeSvelte's components are built with basic HTML and CSS, without any framework-specific classes
 					or styles, so you can use them with any CSS framework of your choice.
 				</CardBody>
 			</Card>
 			<Card style="flex:1;min-width: 450px;">
 				<CardBody>
-					<CardTitle>Powerful and flexible:</CardTitle>
+					<CardTitle class="y-docs-card-title">Powerful and flexible:</CardTitle>
 					YeSvelte's components are powerful and flexible, and you can easily customize them to fit the
 					needs of your project.
 				</CardBody>
 			</Card>
 			<Card style="flex:1;min-width: 450px;">
 				<CardBody>
-					<CardTitle>Easy to use:</CardTitle>
+					<CardTitle class="y-docs-card-title">Easy to use:</CardTitle>
 					YeSvelte's components are easy to use and intuitive, so you don't have to be an expert in Svelte
 					or CSS frameworks to get started.
 				</CardBody></Card>
