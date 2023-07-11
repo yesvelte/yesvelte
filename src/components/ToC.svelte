@@ -34,7 +34,7 @@
 		</El>
 		<El tag="hr" d="none" dMd="block" my="2" />
 		{#each sections as section}
-			<El mb="2" mt="1" me="3">
+			<El me="3" fontSize="3">
 				<El tag="a" href="#{section.href}" textMuted>{section.name}</El>
 			</El>
 		{/each}

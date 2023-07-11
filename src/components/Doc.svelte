@@ -6,8 +6,8 @@
 	$: href = title.replace(/\s/g, '_').replace(/\//g, '_')
 </script>
 
-<El mt="3" mb="2">
-	<El tag="h2">
+<El class="y-doc-title-wrapper">
+	<El mb="2" tag="h2">
 		<El
 			tag="a"
 			d="inline"
@@ -32,10 +32,14 @@
 <slot />
 
 <style>
+	:global(.y-doc-title-wrapper) {
+		margin-top: 2rem;
+	}
 	:global(.doc-title) {
 		cursor: pointer;
-		display: flex;
+		display: flex !important;
 		align-items: center;
+		gap: 4px;
 	}
 
 	:global(.doc-title) :global(.y-icon) {

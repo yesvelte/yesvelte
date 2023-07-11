@@ -1,3 +1,4 @@
+import { redirect } from '@sveltejs/kit'
 import { navigations, type Navigation } from './navigations'
 export interface IHash {
 	[details: string]: Navigation
@@ -17,6 +18,10 @@ navigations.forEach((item) => {
 })
 
 export function load(params: any) {
+	if (params.url.pathname === '/docs') {
+		throw redirect(307, '/docs/introduction')
+	}
+
 	const route = params.url.pathname
 	let currentRout: Partial<Navigation> = {}
 	Object.keys(routeMap).forEach((k) => {

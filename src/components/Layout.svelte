@@ -98,7 +98,7 @@
 				{pathname} />
 		</El>
 	</El>
-	<El class="y-docs-content" style="min-height: calc(height: 100vh - 154px)">
+	<El class="y-docs-content">
 		<El
 			position="sticky"
 			style="z-index: 998"
@@ -152,7 +152,7 @@
 				</El>
 			</El>
 		</El>
-		<El mx="auto" container="xl">
+		<El mx="auto" container="xl" style="min-height: calc(100vh - 138px)">
 			<El row>
 				<El col>
 					<El px="2">
