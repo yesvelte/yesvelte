@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { El, Icon, Button, Select, Offcanvas, OffcanvasHeader, Input } from 'yesvelte'
+	import { El, Icon, Button, Select, Offcanvas, OffcanvasHeader, Input, Popover } from 'yesvelte'
 	import { page } from '$app/stores'
 	import SidebarNavigations from '$components/SidebarNavigations.svelte'
 	import Logo from '$components/Logo.svelte'
@@ -137,10 +137,10 @@
 						<Icon name="search" />
 					</Button>
 
-					<El col="auto">
+					<El d="none" dMd="block" col="auto">
 						<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
 					</El>
-					<El col>
+					<El d="none" dMd="block" col>
 						<Button outline on:click={() => (dark = !dark)}>
 							{#if dark}
 								<Icon name="sun" />
@@ -149,6 +149,27 @@
 							{/if}
 						</Button>
 					</El>
+					<Button dMd="none" id="btn-theme" color="primary">
+						<Icon name="color-swatch" />
+					</Button>
+					<Popover autoClose="outside" target="#btn-theme">
+						<El tag="strong" m="2" d="block" mb="0">Theme:</El>
+
+						<El d="flex" gap="2" p="2">
+							<El col="auto">
+								<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
+							</El>
+							<El col>
+								<Button outline on:click={() => (dark = !dark)}>
+									{#if dark}
+										<Icon name="sun" />
+									{:else}
+										<Icon name="moon" />
+									{/if}
+								</Button>
+							</El>
+						</El>
+					</Popover>
 				</El>
 			</El>
 		</El>
