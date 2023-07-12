@@ -79,7 +79,7 @@
 		</El>
 		<Alert my="3" title="Note:" color="warning" show>
 			<El textMuted>
-				to override styles of components, somethimes you will need to use <code>!important</code>.
+				to override styles of components, sometimes you will need to use <code>!important</code>.
 			</El>
 		</Alert>
 	</Doc>

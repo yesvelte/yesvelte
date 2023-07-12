@@ -14,12 +14,12 @@ npm install yesvelte@next
 
 Once installed, you can import the components and use them in your Svelte application:
 
-```html
+```svelte
 <script>
 	import { Button } from 'yesvelte'
 </script>
 
-<button>Hello YeSvelte!</button>
+<Button>Hello YeSvelte!</Button>
 ```
 
 ## Styles
@@ -55,6 +55,6 @@ Review our [ROADMAP](https://github.com/yesvelte/yesvelte/blob/dev/ROADMAP.md/).
 Use these channels to be part of the community, ask for help while using YeSvelte, or just learn more about it:
 
 - [Reddit](https://www.reddit.com/r/yesvelte): This is the main channel to join the community. You can ask for help, showcase your work with YeSvelte, and stay up to date.
-- [Discord](https://discord.gg/KqC8D6xM9y)
+- [Discord](https://discord.gg/QkeQnNEQ7)
 - [GitHub Issues](https://github.com/yesvelte/yesvelte/issues): for sending in any issues you face or bugs you find while using YeSvelte.
 - [GitHub Discussions](https://github.com/yesvelte/yesvelte/discussions): for joining discussions and submitting your ideas.
