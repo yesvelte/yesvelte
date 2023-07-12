@@ -10,17 +10,13 @@
 	<meta name="description" content={$page.data.metaData?.description ?? description} />
 </svelte:head>
 
-<El class="y-page-title" mt="5" mb="3" tag="h1">{title}</El>
+<El class="y-page-title" mt="4" mb="3" tag="h1">{title}</El>
 <slot name="description">
 	<El tag="p">{description}</El>
 </slot>
 <slot />
 
 <style>
-	:global(.y-page-title) {
-		font-size: 36px;
-		line-height: 36px;
-	}
 	:global(.docs-link) {
 		cursor: pointer;
 	}

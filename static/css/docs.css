@@ -1,20 +1,5 @@
 /* styles for documentation site */
 
-body {
-    font-family: Inter !important;
-}
-
-.y-docs-content {
-    line-height: 36px !important;
-    font-size: 18px !important;
-}
-
-.y-docs-content .y-docs-card-title {
-    font-weight: 700;
-    line-height: 2rem;
-    font-size: 20px !important;
-    padding-bottom: 12px !important;
-}
 
 .y-docs-sidebar {
     position: relative;
