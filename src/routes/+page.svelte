@@ -117,7 +117,7 @@
 					Empower your development with our extensive UI component library
 				</El>
 				<El mt="4" tag="h2" class="font-size-medium">
-					A flexible & powefull Svelte library for building web applications quickly and easily
+					A flexible & powerful Svelte library for building web applications quickly and easily
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
 					<El
@@ -345,7 +345,7 @@
 								</TabPanel>
 							</TabContent>
 							<El mt="3" pt="2" textAlign="center">
-								<Button>
+								<Button href="/docs/introduction">
 									Explore all features <Icon name="arrow-right" />
 								</Button>
 							</El>
