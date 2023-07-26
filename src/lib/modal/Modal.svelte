@@ -78,7 +78,7 @@
 		}
 	})
 
-	$: if (instance) {
+	$: if (instance && backdrop) {
 		setTimeout(() => {
 			try {
 				if (show) {
