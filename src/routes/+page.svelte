@@ -365,14 +365,13 @@
 		class="py-60px py-md-100px {dark
 			? 'bg-color-gradient-dark-alt'
 			: 'bg-color-gradient-light-alt'}">
-		<El class="font-size-large" mb="5" style="margin-top: 200px" textAlign="center"
-			>Dark mode Support</El>
+		<El class="font-size-large" mb="5" textAlign="center">Dark mode Support</El>
 		<El row justifyContent="evenly" mx="auto" container="xl">
 			<El style="font-size: 24px" textAlign="center">
 				All YeSvelte components support Dark and Light themes.
 			</El>
 
-			<El justifyContent="center" style="margin-top: 200px" d="flex" mx="auto" gap="4">
+			<El justifyContent="center" d="flex" mx="auto" gap="4">
 				<El d="flex" class="flex-direction-column font-size-18px" textAlign="center" gap="3">
 					<Button size="lg" on:click={() => (dark = true)} color="dark">
 						<Icon name="moon" />
