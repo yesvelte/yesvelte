@@ -11,14 +11,18 @@
 	const activeIndex = context.activeIndex
 
 	onMount(() => {
+		console.log('set index')
 		index = context.register({ active })
 	})
 
 	onDestroy(() => {
 		context.unregister(index)
 	})
+
+	$: console.log('index changed: ', index)
 </script>
 
+{index} = {$activeIndex}
 <El componentName="test-carousel-item" cssProps={{ active: index === $activeIndex }}>
 	{index}
 	<slot />

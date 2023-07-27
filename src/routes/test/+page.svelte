@@ -3,7 +3,13 @@
 	import CarouselItem from './CarouselItem.svelte'
 	import './carousel.scss'
 
-	let images = ['/images/mastercard.svg', '/images/paypal.svg', '/images/road.png']
+	let images = [
+		'/images/1.jpeg',
+		'/images/2.jpeg',
+		'/images/3.jpeg',
+		'/images/4.jpeg',
+		'/images/5.jpeg',
+	]
 </script>
 
 <Carousel buttons indicators activeIndex={1}>

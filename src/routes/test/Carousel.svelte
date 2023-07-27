@@ -3,7 +3,7 @@
 	import { classname } from '$lib/internal'
 	import { onDestroy, onMount, setContext } from 'svelte'
 	import { writable } from 'svelte/store'
-	import type Swiper from 'swiper'
+	import type Splide from '@splidejs/splide'
 
 	export let componentName: string = 'test-carousel'
 	export let buttons: boolean = false
@@ -13,26 +13,28 @@
 	export let autoplay: boolean = false
 
 	let element: HTMLElement
-	let instance: Swiper
+	let instance: Splide
 
 	const activeIndexStore = writable(activeIndex)
 
 	let items: any[] = []
 
 	function setIndex(newIndex: number) {
-		instance.slideTo(newIndex)
+		console.log('setIndex', newIndex)
+		instance.go(newIndex)
 		$activeIndexStore = (items.length + newIndex) % items.length
 	}
 
 	function onNext() {
-		instance.slideNext()
+		instance.go('>')
 	}
 
 	function onPrev() {
-		instance.slidePrev()
+		instance.go('<')
 	}
 
 	function register(newItem: any) {
+		console.log('register', { newItem, items })
 		items = [...items, newItem]
 		return items.length
 	}
@@ -49,7 +51,7 @@
 		direction: vertical ? 'vertical' : 'horizontal',
 		speed: 400,
 		initialSlide: activeIndex,
-		
+
 		slideClass: classname(componentName + '-item'),
 		wrapperClass: classname(componentName + '-wrapper'),
 		slideActiveClass: classname(componentName + '-item-active'),
@@ -65,16 +67,26 @@
 	async function bind(options: any) {
 		console.log('element: ', element, instance)
 
+		if (!element) return
 		if (instance) return
-		const Swiper = await import('swiper')
-		const { Pagination, Navigation } = await import('swiper/modules')
+		const Splide = await import('@splidejs/splide')
 
-		instance = new Swiper.default(element, {
-			...options,
-		
-			modules: [Pagination, Navigation],
-		})
+		instance = new Splide.default(element, {
+			perPage: 1,
+			// 	classes: {
+			// 		arrows: 'splide__arrows your-class-arrows',
+			// 		arrow : 'splide__arrow your-class-arrow',
+			// 		prev  : classname(componentName + '-button-prev'),
+			// 		next  : classname(componentName + '-button-next'),
 
+			// // Add classes for pagination.
+			// pagination: 'splide__pagination your-class-pagination', // container
+			// page      : 'splide__pagination__page your-class-page', // each button
+			// 	}
+		}).mount()
+
+		instance.go(activeIndex)
+		// instance.slideTo(activeIndex)
 		console.log(instance)
 		instance.on('slideChange', (swiper) => {
 			console.log('side change', swiper)
@@ -85,16 +97,18 @@
 		instance.destroy()
 	}
 
-	$: if (options) {
+	$: if (options && element) {
 		if (instance) {
 			unbind()
 		}
+		console.log('calling bind', { options, element })
 		bind(options)
 	}
 
 	setContext('CAROUSEL', { register, unregister, activeIndex: activeIndexStore })
 </script>
 
+{$activeIndexStore}
 <El bind:element {componentName}>
 	<El componentName="{componentName}-wrapper">
 		<slot />
@@ -104,6 +118,17 @@
 		<Button on:click={onPrev} componentName="test-carousel-button-prev">&lt;</Button>
 		<Button on:click={onNext} componentName="test-carousel-button-next">&gt;</Button>
 	{/if}
+	<!-- <div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+				<div>item</div>
+			</li>
+
+			<li class="splide__slide">
+				<div>item</div>
+			</li>
+		</ul>
+	</div> -->
 
 	{#if indicators}
 		<El tag="ol" componentName="test-carousel-indicators">

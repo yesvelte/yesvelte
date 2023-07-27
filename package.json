@@ -76,6 +76,7 @@
 	},
 	"dependencies": {
 		"@floating-ui/dom": "^1.2.9",
+		"@splidejs/splide": "^4.1.4",
 		"focus-trap": "^7.4.3",
 		"fuzzy": "^0.1.3",
 		"iconify-icon": "^1.0.7",
@@ -84,7 +85,6 @@
 		"moment": "^2.29.4",
 		"nouislider": "^15.7.0",
 		"param-case": "^3.0.4",
-		"quill": "^1.3.7",
-		"swiper": "^10.0.4"
+		"quill": "^1.3.7"
 	}
 }
