@@ -1,0 +1,58 @@
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'swiper/scss';
+
+.y-test-carousel {
+	@extend .carousel;
+	// width: 400px;
+	// height: 300px;
+
+	// border: 1px solid red;
+
+	&-wrapper {
+		@extend .carousel-inner;
+		// width: 100%;
+		// height: 100%;
+	}
+
+	&-button-next {
+		@extend .carousel-control-next;
+		// background-color: red;
+	}
+	&-button-prev {
+		@extend .carousel-control-prev;
+		// background-color: blue;
+	}
+	&-indicator {
+		// @extend .carousel-indicators;
+		// background-color: yellow;
+		// width: 10px;
+		// height: 10px;
+
+		&-active {
+			@extend .active;
+			// width: 20px;
+			// height: 20px;
+			// background-color: green;
+		}
+	}
+
+	&-indicators {
+		@extend .carousel-indicators;
+	}
+
+	// &-indicator {
+	// 	@extend li;
+	// }
+
+	&-item {
+		@extend .carousel-item;
+		// width: 100%;
+		// height: 100%;
+		// display: none;
+
+		&-active {
+			@extend .active;
+			// display: block;
+		}
+	}
+}
