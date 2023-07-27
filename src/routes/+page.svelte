@@ -350,7 +350,7 @@
 								</TabPanel>
 							</TabContent>
 							<El mt="3" pt="2" textAlign="center">
-								<Button>
+								<Button href="/docs/introduction">
 									Explore all features <Icon name="arrow-right" />
 								</Button>
 							</El>
