@@ -37,15 +37,15 @@
 	}
 
 	$: getKey = (item: any) => {
-		if (key) {
-			return typeof key === 'string' ? item[key] : key(item)
+		if (key && typeof item === 'object') {
+			return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
 		} else {
-			return item
+			return JSON.stringify(item)
 		}
 	}
 
 	const onChange = (event: any) => {
-		value = event.target.value
+		value = JSON.parse(event.target.value)
 	}
 </script>
 
@@ -55,7 +55,7 @@
 			<Radio
 				{...props}
 				value={getKey(item)}
-				checked={value === getKey(item)}
+				checked={getKey(value) === getKey(item)}
 				on:change={onChange}
 				on:change>
 				<slot {index} {item}>{item}</slot>

@@ -35,10 +35,10 @@
 	}
 
 	$: getKey = (item: any) => {
-		if (key) {
-			return typeof key === 'string' ? item[key] : key(item)
+		if (key && typeof item === 'object') {
+			return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
 		} else {
-			return item
+			return JSON.stringify(item)
 		}
 	}
 
@@ -46,13 +46,13 @@
 		if (value === undefined) value = []
 
 		if (items != undefined && items?.length > 0) {
-			const selectedValue = event.target?.value
+			const selectedValue = JSON.parse(event.target?.value)
 			const selectedChecked = event.target?.checked
 
 			if (selectedChecked) {
 				value.push(selectedValue)
 			} else {
-				var _index = value.indexOf(selectedValue)
+				var _index = value.findIndex((x) => getKey(x) === getKey(selectedValue))
 				if (_index !== -1) {
 					value.splice(_index, 1)
 				}
@@ -60,16 +60,16 @@
 			value = value
 		}
 	}
+
+	function isSelected(item: any) {
+		return value?.find((x) => getKey(x) === getKey(item))
+	}
 </script>
 
 <El {components} {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Checkbox
-				{...props}
-				value={getKey(item)}
-				checked={value?.includes(getKey(item))}
-				on:change={onChange}>
+			<Checkbox {...props} value={getKey(item)} checked={isSelected(item)} on:change={onChange}>
 				<slot {index} {item}>{item}</slot>
 			</Checkbox>
 		{/each}

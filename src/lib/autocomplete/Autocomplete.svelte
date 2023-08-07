@@ -35,13 +35,10 @@
 	$: getKey = (item: any) => {
 		if (typeof item === 'object') {
 			if (key) {
-				return typeof key === 'string' ? item[key] : key(item)
-			} else {
-				return item
+				return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
 			}
-		} else {
-			return item
 		}
+		return JSON.stringify(item)
 	}
 
 	let inputEl: HTMLElement
@@ -110,23 +107,25 @@
 
 		if (multiple) {
 			if (value.includes(item)) {
-				value = value.filter((x) => x !== item)
+				value = value.filter((x: any) => getKey(x) !== getKey(item))
 			} else {
-				value = [...(value ?? []), getKey(item)]
+				value = [...(value ?? []), JSON.parse(getKey(item))]
 			}
 
 			dispatch('changed', value)
-			clearTimeout(timer) // prevent close when selected
+			setTimeout(() => {
+				show = true
+			})
 
 			// continue
 		} else {
-			value = getKey(item)
+			value = JSON.parse(getKey(item))
 			show = false
 			dispatch('changed', value)
 		}
 	}
 
-	function onBlur(e) {
+	function onBlur() {
 		timer = setTimeout(() => {
 			show = false
 		}, 200)
@@ -146,7 +145,7 @@
 
 	function onRemove(item: any) {
 		if (multiple) {
-			value = value.filter((x) => x !== getKey(item))
+			value = value.filter((x) => getKey(x) !== getKey(item))
 		} else {
 			value = undefined
 		}
@@ -170,6 +169,18 @@
 		disabled,
 	}
 
+	function isSelected(item) {
+		if (multiple) {
+			if (value && Array.isArray(value)) {
+				return value.find((x) => getKey(x) === getKey(item))
+			} else {
+				return false
+			}
+		} else {
+			return getKey(value) === getKey(item)
+		}
+	}
+
 	$: noResult = options.length === 0
 </script>
 
@@ -183,7 +194,7 @@
 	on:focus={onFocus}>
 	{#if Array.isArray(value)}
 		{#each value as val, index}
-			{@const item = items.find((x) => getKey(x) == val)}
+			{@const item = items.find((x) => getKey(x) == getKey(val))}
 			{#if item}
 				<El
 					componentName="{componentName}-item"
@@ -202,7 +213,7 @@
 			{/if}
 		{/each}
 	{:else}
-		{@const index = items.findIndex((x) => getKey(x) == value)}
+		{@const index = items.findIndex((x) => getKey(x) == getKey(value))}
 		{#if index > -1}
 			{@const item = items[index]}
 			{#if item}
@@ -245,7 +256,7 @@
 		{/if}
 
 		{#each options as item, index}
-			{@const shouldShow = multiple ? !value?.includes(getKey(item)) : value !== getKey(item)}
+			{@const shouldShow = !isSelected(item)}
 			{#if shouldShow}
 				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
 					<slot {item} {index}>{item}</slot>
