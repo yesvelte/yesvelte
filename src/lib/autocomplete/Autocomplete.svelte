@@ -35,10 +35,10 @@
 	$: getKey = (item: any) => {
 		if (typeof item === 'object') {
 			if (key) {
-				return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
+				return typeof key === 'string' ? item[key] : key(item)
 			}
 		}
-		return JSON.stringify(item)
+		return item
 	}
 
 	let inputEl: HTMLElement
@@ -109,7 +109,7 @@
 			if (value.includes(item)) {
 				value = value.filter((x: any) => getKey(x) !== getKey(item))
 			} else {
-				value = [...(value ?? []), JSON.parse(getKey(item))]
+				value = [...(value ?? []), getKey(item)]
 			}
 
 			dispatch('changed', value)
@@ -119,7 +119,7 @@
 
 			// continue
 		} else {
-			value = JSON.parse(getKey(item))
+			value = getKey(item)
 			show = false
 			dispatch('changed', value)
 		}
@@ -194,7 +194,7 @@
 	on:focus={onFocus}>
 	{#if Array.isArray(value)}
 		{#each value as val, index}
-			{@const item = items.find((x) => getKey(x) == getKey(val))}
+			{@const item = items.find((x) => getKey(x) === getKey(val))}
 			{#if item}
 				<El
 					componentName="{componentName}-item"
