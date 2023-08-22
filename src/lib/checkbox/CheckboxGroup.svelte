@@ -35,18 +35,27 @@
 	}
 
 	$: getKey = (item: any) => {
-		if (key && typeof item === 'object') {
-			return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
-		} else {
+		if (typeof item === 'object') {
+			if (key) {
+				return typeof key === 'string' ? item[key] : key(item)
+			}
 			return JSON.stringify(item)
+		} else {
+			return item
 		}
+	}
+	function parse(item: any) {
+		if (typeof items[0] === 'object' && !key) {
+			return JSON.parse(item)
+		}
+		return item
 	}
 
 	function onChange(event: any) {
 		if (value === undefined) value = []
 
 		if (items != undefined && items?.length > 0) {
-			const selectedValue = JSON.parse(event.target?.value)
+			const selectedValue = parse(event.target?.value)
 			const selectedChecked = event.target?.checked
 
 			if (selectedChecked) {
@@ -62,7 +71,7 @@
 	}
 
 	function isSelected(item: any) {
-		return value?.find((x) => getKey(x) === getKey(item))
+		return (value?.findIndex((x) => getKey(x) === getKey(item)) ?? -1) > -1
 	}
 </script>
 
