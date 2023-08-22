@@ -41,26 +41,39 @@
 	}
 
 	$: getKey = (item: any) => {
-		if (key && typeof item === 'object') {
-			return typeof key === 'string' ? JSON.stringify(item[key]) : JSON.stringify(key(item))
-		} else {
+		if (typeof item === 'object') {
+			if (key) {
+				return typeof key === 'string' ? item[key] : key(item)
+			}
 			return JSON.stringify(item)
+		} else {
+			return item
 		}
+	}
+
+	function parse(item: any) {
+		if (typeof items[0] === 'object') {
+			if (!key) {
+				return JSON.parse(item)
+			}
+		}
+		return item
 	}
 
 	const onChange = (event: any) => {
 		if (multiple) {
-			value = Array.from(event.target.selectedOptions).map((option: any) =>
-				JSON.parse(option.value)
-			)
+			value = Array.from(event.target.selectedOptions).map((option: any) => parse(option.value))
 		} else {
 			const selected = event.target.value
-			value = JSON.parse(selected)
+			value = parse(selected)
 		}
 	}
 
 	const isSelected = (item: any) => {
-		return multiple ? value?.find((x: any) => getKey(x) === getKey(item)) : value === getKey(item)
+		if (multiple) {
+			return value?.findIndex((x: any) => getKey(x) === getKey(item)) > -1
+		}
+		return value === getKey(item)
 	}
 </script>
 
