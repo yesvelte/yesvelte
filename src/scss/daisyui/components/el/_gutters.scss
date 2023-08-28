@@ -4,16 +4,16 @@ $gap-sizes: 0 1 2 3 4 5 !default;
 
 @each $size in $gap-sizes {
 	.#{$prefix}el-g-#{$size} {
-		@extend .g-#{$size};
+		@extend %g-#{$size};
 	}
 	.#{$prefix}el-gx-#{$size} {
-		@extend .gx-#{$size};
+		@extend %gx-#{$size};
 	}
 	.#{$prefix}el-gy-#{$size} {
-		@extend .gy-#{$size};
+		@extend %gy-#{$size};
 	}
 	.#{$prefix}el-gap-#{$size} {
-		@extend .gap-#{$size};
+		@extend %gap-#{$size};
 	}
 }
 

@@ -50,10 +50,10 @@
 }
 
 .#{$prefix}date-picker-state-valid {
-	@extend .input-success;
+	@extend %input-success;
 }
 .#{$prefix}date-picker-state-invalid {
-	@extend .input-error;
+	@extend %input-error;
 }
 .#{$prefix}date-picker-border-rounded {
 	@extend %rounded-full;
