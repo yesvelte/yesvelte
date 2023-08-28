@@ -36,12 +36,9 @@
 		if (typeof item === 'object') {
 			if (key) {
 				return typeof key === 'string' ? item[key] : key(item)
-			} else {
-				return item
 			}
-		} else {
-			return item
 		}
+		return item
 	}
 
 	let inputEl: HTMLElement
@@ -110,13 +107,15 @@
 
 		if (multiple) {
 			if (value.includes(item)) {
-				value = value.filter((x) => x !== item)
+				value = value.filter((x: any) => getKey(x) !== getKey(item))
 			} else {
 				value = [...(value ?? []), getKey(item)]
 			}
 
 			dispatch('changed', value)
-			clearTimeout(timer) // prevent close when selected
+			setTimeout(() => {
+				show = true
+			})
 
 			// continue
 		} else {
@@ -126,7 +125,7 @@
 		}
 	}
 
-	function onBlur(e) {
+	function onBlur() {
 		timer = setTimeout(() => {
 			show = false
 		}, 200)
@@ -146,7 +145,7 @@
 
 	function onRemove(item: any) {
 		if (multiple) {
-			value = value.filter((x) => x !== getKey(item))
+			value = value.filter((x) => getKey(x) !== getKey(item))
 		} else {
 			value = undefined
 		}
@@ -170,33 +169,52 @@
 		disabled,
 	}
 
+	function isSelected(item) {
+		if (multiple) {
+			if (value && Array.isArray(value)) {
+				return value.find((x) => getKey(x) === getKey(item))
+			} else {
+				return false
+			}
+		} else {
+			return getKey(value) === getKey(item)
+		}
+	}
+
 	$: noResult = options.length === 0
 </script>
 
-<El {components} componentName="{componentName}-wrapper">
-	<El {...$$restProps} {componentName} {cssProps} {disabled} on:click={onClick} on:focus={onFocus}>
-		{#if Array.isArray(value)}
-			{#each value as val, index}
-				{@const item = items.find((x) => getKey(x) == val)}
-				{#if item}
-					<El
-						componentName="{componentName}-item"
-						cssProps={{ multiple: true, active: cursorPosition === index }}>
-						{#if _slots['selected']}
-							<slot name="selected" {item} {index}>{item}</slot>
-						{:else}
-							<slot {item} {index}>{item}</slot>
-						{/if}
-						{#if dismissible}
-							<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
-								<Icon name="x" />
-							</El>
-						{/if}
-					</El>
-				{/if}
-			{/each}
-		{:else}
-			{@const index = items.findIndex((x) => getKey(x) == value)}
+<El
+	{components}
+	{...$$restProps}
+	{componentName}
+	{cssProps}
+	{disabled}
+	on:click={onClick}
+	on:focus={onFocus}>
+	{#if Array.isArray(value)}
+		{#each value as val, index}
+			{@const item = items.find((x) => getKey(x) === getKey(val))}
+			{#if item}
+				<El
+					componentName="{componentName}-item"
+					cssProps={{ multiple: true, active: cursorPosition === index }}>
+					{#if _slots['selected']}
+						<slot name="selected" {item} {index}>{item}</slot>
+					{:else}
+						<slot {item} {index}>{item}</slot>
+					{/if}
+					{#if dismissible}
+						<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
+							<Icon name="x" />
+						</El>
+					{/if}
+				</El>
+			{/if}
+		{/each}
+	{:else}
+		{@const index = items.findIndex((x) => getKey(x) == getKey(value))}
+		{#if index > -1}
 			{@const item = items[index]}
 			{#if item}
 				<El componentName="{componentName}-item">
@@ -208,21 +226,21 @@
 				</El>
 			{/if}
 		{/if}
-		<input
-			class={classname(`${componentName}-input`)}
-			bind:this={inputEl}
-			placeholder={value ? undefined : placeholder}
-			{disabled}
-			{readonly}
-			bind:value={query}
-			on:blur={onBlur}
-			on:blur
-			on:focus={onFocus}
-			on:focus
-			on:click
-			on:keydown={onKeyDown}
-			on:input={onInput} />
-	</El>
+	{/if}
+	<input
+		class={classname(`${componentName}-input`)}
+		bind:this={inputEl}
+		placeholder={value ? undefined : placeholder}
+		{disabled}
+		{readonly}
+		bind:value={query}
+		on:blur={onBlur}
+		on:blur
+		on:focus={onFocus}
+		on:focus
+		on:click
+		on:keydown={onKeyDown}
+		on:input={onInput} />
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
 			{#if create}
@@ -238,7 +256,7 @@
 		{/if}
 
 		{#each options as item, index}
-			{@const shouldShow = multiple ? !value?.includes(getKey(item)) : value !== getKey(item)}
+			{@const shouldShow = !isSelected(item)}
 			{#if shouldShow}
 				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
 					<slot {item} {index}>{item}</slot>

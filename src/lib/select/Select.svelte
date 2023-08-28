@@ -41,20 +41,39 @@
 	}
 
 	$: getKey = (item: any) => {
-		if (key) {
-			return typeof key === 'string' ? item[key] : key(item)
+		if (typeof item === 'object') {
+			if (key) {
+				return typeof key === 'string' ? item[key] : key(item)
+			}
+			return JSON.stringify(item)
 		} else {
 			return item
 		}
 	}
 
+	function parse(item: any) {
+		if (typeof items[0] === 'object') {
+			if (!key) {
+				return JSON.parse(item)
+			}
+		}
+		return item
+	}
+
 	const onChange = (event: any) => {
 		if (multiple) {
-			value = Array.from(event.target.selectedOptions).map((option) => option.value)
+			value = Array.from(event.target.selectedOptions).map((option: any) => parse(option.value))
 		} else {
 			const selected = event.target.value
-			value = selected
+			value = parse(selected)
 		}
+	}
+
+	const isSelected = (item: any) => {
+		if (multiple) {
+			return value?.findIndex((x: any) => getKey(x) === getKey(item)) > -1
+		}
+		return value === getKey(item)
 	}
 </script>
 
@@ -72,9 +91,7 @@
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
-			<option
-				value={getKey(item)}
-				selected={multiple ? value?.includes(getKey(item)) : value === getKey(item)}>
+			<option value={getKey(item)} selected={isSelected(item)}>
 				<slot {index} {item}>{item}</slot>
 			</option>
 		{/each}

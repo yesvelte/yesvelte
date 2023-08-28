@@ -71,11 +71,11 @@
 		</Preview>
 	</Doc>
 
-	<Doc title="Slots">
+	<!-- <Doc title="Slots">
 		<Preview src="./FormSelectSlots.svelte">
 			<FormSelectSlots />
 		</Preview>
-	</Doc>
+	</Doc> -->
 
 	<Doc title="Dynamic Items">
 		<Preview src="./FormSelectDynamicItems.svelte">

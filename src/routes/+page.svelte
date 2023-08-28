@@ -28,7 +28,7 @@
 	let theme = 'tabler'
 	let icon = 'clipboard'
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
-	let discordLink = 'https://discord.gg/QkeQnNEQ7'
+	let discordLink = 'https://discord.gg/KR4RJfvzA'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
 
@@ -52,8 +52,8 @@
 	]
 
 	$: containerProps = {
+		'data-bs-theme': dark ? 'dark' : 'light',
 		'data-theme': dark ? 'dark' : 'light',
-		class: 'y-app' + (dark ? ' y-app-theme-dark' : ''),
 	}
 
 	$: if (browser) {
@@ -70,6 +70,11 @@
 			icon = 'clipboard'
 		}, 3000)
 	}
+
+	$: darkColor = theme === 'tabler' ? '#151f2c' : '#1d232a'
+	$: lightColor = theme === 'tabler' ? '#f1f5f9' : 'white'
+
+	$: bgColor = dark ? darkColor : lightColor
 </script>
 
 <svelte:head>
@@ -117,7 +122,7 @@
 					Empower your development with our extensive UI component library
 				</El>
 				<El mt="4" tag="h2" class="font-size-medium">
-					A flexible & powefull Svelte library for building web applications quickly and easily
+					A flexible & powerful Svelte library for building web applications quickly and easily
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
 					<El
@@ -137,7 +142,7 @@
 						<El me="4">npm i yesvelte@next</El>
 						<Icon name={icon} />
 					</El>
-					<Button color={dark ? 'dark' : 'light'} href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs/introduction">
 						<Icon name="book" />
 						Get Started
 					</Button>
@@ -152,7 +157,7 @@
 				fill-rule="evenodd"
 				clip-rule="evenodd"
 				d="M2160 261H0V0.807678C360 80.1044 720 119.753 1080 119.753C1440 119.753 1800 80.1044 2160 0.807678V261Z"
-				fill={dark ? '#1a2234' : '#f1f5f9'} />
+				fill={bgColor} />
 		</svg>
 	</El>
 	<El pt="5" pb="4" dMd="none" />
@@ -283,7 +288,7 @@
 			{/each}
 		</El>
 		<El mt="3" pt="2" textAlign="center">
-			<Button href="/docs">
+			<Button href="/docs/introduction">
 				Explore all features <Icon name="arrow-right" />
 			</Button>
 		</El>
@@ -345,7 +350,7 @@
 								</TabPanel>
 							</TabContent>
 							<El mt="3" pt="2" textAlign="center">
-								<Button>
+								<Button href="/docs/introduction">
 									Explore all features <Icon name="arrow-right" />
 								</Button>
 							</El>
@@ -355,7 +360,35 @@
 			</El>
 		</El>
 	</El>
-	<El class="py-60px py-md-100px {dark ? 'bg-color-dark' : 'bg-color-white'}">
+
+	<El
+		class="py-60px py-md-100px {dark
+			? 'bg-color-gradient-dark-alt'
+			: 'bg-color-gradient-light-alt'}">
+		<El class="font-size-large" mb="5" textAlign="center">Dark mode Support</El>
+		<El row justifyContent="evenly" mx="auto" container="xl">
+			<El style="font-size: 24px" textAlign="center">
+				All YeSvelte components support Dark and Light themes.
+			</El>
+
+			<El justifyContent="center" d="flex" mx="auto" gap="4">
+				<El d="flex" class="flex-direction-column font-size-18px" textAlign="center" gap="3">
+					<Button size="lg" on:click={() => (dark = true)} color="dark">
+						<Icon name="moon" />
+					</Button>
+					Dark
+				</El>
+
+				<El d="flex" class="flex-direction-column font-size-18px" textAlign="center" gap="3">
+					<Button size="lg" on:click={() => (dark = false)} color="light">
+						<Icon name="sun" />
+					</Button>
+					Light
+				</El>
+			</El>
+		</El>
+	</El>
+	<El d="none" class="py-60px py-md-100px {dark ? 'bg-color-dark' : 'bg-color-white'}">
 		<El class="font-size-large" mb="5" textAlign="center">Working with YeSvelte is simple</El>
 		<El row justifyContent="evenly" mx="auto" container="xl">
 			<El col="12" colMd="4" class="w-md-max-content">
@@ -514,9 +547,29 @@
 				fill-rule="evenodd"
 				clip-rule="evenodd"
 				d="M2160 0H0V262.5C360 182.5 720 142.5 1080 142.5C1440 142.5 1800 182.5 2160 262.5V0Z"
-				fill={dark ? '#1a2234' : 'white'} />
+				fill={bgColor} />
 		</svg>
 	</El>
+	<El bgColor="dark" class="py-60px py-md-100px" textColor="light">
+		<El class="font-size-large" mb="5" textAlign="center">Multiple Themes</El>
+		<El row justifyContent="evenly" mx="auto" container="xl">
+			<El style="font-size: 24px" textAlign="center">
+				YeSvelte is CSS framework independent, It is possible to support any css based themes.
+				currently we support Tabler (based on bootstrap) and DaisyUI (based on TailwindCSS) themes.
+			</El>
+
+			<El justifyContent="center" style="margin-top: 100px" d="flex" mx="auto" gap="4">
+				<El d="flex" class="flex-direction-column" gap="3">
+					<Button size="lg" on:click={() => (theme = 'daisyui')} color="primary">DaisyUI</Button>
+				</El>
+
+				<El d="flex" class="flex-direction-column" gap="3">
+					<Button size="lg" on:click={() => (theme = 'tabler')} color="light">Tabler</Button>
+				</El>
+			</El>
+		</El>
+	</El>
+
 	<El bgColor="dark" class="py-60px py-md-100px" textColor="light">
 		<El mx="auto" row g="5" container="xl">
 			<El col="12" colMd="6">
@@ -571,7 +624,7 @@
 			</El>
 		</El>
 	</El>
-	<El bgColor="dark" class="py-60px py-md-100px" textColor="light">
+	<El d="none" bgColor="dark" class="py-60px py-md-100px" textColor="light">
 		<El mx="auto" row g="3" gMd="5" container="xl">
 			<El col="12">
 				<Card dMd="none" shadow textColor="dark">
@@ -677,7 +730,7 @@
 					Yesvelt tools are used by thousands of developers around the world.
 				</El>
 				<El mt="5" d="flex" class="flex-direction-column flex-direction-md-row" gap="3">
-					<Button color={dark ? 'dark' : 'light'} href="/docs">
+					<Button color={dark ? 'dark' : 'light'} href="/docs/introduction">
 						<Icon name="book" />
 						Get Started
 					</Button>
@@ -860,6 +913,19 @@
 
 	:global(.bg-color-gradient-dark) {
 		background: linear-gradient(180deg, rgb(19 19 20 / 0%) 0%, #242446 76.58%, #1a2234 98.77%);
+	}
+
+	:global(.bg-color-gradient-light-alt) {
+		background: linear-gradient(
+			0deg,
+			rgba(233, 233, 245, 0) 0%,
+			#f0f0ff 76.58%,
+			rgb(255, 255, 255) 98.77%
+		);
+	}
+
+	:global(.bg-color-gradient-dark-alt) {
+		background: linear-gradient(0deg, rgb(19 19 20 / 0%) 0%, #242446 76.58%, #1a2234 98.77%);
 	}
 
 	:global(.max-w-278px) {

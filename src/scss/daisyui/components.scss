@@ -2,12 +2,12 @@
 @import './components/typography';
 @import './components/color';
 
-@import './components/el/spacing';
 @import './components/el/borders';
 @import './components/el/gutters';
 @import './components/el/flex';
 @import './components/el/display';
 @import './components/el/position';
+@import './components/el/spacing';
 @import './components/el/text';
 
 @import './components/container';
@@ -59,12 +59,11 @@
 @import './components/date-picker';
 @import './components/file-uploader';
 @import './components/input';
-@import './components/input-group';
 @import './components/radio';
 @import './components/select';
 @import './components/switch';
 @import './components/textarea';
 
 // // Form
-// @import './components/form-field';
+@import './components/form-field';
 // @import './components/form-fieldset';

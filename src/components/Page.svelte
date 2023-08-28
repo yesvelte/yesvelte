@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { Card, CardBody, El, Icon } from 'yesvelte'
-	import ToC from './ToC.svelte'
+	import { El } from 'yesvelte'
 	import { page } from '$app/stores'
 	export let title: string = ''
 	export let description: string = ''
-
 </script>
 
 <svelte:head>
@@ -12,7 +10,7 @@
 	<meta name="description" content={$page.data.metaData?.description ?? description} />
 </svelte:head>
 
-<El mt="4" tag="h1">{title}</El>
+<El class="y-page-title" mt="4" mb="3" tag="h1">{title}</El>
 <slot name="description">
 	<El tag="p">{description}</El>
 </slot>

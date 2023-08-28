@@ -1,7 +1,59 @@
+[data-bs-theme='dark'] {
+	--litepicker-month-weekday-color: hsl(var(--bc));
+	--litepicker-button-prev-month-color: hsl(var(--bc));
+	--litepicker-button-next-month-color: hsl(var(--bc));
+	--litepicker-button-prev-month-color-hover: hsl(var(--p));
+	--litepicker-button-next-month-color-hover: hsl(var(--p));
+	--litepicker-day-color: hsl(var(--nc));
+	--litepicker-day-color-hover: hsl(var(--p));
+	--litepicker-is-end-color-bg: hsl(var(--p));
+	--litepicker-is-today-color: hsl(var(--p));
+	--litepicker-month-header-color: hsl(var(--nc));
+	--litepicker-container-months-color-bg: hsl(var(--b1));
+	--litepicker-container-months-box-shadow-color: hsl(var(--b3));
+}
+
 .#{$prefix}date-picker {
 	@extend %input;
 	@extend %input-bordered;
 	@extend %w-full;
+}
+
+.#{$prefix}date-picker-wrapper {
+	position: relative;
+
+	.#{$prefix}date-picker:not(:first-child) {
+		padding-left: 3rem;
+	}
+	.#{$prefix}date-picker:not(:last-child) {
+		padding-right: 3rem;
+	}
+
+	.#{$prefix}date-picker-icon:first-child {
+		left: 0;
+	}
+	.#{$prefix}date-picker-icon:last-child {
+		right: 0;
+	}
+
+	.#{$prefix}date-picker-icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.#{$prefix}date-picker-state-valid {
+	@extend .input-success;
+}
+.#{$prefix}date-picker-state-invalid {
+	@extend .input-error;
 }
 .#{$prefix}date-picker-border-rounded {
 	@extend %rounded-full;

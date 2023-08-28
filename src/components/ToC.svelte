@@ -28,17 +28,15 @@
 </script>
 
 {#if sections && sections.length > 0}
-	<El mb="5" textMuted sticky="top" id="toc">
-		<El tag="strong" d="none" dMd="block" my="2">
+	<El mb="5" textMuted top="0" pt="3" id="toc">
+		<El tag="strong" style="width: 160px" d="none" dMd="block" my="2">
 			<h4>On this page</h4>
 		</El>
 		<El tag="hr" d="none" dMd="block" my="2" />
-		<El row>
-			{#each sections as section}
-				<El col="12" mb="2">
-					<El tag="a" href="#{section.href}" textMuted>{section.name}</El>
-				</El>
-			{/each}
-		</El>
+		{#each sections as section}
+			<El me="3" mb="2">
+				<El tag="a" href="#{section.href}" textMuted>{section.name}</El>
+			</El>
+		{/each}
 	</El>
 {/if}

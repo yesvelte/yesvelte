@@ -6,7 +6,8 @@
 	import { Button } from '../button'
 	import ModalTitle from './ModalTitle.svelte'
 	import ModalHeader from './ModalHeader.svelte'
-	import { get_current_component } from 'svelte/internal'
+	import { get_current_component, onMount } from 'svelte/internal'
+	import type { FocusTrap } from 'focus-trap'
 
 	const dispatch = createEventDispatcher()
 	const components = [
@@ -16,21 +17,32 @@
 
 	type $$Props = ModalProps
 
+	export let autoClose: $$Props['autoClose'] = undefined
 	export let backdrop: $$Props['backdrop'] = true
 	export let componentName: $$Props['componentName'] = 'modal'
 	export let absolute: $$Props['absolute'] = undefined
 	export let dismissible: $$Props['dismissible'] = undefined
 	export let show: $$Props['show'] = undefined
-	export let persistent: $$Props['persistent'] = undefined
 	export let placement: $$Props['placement'] = 'top'
 	export let scrollable: $$Props['scrollable'] = undefined
 	export let size: $$Props['size'] = 'md'
 	export let title: $$Props['title'] = undefined
 
-	export const close = (force = false) => {
-		if (!force && persistent) return
+	export const close = () => {
 		show = false
 		dispatch('close')
+	}
+
+	const handleEscapeKey = (event: any) => {
+		if (show && element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
+			close()
+		}
+	}
+
+	const handleOutsideClick = (event: any) => {
+		if (show && element && autoClose && !event.defaultPrevented) {
+			close()
+		}
 	}
 
 	$: if (typeof window !== 'undefined' && !absolute) {
@@ -43,8 +55,42 @@
 		}
 	}
 
+	let element: HTMLDivElement
+	let instance: FocusTrap
+
 	const onClickContent = (e: any) => {
 		e.stopPropagation()
+	}
+
+	onMount(() => {
+		import('focus-trap').then((focusTrap) => {
+			instance = focusTrap.createFocusTrap(element, {
+				escapeDeactivates: false,
+			})
+		})
+
+		if (document && autoClose) {
+			document.addEventListener('keyup', handleEscapeKey, true)
+
+			return () => {
+				document.removeEventListener('keyup', handleEscapeKey, true)
+			}
+		}
+	})
+
+	$: if (instance && backdrop) {
+		setTimeout(() => {
+			try {
+				if (show) {
+					instance.activate()
+				} else {
+					instance.deactivate()
+				}
+			} catch (err) {
+				console.log('erro: ', err)
+				//
+			}
+		}, 500)
 	}
 
 	let cssProps: $$Props = {}
@@ -57,11 +103,12 @@
 </script>
 
 <El
+	bind:element
 	{...$$restProps}
 	{componentName}
 	{cssProps}
 	{components}
-	on:click={() => close()}
+	on:click={handleOutsideClick}
 	tabindex="0"
 	role="dialog"
 	{show}>

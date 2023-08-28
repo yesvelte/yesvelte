@@ -5,3 +5,20 @@ $positions: static fixed absolute relative sticky !default;
 		position: #{$position};
 	}
 }
+
+$position-directions: (
+	'start': 'left',
+	top: 'top',
+	bottom: 'bottom',
+	end: 'right'
+);
+
+$position-values: 0, 50, 100;
+
+@each $value in $position-values {
+	@each $position-name, $position-value in $position-directions {
+		.#{$prefix}el-#{$position-name}-#{$value} {
+			#{$position-value}: #{$value + '%'};
+		}
+	}
+}

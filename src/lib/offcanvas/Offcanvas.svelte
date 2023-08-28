@@ -3,6 +3,7 @@
 	import { El } from '../el'
 	import type { OffcanvasProps } from './Offcanvas.types'
 	import { get_current_component } from 'svelte/internal'
+	import type { FocusTrap } from 'focus-trap'
 
 	type $$Props = OffcanvasProps
 
@@ -27,6 +28,7 @@
 	setContext<OffcanvasProps>('OFFCANVAS', { close })
 
 	let element: HTMLElement
+	let instance: FocusTrap
 	let props: OffcanvasProps = { componentName, ...$$restProps }
 	let cssProps: OffcanvasProps = { placement }
 
@@ -49,6 +51,11 @@
 	}
 
 	onMount(() => {
+		import('focus-trap').then((focusTrap) => {
+			instance = focusTrap.createFocusTrap(element, {
+				escapeDeactivates: false,
+			})
+		})
 		if (document && autoClose) {
 			document.addEventListener('keyup', handleEscapeKey, true)
 			document.addEventListener('click', handleOutsideClick, true)
@@ -60,15 +67,22 @@
 		}
 	})
 
+	$: if (instance && backdrop) {
+		setTimeout(() => {
+			try {
+				if (show) {
+					instance.activate()
+				} else {
+					instance.deactivate()
+				}
+			} catch (err) {
+				//
+			}
+		}, 500)
+	}
+
 	$: {
 		cssProps = { placement }
-		if (element && show) {
-			window.setTimeout(function () {
-				element.focus()
-			}, 0)
-		} else if (element && !show) {
-			element.blur()
-		}
 	}
 </script>
 
