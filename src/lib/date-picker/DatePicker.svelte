@@ -12,7 +12,6 @@
 
 	export let componentName: $$Props['componentName'] = 'date-picker'
 	export let formatText: $$Props['formatText'] = undefined
-	export let formatValue: $$Props['formatValue'] = undefined
 	export let borderRounded: $$Props['borderRounded'] = undefined
 	export let borderFlush: $$Props['borderFlush'] = undefined
 	export let disabled: $$Props['disabled'] = undefined
@@ -50,23 +49,19 @@
 		}
 	}
 
-	function format(date: Date | DateTime | null | undefined, mode = 'value'): Date | string {
+	function formatValue(date: DateTime | null | undefined): string {
+		return date ? date.format('YYYY-MM-DD') : ''
+	}
+	function format(date: Date | DateTime | null | undefined, mode: 'text'): Date | string {
 		if (!date) return ' --- '
 		if (date.toJSDate) date = date.toJSDate()
 
 		if (date) {
-			if (mode === 'value') {
-				if (formatValue) {
-					return formatValue(date)
-				}
-				return new Date(date).toISOString()
-			} else {
-				if (formatText) {
-					return formatText(date)
-				}
-
-				return new Date(date).toDateString()
+			if (formatText) {
+				return formatText(date)
 			}
+
+			return new Date(date).toDateString()
 		}
 		return ''
 	}
@@ -144,16 +139,13 @@
 				}
 			})
 
-			picker.on('selected', (event: any) => {
+			picker.on('selected', (date1: DateTime | null, date2: DateTime | null | undefined) => {
 				if (range) {
-					const startDate = instance?.getStartDate()
-					const startDateValue = format(startDate)
-					const startDateText = format(startDate, 'text')
+					const startDateValue = formatValue(date1)
+					const startDateText = format(date1, 'text')
 
-					const endDate = instance?.getEndDate()
-
-					const endDateValue = format(endDate)
-					const endDateText = format(endDate, 'text')
+					const endDateValue = formatValue(date2)
+					const endDateText = format(date2, 'text')
 
 					if (value[0] === startDateValue && value[1] === endDateValue) return
 
@@ -162,9 +154,8 @@
 					text = startDateText + ' - ' + endDateText
 					dispatch('changed', value)
 				} else {
-					const date = event?.dateInstance
-					const dateValue = format(date)
-					const dateText = format(date, 'text')
+					const dateValue = formatValue(date1)
+					const dateText = format(date1, 'text')
 
 					if (value === dateValue) return
 
