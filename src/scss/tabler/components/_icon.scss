@@ -20,9 +20,9 @@ $icon-sizes: (
 );
 
 $props: (
-	null: '.icon',
-	color: generate_props($theme_colors, ('.text-')),
-	size: generate_props($icon-sizes, ('.icon-size-'))
+	null: '%icon',
+	color: generate_props($theme_colors, ('%text-')),
+	size: generate_props($icon-sizes, ('%icon-size-'))
 );
 
 .#{$prefix-icon} {

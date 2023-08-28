@@ -2,10 +2,10 @@
 	position: relative;
 	display: flex;
 	gap: 0.5rem;
-	@extend .input;
-	@extend .input-bordered;
-	@extend .w-full;
-	@extend .mb-2;
+	@extend %input;
+	@extend %input-bordered;
+	@extend %w-full;
+	@extend %mb-2;
 	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
 		linear-gradient(135deg, currentColor 50%, transparent 50%);
 	background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16px) calc(1px + 50%);
@@ -18,16 +18,16 @@
 	}
 
 	&-input {
-		@extend .grow;
+		@extend %grow;
 		background-color: transparent;
 		outline: none;
 	}
 	&-dropdown {
-		@extend .absolute;
-		@extend .shadow-xl;
-		@extend .p-2;
-		@extend .rounded-xl;
-		@extend .bg-base-100;
+		@extend %absolute;
+		@extend %shadow-xl;
+		@extend %p-2;
+		@extend %rounded-xl;
+		@extend %bg-base-100;
 		width: 100% !important;
 		z-index: 999;
 		top: auto;
@@ -59,14 +59,14 @@
 
 @each $size in (sm md lg) {
 	.#{$prefix}autocomplete-size-#{$size} .#{$prefix}autocomplete-control {
-		@extend .input-#{$size};
+		@extend %input-#{$size};
 	}
 }
 
 .#{$prefix}autocomplete-state-valid .#{$prefix}autocomplete-control {
-	@extend .input-success;
+	@extend %input-success;
 }
 
 .#{$prefix}autocomplete-state-invalid .#{$prefix}autocomplete-control {
-	@extend .input-error;
+	@extend %input-error;
 }

@@ -1,19 +1,19 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}el-bg-color-#{$colorName} {
-		@extend .bg-#{$daisyuiColorName};
+		@extend %bg-#{$daisyuiColorName};
 	}
 	.#{$prefix}el-text-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}el-bg-color-#{$colorName} {
-		@extend .bg-#{$daisyuiColorName};
+		@extend %bg-#{$daisyuiColorName};
 	}
 	.#{$prefix}el-text-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
@@ -40,6 +40,6 @@
 //bg opacity
 @each $opacity in (10 25 50 75) {
 	.#{$prefix}el-bg-opacity-#{$opacity} {
-		@extend .bg-opacity-#{$opacity};
+		@extend %bg-opacity-#{$opacity};
 	}
 }

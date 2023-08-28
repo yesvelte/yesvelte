@@ -96,6 +96,13 @@ export const navigations: Navigation[] = [
 				icon: 'tabler:speakerphone',
 				description: 'All YeSvelte components support event forwarding.',
 			},
+			{
+				route: '/optimize-css',
+				title: 'Optimize CSS',
+				icon: 'tabler:brand-css3',
+				description:
+					'Instructions to make css file smaller.',
+			},
 		],
 	},
 	{

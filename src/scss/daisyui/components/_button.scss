@@ -1,6 +1,6 @@
 .#{$prefix}button {
 	--color-value-opacity: 1;
-	@extend .btn;
+	@extend %btn;
 	position: relative;
 	gap: 0.5rem;
 	flex-wrap: nowrap;
@@ -10,13 +10,13 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}button-color-#{$colorName} {
-		@extend .btn-#{$daisyuiColorName};
+		@extend %btn-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}button-color-#{$colorName} {
-		@extend .btn-#{$daisyuiColorName};
+		@extend %btn-#{$daisyuiColorName};
 	}
 }
 
@@ -61,18 +61,18 @@
 }
 
 .#{$prefix}button-ghost {
-	@extend .btn-ghost;
+	@extend %btn-ghost;
 
 	// daisyui colors
 	@each $colorName, $daisyuiColorName in $RoleColors {
 		&.#{$prefix}button-color-#{$colorName} {
-			@extend .text-#{$daisyuiColorName};
+			@extend %text-#{$daisyuiColorName};
 		}
 	}
 
 	@each $colorName, $daisyuiColorName in $StateColors {
 		&.#{$prefix}button-color-#{$colorName} {
-			@extend .text-#{$daisyuiColorName};
+			@extend %text-#{$daisyuiColorName};
 		}
 	}
 
@@ -106,17 +106,17 @@
 }
 
 .#{$prefix}button-link {
-	@extend .btn-link;
+	@extend %btn-link;
 	// daisyui colors
 	@each $colorName, $daisyuiColorName in $RoleColors {
 		&.#{$prefix}button-color-#{$colorName} {
-			@extend .text-#{$daisyuiColorName};
+			@extend %text-#{$daisyuiColorName};
 		}
 	}
 
 	@each $colorName, $daisyuiColorName in $StateColors {
 		&.#{$prefix}button-color-#{$colorName} {
-			@extend .text-#{$daisyuiColorName};
+			@extend %text-#{$daisyuiColorName};
 		}
 	}
 
@@ -150,7 +150,7 @@
 }
 
 .#{$prefix}button-disabled {
-	@extend .btn-disabled;
+	@extend %btn-disabled;
 }
 
 .#{$prefix}button-tile {
@@ -162,15 +162,15 @@
 }
 
 .#{$prefix}button-outline {
-	@extend .btn-outline;
+	@extend %btn-outline;
 }
 
 .#{$prefix}button-size-lg {
-	@extend .btn-lg;
+	@extend %btn-lg;
 }
 
 .#{$prefix}button-size-sm {
-	@extend .btn-sm;
+	@extend %btn-sm;
 }
 
 .#{$prefix}button-loading {

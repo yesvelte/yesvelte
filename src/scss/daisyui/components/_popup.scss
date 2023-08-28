@@ -1,5 +1,5 @@
 .#{$prefix}popup:not(.#{$prefix}popup-show) {
-	@extend .hidden;
+	@extend %hidden;
 }
 .#{$prefix}popup {
 	position: absolute;

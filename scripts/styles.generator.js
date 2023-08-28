@@ -1,67 +1,113 @@
-import fs from 'fs'
-import path from 'path'
-import sass from 'sass'
-import cssNano from 'cssnano'
 import postcss from 'postcss'
-import postcssFilterRules from 'postcss-filter-rules'
+import replace from 'postcss-selector-replace'
+import { mkdir, stat, writeFile } from 'fs/promises'
+import path from 'path'
+import cssNano from 'cssnano'
+import sass from 'sass'
 
-// TODO: Optimize (only compile one)
-const files = ['tabler', 'daisyui']
+const defaultThemes = ['tabler', 'daisyui']
+const destinations = ['./static/css', './src/lib/css']
 
-function compile(file) {
-	console.log(`Compiling ${file}...`)
-	const { css } = sass.compile(`./src/scss/${file}/index.scss`, {
-		/** @type {import ('sass').FileImporter<'sync'>[]} */
-		importers: [
-			{
-				findFileUrl(url) {
-					console.log(`Compiling ${url}...`)
-					if (url.startsWith('@') || url.startsWith('~')) {
-						url = path.resolve('node_modules', url.substr(1))
-					}
-					if (url.startsWith('../../node_modules/')) {
-						url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
-					}
-					return new URL('file://' + url)
-				},
-			},
-		],
-		loadPaths: ['node_modules'],
-	})
-	return css
+async function exists(f) {
+	try {
+		await stat(f)
+		return true
+	} catch {
+		return false
+	}
 }
 
-const prefixes = ['.y-', '.ql-'] 
+async function compileScss(file) {
+	// console.log(`Compiling ${file}...`)
+	return sass
+		.compileAsync(file, {
+			/** @type {import ('sass').FileImporter<'sync'>[]} */
+			importers: [
+				{
+					findFileUrl(url) {
+						if (url.startsWith('@') || url.startsWith('~')) {
+							url = path.resolve('node_modules', url.substring(1))
+						}
+						if (url.startsWith('../../node_modules/')) {
+							url = path.resolve('node_modules', url.replace('../../node_modules/', ''))
+						}
+						return new URL('file://' + url)
+					},
+				},
+			],
+			loadPaths: ['node_modules'],
+		})
+		.then((res) => res.css)
+}
 
-async function clean(css) {
+async function classToPlaceholder(css) {
 	return postcss([
-		postcssFilterRules({
-			// clean rules
-			filter: (selector, parts) => {
-				return prefixes.some((prefix) => selector.startsWith(prefix)) || !selector.startsWith('.')
-			},
+		replace({
+			before: [/\./g],
+			after: ['%'],
 		}),
+	])
+		.process(css, { from: undefined })
+		.then(async (result) => {
+			return result.css
+		})
+}
+
+async function minifyCss(css) {
+	return postcss([
 		cssNano({ preset: 'default' }), // minify
 	])
 		.process(css, { from: undefined })
-		.then((result) => result.css)
+		.then(async (result) => {
+			return result.css
+		})
 }
 
-for (const file of files) {
-	const css = compile(file)
-	// checking if the folder doesn't exist yet and creating it
-	if (!fs.existsSync('./static/css')) {
-		fs.mkdirSync('./static/css', { recursive: true })
-	}
-	fs.writeFileSync(`./static/css/${file}.css`, css, {})
+async function generateStyles(style) {
+	console.log('Generate styles for ' + style + '...\n')
 
-	if (!fs.existsSync('./src/lib/css')) {
-		fs.mkdirSync('./src/lib/css', { recursive: true })
-	}
-	fs.writeFileSync(`./src/lib/css/${file}.css`, css, {})
+	const before = `./src/scss/${style}/${style}.scss`
+	if (await exists(before)) {
+		console.log(`Generate ${style}.placeholder.css...`)
 
-	clean(css).then((minCss) => {
-		fs.writeFileSync(`./static/css/${file}.min.css`, minCss, {})
-		fs.writeFileSync(`./src/lib/css/${file}.min.css`, minCss, {})
-	})
+		const beforeCss = await compileScss(before)
+
+		const placeholderCss = await classToPlaceholder(beforeCss)
+		await writeFile(
+			`./src/scss/${style}/_${style}.placeholder.scss`,
+			`/* This file is auto generated, do not edit */\n` + placeholderCss
+		)
+	}
+
+	const index = `./src/scss/${style}/index.scss`
+	if (await exists(index)) {
+		console.log(`Generate ${style}.css and ${style}.min.css...`)
+
+		const indexCss = await compileScss(index)
+
+		for (let destination of destinations) {
+			if (!(await exists(destination))) {
+				await mkdir(destination)
+			}
+
+			await writeFile(`${destination}/${style}.css`, indexCss)
+			console.log(`File "${destination}/${style}.css" successfully created!`)
+
+			minifyCss(indexCss)
+				.then((minCss) => writeFile(`${destination}/${style}.min.css`, minCss))
+				.then((res) => {
+					console.log(`File "${destination}/${style}.min.css" successfully created!`)
+				})
+		}
+	} else {
+		console.log(`[Error] Theme "${style}" doesn'exists!`)
+	}
+	console.log('\n')
+}
+
+let styles = process.argv.slice(2)
+if (styles.length === 0) styles = defaultThemes
+
+for (let style of styles) {
+	generateStyles(style)
 }

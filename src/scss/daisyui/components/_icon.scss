@@ -37,13 +37,13 @@ $icon-sizes: (
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}icon-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}icon-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 

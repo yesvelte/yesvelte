@@ -3,8 +3,8 @@
 //
 
 $props: (
-	null: '.avatar-list',
-	stacked: '.avatar-list-stacked'
+	null: '%avatar-list',
+	stacked: '%avatar-list-stacked'
 );
 
 .#{$prefix-avatar-list} {

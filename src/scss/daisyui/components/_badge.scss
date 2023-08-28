@@ -1,18 +1,18 @@
 .#{$prefix}badge {
-	@extend .badge;
+	@extend %badge;
 	gap: 0.5rem;
 }
 
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}badge-color-#{$colorName} {
-		@extend .badge-#{$daisyuiColorName};
+		@extend %badge-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}badge-color-#{$colorName} {
-		@extend .badge-#{$daisyuiColorName};
+		@extend %badge-#{$daisyuiColorName};
 	}
 }
 
@@ -47,7 +47,7 @@
 }
 
 .#{$prefix}badge-ghost {
-	@extend .badge-ghost;
+	@extend %badge-ghost;
 }
 
 .#{$prefix}badge-tile {
@@ -59,15 +59,15 @@
 }
 
 .#{$prefix}badge-outline {
-	@extend .badge-outline;
+	@extend %badge-outline;
 }
 
 .#{$prefix}badge-size-lg {
-	@extend .badge-lg;
+	@extend %badge-lg;
 }
 
 .#{$prefix}badge-size-sm {
-	@extend .badge-sm;
+	@extend %badge-sm;
 }
 
 .#{$prefix}badge-blink {

@@ -142,13 +142,13 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}slider-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}slider-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 

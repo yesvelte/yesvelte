@@ -3,7 +3,7 @@
 //
 
 .#{$prefix-fieldset} {
-	@extend .form-fieldset;
+	@extend %form-fieldset;
 
 	&-legend {
 		margin-top: -1.8rem;

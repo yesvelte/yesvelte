@@ -1,25 +1,25 @@
 $table-props: (
-	null: '.table' '.table-vcenter',
-	border: '.table-bordered',
-	border-0: '.table-borderless',
-	nowrap: '.table-nowrap',
-	hover: '.table-hover',
-	sort: '.table-sort',
+	null: '%table' '%table-vcenter',
+	border: '%table-bordered',
+	border-0: '%table-borderless',
+	nowrap: '%table-nowrap',
+	hover: '%table-hover',
+	sort: '%table-sort',
 	striped: (
-		null: '.table-striped',
-		columns: '.table-striped-columns'
+		null: '%table-striped',
+		columns: '%table-striped-columns'
 	),
-	sm: '.table-sm',
-	md: '.table-md',
-	color: generate_props($theme-colors, ('.table-')),
+	sm: '%table-sm',
+	md: '%table-md',
+	color: generate_props($theme-colors, ('%table-')),
 	wrapper: (
 		responsive: (
-			null: '.table-responsive',
-			sm: '.table-responsive-sm',
-			md: '.table-responsive-md',
-			lg: '.table-responsive-lg',
-			xl: '.table-responsive-xl',
-			xxl: '.table-responsive-xxl'
+			null: '%table-responsive',
+			sm: '%table-responsive-sm',
+			md: '%table-responsive-md',
+			lg: '%table-responsive-lg',
+			xl: '%table-responsive-xl',
+			xxl: '%table-responsive-xxl'
 		)
 	)
 );
@@ -35,8 +35,8 @@ $table-props: (
 
 .#{$prefix-table-row} {
 	$props: (
-		'color': generate_props($theme-colors, ('.table-')),
-		active: '.table-active'
+		'color': generate_props($theme-colors, ('%table-')),
+		active: '%table-active'
 	);
 
 	@include apply-props($props);
@@ -44,9 +44,9 @@ $table-props: (
 
 .#{$prefix-table-cell} {
 	$props: (
-		color: generate_props($theme-colors, ('.table-')),
-		truncate: '.td-truncate',
-		active: '.table-active'
+		color: generate_props($theme-colors, ('%table-')),
+		truncate: '%td-truncate',
+		active: '%table-active'
 	);
 
 	@include apply-props($props);
@@ -54,8 +54,8 @@ $table-props: (
 
 .#{$prefix-table-row} {
 	$props: (
-		color: generate_props($theme-colors, ('.table-')),
-		active: '.table-active'
+		color: generate_props($theme-colors, ('%table-')),
+		active: '%table-active'
 	);
 
 	@include apply-props($props);
@@ -63,9 +63,9 @@ $table-props: (
 
 .#{$prefix-table-cell} {
 	$props: (
-		color: generate_props($theme-colors, ('.table-')),
-		truncate: '.td-truncate',
-		active: '.table-active'
+		color: generate_props($theme-colors, ('%table-')),
+		truncate: '%td-truncate',
+		active: '%table-active'
 	);
 
 	@include apply-props($props);

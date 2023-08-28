@@ -1,17 +1,17 @@
 @import 'quill/dist/quill.snow';
 
 .#{$prefix}form-input {
-	@extend .form-control;
-	@extend .mb-2;
+	@extend %form-control;
+	@extend %mb-2;
 	.#{$prefix}label {
-		@extend .label;
+		@extend %label;
 	}
 }
 
 .#{$prefix}editor {
 	&-wrapper {
-		@extend .flex;
-		@extend .flex-col;
+		@extend %flex;
+		@extend %flex-col;
 
 		&:not(.#{$prefix}editor-wrapper-loaded) {
 			border: 1px solid #ccc;
@@ -56,13 +56,13 @@
 		}
 
 		.ql-toolbar.ql-snow {
-			@extend .textarea-bordered;
+			@extend %textarea-bordered;
 			border-top-left-radius: var(--rounded-btn, 0.5rem);
 			border-top-right-radius: var(--rounded-btn, 0.5rem);
 		}
 
 		.ql-container.ql-snow {
-			@extend .textarea-bordered;
+			@extend %textarea-bordered;
 			border-bottom-left-radius: var(--rounded-btn, 0.5rem);
 			border-bottom-right-radius: var(--rounded-btn, 0.5rem);
 		}

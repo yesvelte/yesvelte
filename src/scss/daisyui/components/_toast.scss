@@ -1,26 +1,26 @@
 .#{$prefix}toast {
-	@extend .rounded;
-	@extend .bg-base-100;
-	@extend .shadow;
-	@extend .border;
-	@extend .border-base-300;
-	@extend .overflow-hidden;
-	@extend .m-2;
+	@extend %rounded;
+	@extend %bg-base-100;
+	@extend %shadow;
+	@extend %border;
+	@extend %border-base-300;
+	@extend %overflow-hidden;
+	@extend %m-2;
 	display: none;
 	max-width: 350px;
 	&.#{$prefix}toast-show {
 		display: block;
 	}
 	&-header {
-		@extend .border-b;
-		@extend .border-base-300;
-		@extend .bg-base-200;
-		@extend .p-3;
-		@extend .flex;
-		@extend .gap-2;
+		@extend %border-b;
+		@extend %border-base-300;
+		@extend %bg-base-200;
+		@extend %p-3;
+		@extend %flex;
+		@extend %gap-2;
 	}
 	&-body {
-		@extend .p-3;
+		@extend %p-3;
 	}
 	&-close {
 		--#{$prefix}btn-close-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E");

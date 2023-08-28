@@ -1,12 +1,12 @@
 .#{$prefix}breadcrumb {
-	@extend .list-none;
-	@extend .p-0;
-	@extend .m-0;
-	@extend .flex;
-	@extend .items-center;
+	@extend %list-none;
+	@extend %p-0;
+	@extend %m-0;
+	@extend %flex;
+	@extend %items-center;
 	& .#{$prefix}breadcrumb-item {
-		@extend .flex;
-		@extend .items-center;
+		@extend %flex;
+		@extend %items-center;
 		& + *:before {
 			content: '';
 			margin-left: 0.5rem;
@@ -24,11 +24,11 @@
 			background-color: transparent;
 		}
 		& > a {
-			@extend .flex;
-			@extend .cursor-pointer;
-			@extend .items-center;
+			@extend %flex;
+			@extend %cursor-pointer;
+			@extend %items-center;
 			&:hover {
-				@extend .underline;
+				@extend %underline;
 			}
 		}
 	}

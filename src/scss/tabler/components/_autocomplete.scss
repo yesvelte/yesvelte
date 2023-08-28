@@ -3,24 +3,24 @@
 //
 
 $props: (
-	null: '.form-select',
+	null: '%form-select',
 	dropdown: (
-		'.dropdown-menu',
-		'.w-100'
+		'%dropdown-menu',
+		'%w-100'
 	),
 	option: (
-		null: '.dropdown-item',
-		no-result: '.disabled'
+		null: '%dropdown-item',
+		no-result: '%disabled'
 	),
-	disabled: '.disabled',
+	disabled: '%disabled',
 	size: (
-		sm: '.form-select-sm',
-		md: '.form-select',
-		lg: '.form-select-lg'
+		sm: '%form-select-sm',
+		// md: '%form-select',
+		lg: '%form-select-lg'
 	),
 	state: (
-		valid: '.is-valid',
-		invalid: '.is-invalid'
+		valid: '%is-valid',
+		invalid: '%is-invalid'
 	)
 );
 

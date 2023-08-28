@@ -61,13 +61,13 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}spinner-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}spinner-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 

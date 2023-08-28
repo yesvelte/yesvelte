@@ -3,14 +3,14 @@
 //
 
 $props: (
-	color: generate_props($theme_colors, ('.text-')),
+	color: generate_props($theme_colors, ('%text-')),
 	alignment: (
-		'start': '.hr-text-left',
-		'center': '.hr-text-center',
-		'end': '.hr-text-right'
+		'start': '%hr-text-left',
+		'center': '%hr-text-center',
+		'end': '%hr-text-right'
 	),
 	direction: (
-		'vertical': '.vr'
+		'vertical': '%vr'
 	)
 );
 
@@ -18,6 +18,6 @@ $props: (
 	@include apply-props($props);
 
 	&:not(.#{$prefix-divider}-direction-vertical) {
-		@extend .hr-text;
+		@extend %hr-text;
 	}
 }

@@ -1,8 +1,8 @@
 .#{$prefix}divider {
-	@extend .divider;
+	@extend %divider;
 }
 .#{$prefix}divider-direction-vertical {
-	@extend .divider-horizontal;
+	@extend %divider-horizontal;
 	margin: 0 0.5rem;
 }
 
@@ -20,13 +20,13 @@
 // daisyui colors
 @each $colorName, $daisyuiColorName in $RoleColors {
 	.#{$prefix}divider-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 
 @each $colorName, $daisyuiColorName in $StateColors {
 	.#{$prefix}divider-color-#{$colorName} {
-		@extend .text-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName};
 	}
 }
 

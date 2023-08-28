@@ -3,13 +3,13 @@ $prefix-el: $prefix + 'el';
 .#{$prefix-el} {
 	&-text-transform {
 		&-uppercase {
-			@extend .uppercase;
+			@extend %uppercase;
 		}
 		&-lowercase {
-			@extend .lowercase;
+			@extend %lowercase;
 		}
 		&-capitalize {
-			@extend .capitalize;
+			@extend %capitalize;
 		}
 	}
 }

@@ -13,16 +13,16 @@ $card-status-sizes: (
 );
 
 $props: (
-	null: '.card',
-	body: '.card-body',
-	header: '.card-header',
-	title: '.card-title',
-	actions: '.card-actions',
-	stacked: '.card-stacked',
-	borderless: '.card-borderless',
-	rotate: generate_props($rotate-directions, ('.card-rotate-')),
-	size: generate_props($card-sizes, ('.card-')),
-	state: generate_props($card-states, ('.card-'))
+	null: '%card',
+	body: '%card-body',
+	header: '%card-header',
+	title: '%card-title',
+	actions: '%card-actions',
+	stacked: '%card-stacked',
+	borderless: '%card-borderless',
+	rotate: generate_props($rotate-directions, ('%card-rotate-')),
+	size: generate_props($card-sizes, ('%card-')),
+	state: generate_props($card-states, ('%card-'))
 );
 
 .#{$prefix-card} {
@@ -30,36 +30,36 @@ $props: (
 
 	@each $key, $value in $theme_colors {
 		&-bg-color-#{$key} {
-			@extend .text-bg-#{$key};
+			@extend %text-bg-#{$key};
 		}
 	}
 
 	// Card Footer
 	&-footer {
-		@extend .card-footer;
+		@extend %card-footer;
 		color: inherit;
 		display: flex;
 		align-items: center;
 
 		&.#{$prefix-card}-footer-transparent {
-			@extend .card-footer-transparent;
+			@extend %card-footer-transparent;
 		}
 	}
 
 	&-header-light {
-		@extend .card-header-light;
+		@extend %card-header-light;
 	}
 
 	&-status {
 		@each $key, $value in $theme-colors {
 			&-color-#{$key} {
-				@extend .bg-#{$key};
+				@extend %bg-#{$key};
 			}
 		}
 
 		@each $key in top, start, bottom {
 			&-position-#{$key} {
-				@extend .card-status-#{$key};
+				@extend %card-status-#{$key};
 			}
 		}
 
@@ -80,15 +80,15 @@ $props: (
 	}
 
 	&-media {
-		@extend .h-100;
-		@extend .w-100;
+		@extend %h-100;
+		@extend %w-100;
 
 		@each $position in $media-positions {
 			&-element-position-#{$position} > * {
-				@extend .h-100;
-				@extend .w-100;
-				@extend .object-cover;
-				@extend .card-img-#{$position};
+				@extend %h-100;
+				@extend %w-100;
+				@extend %object-cover;
+				@extend %card-img-#{$position};
 			}
 		}
 	}

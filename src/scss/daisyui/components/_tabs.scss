@@ -1,16 +1,16 @@
 .#{$prefix}tab-list {
-	@extend .tabs;
-	@extend .list-none;
-	@extend .p-0;
+	@extend %tabs;
+	@extend %list-none;
+	@extend %p-0;
 	margin-bottom: -1px;
 }
 
 .#{$prefix}tab-item-link {
-	@extend .tab, .tab-lifted, .gap-2;
+	@extend %tab, %tab-lifted, %gap-2;
 }
 
 .#{$prefix}tab-item-link-active {
-	@extend .tab-active;
+	@extend %tab-active;
 }
 
 .#{$prefix}tabs-vertical {

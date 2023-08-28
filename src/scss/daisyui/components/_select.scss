@@ -1,21 +1,21 @@
 .#{$prefix}select {
-	@extend .w-full;
-	@extend .select;
-	@extend .select-bordered;
+	@extend %w-full;
+	@extend %select;
+	@extend %select-bordered;
 }
 .#{$prefix}select-size-sm {
-	@extend .select-sm;
+	@extend %select-sm;
 }
 .#{$prefix}select-size-lg {
-	@extend .select-lg;
+	@extend %select-lg;
 }
 
 .#{$prefix}select-state-valid {
-	@extend .select-success;
+	@extend %select-success;
 }
 
 .#{$prefix}select-state-invalid {
-	@extend .select-error;
+	@extend %select-error;
 }
 .#{$prefix}form-select {
 	margin-bottom: 1rem;

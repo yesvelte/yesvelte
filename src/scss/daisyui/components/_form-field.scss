@@ -1,7 +1,7 @@
 @mixin form-field($name) {
 	.#{$prefix}form-#{$name} {
 		&-group {
-			@extend .input-group;
+			@extend %input-group;
 		}
 
 		&-icon {
@@ -15,25 +15,22 @@
 			border-top-right-radius: var(--rounded-btn, 0.5rem);
 		}
 
+		// &-hint {
+		// 	margin-top: 0.25rem;
+		// 	font-size: 85.714285%;
 
-	// &-hint {
-	// 	margin-top: 0.25rem;
-	// 	font-size: 85.714285%;
+		// 	&-state {
+		// 		&-valid {
+		// 			color: #{$success};
+		// 		}
 
-	// 	&-state {
-	// 		&-valid {
-	// 			color: #{$success};
-	// 		}
-
-	// 		&-invalid {
-	// 			color: #{$danger};
-	// 		}
-	// 	}
-	// }
+		// 		&-invalid {
+		// 			color: #{$danger};
+		// 		}
+		// 	}
+		// }
 	}
 }
-
-
 
 @include form-field(input);
 @include form-field(select);
@@ -48,7 +45,3 @@
 @include form-field(autocomplete);
 @include form-field(file-upload);
 @include form-field(date-picker);
-
-
-
-

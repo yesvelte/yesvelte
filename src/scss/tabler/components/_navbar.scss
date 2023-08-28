@@ -1,27 +1,27 @@
 $navbar-props: (
 	wrapper: (
-		null: '.navbar' '.navbar-expand',
+		null: '%navbar' '%navbar-expand',
 		theme: (
-			dark: '.navbar-dark',
-			light: '.navbar-light'
+			dark: '%navbar-dark',
+			light: '%navbar-light'
 		)
 	),
-	null: '.container-fluid',
-	content: '.navbar-nav',
+	null: '%container-fluid',
+	content: '%navbar-nav',
 	item: (
-		null: '.nav-link',
+		null: '%nav-link',
 		wrapper: (
-			null: '.nav-item',
-			dropdown: '.dropdown'
+			null: '%nav-item',
+			dropdown: '%dropdown'
 		),
-		active: '.active',
-		disabled: '.disabled',
-		menu: '.dropdown-menu',
-		dropdown: '.dropdown-toggle',
-		end: '.ms-auto',
-		divider: '.dropdown-divider',
-		icon: '.nav-link-icon',
-		title: '.nav-link-title'
+		active: '%active',
+		disabled: '%disabled',
+		menu: '%dropdown-menu',
+		dropdown: '%dropdown-toggle',
+		end: '%ms-auto',
+		divider: '%dropdown-divider',
+		icon: '%nav-link-icon',
+		title: '%nav-link-title'
 	)
 );
 
@@ -29,7 +29,7 @@ $navbar-props: (
 	@include apply-props($navbar-props);
 
 	&-item-menu .#{$prefix-navbar}-item {
-		@extend .dropdown-item;
+		@extend %dropdown-item;
 	}
 
 	&-item-menu.#{$prefix-popup}-show {
@@ -45,7 +45,7 @@ $navbar-props: (
 	}
 
 	.#{$prefix-navbar}-wrapper-theme-dark &-item-menu {
-		@extend .dropdown-menu-dark;
+		@extend %dropdown-menu-dark;
 	}
 
 	&-item-title {

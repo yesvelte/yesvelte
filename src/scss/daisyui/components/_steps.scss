@@ -1,8 +1,8 @@
 .#{$prefix}steps {
-	@extend .w-full;
-	@extend .steps;
+	@extend %w-full;
+	@extend %steps;
 	&-vertical {
-		@extend .steps-vertical;
+		@extend %steps-vertical;
 		& .#{$prefix}step-item {
 			grid-template-rows: 40px 1fr;
 			&:before {
@@ -14,12 +14,12 @@
 	}
 }
 .#{$prefix}step-item {
-	@extend .step;
+	@extend %step;
 	&-active {
-		@extend .step-primary;
+		@extend %step-primary;
 	}
 	&-before-active {
-		@extend .step-primary;
+		@extend %step-primary;
 	}
 	& > .#{$prefix}el {
 		grid-column-start: 2;
@@ -37,8 +37,8 @@
 		.#{$prefix}step-item-before-active
 		+ .#{$prefix}step-item-before-active:before,
 	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
-		@extend .bg-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName}-content;
+		@extend %bg-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName}-content;
 	}
 }
 
@@ -51,8 +51,8 @@
 		.#{$prefix}step-item-before-active
 		+ .#{$prefix}step-item-before-active:before,
 	.#{$prefix}steps-color-#{$colorName} .#{$prefix}step-item-before-active:after {
-		@extend .bg-#{$daisyuiColorName};
-		@extend .text-#{$daisyuiColorName}-content;
+		@extend %bg-#{$daisyuiColorName};
+		@extend %text-#{$daisyuiColorName}-content;
 	}
 }
 
