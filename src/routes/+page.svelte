@@ -878,9 +878,7 @@
 		padding-top: 100px !important;
 		padding-bottom: 100px !important;
 	}
-	:global(body) > :global(div) {
-		height: 100%;
-	}
+	
 	:global(.overflow-auto) {
 		overflow: auto;
 	}
