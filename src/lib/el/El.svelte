@@ -372,13 +372,13 @@
 			alignSelf,
 			justifyContent,
 		}
-		classes = classname(elComponentName, defaultCssProps, $$props.class)
+		classes = classname(elComponentName, defaultCssProps, $$props.class)?.replace('y-el ', '') ?? ''
 
 		if (componentName !== elComponentName) classes += ' ' + classname(componentName, cssProps)
 
 		classes += $animate?.classes || ''
 
-		const styles = `${style || ''};${$animate?.styles || ''}`
+		const styles = `${style ? style + ';' : ''}${$animate?.styles || ''}` || undefined
 
 		elProps = {
 			id,

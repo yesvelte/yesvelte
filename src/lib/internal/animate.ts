@@ -1,6 +1,13 @@
 import { writable } from 'svelte/store'
 import { classname } from './classname'
 
+function getAnimateClass(componentName: string, state: boolean | undefined) {
+	console.log(state)
+	if (typeof state === 'undefined') return ''
+
+	return classname(componentName, { show: state })?.split(' ')[1]
+}
+
 export function createAnimationStore({
 	element,
 	componentName,
@@ -15,18 +22,18 @@ export function createAnimationStore({
 
 	let showConfig = styles.getPropertyValue('--show-config').trim() ?? 'default'
 
-    let state = initialShow ? 'opened' : 'closed'
+	let state = typeof initialShow !== 'undefined' ? (initialShow ? 'opened' : 'closed') : undefined
 	let animateTimeout: NodeJS.Timer
 
-	let classes = ' ' + classname(componentName, { show: state })
+	let classes = ' ' + getAnimateClass(componentName, state)
 
 	const { subscribe, set } = writable({ classes, styles: '' })
 
 	function change(newState: string) {
 		clearTimeout(animateTimeout)
-        state = newState
+		state = newState
 
-		let classes = ' ' + classname(componentName, { show: state }) ?? ''
+		let classes = ' ' + getAnimateClass(componentName, state)
 		let styles = ''
 
 		if (showConfig === 'height') {
@@ -68,7 +75,7 @@ export function createAnimationStore({
 	}
 
 	function enter() {
-		if (state === 'opened') return;
+		if (state === 'opened') return
 		next(() => {
 			change('open')
 
@@ -86,8 +93,8 @@ export function createAnimationStore({
 	}
 
 	function leave() {
-		if (state === 'closed') return;
-            next(() => {
+		if (state === 'closed') return
+		next(() => {
 			change('close')
 
 			next(() => {

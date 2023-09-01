@@ -3,7 +3,8 @@
 //
 
 $props: (
-	null: '%card-stamp'
+	null: '%card-stamp',
+	icon: '%card-stamp-icon'
 );
 
 $card-stamp-sizes: (
@@ -15,10 +16,6 @@ $card-stamp-sizes: (
 .#{$prefix-stamp} {
 	@include apply-props($props);
 
-	> .icon {
-		@extend %card-stamp-icon;
-	}
-
 	@each $key, $value in $card-stamp-sizes {
 		&-size-#{$key} {
 			--#{$prefix}stamp-size: #{$value};
@@ -26,11 +23,11 @@ $card-stamp-sizes: (
 	}
 
 	@each $key, $value in $theme-colors {
-		&-bg-color-#{$key} > .icon {
+		&-bg-color-#{$key} > #{$prefix-stamp}-icon {
 			@extend %bg-#{$key};
 		}
 
-		&-text-color-#{$key} > .icon {
+		&-text-color-#{$key} > #{$prefix-stamp}-icon {
 			@extend %text-#{$key};
 		}
 	}
@@ -39,7 +36,7 @@ $card-stamp-sizes: (
 		top: 0;
 		left: 0;
 
-		.#{$prefix}icon {
+		.#{$prefix-stamp}-icon {
 			transform: rotate(-10deg);
 			left: calc(var(--#{$prefix}stamp-size) * -0.25);
 		}
@@ -50,7 +47,7 @@ $card-stamp-sizes: (
 		left: 0;
 		top: auto;
 
-		.#{$prefix}icon {
+		.#{$prefix-stamp}-icon {
 			top: auto;
 			left: calc(var(--#{$prefix}stamp-size) * -0.25);
 			bottom: calc(var(--#{$prefix}stamp-size) * -0.25);
@@ -62,7 +59,7 @@ $card-stamp-sizes: (
 		top: auto;
 		right: 0;
 
-		.#{$prefix}icon {
+		.#{$prefix-stamp}-icon {
 			transform: rotate(-10deg);
 			top: calc(100% - (var(--#{$prefix}stamp-size) * 0.75));
 		}

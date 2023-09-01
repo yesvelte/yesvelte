@@ -29,11 +29,10 @@
 		}
 		otherProps = {
 			componentName,
-			icon,
 		}
 	}
 </script>
 
 <El {components} {...$$restProps} {cssProps} {...otherProps}>
-	<Icon name={icon} />
+	<Icon componentName={componentName + '-icon'} name={icon} />
 </El>
