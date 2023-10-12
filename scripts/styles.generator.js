@@ -1,4 +1,5 @@
 import postcss from 'postcss'
+import rtlCss from 'postcss-rtlcss'
 import replace from 'postcss-selector-replace'
 import { mkdir, stat, writeFile } from 'fs/promises'
 import path from 'path'
@@ -63,6 +64,14 @@ async function minifyCss(css) {
 		})
 }
 
+async function generateRtl(css) {
+	return postcss([cssNano({ preset: 'default' }), rtlCss({ source: 'ltr' })])
+		.process(css)
+		.then((res) => {
+			return res.css
+		})
+}
+
 async function generateStyles(style) {
 	console.log('Generate styles for ' + style + '...\n')
 
@@ -97,6 +106,12 @@ async function generateStyles(style) {
 				.then((minCss) => writeFile(`${destination}/${style}.min.css`, minCss))
 				.then((res) => {
 					console.log(`File "${destination}/${style}.min.css" successfully created!`)
+				})
+
+			generateRtl(indexCss)
+				.then((rtl) => writeFile(`${destination}/${style}.rtl.min.css`, rtl))
+				.then((res) => {
+					console.log(`File "${destination}/${style}.rtl.min.css" successfully created!`)
 				})
 		}
 	} else {
