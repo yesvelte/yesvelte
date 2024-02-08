@@ -2,7 +2,6 @@ import { writable } from 'svelte/store'
 import { classname } from './classname'
 
 function getAnimateClass(componentName: string, state: boolean | undefined) {
-	console.log(state)
 	if (typeof state === 'undefined') return ''
 
 	return classname(componentName, { show: state })?.split(' ')[1]
