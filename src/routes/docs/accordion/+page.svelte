@@ -1,5 +1,6 @@
 <script>
 	import { Page, Doc, Preview } from '$components'
+	import AccordionBind from './AccordionBind.svelte'
 	import AccordionDefault from './AccordionDefault.svelte'
 	import AccordionOpen from './AccordionOpen.svelte'
 	import AccordionPersistent from './AccordionPersistent.svelte'
@@ -26,6 +27,12 @@
 		<p slot="description">Open ONLY one item at the same time.</p>
 		<Preview src="./AccordionPersistent.svelte">
 			<AccordionPersistent />
+		</Preview>
+	</Doc>
+	<Doc title="Bind open to variables">
+		<p slot="description">You can bind open/close state of accordion to boolean variables.</p>
+		<Preview src="./AccordionBind.svelte">
+			<AccordionBind />
 		</Preview>
 	</Doc>
 </Page>

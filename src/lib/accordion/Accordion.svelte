@@ -26,6 +26,8 @@
 		item.children.push(ctx)
 		return item
 	})
+
+	$: ctx.update(() => ({open}))
 </script>
 
 <El {components} {...$$restProps} {componentName}>
