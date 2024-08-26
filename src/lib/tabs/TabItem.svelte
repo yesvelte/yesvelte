@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
-	import { getContext } from 'svelte'
+	import { getContext, onMount, onDestroy } from 'svelte'
 	import { El } from '../el'
 	import type { TabItemProps, TabsContext } from './Tab.types'
 	import { TABS } from './Tabs.svelte'
@@ -16,12 +16,18 @@
 		...($$props.components ?? []),
 	]
 
-	const tab = {}
-	const { registerTab, selectTab, selectedTab } = getContext<TabsContext>(TABS)
+	const tab = { active }
+	const { registerTab, selectTab, removeTab, selectedTab } = getContext<TabsContext>(TABS)
 
 	let element: HTMLElement
 
-	registerTab(tab)
+	onMount(() => {
+		registerTab(tab)
+	})
+
+	onDestroy(() => {
+		removeTab(tab)
+	})
 
 	$: active ? selectTab(tab) : null
 	$: icon = !(element?.textContent ?? true)
