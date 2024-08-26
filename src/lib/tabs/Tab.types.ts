@@ -22,6 +22,8 @@ export interface TabPanelProps extends Partial<ElProps> {
 export type TabsContext = {
 	registerTab: (tab: any) => void
 	registerPanel: (pane: any) => void
+	removeTab: (tab: any) => void
+	removePanel: (panel: any) => void
 	selectTab: (tab: any) => void
 	selectedTab: any
 	selectedPanel: any

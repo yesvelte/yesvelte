@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { get_current_component } from 'svelte/internal'
-	import { getContext } from 'svelte'
+	import { getContext, onDestroy, onMount } from 'svelte'
 	import { El } from '../el'
 	import type { TabPanelProps, TabsContext } from './Tab.types'
 	import { TABS } from './Tabs.svelte'
@@ -16,8 +16,15 @@
 		...($$props.components ?? []),
 	]
 
-	const { registerPanel, selectedPanel } = getContext<TabsContext>(TABS)
-	registerPanel(panel)
+	const { registerPanel, removePanel, selectedPanel } = getContext<TabsContext>(TABS)
+
+	onMount(() => {
+		registerPanel(panel)
+	})
+
+	onDestroy(() => {
+		removePanel(panel)
+	})
 
 	let props: TabPanelProps = {}
 	$: {

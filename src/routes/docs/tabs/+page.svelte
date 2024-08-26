@@ -5,6 +5,7 @@
 	import TabsVertical from './TabsVertical.svelte'
 	import TabsIcons from './TabsIcons.svelte'
 	import TabsEnd from './TabsEnd.svelte'
+	import TabsWithSelectedItem from './TabsWithSelectedItem.svelte'
 	import TabsOnlyIcons from './TabsOnlyIcons.svelte'
 </script>
 
@@ -27,42 +28,13 @@
 			<TabsDefault />
 		</Preview>
 	</Doc>
-	<Doc title="Grow">
-		<p slot="description">
-			To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.
-		</p>
-		<Preview src="./TabsGrow.svelte">
-			<TabsGrow />
-		</Preview>
-	</Doc>
-	<Doc title="Icons">
-		<p slot="description">
-			To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
-			<code>&lt;TabItem&gt;</code> component.
-		</p>
-		<Preview src="./TabsIcons.svelte">
-			<TabsIcons />
-		</Preview>
-	</Doc>
-	<Doc title="Only icons">
-		<Preview src="./TabsOnlyIcons.svelte">
-			<TabsOnlyIcons />
-		</Preview>
-	</Doc>
 
-	<Doc title="Tab at the end">
-		<Preview src="./TabsEnd.svelte">
-			<TabsEnd />
-		</Preview>
-	</Doc>
-
-	<Doc title="Basic usage">
+	<Doc title="Wit Selected Tab">
 		<p slot="description">
-			To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
-			<code>&lt;TabList&gt;</code> and <code>&lt;TabContent&gt;</code> components.
+			To select another tab instead of first tab initially, you can use <code>active</code> prop.
 		</p>
-		<Preview src="./TabsDefault.svelte">
-			<TabsDefault />
+		<Preview src="./TabsWithSelectedItem.svelte">
+			<TabsWithSelectedItem />
 		</Preview>
 	</Doc>
 
