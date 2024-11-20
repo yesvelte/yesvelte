@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Checkbox } from '../checkbox'
 	import type { FormCheckboxProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -23,10 +22,6 @@
 	export let name: $$Props['name'] = undefined
 
 	let id: string
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	$: props = {
 		required,
@@ -50,7 +45,7 @@
 
 <FormField {...props} {...$$restProps}>
 	<slot name="label" slot="label" />
-	<Checkbox bind:id {...checkboxProps} bind:checked bind:value {components}>
+	<Checkbox bind:id {...checkboxProps} bind:checked {value}>
 		<slot />
 	</Checkbox>
 	<slot name="hint" slot="hint" />

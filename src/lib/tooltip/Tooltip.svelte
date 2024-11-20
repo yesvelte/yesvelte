@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Popup } from '../popup'
 	import type { TooltipProps } from './Tooltip.types'
@@ -12,10 +11,6 @@
 	export let trigger: $$Props['trigger'] = 'hover'
 	export let text: $$Props['text'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	$: props = {
 		componentName,
 		arrow,
@@ -24,7 +19,7 @@
 	}
 </script>
 
-<Popup {components} {...$$restProps} {...props}>
+<Popup {...$$restProps} {...props}>
 	<El componentName="{componentName}-inner">
 		<slot>
 			{#if text}

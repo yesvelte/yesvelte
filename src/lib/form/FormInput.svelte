@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Input } from '../input'
 	import type { FormInputProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -29,11 +28,6 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let id: string
 	let props: $$Props = {}
@@ -80,8 +74,8 @@
 				</El>
 			{/if}
 		</slot>
-		<Input bind:id {components} {...inputProps} bind:value />
-	
+		<Input bind:id {...inputProps} bind:value />
+
 		<slot name="end">
 			{#if $$slots['end-icon']}
 				<El componentName="{componentName}-icon">

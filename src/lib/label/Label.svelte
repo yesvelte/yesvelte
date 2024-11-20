@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { LabelProps } from './Label.types'
 
@@ -10,11 +9,6 @@
 
 	let fore: $$Props['for'] = undefined
 	export { fore as for }
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
@@ -30,6 +24,6 @@
 	}
 </script>
 
-<El tag="label" {components} {...$$restProps} for={fore} {cssProps} {...props}>
+<El tag="label" {...$$restProps} for={fore} {cssProps} {...props}>
 	<slot />
 </El>

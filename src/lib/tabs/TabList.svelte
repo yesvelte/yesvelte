@@ -1,33 +1,26 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TabListProps } from './Tab.types'
 
 	type $$Props = TabListProps
 
-	export let componentName: $$Props['componentName'] = 'tab-list'
-	export let tag: $$Props['tag'] = 'ul'
-	export let grow: $$Props['grow'] = undefined
+	let { componentName = 'tab-list', tag = 'ul', grow, children, ...restProps }: $$Props = $props()
 
-	let cssProps: TabListProps = {}
-	let props: TabListProps = {}
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let cssProps: TabListProps = $derived({
+		grow,
+	})
 
-	$: {
-		cssProps = {
-			grow,
-		}
-		props = {
-			tag,
-			componentName,
-			role: 'tablist',
-		}
-	}
+	let props: TabListProps = $derived({
+		...restProps,
+		cssProps,
+		tag,
+		componentName,
+		role: 'tablist',
+	})
 </script>
 
-<El {components} {...$$restProps} {...props} {componentName} {cssProps}>
-	<slot />
+<El {...props}>
+	{#if children}
+		{@render children()}
+	{/if}
 </El>

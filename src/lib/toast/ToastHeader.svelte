@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Button, type ButtonProps } from '../button'
 	import { getContext } from 'svelte'
 	import { El } from '../el'
@@ -11,10 +10,6 @@
 	export let tag: $$Props['tag'] = 'div'
 	export let showCloseButton: $$Props['showCloseButton'] = true
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	const { hide } = getContext<ToastContext>('TOAST')
 
 	let buttonOtherProps: Partial<ButtonProps>
@@ -28,7 +23,7 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps} {tag}>
+<El {...$$restProps} {componentName} {cssProps} {tag}>
 	<slot />
 	{#if showCloseButton}
 		<Button on:click={hide} {...buttonOtherProps} />

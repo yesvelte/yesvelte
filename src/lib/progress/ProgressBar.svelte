@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { ProgressBarProps } from './Progress.types'
 
@@ -11,11 +10,6 @@
 	export let striped: $$Props['striped'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let indeterminate: $$Props['indeterminate'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
@@ -36,7 +30,6 @@
 <El
 	{...$$restProps}
 	{...props}
-	{components}
 	{cssProps}
 	{componentName}
 	role="progressbar"

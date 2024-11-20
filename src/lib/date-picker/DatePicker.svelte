@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import type Litepicker from 'litepicker'
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
@@ -25,10 +24,6 @@
 	export let text: $$Props['text'] = undefined
 	export let id: $$Props['id'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
 	const dispatch = createEventDispatcher()
 
 	let element: HTMLElement
@@ -206,14 +201,7 @@
 				<slot name="start" />
 			</El>
 		{/if}
-		<El
-			tag="input"
-			{components}
-			value={text}
-			bind:element
-			bind:id
-			{cssProps}
-			{...props} />
+		<El tag="input" value={text} bind:element bind:id {cssProps} {...props} />
 		{#if $$slots.end}
 			<El tag="span" componentName="{componentName}-icon">
 				<slot name="end" />
@@ -221,15 +209,7 @@
 		{/if}
 	</El>
 {:else}
-	<El
-		tag="input"
-		{components}
-		value={text}
-		bind:element
-		bind:id
-		{...$$restProps}
-		{cssProps}
-		{...props} />
+	<El tag="input" value={text} bind:element bind:id {...$$restProps} {cssProps} {...props} />
 {/if}
 
 <!-- TODO: in form datePicker, should move it outside of form field group (right border should be round) -->

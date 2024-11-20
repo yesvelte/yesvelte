@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import FormField from './FormField.svelte'
 	import CheckboxGroup from '../checkbox/CheckboxGroup.svelte'
 	import type { FormCheckboxGroupProps } from './Form.types'
@@ -15,10 +14,6 @@
 	export let name: $$Props['name'] = undefined
 	export let key: $$Props['key'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	let checkboxGroupProps: $$Props = {}
 	$: checkboxGroupProps = {
 		color,
@@ -32,7 +27,7 @@
 
 <FormField {...$$restProps} {componentName}>
 	<slot name="label" slot="label" />
-	<CheckboxGroup {components} {...checkboxGroupProps} bind:value let:item let:index>
+	<CheckboxGroup {...checkboxGroupProps} bind:value let:item let:index>
 		<slot {index} {item}>{item}</slot>
 	</CheckboxGroup>
 	<slot name="hint" slot="hint" />

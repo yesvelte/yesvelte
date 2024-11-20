@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Icon } from '../icon'
 	import { El, type ElProps } from '../el'
 	import type { SidebarItemProps } from './Sidebar.types'
@@ -13,11 +12,6 @@
 	export let icon: $$Props['icon'] = undefined
 	export let title: $$Props['title'] = undefined
 	export let href: $$Props['href'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let wrapperProps: Partial<ElProps>
 	$: wrapperProps = {
@@ -40,7 +34,7 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
+<El {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
 	<El on:click {...props} {cssProps}>
 		{#if icon || $$slots['start']}
 			<El tag="span" componentName="{componentName}-icon">

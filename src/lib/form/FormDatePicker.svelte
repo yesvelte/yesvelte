@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import DatePicker from '../date-picker/DatePicker.svelte'
 	import FormField from './FormField.svelte'
 	import type { FormDatePickerProps } from './Form.types'
@@ -22,10 +21,6 @@
 	export let hint: $$Props['hint'] = undefined
 	export let name: $$Props['name'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
 
 	let id: string
 	let props: $$Props = {}
@@ -67,7 +62,7 @@
 				</El>
 			{/if}
 		</slot>
-		<DatePicker bind:id {components} {...datePickerProps} bind:value on:changed />
+		<DatePicker bind:id {...datePickerProps} bind:value on:changed />
 		<slot name="end">
 			{#if $$slots['end-icon']}
 				<El componentName="{componentName}-icon">

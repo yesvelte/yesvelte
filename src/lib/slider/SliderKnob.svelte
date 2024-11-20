@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import type { SliderContext, SliderKnobProps, SliderKnobType } from './Slider.types'
-	import { get_current_component } from 'svelte/internal'
+
 	import { El } from '../el'
 
 	type $$Props = SliderKnobProps
@@ -10,11 +10,6 @@
 	export let connect: $$Props['connect'] = false
 	export let tooltip: $$Props['tooltip'] = false
 	export let name: $$Props['name'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	const { register, unregister, values, setValue } = getContext<SliderContext>('SLIDER')
 
@@ -41,4 +36,4 @@
 	}
 </script>
 
-<El tag="input" type="hidden" {components} {name} {value} />
+<El tag="input" type="hidden" {name} {value} />

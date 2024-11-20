@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { ToastContainerProps } from './Toast.types'
 
@@ -7,16 +6,12 @@
 
 	export let componentName: $$Props['componentName'] = 'toast-container'
 	export let placement: $$Props['placement'] = undefined
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	$: cssProps = {
 		placement,
 	}
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps}>
+<El {...$$restProps} {componentName} {cssProps}>
 	<slot />
 </El>

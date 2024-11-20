@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { SwitchProps } from './Switch.types'
@@ -21,11 +20,6 @@
 	export let role: $$Props['role'] = 'switch'
 	export let type: $$Props['type'] = 'checkbox'
 	export let _slots: Record<string, boolean> = $$slots
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	function onChange(event: any) {
 		checked = event.target.checked
@@ -55,7 +49,7 @@
 </script>
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
-	<El bind:id {...$$restProps} {cssProps} {...props} on:change={onChange} {components} />
+	<El bind:id {...$$restProps} {cssProps} {...props} on:change={onChange} />
 	{#if label || _slots['default']}
 		<Label for={_for} componentName="{componentName}-label">
 			{#if _slots['default']}

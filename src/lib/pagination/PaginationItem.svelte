@@ -2,7 +2,6 @@
 	import { createEventDispatcher } from 'svelte'
 	import { El, type ElProps } from '../el'
 	import type { PaginationItemProps } from './Pagination.types'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = PaginationItemProps
 
@@ -12,10 +11,6 @@
 	export let disabled: $$Props['disabled'] = undefined
 
 	const dispatch = createEventDispatcher()
-	const components = [
-		{ component: get_current_component(), except: ['click'] },
-		...($$props.components ?? []),
-	]
 
 	function onClick() {
 		if (disabled) return
@@ -35,7 +30,7 @@
 	}
 </script>
 
-<El {...$$restProps} {componentName} {components} {cssProps} on:click={onClick}>
+<El {...$$restProps} {componentName} {cssProps} on:click={onClick}>
 	<El {...linkProps}>
 		<slot />
 	</El>

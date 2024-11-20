@@ -101,7 +101,8 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<svelte:body {...containerProps} />
+1: body doesn't support spread
+<!-- <svelte:body {...containerProps} /> -->
 <El class="overflow-auto hide-scrollbar-in-mobile" h="100">
 	<El position="relative" bgColor="primary" textColor="light" p="3">
 		<Navbar bind:dark bind:theme {redditLink} {githubLink} {discordLink} {replLink} />
@@ -878,7 +879,7 @@
 		padding-top: 100px !important;
 		padding-bottom: 100px !important;
 	}
-	
+
 	:global(.overflow-auto) {
 		overflow: auto;
 	}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { CheckboxGroupProps } from './Checkbox.types'
 	import Checkbox from './Checkbox.svelte'
@@ -18,11 +17,6 @@
 	export let reverse: $$Props['reverse'] = undefined
 	export let value: $$Props['value'] = undefined
 	export let key: $$Props['key'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let element: HTMLElement
 	let props: $$Props = {}
@@ -75,7 +69,7 @@
 	}
 </script>
 
-<El {components} {componentName} bind:element {...$$restProps}>
+<El {componentName} bind:element {...$$restProps}>
 	{#if items}
 		{#each items as item, index (index)}
 			<Checkbox {...props} value={getKey(item)} checked={isSelected(item)} on:change={onChange}>

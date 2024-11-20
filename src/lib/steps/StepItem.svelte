@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { getContext, onMount } from 'svelte'
 	import { El } from '../el'
 	import type { StepItemProps } from './Steps.types'
@@ -15,11 +14,6 @@
 
 	let cssProps: object = {}
 	let props: $$Props = {}
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	const { register, unregister, active: activeIndex } = getContext<any>('STEPS')
 
@@ -48,6 +42,6 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...props} on:click>
+<El {...$$restProps} {cssProps} {...props} on:click>
 	<slot />
 </El>

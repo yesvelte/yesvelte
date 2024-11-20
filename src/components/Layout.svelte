@@ -56,7 +56,8 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
-<svelte:body {...containerProps} />
+TODO: body doesn't support spread props
+<!-- <svelte:body {...containerProps} /> -->
 
 <svelte:window
 	on:keydown={(e) => {

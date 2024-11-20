@@ -4,25 +4,18 @@
 	import { El } from '../el'
 	import type { AccordionsProps } from './Accordion.types'
 
-	import { get_current_component } from 'svelte/internal'
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
 	type $$Props = AccordionsProps
 
-	export let componentName: $$Props['componentName'] = 'accordions'
-	export let persistent: $$Props['persistent'] = false
+	let { componentName = 'accordions', persistent = false, ...restProps }: $$Props = $props()
 
 	setContext('ACCORDIONS', writable({ persistent, children: [] }))
 
-	let props: AccordionsProps = {}
-	$: props = {
+	let props: AccordionsProps = $derived({
+		...restProps,
 		componentName,
-	}
+	})
 </script>
 
-<El {components} {...$$restProps} {...props}>
+<El {...props}>
 	<slot />
 </El>

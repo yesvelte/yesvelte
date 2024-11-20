@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { SelectProps } from './Select.types'
 
@@ -19,11 +18,6 @@
 	export let placeholder: $$Props['placeholder'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let value: $$Props['value'] = multiple ? [] : undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -77,15 +71,7 @@
 	}
 </script>
 
-<El
-	tag="select"
-	{components}
-	{multiple}
-	bind:value
-	{...$$restProps}
-	{...props}
-	{cssProps}
-	on:change={onChange}>
+<El tag="select" {multiple} bind:value {...$$restProps} {...props} {cssProps} on:change={onChange}>
 	{#if items}
 		{#if value == undefined}
 			<option disabled selected>{placeholder ? placeholder : ''}</option>

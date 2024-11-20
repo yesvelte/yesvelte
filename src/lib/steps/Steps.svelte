@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { El } from '../el'
-	import { get_current_component } from 'svelte/internal'
+
 	import type { StepsProps } from './Steps.types'
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
@@ -17,11 +17,6 @@
 	export let items: $$Props['items'] = undefined
 	export let counter: $$Props['counter'] = undefined
 	export let active: number = 0
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let element: HTMLElement
 
@@ -53,7 +48,7 @@
 	setContext('STEPS', { register, unregister, active: activeStore })
 </script>
 
-<El {components} {componentName} bind:element {...$$restProps} {cssProps}>
+<El {componentName} bind:element {...$$restProps} {cssProps}>
 	{#if items}
 		{#each items as item, index}
 			<slot {item} {index} />

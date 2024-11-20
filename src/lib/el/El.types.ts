@@ -1,4 +1,4 @@
-import type { SvelteComponent } from 'svelte'
+import type { Snippet, SvelteComponent } from 'svelte'
 
 // Theme Colors
 export type ThemeColors =
@@ -335,6 +335,7 @@ export interface CssProps {
 
 export interface ElProps extends CssProps {
 	id?: string
+	children?: Snippet
 	class?: string
 	tag?: HTMLTags
 	element?: HTMLElement
@@ -342,7 +343,7 @@ export interface ElProps extends CssProps {
 	components?: SvelteComponent[]
 	cssProps?: object
 	value?: unknown
-	title?: string
+	// title?: string
 	tabindex?: string | number
 	role?: string
 	'aria-current'?: string

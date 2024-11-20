@@ -3,7 +3,6 @@
 	import { El } from '../el'
 	import { Button } from '../button'
 	import type { OffcanvasHeaderProps, OffcanvasProps } from './Offcanvas.types'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = OffcanvasHeaderProps
 
@@ -12,17 +11,12 @@
 
 	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
 	const onClick = () => {
 		if (ctx && ctx.close) ctx.close()
 	}
 </script>
 
-<El {...$$restProps} {componentName} {components}>
+<El {...$$restProps} {componentName}>
 	{#if title}
 		<El componentName="{componentName}-title">{title}</El>
 	{:else}

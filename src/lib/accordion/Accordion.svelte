@@ -5,12 +5,6 @@
 	import AccordionHeader from './AccordionHeader.svelte'
 	import type { AccordionContext, AccordionProps, AccordionsContext } from './Accordion.types'
 
-	import { get_current_component } from 'svelte/internal'
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
 	type $$Props = AccordionProps
 
 	export let componentName: $$Props['componentName'] = 'accordion'
@@ -27,10 +21,10 @@
 		return item
 	})
 
-	$: ctx.update(() => ({open}))
+	$: ctx.update(() => ({ open }))
 </script>
 
-<El {components} {...$$restProps} {componentName}>
+<El {...$$restProps} {componentName}>
 	{#if title}
 		<AccordionHeader>
 			{title}

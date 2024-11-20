@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 
 	import type { AvatarProps } from './Avatar.types'
@@ -10,11 +9,6 @@
 	export let color: $$Props['color'] = undefined
 	export let shape: $$Props['shape'] = undefined
 	export let size: $$Props['size'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let cssProps: $$Props = {}
 	let props: $$Props = {}
@@ -30,6 +24,6 @@
 	}
 </script>
 
-<El {components} tag="span" {...$$restProps} {cssProps} {...props}>
+<El tag="span" {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

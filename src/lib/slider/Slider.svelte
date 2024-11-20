@@ -5,7 +5,7 @@
 	import { writable } from 'svelte/store'
 	import type { SliderKnobType, SliderProps } from './Slider.types'
 	import { classname } from '../internal'
-	import { get_current_component } from 'svelte/internal'
+
 	import { El } from '../el'
 
 	type $$Props = SliderProps
@@ -17,11 +17,6 @@
 	export let step: $$Props['step'] = undefined
 	export let name: $$Props['name'] = undefined
 	export let connect: $$Props['connect'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let knobs: SliderKnobType[] = []
 	let element: HTMLElement
@@ -116,7 +111,7 @@
 	setContext('SLIDER', { register, unregister, setValue, values })
 </script>
 
-<El {components} componentName="{componentName}-wrapper">
+<El componentName="{componentName}-wrapper">
 	<div class={classname('slider', { color })} bind:this={element} />
 	<slot />
 </El>

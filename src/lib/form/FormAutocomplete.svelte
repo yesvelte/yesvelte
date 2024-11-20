@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Autocomplete } from '../autocomplete'
 	import type { FormAutocompleteProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -23,10 +22,7 @@
 	export let value: $$Props['value'] = undefined
 	export let create: $$Props['create'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
-		...($$props.components ?? []),
-	]
+
 
 	let id: string
 	let props: $$Props = {}
@@ -71,7 +67,6 @@
 			on:changed
 			on:created
 			on:input
-			{components}
 			_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
 			bind:value
 			bind:id

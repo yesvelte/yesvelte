@@ -1,8 +1,5 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-	import { createEventDispatcher } from 'svelte'
 	import fuzzy from 'fuzzy'
-
 	import { El } from '../el'
 	import { Popup } from '../popup'
 	import { classname } from '../internal'
@@ -11,28 +8,34 @@
 
 	type $$Props = AutocompleteProps
 
-	export let componentName: string = 'autocomplete'
-	export let items: NonNullable<$$Props['items']> = []
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let _slots: $$Props['_slots'] = $$slots
-	export let key: $$Props['key'] = undefined
-	export let create: $$Props['create'] = undefined
-	export let dismissible: $$Props['dismissible'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let value: $$Props['value'] = multiple ? [] : undefined
-	export let name: $$Props['name'] = undefined
+	let {
+		componentName = 'autocomplete',
+		items = [],
+		placeholder,
+		state: formState,
+		size,
+		key,
+		create,
+		dismissible,
+		disabled,
+		multiple,
+		readonly,
+		value = $bindable(multiple ? [] : undefined),
+		name,
+		children,
+		oncreated,
+		oninput,
+		onchanged,
+		...restProps
+	}: $$Props = $props()
 
-	const dispatch = createEventDispatcher()
-	const components = [
-		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
-		...($$props.components ?? []),
-	]
+	let inputEl: HTMLElement = $state(null)
+	let query = $state('')
+	let show = $state(false)
+	let timer: any
+	let cursorPosition = $state(0)
 
-	$: getKey = (item: any) => {
+	function getKey(item: any) {
 		if (typeof item === 'object') {
 			if (key) {
 				return typeof key === 'string' ? item[key] : key(item)
@@ -41,16 +44,9 @@
 		return item
 	}
 
-	let inputEl: HTMLElement
-	let query = ''
-	let show = false
-	let noResult = false
-	let timer: any
-	let cursorPosition = 0
-
 	function onInput(e: any) {
 		if (!show) show = true
-		dispatch('input', query)
+		restProps.oninput?.(query)
 	}
 
 	function onKeyDown(e) {
@@ -80,17 +76,21 @@
 				onCreate()
 			}
 		}
+
+		restProps?.onkeydown(e)
 	}
 
-	$: cursorPosition = multiple ? value?.length - 1 : 0
+	$effect(() => {
+		cursorPosition = multiple ? value?.length - 1 : 0
+	})
 
 	function onCreate() {
-		dispatch('created', query)
+		oncreated?.(query)
 		query = ''
 		show = false
 	}
 
-	function onFocus() {
+	function onFocus(e) {
 		if (readonly) return
 		if (disabled) return
 
@@ -98,6 +98,8 @@
 			timer = setTimeout(() => {
 				show = true
 			}, 200)
+
+		restProps.onfocus?.(e)
 	}
 
 	function onSelect(item: any) {
@@ -112,7 +114,7 @@
 				value = [...(value ?? []), getKey(item)]
 			}
 
-			dispatch('changed', value)
+			onchanged?.(value)
 			setTimeout(() => {
 				show = true
 			})
@@ -121,17 +123,18 @@
 		} else {
 			value = getKey(item)
 			show = false
-			dispatch('changed', value)
+			onchanged?.(value)
 		}
 	}
 
-	function onBlur() {
+	function onBlur(e) {
 		timer = setTimeout(() => {
 			show = false
 		}, 200)
+		restProps.onblur?.(e)
 	}
 
-	function onClick() {
+	function onClick(e) {
 		if (readonly) return
 		if (disabled) return
 
@@ -141,6 +144,7 @@
 
 		show = !show
 		if (show) inputEl.focus()
+		restProps?.onclick(e)
 	}
 
 	function onRemove(item: any) {
@@ -151,23 +155,25 @@
 		}
 	}
 
-	$: options = fuzzy
-		.filter(
-			query,
-			items.filter((i) => value !== getKey(i)),
-			{
-				extract(input) {
-					return JSON.stringify(getKey(input))
-				},
-			}
-		)
-		.map((item) => item.original)
+	let options = $derived(
+		fuzzy
+			.filter(
+				query,
+				items.filter((i) => value !== getKey(i)),
+				{
+					extract(input) {
+						return JSON.stringify(getKey(input))
+					},
+				}
+			)
+			.map((item) => item.original)
+	)
 
-	$: cssProps = {
-		state,
+	let cssProps: AutocompleteProps = $derived({
+		state: formState,
 		size,
 		disabled,
-	}
+	})
 
 	function isSelected(item) {
 		if (multiple) {
@@ -181,17 +187,10 @@
 		}
 	}
 
-	$: noResult = options.length === 0
+	let noResult: boolean = $derived(options.length === 0)
 </script>
 
-<El
-	{components}
-	{...$$restProps}
-	{componentName}
-	{cssProps}
-	{disabled}
-	on:click={onClick}
-	on:focus={onFocus}>
+<El {...restProps} {componentName} {cssProps} {disabled} on:click={onClick} onfocus={onFocus}>
 	{#if Array.isArray(value)}
 		{#each value as val, index}
 			{@const item = items.find((x) => getKey(x) === getKey(val))}
@@ -199,11 +198,14 @@
 				<El
 					componentName="{componentName}-item"
 					cssProps={{ multiple: true, active: cursorPosition === index }}>
-					{#if _slots['selected']}
-						<slot name="selected" {item} {index}>{item}</slot>
+					{#if selectedSnippet}
+						{@render selectedSnippet({ item, index })}
+					{:else if children}
+						{@render children({ item, index })}
 					{:else}
-						<slot {item} {index}>{item}</slot>
+						{item}
 					{/if}
+
 					{#if dismissible}
 						<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
 							<Icon name="x" />
@@ -218,10 +220,12 @@
 			{@const item = items[index]}
 			{#if item}
 				<El componentName="{componentName}-item">
-					{#if _slots['selected']}
-						<slot name="selected" {item} {index}>{item}</slot>
+					{#if selectedSnippet}
+						{@render selectedSnippet({ item, index })}
+					{:else if children}
+						{@render children({ item, index })}
 					{:else}
-						<slot {item} {index}>{item}</slot>
+						{item}
 					{/if}
 				</El>
 			{/if}
@@ -234,13 +238,10 @@
 		{disabled}
 		{readonly}
 		bind:value={query}
-		on:blur={onBlur}
-		on:blur
-		on:focus={onFocus}
-		on:focus
-		on:click
-		on:keydown={onKeyDown}
-		on:input={onInput} />
+		onblur={onBlur}
+		onfocus={onFocus}
+		onkeydown={onKeyDown}
+		oninput={onInput} />
 	<Popup autoClose="outside" bind:show componentName="{componentName}-dropdown">
 		{#if noResult}
 			{#if create}
@@ -259,7 +260,11 @@
 			{@const shouldShow = !isSelected(item)}
 			{#if shouldShow}
 				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
-					<slot {item} {index}>{item}</slot>
+					{#if children}
+						{@render children({ item, index })}
+					{:else}
+						{item}
+					{/if}
 				</El>
 			{/if}
 		{/each}
@@ -271,7 +276,7 @@
 		{#if value}
 			<select style="display: none" multiple {name}>
 				{#each value as val}
-					<option value={val} selected />
+					<option value={val} selected>{val}</option>
 				{/each}
 			</select>
 		{/if}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { StatusProps } from './Status.types'
 
@@ -8,11 +7,6 @@
 	export let componentName: $$Props['componentName'] = 'status'
 	export let color: $$Props['color'] = undefined
 	export let lite: $$Props['lite'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
@@ -29,6 +23,6 @@
 	}
 </script>
 
-<El {components} tag="span" {...$$restProps} {cssProps} {...props}>
+<El tag="span" {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

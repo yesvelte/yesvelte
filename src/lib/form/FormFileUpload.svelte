@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -19,11 +18,6 @@
 	export let files: $$Props['files'] = undefined
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let id: string
 	let props: $$Props = {}
@@ -60,7 +54,7 @@
 				</El>
 			{/if}
 		</slot>
-		<FileUpload {components} bind:id {...fileUploadProps} bind:files />
+		<FileUpload bind:id {...fileUploadProps} bind:files />
 
 		<slot name="end">
 			{#if $$slots['end-icon']}

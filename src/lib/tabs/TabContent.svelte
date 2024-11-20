@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El, type ElProps } from '../el'
 
 	type $$Props = ElProps
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
-	export let componentName: $$Props['componentName'] = 'tab-content'
+	let { componentName = 'tab-content', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {components} {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{#if children}
+		{@render children()}
+	{/if}
 </El>

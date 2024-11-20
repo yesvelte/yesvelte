@@ -6,14 +6,10 @@
 	import { Button } from '../button'
 	import ModalTitle from './ModalTitle.svelte'
 	import ModalHeader from './ModalHeader.svelte'
-	import { get_current_component, onMount } from 'svelte/internal'
+	import { onMount } from 'svelte'
 	import type { FocusTrap } from 'focus-trap'
 
 	const dispatch = createEventDispatcher()
-	const components = [
-		{ component: get_current_component(), except: ['close'] },
-		...($$props.components ?? []),
-	]
 
 	type $$Props = ModalProps
 
@@ -107,7 +103,6 @@
 	{...$$restProps}
 	{componentName}
 	{cssProps}
-	{components}
 	on:click={handleOutsideClick}
 	tabindex="0"
 	role="dialog"

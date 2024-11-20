@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { StampProps } from './Stamp.types'
 	import { Icon } from '../icon'
@@ -12,11 +11,6 @@
 	export let iconPosition: $$Props['iconPosition'] = undefined
 	export let size: $$Props['size'] = 'md'
 	export let icon: $$Props['icon'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let cssProps: StampProps = {}
 	let otherProps: StampProps = {}
@@ -33,6 +27,6 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...otherProps}>
+<El {...$$restProps} {cssProps} {...otherProps}>
 	<Icon componentName={componentName + '-icon'} name={icon} />
 </El>

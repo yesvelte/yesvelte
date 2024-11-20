@@ -3,7 +3,6 @@
 	import { Textarea } from '../textarea'
 	import type { FormTextAreaProps } from './Form.types'
 
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 
 	type $$Props = FormTextAreaProps
@@ -28,10 +27,6 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let cols: $$Props['cols'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	let id: string
 	let props: $$Props = {}
 	let teaxtareaProps: $$Props = {}
@@ -75,7 +70,7 @@
 				</El>
 			{/if}
 		</slot>
-		<Textarea bind:id {components} {...teaxtareaProps} bind:value />
+		<Textarea bind:id {...teaxtareaProps} bind:value />
 		<slot name="end">
 			{#if $$slots['end-icon']}
 				<El componentName="{componentName}-icon">

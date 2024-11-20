@@ -3,8 +3,6 @@
 	import { Editor } from '../editor'
 	import type { FormEditorProps } from './Form.types'
 
-	import { get_current_component } from 'svelte/internal'
-
 	type $$Props = FormEditorProps
 
 	export let componentName: $$Props['componentName'] = 'form-editor'
@@ -19,10 +17,7 @@
 	export let label: $$Props['label'] = undefined
 	export let hint: $$Props['hint'] = undefined
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
+
 	let id: string
 	let props: $$Props = {}
 	let editorProps: $$Props = {}
@@ -50,6 +45,6 @@
 
 <FormField {id} {...props} {...$$restProps}>
 	<slot name="label" slot="label" />
-	<Editor bind:id {components} {...editorProps} on:changed bind:value />
+	<Editor bind:id {...editorProps} on:changed bind:value />
 	<slot name="hint" slot="hint" />
 </FormField>

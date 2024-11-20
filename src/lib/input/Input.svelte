@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte'
 	import { El } from '../el'
 	import type { InputProps, InputWrapperProps } from './Input.types'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = InputProps
 
@@ -28,11 +27,6 @@
 	export let maxlength: $$Props['maxlength'] = undefined
 	export let pattern: $$Props['pattern'] = undefined
 	export let step: $$Props['step'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let element: HTMLInputElement
 	onMount(async () => {
@@ -80,11 +74,7 @@
 </script>
 
 {#if $$slots.start || $$slots.end}
-	<El
-		{components}
-		componentName="{componentName}-wrapper"
-		{...$$restProps}
-		cssProps={wrapperCssProps}>
+	<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
 		{#if $$slots.start}
 			<El tag="span" componentName="{componentName}-icon">
 				<slot name="start" />
@@ -98,13 +88,5 @@
 		{/if}
 	</El>
 {:else}
-	<El
-		{...$$restProps}
-		tag="input"
-		bind:value
-		bind:element
-		bind:id
-		{components}
-		{...props}
-		{cssProps} />
+	<El {...$$restProps} tag="input" bind:value bind:element bind:id {...props} {cssProps} />
 {/if}

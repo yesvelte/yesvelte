@@ -1,5 +1,5 @@
 import path from 'path'
-import watchAndRun from 'vite-plugin-watch-and-run'
+import {watchAndRun} from 'vite-plugin-watch-and-run'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { defineConfig } from 'vite'
 

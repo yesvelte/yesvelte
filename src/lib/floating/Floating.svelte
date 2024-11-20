@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FloatingProps } from './Floating.types'
 
@@ -9,11 +8,6 @@
 	export let fixed: $$Props['fixed']
 	export let offset: $$Props['offset'] = 0
 	export let placement: $$Props['placement'] = 'end-bottom'
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let element: HTMLElement
 
@@ -70,6 +64,6 @@
 	})()
 </script>
 
-<El {components} bind:element {...$$restProps} {cssProps} {...props}>
+<El bind:element {...$$restProps} {cssProps} {...props}>
 	<slot />
 </El>

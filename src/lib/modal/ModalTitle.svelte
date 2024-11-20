@@ -1,16 +1,11 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El, type ElProps } from '../el'
 
 	type $$Props = ElProps
 
 	export let componentName: $$Props['componentName'] = 'modal-title'
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 </script>
 
-<El {...$$restProps} {componentName} {components}>
+<El {...$$restProps} {componentName}>
 	<slot />
 </El>

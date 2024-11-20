@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TextareaProps } from './Textarea.types'
 
@@ -24,10 +23,6 @@
 
 	let props: $$Props = {}
 	let cssProps: $$Props = {}
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	$: {
 		cssProps = {
@@ -53,7 +48,7 @@
 </script>
 
 {#if $$slots.start || $$slots.end}
-	<El {components} componentName="{componentName}-wrapper" {...$$restProps} cssProps={{ size }}>
+	<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={{ size }}>
 		{#if $$slots.start}
 			<El tag="span" componentName="{componentName}-icon">
 				<slot name="start" />
@@ -67,5 +62,5 @@
 		{/if}
 	</El>
 {:else}
-	<El {components} bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
+	<El bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
 {/if}

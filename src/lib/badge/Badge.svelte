@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { BadgeProps } from './Badge.types'
 
@@ -16,11 +15,6 @@
 	export let tile: $$Props['tile'] = undefined
 	export let blink: $$Props['blink'] = undefined
 	export let notification: $$Props['notification'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 
 	let cssProps: BadgeProps = {}
 	let props: BadgeProps = {}
@@ -42,7 +36,7 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...props} tag={href ? 'a' : tag}>
+<El {...$$restProps} {cssProps} {...props} tag={href ? 'a' : tag}>
 	{#if !dot}
 		<slot />
 	{/if}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Popup } from '../popup'
 	import type { PopoverProps } from './Popover.types'
 	import PopoverHeader from './PopoverHeader.svelte'
@@ -12,11 +11,6 @@
 	export let title: $$Props['title'] = undefined
 	export let trigger: $$Props['trigger'] = 'click'
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
 	$: props = {
 		componentName,
 		arrow,
@@ -25,7 +19,7 @@
 	}
 </script>
 
-<Popup {components} {...$$restProps} {...props}>
+<Popup {...$$restProps} {...props}>
 	{#if title}
 		<PopoverHeader>{title}</PopoverHeader>
 	{/if}

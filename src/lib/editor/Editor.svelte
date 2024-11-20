@@ -4,7 +4,6 @@
 	import { El } from '../el'
 	import type { EditorProps } from './Editor.types'
 	import { Textarea } from '../textarea'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = EditorProps
 
@@ -25,10 +24,7 @@
 		'code-block',
 	]
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
+
 	const dispatch = createEventDispatcher()
 
 	let element: HTMLDivElement
@@ -81,7 +77,7 @@
 	}
 </script>
 
-<El {components} {cssProps} componentName="{componentName}-wrapper">
+<El {cssProps} componentName="{componentName}-wrapper">
 	<El {componentName} bind:element />
 </El>
 

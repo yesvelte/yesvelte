@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
@@ -14,10 +13,6 @@
 
 	let targetEl: HTMLElement
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	const context: DropdownContext = writable({})
 	setContext('DROPDOWN', context)
 
@@ -33,7 +28,7 @@
 	}
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps}>
+<El {...$$restProps} {componentName} {cssProps}>
 	<El componentName="{componentName}-target" bind:element={targetEl}>
 		<slot name="target" />
 	</El>

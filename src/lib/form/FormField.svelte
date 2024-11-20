@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { FormFieldProps } from './Form.types'
@@ -12,14 +11,9 @@
 	export let hint: $$Props['hint'] = undefined
 	export let required: $$Props['required'] = undefined
 	export let state: $$Props['state'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 </script>
 
-<El {components} {...$$restProps} {componentName}>
+<El {...$$restProps} {componentName}>
 	{#if label}
 		<Label for={id} {required}>{label}</Label>
 	{/if}
