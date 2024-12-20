@@ -5,22 +5,21 @@
 
 	type $$Props = DropdownMenuProps
 
-	export let componentName: $$Props['componentName'] = 'dropdown-menu'
+	let { componentName = 'dropdown-menu', children, ...restProps }: $$Props = $props()
 
 	const context = getContext<DropdownContext>('DROPDOWN')
 
-	$: cssProps = {
-		//
-	}
-
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		target: $context.target,
 		componentName,
+		trigger: 'click',
 		autoClose: $context.autoClose,
 		placement: $context.placement,
-	}
+		cssProps: {},
+	})
 </script>
 
-<Popup trigger="click" {...$$restProps} {...props} {cssProps}>
-	<slot />
+<Popup {...props}>
+	{@render children?.()}
 </Popup>

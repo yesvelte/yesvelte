@@ -6,7 +6,12 @@
 
 	type $$Props = AccordionsProps
 
-	let { componentName = 'accordions', persistent = false, ...restProps }: $$Props = $props()
+	let {
+		componentName = 'accordions',
+		persistent = false,
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	setContext('ACCORDIONS', writable({ persistent, children: [] }))
 
@@ -17,5 +22,5 @@
 </script>
 
 <El {...props}>
-	<slot />
+	{@render children?.()}
 </El>

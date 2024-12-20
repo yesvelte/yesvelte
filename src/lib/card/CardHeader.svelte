@@ -5,13 +5,9 @@
 
 	type $$Props = CardHeaderProps
 
-	export let componentName: $$Props['componentName'] = 'card-header'
-	export let light: $$Props['light'] = undefined
-
-	let cssProps: CardHeaderProps = {}
-	$: cssProps = { light }
+	let { componentName = 'card-header', light, children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {cssProps} {componentName}>
-	<slot />
+<El {...restProps} cssProps={{ light }} {componentName}>
+	{@render children?.()}
 </El>

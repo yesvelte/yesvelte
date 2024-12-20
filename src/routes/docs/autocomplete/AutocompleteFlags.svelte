@@ -10,10 +10,12 @@
 	let value = ''
 </script>
 
-<Autocomplete {items} key="flag" bind:value let:item>
-	<El d="flex">
-		<El tag="img" width="30" me="2" src="/images/flags/{item.flag}.svg" />
-		{item.name}
-	</El>
+<Autocomplete {items} key="flag" bind:value>
+	{#snippet children({ item })}
+		<El d="flex">
+			<El tag="img" width="30" me="2" src="/images/flags/{item.flag}.svg" />
+			{item.name}
+		</El>
+	{/snippet}
 </Autocomplete>
 <i>value: {value}</i>

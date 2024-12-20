@@ -23,11 +23,11 @@ $card-stamp-sizes: (
 	}
 
 	@each $key, $value in $theme-colors {
-		&-bg-color-#{$key} > #{$prefix-stamp}-icon {
+		&-bg-color-#{$key}>.#{$prefix-stamp}-icon {
 			@extend %bg-#{$key};
 		}
 
-		&-text-color-#{$key} > #{$prefix-stamp}-icon {
+		&-text-color-#{$key}>.#{$prefix-stamp}-icon {
 			@extend %text-#{$key};
 		}
 	}

@@ -3,13 +3,14 @@
 
 	type $$Props = ElProps
 
-	export let componentName: $$Props['componentName'] = 'accordion-title'
+	let { componentName = 'accordion-title', children, ...restProps }: $$Props = $props()
 
-	$: otherProps = {
+	let props: $$Props = $derived({
+		...restProps,
 		componentName,
-	}
+	})
 </script>
 
-<El {...$$restProps} {...otherProps}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

@@ -5,11 +5,13 @@
 </script>
 
 <Dropdown>
-	<Button slot="target" color="primary">Toggle Dropdown (last clicked item: {last})</Button>
+	{#snippet targetSnippet()}
+		<Button color="primary">Toggle Dropdown (last clicked item: {last})</Button>
+	{/snippet}
 
 	<DropdownMenu>
-		<DropdownItem on:click={() => (last = 'Item 1')}>Item 1</DropdownItem>
-		<DropdownItem on:click={() => (last = 'Item 2')}>Item 2</DropdownItem>
-		<DropdownItem on:click={() => (last = 'Item 3')}>Item 3</DropdownItem>
+		<DropdownItem onclick={() => (last = 'Item 1')}>Item 1</DropdownItem>
+		<DropdownItem onclick={() => (last = 'Item 2')}>Item 2</DropdownItem>
+		<DropdownItem onclick={() => (last = 'Item 3')}>Item 3</DropdownItem>
 	</DropdownMenu>
 </Dropdown>

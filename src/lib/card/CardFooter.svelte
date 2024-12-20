@@ -4,14 +4,9 @@
 
 	type $$Props = CardFooterProps
 
-	export let componentName: $$Props['componentName'] = 'card-footer'
-	export let transparent: $$Props['transparent'] = undefined
-
-	let cssProps: CardFooterProps = {}
-
-	$: cssProps = { transparent }
+	let { componentName = 'card-footer', transparent, children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {cssProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName} cssProps={{ transparent }}>
+	{@render children?.()}
 </El>

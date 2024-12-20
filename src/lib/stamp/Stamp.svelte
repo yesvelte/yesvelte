@@ -5,28 +5,29 @@
 
 	type $$Props = StampProps
 
-	export let componentName: $$Props['componentName'] = 'stamp'
-	export let bgColor: $$Props['bgColor'] = undefined
-	export let textColor: $$Props['textColor'] = undefined
-	export let iconPosition: $$Props['iconPosition'] = undefined
-	export let size: $$Props['size'] = 'md'
-	export let icon: $$Props['icon'] = undefined
+	let {
+		componentName = 'stamp',
+		bgColor,
+		textColor,
+		iconPosition,
+		size,
+		icon,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let cssProps: StampProps = {}
-	let otherProps: StampProps = {}
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
 			size,
 			iconPosition,
 			bgColor,
 			textColor,
-		}
-		otherProps = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
+<El {...props}>
 	<Icon componentName={componentName + '-icon'} name={icon} />
 </El>

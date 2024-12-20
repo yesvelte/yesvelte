@@ -5,8 +5,12 @@
 
 	type $$Props = ToastProps
 
-	export let componentName: $$Props['componentName'] = 'toast'
-	export let show: $$Props['show'] = false
+	let {
+		componentName = 'toast',
+		show = $bindable(false),
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	function hide() {
 		show = false
@@ -15,6 +19,6 @@
 	setContext('TOAST', { hide })
 </script>
 
-<El {...$$restProps} {componentName} {show}>
-	<slot />
+<El {...restProps} {componentName} {show}>
+	{@render children?.()}
 </El>

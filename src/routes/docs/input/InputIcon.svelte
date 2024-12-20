@@ -3,9 +3,13 @@
 </script>
 
 <Input placeholder="start icon">
-	<Icon slot="start" name="user" />
+	{#snippet startSnippet()}
+		<Icon name="user" />
+	{/snippet}
 </Input>
 <El p="3" />
 <Input placeholder="end icon">
-	<Icon slot="end" name="user" />
+	{#snippet endSnippet()}
+		<Icon name="user" />
+	{/snippet}
 </Input>

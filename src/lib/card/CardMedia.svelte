@@ -1,16 +1,18 @@
 <script lang="ts">
 	import { El } from '../el'
+
 	import type { CardMediaProps } from './Card.types'
 
 	type $$Props = CardMediaProps
 
-	export let componentName: $$Props['componentName'] = 'card-media'
-	export let elementPosition: $$Props['elementPosition'] = 'top'
-
-	let cssProps: CardMediaProps = {}
-	$: cssProps = { elementPosition }
+	let {
+		componentName = 'card-media',
+		elementPosition = 'top',
+		children,
+		...restProps
+	}: $$Props = $props()
 </script>
 
-<El {...$$restProps} {cssProps} {componentName}>
-	<slot />
+<El {...restProps} cssProps={{ elementPosition }} {componentName}>
+	{@render children?.()}
 </El>

@@ -27,7 +27,7 @@
 		ariaLabel,
 		ariaValuenow,
 		style,
-		show,
+		show = $bindable(),
 		gap,
 		vAlign,
 		shadow,
@@ -328,7 +328,7 @@
 
 {#if children}
 	<svelte:element this={tag} bind:this={element} {...restProps} {...elProps}>
-		{@render children()}
+		{@render children?.()}
 	</svelte:element>
 {:else if tag === 'input'}
 	{#if restProps.type === 'checkbox' || restProps.type === 'radio'}

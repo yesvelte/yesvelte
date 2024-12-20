@@ -4,29 +4,37 @@
 
 	type $$Props = ButtonProps
 
-	export let active: $$Props['active'] = undefined
-	export let color: $$Props['color'] = undefined
-	export let componentName: $$Props['componentName'] = 'button'
-	export let disabled: $$Props['disabled'] = undefined
-	export let ghost: $$Props['ghost'] = undefined
-	export let href: $$Props['href'] = undefined
-	export let link: $$Props['link'] = undefined
-	export let loading: $$Props['loading'] = undefined
-	export let outline: $$Props['outline'] = undefined
-	export let shape: $$Props['shape'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let target: $$Props['target'] = undefined
-	export let type: $$Props['type'] = undefined
+	let {
+		active,
+		color,
+		componentName = 'button',
+		disabled,
+		ghost,
+		href,
+		link,
+		loading,
+		outline,
+		shape,
+		size,
+		target,
+		type,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let cssProps: any = {}
-	let props: $$Props = {}
+	let element: HTMLElement | undefined = $state(undefined)
 
-	let element: HTMLElement
+	let icon = $derived(!(element?.textContent ?? true))
 
-	$: icon = !(element?.textContent ?? true)
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		href,
+		role: 'button',
+		tag: href ? 'a' : 'button',
+		target,
+		type: type ?? 'button',
+		cssProps: {
 			active,
 			color,
 			disabled,
@@ -37,18 +45,10 @@
 			outline,
 			shape,
 			size,
-		}
-		props = {
-			componentName,
-			href,
-			role: 'button',
-			tag: href ? 'a' : 'button',
-			target,
-			type: type ?? 'button',
-		}
-	}
+		},
+	})
 </script>
 
-<El bind:element {...$$restProps} {cssProps} {...props} on:click>
-	<slot />
+<El bind:element {...props}>
+	{@render children?.()}
 </El>

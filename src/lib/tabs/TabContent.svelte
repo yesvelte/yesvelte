@@ -7,7 +7,5 @@
 </script>
 
 <El {...restProps} {componentName}>
-	{#if children}
-		{@render children()}
-	{/if}
+	{@render children?.()}
 </El>

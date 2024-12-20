@@ -6,7 +6,7 @@
 
 <Autocomplete
 	items={['a', 'b', 'c', 'd', 'e', 'f']}
-	on:changed={() => (changed += 1)}
+	onchanged={() => (changed += 1)}
 	placeholder="Change My Value!" />
 
 changed: {changed}

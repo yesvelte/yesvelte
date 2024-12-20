@@ -2,9 +2,9 @@
 	import { tick } from 'svelte'
 	import { Button, El, Select } from 'yesvelte'
 
-	let hint = ''
-	let state: 'invalid' | undefined = undefined
-	let value: string | undefined = undefined
+	let hint = $state('')
+	let state: 'invalid' | undefined = $state(undefined)
+	let value: string | undefined = $state(undefined)
 
 	async function validate() {
 		await tick()
@@ -17,10 +17,10 @@
 		}
 	}
 
-	let items = ['HTML', 'CSS', 'JS', 'Svelte']
+	let items = $state(['HTML', 'CSS', 'JS', 'Svelte'])
 </script>
 
 <El tag="strong">Choose a Language: (required)</El>
-<Select {items} {state} bind:value on:blur={validate} on:change={validate} />
+<Select {items} {state} bind:value onblur={validate} onchange={validate} />
 <El tag="small">{hint}</El><br />
 <Button disabled={state === 'invalid'} color="primary">Submit</Button>

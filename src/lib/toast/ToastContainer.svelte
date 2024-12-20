@@ -4,14 +4,17 @@
 
 	type $$Props = ToastContainerProps
 
-	export let componentName: $$Props['componentName'] = 'toast-container'
-	export let placement: $$Props['placement'] = undefined
+	let { componentName = 'toast-container', placement, children, ...restProps } = $props()
 
-	$: cssProps = {
-		placement,
-	}
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
+			placement,
+		},
+	})
 </script>
 
-<El {...$$restProps} {componentName} {cssProps}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

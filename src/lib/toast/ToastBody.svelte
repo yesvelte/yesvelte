@@ -4,9 +4,9 @@
 
 	type $$Props = ToastBodyProps
 
-	export let componentName: $$Props['componentName'] = 'toast-body'
+	let { componentName = 'toast-body', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children?.()}
 </El>

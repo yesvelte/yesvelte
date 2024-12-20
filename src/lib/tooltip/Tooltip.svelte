@@ -5,26 +5,31 @@
 
 	type $$Props = TooltipProps
 
-	export let componentName: $$Props['componentName'] = 'tooltip'
-	export let arrow: $$Props['arrow'] = true
-	export let popupOffset: $$Props['popupOffset'] = 0
-	export let trigger: $$Props['trigger'] = 'hover'
-	export let text: $$Props['text'] = undefined
+	let {
+		componentName = 'tooltip',
+		arrow = true,
+		popupOffset = 0,
+		trigger = 'hover',
+		text,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		componentName,
 		arrow,
 		trigger,
 		popupOffset,
-	}
+	})
 </script>
 
-<Popup {...$$restProps} {...props}>
+<Popup {...props}>
 	<El componentName="{componentName}-inner">
-		<slot>
-			{#if text}
-				{text}
-			{/if}
-		</slot>
+		{#if children}
+			{@render children()}
+		{:else if text}
+			{text}
+		{/if}
 	</El>
 </Popup>

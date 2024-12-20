@@ -4,25 +4,19 @@
 
 	type $$Props = BreadcrumbProps
 
-	export let componentName: $$Props['componentName'] = 'breadcrumb'
-	export let separator: $$Props['separator'] = undefined
+	let { componentName = 'breadcrumb', separator, children, ...restProps }: $$Props = $props()
 
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: BreadcrumbProps = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
 			separator,
-		}
-
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
 <El tag="nav" aria-label="breadcrumb">
-	<El tag="ol" {...$$restProps} {cssProps} {...props}>
-		<slot />
+	<El tag="ol" {...props}>
+		{@render children?.()}
 	</El>
 </El>

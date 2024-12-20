@@ -5,6 +5,7 @@
 	import { classname } from '../internal'
 	import type { AutocompleteProps } from './Autocomplete.types'
 	import { Icon } from '../icon'
+	import { on } from 'svelte/events'
 
 	type $$Props = AutocompleteProps
 
@@ -15,21 +16,23 @@
 		state: formState,
 		size,
 		key,
+		id = $bindable(),
 		create,
 		dismissible,
 		disabled,
 		multiple,
 		readonly,
-		value = $bindable(multiple ? [] : undefined),
+		value = $bindable(),
 		name,
 		children,
 		oncreated,
 		oninput,
 		onchanged,
+		selectedSnippet,
 		...restProps
 	}: $$Props = $props()
 
-	let inputEl: HTMLElement = $state(null)
+	let inputEl: HTMLElement | undefined = $state(undefined)
 	let query = $state('')
 	let show = $state(false)
 	let timer: any
@@ -77,7 +80,7 @@
 			}
 		}
 
-		restProps?.onkeydown(e)
+		restProps?.onkeydown?.(e)
 	}
 
 	$effect(() => {
@@ -105,7 +108,7 @@
 	function onSelect(item: any) {
 		if (readonly) return
 		query = ''
-		inputEl.focus()
+		inputEl?.focus()
 
 		if (multiple) {
 			if (value.includes(item)) {
@@ -143,8 +146,8 @@
 		}
 
 		show = !show
-		if (show) inputEl.focus()
-		restProps?.onclick(e)
+		if (show) inputEl?.focus()
+		restProps?.onclick?.(e)
 	}
 
 	function onRemove(item: any) {
@@ -169,12 +172,6 @@
 			.map((item) => item.original)
 	)
 
-	let cssProps: AutocompleteProps = $derived({
-		state: formState,
-		size,
-		disabled,
-	})
-
 	function isSelected(item) {
 		if (multiple) {
 			if (value && Array.isArray(value)) {
@@ -188,9 +185,25 @@
 	}
 
 	let noResult: boolean = $derived(options.length === 0)
+
+	let cssProps: AutocompleteProps = $derived({
+		state: formState,
+		size,
+		disabled,
+	})
+
+	let props: AutocompleteProps = $derived({
+		...restProps,
+		componentName,
+		id,
+		cssProps,
+		disabled,
+		onclick: onClick,
+		onfocus: onFocus,
+	})
 </script>
 
-<El {...restProps} {componentName} {cssProps} {disabled} on:click={onClick} onfocus={onFocus}>
+<El {...props}>
 	{#if Array.isArray(value)}
 		{#each value as val, index}
 			{@const item = items.find((x) => getKey(x) === getKey(val))}
@@ -207,7 +220,7 @@
 					{/if}
 
 					{#if dismissible}
-						<El componentName="{componentName}-item-remove" on:click={() => onRemove(item)}>
+						<El componentName="{componentName}-item-remove" onclick={() => onRemove(item)}>
 							<Icon name="x" />
 						</El>
 					{/if}
@@ -246,7 +259,7 @@
 		{#if noResult}
 			{#if create}
 				<El
-					on:click={() => onCreate()}
+					onclick={() => onCreate()}
 					componentName="{componentName}-option"
 					cssProps={{ create: true }}>
 					Create {query}...
@@ -259,7 +272,7 @@
 		{#each options as item, index}
 			{@const shouldShow = !isSelected(item)}
 			{#if shouldShow}
-				<El on:click={() => onSelect(item)} componentName="{componentName}-option">
+				<El onclick={() => onSelect(item)} componentName="{componentName}-option">
 					{#if children}
 						{@render children({ item, index })}
 					{:else}

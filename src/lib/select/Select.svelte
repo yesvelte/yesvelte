@@ -4,46 +4,38 @@
 
 	type $$Props = SelectProps
 
-	interface $$Slots {
-		default: { index?: number; item?: any }
-	}
+	// interface $$Slots {
+	// 	default: { index?: number; item?: any }
+	// }
 
-	export let componentName: $$Props['componentName'] = 'select'
-	export let items: $$Props['items'] = []
-	export let key: $$Props['key'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let value: $$Props['value'] = multiple ? [] : undefined
+	let {
+		componentName = 'select',
+		items,
+		key,
+		id = $bindable(),
+		name,
+		size,
+		disabled,
+		multiple,
+		placeholder,
+		state,
+		value = $bindable(),
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let cssProps: $$Props = {}
-	let props: $$Props = {}
-
-	$: {
-		cssProps = { size, state }
-
-		props = {
-			componentName,
-			value,
-			disabled,
-			placeholder,
-			name,
-		}
-	}
-
-	$: getKey = (item: any) => {
-		if (typeof item === 'object') {
-			if (key) {
-				return typeof key === 'string' ? item[key] : key(item)
+	let getKey = $derived.by(() => {
+		return (item: any) => {
+			if (typeof item === 'object') {
+				if (key) {
+					return typeof key === 'string' ? item[key] : key(item)
+				}
+				return JSON.stringify(item)
+			} else {
+				return item
 			}
-			return JSON.stringify(item)
-		} else {
-			return item
 		}
-	}
+	})
 
 	function parse(item: any) {
 		if (typeof items[0] === 'object') {
@@ -54,7 +46,7 @@
 		return item
 	}
 
-	const onChange = (event: any) => {
+	const onchange = (event: any) => {
 		if (multiple) {
 			value = Array.from(event.target.selectedOptions).map((option: any) => parse(option.value))
 		} else {
@@ -69,19 +61,40 @@
 		}
 		return value === getKey(item)
 	}
+
+	let props: $$Props = $derived({
+		...restProps,
+		tag: 'select',
+		componentName,
+		value,
+		id,
+		disabled,
+		placeholder,
+		name,
+		onchange,
+		multiple,
+		cssProps: {
+			size,
+			state,
+		},
+	})
 </script>
 
-<El tag="select" {multiple} bind:value {...$$restProps} {...props} {cssProps} on:change={onChange}>
+<El bind:value {...props}>
 	{#if items}
 		{#if value == undefined}
 			<option disabled selected>{placeholder ? placeholder : ''}</option>
 		{/if}
 		{#each items as item, index}
 			<option value={getKey(item)} selected={isSelected(item)}>
-				<slot {index} {item}>{item}</slot>
+				{#if children}
+					{@render children?.({ item, index })}
+				{:else}
+					{item}
+				{/if}
 			</option>
 		{/each}
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

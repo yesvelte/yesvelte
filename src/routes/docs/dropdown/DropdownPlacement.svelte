@@ -3,7 +3,10 @@
 </script>
 
 <Dropdown placement="top">
-	<Button slot="target">Top</Button>
+	{#snippet targetSnippet()}
+		<Button>Top</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -12,7 +15,10 @@
 </Dropdown>
 
 <Dropdown placement="top-start">
-	<Button slot="target">Top Start</Button>
+	{#snippet targetSnippet()}
+		<Button>Top Start</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -21,7 +27,10 @@
 </Dropdown>
 
 <Dropdown placement="top-end">
-	<Button slot="target">Top end</Button>
+	{#snippet targetSnippet()}
+		<Button>Top end</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -31,7 +40,10 @@
 
 <br />
 <Dropdown placement="bottom">
-	<Button slot="target">bottom</Button>
+	{#snippet targetSnippet()}
+		<Button>bottom</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -40,7 +52,10 @@
 </Dropdown>
 
 <Dropdown placement="bottom-start">
-	<Button slot="target">bottom Start</Button>
+	{#snippet targetSnippet()}
+		<Button>bottom Start</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -49,7 +64,10 @@
 </Dropdown>
 
 <Dropdown placement="bottom-end">
-	<Button slot="target">bottom end</Button>
+	{#snippet targetSnippet()}
+		<Button>bottom end</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -59,7 +77,10 @@
 
 <br />
 <Dropdown placement="left">
-	<Button slot="target">left</Button>
+	{#snippet targetSnippet()}
+		<Button>left</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -68,7 +89,10 @@
 </Dropdown>
 
 <Dropdown placement="left-start">
-	<Button slot="target">left Start</Button>
+	{#snippet targetSnippet()}
+		<Button>left Start</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -77,7 +101,10 @@
 </Dropdown>
 
 <Dropdown placement="left-end">
-	<Button slot="target">left end</Button>
+	{#snippet targetSnippet()}
+		<Button>left end</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -87,7 +114,10 @@
 
 <br />
 <Dropdown placement="right">
-	<Button slot="target">right</Button>
+	{#snippet targetSnippet()}
+		<Button>right</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -96,7 +126,10 @@
 </Dropdown>
 
 <Dropdown placement="right-start">
-	<Button slot="target">right Start</Button>
+	{#snippet targetSnippet()}
+		<Button>right Start</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>
@@ -105,7 +138,10 @@
 </Dropdown>
 
 <Dropdown placement="right-end">
-	<Button slot="target">right end</Button>
+	{#snippet targetSnippet()}
+		<Button>right end</Button>
+	{/snippet}
+
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>
 		<DropdownItem href="#settings">Settings</DropdownItem>

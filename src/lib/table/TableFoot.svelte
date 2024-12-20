@@ -3,10 +3,9 @@
 
 	type $$Props = ElProps
 
-	export let tag: $$Props['tag'] = 'tfoot'
-	export let componentName: $$Props['componentName'] = 'table-foot'
+	let { tag = 'tfoot', componentName = 'table-foot', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName} {tag}>
-	<slot />
+<El {...restProps} {componentName} {tag}>
+	{@render children?.()}
 </El>

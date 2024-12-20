@@ -5,7 +5,7 @@
 
 	type $$Props = AccordionHeaderProps
 
-	let { componentName = 'accordion-header', ...restProps }: $$Props = $props()
+	let { componentName = 'accordion-header', children, ...restProps }: $$Props = $props()
 
 	const parentCtx = getContext<AccordionsContext>('ACCORDIONS')
 	const ctx = getContext<AccordionContext>('ACCORDION')
@@ -35,6 +35,6 @@
 
 <El {...props}>
 	<El tag="button" componentName={componentName + '-button'} onclick={onClick} {cssProps}>
-		<slot />
+		{@render children?.()}
 	</El>
 </El>

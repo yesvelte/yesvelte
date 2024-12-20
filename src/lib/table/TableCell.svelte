@@ -6,25 +6,30 @@
 
 	type $$Props = TableCellProps
 
-	export let tag: $$Props['tag'] = 'td'
-	export let componentName: $$Props['componentName'] = 'table-cell'
-	export let color: $$Props['color'] = undefined
-	export let truncate: $$Props['truncate'] = undefined
-	export let active: $$Props['active'] = undefined
-
-	let head = getContext('TABLE:HEAD') ?? false
-
-	$: cssProps = {
+	let {
+		tag = 'td',
+		componentName = 'table-cell',
 		color,
 		truncate,
 		active,
-	}
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: {
-		tag = head ? 'th' : 'td'
-	}
+	let head = getContext('TABLE:HEAD') ?? false
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		tag: head ? 'th' : 'td',
+		cssProps: {
+			color,
+			truncate,
+			active,
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {componentName} {tag}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

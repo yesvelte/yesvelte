@@ -5,7 +5,7 @@
 <Alert color="success">
 	{#snippet startSnippet()}
 		<Avatar>
-			<img src="https://preview.tabler.io/static/avatars/000m.jpg" alt="" />
+			<img src="/images/avatars/000m.jpg" alt="" />
 		</Avatar>
 	{/snippet}
 	{#snippet children()}
@@ -23,7 +23,7 @@
 <Alert color="warning">
 	{#snippet startSnippet()}
 		<Avatar>
-			<img src="https://preview.tabler.io/static/avatars/002m.jpg" alt="" />
+			<img src="/images/avatars/000m.jpg" alt="" />
 		</Avatar>
 	{/snippet}
 
@@ -35,7 +35,7 @@
 <Alert color="danger">
 	{#snippet startSnippet()}
 		<Avatar>
-			<img src="https://preview.tabler.io/static/avatars/003m.jpg" alt="" />
+			<img src="/images/avatars/000m.jpg" alt="" />
 		</Avatar>
 	{/snippet}
 	{#snippet children()}

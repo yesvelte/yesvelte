@@ -3,7 +3,9 @@
 </script>
 
 <Dropdown>
-	<Button slot="target" color="primary">Toggle Dropdown</Button>
+	{#snippet targetSnippet()}
+		<Button color="primary">Toggle Dropdown</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>

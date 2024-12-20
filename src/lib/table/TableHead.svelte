@@ -5,12 +5,17 @@
 
 	type $$Props = ElProps
 
-	export let tag: $$Props['tag'] = 'thead'
-	export let componentName: $$Props['componentName'] = 'table-head'
+	let { tag = 'thead', componentName = 'table-head', children, ...restProps }: $$Props = $props()
 
 	setContext('TABLE:HEAD', true)
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		tag,
+	})
 </script>
 
-<El {...$$restProps} {componentName} {tag}>
-	<slot />
+<El {...props} {componentName} {tag}>
+	{@render children?.()}
 </El>

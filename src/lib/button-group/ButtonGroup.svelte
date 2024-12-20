@@ -4,23 +4,19 @@
 
 	type $$Props = ButtonGroupProps
 
-	export let componentName: $$Props['componentName'] = 'button-group'
-	export let size: $$Props['size'] = undefined
-	export let vertical: $$Props['vertical'] = undefined
+	let { componentName = 'button-group', size, vertical, children, ...restProps }: $$Props = $props()
 
-	let cssProps: $$Props = {}
-	let props: $$Props = {}
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		role: 'group',
+		cssProps: {
 			size,
 			vertical,
-		}
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El role="group" {...$$restProps} {cssProps} {...props}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

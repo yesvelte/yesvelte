@@ -12,5 +12,9 @@
 	let value = items[2]
 </script>
 
-<Autocomplete {items} bind:value let:item let:index>{index} - {item.value}</Autocomplete>
+<Autocomplete {items} bind:value>
+	{#snippet children({ item, index })}
+		{index} - {item.value}
+	{/snippet}
+</Autocomplete>
 <i>value: {JSON.stringify(value)}</i>

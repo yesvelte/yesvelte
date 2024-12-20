@@ -2,7 +2,7 @@
 	import { Autocomplete } from 'yesvelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value: any = undefined
+	let value: any = $state(undefined)
 </script>
 
 <Autocomplete size="lg" bind:value {items} />

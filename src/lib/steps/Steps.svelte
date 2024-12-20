@@ -7,28 +7,22 @@
 
 	type $$Props = StepsProps
 
-	interface $$Slots {
-		default: { index?: number; item?: any }
-	}
+	let {
+		color,
+		componentName = 'steps',
+		vertical,
+		items,
+		counter,
+		active = $bindable(0),
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	export let color: $$Props['color'] = undefined
-	export let componentName: $$Props['componentName'] = 'steps'
-	export let vertical: $$Props['vertical'] = undefined
-	export let items: $$Props['items'] = undefined
-	export let counter: $$Props['counter'] = undefined
-	export let active: number = 0
+	let element: HTMLElement | undefined = $state(undefined)
 
-	let element: HTMLElement
-
-	let stepComponents: number[] = []
+	let stepComponents: number[] = $state([])
 
 	const activeStore = writable(active)
-
-	$: cssProps = {
-		color,
-		vertical,
-		counter,
-	}
 
 	function register(props: any) {
 		const index = stepComponents.length
@@ -43,17 +37,29 @@
 		stepComponents = stepComponents.filter((comp, index) => index !== idx)
 	}
 
-	$: activeStore.set(active)
+	$effect(() => {
+		activeStore.set(active)
+	})
 
 	setContext('STEPS', { register, unregister, active: activeStore })
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
+			color,
+			vertical,
+			counter,
+		},
+	})
 </script>
 
-<El {componentName} bind:element {...$$restProps} {cssProps}>
+<El bind:element {...props}>
 	{#if items}
 		{#each items as item, index}
-			<slot {item} {index} />
+			{@render children?.({ item, index })}
 		{/each}
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

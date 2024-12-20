@@ -1,31 +1,31 @@
 <script lang="ts">
 	import { Button, FormSelect } from 'yesvelte'
 
-	let hint = ''
-	let state: 'invalid' | undefined = undefined
-	let value: string | undefined = undefined
+	let hint = $state('')
+	let validationState: 'invalid' | undefined = $state(undefined)
+	let value: string | undefined = $state(undefined)
 
 	function validate() {
 		if (!value) {
 			hint = 'This is required'
-			state = 'invalid'
+			validationState = 'invalid'
 		} else {
 			hint = ''
-			state = undefined
+			validationState = undefined
 		}
 	}
 
-	let items = ['HTML', 'CSS', 'JS', 'Svelte']
+	let items = $state(['HTML', 'CSS', 'JS', 'Svelte'])
 </script>
 
 <FormSelect
 	{items}
 	label="Choose a Language:"
-	{state}
+	state={validationState}
 	{hint}
 	required
 	bind:value
-	on:blur={validate}
-	on:change={validate} />
+	onblur={validate}
+	onchange={validate} />
 <br />
-<Button disabled={state === 'invalid'} color="primary">Submit</Button>
+<Button disabled={validationState === 'invalid'} color="primary">Submit</Button>

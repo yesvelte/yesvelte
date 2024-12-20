@@ -9,17 +9,19 @@
 		{ id: 5, value: 'Fifth Item' },
 	]
 
-	function onCreated(event: any) {
+	function onCreated(event: string) {
 		const id = items.length + 1
 
-		items = [...items, { id, value: event.detail }]
+		items = [...items, { id, value: event }]
 		value = id
 	}
 
 	let value: number | undefined = undefined
 </script>
 
-<Autocomplete create on:created={onCreated} key="id" {items} bind:value let:item>
-	{item.value}
+<Autocomplete create oncreated={onCreated} key="id" {items} bind:value let:item>
+	{#snippet children({ item, index })}
+		{item.value}
+	{/snippet}
 </Autocomplete>
 <i>value: {value}</i>

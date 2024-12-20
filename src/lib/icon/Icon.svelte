@@ -12,25 +12,28 @@
 
 	type $$Props = IconProps
 
-	export let componentName: $$Props['componentName'] = 'icon'
-	export let color: $$Props['color'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let pack: $$Props['pack'] = 'tabler'
-	export let size: $$Props['size'] = undefined
+	let {
+		componentName = 'icon',
+		color,
+		name,
+		pack = 'tabler',
+		size,
+		...restProps
+	}: $$Props = $props()
 
-	let loaded = false
+	let loaded = $state(false)
 
 	onMount(() => {
 		loaded = true
 	})
 
-	$: cssProps = {
+	let cssProps: $$Props = $derived({
 		color,
 		size,
-	}
+	})
 </script>
 
-<El {componentName} {...$$restProps} {cssProps}>
+<El {componentName} {...restProps} {cssProps}>
 	{#if loaded}
 		<iconify-icon icon="{pack}:{name}" width="100%" height="100%" />
 	{/if}

@@ -5,29 +5,29 @@
 
 	type $$Props = SpinnerProps
 
-	export let componentName: $$Props['componentName'] = 'spinner'
-	export let color: $$Props['color'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let role: $$Props['role'] = 'status'
-	export let animate: $$Props['animate'] = 'border'
+	let {
+		componentName = 'spinner',
+		color,
+		size,
+		role = 'status',
+		animate = 'border',
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		tag: 'span',
+		componentName,
+		role,
+		cssProps: {
 			size,
 			color,
 			animate,
-		}
-
-		props = {
-			componentName,
-			role,
-		}
-	}
+		},
+	})
 </script>
 
-<El tag="span" {...$$restProps} {cssProps} {...props}>
+<El {...props}>
 	<slot />
 </El>

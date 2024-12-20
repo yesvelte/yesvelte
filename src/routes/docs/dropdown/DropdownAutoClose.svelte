@@ -3,7 +3,9 @@
 </script>
 
 <Dropdown autoClose={false}>
-	<Button slot="target" color="primary">Close Manually</Button>
+	{#snippet targetSnippet()}
+		<Button color="primary">Close Manually</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -13,7 +15,9 @@
 </Dropdown>
 
 <Dropdown autoClose>
-	<Button slot="target" color="success">Auto close</Button>
+	{#snippet targetSnippet()}
+		<Button color="success">Auto close</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -23,7 +27,9 @@
 </Dropdown>
 
 <Dropdown autoClose="inside">
-	<Button slot="target" color="warning">Close if clicked inside of Menu</Button>
+	{#snippet targetSnippet()}
+		<Button color="warning">Close if clicked inside of Menu</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -33,7 +39,9 @@
 </Dropdown>
 
 <Dropdown autoClose="outside">
-	<Button slot="target" color="info">Close if clicked outside of Menu</Button>
+	{#snippet targetSnippet()}
+		<Button color="info">Close if clicked outside of Menu</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>

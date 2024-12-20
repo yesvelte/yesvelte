@@ -11,26 +11,30 @@
 </script>
 
 <Autocomplete {items} key={(item) => item.id} bind:value let:item>
-	<El d="flex" alignItems="center">
-		<Avatar me="2">
-			<img src="/images/avatar.png" />
-		</Avatar>
-		{item.name}
-	</El>
-	<El
-		d="flex"
-		alignItems="center"
-		p="1"
-		pe="3"
-		border
-		borderRadius="pill"
-		bgColor="light"
-		slot="selected">
-		<Avatar shape="circle" size="xs" me="2">
-			<img src="/images/avatar.png" />
-		</Avatar>
-		{item.name}
-	</El>
+	{#snippet children({ item })}
+		<El d="flex" alignItems="center">
+			<Avatar me="2">
+				<img src="/images/avatar.png" />
+			</Avatar>
+			{item.name}
+		</El>
+	{/snippet}
+	{#snippet selectedSnippet({ item })}
+		<El
+			d="flex"
+			alignItems="center"
+			p="1"
+			pe="3"
+			border
+			borderRadius="pill"
+			bgColor="light"
+			slot="selected">
+			<Avatar shape="circle" size="xs" me="2">
+				<img src="/images/avatar.png" />
+			</Avatar>
+			{item.name}
+		</El>
+	{/snippet}
 </Autocomplete>
 
 <i>user id: {value}</i>

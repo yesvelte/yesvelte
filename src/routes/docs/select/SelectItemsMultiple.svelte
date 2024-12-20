@@ -23,9 +23,13 @@
 			value: '5',
 		},
 	]
-	let value: any[] = []
+	let value: any[] = $state([])
 </script>
 
-<Select multiple bind:value key="value" {items} let:item>{item.value} - {item.name}</Select>
+<Select multiple bind:value key="value" {items}>
+	{#snippet children({ item })}
+		{item.value} - {item.name}
+	{/snippet}
+</Select>
 
 <i>value: {JSON.stringify(value)}</i>

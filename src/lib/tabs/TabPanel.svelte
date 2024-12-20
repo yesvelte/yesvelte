@@ -29,8 +29,6 @@
 
 {#if $selectedPanel === panel}
 	<El {...props}>
-		{#if children}
-			{@render children()}
-		{/if}
+		{@render children?.()}
 	</El>
 {/if}

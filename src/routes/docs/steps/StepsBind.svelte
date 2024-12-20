@@ -17,6 +17,8 @@
 	let active: number | undefined = 1
 </script>
 
-<Steps {items} bind:active let:index let:item>
-	<StepItem on:click={() => (active = index)}>{item.text}</StepItem>
+<Steps {items} bind:active>
+	{#snippet children({ item, index })}
+		<StepItem on:click={() => (active = index)}>{item.text}</StepItem>
+	{/snippet}
 </Steps>

@@ -3,9 +3,9 @@
 
 	type $$Props = Partial<ElProps>
 
-	export let componentName: $$Props['componentName'] = 'card-title'
+	let { componentName = 'card-title', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children?.()}
 </El>

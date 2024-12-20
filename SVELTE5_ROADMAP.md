@@ -1,0 +1,44 @@
+# Roadmap
+
+- [x] Accordion
+- [x] Alert
+- [x] Autocomplete
+- [x] Avatar
+- [x] Badge
+- [x] Breadcrumb
+- [x] Button
+- [x] ButtonGroup
+- [x] Card
+- [ ] Checkbox
+- [ ] CheckboxGroup
+- [ ] Datepicker
+- [x] Divider
+- [x] Dropdown
+- [x] Dot
+- [x] Fieldset
+- [ ] FileUpload
+- [x] Icon
+- [x] Input
+- [x] Label
+- [ ] Modal
+- [ ] Offcanvas
+- [ ] Progress
+- [ ] Radio
+- [ ] RadioGroup
+- [ ] Ribbon
+- [x] Select
+- [x] Stamp
+- [x] Steps
+- [x] Spinner
+- [x] Status
+- [ ] Switch
+- [x] Tabs
+- [ ] Textarea
+- [x] Table
+- [ ] Slider
+- [ ] RangeSlider
+- [ ] Pagination
+- [x] FloatingButton (or adding floating action feature to exisiting Button component)
+- [x] Toast
+- [x] Popover
+- [x] Tooltip

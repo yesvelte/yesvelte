@@ -6,68 +6,82 @@
 
 	type $$Props = FormSelectProps
 
-	export let items: $$Props['items'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let key: $$Props['key'] = undefined
-	export let componentName: $$Props['componentName'] = 'form-select'
+	let {
+		items,
+		value = $bindable(),
+		name,
+		size,
+		disabled,
+		label,
+		hint,
+		required,
+		multiple,
+		placeholder,
+		state: validationState,
+		key,
+		componentName = 'form-select',
+		children,
+		labelSnippet,
+		hintSnippet,
+		startSnippet,
+		startIconSnippet,
+		endSnippet,
+		endIconSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let selectProps: SelectProps = {}
-	let props: $$Props = {}
-	let id: string
+	let id: string | undefined = $state(undefined)
 
-	$: {
-		selectProps = {
-			placeholder,
-			disabled,
-			multiple,
-			size,
-			items,
-			state,
-			key,
-			name,
-		}
+	let selectProps: SelectProps = $derived({
+		placeholder,
+		disabled,
+		multiple,
+		size,
+		items,
+		state: validationState,
+		key,
+		name,
+	})
 
-		props = {
-			componentName,
-			required,
-			label,
-			hint,
-			state,
-			id,
-		}
-	}
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		labelSnippet,
+		hintSnippet,
+		required,
+		label,
+		hint,
+		state: validationState,
+		id,
+	})
 </script>
 
-<FormField {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<svelte:fragment slot="group">
-		<slot name="start">
-			{#if $$slots['start-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="start-icon" />
-				</El>
-			{/if}
-		</slot>
-		<Select {...selectProps} bind:value bind:id let:item let:index>
-			<slot {index} {item}>{item}</slot>
+<FormField {...props}>
+	{#snippet groupSnippet()}
+		{#if startSnippet}
+			{@render startSnippet()}
+		{:else if startIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render startIconSnippet()}
+			</El>
+		{/if}
+
+		<Select {...selectProps} bind:value bind:id>
+			{#snippet children({ item, index })}
+				{#if children}
+					{@render children({ item, index })}
+				{:else}
+					{item}
+				{/if}
+			{/snippet}
 		</Select>
 
-		<slot name="end">
-			{#if $$slots['end-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="end-icon" />
-				</El>
-			{/if}
-		</slot>
-	</svelte:fragment>
-	<slot name="hint" slot="hint" />
+		{#if endSnippet}
+			{@render endSnippet()}
+		{:else if endIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render endIconSnippet()}
+			</El>
+		{/if}
+	{/snippet}
 </FormField>

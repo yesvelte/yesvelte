@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FormSelect } from 'yesvelte'
 
-	let items = [
+	let items = $state([
 		{
 			name: 'Apple',
 			id: '1',
@@ -27,19 +27,23 @@
 			id: '5',
 			type: 'Fruit',
 		},
-	]
+	])
 
-	let value: any = '1'
+	let value: any = $state('1')
 </script>
 
 <!-- key is string -->
-<FormSelect label="Fruit" key="id" bind:value {items} let:item let:index>
-	{item.id} - {item.name}
+<FormSelect label="Fruit" key="id" bind:value {items}>
+	{#snippet children({ item })}
+		{item.id} - {item.name}
+	{/snippet}
 </FormSelect>
 
 <!-- key is function -->
-<FormSelect label="Fruit" key={(item) => item.id} bind:value {items} let:item let:index>
-	{item.id} - {item.name}
+<FormSelect label="Fruit" key={(item) => item.id} bind:value {items}>
+	{#snippet children({ item })}
+		{item.id} - {item.name}
+	{/snippet}
 </FormSelect>
 
 <i>Selected Id: {value} - value: {JSON.stringify(items.find((item) => item.id === value))}</i>

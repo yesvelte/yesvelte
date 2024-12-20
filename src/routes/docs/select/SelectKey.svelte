@@ -27,9 +27,17 @@
 </script>
 
 <!-- key is string -->
-<Select bind:value key="value" {items} let:item>{item.value} - {item.name}</Select>
+<Select bind:value key="value" {items} let:item>
+	{#snippet children({ item })}
+		{item.value} - {item.name}
+	{/snippet}
+</Select>
 
 <!-- key is a function -->
-<Select bind:value key={(item) => item.value} {items} let:item>{item.value} - {item.name}</Select>
+<Select bind:value key={(item) => item.value} {items} let:item>
+	{#snippet children({ item })}
+		{item.value} - {item.name}
+	{/snippet}
+</Select>
 
 <i>value: {JSON.stringify(value)}</i>

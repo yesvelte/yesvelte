@@ -43,8 +43,6 @@
 
 <El {...restProps} {tag} {componentName} onclick={() => (!disabled ? selectTab(tab) : null)}>
 	<El bind:element tag="button" componentName="{componentName}-link" {cssProps}>
-		{#if children}
-			{@render children()}
-		{/if}
+		{@render children?.()}
 	</El>
 </El>

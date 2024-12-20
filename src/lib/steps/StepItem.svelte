@@ -5,15 +5,16 @@
 
 	type $$Props = StepItemProps
 
-	export let componentName: $$Props['componentName'] = 'step-item'
-	export let href: $$Props['href'] = undefined
-	export let active: $$Props['active'] = undefined
-	export let color: $$Props['color'] = undefined
+	let {
+		componentName = 'step-item',
+		href,
+		active,
+		color,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let index: number = 0
-
-	let cssProps: object = {}
-	let props: $$Props = {}
+	let index: number = $state(0)
 
 	const { register, unregister, active: activeIndex } = getContext<any>('STEPS')
 
@@ -25,23 +26,24 @@
 		}
 	})
 
-	$: if (active) $activeIndex = index
+	$effect(() => {
+		if (active) $activeIndex = index
+	})
 
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		tag: href ? 'a' : 'span',
+		componentName,
+		href,
+		cssProps: {
 			beforeActive: $activeIndex > index,
 			afterActive: $activeIndex < index,
 			active: $activeIndex === index,
 			color,
-		}
-		props = {
-			tag: href ? 'a' : 'span',
-			componentName,
-			href,
-		}
-	}
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {...props} on:click>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

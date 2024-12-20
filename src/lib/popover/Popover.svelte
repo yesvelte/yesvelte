@@ -5,23 +5,28 @@
 
 	type $$Props = PopoverProps
 
-	export let componentName: $$Props['componentName'] = 'popover'
-	export let arrow: $$Props['arrow'] = true
-	export let popupOffset: $$Props['popupOffset'] = 8
-	export let title: $$Props['title'] = undefined
-	export let trigger: $$Props['trigger'] = 'click'
+	let {
+		componentName = 'popover',
+		arrow = true,
+		popupOffset = 8,
+		title,
+		trigger = 'click',
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		componentName,
 		arrow,
 		trigger,
 		popupOffset,
-	}
+	})
 </script>
 
-<Popup {...$$restProps} {...props}>
+<Popup {...props}>
 	{#if title}
 		<PopoverHeader>{title}</PopoverHeader>
 	{/if}
-	<slot />
+	{@render children?.()}
 </Popup>

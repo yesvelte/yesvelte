@@ -5,25 +5,34 @@
 
 	type $$Props = FormFieldProps
 
-	export let componentName: $$Props['componentName'] = 'form-field'
-	export let label: $$Props['label'] = undefined
-	export let id: $$Props['id'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let state: $$Props['state'] = undefined
+	let {
+		componentName = 'form-field',
+		label,
+		id,
+		hint,
+		required,
+		state,
+		children,
+		labelSnippet,
+		hintSnippet,
+		groupSnippet,
+		...restProps
+	}: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
+<El {...restProps} {componentName}>
 	{#if label}
 		<Label for={id} {required}>{label}</Label>
 	{/if}
-	<slot name="label" />
-	<slot>
+	{@render labelSnippet?.()}
+	{#if children}
+		{@render children?.()}
+	{:else}
 		<El componentName="{componentName}-group">
-			<slot name="group" />
+			{@render groupSnippet?.()}
 		</El>
-	</slot>
-	<slot name="hint" />
+	{/if}
+	{@render hintSnippet?.()}
 	{#if hint}
 		<El componentName={componentName + '-hint'} cssProps={{ state }}>
 			{hint}

@@ -5,20 +5,24 @@
 
 	type $$Props = ElProps
 
-	export let componentName: $$Props['componentName'] = 'accordion-body'
+	let {
+		componentName = 'accordion-body',
+		show = $bindable(),
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	let ctx = getContext<AccordionContext>('ACCORDION')
 
-	let props: ElProps = {}
-	$: props = {
+	let props: ElProps = $derived({
+		...restProps,
 		componentName,
-	}
-
-	$: show = $ctx.open
+		show: $ctx.open,
+	})
 </script>
 
-<El {...$$restProps} {...props} {show}>
+<El {...props}>
 	<El componentName="{componentName}-inner">
-		<slot />
+		{@render children?.()}
 	</El>
 </El>

@@ -5,36 +5,36 @@
 
 	type $$Props = TableProps
 
-	export let tag: $$Props['tag'] = 'table'
-	export let componentName: $$Props['componentName'] = 'table'
-	export let color: $$Props['color'] = undefined
-	export let hover: $$Props['hover'] = undefined
-	export let striped: $$Props['striped'] = undefined
-	export let wrap: $$Props['wrap'] = undefined
-	export let responsive: $$Props['responsive'] = undefined
-	export let size: $$Props['size'] = undefined
-
-	$: cssProps = {
+	let {
+		tag = 'table',
+		componentName = 'table',
 		color,
-		// border,
 		hover,
 		striped,
 		wrap,
-		size,
-	}
-
-	$: parentCssProps = {
 		responsive,
-	}
+		size,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: otherProps = {
+	let tableProps: $$Props = $derived({
+		...restProps,
 		tag,
 		componentName,
-	}
+		cssProps: {
+			color,
+			// border,
+			hover,
+			striped,
+			wrap,
+			size,
+		},
+	})
 </script>
 
-<El componentName="{componentName}-wrapper" cssProps={parentCssProps}>
-	<El {...$$restProps} {cssProps} {...otherProps}>
-		<slot />
+<El componentName="{componentName}-wrapper" cssProps={{ responsive }}>
+	<El {...tableProps}>
+		{@render children?.()}
 	</El>
 </El>

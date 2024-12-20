@@ -20,7 +20,5 @@
 </script>
 
 <El {...props}>
-	{#if children}
-		{@render children()}
-	{/if}
+	{@render children?.()}
 </El>

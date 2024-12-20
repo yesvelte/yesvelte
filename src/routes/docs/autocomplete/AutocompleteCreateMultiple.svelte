@@ -4,12 +4,11 @@
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
 	let value = ['Apple']
 
-	function onCreated({ detail }: CustomEvent<string>) {
-		console.log('onCreated')
-		value = [...value, detail]
-		items = [...items, detail]
+	function onCreated(event: string) {
+		value = [...value, event]
+		items = [...items, event]
 	}
 </script>
 
-<Autocomplete on:created={onCreated} multiple create {items} bind:value />
+<Autocomplete oncreated={onCreated} multiple create {items} bind:value />
 <i>value: {value}</i>

@@ -1,15 +1,13 @@
 $dropdown-props: (
 	null: '%dropdown',
 	menu: '%dropdown-menu' '%show',
-	placement: (
-		start: '%dropstart',
+	placement: (start: '%dropstart',
 		left: '%dropstart',
 		right: '%dropend',
 		end: '%dropend',
 		top: '%dropup'
 	),
-	item: (
-		null: '%dropdown-item',
+	item: (null: '%dropdown-item',
 		active: '%active',
 		disabled: '%disabled',
 		divider: '%dropdown-divider',
@@ -30,7 +28,7 @@ $dropdown-props: (
 		display: contents;
 		cursor: pointer;
 
-		& > * {
+		&>* {
 			@extend %dropdown-toggle;
 
 			.#{$prefix-dropdown}-split & {
@@ -41,5 +39,9 @@ $dropdown-props: (
 				display: none;
 			}
 		}
+	}
+
+	&-menu {
+		display: block;
 	}
 }

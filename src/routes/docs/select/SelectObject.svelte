@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Select } from 'yesvelte'
 
-	let items = [
+	let items = $state([
 		{
 			name: 'Apple',
 			id: '1',
@@ -27,11 +27,15 @@
 			id: '5',
 			type: 'Fruit',
 		},
-	]
+	])
 
-	let value: any = items[1]
+	let value: any = $state(items[1])
 </script>
 
-<Select bind:value {items} let:item let:index>{item.id} - {item.name}</Select>
+<Select bind:value {items}>
+	{#snippet children({ item })}
+		{item.id} - {item.name}
+	{/snippet}
+</Select>
 
 <i>value: {JSON.stringify(value)}</i>

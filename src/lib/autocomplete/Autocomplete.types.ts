@@ -17,5 +17,8 @@ export interface AutocompleteProps extends Partial<ElProps> {
 	value?: string | any | any[]
 	_slots?: Record<string, boolean>
 	readonly?: boolean
-	children: Snippet<[{ item: any; index: number }]>
+	children?: Snippet<[{ item: any; index: number }]>
+	oncreated?: any
+	oninput?: any
+	onchanged?: any
 }

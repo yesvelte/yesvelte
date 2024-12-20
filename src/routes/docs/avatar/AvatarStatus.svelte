@@ -3,7 +3,7 @@
 </script>
 
 <Avatar>
-	<img src="https://preview.tabler.io/static/avatars/000m.jpg" alt="" />
+	<img src="/images/avatars/000m.jpg" alt="" />
 	<Badge dot color="success" />
 </Avatar>
 <Avatar>
@@ -11,7 +11,7 @@
 	<Badge color="warning">5</Badge>
 </Avatar>
 <Avatar>
-	<img src="https://preview.tabler.io/static/avatars/002f.jpg" alt="" />
+	<img src="/images/avatars/002f.jpg" alt="" />
 	<Badge dot color="primary" />
 </Avatar>
 <Avatar>

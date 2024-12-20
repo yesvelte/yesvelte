@@ -7,7 +7,7 @@
 	}
 </script>
 
-<Button color="danger" on:click={toggle}>
+<Button color="danger" onclick={toggle}>
 	{show ? 'Hide' : 'Show'}
 </Button>
 

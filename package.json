@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.218",
+	"version": "0.1.0",
 	"description": "YeSvelte UI component library for Svelte",
 	"sideEffects": false,
 	"keywords": [
@@ -67,7 +67,7 @@
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
 		"prismjs": "^1.29.0",
-		"sass": "^1.62.1",
+		"sass": "1.62.1",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.0.4",
 		"tailwindcss": "^3.3.2",

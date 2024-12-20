@@ -4,26 +4,19 @@
 
 	type $$Props = LabelProps
 
-	export let componentName: $$Props['componentName'] = 'label'
-	export let required: $$Props['required'] = undefined
+	let { componentName = 'label', required, children, for: fore, ...restProps }: $$Props = $props()
 
-	let fore: $$Props['for'] = undefined
-	export { fore as for }
-
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props = $derived({
+		...restProps,
+		tag: 'label',
+		for: fore,
+		componentName,
+		cssProps: {
 			required,
-		}
-
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El tag="label" {...$$restProps} for={fore} {cssProps} {...props}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

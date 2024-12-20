@@ -4,40 +4,42 @@
 
 	type $$Props = BadgeProps
 
-	export let componentName: $$Props['componentName'] = 'badge'
-	export let tag: $$Props['tag'] = 'span'
-	export let color: $$Props['color'] = undefined
-	export let dot: $$Props['dot'] = undefined
-	export let ghost: $$Props['ghost'] = undefined
-	export let href: $$Props['href'] = undefined
-	export let outline: $$Props['outline'] = undefined
-	export let pill: $$Props['pill'] = undefined
-	export let tile: $$Props['tile'] = undefined
-	export let blink: $$Props['blink'] = undefined
-	export let notification: $$Props['notification'] = undefined
-
-	let cssProps: BadgeProps = {}
-	let props: BadgeProps = {}
-	$: cssProps = {
-		notification,
-		tile,
-		pill,
-		outline,
-		ghost,
-		dot,
+	let {
+		componentName = 'badge',
+		tag = 'span',
 		color,
+		dot,
+		ghost,
+		href,
+		outline,
+		pill,
+		tile,
 		blink,
-	}
+		notification,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: props = {
+	let props: BadgeProps = $derived({
+		...restProps,
 		href,
 		tag: href ? 'a' : tag,
 		componentName,
-	}
+		cssProps: {
+			notification,
+			tile,
+			pill,
+			outline,
+			ghost,
+			dot,
+			color,
+			blink,
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {...props} tag={href ? 'a' : tag}>
+<El {...props}>
 	{#if !dot}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { onDestroy, setContext } from 'svelte'
+	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
 	import type { TabsContext, TabsProps } from './Tab.types'
@@ -65,7 +65,5 @@
 </script>
 
 <El {...props}>
-	{#if children}
-		{@render children()}
-	{/if}
+	{@render children?.()}
 </El>

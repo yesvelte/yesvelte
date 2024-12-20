@@ -4,46 +4,46 @@
 
 	type $$Props = DropdownItemProps
 
-	export let componentName: $$Props['componentName'] = 'dropdown-item'
-
-	export let divider: $$Props['divider'] = undefined
-	export let header: $$Props['header'] = undefined
-	export let active: $$Props['active'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-
-	export let href: $$Props['href'] = undefined
-
-	$: cssProps = {
+	let {
+		componentName = 'dropdown-item',
+		divider,
+		header,
 		active,
 		disabled,
-		header,
-		divider,
-	}
+		href,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let wrapperProps: $$Props
-	$: wrapperProps = {
+	let wrapperProps: $$Props = $derived({
 		componentName: componentName + '-wrapper',
 		tag: 'li',
-	}
+	})
 
-	let props: $$Props
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		componentName,
 		href,
 		tag: 'a',
-	}
+		cssProps: {
+			active,
+			disabled,
+			header,
+			divider,
+		},
+	})
 </script>
 
 {#if divider}
 	<El tag="hr" componentName="{componentName}-divider" />
 {:else if header}
 	<El tag="h6" componentName="{componentName}-header">
-		<slot />
+		{@render children?.()}
 	</El>
 {:else}
-	<El {...$$restProps} {...wrapperProps}>
-		<El {...props} {cssProps} on:click>
-			<slot />
+	<El {...wrapperProps}>
+		<El {...props}>
+			{@render children?.()}
 		</El>
 	</El>
 {/if}

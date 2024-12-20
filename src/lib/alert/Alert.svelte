@@ -18,13 +18,12 @@
 		...restProps
 	}: $$Props = $props()
 
-	let cssProps: AlertProps = $derived({ color, icon, important, dismissible })
 	let props: AlertProps = $derived({
 		...restProps,
 		componentName,
-		cssProps,
 		show: open,
 		role: 'alert',
+		cssProps: { color, icon, important, dismissible },
 	})
 </script>
 
@@ -49,9 +48,7 @@
 			</El>
 		{/if}
 		<div>
-			{#if children}
-				{@render children()}
-			{/if}
+			{@render children?.()}
 		</div>
 	</El>
 	{#if dismissible}

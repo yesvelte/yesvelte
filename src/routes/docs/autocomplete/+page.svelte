@@ -45,7 +45,7 @@
 
 	<Doc title="Events">
 		<p slot="description">
-			Autocomplete only supports <code>changed</code> and <code>input</code> events.
+			Autocomplete supports <code>changed</code> and <code>input</code> events.
 		</p>
 		<Preview src="./AutocompleteEvents.svelte">
 			<AutocompleteEvents />

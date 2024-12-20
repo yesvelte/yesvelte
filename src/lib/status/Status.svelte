@@ -4,25 +4,19 @@
 
 	type $$Props = StatusProps
 
-	export let componentName: $$Props['componentName'] = 'status'
-	export let color: $$Props['color'] = undefined
-	export let lite: $$Props['lite'] = undefined
+	let { componentName = 'status', color, lite, children, ...restProps }: $$Props = $props()
 
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		tag: 'span',
+		componentName,
+		cssProps: {
 			color,
 			lite,
-		}
-
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El tag="span" {...$$restProps} {cssProps} {...props}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

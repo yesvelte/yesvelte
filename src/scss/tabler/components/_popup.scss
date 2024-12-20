@@ -1,4 +1,9 @@
-$popup-arrow-placements: ('bottom', 'top', 'left', 'right');
+$popup-arrow-placements: (
+	'bottom',
+	'top',
+	'left',
+	'right'
+);
 
 .#{$prefix-popup} {
 	--y-popup-offset: 8px;
@@ -9,15 +14,14 @@ $popup-arrow-placements: ('bottom', 'top', 'left', 'right');
 	left: 0;
 	top: 0;
 	opacity: 0;
-	display: none;
 
 	pointer-events: none;
 	scale: 0.98;
 	transition: opacity 0.15s, scale 0.15s ease;
 
 	&-show {
-		display: block;
 		pointer-events: all;
+		display: block;
 		opacity: 1;
 		scale: 1;
 	}
