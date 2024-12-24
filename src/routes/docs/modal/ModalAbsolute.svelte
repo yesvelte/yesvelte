@@ -1,10 +1,10 @@
 <script>
 	import { Button, Modal, ModalBody, ModalFooter } from 'yesvelte'
 
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button on:click={() => (show = true)} color="primary">Absolute Modal</Button>
+<Button onclick={() => (show = true)} color="primary">Absolute Modal</Button>
 
 <Modal absolute bind:show title="Modal title">
 	<ModalBody>
@@ -13,7 +13,7 @@
 		reprehenderit sit tempora totam unde.
 	</ModalBody>
 	<ModalFooter>
-		<Button me="auto" on:click={() => (show = false)}>Close</Button>
-		<Button color="primary" on:click={() => (show = false)}>Save changes</Button>
+		<Button me="auto" onclick={() => (show = false)}>Close</Button>
+		<Button color="primary" onclick={() => (show = false)}>Save changes</Button>
 	</ModalFooter>
 </Modal>

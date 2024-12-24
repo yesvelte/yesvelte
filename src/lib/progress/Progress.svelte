@@ -4,24 +4,19 @@
 
 	type $$Props = ProgressProps
 
-	export let componentName: $$Props['componentName'] = 'progress'
-	export let size: $$Props['size'] = undefined
-	export let separated: $$Props['separated'] = undefined
+	let { componentName = 'progress', size, separated, children, ...restProps }: $$Props = $props()
 
-	let cssProps: $$Props = {}
-	let props: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		role: 'progressbar',
+		cssProps: {
 			size,
 			separated,
-		}
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {...props} role="progressbar">
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

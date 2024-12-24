@@ -4,10 +4,6 @@
 
 	type $$Props = SelectProps
 
-	// interface $$Slots {
-	// 	default: { index?: number; item?: any }
-	// }
-
 	let {
 		componentName = 'select',
 		items,

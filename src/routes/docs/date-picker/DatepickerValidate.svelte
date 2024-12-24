@@ -1,24 +1,23 @@
 <script lang="ts">
 	import { DatePicker, El } from 'yesvelte'
 
-	let state: 'invalid' | undefined = undefined
-	let hint: string = ''
+	let validationState: 'invalid' | undefined = $state(undefined)
+	let hint: string = $state('')
 
-	function onChange() {
-		console.log(new Date(value), new Date(), new Date(value) > new Date())
+	function onchanged() {
 		if (new Date(value) > new Date()) {
 			hint = 'Day is not in the past'
-			state = 'invalid'
+			validationState = 'invalid'
 		} else {
 			hint = ''
-			state = undefined
+			validationState = undefined
 		}
 	}
 
-	let value: any
+	let value: any = $state(undefined)
 </script>
 
 <El tag="strong">choose a day in the past:</El>
-<DatePicker {state} bind:value on:changed={onChange} />
+<DatePicker state={validationState} bind:value {onchanged} />
 <El mb="3" tag="small">{hint}</El>
 <El>value: {value}</El>

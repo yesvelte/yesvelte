@@ -6,70 +6,79 @@
 
 	type $$Props = FormDatePickerProps
 
-	export let componentName: $$Props['componentName'] = 'form-date-picker'
-	export let disabled: $$Props['disabled'] = undefined
-	export let borderRounded: $$Props['borderRounded'] = undefined
-	export let borderFlush: $$Props['borderFlush'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let range: $$Props['range'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let options: $$Props['options'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let name: $$Props['name'] = undefined
+	let {
+		componentName = 'form-date-picker',
+		disabled,
+		borderRounded,
+		borderFlush,
+		placeholder,
+		range,
+		required,
+		options,
+		size,
+		state: validationState,
+		value,
+		label,
+		hint,
+		name,
+		startIconSnippet,
+		endIconSnippet,
+		startSnippet,
+		endSnippet,
+		labelSnippet,
+		hintSnippet,
+		groupSnippet,
+		...restProps
+	}: $$Props = $props()
 
+	let id: string | undefined = $state(undefined)
 
-	let id: string
-	let props: $$Props = {}
-	let datePickerProps: $$Props = {}
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		required,
+		label,
+		hint,
+		state: validationState,
+		id,
+		labelSnippet,
+		hintSnippet,
+	})
 
-	$: {
-		props = {
-			componentName,
-			required,
-			label,
-			hint,
-			state,
-			id,
-		}
-
-		datePickerProps = {
-			placeholder,
-			disabled,
-			required,
-			options,
-			size,
-			state,
-			range,
-			borderRounded,
-			borderFlush,
-			name,
-		}
-	}
+	let datePickerProps: $$Props = $derived({
+		placeholder,
+		disabled,
+		required,
+		options,
+		size,
+		state: validationState,
+		range,
+		borderRounded,
+		borderFlush,
+		name,
+	})
 </script>
 
-<FormField {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
+<FormField {...props}>
+	{#if groupSnippet}
+		{@render groupSnippet()}
+	{:else}
+		{#if startSnippet}
+			{@render startSnippet()}
+		{:else if startIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render startIconSnippet()}
+			</El>
+		{/if}
 
-	<svelte:fragment slot="group">
-		<slot name="start">
-			{#if $$slots['start-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="start-icon" />
-				</El>
-			{/if}
-		</slot>
-		<DatePicker bind:id {...datePickerProps} bind:value on:changed />
-		<slot name="end">
-			{#if $$slots['end-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="end-icon" />
-				</El>
-			{/if}
-		</slot>
-	</svelte:fragment>
-	<slot name="hint" slot="hint" />
+		<DatePicker bind:id {...datePickerProps} bind:value />
+
+		{#if endSnippet}
+			{@render endSnippet()}
+		{:else if endIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render endIconSnippet()}
+			</El>
+		{/if}
+	{/if}
 </FormField>

@@ -9,29 +9,39 @@
 		<SidebarItem disabled href="./accordion.html" title="Accordion  (disabled)" />
 		<SidebarItem href="./blank.html" title="Blank page" />
 		<SidebarItem href="./badges.html" title="Badges">
-			<Badge color="green" slot="end">New</Badge>
+			{#snippet endSnippet()}
+				<Badge color="green">New</Badge>
+			{/snippet}
 		</SidebarItem>
 		<SidebarItem href="./buttons.html" title="Buttons" />
 		<SidebarItem title="Cards">
 			<SidebarItem href="./cards.html" title="Sample cards" />
 			<SidebarItem href="./card-actions.html" title="Card actions">
-				<Badge color="green" slot="end">New</Badge>
+				{#snippet endSnippet()}
+					<Badge color="green">New</Badge>
+				{/snippet}
 			</SidebarItem>
 			<SidebarItem href="./cards-masonry.html" title="Cards Masonry" />
 		</SidebarItem>
 		<SidebarItem href="./colors.html" title="Colors" />
 		<SidebarItem href="./datagrid.html" title="Data grid">
-			<Badge color="green" slot="end">New</Badge>
+			{#snippet endSnippet()}
+				<Badge color="green">New</Badge>
+			{/snippet}
 		</SidebarItem>
 		<SidebarItem href="./datatables.html" title="Datatables">
-			<Badge color="green" slot="end">New</Badge>
+			{#snippet endSnippet()}
+				<Badge color="green">New</Badge>
+			{/snippet}
 		</SidebarItem>
 		<SidebarItem href="./dropdowns.html" title="Dropdowns" />
 		<SidebarItem href="./modals.html" title="Modals" />
 		<SidebarItem href="./maps.html" title="Maps" />
 		<SidebarItem href="./map-fullsize.html" title="Map fullsize" />
 		<SidebarItem href="./maps-vector.html" title="Vector maps">
-			<Badge color="green" slot="end">New</Badge>
+			{#snippet endSnippet()}
+				<Badge color="green">New</Badge>
+			{/snippet}
 		</SidebarItem>
 		<SidebarItem href="./navigation.html" title="Navigation" />
 		<SidebarItem href="./charts.html" title="Charts" />

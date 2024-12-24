@@ -5,12 +5,22 @@
 <Sidebar theme="dark">
 	<SidebarItem icon="home" title="Default title" />
 	<SidebarItem>
-		<Icon slot="start" name="home" />
-		<El slot="title"><b>Custom</b> title</El>
-		<Badge slot="end">New</Badge>
+		{#snippet startSnippet()}
+			<Icon name="home" />
+		{/snippet}
+		{#snippet titleSnippet()}
+			<El><b>Custom</b> title</El>
+		{/snippet}
+		{#snippet endSnippet()}
+			<Badge>New</Badge>
+		{/snippet}
 	</SidebarItem>
 	<SidebarItem icon="home">
-		<El slot="title"><b>Another</b> Item</El>
-		<Badge slot="end">New</Badge>
+		{#snippet titleSnippet()}
+			<El><b>Another</b> Item</El>
+		{/snippet}
+		{#snippet endSnippet()}
+			<Badge>New</Badge>
+		{/snippet}
 	</SidebarItem>
 </Sidebar>

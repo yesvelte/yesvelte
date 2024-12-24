@@ -4,33 +4,31 @@
 
 	type $$Props = ProgressBarProps
 
-	export let componentName: $$Props['componentName'] = 'progress-bar'
-	export let color: $$Props['color'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let striped: $$Props['striped'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let indeterminate: $$Props['indeterminate'] = undefined
+	let {
+		componentName = 'progress-bar',
+		color,
+		value,
+		striped,
+		label,
+		indeterminate,
+		...restProps
+	}: $$Props = $props()
 
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-	let _label: string = ''
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
 			color,
 			striped,
 			indeterminate,
-		}
-		props = {
-			componentName,
-		}
-		_label = label ?? value + '% completed'
-	}
+		},
+	})
+
+	let _label = $derived(label ?? value + '% completed')
 </script>
 
 <El
-	{...$$restProps}
 	{...props}
-	{cssProps}
 	{componentName}
 	role="progressbar"
 	style="width: {value}%"

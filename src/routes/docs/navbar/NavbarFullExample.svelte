@@ -13,7 +13,7 @@
 </script>
 
 <Navbar theme="light">
-	<NavbarItem dMd="none" on:click={() => (offcanvasOpen = !offcanvasOpen)} icon="menu-2" />
+	<NavbarItem dMd="none" onclick={() => (offcanvasOpen = !offcanvasOpen)} icon="menu-2" />
 	<El row style="width: 15rem">
 		<El col tag="h1" mb="0">Logo</El>
 	</El>

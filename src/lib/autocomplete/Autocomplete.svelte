@@ -59,7 +59,7 @@
 			if (query.length === 0) {
 				if (multiple) {
 					let currentPosition = cursorPosition
-					value = value.filter((x, index) => index !== cursorPosition)
+					value = value.filter((x, index) => index != cursorPosition)
 
 					cursorPosition = Math.min(currentPosition, value.length - 1)
 				} else {
@@ -112,7 +112,7 @@
 
 		if (multiple) {
 			if (value.includes(item)) {
-				value = value.filter((x: any) => getKey(x) !== getKey(item))
+				value = value.filter((x: any) => getKey(x) != getKey(item))
 			} else {
 				value = [...(value ?? []), getKey(item)]
 			}
@@ -152,7 +152,7 @@
 
 	function onRemove(item: any) {
 		if (multiple) {
-			value = value.filter((x) => getKey(x) !== getKey(item))
+			value = value.filter((x) => getKey(x) != getKey(item))
 		} else {
 			value = undefined
 		}
@@ -162,7 +162,7 @@
 		fuzzy
 			.filter(
 				query,
-				items.filter((i) => value !== getKey(i)),
+				items.filter((i) => value != getKey(i)),
 				{
 					extract(input) {
 						return JSON.stringify(getKey(input))
@@ -175,12 +175,12 @@
 	function isSelected(item) {
 		if (multiple) {
 			if (value && Array.isArray(value)) {
-				return value.find((x) => getKey(x) === getKey(item))
+				return value.find((x) => getKey(x) == getKey(item))
 			} else {
 				return false
 			}
 		} else {
-			return getKey(value) === getKey(item)
+			return getKey(value) == getKey(item)
 		}
 	}
 
@@ -206,11 +206,11 @@
 <El {...props}>
 	{#if Array.isArray(value)}
 		{#each value as val, index}
-			{@const item = items.find((x) => getKey(x) === getKey(val))}
+			{@const item = items.find((x) => getKey(x) == getKey(val))}
 			{#if item}
 				<El
 					componentName="{componentName}-item"
-					cssProps={{ multiple: true, active: cursorPosition === index }}>
+					cssProps={{ multiple: true, active: cursorPosition == index }}>
 					{#if selectedSnippet}
 						{@render selectedSnippet({ item, index })}
 					{:else if children}

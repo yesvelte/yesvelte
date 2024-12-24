@@ -316,6 +316,7 @@
 	})
 
 	onMount(() => {
+		id = elComponentName + '_' + globalCounter++
 		if (element) {
 			animate = createAnimationStore({
 				element,
@@ -332,7 +333,7 @@
 	</svelte:element>
 {:else if tag === 'input'}
 	{#if restProps.type === 'checkbox' || restProps.type === 'radio'}
-		<input bind:this={element} {...restProps} {...elProps} />
+		<input bind:this={element} {...restProps} {...elProps} {value} />
 	{:else}
 		<input bind:this={element} {...restProps} {...elProps} bind:value />
 	{/if}

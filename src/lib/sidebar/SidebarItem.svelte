@@ -6,58 +6,69 @@
 
 	type $$Props = SidebarItemProps
 
-	export let componentName: $$Props['componentName'] = 'sidebar-item'
-	export let disabled: $$Props['disabled'] = undefined
-	export let active: $$Props['active'] = undefined
-	export let icon: $$Props['icon'] = undefined
-	export let title: $$Props['title'] = undefined
-	export let href: $$Props['href'] = undefined
+	let {
+		componentName = 'sidebar-item',
+		disabled,
+		active,
+		onclick,
+		icon,
+		title,
+		href,
+		children,
+		startSnippet,
+		titleSnippet,
+		endSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let wrapperProps: Partial<ElProps>
-	$: wrapperProps = {
+	let wrapperProps: Partial<ElProps> = $derived({
+		...restProps,
 		tag: 'li',
 		componentName: componentName + '-wrapper',
-	}
+		cssProps: { dropdown: !!children },
+	})
 
-	let props: Partial<ElProps>
-	$: props = {
+	let props: Partial<ElProps> = $derived({
 		tag: href ? 'a' : 'div',
 		href,
 		componentName,
-	}
-
-	$: dropdown = $$slots['default']
-	$: cssProps = {
-		disabled,
-		dropdown,
-		active,
-	}
+		cssProps: {
+			disabled,
+			onclick,
+			active,
+			dropdown: !!children,
+		},
+	})
 </script>
 
-<El {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
-	<El on:click {...props} {cssProps}>
-		{#if icon || $$slots['start']}
+<El {...wrapperProps}>
+	<El {...props}>
+		{#if icon || startSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="start">
+				{#if startSnippet}
+					{@render startSnippet()}
+				{:else}
 					<Icon name={icon} />
-				</slot>
+				{/if}
 			</El>
 		{/if}
-		{#if title || $$slots['title']}
+		{#if title || titleSnippet}
 			<El tag="span" componentName="{componentName}-title">
-				<slot name="title">
+				{#if titleSnippet}
+					{@render titleSnippet()}
+				{:else}
 					{title}
-				</slot>
+				{/if}
 			</El>
 		{/if}
-		{#if $$slots['end']}
+		{#if endSnippet}
 			<El componentName="{componentName}-end">
-				<slot name="end" />
+				{@render endSnippet()}
 			</El>
 		{/if}
 	</El>
 
-	{#if $$slots['default']}
+	{#if children}
 		<Popup
 			tag="ul"
 			trigger="click"
@@ -65,7 +76,7 @@
 			autoClose={false}
 			placement="right-start"
 			componentName="{componentName}-menu">
-			<slot />
+			{@render children()}
 		</Popup>
 	{/if}
 </El>

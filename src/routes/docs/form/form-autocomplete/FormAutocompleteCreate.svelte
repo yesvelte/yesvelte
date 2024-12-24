@@ -2,18 +2,13 @@
 	import { FormAutocomplete } from 'yesvelte'
 
 	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let value = $state('')
 
-	function onCreated({ detail }: CustomEvent<string>) {
+	function oncreated(detail: string) {
 		value = detail
 		items = [...items, detail]
 	}
 </script>
 
-<FormAutocomplete
-	label="Choose item (or create new)"
-	on:created={onCreated}
-	create
-	{items}
-	bind:value />
+<FormAutocomplete label="Choose item (or create new)" {oncreated} create {items} bind:value />
 <i>value: {value}</i>

@@ -26,8 +26,10 @@
 	let value: string[] = ['p', 'a']
 </script>
 
-<CheckboxGroup {items} key={(item) => item.value} bind:value let:item let:index>
-	{index}- <b>{item.name}</b> ({item.value})
+<CheckboxGroup {items} key={(item) => item.value} bind:value>
+	{#snippet children({ item, index })}
+		{index}- <b>{item.name}</b> ({item.value})
+	{/snippet}
 </CheckboxGroup>
 
 <i>{JSON.stringify(value)}</i>

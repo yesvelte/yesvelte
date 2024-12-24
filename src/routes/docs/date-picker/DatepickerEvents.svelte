@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { DatePicker } from 'yesvelte'
 
-	let value: Date
-	let changed: Date
-	let clicked: number = 0
+	let value: Date | undefined = $state(undefined)
+	let changed: Date | undefined = $state(undefined)
+	let clicked: number = $state(0)
 
-	function onChange({ detail }: CustomEvent) {
-		changed = detail
+	function onchanged(event) {
+		changed = event
 	}
 
-	function onClick() {
+	function onclick() {
 		clicked += 1
 	}
 </script>
 
-<DatePicker on:click={onClick} bind:value on:changed={onChange} />
+<DatePicker bind:value {onclick} {onchanged} />
 <i>value: {value}, changed: {changed}, clicked: {clicked}</i>

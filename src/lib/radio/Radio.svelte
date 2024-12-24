@@ -4,64 +4,61 @@
 
 	type $$Props = RadioProps
 
-	export let color: $$Props['color'] = undefined
-	export let description: $$Props['description'] = undefined
-	export let componentName: $$Props['componentName'] = 'radio'
-	export let disabled: $$Props['disabled'] = undefined
-	export let inline: $$Props['inline'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let checked: $$Props['checked'] = false
-	export let value: $$Props['value'] = undefined
+	let {
+		componentName = 'radio',
+		color,
+		description,
+		disabled,
+		inline,
+		reverse,
+		label,
+		name,
+		for: labelForId,
+		readonly,
+		checked = false,
+		value,
+		children,
+		descriptionSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let labelForId: $$Props['for'] = undefined
 	export { labelForId as for }
 
-	let inputElement: HTMLElement
-	let cssProps: $$Props = {}
-	let otherProps: $$Props = {}
+	let id: string | undefined = $state(undefined)
 
-	$: {
-		labelForId = inputElement?.id ?? ''
-
-		cssProps = { color }
-
-		otherProps = {
-			componentName,
-			disabled,
-			readonly,
-			value,
-			checked,
-			name: name ?? inputElement?.id,
-		}
-	}
+	let otherProps: $$Props = $derived({
+		...restProps,
+		componentName,
+		disabled,
+		readonly,
+		value,
+		checked,
+		tag: 'input',
+		type: 'radio',
+		name,
+		cssProps: { color },
+	})
 </script>
 
 <El componentName="{componentName}-wrapper" cssProps={{ inline, reverse }}>
-	<El
-		tag="input"
-		{...{ type: 'radio' }}
-		bind:element={inputElement}
-		{...$$restProps}
-		{...otherProps}
-		{cssProps} />
-	{#if label || $$slots['default']}
-		<El tag="label" componentName="{componentName}-label" {...{ for: labelForId }}>
-			<slot>
-				{#if label}
-					{label}
-				{/if}
-			</slot>
+	<El bind:id {...otherProps} />
+	{#if label || children}
+		<El tag="label" componentName="{componentName}-label" for={id}>
+			{#if children}
+				{@render children()}
+			{:else}
+				{label}
+			{/if}
 		</El>
 	{/if}
 
-	{#if description || $$slots['description']}
+	{#if description || descriptionSnippet}
 		<El componentName="{componentName}-description">
-			<slot name="description">
+			{#if descriptionSnippet}
+				{@render descriptionSnippet()}
+			{:else}
 				{description}
-			</slot>
+			{/if}
 		</El>
 	{/if}
 </El>

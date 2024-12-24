@@ -4,62 +4,64 @@
 
 	type $$Props = FileUploadProps
 
-	export let componentName: $$Props['componentName'] = 'input'
-	export let disabled: $$Props['disabled'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let accept: $$Props['accept'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let files: $$Props['files'] = undefined
-	export let id: $$Props['id'] = undefined
+	let {
+		componentName = 'input',
+		disabled,
+		placeholder,
+		accept,
+		name,
+		multiple,
+		required,
+		size,
+		state: validationState,
+		files = $bindable(),
+		id,
+		startSnippet,
+		endSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let element: HTMLInputElement
+	let element: HTMLInputElement | undefined = $state(undefined)
 
-	let props: $$Props = { componentName, placeholder, disabled }
-	let cssProps: $$Props = { state }
-	let wrapperCssProps: FileUploadWrapperProps = { size }
-
-	const onChange = (e: any) => {
+	function onchange(e: any) {
+		restProps.onchange?.()
 		files = e.target.files
 	}
 
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		componentName,
+		placeholder,
+		disabled,
+		accept,
+		name,
+		multiple,
+		required,
+		tag: 'input',
+		type: 'file',
+		onchange,
+		cssProps: {
+			state: validationState,
 			size,
-			state,
-		}
+		},
+	})
 
-		props = {
-			componentName,
-			placeholder,
-			disabled,
-			accept,
-			name,
-			multiple,
-			required,
-			tag: 'input',
-			type: 'file',
-		}
-	}
+	let wrapperCssProps: FileUploadWrapperProps = $derived({ size })
 </script>
 
-{#if $$slots.start || $$slots.end}
-	<El componentName="{componentName}-wrapper" {...$$restProps} cssProps={wrapperCssProps}>
-		{#if $$slots.start}
+{#if startSnippet || endSnippet}
+	<El componentName="{componentName}-wrapper" {...restProps} cssProps={wrapperCssProps}>
+		{#if startSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="start" />
+				{@render startSnippet()}
 			</El>
 		{/if}
-		<El bind:id bind:element {...props} {cssProps} on:change={onChange} />
-		{#if $$slots.end}
+		<El bind:id bind:element {...props} />
+		{#if endSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="end" />
+				{@render endSnippet()}
 			</El>
 		{/if}
 	</El>
 {:else}
-	<El {...$$restProps} bind:id bind:element {...props} {cssProps} on:change={onChange} />
+	<El {...restProps} bind:id bind:element {...props} />
 {/if}

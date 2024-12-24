@@ -3,17 +3,17 @@
 </script>
 
 <Radio name="payment" checked>
-	<span class="payment payment-visa me-1 mb-1" />
+	<span class="payment payment-visa me-1 mb-1"></span>
 	ending in <strong>7998</strong>
 </Radio>
 
 <Radio name="payment">
-	<span class="payment payment-master me-1" />
+	<span class="payment payment-master me-1"></span>
 	ending in <strong>7998</strong>
 </Radio>
 
 <Radio name="payment">
-	<span class="payment payment-paypal me-1" />
+	<span class="payment payment-paypal me-1"></span>
 	ending in <strong>7998</strong>
 </Radio>
 

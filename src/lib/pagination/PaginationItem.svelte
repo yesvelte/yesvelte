@@ -1,37 +1,42 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
 	import { El, type ElProps } from '../el'
 	import type { PaginationItemProps } from './Pagination.types'
 
 	type $$Props = PaginationItemProps
 
-	export let componentName: $$Props['componentName'] = 'pagination-item'
-	export let href: $$Props['href'] = undefined
-	export let active: $$Props['active'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-
-	const dispatch = createEventDispatcher()
-
-	function onClick() {
-		if (disabled) return
-		dispatch('click')
-	}
-
-	$: cssProps = {
+	let {
+		componentName = 'pagination-item',
+		href,
 		active,
 		disabled,
+		children,
+		...restProps
+	}: $$Props = $props()
+
+	function onclick() {
+		if (disabled) return
+		restProps.onclick?.()
 	}
 
-	let linkProps: Partial<ElProps>
-	$: linkProps = {
+	let linkProps: Partial<ElProps> = $derived({
 		tag: 'a',
 		href,
 		componentName: componentName + '-link',
-	}
+	})
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		onclick,
+		cssProps: {
+			active,
+			disabled,
+		},
+	})
 </script>
 
-<El {...$$restProps} {componentName} {cssProps} on:click={onClick}>
+<El {...props}>
 	<El {...linkProps}>
-		<slot />
+		{@render children?.()}
 	</El>
 </El>

@@ -5,23 +5,24 @@
 
 	type $$Props = RibbonProps
 
-	export let componentName: $$Props['componentName'] = 'ribbon'
-	export let bgColor: $$Props['bgColor'] = undefined
-	export let elementPosition: $$Props['elementPosition'] = 'end'
+	let {
+		componentName = 'ribbon',
+		bgColor,
+		elementPosition = 'end',
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let cssProps: RibbonProps = {}
-	let otherProps: RibbonProps = {}
-	$: {
-		cssProps = {
+	let otherProps: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
 			bgColor,
 			elementPosition,
-		}
-		otherProps = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El {...$$restProps} {cssProps} {...otherProps}>
-	<slot />
+<El {...otherProps}>
+	{@render children?.()}
 </El>

@@ -4,5 +4,5 @@
 	let clicked = 0
 </script>
 
-<Radio on:click={() => (clicked += 1)} label="Click Me!" />
+<Radio onclick={() => (clicked += 1)} label="Click Me!" />
 clicked: {clicked}

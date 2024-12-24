@@ -1,9 +1,7 @@
 <script>
 	import { DatePicker } from 'yesvelte'
 
-	let rangeValue = ''
-
-	$: console.log(rangeValue)
+	let rangeValue = $state('')
 </script>
 
 <small>Highlight days</small>

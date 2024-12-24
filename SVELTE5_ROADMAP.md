@@ -9,34 +9,35 @@
 - [x] Button
 - [x] ButtonGroup
 - [x] Card
-- [ ] Checkbox
-- [ ] CheckboxGroup
-- [ ] Datepicker
+- [x] Checkbox
+- [x] CheckboxGroup
+- [x] Datepicker
 - [x] Divider
 - [x] Dropdown
 - [x] Dot
 - [x] Fieldset
-- [ ] FileUpload
+- [x] FileUpload
 - [x] Icon
 - [x] Input
 - [x] Label
-- [ ] Modal
-- [ ] Offcanvas
-- [ ] Progress
-- [ ] Radio
-- [ ] RadioGroup
-- [ ] Ribbon
+- [x] Modal
+- [x] Offcanvas
+- [x] Progress
+- [x] Radio
+- [x] RadioGroup
+- [x] Ribbon
 - [x] Select
 - [x] Stamp
 - [x] Steps
 - [x] Spinner
 - [x] Status
-- [ ] Switch
+- [x] Switch
+- [-] Sidebar
 - [x] Tabs
 - [ ] Textarea
 - [x] Table
-- [ ] Slider
-- [ ] RangeSlider
+- [x] Slider
+- [x] RangeSlider
 - [ ] Pagination
 - [x] FloatingButton (or adding floating action feature to exisiting Button component)
 - [x] Toast

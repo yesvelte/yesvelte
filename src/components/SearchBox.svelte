@@ -65,11 +65,14 @@
 	<ModalHeader p="0">
 		<Input
 			size="lg"
-			p="3"
+			py="3"
 			borderFlush
+			autofocus
 			placeholder="Search title or description..."
 			bind:value={query}>
-			<Icon ms="3" name="search" slot="start" />
+			{#snippet startSnippet()}
+				<Icon ms="3" name="search" />
+			{/snippet}
 		</Input>
 	</ModalHeader>
 	<ModalBody>

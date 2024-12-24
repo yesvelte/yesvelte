@@ -5,30 +5,38 @@
 
 	type $$Props = FormCheckboxGroupProps
 
-	export let color: $$Props['color'] = undefined
-	export let componentName: $$Props['componentName'] = 'form-checkbox-group'
-	export let inline: $$Props['inline'] = undefined
-	export let items: $$Props['items'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let key: $$Props['key'] = undefined
+	let {
+		color,
+		componentName,
+		inline,
+		items,
+		reverse,
+		value,
+		name,
+		key,
+		children,
+		labelSnippet,
+		hintSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let checkboxGroupProps: $$Props = {}
-	$: checkboxGroupProps = {
+	let checkboxGroupProps: $$Props = $derived({
 		color,
 		inline,
 		items,
 		reverse,
 		name,
 		key,
-	}
+	})
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		labelSnippet,
+		hintSnippet,
+	})
 </script>
 
-<FormField {...$$restProps} {componentName}>
-	<slot name="label" slot="label" />
-	<CheckboxGroup {...checkboxGroupProps} bind:value let:item let:index>
-		<slot {index} {item}>{item}</slot>
-	</CheckboxGroup>
-	<slot name="hint" slot="hint" />
+<FormField {...props}>
+	<CheckboxGroup {children} {...checkboxGroupProps} bind:value />
 </FormField>

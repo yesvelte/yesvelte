@@ -10,17 +10,21 @@
 
 	type $$Props = SliderProps
 
-	export let componentName: $$Props['componentName'] = 'slider'
-	export let color: $$Props['color'] = undefined
-	export let min: $$Props['min'] = undefined
-	export let max: $$Props['max'] = undefined
-	export let step: $$Props['step'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let connect: $$Props['connect'] = undefined
+	let {
+		componentName = 'slider',
+		color,
+		min,
+		max,
+		step,
+		name,
+		connect,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let knobs: SliderKnobType[] = []
-	let element: HTMLElement
-	let instance: NoUiSlider
+	let knobs: SliderKnobType[] = $state([])
+	let element: HTMLElement | undefined = $state(undefined)
+	let instance: NoUiSlider | undefined = $state(undefined)
 
 	function register(knob: any) {
 		const id = knobs.length
@@ -112,6 +116,6 @@
 </script>
 
 <El componentName="{componentName}-wrapper">
-	<div class={classname('slider', { color })} bind:this={element} />
-	<slot />
+	<div class={classname('slider', { color })} bind:this={element}></div>
+	{@render children?.()}
 </El>

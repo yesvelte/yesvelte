@@ -1,10 +1,10 @@
 <script>
 	import { Button, Modal, ModalBody, ModalFooter } from 'yesvelte'
 
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button on:click={() => (show = !show)} color="primary">Open Modal</Button>
+<Button onclick={() => (show = !show)} color="primary">Open Modal</Button>
 
 <Modal title="Modal title" bind:show>
 	<ModalBody>
@@ -13,7 +13,7 @@
 		reprehenderit sit tempora totam unde.
 	</ModalBody>
 	<ModalFooter>
-		<Button me="auto" on:click={() => (show = false)}>Close</Button>
+		<Button me="auto" onclick={() => (show = false)}>Close</Button>
 		<Button color="primary">Save changes</Button>
 	</ModalFooter>
 </Modal>

@@ -9,28 +9,22 @@
 		default: { index?: number; item?: any }
 	}
 
-	export let color: $$Props['color'] = undefined
-	export let componentName: $$Props['componentName'] = 'radio-group'
-	export let inline: $$Props['inline'] = undefined
-	export let items: $$Props['items'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let key: $$Props['key'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let name: $$Props['name'] = undefined
+	let {
+		color,
+		componentName = 'radio-group',
+		inline,
+		items,
+		reverse,
+		key,
+		value = $bindable(),
+		name,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	let element: HTMLElement
-	let props: $$Props = {}
+	let element: HTMLElement | undefined = $state(undefined)
 
-	$: {
-		props = {
-			inline,
-			reverse,
-			name: name ?? element?.id,
-			color,
-		}
-	}
-
-	$: getKey = (item: any) => {
+	let getKey = (item: any) => {
 		if (typeof item === 'object') {
 			if (key) {
 				return typeof key === 'string' ? item[key] : key(item)
@@ -48,24 +42,31 @@
 		return item
 	}
 
-	const onChange = (event: any) => {
+	const onchange = (event: any) => {
 		value = parse(event.target.value)
 	}
+
+	let props: $$Props = $derived({
+		inline,
+		reverse,
+		onchange,
+		name: name ?? element?.id,
+		color,
+	})
 </script>
 
-<El {componentName} bind:element {...$$restProps}>
+<El {componentName} bind:element {...restProps}>
 	{#if items}
 		{#each items as item, index (index)}
-			<Radio
-				{...props}
-				value={getKey(item)}
-				checked={getKey(value) === getKey(item)}
-				on:change={onChange}
-				on:change>
-				<slot {index} {item}>{item}</slot>
+			<Radio {...props} value={getKey(item)} checked={getKey(value) === getKey(item)}>
+				{#if children}
+					{@render children({ index, item })}
+				{:else}
+					{item}
+				{/if}
 			</Radio>
 		{/each}
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

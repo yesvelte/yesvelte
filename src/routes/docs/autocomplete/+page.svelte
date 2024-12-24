@@ -21,10 +21,10 @@
 </script>
 
 <Page title="Autocomplete">
-	<p slot="description">
+	{#snippet description()}
 		Autocomplete is a component that allows you to search and select a value from a list of options.
 		It is a combination of a text input and a dropdown menu.
-	</p>
+	{/snippet}
 	<Doc title="Default">
 		<Preview src="./AutocompleteDefault.svelte">
 			<AutocompleteDefault />
@@ -44,9 +44,9 @@
 	</Doc>
 
 	<Doc title="Events">
-		<p slot="description">
+		{#snippet description()}
 			Autocomplete supports <code>changed</code> and <code>input</code> events.
-		</p>
+		{/snippet}
 		<Preview src="./AutocompleteEvents.svelte">
 			<AutocompleteEvents />
 		</Preview>
@@ -76,29 +76,29 @@
 	</Doc>
 
 	<Doc title="Complex Items">
-		<p slot="description">
+		{#snippet description()}
 			You can have complex objects as item and using <code>key</code> prop you can extract the data that
 			You need from Autocomplete.
-		</p>
+		{/snippet}
 		<Preview src="./AutocompleteObject.svelte">
 			<AutocompleteObject />
 		</Preview>
 	</Doc>
 
 	<Doc title="States">
-		<p slot="description">
+		{#snippet description()}
 			You can set the <code>valid</code> or <code>invalid</code> boolean properties to apply the valid
 			or invalid state to a Autocomplete.
-		</p>
+		{/snippet}
 		<Preview src="./AutocompleteStates.svelte">
 			<div class="custom-class"><AutocompleteStates /></div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Custom Key">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>key</code> prop to set a custom key for the input element.
-		</p>
+		{/snippet}
 		<Preview src="./AutocompleteKey.svelte">
 			<div class="custom-class">
 				<AutocompleteKey />
@@ -139,7 +139,7 @@
 	</Doc>
 
 	<Doc title="With Avatar">
-		<p slot="description">You can use any component inside Autocomplete like this:</p>
+		{#snippet description()}You can use any component inside Autocomplete like this:{/snippet}
 		<Preview src="./AutocompleteAvatar.svelte">
 			<div class="custom-class">
 				<AutocompleteAvatar />

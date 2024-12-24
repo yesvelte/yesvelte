@@ -19,8 +19,8 @@
 		multiple,
 		dismissible,
 		size,
-		state,
-		value,
+		state: validationState,
+		value = $bindable(),
 		create,
 		children,
 		selectedSnippet,
@@ -43,7 +43,7 @@
 		required,
 		label,
 		hint,
-		state,
+		state: validationState,
 		id,
 	})
 
@@ -56,8 +56,10 @@
 		dismissible,
 		name,
 		size,
-		state,
+		state: validationState,
 		create,
+		children,
+		selectedSnippet,
 	})
 </script>
 
@@ -70,21 +72,7 @@
 				{@render startIconSnippet()}
 			</El>
 		{/if}
-		<Autocomplete {...autocompleteProps} bind:value bind:id let:item let:index>
-			{#if children}
-				{@render children?.({ item, index })}
-			{:else}
-				{item}
-			{/if}
-
-			{#snippet selectedSnippet()}
-				{#if selectedSnippet}
-					{@render selectedSnippet?.({ item, index })}
-				{:else}
-					{item}
-				{/if}
-			{/snippet}
-		</Autocomplete>
+		<Autocomplete {...autocompleteProps} bind:value bind:id />
 
 		{#if endSnippet}
 			{@render endSnippet()}

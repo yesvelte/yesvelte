@@ -14,9 +14,9 @@
 	label="Issues"
 	description="Issues integrate lightweight task tracking into your repository. Keep projects on track with issue labels and milestones, and reference them in commit messages." />
 <Radio name="radio-description" checked label="Preserve this repository">
-	<span slot="description">
+	{#snippet descriptionSnippet()}
 		Include this code in the <a href="https://archiveprogram.github.com/faq/">
 			GitHub Archive Program.
 		</a>
-	</span>
+	{/snippet}
 </Radio>

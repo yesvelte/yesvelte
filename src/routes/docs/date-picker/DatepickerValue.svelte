@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { DatePicker, El } from 'yesvelte'
 
-	let value1: string = '1900/04/24'
-	let value2: Date = new Date(2000, 5, 3)
+	let value1: string = $state('1900/04/24')
+	let value2: Date = $state(new Date(2000, 5, 3))
 </script>
 
 <DatePicker bind:value={value1} />

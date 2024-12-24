@@ -20,15 +20,7 @@
 		</El>
 	{/snippet}
 	{#snippet selectedSnippet({ item })}
-		<El
-			d="flex"
-			alignItems="center"
-			p="1"
-			pe="3"
-			border
-			borderRadius="pill"
-			bgColor="light"
-			slot="selected">
+		<El d="flex" alignItems="center" p="1" pe="3" border borderRadius="pill" bgColor="light">
 			<Avatar shape="circle" size="xs" me="2">
 				<img src="/images/avatar.png" />
 			</Avatar>

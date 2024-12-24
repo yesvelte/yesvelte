@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DatePicker, El } from 'yesvelte'
 
-	let value: Date[] = []
+	let value: Date[] = $state([])
 </script>
 
 <El>Enter Date range</El>

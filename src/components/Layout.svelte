@@ -124,12 +124,14 @@ TODO: body doesn't support spread props
 					<Logo dMd="none" href="/" height="32" />
 
 					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block">
-						<Icon name="search" slot="start" />
-						<svelte:fragment slot="end">
+						{#snippet startSnippet()}
+							<Icon name="search" />
+						{/snippet}
+						{#snippet endSnippet()}
 							<El tag="kbd">Ctrl</El>
 							<El mx="1" tag="span">+</El>
 							<El tag="kbd" me="2">k</El>
-						</svelte:fragment>
+						{/snippet}
 					</Input>
 				</El>
 

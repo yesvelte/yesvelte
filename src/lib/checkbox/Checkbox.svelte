@@ -4,33 +4,41 @@
 
 	type $$Props = CheckboxProps
 
-	export let componentName: $$Props['componentName'] = 'checkbox'
-	export let color: $$Props['color'] = undefined
-	export let checked: $$Props['checked'] = false
-	export let description: $$Props['description'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let indeterminate: $$Props['indeterminate'] = false
-	export let inline: $$Props['inline'] = false
-	export let label: $$Props['label'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let id: $$Props['id'] = undefined
+	let {
+		componentName = 'checkbox',
+		color,
+		checked = $bindable(),
+		description,
+		disabled,
+		indeterminate = false,
+		inline = false,
+		label,
+		name,
+		reverse,
+		value,
+		id = $bindable(),
+		children,
+		descriptionSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let element: HTMLElement
-	let checkboxProps: Partial<ElProps>
-	let labelProps: Partial<ElProps>
+	let element: HTMLElement | undefined = $state(undefined)
 
-	$: wrapperProps = {
+	function onchange(event: any) {
+		restProps.onchange?.(event)
+		checked = event.target.checked
+	}
+
+	let wrapperProps: $$Props = $derived({
 		componentName: componentName + '-wrapper',
 		cssProps: {
 			inline,
 			reverse,
 		},
-	}
+	})
 
-	$: checkboxProps = {
-		...$$restProps,
+	let checkboxProps: $$Props = $derived({
+		...restProps,
 		componentName,
 		disabled,
 		checked,
@@ -38,42 +46,44 @@
 		name,
 		type: 'checkbox',
 		tag: 'input',
+		onchange,
 		cssProps: {
 			color,
 			indeterminate,
 		},
-	}
+	})
 
-	$: labelProps = {
+	$inspect(checkboxProps)
+	let labelProps: $$Props = $derived({
 		componentName: componentName + '-label',
 		tag: 'label',
 		for: id,
-	}
+	})
 
-	$: descriptionProps = {
+	let descriptionProps: $$Props = $derived({
 		componentName: componentName + '-description',
-	}
-
-	const onChange = (event: any) => {
-		checked = event.target.checked
-	}
+	})
 </script>
 
 <El {...wrapperProps}>
-	<El {...checkboxProps} bind:id bind:element on:change={onChange} />
-	{#if label || $$slots['default']}
+	<El {...checkboxProps} bind:id bind:element />
+	{#if label || children}
 		<El {...labelProps}>
-			<slot>
+			{#if children}
+				{@render children()}
+			{:else}
 				{label}
-			</slot>
+			{/if}
 		</El>
 	{/if}
 
-	{#if description || $$slots['description']}
+	{#if description || descriptionSnippet}
 		<El {...descriptionProps}>
-			<slot name="description">
+			{#if descriptionSnippet}
+				{@render descriptionSnippet()}
+			{:else}
 				{description}
-			</slot>
+			{/if}
 		</El>
 	{/if}
 </El>

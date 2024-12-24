@@ -6,21 +6,21 @@
 
 	type $$Props = OffcanvasHeaderProps
 
-	export let componentName: $$Props['componentName'] = 'offcanvas-header'
-	export let title: $$Props['title'] = undefined
+	let {componentName = 'offcanvas-header', 
+		title,children, ...restProps} : $$Props = $props()
 
 	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 
-	const onClick = () => {
+	const onclick = () => {
 		if (ctx && ctx.close) ctx.close()
 	}
 </script>
 
-<El {...$$restProps} {componentName}>
+<El {...restProps} {componentName}>
 	{#if title}
 		<El componentName="{componentName}-title">{title}</El>
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
-	<Button componentName="{componentName}-btn" aria-label="Close" on:click={onClick} />
+	<Button componentName="{componentName}-btn" aria-label="Close" {onclick} />
 </El>

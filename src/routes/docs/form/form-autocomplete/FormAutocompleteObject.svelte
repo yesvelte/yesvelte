@@ -9,10 +9,12 @@
 		{ id: 'fifth', value: 'Fifth Item' },
 	]
 
-	let value = items[2]
+	let value = $state(items[2])
 </script>
 
-<FormAutocomplete label="Label" bind:value {items} let:item let:index>
-	{index} - {item.value}
+<FormAutocomplete label="Label" bind:value {items}>
+	{#snippet children({ item, index })}
+		{index} - {item.value}
+	{/snippet}
 </FormAutocomplete>
 <i>value: {JSON.stringify(value)}</i>

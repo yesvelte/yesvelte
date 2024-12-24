@@ -1,10 +1,10 @@
 <script>
 	import { El, Button, Modal, ModalBody, ModalFooter, Icon } from 'yesvelte'
 
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button on:click={() => (show = !show)} color="primary">Open Alert</Button>
+<Button onclick={() => (show = !show)} color="primary">Open Alert</Button>
 
 <Modal bind:show dismissible size="sm">
 	<ModalBody>
@@ -15,7 +15,7 @@
 		</El>
 	</ModalBody>
 	<ModalFooter row>
-		<Button col on:click={() => (show = false)}>Cancel</Button>
+		<Button col onclick={() => (show = false)}>Cancel</Button>
 		<Button col color="danger">Delete 84 Items</Button>
 	</ModalFooter>
 </Modal>

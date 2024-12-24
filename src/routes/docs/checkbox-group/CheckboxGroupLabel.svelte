@@ -11,8 +11,10 @@
 	let value = ['html']
 </script>
 
-<CheckboxGroup bind:value {items} key="code" let:item let:index>
-	{(index || 0) + 1}- {item.text}
+<CheckboxGroup bind:value {items} key="code">
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </CheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

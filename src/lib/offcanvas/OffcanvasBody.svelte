@@ -3,9 +3,9 @@
 
 	type $$Props = ElProps
 
-	export let componentName: $$Props['componentName'] = 'offcanvas-body'
+	let { componentName = 'offcanvas-body', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children()}
 </El>

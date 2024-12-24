@@ -3,9 +3,9 @@
 
 	type $$Props = ElProps
 
-	export let componentName: $$Props['componentName'] = 'modal-title'
+	let { componentName = 'modal-title', children, ...restProps }: $$Props = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children()}
 </El>

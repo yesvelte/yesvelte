@@ -9,26 +9,22 @@
 		default: { index?: number; item?: any }
 	}
 
-	export let color: $$Props['color'] = undefined
-	export let componentName: $$Props['componentName'] = 'checkbox-group'
-	export let inline: $$Props['inline'] = undefined
-	export let items: $$Props['items'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let key: $$Props['key'] = undefined
-
-	let element: HTMLElement
-	let props: $$Props = {}
-
-	$: props = {
-		inline,
-		name: name ?? element?.id,
+	let {
 		color,
+		componentName = 'checkbox-group',
+		inline,
+		items,
+		name,
 		reverse,
-	}
+		value = $bindable(),
+		key,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: getKey = (item: any) => {
+	let element: HTMLElement | undefined = $state(undefined)
+
+	function getKey(item: any) {
 		if (typeof item === 'object') {
 			if (key) {
 				return typeof key === 'string' ? item[key] : key(item)
@@ -38,14 +34,16 @@
 			return item
 		}
 	}
+
 	function parse(item: any) {
-		if (typeof items[0] === 'object' && !key) {
+		if (typeof items?.[0] === 'object' && !key) {
 			return JSON.parse(item)
 		}
 		return item
 	}
 
-	function onChange(event: any) {
+	function onchange(event: any) {
+		restProps.onchange?.(event)
 		if (value === undefined) value = []
 
 		if (items != undefined && items?.length > 0) {
@@ -67,16 +65,28 @@
 	function isSelected(item: any) {
 		return (value?.findIndex((x) => getKey(x) === getKey(item)) ?? -1) > -1
 	}
+
+	let props: $$Props = $derived({
+		inline,
+		name: name ?? element?.id,
+		color,
+		reverse,
+		onchange,
+	})
 </script>
 
-<El {componentName} bind:element {...$$restProps}>
+<El {...restProps} {componentName} bind:element>
 	{#if items}
 		{#each items as item, index (index)}
-			<Checkbox {...props} value={getKey(item)} checked={isSelected(item)} on:change={onChange}>
-				<slot {index} {item}>{item}</slot>
+			<Checkbox {...props} value={getKey(item)} checked={isSelected(item)}>
+				{#if children}
+					{@render children?.({ index, item })}
+				{:else}
+					{item}
+				{/if}
 			</Checkbox>
 		{/each}
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

@@ -5,18 +5,26 @@
 </script>
 
 <FormAutocomplete {items} label="Start Icon">
-	<Icon name="star" slot="start-icon" />
+	{#snippet startIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormAutocomplete>
 <El p="3" />
 <FormAutocomplete {items} label="End Icon">
-	<Icon name="star" slot="end-icon" />
+	{#snippet endIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormAutocomplete>
 <El p="3" />
 <FormAutocomplete {items} label="Start Button">
-	<Button color="primary" slot="start">Start</Button>
+	{#snippet startSnippet()}
+		<Button color="primary">Start</Button>
+	{/snippet}
 </FormAutocomplete>
 <El p="3" />
 <FormAutocomplete {items} label="End Button">
-	<Button color="primary" slot="end">Search</Button>
+	{#snippet endSnippet()}
+		<Button color="primary">Search</Button>
+	{/snippet}
 </FormAutocomplete>
 <El p="3" />

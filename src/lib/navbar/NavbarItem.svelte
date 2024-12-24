@@ -6,61 +6,72 @@
 
 	type $$Props = NavbarItemProps
 
-	export let componentName: $$Props['componentName'] = 'navbar-item'
-	export let disabled: $$Props['disabled'] = undefined
-	export let active: $$Props['active'] = undefined
-	export let divider: $$Props['divider'] = undefined
-	export let icon: $$Props['icon'] = undefined
-	export let title: $$Props['title'] = undefined
-	export let href: $$Props['href'] = undefined
+	let {
+		componentName = 'navbar-item',
+		disabled,
+		active,
+		onclick,
+		divider,
+		icon,
+		title,
+		href,
+		children,
+		titleSnippet,
+		startSnippet,
+		endSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let wrapperProps: Partial<ElProps>
-	$: wrapperProps = {
+	let wrapperProps: Partial<ElProps> = $derived({
+		...restProps,
 		tag: 'li',
 		componentName: componentName + '-wrapper',
-	}
+		cssProps: { dropdown: !!children },
+	})
 
-	let props: Partial<ElProps>
-	$: props = {
+	let props: Partial<ElProps> = $derived({
 		tag: 'a',
 		href,
 		componentName,
-	}
-
-	$: dropdown = $$slots['default']
-	$: cssProps = {
-		disabled,
-		dropdown,
-		active,
-	}
+		onclick,
+		cssProps: {
+			disabled,
+			dropdown: !!children,
+			active,
+		},
+	})
 </script>
 
-<El {...$$restProps} {...wrapperProps} cssProps={{ dropdown }}>
+<El {...wrapperProps}>
 	{#if divider}
 		<El tag="hr" componentName="{componentName}-divider" />
 	{:else}
-		<El on:click tag="a" {...props} {cssProps}>
-			{#if icon || $$slots['start']}
+		<El {...props}>
+			{#if icon || startSnippet}
 				<El tag="span" componentName="{componentName}-icon">
-					<slot name="start">
+					{#if startSnippet}
+						{@render startSnippet()}
+					{:else}
 						<Icon name={icon} />
-					</slot>
+					{/if}
 				</El>
 			{/if}
-			{#if title || $$slots['title']}
+			{#if title || titleSnippet}
 				<El tag="span" componentName="{componentName}-title">
-					<slot name="title">
+					{#if titleSnippet}
+						{@render titleSnippet()}
+					{:else}
 						{title}
-					</slot>
+					{/if}
 				</El>
 			{/if}
-			{#if $$slots['end']}
+			{#if endSnippet}
 				<El componentName="{componentName}-end">
-					<slot name="end" />
+					{@render endSnippet()}
 				</El>
 			{/if}
 		</El>
-		{#if $$slots['default']}
+		{#if children}
 			<Popup
 				tag="ul"
 				trigger="click"
@@ -68,7 +79,7 @@
 				autoClose
 				placement="bottom-start"
 				componentName="{componentName}-menu">
-				<slot />
+				{@render children()}
 			</Popup>
 		{/if}
 	{/if}

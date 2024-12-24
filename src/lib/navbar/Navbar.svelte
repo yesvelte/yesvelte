@@ -3,18 +3,22 @@
 	import type { NavbarProps } from './Navbar.types'
 
 	type $$Props = NavbarProps
-	export let componentName: $$Props['componentName'] = 'navbar'
-	export let theme: $$Props['theme'] = undefined
 
-	$: cssProps = {
-		theme,
-	}
+	let { componentName = 'navbar', theme, children, ...restProps }: $$Props = $props()
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName: componentName + '-wrapper',
+		cssProps: {
+			theme,
+		},
+	})
 </script>
 
-<El {...$$restProps} componentName="{componentName}-wrapper" {cssProps}>
+<El {...props}>
 	<El {componentName}>
 		<El componentName="{componentName}-content" tag="ul">
-			<slot />
+			{@render children?.()}
 		</El>
 	</El>
 </El>

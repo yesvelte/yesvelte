@@ -5,26 +5,35 @@
 </script>
 
 <Pagination bind:value from={1} to={10} hasFirst hasLast hasNext hasPrev>
-	<El slot="page" let:page>
-		{page}
-	</El>
-
-	<El slot="prev">
-		<Icon name="chevron-left" />
-		Prev
-	</El>
-	<El slot="next">
-		Next
-		<Icon name="chevron-right" />
-	</El>
-	<El slot="first">
-		First
-		<Icon name="chevrons-left" />
-	</El>
-	<El slot="last">
-		Last
-		<Icon name="chevrons-right" />
-	</El>
+	{#snippet pageSnippet({ page })}
+		<El>
+			{page}
+		</El>
+	{/snippet}
+	{#snippet prevSnippet()}
+		<El>
+			<Icon name="chevron-left" />
+			Prev
+		</El>
+	{/snippet}
+	{#snippet nextSnippet()}
+		<El>
+			Next
+			<Icon name="chevron-right" />
+		</El>
+	{/snippet}
+	{#snippet firstSnippet()}
+		<El>
+			First
+			<Icon name="chevrons-left" />
+		</El>
+	{/snippet}
+	{#snippet lastSnippet()}
+		<El>
+			Last
+			<Icon name="chevrons-right" />
+		</El>
+	{/snippet}
 </Pagination>
 
 <El>
