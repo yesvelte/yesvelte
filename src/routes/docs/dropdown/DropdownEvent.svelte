@@ -1,7 +1,7 @@
 <script>
 	import { Button, Dropdown, DropdownItem, DropdownMenu } from 'yesvelte'
 
-	let last = ''
+	let last = $state('')
 </script>
 
 <Dropdown>

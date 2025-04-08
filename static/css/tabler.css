@@ -2121,7 +2121,7 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   background-color: var(--y-secondary-color);
 }
 
-.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group {
+.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group, .y-form-field-group {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -2129,47 +2129,51 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   width: 100%;
 }
 
-.y-form-textarea-group > .y-textarea, .y-form-select-group > .y-textarea, .y-form-file-upload-group > .y-textarea, .y-form-date-picker-group > .y-textarea, .y-form-input-group > .y-textarea, .y-form-textarea-group > .y-file-upload, .y-form-select-group > .y-file-upload, .y-form-file-upload-group > .y-file-upload, .y-form-date-picker-group > .y-file-upload, .y-form-input-group > .y-file-upload, .y-form-textarea-group > .y-date-picker, .y-form-select-group > .y-date-picker, .y-form-file-upload-group > .y-date-picker, .y-form-date-picker-group > .y-date-picker, .y-form-input-group > .y-date-picker, .y-form-textarea-group > .y-input, .y-form-select-group > .y-input, .y-form-file-upload-group > .y-input, .y-form-date-picker-group > .y-input, .y-form-input-group > .y-input,
+.y-form-textarea-group > .y-textarea, .y-form-select-group > .y-textarea, .y-form-file-upload-group > .y-textarea, .y-form-date-picker-group > .y-textarea, .y-form-input-group > .y-textarea, .y-form-field-group > .y-textarea, .y-form-textarea-group > .y-file-upload, .y-form-select-group > .y-file-upload, .y-form-file-upload-group > .y-file-upload, .y-form-date-picker-group > .y-file-upload, .y-form-input-group > .y-file-upload, .y-form-field-group > .y-file-upload, .y-form-textarea-group > .y-date-picker, .y-form-select-group > .y-date-picker, .y-form-file-upload-group > .y-date-picker, .y-form-date-picker-group > .y-date-picker, .y-form-input-group > .y-date-picker, .y-form-field-group > .y-date-picker, .y-form-textarea-group > .y-input, .y-form-select-group > .y-input, .y-form-file-upload-group > .y-input, .y-form-date-picker-group > .y-input, .y-form-input-group > .y-input, .y-form-field-group > .y-input,
 .y-form-textarea-group > .y-select,
 .y-form-select-group > .y-select,
 .y-form-file-upload-group > .y-select,
 .y-form-date-picker-group > .y-select,
 .y-form-input-group > .y-select,
+.y-form-field-group > .y-select,
 .y-form-textarea-group > .y-autocomplete,
 .y-form-select-group > .y-autocomplete,
 .y-form-file-upload-group > .y-autocomplete,
 .y-form-date-picker-group > .y-autocomplete,
-.y-form-input-group > .y-autocomplete {
+.y-form-input-group > .y-autocomplete,
+.y-form-field-group > .y-autocomplete {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
 
-.y-form-textarea-group > .y-textarea:focus, .y-form-select-group > .y-textarea:focus, .y-form-file-upload-group > .y-textarea:focus, .y-form-date-picker-group > .y-textarea:focus, .y-form-input-group > .y-textarea:focus, .y-form-textarea-group > .y-file-upload:focus, .y-form-select-group > .y-file-upload:focus, .y-form-file-upload-group > .y-file-upload:focus, .y-form-date-picker-group > .y-file-upload:focus, .y-form-input-group > .y-file-upload:focus, .y-form-textarea-group > .y-date-picker:focus, .y-form-select-group > .y-date-picker:focus, .y-form-file-upload-group > .y-date-picker:focus, .y-form-date-picker-group > .y-date-picker:focus, .y-form-input-group > .y-date-picker:focus, .y-form-textarea-group > .y-input:focus, .y-form-select-group > .y-input:focus, .y-form-file-upload-group > .y-input:focus, .y-form-date-picker-group > .y-input:focus, .y-form-input-group > .y-input:focus,
+.y-form-textarea-group > .y-textarea:focus, .y-form-select-group > .y-textarea:focus, .y-form-file-upload-group > .y-textarea:focus, .y-form-date-picker-group > .y-textarea:focus, .y-form-input-group > .y-textarea:focus, .y-form-field-group > .y-textarea:focus, .y-form-textarea-group > .y-file-upload:focus, .y-form-select-group > .y-file-upload:focus, .y-form-file-upload-group > .y-file-upload:focus, .y-form-date-picker-group > .y-file-upload:focus, .y-form-input-group > .y-file-upload:focus, .y-form-field-group > .y-file-upload:focus, .y-form-textarea-group > .y-date-picker:focus, .y-form-select-group > .y-date-picker:focus, .y-form-file-upload-group > .y-date-picker:focus, .y-form-date-picker-group > .y-date-picker:focus, .y-form-input-group > .y-date-picker:focus, .y-form-field-group > .y-date-picker:focus, .y-form-textarea-group > .y-input:focus, .y-form-select-group > .y-input:focus, .y-form-file-upload-group > .y-input:focus, .y-form-date-picker-group > .y-input:focus, .y-form-input-group > .y-input:focus, .y-form-field-group > .y-input:focus,
 .y-form-textarea-group > .y-select:focus,
 .y-form-select-group > .y-select:focus,
 .y-form-file-upload-group > .y-select:focus,
 .y-form-date-picker-group > .y-select:focus,
 .y-form-input-group > .y-select:focus,
+.y-form-field-group > .y-select:focus,
 .y-form-textarea-group > .y-autocomplete:focus,
 .y-form-select-group > .y-autocomplete:focus,
 .y-form-file-upload-group > .y-autocomplete:focus,
 .y-form-date-picker-group > .y-autocomplete:focus,
-.y-form-input-group > .y-autocomplete:focus {
+.y-form-input-group > .y-autocomplete:focus,
+.y-form-field-group > .y-autocomplete:focus {
   z-index: 5;
 }
 
-.y-form-textarea-group .y-button, .y-form-select-group .y-button, .y-form-file-upload-group .y-button, .y-form-date-picker-group .y-button, .y-form-input-group .y-button {
+.y-form-textarea-group .y-button, .y-form-select-group .y-button, .y-form-file-upload-group .y-button, .y-form-date-picker-group .y-button, .y-form-input-group .y-button, .y-form-field-group .y-button {
   position: relative;
   z-index: 2;
 }
 
-.y-form-textarea-group .y-button:focus, .y-form-select-group .y-button:focus, .y-form-file-upload-group .y-button:focus, .y-form-date-picker-group .y-button:focus, .y-form-input-group .y-button:focus {
+.y-form-textarea-group .y-button:focus, .y-form-select-group .y-button:focus, .y-form-file-upload-group .y-button:focus, .y-form-date-picker-group .y-button:focus, .y-form-input-group .y-button:focus, .y-form-field-group .y-button:focus {
   z-index: 5;
 }
 
-.y-form-textarea-icon, .y-form-select-icon, .y-form-file-upload-icon, .y-form-date-picker-icon, .y-form-input-icon {
+.y-form-textarea-icon, .y-form-select-icon, .y-form-file-upload-icon, .y-form-date-picker-icon, .y-form-input-icon, .y-form-field-icon {
   display: flex;
   align-items: center;
   padding: 0.5625rem 0.75rem;
@@ -2184,27 +2188,30 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   border-radius: var(--y-border-radius);
 }
 
-.y-form-textarea-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu),
+.y-form-textarea-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-field-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu),
 .y-form-textarea-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-select-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-file-upload-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-date-picker-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-input-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
+.y-form-field-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-textarea-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-select-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-file-upload-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-date-picker-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-input-group > .y-navbar-item-dropdown:nth-last-child(n+3),
+.y-form-field-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-dropdown-target.y-form-textarea-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-select-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-file-upload-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-date-picker-group > :nth-last-child(n+3),
-.y-dropdown-target.y-form-input-group > :nth-last-child(n+3) {
+.y-dropdown-target.y-form-input-group > :nth-last-child(n+3),
+.y-dropdown-target.y-form-field-group > :nth-last-child(n+3) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.y-form-textarea-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu) {
+.y-form-textarea-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-field-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu) {
   margin-left: calc(var(--y-border-width) * -1);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2261,67 +2268,79 @@ textarea.y-textarea.y-textarea-state-valid, textarea.y-select-state-valid.y-text
   color: var(--y-form-valid-color);
 }
 
-.y-form-textarea-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-valid:not(:focus), .y-form-select-group > .y-input.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-valid:not(:focus), .y-form-input-group > .y-input.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-valid:not(:focus), .y-form-select-group > .y-input.y-input-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-valid:not(:focus), .y-form-input-group > .y-input.y-input-state-valid:not(:focus),
+.y-form-textarea-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-field-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-valid:not(:focus), .y-form-select-group > .y-input.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-valid:not(:focus), .y-form-input-group > .y-input.y-select-state-valid:not(:focus), .y-form-field-group > .y-input.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-field-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-field-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-valid:not(:focus), .y-form-select-group > .y-input.y-input-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-valid:not(:focus), .y-form-input-group > .y-input.y-input-state-valid:not(:focus), .y-form-field-group > .y-input.y-input-state-valid:not(:focus),
 .y-form-textarea-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-select-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-file-upload-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-date-picker-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-input-group > .y-select.y-textarea-state-valid:not(:focus),
+.y-form-field-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-textarea-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-select-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-file-upload-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-date-picker-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-input-group > .y-select.y-select-state-valid:not(:focus),
+.y-form-field-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-textarea-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-file-upload-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-date-picker-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-autocomplete-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-select-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-textarea-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-input-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-select-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-file-upload-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-date-picker-group > .y-input-state-valid.y-autocomplete:not(:focus),
-.y-form-input-group > .y-input-state-valid.y-autocomplete:not(:focus) {
+.y-form-input-group > .y-input-state-valid.y-autocomplete:not(:focus),
+.y-form-field-group > .y-input-state-valid.y-autocomplete:not(:focus) {
   z-index: 3;
 }
 
@@ -2376,67 +2395,79 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   color: var(--y-form-invalid-color);
 }
 
-.y-form-textarea-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-invalid:not(:focus), .y-form-select-group > .y-input.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-invalid:not(:focus), .y-form-input-group > .y-input.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-invalid:not(:focus), .y-form-select-group > .y-input.y-input-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-invalid:not(:focus), .y-form-input-group > .y-input.y-input-state-invalid:not(:focus),
+.y-form-textarea-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-field-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-invalid:not(:focus), .y-form-select-group > .y-input.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-invalid:not(:focus), .y-form-input-group > .y-input.y-select-state-invalid:not(:focus), .y-form-field-group > .y-input.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-field-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-field-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-invalid:not(:focus), .y-form-select-group > .y-input.y-input-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-invalid:not(:focus), .y-form-input-group > .y-input.y-input-state-invalid:not(:focus), .y-form-field-group > .y-input.y-input-state-invalid:not(:focus),
 .y-form-textarea-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-select-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-input-group > .y-select.y-textarea-state-invalid:not(:focus),
+.y-form-field-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-textarea-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-select-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-input-group > .y-select.y-select-state-invalid:not(:focus),
+.y-form-field-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-textarea-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-file-upload-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-date-picker-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-autocomplete-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-select-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-textarea-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-input-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-select-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-file-upload-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-date-picker-group > .y-input-state-invalid.y-autocomplete:not(:focus),
-.y-form-input-group > .y-input-state-invalid.y-autocomplete:not(:focus) {
+.y-form-input-group > .y-input-state-invalid.y-autocomplete:not(:focus),
+.y-form-field-group > .y-input-state-invalid.y-autocomplete:not(:focus) {
   z-index: 4;
 }
 
@@ -5908,7 +5939,7 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   margin-bottom: 0.5rem !important;
 }
 
-.y-form-textarea, .y-form-select, .y-form-switch, .y-form-editor, .y-form-radio-group, .y-form-file-upload, .y-form-date-picker, .y-form-checkbox-group, .y-form-checkbox, .y-form-input, .y-form-autocomplete, .y-el-mb-3 {
+.y-form-textarea, .y-form-select, .y-form-switch, .y-form-editor, .y-form-radio-group, .y-form-file-upload, .y-form-date-picker, .y-form-checkbox-group, .y-form-checkbox, .y-form-input, .y-form-field, .y-form-autocomplete, .y-el-mb-3 {
   margin-bottom: 1rem !important;
 }
 
@@ -6725,6 +6756,15 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   .y-el-d-sm-none {
     display: none !important;
   }
+  .y-el-text-align-sm-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-sm-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-sm-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 768px) {
   .y-el-float-md-start {
@@ -6765,6 +6805,15 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   }
   .y-el-d-md-none {
     display: none !important;
+  }
+  .y-el-text-align-md-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-md-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-md-center {
+    text-align: center !important;
   }
 }
 @media (min-width: 992px) {
@@ -6807,6 +6856,15 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   .y-el-d-lg-none {
     display: none !important;
   }
+  .y-el-text-align-lg-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-lg-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-lg-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 1200px) {
   .y-el-float-xl-start {
@@ -6848,6 +6906,15 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   .y-el-d-xl-none {
     display: none !important;
   }
+  .y-el-text-align-xl-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-xl-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-xl-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 1400px) {
   .y-el-float-xxl-start {
@@ -6888,6 +6955,15 @@ body[data-bs-theme=dark] [data-bs-theme=light].y-navbar-wrapper {
   }
   .y-el-d-xxl-none {
     display: none !important;
+  }
+  .y-el-text-align-xxl-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-xxl-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-xxl-center {
+    text-align: center !important;
   }
 }
 @media print {
@@ -10569,17 +10645,18 @@ Form help
 /**
 Input group
  */
-.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group {
+.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group, .y-form-field-group {
   box-shadow: var(--y-box-shadow-input);
   border-radius: var(--y-border-radius);
 }
 
-.y-form-textarea-group .y-textarea, .y-form-select-group .y-textarea, .y-form-file-upload-group .y-textarea, .y-form-date-picker-group .y-textarea, .y-form-input-group .y-textarea, .y-form-textarea-group .y-file-upload, .y-form-select-group .y-file-upload, .y-form-file-upload-group .y-file-upload, .y-form-date-picker-group .y-file-upload, .y-form-input-group .y-file-upload, .y-form-textarea-group .y-date-picker, .y-form-select-group .y-date-picker, .y-form-file-upload-group .y-date-picker, .y-form-date-picker-group .y-date-picker, .y-form-input-group .y-date-picker, .y-form-textarea-group .y-input, .y-form-select-group .y-input, .y-form-file-upload-group .y-input, .y-form-date-picker-group .y-input, .y-form-input-group .y-input,
+.y-form-textarea-group .y-textarea, .y-form-select-group .y-textarea, .y-form-file-upload-group .y-textarea, .y-form-date-picker-group .y-textarea, .y-form-input-group .y-textarea, .y-form-field-group .y-textarea, .y-form-textarea-group .y-file-upload, .y-form-select-group .y-file-upload, .y-form-file-upload-group .y-file-upload, .y-form-date-picker-group .y-file-upload, .y-form-input-group .y-file-upload, .y-form-field-group .y-file-upload, .y-form-textarea-group .y-date-picker, .y-form-select-group .y-date-picker, .y-form-file-upload-group .y-date-picker, .y-form-date-picker-group .y-date-picker, .y-form-input-group .y-date-picker, .y-form-field-group .y-date-picker, .y-form-textarea-group .y-input, .y-form-select-group .y-input, .y-form-file-upload-group .y-input, .y-form-date-picker-group .y-input, .y-form-input-group .y-input, .y-form-field-group .y-input,
 .y-form-textarea-group .y-button,
 .y-form-select-group .y-button,
 .y-form-file-upload-group .y-button,
 .y-form-date-picker-group .y-button,
-.y-form-input-group .y-button {
+.y-form-input-group .y-button,
+.y-form-field-group .y-button {
   box-shadow: none;
 }
 
@@ -15538,6 +15615,16 @@ body:has(.y-offcanvas-no-scroll) {
   color: #d63939;
 }
 
+.y-form-field-hint {
+  margin-top: 0.25rem;
+  font-size: 85.714285%;
+}
+.y-form-field-hint-state-valid {
+  color: #2fb344;
+}
+.y-form-field-hint-state-invalid {
+  color: #d63939;
+}
 .y-form-input-hint {
   margin-top: 0.25rem;
   font-size: 85.714285%;

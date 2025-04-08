@@ -1,7 +1,7 @@
 <script>
 	import { Editor, El } from 'yesvelte'
 
-	let value = ''
+	let value = $state('')
 </script>
 
 <Editor bind:value placeholder="Write something about Yourself...." />

@@ -7,77 +7,91 @@
 
 	type $$Props = FormTextAreaProps
 
-	export let componentName: $$Props['componentName'] = 'form-textarea'
-	export let tag: $$Props['tag'] = 'textarea'
-	export let disabled: $$Props['disabled'] = undefined
-	export let borderRounded: $$Props['borderRounded'] = undefined
-	export let borderFlush: $$Props['borderFlush'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let rows: $$Props['rows'] = 3
-	export let name: $$Props['name'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let type: $$Props['type'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let minlength: $$Props['minlength'] = undefined
-	export let maxlength: $$Props['maxlength'] = undefined
-	export let cols: $$Props['cols'] = undefined
+	let {
+		componentName = 'form-textarea',
+		tag = 'textarea',
+		disabled,
+		borderRounded,
+		borderFlush,
+		placeholder,
+		readonly,
+		required,
+		rows = 3,
+		name,
+		size,
+		state: validationState,
+		type,
+		value = $bindable(),
+		label,
+		hint,
+		minlength,
+		maxlength,
+		cols,
+		groupSnippet,
+		startSnippet,
+		startIconSnippet,
+		endSnippet,
+		endIconSnippet,
+		hintSnippet,
+		labelSnippet,
+		onchange,
+		onfocus,
+		onblur,
+		...restProps
+	} = $props()
 
-	let id: string
-	let props: $$Props = {}
-	let teaxtareaProps: $$Props = {}
+	let id: string | undefined = $state(undefined)
 
-	$: {
-		props = {
-			required,
-			label,
-			hint,
-			state,
-			componentName,
-		}
+	let props = $derived({
+		...restProps,
+		required,
+		label,
+		hint,
+		state: validationState,
+		componentName,
+		hintSnippet,
+		labelSnippet,
+	})
 
-		teaxtareaProps = {
-			tag,
-			placeholder,
-			disabled,
-			readonly,
-			type,
-			required,
-			size,
-			state,
-			borderRounded,
-			borderFlush,
-			rows,
-			name,
-			minlength,
-			maxlength,
-			cols,
-		}
-	}
+	let teaxtareaProps = $derived({
+		tag,
+		placeholder,
+		disabled,
+		readonly,
+		type,
+		required,
+		size,
+		state: validationState,
+		borderRounded,
+		borderFlush,
+		onchange,
+		onfocus,
+		onblur,
+		rows,
+		name,
+		minlength,
+		maxlength,
+		cols,
+	})
 </script>
 
-<FormField {id} {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<svelte:fragment slot="group">
-		<slot name="start">
-			{#if $$slots['start-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="start-icon" />
-				</El>
-			{/if}
-		</slot>
+<FormField {id} {...props}>
+	{#snippet groupSnippet()}
+		{#if startSnippet}
+			{@render startSnippet()}
+		{:else if startIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render startIconSnippet()}
+			</El>
+		{/if}
 		<Textarea bind:id {...teaxtareaProps} bind:value />
-		<slot name="end">
-			{#if $$slots['end-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="end-icon" />
-				</El>
-			{/if}
-		</slot>
-	</svelte:fragment>
-	<slot name="hint" slot="hint" />
+
+		{#if endSnippet}
+			{@render endSnippet()}
+		{:else if endIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render endIconSnippet()}
+			</El>
+		{/if}
+	{/snippet}
 </FormField>

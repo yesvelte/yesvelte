@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { El, Input } from 'yesvelte'
 
-	let value: any
+	let value: any = $state()
 </script>
 
 <Input bind:value placeholder="Try to type something..." />

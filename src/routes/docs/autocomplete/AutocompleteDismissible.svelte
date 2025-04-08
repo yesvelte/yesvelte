@@ -1,8 +1,8 @@
 <script>
 	import { Autocomplete } from 'yesvelte'
 
-	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let items = $state(['Apple', 'Orange', 'Peach', 'Banana', 'Apricot'])
+	let value = $state('')
 </script>
 
 <Autocomplete multiple dismissible {items} bind:value />

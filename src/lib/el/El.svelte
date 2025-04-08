@@ -15,7 +15,7 @@
 	// default properties
 	let {
 		element = $bindable(),
-		componentName,
+		componentName = 'el',
 		id = $bindable(),
 		tag = 'div',
 		cssProps,
@@ -288,19 +288,27 @@
 		justifyContent,
 	})
 
-	let classes: string | undefined = $state('')
-	$effect(() => {
-		classes =
-			classname(elComponentName, defaultCssProps, restProps.class)?.replace('y-el ', '') ?? ''
-	})
-
 	let elProps = $derived.by(() => {
+		let classes = classname(elComponentName, defaultCssProps, restProps.class) ?? ''
 		let klass = classes
+		if (id == 'el_70') {
+			console.log(
+				classes,
+				klass,
+				elComponentName,
+				componentName,
+				cssProps,
+				' ' + classname(componentName, cssProps)
+			)
+		}
 		if (componentName !== elComponentName) klass += ' ' + classname(componentName, cssProps)
 
 		klass += $animate?.classes || ''
 
 		const styles = `${style ? style + ';' : ''}${$animate?.styles || ''}` || undefined
+		if (id == 'el_70') {
+			console.log(klass)
+		}
 
 		return {
 			id,

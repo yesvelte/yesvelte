@@ -3,7 +3,7 @@
 
 	type $$Props = ElProps
 
-	let {componentName = 'modal-body', children, ...restProps}: $$Props = $props();
+	let { componentName = 'modal-body', children, ...restProps }: $$Props = $props()
 </script>
 
 <El {...restProps} {componentName}>

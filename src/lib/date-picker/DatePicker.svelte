@@ -23,7 +23,7 @@
 		name,
 		value = $bindable(),
 		text = $bindable(),
-		id,
+		id = $bindable(),
 		startSnippet,
 		endSnippet,
 		...restProps

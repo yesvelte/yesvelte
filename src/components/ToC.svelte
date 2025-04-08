@@ -4,7 +4,8 @@
 	import { afterNavigate } from '$app/navigation'
 	import { El } from 'yesvelte'
 
-	export let sections: any[] = []
+	let { sections = $bindable([]) } = $props()
+
 
 	const init = () => {
 		if (typeof window !== 'undefined') {

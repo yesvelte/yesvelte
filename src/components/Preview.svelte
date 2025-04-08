@@ -12,10 +12,14 @@
 	import Prism from './Prism.svelte'
 	import { classname } from 'yesvelte/internal'
 
-	export let markup: string | undefined = undefined
-	export let script: string | undefined = undefined
-	export let style: string | undefined = undefined
-	export let src: string | undefined = undefined
+	let {
+		markup,
+		script,
+		style,
+		src,
+		children
+	} = $props();
+	
 </script>
 
 <Card>
@@ -41,7 +45,7 @@
 		<TabContent>
 			<TabPanel>
 				<CardBody class={classname('preview-body')}>
-					<slot />
+					{@render children()}
 				</CardBody>
 			</TabPanel>
 			{#if false && markup}

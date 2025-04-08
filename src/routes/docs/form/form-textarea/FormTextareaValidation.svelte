@@ -1,18 +1,20 @@
 <script lang="ts">
 	import { FormTextarea } from 'yesvelte'
 
-	let value: string = ''
+	let value: string = $state('')
 
-	let hint: string = ''
-	let state: 'invalid' | undefined = undefined
+	let hint: string = $state('')
+	let validationState: 'invalid' | undefined = $state(undefined)
 
-	$: if (value && value.indexOf('bad') > -1) {
-		hint = 'Text should not have "bad" word'
-		state = 'invalid'
-	} else {
-		hint = ''
-		state = undefined
-	}
+	$effect(() => {
+		if (value && value.indexOf('bad') > -1) {
+			hint = 'Text should not have "bad" word'
+			validationState = 'invalid'
+		} else {
+			hint = ''
+			validationState = undefined
+		}
+	}) 
 </script>
 
-<FormTextarea label="Any text except 'bad' word." {state} {hint} bind:value />
+<FormTextarea label="Any text except 'bad' word." state={validationState} {hint} bind:value />

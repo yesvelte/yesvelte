@@ -8,7 +8,7 @@
 	let {
 		componentName = 'switch',
 		tag = 'input',
-		id,
+		id = $bindable(),
 		color,
 		disabled,
 		description,

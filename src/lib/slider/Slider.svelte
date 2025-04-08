@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onDestroy, setContext } from 'svelte'
 	import { onMount } from 'svelte'
-	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
 	import { writable } from 'svelte/store'
 	import type { SliderKnobType, SliderProps } from './Slider.types'
+	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
 	import { classname } from '../internal'
 
 	import { El } from '../el'
@@ -95,10 +95,12 @@
 			},
 		}
 
-		instance = noUiSlider.create(element, options)
+		import('nouislider').then((module) => {
+			instance = module.default.create(element, options)
 
-		instance.on('update', (newValues, handle) => {
-			$values[handle] = +newValues[handle]
+			instance.on('update', (newValues, handle) => {
+				$values[handle] = +newValues[handle]
+			})
 		})
 	})
 
@@ -109,7 +111,9 @@
 	})
 
 	function setValue(id: number, newValue: number) {
-		instance.setHandle(id, newValue)
+		if (instance) {
+			instance.setHandle(id, newValue)
+		}
 	}
 
 	setContext('SLIDER', { register, unregister, setValue, values })

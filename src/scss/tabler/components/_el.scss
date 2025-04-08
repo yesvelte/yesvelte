@@ -186,7 +186,7 @@ $props-extend: (
 		@each $text-align in $text-aligns {
 			@each $breakpoint in $breakpoints {
 				&-#{$breakpoint}-#{$text-align} {
-					@extend %offset-#{$breakpoint}-#{$text-align} !optional;
+					@extend %text-#{$breakpoint}-#{$text-align};
 				}
 			}
 		}

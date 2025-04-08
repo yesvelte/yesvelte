@@ -15,7 +15,7 @@
 		size,
 		state: validationState,
 		files = $bindable(),
-		id,
+		id = $bindable(),
 		startSnippet,
 		endSnippet,
 		...restProps

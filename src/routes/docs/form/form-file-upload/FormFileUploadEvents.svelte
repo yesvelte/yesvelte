@@ -1,9 +1,9 @@
 <script>
 	import { FormFileUpload } from 'yesvelte'
 
-	let clicked = 0
+	let clicked = $state(0)
 </script>
 
-<FormFileUpload on:click={() => (clicked += 1)} placeholder="Click me!" />
+<FormFileUpload onclick={() => (clicked += 1)} placeholder="Click me!" />
 
 clicked: {clicked}

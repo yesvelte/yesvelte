@@ -20,13 +20,16 @@
 		state: validationState,
 		key,
 		componentName = 'form-select',
-		children,
+		children: childrenSnippet,
 		labelSnippet,
 		hintSnippet,
 		startSnippet,
 		startIconSnippet,
 		endSnippet,
 		endIconSnippet,
+		onchange,
+		onfocus,
+		onblur,
 		...restProps
 	}: $$Props = $props()
 
@@ -38,6 +41,9 @@
 		multiple,
 		size,
 		items,
+		onchange,
+		onfocus,
+		onblur,
 		state: validationState,
 		key,
 		name,
@@ -68,8 +74,8 @@
 
 		<Select {...selectProps} bind:value bind:id>
 			{#snippet children({ item, index })}
-				{#if children}
-					{@render children({ item, index })}
+				{#if childrenSnippet}
+					{@render childrenSnippet({ item, index })}
 				{:else}
 					{item}
 				{/if}

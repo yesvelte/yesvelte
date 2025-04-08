@@ -11,14 +11,10 @@
 	let value: string[] = ['css']
 </script>
 
-<FormCheckboxGroup
-	label="Select Language"
-	key={(item) => item.code}
-	bind:value
-	{items}
-	let:item
-	let:index>
-	{(index || 0) + 1}- {item.text} ({item.code})
+<FormCheckboxGroup label="Select Language" key={(item) => item.code} bind:value {items}>
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text} ({item.code})
+	{/snippet}
 </FormCheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

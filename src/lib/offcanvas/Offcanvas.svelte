@@ -91,7 +91,7 @@
 		{@render children?.()}
 	</El>
 	{#if backdrop}
-		<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} {show} />
+		<El componentName="{componentName}-backdrop" onclick={handleOutsideClick} {show} />
 	{/if}
 	{#if show}
 		{#if noScroll}

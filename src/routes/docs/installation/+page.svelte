@@ -12,12 +12,12 @@
 </script>
 
 <Page title="Installation">
-	<p slot="description">
+	{#snippet description()}
 		To use YeSvelte components, you need to install and setup your environment.
-	</p>
+	{/snippet}
 
 	<Doc title="With Sveltekit">
-		<p slot="description">
+		{#snippet description()}
 			To use YeSvelte with SvelteKit based project, first you should initialize the project, you can
 			use this command to initialize empty SvelteKit project.
 
@@ -63,11 +63,11 @@
 				<El textMuted>You can replace 'tabler' with 'daisyui' for a different look and feel.</El>
 			</Alert>
 			Now you should be able to use YeSvelte components in your project!
-		</p>
+		{/snippet}
 	</Doc>
 
 	<Doc title="With Svelte + Vite">
-		<p slot="description">
+		{#snippet description()}
 			To use YeSvelte with Svelte based project, first you should initialize the project, you can
 			use this command to initialize empty Svelte project.
 
@@ -113,7 +113,7 @@
 
 			<br />
 			Now you should be able to use YeSvelte components in your project!
-		</p>
+		{/snippet}
 	</Doc>
 
 	<Doc title="Template Repository">

@@ -17,7 +17,7 @@
 		options,
 		size,
 		state: validationState,
-		value,
+		value = $bindable(),
 		label,
 		hint,
 		name,

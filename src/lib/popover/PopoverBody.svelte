@@ -4,9 +4,9 @@
 
 	type $$Props = PopoverBodyProps
 
-	export let componentName: $$Props['componentName'] = 'popover-body'
+	let { componentName = 'popover-body', children, ...restProps } = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children?.()}
 </El>

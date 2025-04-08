@@ -6,8 +6,7 @@
 
 	type $$Props = OffcanvasHeaderProps
 
-	let {componentName = 'offcanvas-header', 
-		title,children, ...restProps} : $$Props = $props()
+	let { componentName = 'offcanvas-header', title, children, ...restProps }: $$Props = $props()
 
 	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 

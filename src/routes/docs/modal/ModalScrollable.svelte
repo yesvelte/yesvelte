@@ -98,7 +98,7 @@
 		<br />
 	</ModalBody>
 	<ModalFooter>
-		<Button class="me-auto" on:click={() => (show = false)}>Close</Button>
-		<Button color="primary" on:click={() => (show = false)}>Save changes</Button>
+		<Button class="me-auto" onclick={() => (show = false)}>Close</Button>
+		<Button color="primary" onclick={() => (show = false)}>Save changes</Button>
 	</ModalFooter>
 </Modal>

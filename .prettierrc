@@ -6,7 +6,6 @@
 	"printWidth": 100,
 	"bracketSameLine": true,
 	"plugins": ["prettier-plugin-svelte"],
-	"pluginSearchDirs": ["."],
 	"svelteAllowShorthand": true,
 	"svelteIndentScriptAndStyle": true,
 	"svelteSortOrder": "options-scripts-markup-styles",

@@ -164,8 +164,8 @@
 	let selectedItemWithLabel = 'Copy'
 	let selectedItemWithAvatar = itemsWithImage[0].name
 </script>
-<GithubLink />
 
+<GithubLink />
 
 <Card title="Form elements" mb="3">
 	<CardBody>
@@ -186,54 +186,70 @@
 				<FormSelect bind:value={selectedValue} {items} label="Select" />
 				<FormField label="Input group">
 					<Input placeholder="Search for...">
-						<Button slot="end">Go!</Button>
+						{#snippet endSnippet()}
+							<Button>Go!</Button>
+						{/snippet}
 					</Input>
 					<El mb="2" />
 					<Input>
-						<Dropdown placement="bottom-start">
-							<Button slot="target">Action</Button>
-							<DropdownMenu>
-								<DropdownItem>Action</DropdownItem>
-								<DropdownItem>Another Action</DropdownItem>
-							</DropdownMenu>
-						</Dropdown>
-					</Input>
-				</FormField>
-				<FormField>
-					<Input>
-						<svelte:fragment slot="end">
-							<Button>Action</Button>
-
+						{#snippet startSnippet()}
 							<Dropdown placement="bottom-start">
-								<Button slot="target" />
+								{#snippet targetSnippet()}
+									<Button>Action</Button>
+								{/snippet}
 								<DropdownMenu>
 									<DropdownItem>Action</DropdownItem>
 									<DropdownItem>Another Action</DropdownItem>
 								</DropdownMenu>
 							</Dropdown>
-						</svelte:fragment>
+						{/snippet}
+					</Input>
+				</FormField>
+				<FormField>
+					<Input>
+						{#snippet endSnippet()}
+							<Button>Action1</Button>
+
+							<Dropdown placement="bottom-start">
+								{#snippet targetSnippet()}
+									<Button />
+								{/snippet}
+								<DropdownMenu>
+									<DropdownItem>Action</DropdownItem>
+									<DropdownItem>Another Action</DropdownItem>
+								</DropdownMenu>
+							</Dropdown>
+						{/snippet}
 					</Input>
 				</FormField>
 				<FormField>
 					<Label>Icon Input</Label>
 					<Input placeholder="Search...">
-						<Button slot="end"><Icon name="search" /></Button>
+						{#snippet endSnippet()}
+							<Button><Icon name="search" /></Button>
+						{/snippet}
 					</Input>
 				</FormField>
 				<FormField>
 					<Input placeholder="Username">
-						<Button slot="start"><Icon name="user" /></Button>
+						{#snippet startSnippet()}
+							<Button><Icon name="user" /></Button>
+						{/snippet}
 					</Input>
 				</FormField>
 				<FormField>
-					<Label slot="label">Separated inputs</Label>
+					{#snippet labelSnippet()}
+						<Label>Separated inputs</Label>
+					{/snippet}
 					<El d="flex">
 						<Input placeholder="Search for..." me="2" />
 						<Button><Icon name="search" /></Button>
 					</El>
 				</FormField>
 				<FormField>
-					<Label slot="label">Input with help icon</Label>
+					{#snippet labelSnippet()}
+						<Label>Input with help icon</Label>
+					{/snippet}
 					<El d="flex">
 						<Input placeholder="Search for..." me="2" />
 						<El alignSelf="center" class="form-help"><Icon name="question-mark" /></El>
@@ -251,46 +267,60 @@
 				<FormField>
 					<FormInput label="Form control rounded" borderRounded placeholder="Text..." />
 					<Input placeholder="Search..." borderRounded>
-						<Button slot="end"><Icon name="search" /></Button>
+						{#snippet endSnippet()}
+							<Button><Icon name="search" /></Button>
+						{/snippet}
 					</Input>
 				</FormField>
 				<FormInput label="Form control flush" borderFlush placeholder="Text..." />
 				<FormField>
 					<Label>Input group</Label>
-					<Input placeholder="Username">
-						<span slot="start">@</span>
-					</Input>
+					<FormInput placeholder="Username">
+						{#snippet startIconSnippet()}
+							<span>@</span>
+						{/snippet}
+					</FormInput>
 					<El mb="2" />
-					<Input placeholder="subdomain">
-						<span slot="end">.yesvelte.com</span>
-					</Input>
+					<FormInput placeholder="subdomain">
+						{#snippet endIconSnippet()}
+							<span>.yesvelte.com</span>
+						{/snippet}
+					</FormInput>
 					<El mb="2" />
-					<Input placeholder="subdomain">
-						<span slot="start">https://</span>
-						<span slot="end">.yesvelte.com</span>
-					</Input>
+					<FormInput placeholder="subdomain">
+						{#snippet startIconSnippet()}
+							<span>https://</span>
+						{/snippet}
+						{#snippet endIconSnippet()}
+							<span>.yesvelte.com</span>
+						{/snippet}
+					</FormInput>
 				</FormField>
 				<FormField>
 					<Label>Input with checkbox or radios</Label>
-					<Input>
-						<span slot="start">
-							<input
-								class="form-check-input mt-0"
-								type="checkbox"
-								value=""
-								aria-label="Checkbox for following text input" />
-						</span>
-					</Input>
+					<FormInput>
+						{#snippet startIconSnippet()}
+							<span>
+								<input
+									class="form-check-input mt-0"
+									type="checkbox"
+									value=""
+									aria-label="Checkbox for following text input" />
+							</span>
+						{/snippet}
+					</FormInput>
 					<El mb="2" />
-					<Input>
-						<span slot="end">
-							<input
-								class="form-check-input mt-0"
-								type="radio"
-								value=""
-								aria-label="Radio button for following text input" />
-						</span>
-					</Input>
+					<FormInput>
+						{#snippet endIconSnippet()}
+							<span>
+								<input
+									class="form-check-input mt-0"
+									type="radio"
+									value=""
+									aria-label="Radio button for following text input" />
+							</span>
+						{/snippet}
+					</FormInput>
 				</FormField>
 				<FormField row label="Form buttons" g="2">
 					<El col="6">
@@ -394,45 +424,49 @@
 					key={(item) => item.name}
 					items={itemsWithImage}
 					label="Select with avatars"
-					bind:value={selectedItemWithAvatar}
-					let:item>
-					<El d="flex" alignItems="center">
-						<Avatar size="xs" me="2">
-							<img src={item.img} />
-						</Avatar>
-						{item.name}
-					</El>
-					<El d="flex" alignItems="center" slot="selected">
-						<Avatar size="xs" me="2">
-							<img src={item.img} />
-						</Avatar>
-						{item.name}
-					</El>
+					bind:value={selectedItemWithAvatar}>
+					{#snippet children({ item })}
+						<El d="flex" alignItems="center">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
+							</Avatar>
+							{item.name}
+						</El>
+					{/snippet}
+					{#snippet selectedSnippet({ item })}
+						<El d="flex" alignItems="center">
+							<Avatar size="xs" me="2">
+								<img src={item.img} />
+							</Avatar>
+							{item.name}
+						</El>
+					{/snippet}
 				</FormAutocomplete>
-				<FormAutocomplete
-					key={(item) => item.name}
-					items={itemsWithFlag}
-					label="Select with flags"
-					let:item>
-					<El d="flex" alignItems="center">
-						<El tag="img" width="30" me="2" src={item.flag} />
-						{item.name}
-					</El>
+				<FormAutocomplete key={(item) => item.name} items={itemsWithFlag} label="Select with flags">
+					{#snippet children({ item })}
+						<El d="flex" alignItems="center">
+							<El tag="img" width="30" me="2" src={item.flag} />
+							{item.name}
+						</El>
+					{/snippet}
 				</FormAutocomplete>
 				<FormAutocomplete
 					key={(item) => item.name}
 					items={itemsWithLabel}
 					label="Select with labels"
-					bind:value={selectedItemWithLabel}
-					let:item>
-					<El d="flex" alignItems="center">
-						<Badge ghost color="primary" me="1">{item.command}</Badge>
-						{item.name}
-					</El>
-					<El d="flex" alignItems="center" slot="selected">
-						<Badge ghost color="primary" me="1">{item.command}</Badge>
-						{item.name}
-					</El>
+					bind:value={selectedItemWithLabel}>
+					{#snippet children({ item })}
+						<El d="flex" alignItems="center">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
+							{item.name}
+						</El>
+					{/snippet}
+					{#snippet selectedSnippet({ item })}
+						<El d="flex" alignItems="center">
+							<Badge ghost color="primary" me="1">{item.command}</Badge>
+							{item.name}
+						</El>
+					{/snippet}
 				</FormAutocomplete>
 			</El>
 			<El colXl="4" colMd="6" col="12">
@@ -547,7 +581,9 @@
 				<El tag="h3">Project ID</El>
 				<El mb="2">Used when interacting with the API.</El>
 				<Input value="prj_5ae74426fe935327a8fa178b07d84ad9" placeholder="Search...">
-					<Button slot="end"><Icon name="copy" /></Button>
+					{#snippet endSnippet()}
+						<Button><Icon name="copy" /></Button>
+					{/snippet}
 				</Input>
 			</CardBody>
 			<CardFooter>
@@ -831,7 +867,9 @@ But that's the difference in our opinions." />
 		user-select: none;
 		background: var(--tblr-gray-100);
 		border-radius: 100rem;
-		transition: background-color 0.3s, color 0.3s;
+		transition:
+			background-color 0.3s,
+			color 0.3s;
 	}
 	.payment {
 		width: 2.49999rem;

@@ -2,9 +2,9 @@
 	import { Button, El, FormInput } from 'yesvelte'
 
 	let takenEmails = ['test@gmail.com', 'user1@gmail.com', 'user2@gmail.com']
-	let value: string
-	let state: 'invalid' | undefined = undefined
-	let hint = ''
+	let value: string = $state()
+	let validationState: 'invalid' | undefined = $state(undefined)
+	let hint = $state('')
 
 	async function checkApiForEmailAvailability(email: string) {
 		return new Promise((resolve) => setTimeout(() => resolve(!takenEmails.includes(email)), 200))
@@ -13,10 +13,10 @@
 	async function onBlur() {
 		if (await checkApiForEmailAvailability(value)) {
 			hint = ''
-			state = undefined
+			validationState = undefined
 		} else {
 			hint = 'Email is not available!'
-			state = 'invalid'
+			validationState = 'invalid'
 		}
 	}
 </script>
@@ -26,7 +26,8 @@
 	<El tag="small">{email}</El><br />
 {/each}
 
-<FormInput label="Enter your Email:" {hint} {state} bind:value on:blur={onBlur} />
+<FormInput label="Enter your Email:" {hint} state={validationState} bind:value onblur={onBlur} />
 
 <br />
-<Button disabled={state === 'invalid'} color="primary">Submit</Button>
+
+<Button disabled={validationState === 'invalid'} color="primary">Submit</Button>

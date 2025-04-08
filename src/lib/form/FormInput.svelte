@@ -19,7 +19,7 @@
 		size,
 		state: validationState,
 		type,
-		value,
+		value = $bindable(),
 		label,
 		hint,
 		name,
@@ -35,7 +35,9 @@
 		endSnippet,
 		labelSnippet,
 		hintSnippet,
-		groupSnippet,
+		onchange,
+		onfocus,
+		onblur,
 		...restProps
 	}: $$Props = $props()
 
@@ -57,6 +59,9 @@
 		type,
 		required,
 		size,
+		onchange,
+		onfocus,
+		onblur,
 		state: validationState,
 		borderRounded,
 		borderFlush,
@@ -73,9 +78,7 @@
 </script>
 
 <FormField {...props}>
-	{#if groupSnippet}
-		{@render groupSnippet()}
-	{:else}
+	{#snippet groupSnippet()}
 		{#if startSnippet}
 			{@render startSnippet()}
 		{:else if startIconSnippet}
@@ -93,5 +96,5 @@
 				{@render endIconSnippet()}
 			</El>
 		{/if}
-	{/if}
+	{/snippet}
 </FormField>

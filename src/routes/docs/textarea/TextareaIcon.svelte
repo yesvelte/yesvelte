@@ -3,11 +3,15 @@
 </script>
 
 <Textarea>
-	<Icon slot="start" name="align-center" />
+	{#snippet startSnippet()}
+		<Icon name="align-center" />
+	{/snippet}
 </Textarea>
 
 <El p="3" />
 
 <Textarea>
-	<Icon slot="end" name="align-center" />
+	{#snippet endSnippet()}
+		<Icon name="align-center" />
+	{/snippet}
 </Textarea>

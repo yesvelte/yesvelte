@@ -1,6 +1,6 @@
 <script>
 	import { FormSwitch } from 'yesvelte'
-	let value = false
+	let value = $state(false)
 </script>
 
 <FormSwitch

@@ -48,7 +48,7 @@
 						</El>
 					</El>
 					<Input type={textType} placeholder="Your password">
-						<Icon slot="end" on:click={onClick} name={icon} />
+						<Icon slot="end" onclick={onClick} name={icon} />
 					</Input>
 				</FormField>
 				<FormCheckbox>Remember me on this device</FormCheckbox>

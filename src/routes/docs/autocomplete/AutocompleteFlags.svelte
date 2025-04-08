@@ -1,13 +1,13 @@
 <script>
 	import { Autocomplete, El } from 'yesvelte'
 
-	let items = [
+	let items = $state([
 		{ flag: 'pl', name: 'Poland' },
 		{ flag: 'de', name: 'Germany' },
 		{ flag: 'cz', name: 'Czech Republic' },
 		{ flag: 'br', name: 'Brazil' },
-	]
-	let value = ''
+	])
+	let value = $state('')
 </script>
 
 <Autocomplete {items} key="flag" bind:value>

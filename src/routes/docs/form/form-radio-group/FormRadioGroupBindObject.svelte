@@ -8,11 +8,13 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value: string | undefined = undefined
+	let value: string | undefined = $state(undefined)
 </script>
 
-<FormRadioGroup label="Select Language" bind:value {items} let:item let:index>
-	{(index || 0) + 1}- {item.text} ({item.code})
+<FormRadioGroup label="Select Language" bind:value {items}>
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text} ({item.code})
+	{/snippet}
 </FormRadioGroup>
 
 <i>value: {JSON.stringify(value)}</i>

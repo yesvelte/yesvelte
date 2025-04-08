@@ -4,5 +4,7 @@
 </script>
 
 <FormFileUpload label="Add Picture" required>
-	<Icon slot="start-icon" name="photo-plus" />
+	{#snippet startIconSnippet()}
+		<Icon name="photo-plus" />
+	{/snippet}
 </FormFileUpload>

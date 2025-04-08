@@ -7,10 +7,13 @@
 	import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard'
 	import 'prismjs/themes/prism.css'
 
-	export let language: 'css' | 'javascript' | 'html'
-	export let source: string = ''
+	let {
 
-	let root: HTMLElement
+		language,
+		source,
+	} = $props()
+
+	let root: HTMLElement | undefined = $state(undefined)
 
 	// check if window is defined, if not, we are in SSR mode
 	if (typeof window !== 'undefined') {
@@ -23,11 +26,11 @@
 		Prism.highlightElement(root)
 	}
 
-	$: {
+	$effect(() => {
 		if (root && Prism) {
 			highlight(root, language, source)
 		}
-	}
+	}) 
 </script>
 
 <div class="prism--show-copy-button">

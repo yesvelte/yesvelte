@@ -1,7 +1,7 @@
 <script>
 	import { FormEditor, El } from 'yesvelte'
 
-	let value = ''
+	let value = $state('')
 </script>
 
 <FormEditor bind:value placeholder="Write something about Yourself...." />

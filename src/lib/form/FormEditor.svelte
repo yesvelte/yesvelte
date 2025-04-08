@@ -5,46 +5,50 @@
 
 	type $$Props = FormEditorProps
 
-	export let componentName: $$Props['componentName'] = 'form-editor'
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let toolbar: $$Props['toolbar'] = undefined
-	export let height: $$Props['height'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
+	let {
+		componentName = 'form-editor',
+		placeholder,
+		readonly,
+		required,
+		toolbar,
+		height,
+		name,
+		onchanged,
+		state: validationState,
+		value = $bindable(),
+		label,
+		hint,
+		hintSnippet,
+		labelSnippet,
+		...restProps
+	}: $$Props = $props()
 
+	let id: string | undefined = $state(undefined)
 
-	let id: string
-	let props: $$Props = {}
-	let editorProps: $$Props = {}
+	let props: $$Props = $derived({
+		...restProps,
+		id,
+		required,
+		label,
+		hint,
+		state: validationState,
+		hintSnippet,
+		labelSnippet,
+		componentName,
+	})
 
-	$: {
-		props = {
-			required,
-			label,
-			hint,
-			state,
-			componentName,
-		}
-
-		editorProps = {
-			placeholder,
-			readonly,
-			required,
-			toolbar,
-			height,
-			state,
-			name,
-		}
-	}
+	let editorProps: $$Props = $derived({
+		placeholder,
+		readonly,
+		required,
+		toolbar,
+		height,
+		onchanged,
+		state: validationState,
+		name,
+	})
 </script>
 
-<FormField {id} {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<Editor bind:id {...editorProps} on:changed bind:value />
-	<slot name="hint" slot="hint" />
+<FormField {...props}>
+	<Editor bind:id {...editorProps} bind:value />
 </FormField>

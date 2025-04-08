@@ -2,9 +2,9 @@
 	import { El, Icon, Input, Modal, ModalBody, ModalHeader } from 'yesvelte'
 	import { navigations } from '../routes/docs/navigations'
 
-	export let open = false
+	let { open = $bindable() } = $props()
 
-	let query = ''
+	let query = $state('')
 
 	function filter(query) {
 		if (query.length < 2) return []

@@ -1,8 +1,8 @@
 <script>
 	import { FormInput } from 'yesvelte'
 
-	let clicked = 0
+	let clicked = $state(0)
 </script>
 
-<FormInput label="Input" on:click={() => (clicked += 1)} placeholder="Click Me!" />
+<FormInput label="Input" onclick={() => (clicked += 1)} placeholder="Click Me!" />
 clicked: {clicked}

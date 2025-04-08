@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { El, FormFileUpload } from 'yesvelte'
 
-	let files: FileList
+	let files: FileList = $state()
 </script>
 
 <FormFileUpload label="Picture" bind:files />

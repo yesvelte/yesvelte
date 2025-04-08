@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { El } from '../el'
-	import type { PopoverHeaderProps } from './Popover.types'
+	import type { PopoverBodyProps } from './Popover.types'
 
 	type $$Props = PopoverHeaderProps
 
-	export let componentName: $$Props['componentName'] = 'popover-header'
+	let { componentName = 'popover-header', children, ...restProps } = $props()
 </script>
 
-<El {...$$restProps} {componentName}>
-	<slot />
+<El {...restProps} {componentName}>
+	{@render children?.()}
 </El>

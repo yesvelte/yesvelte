@@ -5,32 +5,52 @@
 
 	type $$Props = FormRadioGroupProps
 
-	export let color: $$Props['color'] = undefined
-	export let inline: $$Props['inline'] = undefined
-	export let items: $$Props['items'] = undefined
-	export let key: $$Props['key'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let componentName: $$Props['componentName'] = 'form-radio-group'
+	let {
+		color,
+		inline,
+		items,
+		key,
+		reverse,
+		value = $bindable(),
+		name,
+		labelSnippet,
+		hintSnippet,
+		children: childrenSnippet,
+		onchange,
+		onfocus,
+		onblur,
+		componentName = 'form-radio-group',
+		...restProps
+	}: $$Props = $props()
 
-	let radioGroupProps: $$Props = {}
-	$: {
-		radioGroupProps = {
-			color,
-			inline,
-			reverse,
-			items,
-			name,
-			key,
-		}
-	}
+	let radioGroupProps: $$Props = $derived({
+		color,
+		inline,
+		reverse,
+		items,
+		name,
+		key,
+		onchange,
+		onfocus,
+		onblur,
+	})
+
+	let props: any = $derived({
+		...restProps,
+		componentName,
+		labelSnippet,
+		hintSnippet,
+	})
 </script>
 
-<FormField {...$$restProps} {componentName}>
-	<slot name="label" slot="label" />
-	<RadioGroup {...radioGroupProps} bind:value let:item let:index>
-		<slot {index} {item}>{item}</slot>
+<FormField {...props} {componentName}>
+	<RadioGroup {...radioGroupProps} bind:value>
+		{#snippet children({ item, index })}
+			{#if childrenSnippet}
+				{@render childrenSnippet({ item, index })}
+			{:else}
+				{item}
+			{/if}
+		{/snippet}
 	</RadioGroup>
-	<slot name="hint" slot="hint" />
 </FormField>

@@ -1,7 +1,7 @@
 <script>
 	import { Button, El, FormInput } from 'yesvelte'
 
-	let message = ''
+	let message = $state('')
 	function onSubmit() {
 		message = 'Prevented default behavior of Forms'
 	}

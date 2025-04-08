@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { El } from 'yesvelte'
 	import { page } from '$app/stores'
-	export let title: string = ''
-	export let description: string = ''
+	
+	let {
+		title,
+		description,
+		children
+	} = $props()
 </script>
 
 <svelte:head>
@@ -11,10 +15,13 @@
 </svelte:head>
 
 <El class="y-page-title" mt="4" mb="3" tag="h1">{title}</El>
-<slot name="description">
+{#if typeof description == 'function'}
+	{@render description()}
+{:else}
 	<El tag="p">{description}</El>
-</slot>
-<slot />
+{/if}
+
+{@render children?.()}
 
 <style>
 	:global(.docs-link) {

@@ -10,7 +10,7 @@
 	let value = '2'
 </script>
 
-<Autocomplete {items} key={(item) => item.id} bind:value let:item>
+<Autocomplete {items} key={(item) => item.id} bind:value>
 	{#snippet children({ item })}
 		<El d="flex" alignItems="center">
 			<Avatar me="2">

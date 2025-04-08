@@ -111,6 +111,7 @@
 		inputEl?.focus()
 
 		if (multiple) {
+			value ??= []
 			if (value.includes(item)) {
 				value = value.filter((x: any) => getKey(x) != getKey(item))
 			} else {

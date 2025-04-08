@@ -19,7 +19,7 @@
 	let value: number | undefined = undefined
 </script>
 
-<Autocomplete create oncreated={onCreated} key="id" {items} bind:value let:item>
+<Autocomplete create oncreated={onCreated} key="id" {items} bind:value>
 	{#snippet children({ item, index })}
 		{item.value}
 	{/snippet}

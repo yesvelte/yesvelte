@@ -5,31 +5,37 @@
 
 	type $$Props = FormSliderProps
 
-	export let componentName: $$Props['componentName'] = 'form-input'
-	export let tag: $$Props['tag'] = 'input'
-	export let required: $$Props['required'] = undefined
-	export let color: $$Props['color'] = undefined
-	export let connect: $$Props['connect'] = undefined
-	export let min: $$Props['min'] = undefined
-	export let max: $$Props['max'] = undefined
-	export let step: $$Props['step'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let name: $$Props['name'] = undefined
+	let {
+		componentName = 'form-slider',
+		tag = 'input',
+		required,
+		color,
+		connect,
+		min,
+		max,
+		step,
+		state,
+		label,
+		hint,
+		name,
+		children,
+		labelSnippet,
+		hintSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let props: $$Props = {}
-	let sliderProps: $$Props = {}
-
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
+		labelSnippet,
+		hintSnippet,
 		required,
 		label,
 		hint,
 		state,
 		componentName,
-	}
+	})
 
-	$: sliderProps = {
+	let sliderProps: $$Props = $derived({
 		tag,
 		required,
 		state,
@@ -39,13 +45,11 @@
 		max,
 		step,
 		name,
-	}
+	})
 </script>
 
-<FormField {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
+<FormField {...props}>
 	<Slider {...sliderProps}>
 		<slot />
 	</Slider>
-	<slot name="hint" slot="hint" />
 </FormField>

@@ -3,18 +3,26 @@
 </script>
 
 <FormInput label="Start Icon">
-	<Icon name="star" slot="start-icon" />
+	{#snippet startIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormInput>
 <El p="3" />
 <FormInput label="End Icon">
-	<Icon name="star" slot="end-icon" />
+	{#snippet endIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormInput>
 <El p="3" />
 <FormInput label="Start Button">
-	<Button color="primary" slot="start">Start</Button>
+	{#snippet startSnippet()}
+		<Button color="primary">Start</Button>
+	{/snippet}
 </FormInput>
 <El p="3" />
 <FormInput label="End Button">
-	<Button color="primary" slot="end">Search</Button>
+	{#snippet endSnippet()}
+		<Button color="primary">Search</Button>
+	{/snippet}
 </FormInput>
 <El p="3" />

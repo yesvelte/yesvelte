@@ -1,7 +1,7 @@
 <script>
 	import { FormEditor, El } from 'yesvelte'
 
-	let value = '<p>Hello <b>World</b>!</p>'
+	let value = $state('<p>Hello <b>World</b>!</p>')
 </script>
 
 <FormEditor label="Default" hint="Write 200 charachers about yourself" bind:value />

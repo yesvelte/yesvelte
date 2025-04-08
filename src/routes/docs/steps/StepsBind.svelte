@@ -19,6 +19,6 @@
 
 <Steps {items} bind:active>
 	{#snippet children({ item, index })}
-		<StepItem on:click={() => (active = index)}>{item.text}</StepItem>
+		<StepItem onclick={() => (active = index)}>{item.text}</StepItem>
 	{/snippet}
 </Steps>

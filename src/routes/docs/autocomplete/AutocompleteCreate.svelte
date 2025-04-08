@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Autocomplete } from 'yesvelte'
 
-	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value = ''
+	let items = $state(['Apple', 'Orange', 'Peach', 'Banana', 'Apricot'])
+	let value = $state('')
 
 	function onCreated(item: string) {
 		value = item

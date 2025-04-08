@@ -1,26 +1,26 @@
 <script lang="ts">
 	import { FormDatePicker, El } from 'yesvelte'
 
-	let state: 'invalid' | undefined = undefined
-	let hint: string = ''
+	let validationState: 'invalid' | undefined = $state(undefined)
+	let hint: string = $state('')
 
 	function onChange() {
 		if (new Date(value) < new Date()) {
 			hint = 'Day is not in the future'
-			state = 'invalid'
+			validationState = 'invalid'
 		} else {
 			hint = ''
-			state = undefined
+			validationState = undefined
 		}
 	}
 
-	let value: any
+	let value: any = $state()
 </script>
 
 <FormDatePicker
 	label="choose a day in the future:"
 	{hint}
-	{state}
+	state={validationState}
 	bind:value
-	on:changed={onChange} />
+	onchanged={onChange} />
 <El>value: {value}</El>
