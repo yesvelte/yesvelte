@@ -30,7 +30,9 @@
 	"author": "Amir Pournasserian <ap@momentaj.com>",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run style && svelte-kit sync && svelte-package",
+		"build": "vite build && npm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
 		"build:site": "npm run style && vite build",
 		"publish": "npm run build && npm publish ./package/",
 		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
@@ -44,6 +46,12 @@
 	"type": "module",
 	"peerDependencies": {
 		"svelte": "^5.0.0"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -65,13 +73,13 @@
 		"eslint-plugin-svelte": "^2.36.3",
 		"postcss-selector-replace": "^1.0.2",
 		"prismjs": "^1.29.0",
+		"publint": "^0.3.10",
 		"sass": "1.62.1",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^5.0.4",
 		"tailwindcss": "^3.3.2",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0",
-		"vite": "^5.0.11",
 		"vite-plugin-watch-and-run": "^1.1.3"
 	},
 	"dependencies": {
