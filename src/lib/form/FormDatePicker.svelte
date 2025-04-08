@@ -21,6 +21,9 @@
 		label,
 		hint,
 		name,
+		onchanged,
+		onblur,
+		onfocus,
 		startIconSnippet,
 		endIconSnippet,
 		startSnippet,
@@ -50,6 +53,9 @@
 		disabled,
 		required,
 		options,
+		onchanged,
+		onblur,
+		onfocus,
 		size,
 		state: validationState,
 		range,
@@ -60,9 +66,7 @@
 </script>
 
 <FormField {...props}>
-	{#if groupSnippet}
-		{@render groupSnippet()}
-	{:else}
+	{#snippet groupSnippet()}
 		{#if startSnippet}
 			{@render startSnippet()}
 		{:else if startIconSnippet}
@@ -80,5 +84,5 @@
 				{@render endIconSnippet()}
 			</El>
 		{/if}
-	{/if}
+	{/snippet}
 </FormField>

@@ -11,7 +11,7 @@
 	description="Accordions are used to organize content into collapsable sections. ">
 	<Doc title="Default">
 		{#snippet description()}
-			Click the accordions below to expand/collapse the accordion content.</p>
+			Click the accordions below to expand/collapse the accordion content.
 		{/snippet}
 		<Preview src="./AccordionDefault.svelte">
 			<AccordionDefault />
@@ -20,7 +20,7 @@
 
 	<Doc title="Open">
 		{#snippet description()}
-			Open by default with <code>open</code> attribute.</p>
+			Open by default with <code>open</code> attribute.
 		{/snippet}
 		<Preview src="./AccordionOpen.svelte">
 			<AccordionOpen />
@@ -29,7 +29,7 @@
 
 	<Doc title="Persistent">
 		{#snippet description()}
-			Open ONLY one item at the same time.</p>
+			Open ONLY one item at the same time.
 		{/snippet}
 		<Preview src="./AccordionPersistent.svelte">
 			<AccordionPersistent />
@@ -37,7 +37,7 @@
 	</Doc>
 	<Doc title="Bind open to variables">
 		{#snippet description()}
-			You can bind open/close state of accordion to boolean variables.</p>
+			You can bind open/close state of accordion to boolean variables.
 		{/snippet}
 		<Preview src="./AccordionBind.svelte">
 			<AccordionBind />

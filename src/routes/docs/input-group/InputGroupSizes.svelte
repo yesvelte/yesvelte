@@ -3,13 +3,19 @@
 </script>
 
 <Input size="sm" placeholder="Small">
-	<Icon name="star" slot="start" />
+	{#snippet startSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </Input>
 
 <Input placeholder="Medium">
-	<Icon name="star" slot="start" />
+	{#snippet startSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </Input>
 
 <Input size="lg" placeholder="Large">
-	<Icon name="star" slot="start" />
+	{#snippet startSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </Input>

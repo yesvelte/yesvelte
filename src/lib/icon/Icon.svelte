@@ -25,6 +25,10 @@
 
 	onMount(() => {
 		loaded = true
+		if (name?.includes(':')) {
+			pack = name.split(':')[0]
+			name = name.split(':')[1]
+		}
 	})
 
 	let cssProps: $$Props = $derived({

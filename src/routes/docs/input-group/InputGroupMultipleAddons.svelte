@@ -3,15 +3,15 @@
 </script>
 
 <FormInput>
-	<svelte:fragment slot="start-icon">
+	{#snippet startIconSnippet()}
 		<span>$</span>
 		<span>0.00</span>
-	</svelte:fragment>
+	{/snippet}
 </FormInput>
 
 <FormInput>
-	<svelte:fragment slot="end-icon">
+	{#snippet endIconSnippet()}
 		<span>$</span>
 		<span>0.00</span>
-	</svelte:fragment>
+	{/snippet}
 </FormInput>

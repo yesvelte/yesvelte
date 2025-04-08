@@ -3,18 +3,26 @@
 </script>
 
 <FormDatePicker label="Start Icon">
-	<Icon name="star" slot="start-icon" />
+	{#snippet startIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormDatePicker>
 <El p="3" />
 <FormDatePicker label="End Icon">
-	<Icon name="star" slot="end-icon" />
+	{#snippet endIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormDatePicker>
 <El p="3" />
 <FormDatePicker label="Start Button">
-	<Button color="primary" slot="start">Start</Button>
+	{#snippet startSnippet()}
+		<Button color="primary">Start</Button>
+	{/snippet}
 </FormDatePicker>
 <El p="3" />
 <FormDatePicker label="End Button">
-	<Button color="primary" slot="end">Search</Button>
+	{#snippet endSnippet()}
+		<Button color="primary">Search</Button>
+	{/snippet}
 </FormDatePicker>
 <El p="3" />

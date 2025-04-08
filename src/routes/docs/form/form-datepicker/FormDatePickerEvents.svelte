@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { FormDatePicker } from 'yesvelte'
 
-	let value: Date
-	let changed: Date
-	let clicked: number = 0
+	let value: Date | undefined = $state()
+	let changed: Date | undefined = $state()
+	let clicked: number = $state(0)
 
-	function onChange({ detail }: CustomEvent) {
+	function onChange(detail) {
 		changed = detail
 	}
 

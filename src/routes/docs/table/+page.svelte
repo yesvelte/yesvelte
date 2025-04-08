@@ -12,68 +12,68 @@
 </script>
 
 <Page title="Table">
-	<p slot="description">
+	{#snippet description()}
 		Tables are a useful interface element that allows to visualise data and arrange it in a clear
 		way. Thanks to that, users can browse a lot of information at once and a good table design will
 		help you take care of its clarity.
+	{/snippet}
+	<Doc title="Default">
+		<Preview src="./TableDefault.svelte">
+			<div class="custom-class"><TableDefault /></div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Default">
-			<Preview src="./TableDefault.svelte">
-				<div class="custom-class"><TableDefault /></div>
-			</Preview>
-		</Doc>
+	<Doc title="Bordered">
+		<Preview src="./TableBorder.svelte">
+			<div class="custom-class"><TableBorder /></div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Bordered">
-			<Preview src="./TableBorder.svelte">
-				<div class="custom-class"><TableBorder /></div>
-			</Preview>
-		</Doc>
+	<Doc title="Borderless">
+		<Preview src="./TableBorderless.svelte">
+			<div class="custom-class"><TableBorderless /></div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Borderless">
-			<Preview src="./TableBorderless.svelte">
-				<div class="custom-class"><TableBorderless /></div>
-			</Preview>
-		</Doc>
+	<Doc title="Hover effect">
+		<Preview src="./TableHover.svelte">
+			<div class="custom-class"><TableHover /></div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Hover effect">
-			<Preview src="./TableHover.svelte">
-				<div class="custom-class"><TableHover /></div>
-			</Preview>
-		</Doc>
-
-		<!-- <Doc title="Truncate cells">
+	<!-- <Doc title="Truncate cells">
 			<Preview src="./TableTruncate.svelte">
 				<div class="custom-class"><TableTruncate /></div>
 			</Preview>
 		</Doc> -->
 
-		<Doc title="Striped">
-			<p slot="description">
-				You can change colors of Even/Odd rows by adding <code>striped</code> prop.
-			</p>
-			<Preview src="./TableStriped.svelte">
-				<div class="custom-class">
-					<TableStriped />
-				</div>
-			</Preview>
-		</Doc>
+	<Doc title="Striped">
+		<p slot="description">
+			You can change colors of Even/Odd rows by adding <code>striped</code> prop.
+		</p>
+		<Preview src="./TableStriped.svelte">
+			<div class="custom-class">
+				<TableStriped />
+			</div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Responsive">
-			<Preview src="./TableResponsive.svelte">
-				<div class="custom-class">
-					<TableResponsive />
-				</div>
-			</Preview>
-		</Doc>
+	<Doc title="Responsive">
+		<Preview src="./TableResponsive.svelte">
+			<div class="custom-class">
+				<TableResponsive />
+			</div>
+		</Preview>
+	</Doc>
 
-		<Doc title="Colors">
-			<Preview src="./TableColors.svelte">
-				<div class="custom-class">
-					<TableColors />
-				</div>
-			</Preview>
-		</Doc>
-	</p></Page>
+	<Doc title="Colors">
+		<Preview src="./TableColors.svelte">
+			<div class="custom-class">
+				<TableColors />
+			</div>
+		</Preview>
+	</Doc>
+</Page>
 
 <style>
 	.custom-class > :global(.y-table-parent) {

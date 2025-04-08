@@ -12,7 +12,7 @@
 </script>
 
 <FormCheckboxGroup label="Select Language" bind:value {items}>
-	{@snippet children({item, index})}
+	{#snippet children({ item, index })}
 		{(index || 0) + 1}- {item.text} ({item.code})
 	{/snippet}
 </FormCheckboxGroup>

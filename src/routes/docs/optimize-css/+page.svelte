@@ -3,8 +3,8 @@
 </script>
 
 <Page title="Optimize CSS">
-	<p slot="description">
+	{#snippet description()}
 		<!--  -->
 		TODO...
-	</p>
+	{/snippet}
 </Page>

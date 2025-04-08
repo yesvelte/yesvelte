@@ -12,14 +12,7 @@
 	import Prism from './Prism.svelte'
 	import { classname } from 'yesvelte/internal'
 
-	let {
-		markup,
-		script,
-		style,
-		src,
-		children
-	} = $props();
-	
+	let { markup, script, style, src, children }: any = $props()
 </script>
 
 <Card>

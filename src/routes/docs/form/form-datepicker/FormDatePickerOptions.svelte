@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FormDatePicker } from 'yesvelte'
 
-	let value: Date[] = []
+	let value: Date[] = $state([])
 </script>
 
 <FormDatePicker label="Enter Date range" options={{ numberOfMonths: 2 }} range bind:value />
