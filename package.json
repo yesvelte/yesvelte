@@ -1,102 +1,77 @@
 {
-	"name": "yesvelte",
-	"version": "0.1.0",
-	"description": "YeSvelte UI component library for Svelte",
-	"sideEffects": false,
-	"keywords": [
-		"svelte",
-		"sveltejs",
-		"bootstrap",
-		"tabler",
-		"svelte tabler",
-		"svelte bootstrap",
-		"svelte components",
-		"svelte ui components",
-		"svelte-kit",
-		"sveltekit",
-		"yesvelte",
-		"tabler"
-	],
-	"homepage": "https://www.yesvelte.com",
-	"bugs": {
-		"url": "https://github.com/yesvelte/yesvelte/issues",
-		"email": "ap@momentaj.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/yesvelte/yesvelte.git"
-	},
-	"license": "MIT License",
-	"author": "Amir Pournasserian <ap@momentaj.com>",
+	"name": "yesvelte-v5",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run package",
+		"build": "vite build && npm run prepack",
 		"preview": "vite preview",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"build:site": "npm run style && vite build",
-		"publish": "npm run build && npm publish ./package/",
-		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
+		"prepare": "svelte-kit sync || echo ''",
+		"prepack": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"tailwind": "tailwindcss -c src/scss/daisyui/tailwind/tailwind.config.cjs -i src/scss/daisyui/tailwind/tailwind.css -o src/styles/tailwind.css",
-		"style": "node scripts/styles.generator.js"
+		"format": "prettier --write .",
+		"lint": "prettier --check ."
 	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"type": "module",
-	"peerDependencies": {
-		"svelte": "^5.0.0"
-	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
+			"svelte": "./dist/index.js"
 		}
 	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/package": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"@tabler/core": "^1.0.0-beta19",
-		"@tailwindcss/typography": "^0.5.9",
-		"@types/bootstrap": "^5.2.6",
-		"@types/inputmask": "^5.0.3",
-		"@types/prismjs": "^1.26.0",
-		"@types/quill": "^2.0.10",
-		"@typescript-eslint/eslint-plugin": "^5.59.8",
-		"@typescript-eslint/parser": "^5.59.8",
-		"cssnano": "^6.0.1",
-		"daisyui": "^3.0.1",
-		"eslint": "^8.42.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-svelte": "^2.36.3",
-		"postcss-selector-replace": "^1.0.2",
-		"prismjs": "^1.29.0",
-		"publint": "^0.3.10",
-		"sass": "1.62.1",
-		"svelte-check": "^4.0.0",
-		"svelte-preprocess": "^5.0.4",
-		"tailwindcss": "^3.3.2",
-		"typescript": "^5.0.0",
-		"typescript-eslint": "^8.0.0",
-		"vite-plugin-watch-and-run": "^1.1.3"
+	"peerDependencies": {
+		"svelte": "^5.0.0"
 	},
-	"dependencies": {
-		"@floating-ui/dom": "^1.2.9",
-		"@sveltejs/adapter-static": "^3.0.6",
-		"estree-walker": "^3.0.3",
-		"focus-trap": "^7.4.3",
-		"fuzzy": "^0.1.3",
-		"iconify-icon": "^1.0.7",
-		"inputmask": "^5.0.8",
-		"litepicker": "^2.0.12",
-		"moment": "^2.29.4",
-		"nouislider": "^15.7.0",
-		"param-case": "^3.0.4",
-		"postcss-rtlcss": "^4.0.8",
-		"prettier": "^3.5.3",
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^4.0.0",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/package": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/vite": "^4.0.0",
+		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
-		"quill": "^1.3.7"
+		"publint": "^0.3.2",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5.0.0",
+		"vite": "^6.2.5"
+	},
+	"keywords": [
+		"svelte"
+	],
+	"dependencies": {
+		"@floating-ui/dom": "^1.6.13",
+		"@tabler/core": "^1.0.0-beta19",
+		"cssnano": "^7.0.6",
+		"daisyui": "^3.9.4",
+		"estree-walker": "^3.0.3",
+		"focus-trap": "^7.6.4",
+		"fuzzy": "^0.1.3",
+		"iconify-icon": "^2.3.0",
+		"inputmask": "^5.0.9",
+		"litepicker": "^2.0.12",
+		"magic-string": "^0.30.17",
+		"moment": "^2.30.1",
+		"nouislider": "^15.8.1",
+		"param-case": "^3.0.4",
+		"postcss": "^8.5.3",
+		"postcss-rtlcss": "^5.7.0",
+		"postcss-selector-replace": "^1.0.2",
+		"prismjs": "^1.30.0",
+		"quill": "^2.0.3",
+		"sass": "^1.62.0",
+		"sass-embedded": "^1.86.3",
+		"tom-select": "^2.4.3"
 	}
 }
