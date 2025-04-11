@@ -11,14 +11,14 @@
 		match your project's design system or visual preferences. By following our standard class naming
 		conventions, you can easily create your own themes using CSS.
 		<!--  -->
-	{#snippet description()}
+	{/snippet}
 
 	<Doc title="CSS Naming Convention">
 		{#snippet description()}
 			YeSvelte follows a standard naming convention for CSS class names, making it simple to apply
 			your custom styles. The class names are designed to target specific elements and states within
 			the components.
-		{#snippet description()}
+		{/snippet}
 		<p>
 			for example assume <code>Button</code> component, for default <code>.y-button</code> class is
 			applied, and you can customize style of all buttons, by overriding <code>.y-button</code>

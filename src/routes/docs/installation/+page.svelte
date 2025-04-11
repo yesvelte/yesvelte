@@ -23,11 +23,7 @@
 
 			<El tag="h3" mt="2">Install SvelteKit</El>
 
-			<Prism language="css" source="npm init svelte" />
-
-			or using yarn:
-
-			<Prism language="css" source="yarn create svelte" />
+			<Prism language="css" source="npx sv create" />
 
 			<El tag="h3" mt="2">Install YeSvelte</El>
 
@@ -116,7 +112,7 @@
 		{/snippet}
 	</Doc>
 
-	<Doc title="Template Repository">
+	<Doc title="Template Repository (deprecated)">
 		Easiest way to start working with YeSvelte is using <a
 			href="https://github.com/yesvelte/yesvelte-starter">This Starter Repository</a
 		>. to start using this repo, you can run:
