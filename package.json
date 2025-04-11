@@ -76,6 +76,7 @@
 	},
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.13",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@tabler/core": "^1.0.0-beta19",
 		"cssnano": "^7.0.6",
 		"daisyui": "^3.9.4",
