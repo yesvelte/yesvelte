@@ -1,6 +1,6 @@
 {
 	"name": "yesvelte",
-	"version": "0.0.2-next.218",
+	"version": "0.0.2-next.219",
 	"description": "YeSvelte UI component library for Svelte",
 	"keywords": [
 		"svelte",
@@ -40,7 +40,6 @@
 		"tailwind": "tailwindcss -c src/scss/daisyui/tailwind/tailwind.config.cjs -i src/scss/daisyui/tailwind/tailwind.css -o src/styles/tailwind.css",
 		"style": "node scripts/styles.generator.js"
 	},
-
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
