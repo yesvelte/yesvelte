@@ -3,19 +3,21 @@
 </script>
 
 <FormInput>
-	<input
-		class="form-check-input mt-0"
-		type="checkbox"
-		value=""
-		slot="start-icon"
-		aria-label="Checkbox for following text input" />
+	{#snippet startIconSnippet()}
+		<input
+			class="form-check-input mt-0"
+			type="checkbox"
+			value=""
+			aria-label="Checkbox for following text input" />
+	{/snippet}
 </FormInput>
 
 <FormInput>
-	<input
-		class="form-check-input mt-0"
-		type="radio"
-		value=""
-		slot="start-icon"
-		aria-label="Radio button for following text input" />
+	{#snippet startIconSnippet()}
+		<input
+			class="form-check-input mt-0"
+			type="radio"
+			value=""
+			aria-label="Radio button for following text input" />
+	{/snippet}
 </FormInput>

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { El, Icon } from 'yesvelte'
 
-	export let title = ''
-	export let description = ''
-	$: href = title.replace(/\s/g, '_').replace(/\//g, '_')
+	let { title = '', description = '', children }: any = $props()
+
+	let href = $derived(title.replace(/\s/g, '_').replace(/\//g, '_'))
 </script>
 
 <El class="y-doc-title-wrapper">
@@ -23,13 +23,13 @@
 	</El>
 </El>
 
-<slot name="description">
-	<p>
-		{description}
-	</p>
-</slot>
+{#if typeof description === 'string'}
+	{description}
+{:else}
+	{@render description()}
+{/if}
 
-<slot />
+{@render children?.()}
 
 <style>
 	:global(.y-doc-title-wrapper) {

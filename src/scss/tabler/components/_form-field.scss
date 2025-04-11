@@ -25,6 +25,17 @@
 	@include form-field-mixin;
 }
 
+.#{$prefix-form-field} {
+	@include form-field-mixin;
+	&-group {
+		@extend %input-group;
+	}
+
+	&-icon {
+		@extend %input-group-text;
+	}
+}
+
 .#{$prefix-form-input} {
 	@include form-field-mixin;
 	&-group {

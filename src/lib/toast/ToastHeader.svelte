@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Button, type ButtonProps } from '../button'
 	import { getContext } from 'svelte'
 	import { El } from '../el'
@@ -7,30 +6,26 @@
 
 	type $$Props = ToastHeaderProps
 
-	export let componentName: $$Props['componentName'] = 'toast-header'
-	export let tag: $$Props['tag'] = 'div'
-	export let showCloseButton: $$Props['showCloseButton'] = true
+	let {
+		componentName = 'toast-header',
+		tag = 'div',
+		showCloseButton = true,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	const { hide } = getContext<ToastContext>('TOAST')
 
-	let buttonOtherProps: Partial<ButtonProps>
-	$: buttonOtherProps = {
+	let buttonProps: Partial<ButtonProps> = $derived({
 		componentName: 'toast-close',
 		'aria-label': 'Close',
-	}
-
-	$: cssProps = {
-		//
-	}
+		onclick: hide,
+	})
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps} {tag}>
-	<slot />
+<El {...restProps} {componentName} {tag}>
+	{@render children?.()}
 	{#if showCloseButton}
-		<Button on:click={hide} {...buttonOtherProps} />
+		<Button {...buttonProps} />
 	{/if}
 </El>

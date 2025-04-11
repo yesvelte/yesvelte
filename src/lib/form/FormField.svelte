@@ -1,35 +1,38 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Label } from '../label'
 	import type { FormFieldProps } from './Form.types'
 
 	type $$Props = FormFieldProps
 
-	export let componentName: $$Props['componentName'] = 'form-field'
-	export let label: $$Props['label'] = undefined
-	export let id: $$Props['id'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let state: $$Props['state'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let {
+		componentName = 'form-field',
+		label,
+		id,
+		hint,
+		required,
+		state,
+		children,
+		labelSnippet,
+		hintSnippet,
+		groupSnippet,
+		...restProps
+	}: $$Props = $props()
 </script>
 
-<El {components} {...$$restProps} {componentName}>
+<El {...restProps} {componentName}>
 	{#if label}
 		<Label for={id} {required}>{label}</Label>
 	{/if}
-	<slot name="label" />
-	<slot>
+	{@render labelSnippet?.()}
+	{#if children}
+		{@render children?.()}
+	{:else}
 		<El componentName="{componentName}-group">
-			<slot name="group" />
+			{@render groupSnippet?.()}
 		</El>
-	</slot>
-	<slot name="hint" />
+	{/if}
+	{@render hintSnippet?.()}
 	{#if hint}
 		<El componentName={componentName + '-hint'} cssProps={{ state }}>
 			{hint}

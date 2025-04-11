@@ -1,33 +1,22 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { ProgressProps } from './Progress.types'
 
 	type $$Props = ProgressProps
 
-	export let componentName: $$Props['componentName'] = 'progress'
-	export let size: $$Props['size'] = undefined
-	export let separated: $$Props['separated'] = undefined
+	let { componentName = 'progress', size, separated, children, ...restProps }: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let cssProps: $$Props = {}
-	let props: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		role: 'progressbar',
+		cssProps: {
 			size,
 			separated,
-		}
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...props} role="progressbar">
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

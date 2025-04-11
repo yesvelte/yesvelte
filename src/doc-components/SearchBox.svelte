@@ -2,9 +2,9 @@
 	import { El, Icon, Input, Modal, ModalBody, ModalHeader } from 'yesvelte'
 	import { navigations } from '../routes/docs/navigations'
 
-	export let open = false
+	let { open = $bindable() } = $props()
 
-	let query = ''
+	let query = $state('')
 
 	function filter(query) {
 		if (query.length < 2) return []
@@ -65,11 +65,14 @@
 	<ModalHeader p="0">
 		<Input
 			size="lg"
-			p="3"
+			py="3"
 			borderFlush
+			autofocus
 			placeholder="Search title or description..."
 			bind:value={query}>
-			<Icon ms="3" name="search" slot="start" />
+			{#snippet startSnippet()}
+				<Icon ms="3" name="search" />
+			{/snippet}
 		</Input>
 	</ModalHeader>
 	<ModalBody>

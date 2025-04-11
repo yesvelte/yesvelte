@@ -7,6 +7,6 @@
 {lastEvent}
 <Checkbox
 	label="Test"
-	on:blur={() => (lastEvent = 'blurred')}
-	on:focus={() => (lastEvent = 'focused')}
-	on:change={() => (lastEvent = 'changed')} />
+	onblur={() => (lastEvent = 'blurred')}
+	onfocus={() => (lastEvent = 'focused')}
+	onchange={() => (lastEvent = 'changed')} />

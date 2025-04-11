@@ -1,14 +1,14 @@
 <script>
 	import { FileUpload } from 'yesvelte'
 
-	let clicked = 0
-	let changed = 0
+	let clicked = $state(0)
+	let changed = $state(0)
 </script>
 
-<FileUpload on:click={() => (clicked += 1)} placeholder="Click me!" />
+<FileUpload onclick={() => (clicked += 1)} placeholder="Click me!" />
 clicked: {clicked}
 <br />
 
-<FileUpload mt="2" on:change={() => (changed += 1)} placeholder="Change value!" />
+<FileUpload mt="2" onchange={() => (changed += 1)} placeholder="Change value!" />
 
 changed: {changed}

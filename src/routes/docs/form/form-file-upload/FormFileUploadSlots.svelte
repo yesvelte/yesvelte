@@ -3,18 +3,26 @@
 </script>
 
 <FormFileUpload label="Start Icon">
-	<Icon name="star" slot="start-icon" />
+	{#snippet startIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormFileUpload>
 <El p="3" />
 <FormFileUpload label="End Icon">
-	<Icon name="star" slot="end-icon" />
+	{#snippet endIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormFileUpload>
 <El p="3" />
 <FormFileUpload label="Start Button">
-	<Button color="primary" slot="start">Start</Button>
+	{#snippet startSnippet()}
+		<Button color="primary">Start</Button>
+	{/snippet}
 </FormFileUpload>
 <El p="3" />
 <FormFileUpload label="End Button">
-	<Button color="primary" slot="end">Search</Button>
+	{#snippet endSnippet()}
+		<Button color="primary">Search</Button>
+	{/snippet}
 </FormFileUpload>
 <El p="3" />

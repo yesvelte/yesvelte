@@ -12,6 +12,9 @@
 	let value = ['second', 'fourth']
 </script>
 
-<Autocomplete {items} bind:value key="id" multiple let:item let:index
-	>{index} - {item.value}</Autocomplete>
+<Autocomplete {items} bind:value key="id" multiple>
+	{#snippet children({ item, index })}
+		{index} - {item.value}
+	{/snippet}
+</Autocomplete>
 <i>value: {JSON.stringify(value)}</i>

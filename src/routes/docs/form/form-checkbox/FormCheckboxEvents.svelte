@@ -6,9 +6,9 @@
 
 <FormCheckbox
 	label="Test Events"
-	on:blur={() => (lastEvent = 'blurred')}
-	on:focus={() => (lastEvent = 'focused')}
-	on:change={() => (lastEvent = 'changed')} />
+	onblur={() => (lastEvent = 'blurred')}
+	onfocus={() => (lastEvent = 'focused')}
+	onchange={() => (lastEvent = 'changed')} />
 
 <El>
 	last Event: {lastEvent}

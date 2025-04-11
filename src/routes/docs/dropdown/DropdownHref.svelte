@@ -1,11 +1,13 @@
 <script>
-	import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu } from 'yesvelte'
+	import { Avatar, Dropdown, DropdownItem, DropdownMenu } from 'yesvelte'
 </script>
 
 <Dropdown placement="bottom-start" arrow={false}>
-	<Avatar slot="target" color="primary">
-		<img src="/images/avatar.png" />
-	</Avatar>
+	{#snippet targetSnippet()}
+		<Avatar color="primary">
+			<img src="/images/avatar.png" />
+		</Avatar>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem href="#profile">Profile</DropdownItem>

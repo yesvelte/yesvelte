@@ -1,7 +1,7 @@
 <script>
 	import { FormSelect, El, Button } from 'yesvelte'
 
-	let items = ['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White']
+	let items = $state(['Red', 'Green', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Black', 'White'])
 </script>
 
 <El row>

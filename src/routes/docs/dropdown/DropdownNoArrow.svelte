@@ -3,7 +3,9 @@
 </script>
 
 <Dropdown>
-	<Button slot="target" color="primary">With Arrow</Button>
+	{#snippet targetSnippet()}
+		<Button color="primary">With Arrow</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -13,7 +15,9 @@
 </Dropdown>
 
 <Dropdown arrow={false}>
-	<Button ms="2" slot="target" color="primary">Without Arrow</Button>
+	{#snippet targetSnippet()}
+		<Button ms="2" color="primary">Without Arrow</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>

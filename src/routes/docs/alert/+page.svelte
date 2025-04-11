@@ -14,11 +14,11 @@
 	title="Alert"
 	description="Alert messages are used to inform users of the status of their action and help them solve any problems that might have occurred. Good design of alert modals is very important for the overall user experience of a website or app.">
 	<Doc title="Default">
-		<p slot="description">
+		{#snippet description()}
 			Depending on the information you need to convey, you can use one of the following types of
 			alert messages - `success`, `info`, `warning` or `danger`. Using the right type of alert modal
 			will help draw users’ attention to the message and prompt them to take action.
-		</p>
+		{/snippet}
 		<Preview src="./AlertColors.svelte">
 			<AlertColors />
 		</Preview>
@@ -31,10 +31,10 @@
 		</Preview>
 	</Doc>
 	<Doc title="Dismissible">
-		<p slot="description">
+		{#snippet description()}
 			Add the `x` close button to make an alert modal dismissible. Thanks to that, your alert modal
 			will disappear only once the user closes it.
-		</p>
+		{/snippet}
 		<Preview src="./AlertDismissible.svelte">
 			<AlertDismissible />
 		</Preview>
@@ -59,9 +59,9 @@
 		</Preview>
 	</Doc>
 	<Doc title="Important">
-		<p slot="description">
+		{#snippet description()}
 			If you want your alert to be really eye-catching, you can add the `important` property.
-		</p>
+		{/snippet}
 		<Preview src="./AlertImportant.svelte">
 			<AlertImportant />
 		</Preview>

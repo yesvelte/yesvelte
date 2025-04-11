@@ -1,71 +1,67 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { TextareaProps } from './Textarea.types'
 
 	type $$Props = TextareaProps
 
-	export let componentName: $$Props['componentName'] = 'textarea'
-	export let disabled: $$Props['disabled'] = undefined
-	export let borderRounded: $$Props['borderRounded'] = undefined
-	export let borderFlush: $$Props['borderFlush'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let rows: $$Props['rows'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let type: $$Props['type'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let id: $$Props['id'] = undefined
-	export let minlength: $$Props['minlength'] = undefined
-	export let maxlength: $$Props['maxlength'] = undefined
-	export let cols: $$Props['cols'] = undefined
+	let {
+		componentName = 'textarea',
+		tag = 'textarea',
+		disabled,
+		borderRounded,
+		borderFlush,
+		placeholder,
+		readonly,
+		rows,
+		name,
+		size,
+		state,
+		type,
+		value = $bindable(),
+		id = $bindable(),
+		minlength,
+		maxlength,
+		cols,
+		startSnippet,
+		endSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		componentName,
+		tag,
+		placeholder,
+		disabled,
+		cssProps: {
 			size,
 			state,
 			borderRounded,
 			borderFlush,
-		}
-
-		props = {
-			componentName,
-			placeholder,
-			disabled,
-			readonly,
-			type,
-			rows,
-			name,
-			minlength,
-			maxlength,
-			cols,
-		}
-	}
+		},
+		readonly,
+		type,
+		rows,
+		name,
+		minlength,
+		maxlength,
+		cols,
+	})
 </script>
 
-{#if $$slots.start || $$slots.end}
-	<El {components} componentName="{componentName}-wrapper" {...$$restProps} cssProps={{ size }}>
-		{#if $$slots.start}
+{#if startSnippet || endSnippet}
+	<El componentName="{componentName}-wrapper" {...restProps} cssProps={{ size }}>
+		{#if startSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="start" />
+				{@render startSnippet()}
 			</El>
 		{/if}
-		<El bind:id tag="textarea" bind:value {...props} {cssProps} />
-		{#if $$slots.end}
+		<El bind:id tag="textarea" bind:value {...props} />
+		{#if endSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="end" />
+				{@render endSnippet()}
 			</El>
 		{/if}
 	</El>
 {:else}
-	<El {components} bind:id tag="textarea" bind:value {...$$restProps} {...props} {cssProps} />
+	<El bind:id tag="textarea" bind:value {...props} {...restProps}/>
 {/if}

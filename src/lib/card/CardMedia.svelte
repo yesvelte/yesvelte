@@ -1,22 +1,18 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
+
 	import type { CardMediaProps } from './Card.types'
 
 	type $$Props = CardMediaProps
 
-	export let componentName: $$Props['componentName'] = 'card-media'
-	export let elementPosition: $$Props['elementPosition'] = 'top'
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let cssProps: CardMediaProps = {}
-	$: cssProps = { elementPosition }
+	let {
+		componentName = 'card-media',
+		elementPosition = 'top',
+		children,
+		...restProps
+	}: $$Props = $props()
 </script>
 
-<El {components} {...$$restProps} {cssProps} {componentName}>
-	<slot />
+<El {...restProps} cssProps={{ elementPosition }} {componentName}>
+	{@render children?.()}
 </El>

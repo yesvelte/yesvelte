@@ -7,41 +7,43 @@
 	import ToC from './ToC.svelte'
 	import SearchBox from './SearchBox.svelte'
 
-	let dark: boolean = false
-	let theme: 'tabler' | 'daisyui' = 'tabler'
+	let { children } = $props()
 
-	let offcanvasOpen = false
+	let dark: boolean = $state(false)
+	let theme: 'tabler' | 'daisyui' = $state('tabler')
 
-	$: pathname = $page.url.pathname
+	let offcanvasOpen = $state(false)
 
-	$: {
-		pathname
+	$effect(() => {
+		$page.url.pathname
 		offcanvasOpen = false
-	}
+	})
 
-	$: containerProps = {
+	let containerProps = $derived({
 		'data-theme': dark ? 'dark' : 'light',
 		'data-bs-theme': dark ? 'dark' : 'light',
-	}
+	})
 
-	$: if (browser) {
-		Object.keys(containerProps).map((key) => {
-			document.body.setAttribute(key, containerProps[key])
-		})
-	}
+	$effect(() => {
+		if (browser) {
+			Object.keys(containerProps).map((key: any) => {
+				document.body.setAttribute(key, containerProps[key])
+			})
+		}
+	})
 
-	let searchOpen = false
+	let searchOpen = $state(false)
 
 	function openSearch() {
 		searchOpen = true
 	}
 
-	let sections: any[] = []
+	let sections: any[] = $state([])
 
-	$: hasToC = sections.length > 0
+	let hasToC = $derived(sections.length > 0)
 
-	$: nextItem = $page.data.links?.nextItem
-	$: prevItem = $page.data.links?.prevItem
+	let nextItem = $derived($page.data.links?.nextItem)
+	let prevItem = $derived($page.data.links?.prevItem)
 </script>
 
 <svelte:head>
@@ -56,7 +58,6 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="author" content="Amir Pournasserian" />
 </svelte:head>
-<svelte:body {...containerProps} />
 
 <svelte:window
 	on:keydown={(e) => {
@@ -75,7 +76,7 @@
 	<OffcanvasHeader p="3">
 		<Logo href="/" height="40" mb="0" />
 	</OffcanvasHeader>
-	<SidebarNavigations p="3" position="static" {pathname} />
+	<SidebarNavigations p="3" position="static" pathname={$page.url.pathname} />
 </Offcanvas>
 
 <El mx="auto" position="relative" style="min-height: calc(100vh - 70px);">
@@ -95,7 +96,7 @@
 			<SidebarNavigations
 				position="relative"
 				style="overflow-y: auto; overflow-x: hidden; max-height: calc(100vh - 70px)"
-				{pathname} />
+				pathname={$page.url.pathname} />
 		</El>
 	</El>
 	<El class="y-docs-content">
@@ -119,21 +120,23 @@
 						dMd="none"
 						size="xl"
 						name="menu-2"
-						on:click={() => (offcanvasOpen = !offcanvasOpen)} />
+						onclick={() => (offcanvasOpen = !offcanvasOpen)} />
 					<Logo dMd="none" href="/" height="32" />
 
-					<Input on:click={openSearch} placeholder="Search..." d="none" dMd="block">
-						<Icon name="search" slot="start" />
-						<svelte:fragment slot="end">
+					<Input onclick={openSearch} placeholder="Search..." d="none" dMd="block">
+						{#snippet startSnippet()}
+							<Icon name="search" />
+						{/snippet}
+						{#snippet endSnippet()}
 							<El tag="kbd">Ctrl</El>
 							<El mx="1" tag="span">+</El>
 							<El tag="kbd" me="2">k</El>
-						</svelte:fragment>
+						{/snippet}
 					</Input>
 				</El>
 
 				<El d="flex" alignItems="center" gap="2">
-					<Button dMd="none" on:click={openSearch}>
+					<Button dMd="none" onclick={openSearch}>
 						<Icon name="search" />
 					</Button>
 
@@ -141,7 +144,7 @@
 						<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
 					</El>
 					<El d="none" dMd="block" col>
-						<Button outline on:click={() => (dark = !dark)}>
+						<Button outline onclick={() => (dark = !dark)}>
 							{#if dark}
 								<Icon name="sun" />
 							{:else}
@@ -160,7 +163,7 @@
 								<Select mb="0" bind:value={theme} items={['tabler', 'daisyui']} />
 							</El>
 							<El col>
-								<Button outline on:click={() => (dark = !dark)}>
+								<Button outline onclick={() => (dark = !dark)}>
 									{#if dark}
 										<Icon name="sun" />
 									{:else}
@@ -177,7 +180,7 @@
 			<El row>
 				<El col>
 					<El px="2">
-						<slot />
+						{@render children()}
 					</El>
 
 					<El row mt="3" mb="5">

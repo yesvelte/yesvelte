@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Button, El, FormInput, Icon, Tooltip, type InputStates } from 'yesvelte'
 
-	let hint: string = ''
-	let state: InputStates | undefined = undefined
+	let hint: string = $state('')
+	let state: InputStates | undefined = $state(undefined)
 
 	function validate() {
 		state = 'invalid'
@@ -12,14 +12,18 @@
 
 <El row>
 	<FormInput {state} {hint} label="Email" placeholder="Enter your email...">
-		<Icon slot="start-icon" name="mail" />
-		<Button slot="end" on:click={validate}>
+		{#snippet startIconSnippet()}
+			<Icon name="mail" />
+		{/snippet}
+		<Button slot="end" onclick={validate}>
 			<Icon name="check" />
 			<Tooltip>Check if email is valid</Tooltip>
 		</Button>
 	</FormInput>
 	<FormInput col="6" label="Password" required placeholder="Enter your password...">
-		<Icon slot="start-icon" name="key" />
+		{#snippet startIconSnippet()}
+			<Icon name="key" />
+		{/snippet}
 	</FormInput>
 	<FormInput
 		state="invalid"
@@ -28,6 +32,8 @@
 		label="Repeat Password"
 		required
 		placeholder="Repeat password...">
-		<Icon slot="start-icon" name="key" />
+		{#snippet startIconSnippet()}
+			<Icon name="key" />
+		{/snippet}
 	</FormInput>
 </El>

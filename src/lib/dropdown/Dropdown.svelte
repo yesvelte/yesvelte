@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
@@ -7,35 +6,40 @@
 
 	type $$Props = DropdownProps
 
-	export let componentName: $$Props['componentName'] = 'dropdown'
-	export let placement: $$Props['placement'] = 'bottom'
-	export let arrow: $$Props['arrow'] = true
-	export let autoClose: $$Props['autoClose'] = 'outside'
+	let {
+		componentName = 'dropdown',
+		placement = 'bottom',
+		arrow = true,
+		autoClose = 'outside',
+		children,
+		targetSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	let targetEl: HTMLElement
+	let targetEl: HTMLElement | undefined = $state(undefined)
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	const context: DropdownContext = writable({})
 	setContext('DROPDOWN', context)
 
-	$: $context = {
-		target: targetEl?.firstElementChild ?? undefined,
-		placement,
-		autoClose,
-	}
+	$effect(() => {
+		$context = {
+			target: targetEl?.firstElementChild ?? undefined,
+			placement,
+			autoClose,
+		}
+		console.log('set context to ', $context)
+	})
 
-	$: cssProps = {
-		placement: placement?.split('-')[0],
-		arrow,
-	}
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		cssProps: { placement: placement?.split('-')[0], arrow },
+	})
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps}>
+<El {...props}>
 	<El componentName="{componentName}-target" bind:element={targetEl}>
-		<slot name="target" />
+		{@render targetSnippet?.()}
 	</El>
-	<slot />
+	{@render children?.()}
 </El>

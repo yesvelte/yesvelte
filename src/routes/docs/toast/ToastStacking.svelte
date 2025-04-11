@@ -32,7 +32,7 @@
 
 <El row my="3">
 	<El col="3">
-		<Button color="primary" on:click={addToast}>Add Toast</Button>
+		<Button color="primary" onclick={addToast}>Add Toast</Button>
 	</El>
 	<FormSelect
 		col="3"

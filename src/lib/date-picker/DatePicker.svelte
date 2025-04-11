@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { createEventDispatcher, onDestroy, onMount } from 'svelte'
 	import type Litepicker from 'litepicker'
 	import type { ILPConfiguration } from 'litepicker/dist/types/interfaces'
@@ -10,48 +9,50 @@
 
 	type $$Props = DatePickerProps
 
-	export let componentName: $$Props['componentName'] = 'date-picker'
-	export let formatText: $$Props['formatText'] = undefined
-	export let borderRounded: $$Props['borderRounded'] = undefined
-	export let borderFlush: $$Props['borderFlush'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let options: $$Props['options'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let range: $$Props['range'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let value: $$Props['value'] = range ? [] : undefined
-	export let text: $$Props['text'] = undefined
-	export let id: $$Props['id'] = undefined
+	let {
+		componentName = 'date-picker',
+		formatText,
+		borderRounded,
+		borderFlush,
+		disabled,
+		options,
+		placeholder,
+		range,
+		size,
+		state: validationState,
+		name,
+		value = $bindable(),
+		text = $bindable(),
+		id = $bindable(),
+		startSnippet,
+		endSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
-	const dispatch = createEventDispatcher()
+	let element: any | undefined = $state(undefined)
+	let instance: Litepicker | undefined = $state(undefined)
 
-	let element: HTMLElement
-	let instance: Litepicker | undefined = undefined
+	$effect(() => {
+		if (value) {
+			if (element) element.value = text
 
-	$: if (value) {
-		if (element) element.value = text
+			if (range) {
+				instance?.setStartDate(value[0])
+				instance?.setEndDate(value[1])
 
-		if (range) {
-			instance?.setStartDate(value[0])
-			instance?.setEndDate(value[1])
+				text = (format(value[0], 'text') + ' - ' + format(value[1], 'text')) as string
+			} else {
+				instance?.setDate(value)
 
-			text = (format(value[0], 'text') + ' - ' + format(value[1], 'text')) as string
-		} else {
-			instance?.setDate(value)
-
-			text = format(value, 'text') as string
+				text = format(value, 'text') as string
+			}
 		}
-	}
+	})
 
 	function formatValue(date: DateTime | null | undefined): string {
 		return date ? date.format('YYYY-MM-DD') : ''
 	}
+
 	function format(date: Date | DateTime | null | undefined, mode: 'text'): Date | string {
 		if (!date) return ' --- '
 		if (date.toJSDate) date = date.toJSDate()
@@ -66,8 +67,7 @@
 		return ''
 	}
 
-	let settings: ILPConfiguration
-	$: settings = {
+	let settings: ILPConfiguration = $derived({
 		...options,
 		element,
 		singleMode: range ? false : true,
@@ -152,7 +152,7 @@
 					value = [startDateValue, endDateValue]
 
 					text = startDateText + ' - ' + endDateText
-					dispatch('changed', value)
+					restProps.onchanged?.(value)
 				} else {
 					const dateValue = formatValue(date1)
 					const dateText = format(date1, 'text')
@@ -161,31 +161,29 @@
 
 					value = dateValue
 					text = dateText
-					dispatch('changed', value)
+					restProps.onchanged?.(value)
 				}
 
 				if (element) element.value = text
 			})
 		},
-	}
+	})
 
-	let cssProps: $$Props = {}
-	let props: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		placeholder,
+		disabled,
+		tag: 'input',
+		value: text,
+		cssProps: {
 			size,
-			state,
+			state: validationState,
 			borderRounded,
 			borderFlush,
-		}
+		},
+	})
 
-		props = {
-			componentName,
-			placeholder,
-			disabled,
-		}
-	}
 	onMount(() => {
 		if (!element) return
 		if (typeof window == 'undefined') return
@@ -199,37 +197,22 @@
 	})
 </script>
 
-{#if $$slots.start || $$slots.end}
-	<El {...$$restProps} componentName="{componentName}-wrapper" cssProps={{ size }}>
-		{#if $$slots.start}
+{#if startSnippet || endSnippet}
+	<El {...restProps} componentName="{componentName}-wrapper" cssProps={{ size }}>
+		{#if startSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="start" />
+				{@render startSnippet()}
 			</El>
 		{/if}
-		<El
-			tag="input"
-			{components}
-			value={text}
-			bind:element
-			bind:id
-			{cssProps}
-			{...props} />
-		{#if $$slots.end}
+		<El bind:element bind:id {...props} />
+		{#if endSnippet}
 			<El tag="span" componentName="{componentName}-icon">
-				<slot name="end" />
+				{@render endSnippet()}
 			</El>
 		{/if}
 	</El>
 {:else}
-	<El
-		tag="input"
-		{components}
-		value={text}
-		bind:element
-		bind:id
-		{...$$restProps}
-		{cssProps}
-		{...props} />
+	<El bind:element bind:id {...props} />
 {/if}
 
 <!-- TODO: in form datePicker, should move it outside of form field group (right border should be round) -->

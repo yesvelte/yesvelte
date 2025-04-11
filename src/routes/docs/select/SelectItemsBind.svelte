@@ -29,9 +29,13 @@
 		},
 	]
 
-	let value: string = '1'
+	let value: string = $state('1')
 </script>
 
-<Select bind:value {items} key="id" let:item let:index>{item.id} - {item.name}</Select>
+<Select bind:value {items} key="id">
+	{#snippet children({ item })}
+		{item.id} - {item.name}
+	{/snippet}
+</Select>
 
 <i>Selected Id: {value} - value: {JSON.stringify(items.find((item) => item.id === value))}</i>

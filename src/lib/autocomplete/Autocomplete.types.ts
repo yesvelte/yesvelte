@@ -1,3 +1,4 @@
+import type { Snippet } from 'svelte'
 import type { ElProps } from '../el'
 import type { InputSizes, InputStates } from '../input'
 
@@ -16,4 +17,8 @@ export interface AutocompleteProps extends Partial<ElProps> {
 	value?: string | any | any[]
 	_slots?: Record<string, boolean>
 	readonly?: boolean
+	children?: Snippet<[{ item: any; index: number }]>
+	oncreated?: any
+	oninput?: any
+	onchanged?: any
 }

@@ -1,41 +1,34 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { BreadcrumbItemProps } from './Breadcrumb.types'
 
 	type $$Props = BreadcrumbItemProps
 
-	export let componentName: $$Props['componentName'] = 'breadcrumb-item'
-	export let active: $$Props['active'] = undefined
-	export let href: $$Props['href'] = undefined
+	let {
+		componentName = 'breadcrumb-item',
+		active,
+		href,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: $$Props = $derived({
+		...restProps,
+		tag: 'li',
+		componentName,
+		'aria-current': `${active ?? 'page'}`,
+		cssProps: {
 			active,
-		}
-
-		props = {
-			tag: 'li',
-			componentName,
-			'aria-current': `${active ?? 'page'}`,
-		}
-	}
+		},
+	})
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...props}>
+<El {...props}>
 	{#if href}
 		<El tag="a" {href} componentName="{componentName}-inner">
-			<slot />
+			{@render children?.()}
 		</El>
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
 </El>

@@ -2,7 +2,7 @@
 	import { DatePicker, El } from 'yesvelte'
 	import moment from 'moment'
 
-	let value: Date
+	let value: Date | undefined = $state(undefined)
 </script>
 
 <DatePicker bind:value formatText={(date) => moment(date).format('yyyy/MM/DD')} />

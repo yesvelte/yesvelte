@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FileUpload } from 'yesvelte'
 
-	let files: any = undefined
+	let files: any = $state(undefined)
 </script>
 
 <FileUpload bind:files />

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { El, FormInput } from 'yesvelte'
 
-	let value: string
+	let value: string = $state()
 </script>
 
 <FormInput label="Name" placeholder="Enter your name..." bind:value />

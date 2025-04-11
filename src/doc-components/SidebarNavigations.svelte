@@ -4,6 +4,8 @@
 	import { navigations, type Navigation } from '../routes/docs/navigations'
 	import { Icon } from 'yesvelte/icon'
 
+	let {pathname = '', ...restProps} = $props()
+
 	function isActive(navigation: Navigation, pathname: string) {
 		for (let child of navigation.children ?? []) {
 			if (navigation.route + child.route === pathname) {
@@ -13,10 +15,9 @@
 		return false
 	}
 
-	export let pathname: string = ''
 </script>
 
-<Sidebar {...$$restProps}>
+<Sidebar {...restProps}>
 	{#each navigations as navigation}
 		{#if navigation.children}
 			<SidebarItem

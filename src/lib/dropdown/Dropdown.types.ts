@@ -1,10 +1,12 @@
 import type { PopupProps } from '../popup'
 import type { ElProps } from '../el'
 import type { Writable } from 'svelte/store'
+import type { Snippet } from 'svelte'
 
 export interface DropdownProps extends Partial<ElProps> {
 	placement?: PopupProps['placement']
 	autoClose?: PopupProps['autoClose']
+	targetSnippet?: Snippet
 	arrow?: boolean
 }
 export interface DropdownMenuProps extends Partial<ElProps> {

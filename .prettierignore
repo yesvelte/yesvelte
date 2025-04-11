@@ -9,6 +9,8 @@ node_modules
 # Ignore all CSS files:
 *.css
 # Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
 package-lock.json
+pnpm-lock.yaml
 yarn.lock
+bun.lock
+bun.lockb

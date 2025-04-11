@@ -1,3 +1,4 @@
+import type { Snippet } from 'svelte'
 import type { Colors, ElProps } from '../el'
 
 export interface AlertProps extends Partial<ElProps> {
@@ -6,5 +7,6 @@ export interface AlertProps extends Partial<ElProps> {
 	icon?: string
 	important?: boolean
 	open?: boolean
-	title?: string
+	title?: string | Snippet
+	startSnippet?: Snippet
 }

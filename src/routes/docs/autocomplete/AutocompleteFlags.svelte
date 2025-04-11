@@ -1,19 +1,21 @@
 <script>
 	import { Autocomplete, El } from 'yesvelte'
 
-	let items = [
+	let items = $state([
 		{ flag: 'pl', name: 'Poland' },
 		{ flag: 'de', name: 'Germany' },
 		{ flag: 'cz', name: 'Czech Republic' },
 		{ flag: 'br', name: 'Brazil' },
-	]
-	let value = ''
+	])
+	let value = $state('')
 </script>
 
-<Autocomplete {items} key="flag" bind:value let:item>
-	<El d="flex">
-		<El tag="img" width="30" me="2" src="/images/flags/{item.flag}.svg" />
-		{item.name}
-	</El>
+<Autocomplete {items} key="flag" bind:value>
+	{#snippet children({ item })}
+		<El d="flex">
+			<El tag="img" width="30" me="2" src="/images/flags/{item.flag}.svg" />
+			{item.name}
+		</El>
+	{/snippet}
 </Autocomplete>
 <i>value: {value}</i>

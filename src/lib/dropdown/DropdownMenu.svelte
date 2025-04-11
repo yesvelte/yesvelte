@@ -1,31 +1,25 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Popup } from '../popup'
 	import type { DropdownContext, DropdownMenuProps } from './Dropdown.types'
 	import { getContext } from 'svelte'
 
 	type $$Props = DropdownMenuProps
 
-	export let componentName: $$Props['componentName'] = 'dropdown-menu'
+	let { componentName = 'dropdown-menu', children, ...restProps }: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
 	const context = getContext<DropdownContext>('DROPDOWN')
 
-	$: cssProps = {
-		//
-	}
-
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		target: $context.target,
 		componentName,
+		trigger: 'click',
 		autoClose: $context.autoClose,
 		placement: $context.placement,
-	}
+		cssProps: {},
+	})
 </script>
 
-<Popup {components} trigger="click" {...$$restProps} {...props} {cssProps}>
-	<slot />
+<Popup {...props}>
+	{@render children?.()}
 </Popup>

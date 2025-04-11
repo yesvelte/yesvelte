@@ -12,19 +12,17 @@
 </script>
 
 <!-- key is string -->
-<FormCheckboxGroup label="Select Language" key="code" bind:value {items} let:item let:index>
-	{(index || 0) + 1}- {item.text}
+<FormCheckboxGroup label="Select Language" key="code" bind:value {items}>
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </FormCheckboxGroup>
 
 <!-- key is function -->
-<FormCheckboxGroup
-	label="Select Language"
-	key={(item) => item.code}
-	bind:value
-	{items}
-	let:item
-	let:index>
-	{(index || 0) + 1}- {item.text}
+<FormCheckboxGroup label="Select Language" key={(item) => item.code} bind:value {items}>
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </FormCheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

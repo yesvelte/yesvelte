@@ -13,13 +13,17 @@
 </script>
 
 <!-- key is string -->
-<Autocomplete key="id" {items} bind:value let:item let:index>
-	{index} - {item.value}
+<Autocomplete key="id" {items} bind:value>
+	{#snippet children({ item, index })}
+		{index} - {item.value}
+	{/snippet}
 </Autocomplete>
 
 <!-- key is function -->
-<Autocomplete key={(item) => item.id} {items} bind:value let:item let:index>
-	{index} - {item.value}
+<Autocomplete key={(item) => item.id} {items} bind:value>
+	{#snippet children({ item, index })}
+		{index} - {item.value}
+	{/snippet}
 </Autocomplete>
 
 <i>value: {JSON.stringify(value)}</i>

@@ -1,7 +1,7 @@
 <script>
 	import { Button, Divider, StepItem, Steps } from 'yesvelte'
 
-	let items = [
+	let items = $state([
 		{
 			description: 'Step 1',
 		},
@@ -14,15 +14,17 @@
 		{
 			description: 'Step 4',
 		},
-	]
+	])
 
-	let active = 1
+	let active = $state(1)
 </script>
 
-<Button on:click={() => (active = active - 1)}>Previous Step</Button>
-<Button on:click={() => (active = active + 1)} color="primary">Next Step</Button>
+<Button onclick={() => (active = active - 1)}>Previous Step</Button>
+<Button onclick={() => (active = active + 1)} color="primary">Next Step</Button>
 <Divider />
-<Steps {items} bind:active let:index let:item>
-	<StepItem>{item.description}</StepItem>
+<Steps {items} bind:active>
+	{#snippet children({ item, index })}
+		<StepItem>{item.description}</StepItem>
+	{/snippet}
 </Steps>
 <i>Active Index: {active}</i>

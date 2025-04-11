@@ -1,31 +1,30 @@
 <script lang="ts">
 	import { onDestroy, setContext } from 'svelte'
 	import { onMount } from 'svelte'
-	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
 	import { writable } from 'svelte/store'
 	import type { SliderKnobType, SliderProps } from './Slider.types'
+	import noUiSlider, { type Options, type API as NoUiSlider } from 'nouislider'
 	import { classname } from '../internal'
-	import { get_current_component } from 'svelte/internal'
+
 	import { El } from '../el'
 
 	type $$Props = SliderProps
 
-	export let componentName: $$Props['componentName'] = 'slider'
-	export let color: $$Props['color'] = undefined
-	export let min: $$Props['min'] = undefined
-	export let max: $$Props['max'] = undefined
-	export let step: $$Props['step'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let connect: $$Props['connect'] = undefined
+	let {
+		componentName = 'slider',
+		color,
+		min,
+		max,
+		step,
+		name,
+		connect,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let knobs: SliderKnobType[] = []
-	let element: HTMLElement
-	let instance: NoUiSlider
+	let knobs: SliderKnobType[] = $state([])
+	let element: HTMLElement | undefined = $state(undefined)
+	let instance: NoUiSlider | undefined = $state(undefined)
 
 	function register(knob: any) {
 		const id = knobs.length
@@ -96,10 +95,12 @@
 			},
 		}
 
-		instance = noUiSlider.create(element, options)
+		import('nouislider').then((module) => {
+			instance = module.default.create(element, options)
 
-		instance.on('update', (newValues, handle) => {
-			$values[handle] = +newValues[handle]
+			instance.on('update', (newValues, handle) => {
+				$values[handle] = +newValues[handle]
+			})
 		})
 	})
 
@@ -110,13 +111,15 @@
 	})
 
 	function setValue(id: number, newValue: number) {
-		instance.setHandle(id, newValue)
+		if (instance) {
+			instance.setHandle(id, newValue)
+		}
 	}
 
 	setContext('SLIDER', { register, unregister, setValue, values })
 </script>
 
-<El {components} componentName="{componentName}-wrapper">
-	<div class={classname('slider', { color })} bind:this={element} />
-	<slot />
+<El componentName="{componentName}-wrapper">
+	<div class={classname('slider', { color })} bind:this={element}></div>
+	{@render children?.()}
 </El>

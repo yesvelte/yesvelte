@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Autocomplete } from '../autocomplete'
 	import type { FormAutocompleteProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -7,87 +6,86 @@
 
 	type $$Props = FormAutocompleteProps
 
-	export let componentName: $$Props['componentName'] = 'form-autocomplete'
-	export let disabled: $$Props['disabled'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let items: $$Props['items'] = []
-	export let key: $$Props['key'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let dismissible: $$Props['dismissible'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let create: $$Props['create'] = undefined
+	let {
+		componentName = 'form-autocomplete',
+		disabled,
+		hint,
+		items,
+		key,
+		label,
+		name,
+		placeholder,
+		required,
+		multiple,
+		dismissible,
+		size,
+		state: validationState,
+		value = $bindable(),
+		create,
+		onchange,
+		onblur,
+		onfocus,
+		children,
+		selectedSnippet,
+		labelSnippet,
+		hintSnippet,
+		startSnippet,
+		startIconSnippet,
+		endSnippet,
+		endIconSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: ['input', 'changed', 'created'] },
-		...($$props.components ?? []),
-	]
+	let id: string | undefined = $state(undefined)
 
-	let id: string
-	let props: $$Props = {}
-	let autocompleteProps: $$Props = {}
+	let props: $$Props = $derived({
+		...restProps,
+		labelSnippet,
+		hintSnippet,
+		componentName,
+		required,
+		label,
+		hint,
+		state: validationState,
+		id,
+	})
 
-	$: {
-		props = {
-			required,
-			label,
-			hint,
-			state,
-			id,
-		}
-
-		autocompleteProps = {
-			disabled,
-			items,
-			key,
-			placeholder,
-			multiple,
-			dismissible,
-			name,
-			size,
-			state,
-			create,
-		}
-	}
+	let autocompleteProps: $$Props = $derived({
+		disabled,
+		items,
+		key,
+		placeholder,
+		multiple,
+		dismissible,
+		onchange,
+		onblur,
+		onfocus,
+		name,
+		size,
+		state: validationState,
+		create,
+		children,
+		selectedSnippet,
+	})
 </script>
 
-<FormField {componentName} {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<svelte:fragment slot="group">
-		<slot name="start">
-			{#if $$slots['start-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="start-icon" />
-				</El>
-			{/if}
-		</slot>
-		<Autocomplete
-			{...autocompleteProps}
-			on:changed
-			on:created
-			on:input
-			{components}
-			_slots={{ default: $$slots['default'], selected: $$slots['selected'] }}
-			bind:value
-			bind:id
-			let:item
-			let:index>
-			<slot {index} {item}>{item}</slot>
-			<slot name="selected" slot="selected" {index} {item}>{item}</slot>
-		</Autocomplete>
+<FormField {...props}>
+	{#snippet groupSnippet()}
+		{#if startSnippet}
+			{@render startSnippet()}
+		{:else if startIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render startIconSnippet()}
+			</El>
+		{/if}
+		<Autocomplete {...autocompleteProps} bind:value bind:id />
 
-		<slot name="end">
-			{#if $$slots['end-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="end-icon" />
-				</El>
-			{/if}
-		</slot>
-	</svelte:fragment>
-	<slot name="hint" slot="hint" />
+		{#if endSnippet}
+			{@render endSnippet()}
+		{:else if endIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render endIconSnippet()}
+			</El>
+		{/if}
+	{/snippet}
 </FormField>

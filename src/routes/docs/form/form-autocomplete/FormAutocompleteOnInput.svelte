@@ -11,7 +11,7 @@
 		}
 	}
 
-	function onInput(query: string) {
+	function oninput(query: string) {
 		var url = 'https://api.github.com/search/repositories?q=' + encodeURIComponent(query)
 
 		fetch(url)
@@ -24,27 +24,28 @@
 			})
 	}
 
-	const debouncedOnInput = debounced(onInput)
+	const debouncedOnInput = debounced(oninput)
 
-	let value: any
+	let value: any = $state(undefined)
 </script>
 
-
-<FormAutocomplete label="{items.length} items" {items} on:input={(event) => debouncedOnInput(event.detail)} bind:value let:item>
-	<El py="2" px="2" d="flex">
-		<Avatar me="3">
-			<img src={item.owner.avatar_url} />
-		</Avatar>
-        <El ms="2">
-			<El mb="1">
-				<El tag="h4" d="inline-block">
-					{item.name}
+<FormAutocomplete label="{items.length} items" {items} oninput={debouncedOnInput} bind:value>
+	{#snippet children({ item, index })}
+		<El py="2" px="2" d="flex">
+			<Avatar me="3">
+				<img src={item.owner.avatar_url} />
+			</Avatar>
+			<El ms="2">
+				<El mb="1">
+					<El tag="h4" d="inline-block">
+						{item.name}
+					</El>
+					<El tag="span" textMuted>by {item.owner.login}</El>
 				</El>
-				<El tag="span" textMuted>by {item.owner.login}</El>
+				<El>{item.description}</El>
 			</El>
-			<El>{item.description}</El>
 		</El>
-	</El>
+	{/snippet}
 </FormAutocomplete>
 {#if value}
 	url: <El tag="a" href={value.html_url}>{value.html_url}</El>

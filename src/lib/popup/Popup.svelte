@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { El } from '../el'
-	import { get_current_component } from 'svelte/internal'
+
 	import { classname } from '../internal'
 	import {
 		computePosition,
@@ -14,37 +14,38 @@
 
 	type $$Props = PopupProps
 
-	export let target: $$Props['target'] = undefined
-	export let placement: $$Props['placement'] = undefined
-	export let trigger: $$Props['trigger'] = undefined
-	export let popupOffset: $$Props['popupOffset'] = undefined
-	export let autoClose: $$Props['autoClose'] = 'outside'
-	export let arrow: $$Props['arrow'] = undefined
-	export let componentName: $$Props['componentName'] = 'popup'
-	export let show: $$Props['show'] = undefined
+	let {
+		target,
+		placement,
+		trigger,
+		popupOffset,
+		autoClose = 'outside',
+		arrow,
+		componentName = 'popup',
+		show = $bindable(),
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let popupEl: HTMLElement | undefined = $state(undefined)
+	let targetEl: Element | undefined = $state(undefined)
+	let arrowEl: HTMLElement | undefined = $state(undefined)
 
-	let popupEl: HTMLElement
-	let targetEl: Element
-	let arrowEl: HTMLElement
+	let arrowPlacement: Placement | undefined = $state(undefined)
+	let arrowX: string | undefined = $state(undefined)
+	let arrowY: string | undefined = $state(undefined)
 
-	let arrowPlacement: Placement | undefined = undefined
-	let arrowX: string | undefined = undefined
-	let arrowY: string | undefined = undefined
+	let prevTarget: Element | undefined = $state(undefined)
+	let timer: any = $state(undefined)
 
-	let prevTarget: Element
-	let timer: any;
-
-	let left: string = ''
-	let top: string = ''
+	let left: string = $state('')
+	let top: string = $state('')
 
 	function showPopup() {
-		if(timer && trigger === 'hover') clearTimeout(timer)
-			
+		if (timer && trigger === 'hover') clearTimeout(timer)
+
+		if (!popupEl || !targetEl) return
+
 		show = true
 
 		let middleware = []
@@ -90,7 +91,6 @@
 
 	function hidePopup() {
 		if (trigger === 'hover') {
-			
 			timer = setTimeout(() => {
 				show = false
 			}, 300)
@@ -177,14 +177,19 @@
 		}
 	}
 
-	$: if (popupEl) targetEl = getTargetEl(target)
+	$effect(() => {
+		if (popupEl) targetEl = getTargetEl(target)
+	})
 
-	$: if (targetEl) {
-		unbind()
-		bind()
-	}
+	$effect(() => {
+		if (targetEl) {
+			unbind()
+			bind()
+		}
+	})
 
-	$: popupProps = {
+	let popupProps: $$Props = $derived({
+		...restProps,
 		componentName,
 		class: classname(
 			'popup',
@@ -192,21 +197,21 @@
 				show,
 				arrowPlacement,
 			},
-			$$props.class
+			restProps.class
 		),
 		style: `left: ${left}; top: ${top};`,
-	}
+	})
 
-	$: arrowProps = {
+	let arrowProps: $$Props = $derived({
 		componentName: componentName + '-arrow',
 		class: classname('popup-arrow'),
 		style: `left: ${arrowX}; top: ${arrowY}`,
-	}
+	})
 </script>
 
-<El {components} bind:element={popupEl} {...$$restProps} {...popupProps}>
+<El bind:element={popupEl} {...popupProps}>
 	{#if arrow}
 		<El bind:element={arrowEl} {...arrowProps} />
 	{/if}
-	<slot />
+	{@render children?.()}
 </El>

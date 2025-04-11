@@ -1,38 +1,45 @@
 <script lang="ts">
 	import { Checkbox, El, Input } from 'yesvelte'
 
-	let min = 20
-	let max = 1000
+	let min = $state(20)
+	let max = $state(1000)
 
-	let shouldValidate = false
-	let value: number
+	let shouldValidate = $state(false)
+	let value: number | undefined = $state()
 
-	let errorMessage = ''
-	let state: 'invalid' | undefined = undefined
+	let errorMessage = $state('')
+	let validationState: 'invalid' | undefined = $state(undefined)
 
-	let minErrorMessage = 'Amount should be greater than ' + min
-	let maxErrorMessage = 'Amount should be less than ' + max
+	let minErrorMessage = $state('Amount should be greater than ' + min)
+	let maxErrorMessage = $state('Amount should be less than ' + max)
 
-	function validate(value: number) {
+	function validate(value: number | undefined) {
+		if (!value) return
 		if (!isNaN(value)) {
 			if (value < min) {
 				errorMessage = minErrorMessage
-				state = 'invalid'
+				validationState = 'invalid'
 			} else if (value > max) {
 				errorMessage = maxErrorMessage
-				state = 'invalid'
+				validationState = 'invalid'
 			} else {
 				errorMessage = ''
-				state = undefined
+				validationState = undefined
 			}
 		}
 	}
 
-	$: if (shouldValidate) validate(+value)
+	$effect(() => {
+		if (shouldValidate) validate(value)
+	})
 </script>
 
 <Checkbox bind:checked={shouldValidate}>Should Validate</Checkbox>
 
 <El tag="strong">Amount:</El>
-<Input type="number" bind:value placeholder="Enter a value between {min} and {max}" {state} />
+<Input
+	type="number"
+	bind:value
+	placeholder="Enter a value between {min} and {max}"
+	state={validationState} />
 <El textColor="danger" tag="small">{errorMessage}</El>

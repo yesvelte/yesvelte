@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Button, El, Input } from 'yesvelte'
 
-	let takenEmails = ['test@gmail.com', 'user1@gmail.com', 'user2@gmail.com']
-	let value: string
-	let state: 'invalid' | undefined = undefined
-	let hint = ''
+	let takenEmails = $state(['test@gmail.com', 'user1@gmail.com', 'user2@gmail.com'])
+	let value: string | undefined = $state(undefined)
+	let validationState: 'invalid' | undefined = $state(undefined)
+	let hint = $state('')
 
 	async function checkApiForEmailAvailability(email: string) {
 		return new Promise((resolve) => setTimeout(() => resolve(!takenEmails.includes(email)), 200))
@@ -13,10 +13,10 @@
 	async function onBlur() {
 		if (await checkApiForEmailAvailability(value)) {
 			hint = ''
-			state = undefined
+			validationState = undefined
 		} else {
 			hint = 'Email is not available!'
-			state = 'invalid'
+			validationState = 'invalid'
 		}
 	}
 </script>
@@ -27,7 +27,7 @@
 {/each}
 
 <El tag="strong" mt="3">Enter your email:</El>
-<Input {state} bind:value on:blur={onBlur} />
+<Input state={validationState} bind:value onblur={onBlur} />
 <El mb="3" tag="small">{hint}</El>
 <br />
 <Button color="primary">Submit</Button>

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import { El } from '../el'
 	import type { TabPanelProps, TabsContext } from './Tab.types'
@@ -7,14 +6,9 @@
 
 	type $$Props = TabPanelProps
 
-	export let componentName: $$Props['componentName'] = 'tab-pane'
-	export let role: $$Props['role'] = 'tabpanel'
+	let { componentName = 'tab-pane', role = 'tabpanel', children, ...restProps }: $$Props = $props()
 
-	const panel = {}
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	const panel = $state({})
 
 	const { registerPanel, removePanel, selectedPanel } = getContext<TabsContext>(TABS)
 
@@ -26,17 +20,15 @@
 		removePanel(panel)
 	})
 
-	let props: TabPanelProps = {}
-	$: {
-		props = {
-			componentName,
-			role,
-		}
-	}
+	let props: TabPanelProps = $derived({
+		...restProps,
+		componentName,
+		role,
+	})
 </script>
 
 {#if $selectedPanel === panel}
-	<El {components} {...$$restProps} {...props}>
-		<slot />
+	<El {...props}>
+		{@render children?.()}
 	</El>
 {/if}

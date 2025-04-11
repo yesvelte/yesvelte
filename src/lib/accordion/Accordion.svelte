@@ -5,17 +5,15 @@
 	import AccordionHeader from './AccordionHeader.svelte'
 	import type { AccordionContext, AccordionProps, AccordionsContext } from './Accordion.types'
 
-	import { get_current_component } from 'svelte/internal'
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
 	type $$Props = AccordionProps
 
-	export let componentName: $$Props['componentName'] = 'accordion'
-	export let open: $$Props['open'] = false
-	export let title: $$Props['title'] = undefined
+	let {
+		componentName = 'accordion',
+		open = $bindable(false),
+		title,
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	const ctx: AccordionContext = writable({ open })
 	setContext('ACCORDION', ctx)
@@ -27,14 +25,16 @@
 		return item
 	})
 
-	$: ctx.update(() => ({open}))
+	$effect(() => {
+		ctx.update(() => ({ open }))
+	})
 </script>
 
-<El {components} {...$$restProps} {componentName}>
+<El {...restProps} {componentName}>
 	{#if title}
 		<AccordionHeader>
 			{title}
 		</AccordionHeader>
 	{/if}
-	<slot />
+	{@render children?.()}
 </El>

@@ -1,25 +1,19 @@
-<script context="module">
+<script module>
 	export const TABS = {}
 </script>
 
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
-	import { onDestroy, setContext } from 'svelte'
+	import { setContext } from 'svelte'
 	import { writable } from 'svelte/store'
 	import { El } from '../el'
 	import type { TabsContext, TabsProps } from './Tab.types'
 
 	type $$Props = TabsProps
 
-	export let componentName: $$Props['componentName'] = 'tabs'
-	export let vertical: $$Props['vertical'] = undefined
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let { componentName = 'tabs', vertical, children, ...restProps }: $$Props = $props()
 
-	const tabs: Array<any> = []
-	const panels: Array<any> = []
+	const tabs: Array<any> = $state([])
+	const panels: Array<any> = $state([])
 	const selectedTab = writable<any | null>(null)
 	const selectedPanel = writable<any | null>(null)
 
@@ -61,12 +55,15 @@
 		selectedPanel,
 	})
 
-	let cssProps: TabsProps = {}
-	$: {
-		cssProps = { vertical }
-	}
+	let props: TabsProps = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
+			vertical,
+		},
+	})
 </script>
 
-<El {components} {...$$restProps} {componentName} {cssProps}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

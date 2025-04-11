@@ -3,30 +3,23 @@
 	import { El } from '../el'
 	import { Button } from '../button'
 	import type { OffcanvasHeaderProps, OffcanvasProps } from './Offcanvas.types'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = OffcanvasHeaderProps
 
-	export let componentName: $$Props['componentName'] = 'offcanvas-header'
-	export let title: $$Props['title'] = undefined
+	let { componentName = 'offcanvas-header', title, children, ...restProps }: $$Props = $props()
 
 	const ctx = getContext<OffcanvasProps>('OFFCANVAS')
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	const onClick = () => {
+	const onclick = () => {
 		if (ctx && ctx.close) ctx.close()
 	}
 </script>
 
-<El {...$$restProps} {componentName} {components}>
+<El {...restProps} {componentName}>
 	{#if title}
 		<El componentName="{componentName}-title">{title}</El>
 	{:else}
-		<slot />
+		{@render children?.()}
 	{/if}
-	<Button componentName="{componentName}-btn" aria-label="Close" on:click={onClick} />
+	<Button componentName="{componentName}-btn" aria-label="Close" {onclick} />
 </El>

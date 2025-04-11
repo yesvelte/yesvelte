@@ -24,15 +24,15 @@
 		Tabs,
 	} from 'yesvelte'
 
-	let dark = false
-	let theme = 'tabler'
-	let icon = 'clipboard'
+	let dark = $state(false)
+	let theme = $state('tabler')
+	let icon = $state('clipboard')
 	let replLink = 'https://svelte.dev/repl/a26156e5cb1143d0bed393b2d1d3e754?version=3.55.1'
 	let discordLink = 'https://discord.gg/kh57tNs56N'
 	let githubLink = 'https://github.com/yesvelte/yesvelte'
 	let redditLink = 'https://reddit.com/r/yesvelte'
 
-	let cardsData = [
+	let cardsData = $state([
 		{
 			title: 'Rapid application development',
 			body: 'YeSvelte simplifies enterprise-grade web application development by handling the CSS framework details for you.',
@@ -49,18 +49,20 @@
 			title: 'Easy to use',
 			body: "YeSvelte's components are easy to use and intuitive, so you don't have to be an expert in Svelte or CSS frameworks to get started.",
 		},
-	]
+	])
 
-	$: containerProps = {
+	let containerProps = $derived({
 		'data-bs-theme': dark ? 'dark' : 'light',
 		'data-theme': dark ? 'dark' : 'light',
-	}
+	})
 
-	$: if (browser) {
-		Object.keys(containerProps).map((key) => {
-			document.body.setAttribute(key, containerProps[key])
-		})
-	}
+	$effect(() => {
+		if (browser) {
+			Object.keys(containerProps).map((key) => {
+				document.body.setAttribute(key, containerProps[key])
+			})
+		}
+	})
 
 	async function copy() {
 		await navigator.clipboard.writeText('npm install yesvelte@next')
@@ -71,10 +73,10 @@
 		}, 3000)
 	}
 
-	$: darkColor = theme === 'tabler' ? '#151f2c' : '#1d232a'
-	$: lightColor = theme === 'tabler' ? '#f1f5f9' : 'white'
+	let darkColor = $derived(theme === 'tabler' ? '#151f2c' : '#1d232a')
+	let lightColor = $derived(theme === 'tabler' ? '#f1f5f9' : 'white')
 
-	$: bgColor = dark ? darkColor : lightColor
+	let bgColor = $derived(dark ? darkColor : lightColor)
 </script>
 
 <svelte:head>
@@ -101,9 +103,8 @@
 		rel="stylesheet" />
 </svelte:head>
 
-<svelte:body {...containerProps} />
 <El class="overflow-auto hide-scrollbar-in-mobile" h="100">
-	<El position="relative" bgColor="primary" textColor="light" p="3">
+	<El class="overflow-hidden" position="relative" bgColor="primary" textColor="light" p="3">
 		<Navbar bind:dark bind:theme {redditLink} {githubLink} {discordLink} {replLink} />
 		<El mx="auto" container="xl">
 			<El
@@ -138,7 +139,7 @@
 						w="100"
 						justifyContent="between"
 						alignItems="center"
-						on:click={copy}>
+						onclick={copy}>
 						<El me="4">npm i yesvelte@next</El>
 						<Icon name={icon} />
 					</El>
@@ -373,14 +374,14 @@
 
 			<El justifyContent="center" d="flex" mx="auto" gap="4">
 				<El d="flex" class="flex-direction-column font-size-18px" textAlign="center" gap="3">
-					<Button size="lg" on:click={() => (dark = true)} color="dark">
+					<Button size="lg" onclick={() => (dark = true)} color="dark">
 						<Icon name="moon" />
 					</Button>
 					Dark
 				</El>
 
 				<El d="flex" class="flex-direction-column font-size-18px" textAlign="center" gap="3">
-					<Button size="lg" on:click={() => (dark = false)} color="light">
+					<Button size="lg" onclick={() => (dark = false)} color="light">
 						<Icon name="sun" />
 					</Button>
 					Light
@@ -560,11 +561,11 @@
 
 			<El justifyContent="center" style="margin-top: 100px" d="flex" mx="auto" gap="4">
 				<El d="flex" class="flex-direction-column" gap="3">
-					<Button size="lg" on:click={() => (theme = 'daisyui')} color="primary">DaisyUI</Button>
+					<Button size="lg" onclick={() => (theme = 'daisyui')} color="primary">DaisyUI</Button>
 				</El>
 
 				<El d="flex" class="flex-direction-column" gap="3">
-					<Button size="lg" on:click={() => (theme = 'tabler')} color="light">Tabler</Button>
+					<Button size="lg" onclick={() => (theme = 'tabler')} color="light">Tabler</Button>
 				</El>
 			</El>
 		</El>
@@ -746,7 +747,7 @@
 						d="flex"
 						justifyContent="between"
 						alignItems="center"
-						on:click={copy}>
+						onclick={copy}>
 						<El me="4">npm i yesvelte@next</El>
 						<Icon name={icon} />
 					</El>
@@ -878,7 +879,7 @@
 		padding-top: 100px !important;
 		padding-bottom: 100px !important;
 	}
-	
+
 	:global(.overflow-auto) {
 		overflow: auto;
 	}

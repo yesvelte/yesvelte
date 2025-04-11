@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { Checkbox, FormInput } from 'yesvelte'
 
-	let min = 20
-	let max = 1000
+	let min = $state(20)
+	let max = $state(1000)
 
-	let shouldValidate = false
-	let value: number
+	let shouldValidate = $state(false)
+	let value: number = $state()
 
-	let errorMessage = ''
-	let state: 'invalid' | undefined = undefined
+	let errorMessage = $state('')
+	let state: 'invalid' | undefined = $state(undefined)
 
-	let minErrorMessage = 'Amount should be greater than ' + min
-	let maxErrorMessage = 'Amount should be less than ' + max
+	let minErrorMessage = $state('Amount should be greater than ' + min)
+	let maxErrorMessage = $state('Amount should be less than ' + max)
 
 	function validate(value: number) {
 		if (!isNaN(value)) {
@@ -28,7 +28,9 @@
 		}
 	}
 
-	$: if (shouldValidate) validate(+value)
+	$effect(() => {
+		if (shouldValidate) validate(+value)
+	})
 </script>
 
 <Checkbox bind:checked={shouldValidate}>Should Validate</Checkbox>

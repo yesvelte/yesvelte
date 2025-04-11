@@ -1,59 +1,56 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte'
+	import { onMount } from 'svelte'
 	import type { Quill, QuillOptionsStatic } from 'quill'
 	import { El } from '../el'
 	import type { EditorProps } from './Editor.types'
 	import { Textarea } from '../textarea'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = EditorProps
 
-	export let componentName: $$Props['componentName'] = 'editor'
-	export let value: $$Props['value'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let readonly: $$Props['readonly'] = undefined
-	export let height: $$Props['height'] = 'md'
-	export let name: $$Props['name'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let toolbar: $$Props['toolbar'] = [
-		{ header: [1, 2, 3, 4, 5, 6, false] },
-		'bold',
-		'italic',
-		'underline',
-		'strike',
-		'blockquote',
-		'code-block',
-	]
+	let {
+		componentName = 'editor',
+		value = $bindable(),
+		id = $bindable(),
+		placeholder,
+		readonly,
+		height = 'md',
+		name,
+		state: validationState,
+		toolbar = [
+			{ header: [1, 2, 3, 4, 5, 6, false] },
+			'bold',
+			'italic',
+			'underline',
+			'strike',
+			'blockquote',
+			'code-block',
+		],
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: ['changed'] },
-		...($$props.components ?? []),
-	]
-	const dispatch = createEventDispatcher()
+	let element: HTMLDivElement | undefined = $state()
+	let instance: Quill | undefined = $state()
+	let loaded = $state(false)
 
-	let element: HTMLDivElement
-	let instance: Quill
-	let loaded = false
-
-	$: {
+	$effect(() => {
 		if (instance && value !== instance.root.innerHTML) {
 			instance.root.innerHTML = value ?? ''
 		}
-	}
+	})
 
-	let options: QuillOptionsStatic = {}
-	$: options = {
+	let options = $derived({
 		theme: 'snow',
 		placeholder,
 		readOnly: readonly,
 		modules: {
 			toolbar,
 		},
-	}
+	})
 
 	function onChange(event: any) {
 		value = instance.root.innerHTML
-		dispatch('changed', value)
+		console.log(restProps.onchanged)
+		restProps.onchanged?.(value)
 	}
 
 	onMount(() => {
@@ -74,15 +71,15 @@
 		}
 	})
 
-	$: cssProps = {
+	let cssProps = $derived({
 		height,
 		loaded,
-		state,
-	}
+		state: validationState,
+	})
 </script>
 
-<El {components} {cssProps} componentName="{componentName}-wrapper">
-	<El {componentName} bind:element />
+<El {cssProps} componentName="{componentName}-wrapper">
+	<El bind:id {componentName} bind:element />
 </El>
 
 <!-- This can be used inside forms which has value of the editor -->

@@ -1,57 +1,65 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { Checkbox } from '../checkbox'
 	import type { FormCheckboxProps } from './Form.types'
 	import FormField from './FormField.svelte'
 
 	type $$Props = FormCheckboxProps
 
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let componentName: $$Props['componentName'] = 'form-checkbox'
+	let {
+		label,
+		hint,
+		state: validationState,
+		required,
+		componentName = 'form-checkbox',
+		color,
+		disabled,
+		description,
+		reverse,
+		value = $bindable(),
+		checked = $bindable(),
+		onchange,
+		onblur,
+		onfocus,
+		indeterminate,
+		inline,
+		name,
+		children,
+		labelSnippet,
+		hintSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	export let color: $$Props['color'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	export let description: $$Props['description'] = undefined
-	export let reverse: $$Props['reverse'] = undefined
-	export let value: $$Props['value'] = undefined
-	export let checked: $$Props['checked'] = undefined
-	export let indeterminate: $$Props['indeterminate'] = undefined
-	export let inline: $$Props['inline'] = undefined
-	export let name: $$Props['name'] = undefined
+	let id: string | undefined = $state(undefined)
 
-	let id: string
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	$: props = {
+	let props: $$Props = $derived({
+		...restProps,
 		required,
 		label,
 		hint,
-		state,
+		state: validationState,
 		id,
 		componentName,
-	}
+		labelSnippet,
+		hintSnippet,
+	})
 
-	$: checkboxProps = {
+	let checkboxProps = $derived({
 		color,
 		inline,
 		description,
+		onchange,
+		onblur,
+		onfocus,
 		reverse,
 		indeterminate,
 		disabled,
 		name,
-	}
+		value,
+	})
 </script>
 
-<FormField {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<Checkbox bind:id {...checkboxProps} bind:checked bind:value {components}>
-		<slot />
+<FormField {...props}>
+	<Checkbox bind:id {...checkboxProps} bind:checked>
+		{@render children?.()}
 	</Checkbox>
-	<slot name="hint" slot="hint" />
 </FormField>

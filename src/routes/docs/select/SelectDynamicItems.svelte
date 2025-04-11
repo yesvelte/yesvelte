@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { Select } from 'yesvelte'
 
-	let items: string[] = []
+	let items: string[] = $state([])
 
 	onMount(() => {
 		setInterval(() => {
@@ -10,7 +10,7 @@
 		}, 1000)
 	})
 
-	let value: string
+	let value: string | undefined = $state(undefined)
 </script>
 
 <Select {items} bind:value />

@@ -1,13 +1,13 @@
 <script>
 	import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody } from 'yesvelte'
-	let showBackdrop = false
-	let showNoScroll = false
+	let showBackdrop = $state(false)
+	let showNoScroll = $state(false)
 	const toggleBackdrop = () => (showBackdrop = !showBackdrop)
 	const toggleNoScroll = () => (showNoScroll = !showNoScroll)
 </script>
 
-<Button color="primary" on:click={toggleBackdrop}>Offcanvas with backdrop</Button>
-<Button color="primary" on:click={toggleNoScroll}>Offcanvas with backdrop and no-scroll</Button>
+<Button color="primary" onclick={toggleBackdrop}>Offcanvas with backdrop</Button>
+<Button color="primary" onclick={toggleNoScroll}>Offcanvas with backdrop and no-scroll</Button>
 
 <Offcanvas bind:show={showBackdrop} backdrop autoClose>
 	<OffcanvasHeader title="Offcanvas Title" />

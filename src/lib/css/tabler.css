@@ -2108,7 +2108,7 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   background-color: var(--y-secondary-color);
 }
 
-.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group {
+.y-form-textarea-group, .y-form-select-group, .y-form-file-upload-group, .y-form-date-picker-group, .y-form-input-group, .y-form-field-group {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -2116,47 +2116,51 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   width: 100%;
 }
 
-.y-form-textarea-group > .y-textarea, .y-form-select-group > .y-textarea, .y-form-file-upload-group > .y-textarea, .y-form-date-picker-group > .y-textarea, .y-form-input-group > .y-textarea, .y-form-textarea-group > .y-file-upload, .y-form-select-group > .y-file-upload, .y-form-file-upload-group > .y-file-upload, .y-form-date-picker-group > .y-file-upload, .y-form-input-group > .y-file-upload, .y-form-textarea-group > .y-date-picker, .y-form-select-group > .y-date-picker, .y-form-file-upload-group > .y-date-picker, .y-form-date-picker-group > .y-date-picker, .y-form-input-group > .y-date-picker, .y-form-textarea-group > .y-input, .y-form-select-group > .y-input, .y-form-file-upload-group > .y-input, .y-form-date-picker-group > .y-input, .y-form-input-group > .y-input,
+.y-form-textarea-group > .y-textarea, .y-form-select-group > .y-textarea, .y-form-file-upload-group > .y-textarea, .y-form-date-picker-group > .y-textarea, .y-form-input-group > .y-textarea, .y-form-field-group > .y-textarea, .y-form-textarea-group > .y-file-upload, .y-form-select-group > .y-file-upload, .y-form-file-upload-group > .y-file-upload, .y-form-date-picker-group > .y-file-upload, .y-form-input-group > .y-file-upload, .y-form-field-group > .y-file-upload, .y-form-textarea-group > .y-date-picker, .y-form-select-group > .y-date-picker, .y-form-file-upload-group > .y-date-picker, .y-form-date-picker-group > .y-date-picker, .y-form-input-group > .y-date-picker, .y-form-field-group > .y-date-picker, .y-form-textarea-group > .y-input, .y-form-select-group > .y-input, .y-form-file-upload-group > .y-input, .y-form-date-picker-group > .y-input, .y-form-input-group > .y-input, .y-form-field-group > .y-input,
 .y-form-textarea-group > .y-select,
 .y-form-select-group > .y-select,
 .y-form-file-upload-group > .y-select,
 .y-form-date-picker-group > .y-select,
 .y-form-input-group > .y-select,
+.y-form-field-group > .y-select,
 .y-form-textarea-group > .y-autocomplete,
 .y-form-select-group > .y-autocomplete,
 .y-form-file-upload-group > .y-autocomplete,
 .y-form-date-picker-group > .y-autocomplete,
-.y-form-input-group > .y-autocomplete {
+.y-form-input-group > .y-autocomplete,
+.y-form-field-group > .y-autocomplete {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
 
-.y-form-textarea-group > .y-textarea:focus, .y-form-select-group > .y-textarea:focus, .y-form-file-upload-group > .y-textarea:focus, .y-form-date-picker-group > .y-textarea:focus, .y-form-input-group > .y-textarea:focus, .y-form-textarea-group > .y-file-upload:focus, .y-form-select-group > .y-file-upload:focus, .y-form-file-upload-group > .y-file-upload:focus, .y-form-date-picker-group > .y-file-upload:focus, .y-form-input-group > .y-file-upload:focus, .y-form-textarea-group > .y-date-picker:focus, .y-form-select-group > .y-date-picker:focus, .y-form-file-upload-group > .y-date-picker:focus, .y-form-date-picker-group > .y-date-picker:focus, .y-form-input-group > .y-date-picker:focus, .y-form-textarea-group > .y-input:focus, .y-form-select-group > .y-input:focus, .y-form-file-upload-group > .y-input:focus, .y-form-date-picker-group > .y-input:focus, .y-form-input-group > .y-input:focus,
+.y-form-textarea-group > .y-textarea:focus, .y-form-select-group > .y-textarea:focus, .y-form-file-upload-group > .y-textarea:focus, .y-form-date-picker-group > .y-textarea:focus, .y-form-input-group > .y-textarea:focus, .y-form-field-group > .y-textarea:focus, .y-form-textarea-group > .y-file-upload:focus, .y-form-select-group > .y-file-upload:focus, .y-form-file-upload-group > .y-file-upload:focus, .y-form-date-picker-group > .y-file-upload:focus, .y-form-input-group > .y-file-upload:focus, .y-form-field-group > .y-file-upload:focus, .y-form-textarea-group > .y-date-picker:focus, .y-form-select-group > .y-date-picker:focus, .y-form-file-upload-group > .y-date-picker:focus, .y-form-date-picker-group > .y-date-picker:focus, .y-form-input-group > .y-date-picker:focus, .y-form-field-group > .y-date-picker:focus, .y-form-textarea-group > .y-input:focus, .y-form-select-group > .y-input:focus, .y-form-file-upload-group > .y-input:focus, .y-form-date-picker-group > .y-input:focus, .y-form-input-group > .y-input:focus, .y-form-field-group > .y-input:focus,
 .y-form-textarea-group > .y-select:focus,
 .y-form-select-group > .y-select:focus,
 .y-form-file-upload-group > .y-select:focus,
 .y-form-date-picker-group > .y-select:focus,
 .y-form-input-group > .y-select:focus,
+.y-form-field-group > .y-select:focus,
 .y-form-textarea-group > .y-autocomplete:focus,
 .y-form-select-group > .y-autocomplete:focus,
 .y-form-file-upload-group > .y-autocomplete:focus,
 .y-form-date-picker-group > .y-autocomplete:focus,
-.y-form-input-group > .y-autocomplete:focus {
+.y-form-input-group > .y-autocomplete:focus,
+.y-form-field-group > .y-autocomplete:focus {
   z-index: 5;
 }
 
-.y-form-textarea-group .y-button, .y-form-select-group .y-button, .y-form-file-upload-group .y-button, .y-form-date-picker-group .y-button, .y-form-input-group .y-button {
+.y-form-textarea-group .y-button, .y-form-select-group .y-button, .y-form-file-upload-group .y-button, .y-form-date-picker-group .y-button, .y-form-input-group .y-button, .y-form-field-group .y-button {
   position: relative;
   z-index: 2;
 }
 
-.y-form-textarea-group .y-button:focus, .y-form-select-group .y-button:focus, .y-form-file-upload-group .y-button:focus, .y-form-date-picker-group .y-button:focus, .y-form-input-group .y-button:focus {
+.y-form-textarea-group .y-button:focus, .y-form-select-group .y-button:focus, .y-form-file-upload-group .y-button:focus, .y-form-date-picker-group .y-button:focus, .y-form-input-group .y-button:focus, .y-form-field-group .y-button:focus {
   z-index: 5;
 }
 
-.y-form-textarea-icon, .y-form-select-icon, .y-form-file-upload-icon, .y-form-date-picker-icon, .y-form-input-icon {
+.y-form-textarea-icon, .y-form-select-icon, .y-form-file-upload-icon, .y-form-date-picker-icon, .y-form-input-icon, .y-form-field-icon {
   display: flex;
   align-items: center;
   padding: 0.4375rem 0.75rem;
@@ -2171,27 +2175,30 @@ textarea.y-textarea-size-lg, textarea.y-file-upload-size-lg, textarea.y-date-pic
   border-radius: var(--y-border-radius);
 }
 
-.y-form-textarea-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu),
+.y-form-textarea-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-field-group > :not(:last-child):not(.y-sidebar-item-dropdown):not(.y-navbar-item-dropdown):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu),
 .y-form-textarea-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-select-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-file-upload-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-date-picker-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-input-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
+.y-form-field-group > .y-sidebar-item-dropdown:nth-last-child(n+3),
 .y-form-textarea-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-select-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-file-upload-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-date-picker-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-form-input-group > .y-navbar-item-dropdown:nth-last-child(n+3),
+.y-form-field-group > .y-navbar-item-dropdown:nth-last-child(n+3),
 .y-dropdown-target.y-form-textarea-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-select-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-file-upload-group > :nth-last-child(n+3),
 .y-dropdown-target.y-form-date-picker-group > :nth-last-child(n+3),
-.y-dropdown-target.y-form-input-group > :nth-last-child(n+3) {
+.y-dropdown-target.y-form-input-group > :nth-last-child(n+3),
+.y-dropdown-target.y-form-field-group > :nth-last-child(n+3) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.y-form-textarea-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu) {
+.y-form-textarea-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-select-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-file-upload-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-date-picker-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-input-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu), .y-form-field-group > :not(:first-child):not(.y-autocomplete-dropdown):not(.y-sidebar-item-menu):not(.y-navbar-item-menu):not(.y-menu):not(.y-dropdown-menu) {
   margin-left: calc(var(--y-border-width) * -1);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2248,67 +2255,79 @@ textarea.y-textarea.y-textarea-state-valid, textarea.y-select-state-valid.y-text
   color: var(--y-form-valid-color);
 }
 
-.y-form-textarea-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-valid:not(:focus), .y-form-select-group > .y-input.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-valid:not(:focus), .y-form-input-group > .y-input.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-valid:not(:focus), .y-form-select-group > .y-input.y-input-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-valid:not(:focus), .y-form-input-group > .y-input.y-input-state-valid:not(:focus),
+.y-form-textarea-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-textarea.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-select-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-file-upload-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-file-upload.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-date-picker-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-date-picker-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-field-group > .y-date-picker.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-field-group > .y-autocomplete-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-field-group > .y-input-state-valid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-field-group > .y-input-state-valid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-field-group > .y-input-state-valid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-field-group > .y-input.y-textarea-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-valid:not(:focus), .y-form-select-group > .y-input.y-select-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-valid:not(:focus), .y-form-input-group > .y-input.y-select-state-valid:not(:focus), .y-form-field-group > .y-input.y-select-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-field-group > .y-input.y-file-upload-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-field-group > .y-input.y-date-picker-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-field-group > .y-input.y-autocomplete-state-valid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-valid:not(:focus), .y-form-select-group > .y-input.y-input-state-valid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-valid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-valid:not(:focus), .y-form-input-group > .y-input.y-input-state-valid:not(:focus), .y-form-field-group > .y-input.y-input-state-valid:not(:focus),
 .y-form-textarea-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-select-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-file-upload-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-date-picker-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-input-group > .y-select.y-textarea-state-valid:not(:focus),
+.y-form-field-group > .y-select.y-textarea-state-valid:not(:focus),
 .y-form-textarea-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-select-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-file-upload-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-date-picker-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-input-group > .y-select.y-select-state-valid:not(:focus),
+.y-form-field-group > .y-select.y-select-state-valid:not(:focus),
 .y-form-textarea-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-file-upload-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-file-upload-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-date-picker-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-date-picker-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-autocomplete-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-autocomplete-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-textarea-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-select-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-select-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-file-upload-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-date-picker-state-valid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-autocomplete-state-valid:not(:focus),
 .y-form-textarea-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-select-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-file-upload-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-date-picker-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-input-group > .y-input-state-valid.y-select:not(:focus),
+.y-form-field-group > .y-input-state-valid.y-select:not(:focus),
 .y-form-textarea-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-select-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-file-upload-group > .y-input-state-valid.y-autocomplete:not(:focus),
 .y-form-date-picker-group > .y-input-state-valid.y-autocomplete:not(:focus),
-.y-form-input-group > .y-input-state-valid.y-autocomplete:not(:focus) {
+.y-form-input-group > .y-input-state-valid.y-autocomplete:not(:focus),
+.y-form-field-group > .y-input-state-valid.y-autocomplete:not(:focus) {
   z-index: 3;
 }
 
@@ -2363,67 +2382,79 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   color: var(--y-form-invalid-color);
 }
 
-.y-form-textarea-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-invalid:not(:focus), .y-form-select-group > .y-input.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-invalid:not(:focus), .y-form-input-group > .y-input.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-invalid:not(:focus), .y-form-select-group > .y-input.y-input-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-invalid:not(:focus), .y-form-input-group > .y-input.y-input-state-invalid:not(:focus),
+.y-form-textarea-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-textarea.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-select-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-file-upload-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-file-upload.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-date-picker-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-date-picker-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-field-group > .y-date-picker.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-field-group > .y-autocomplete-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-select-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-input-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-field-group > .y-input-state-invalid.y-textarea:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-select-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-input-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-field-group > .y-input-state-invalid.y-file-upload:not(:focus), .y-form-textarea-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-select-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-file-upload-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-date-picker-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-input-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-field-group > .y-input-state-invalid.y-date-picker:not(:focus), .y-form-textarea-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-select-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-input-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-field-group > .y-input.y-textarea-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-select-state-invalid:not(:focus), .y-form-select-group > .y-input.y-select-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-select-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-select-state-invalid:not(:focus), .y-form-input-group > .y-input.y-select-state-invalid:not(:focus), .y-form-field-group > .y-input.y-select-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-select-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-input-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-field-group > .y-input.y-file-upload-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-select-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-input-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-field-group > .y-input.y-date-picker-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-select-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-input-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-field-group > .y-input.y-autocomplete-state-invalid:not(:focus), .y-form-textarea-group > .y-input.y-input-state-invalid:not(:focus), .y-form-select-group > .y-input.y-input-state-invalid:not(:focus), .y-form-file-upload-group > .y-input.y-input-state-invalid:not(:focus), .y-form-date-picker-group > .y-input.y-input-state-invalid:not(:focus), .y-form-input-group > .y-input.y-input-state-invalid:not(:focus), .y-form-field-group > .y-input.y-input-state-invalid:not(:focus),
 .y-form-textarea-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-select-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-input-group > .y-select.y-textarea-state-invalid:not(:focus),
+.y-form-field-group > .y-select.y-textarea-state-invalid:not(:focus),
 .y-form-textarea-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-select-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-input-group > .y-select.y-select-state-invalid:not(:focus),
+.y-form-field-group > .y-select.y-select-state-invalid:not(:focus),
 .y-form-textarea-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-file-upload-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-file-upload-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-date-picker-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-date-picker-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-autocomplete-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-autocomplete-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-textarea-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-select-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-select-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-file-upload-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-date-picker-state-invalid:not(:focus),
 .y-form-textarea-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-select-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-file-upload-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-date-picker-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-input-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
+.y-form-field-group > .y-autocomplete.y-autocomplete-state-invalid:not(:focus),
 .y-form-textarea-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-select-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-file-upload-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-date-picker-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-input-group > .y-input-state-invalid.y-select:not(:focus),
+.y-form-field-group > .y-input-state-invalid.y-select:not(:focus),
 .y-form-textarea-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-select-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-file-upload-group > .y-input-state-invalid.y-autocomplete:not(:focus),
 .y-form-date-picker-group > .y-input-state-invalid.y-autocomplete:not(:focus),
-.y-form-input-group > .y-input-state-invalid.y-autocomplete:not(:focus) {
+.y-form-input-group > .y-input-state-invalid.y-autocomplete:not(:focus),
+.y-form-field-group > .y-input-state-invalid.y-autocomplete:not(:focus) {
   z-index: 4;
 }
 
@@ -5894,7 +5925,7 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   margin-bottom: 0.5rem !important;
 }
 
-.y-form-textarea, .y-form-select, .y-form-switch, .y-form-editor, .y-form-radio-group, .y-form-file-upload, .y-form-date-picker, .y-form-checkbox-group, .y-form-checkbox, .y-form-input, .y-form-autocomplete, .y-el-mb-3 {
+.y-form-textarea, .y-form-select, .y-form-switch, .y-form-editor, .y-form-radio-group, .y-form-file-upload, .y-form-date-picker, .y-form-checkbox-group, .y-form-checkbox, .y-form-input, .y-form-field, .y-form-autocomplete, .y-el-mb-3 {
   margin-bottom: 1rem !important;
 }
 
@@ -6216,362 +6247,362 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
 
 /* rtl:begin:remove */
 /* rtl:end:remove */
-.y-stamp-text-color-primary > y-stamp-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-primary > .y-stamp-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-secondary > y-stamp-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-secondary > .y-stamp-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-success > y-stamp-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-success > .y-stamp-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-info > y-stamp-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-info > .y-stamp-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-warning > y-stamp-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-warning > .y-stamp-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-danger > y-stamp-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-danger > .y-stamp-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-light > y-stamp-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-light > .y-stamp-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-dark > y-stamp-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-dark > .y-stamp-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-muted > y-stamp-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-muted > .y-stamp-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: var(--y-secondary-color) !important;
 }
 
-.y-stamp-text-color-blue > y-stamp-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-blue > .y-stamp-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-azure > y-stamp-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-azure > .y-stamp-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-indigo > y-stamp-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-indigo > .y-stamp-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-purple > y-stamp-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-purple > .y-stamp-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-pink > y-stamp-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-pink > .y-stamp-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-red > y-stamp-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-red > .y-stamp-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-orange > y-stamp-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-orange > .y-stamp-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-yellow > y-stamp-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-yellow > .y-stamp-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-lime > y-stamp-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-lime > .y-stamp-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-green > y-stamp-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-green > .y-stamp-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-teal > y-stamp-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-teal > .y-stamp-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-cyan > y-stamp-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-cyan > .y-stamp-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-facebook > y-stamp-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-facebook > .y-stamp-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-twitter > y-stamp-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-twitter > .y-stamp-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-linkedin > y-stamp-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-linkedin > .y-stamp-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-google > y-stamp-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-google > .y-stamp-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-youtube > y-stamp-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-youtube > .y-stamp-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-vimeo > y-stamp-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-vimeo > .y-stamp-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-dribbble > y-stamp-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-dribbble > .y-stamp-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-github > y-stamp-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-github > .y-stamp-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-instagram > y-stamp-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-instagram > .y-stamp-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-pinterest > y-stamp-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-pinterest > .y-stamp-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-vk > y-stamp-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-vk > .y-stamp-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-rss > y-stamp-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-rss > .y-stamp-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-flickr > y-stamp-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-flickr > .y-stamp-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-bitbucket > y-stamp-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-bitbucket > .y-stamp-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-tabler > y-stamp-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-tabler > .y-stamp-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-bg-color-primary > y-stamp-icon, .y-ribbon-bg-color-primary, .y-progress-bar-color-primary, .y-card-status-color-primary, .y-el-bg-color-primary, .y-badge-color-primary:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-primary > .y-stamp-icon, .y-ribbon-bg-color-primary, .y-progress-bar-color-primary, .y-card-status-color-primary, .y-el-bg-color-primary, .y-badge-color-primary:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-primary-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-secondary > y-stamp-icon, .y-ribbon-bg-color-secondary, .y-progress-bar-color-secondary, .y-card-status-color-secondary, .y-el-bg-color-secondary, .y-badge-color-secondary:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-secondary > .y-stamp-icon, .y-ribbon-bg-color-secondary, .y-progress-bar-color-secondary, .y-card-status-color-secondary, .y-el-bg-color-secondary, .y-badge-color-secondary:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-secondary-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-success > y-stamp-icon, .y-ribbon-bg-color-success, .y-progress-bar-color-success, .y-card-status-color-success, .y-el-bg-color-success, .y-badge-color-success:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-success > .y-stamp-icon, .y-ribbon-bg-color-success, .y-progress-bar-color-success, .y-card-status-color-success, .y-el-bg-color-success, .y-badge-color-success:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-success-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-info > y-stamp-icon, .y-ribbon-bg-color-info, .y-progress-bar-color-info, .y-card-status-color-info, .y-el-bg-color-info, .y-badge-color-info:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-info > .y-stamp-icon, .y-ribbon-bg-color-info, .y-progress-bar-color-info, .y-card-status-color-info, .y-el-bg-color-info, .y-badge-color-info:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-info-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-warning > y-stamp-icon, .y-ribbon-bg-color-warning, .y-progress-bar-color-warning, .y-card-status-color-warning, .y-el-bg-color-warning, .y-badge-color-warning:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-warning > .y-stamp-icon, .y-ribbon-bg-color-warning, .y-progress-bar-color-warning, .y-card-status-color-warning, .y-el-bg-color-warning, .y-badge-color-warning:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-warning-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-danger > y-stamp-icon, .y-ribbon-bg-color-danger, .y-progress-bar-color-danger, .y-card-status-color-danger, .y-el-bg-color-danger, .y-badge-color-danger:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-danger > .y-stamp-icon, .y-ribbon-bg-color-danger, .y-progress-bar-color-danger, .y-card-status-color-danger, .y-el-bg-color-danger, .y-badge-color-danger:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-danger-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-light > y-stamp-icon, .y-ribbon-bg-color-light, .y-progress-bar-color-light, .y-card-status-color-light, .y-el-bg-color-light, .y-badge-color-light:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-light > .y-stamp-icon, .y-ribbon-bg-color-light, .y-progress-bar-color-light, .y-card-status-color-light, .y-el-bg-color-light, .y-badge-color-light:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-light-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-dark > y-stamp-icon, .y-ribbon-bg-color-dark, .y-progress-bar-color-dark, .y-card-status-color-dark, .y-el-bg-color-dark, .y-badge-color-dark:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-dark > .y-stamp-icon, .y-ribbon-bg-color-dark, .y-progress-bar-color-dark, .y-card-status-color-dark, .y-el-bg-color-dark, .y-badge-color-dark:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-dark-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-muted > y-stamp-icon, .y-ribbon-bg-color-muted, .y-progress-bar-color-muted, .y-card-status-color-muted, .y-el-bg-color-muted, .y-badge-color-muted:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-muted > .y-stamp-icon, .y-ribbon-bg-color-muted, .y-progress-bar-color-muted, .y-card-status-color-muted, .y-el-bg-color-muted, .y-badge-color-muted:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-muted-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-blue > y-stamp-icon, .y-ribbon-bg-color-blue, .y-progress-bar-color-blue, .y-card-status-color-blue, .y-el-bg-color-blue, .y-badge-color-blue:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-blue > .y-stamp-icon, .y-ribbon-bg-color-blue, .y-progress-bar-color-blue, .y-card-status-color-blue, .y-el-bg-color-blue, .y-badge-color-blue:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-blue-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-azure > y-stamp-icon, .y-ribbon-bg-color-azure, .y-progress-bar-color-azure, .y-card-status-color-azure, .y-el-bg-color-azure, .y-badge-color-azure:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-azure > .y-stamp-icon, .y-ribbon-bg-color-azure, .y-progress-bar-color-azure, .y-card-status-color-azure, .y-el-bg-color-azure, .y-badge-color-azure:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-azure-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-indigo > y-stamp-icon, .y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo, .y-card-status-color-indigo, .y-el-bg-color-indigo, .y-badge-color-indigo:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-indigo > .y-stamp-icon, .y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo, .y-card-status-color-indigo, .y-el-bg-color-indigo, .y-badge-color-indigo:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-indigo-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-purple > y-stamp-icon, .y-ribbon-bg-color-purple, .y-progress-bar-color-purple, .y-card-status-color-purple, .y-el-bg-color-purple, .y-badge-color-purple:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-purple > .y-stamp-icon, .y-ribbon-bg-color-purple, .y-progress-bar-color-purple, .y-card-status-color-purple, .y-el-bg-color-purple, .y-badge-color-purple:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-purple-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-pink > y-stamp-icon, .y-ribbon-bg-color-pink, .y-progress-bar-color-pink, .y-card-status-color-pink, .y-el-bg-color-pink, .y-badge-color-pink:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-pink > .y-stamp-icon, .y-ribbon-bg-color-pink, .y-progress-bar-color-pink, .y-card-status-color-pink, .y-el-bg-color-pink, .y-badge-color-pink:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-pink-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-red > y-stamp-icon, .y-ribbon-bg-color-red, .y-progress-bar-color-red, .y-card-status-color-red, .y-el-bg-color-red, .y-badge-color-red:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-red > .y-stamp-icon, .y-ribbon-bg-color-red, .y-progress-bar-color-red, .y-card-status-color-red, .y-el-bg-color-red, .y-badge-color-red:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-red-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-orange > y-stamp-icon, .y-ribbon-bg-color-orange, .y-progress-bar-color-orange, .y-card-status-color-orange, .y-el-bg-color-orange, .y-badge-color-orange:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-orange > .y-stamp-icon, .y-ribbon-bg-color-orange, .y-progress-bar-color-orange, .y-card-status-color-orange, .y-el-bg-color-orange, .y-badge-color-orange:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-orange-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-yellow > y-stamp-icon, .y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow, .y-card-status-color-yellow, .y-el-bg-color-yellow, .y-badge-color-yellow:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-yellow > .y-stamp-icon, .y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow, .y-card-status-color-yellow, .y-el-bg-color-yellow, .y-badge-color-yellow:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-yellow-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-lime > y-stamp-icon, .y-ribbon-bg-color-lime, .y-progress-bar-color-lime, .y-card-status-color-lime, .y-el-bg-color-lime, .y-badge-color-lime:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-lime > .y-stamp-icon, .y-ribbon-bg-color-lime, .y-progress-bar-color-lime, .y-card-status-color-lime, .y-el-bg-color-lime, .y-badge-color-lime:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-lime-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-green > y-stamp-icon, .y-ribbon-bg-color-green, .y-progress-bar-color-green, .y-card-status-color-green, .y-el-bg-color-green, .y-badge-color-green:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-green > .y-stamp-icon, .y-ribbon-bg-color-green, .y-progress-bar-color-green, .y-card-status-color-green, .y-el-bg-color-green, .y-badge-color-green:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-green-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-teal > y-stamp-icon, .y-ribbon-bg-color-teal, .y-progress-bar-color-teal, .y-card-status-color-teal, .y-el-bg-color-teal, .y-badge-color-teal:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-teal > .y-stamp-icon, .y-ribbon-bg-color-teal, .y-progress-bar-color-teal, .y-card-status-color-teal, .y-el-bg-color-teal, .y-badge-color-teal:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-teal-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-cyan > y-stamp-icon, .y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan, .y-card-status-color-cyan, .y-el-bg-color-cyan, .y-badge-color-cyan:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-cyan > .y-stamp-icon, .y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan, .y-card-status-color-cyan, .y-el-bg-color-cyan, .y-badge-color-cyan:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-cyan-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-facebook > y-stamp-icon, .y-ribbon-bg-color-facebook, .y-progress-bar-color-facebook, .y-card-status-color-facebook, .y-el-bg-color-facebook, .y-badge-color-facebook:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-facebook > .y-stamp-icon, .y-ribbon-bg-color-facebook, .y-progress-bar-color-facebook, .y-card-status-color-facebook, .y-el-bg-color-facebook, .y-badge-color-facebook:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-facebook-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-twitter > y-stamp-icon, .y-ribbon-bg-color-twitter, .y-progress-bar-color-twitter, .y-card-status-color-twitter, .y-el-bg-color-twitter, .y-badge-color-twitter:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-twitter > .y-stamp-icon, .y-ribbon-bg-color-twitter, .y-progress-bar-color-twitter, .y-card-status-color-twitter, .y-el-bg-color-twitter, .y-badge-color-twitter:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-twitter-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-linkedin > y-stamp-icon, .y-ribbon-bg-color-linkedin, .y-progress-bar-color-linkedin, .y-card-status-color-linkedin, .y-el-bg-color-linkedin, .y-badge-color-linkedin:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-linkedin > .y-stamp-icon, .y-ribbon-bg-color-linkedin, .y-progress-bar-color-linkedin, .y-card-status-color-linkedin, .y-el-bg-color-linkedin, .y-badge-color-linkedin:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-linkedin-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-google > y-stamp-icon, .y-ribbon-bg-color-google, .y-progress-bar-color-google, .y-card-status-color-google, .y-el-bg-color-google, .y-badge-color-google:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-google > .y-stamp-icon, .y-ribbon-bg-color-google, .y-progress-bar-color-google, .y-card-status-color-google, .y-el-bg-color-google, .y-badge-color-google:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-google-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-youtube > y-stamp-icon, .y-ribbon-bg-color-youtube, .y-progress-bar-color-youtube, .y-card-status-color-youtube, .y-el-bg-color-youtube, .y-badge-color-youtube:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-youtube > .y-stamp-icon, .y-ribbon-bg-color-youtube, .y-progress-bar-color-youtube, .y-card-status-color-youtube, .y-el-bg-color-youtube, .y-badge-color-youtube:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-youtube-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-vimeo > y-stamp-icon, .y-ribbon-bg-color-vimeo, .y-progress-bar-color-vimeo, .y-card-status-color-vimeo, .y-el-bg-color-vimeo, .y-badge-color-vimeo:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-vimeo > .y-stamp-icon, .y-ribbon-bg-color-vimeo, .y-progress-bar-color-vimeo, .y-card-status-color-vimeo, .y-el-bg-color-vimeo, .y-badge-color-vimeo:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-vimeo-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-dribbble > y-stamp-icon, .y-ribbon-bg-color-dribbble, .y-progress-bar-color-dribbble, .y-card-status-color-dribbble, .y-el-bg-color-dribbble, .y-badge-color-dribbble:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-dribbble > .y-stamp-icon, .y-ribbon-bg-color-dribbble, .y-progress-bar-color-dribbble, .y-card-status-color-dribbble, .y-el-bg-color-dribbble, .y-badge-color-dribbble:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-dribbble-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-github > y-stamp-icon, .y-ribbon-bg-color-github, .y-progress-bar-color-github, .y-card-status-color-github, .y-el-bg-color-github, .y-badge-color-github:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-github > .y-stamp-icon, .y-ribbon-bg-color-github, .y-progress-bar-color-github, .y-card-status-color-github, .y-el-bg-color-github, .y-badge-color-github:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-github-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-instagram > y-stamp-icon, .y-ribbon-bg-color-instagram, .y-progress-bar-color-instagram, .y-card-status-color-instagram, .y-el-bg-color-instagram, .y-badge-color-instagram:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-instagram > .y-stamp-icon, .y-ribbon-bg-color-instagram, .y-progress-bar-color-instagram, .y-card-status-color-instagram, .y-el-bg-color-instagram, .y-badge-color-instagram:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-instagram-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-pinterest > y-stamp-icon, .y-ribbon-bg-color-pinterest, .y-progress-bar-color-pinterest, .y-card-status-color-pinterest, .y-el-bg-color-pinterest, .y-badge-color-pinterest:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-pinterest > .y-stamp-icon, .y-ribbon-bg-color-pinterest, .y-progress-bar-color-pinterest, .y-card-status-color-pinterest, .y-el-bg-color-pinterest, .y-badge-color-pinterest:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-pinterest-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-vk > y-stamp-icon, .y-ribbon-bg-color-vk, .y-progress-bar-color-vk, .y-card-status-color-vk, .y-el-bg-color-vk, .y-badge-color-vk:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-vk > .y-stamp-icon, .y-ribbon-bg-color-vk, .y-progress-bar-color-vk, .y-card-status-color-vk, .y-el-bg-color-vk, .y-badge-color-vk:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-vk-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-rss > y-stamp-icon, .y-ribbon-bg-color-rss, .y-progress-bar-color-rss, .y-card-status-color-rss, .y-el-bg-color-rss, .y-badge-color-rss:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-rss > .y-stamp-icon, .y-ribbon-bg-color-rss, .y-progress-bar-color-rss, .y-card-status-color-rss, .y-el-bg-color-rss, .y-badge-color-rss:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-rss-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-flickr > y-stamp-icon, .y-ribbon-bg-color-flickr, .y-progress-bar-color-flickr, .y-card-status-color-flickr, .y-el-bg-color-flickr, .y-badge-color-flickr:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-flickr > .y-stamp-icon, .y-ribbon-bg-color-flickr, .y-progress-bar-color-flickr, .y-card-status-color-flickr, .y-el-bg-color-flickr, .y-badge-color-flickr:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-flickr-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-bitbucket > y-stamp-icon, .y-ribbon-bg-color-bitbucket, .y-progress-bar-color-bitbucket, .y-card-status-color-bitbucket, .y-el-bg-color-bitbucket, .y-badge-color-bitbucket:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-bitbucket > .y-stamp-icon, .y-ribbon-bg-color-bitbucket, .y-progress-bar-color-bitbucket, .y-card-status-color-bitbucket, .y-el-bg-color-bitbucket, .y-badge-color-bitbucket:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-bitbucket-rgb), var(--y-bg-opacity)) !important;
 }
 
-.y-stamp-bg-color-tabler > y-stamp-icon, .y-ribbon-bg-color-tabler, .y-progress-bar-color-tabler, .y-card-status-color-tabler, .y-el-bg-color-tabler, .y-badge-color-tabler:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-tabler > .y-stamp-icon, .y-ribbon-bg-color-tabler, .y-progress-bar-color-tabler, .y-card-status-color-tabler, .y-el-bg-color-tabler, .y-badge-color-tabler:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-tabler-rgb), var(--y-bg-opacity)) !important;
 }
@@ -6696,6 +6727,15 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   .y-el-d-sm-none {
     display: none !important;
   }
+  .y-el-text-align-sm-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-sm-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-sm-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 768px) {
   .y-el-float-md-start {
@@ -6736,6 +6776,15 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   }
   .y-el-d-md-none {
     display: none !important;
+  }
+  .y-el-text-align-md-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-md-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-md-center {
+    text-align: center !important;
   }
 }
 @media (min-width: 992px) {
@@ -6778,6 +6827,15 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   .y-el-d-lg-none {
     display: none !important;
   }
+  .y-el-text-align-lg-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-lg-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-lg-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 1200px) {
   .y-el-float-xl-start {
@@ -6819,6 +6877,15 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   .y-el-d-xl-none {
     display: none !important;
   }
+  .y-el-text-align-xl-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-xl-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-xl-center {
+    text-align: center !important;
+  }
 }
 @media (min-width: 1400px) {
   .y-el-float-xxl-start {
@@ -6859,6 +6926,15 @@ textarea.y-textarea.y-textarea-state-invalid, textarea.y-select-state-invalid.y-
   }
   .y-el-d-xxl-none {
     display: none !important;
+  }
+  .y-el-text-align-xxl-start {
+    text-align: left !important;
+  }
+  .y-el-text-align-xxl-end {
+    text-align: right !important;
+  }
+  .y-el-text-align-xxl-center {
+    text-align: center !important;
   }
 }
 @media print {
@@ -10809,7 +10885,7 @@ Progressbg
   border-right-color: transparent;
 }
 
-.y-stamp-bg-color-blue > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-blue, .y-progress-bar-color-blue.y-ribbon, .y-card-status-color-blue.y-ribbon, .y-el-bg-color-blue.y-ribbon, .y-badge-color-blue.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-blue > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-blue, .y-progress-bar-color-blue.y-ribbon, .y-card-status-color-blue.y-ribbon, .y-el-bg-color-blue.y-ribbon, .y-badge-color-blue.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-blue);
 }
 
@@ -10817,7 +10893,7 @@ Progressbg
   border-color: rgba(var(--y-blue-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-azure > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-azure, .y-progress-bar-color-azure.y-ribbon, .y-card-status-color-azure.y-ribbon, .y-el-bg-color-azure.y-ribbon, .y-badge-color-azure.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-azure > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-azure, .y-progress-bar-color-azure.y-ribbon, .y-card-status-color-azure.y-ribbon, .y-el-bg-color-azure.y-ribbon, .y-badge-color-azure.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-azure);
 }
 
@@ -10825,7 +10901,7 @@ Progressbg
   border-color: rgba(var(--y-azure-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-indigo > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo.y-ribbon, .y-card-status-color-indigo.y-ribbon, .y-el-bg-color-indigo.y-ribbon, .y-badge-color-indigo.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-indigo > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo.y-ribbon, .y-card-status-color-indigo.y-ribbon, .y-el-bg-color-indigo.y-ribbon, .y-badge-color-indigo.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-indigo);
 }
 
@@ -10833,7 +10909,7 @@ Progressbg
   border-color: rgba(var(--y-indigo-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-purple > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-purple, .y-progress-bar-color-purple.y-ribbon, .y-card-status-color-purple.y-ribbon, .y-el-bg-color-purple.y-ribbon, .y-badge-color-purple.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-purple > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-purple, .y-progress-bar-color-purple.y-ribbon, .y-card-status-color-purple.y-ribbon, .y-el-bg-color-purple.y-ribbon, .y-badge-color-purple.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-purple);
 }
 
@@ -10841,7 +10917,7 @@ Progressbg
   border-color: rgba(var(--y-purple-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-pink > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-pink, .y-progress-bar-color-pink.y-ribbon, .y-card-status-color-pink.y-ribbon, .y-el-bg-color-pink.y-ribbon, .y-badge-color-pink.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-pink > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-pink, .y-progress-bar-color-pink.y-ribbon, .y-card-status-color-pink.y-ribbon, .y-el-bg-color-pink.y-ribbon, .y-badge-color-pink.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-pink);
 }
 
@@ -10849,7 +10925,7 @@ Progressbg
   border-color: rgba(var(--y-pink-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-red > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-red, .y-progress-bar-color-red.y-ribbon, .y-card-status-color-red.y-ribbon, .y-el-bg-color-red.y-ribbon, .y-badge-color-red.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-red > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-red, .y-progress-bar-color-red.y-ribbon, .y-card-status-color-red.y-ribbon, .y-el-bg-color-red.y-ribbon, .y-badge-color-red.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-red);
 }
 
@@ -10857,7 +10933,7 @@ Progressbg
   border-color: rgba(var(--y-red-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-orange > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-orange, .y-progress-bar-color-orange.y-ribbon, .y-card-status-color-orange.y-ribbon, .y-el-bg-color-orange.y-ribbon, .y-badge-color-orange.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-orange > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-orange, .y-progress-bar-color-orange.y-ribbon, .y-card-status-color-orange.y-ribbon, .y-el-bg-color-orange.y-ribbon, .y-badge-color-orange.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-orange);
 }
 
@@ -10865,7 +10941,7 @@ Progressbg
   border-color: rgba(var(--y-orange-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-yellow > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow.y-ribbon, .y-card-status-color-yellow.y-ribbon, .y-el-bg-color-yellow.y-ribbon, .y-badge-color-yellow.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-yellow > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow.y-ribbon, .y-card-status-color-yellow.y-ribbon, .y-el-bg-color-yellow.y-ribbon, .y-badge-color-yellow.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-yellow);
 }
 
@@ -10873,7 +10949,7 @@ Progressbg
   border-color: rgba(var(--y-yellow-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-lime > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-lime, .y-progress-bar-color-lime.y-ribbon, .y-card-status-color-lime.y-ribbon, .y-el-bg-color-lime.y-ribbon, .y-badge-color-lime.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-lime > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-lime, .y-progress-bar-color-lime.y-ribbon, .y-card-status-color-lime.y-ribbon, .y-el-bg-color-lime.y-ribbon, .y-badge-color-lime.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-lime);
 }
 
@@ -10881,7 +10957,7 @@ Progressbg
   border-color: rgba(var(--y-lime-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-green > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-green, .y-progress-bar-color-green.y-ribbon, .y-card-status-color-green.y-ribbon, .y-el-bg-color-green.y-ribbon, .y-badge-color-green.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-green > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-green, .y-progress-bar-color-green.y-ribbon, .y-card-status-color-green.y-ribbon, .y-el-bg-color-green.y-ribbon, .y-badge-color-green.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-green);
 }
 
@@ -10889,7 +10965,7 @@ Progressbg
   border-color: rgba(var(--y-green-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-teal > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-teal, .y-progress-bar-color-teal.y-ribbon, .y-card-status-color-teal.y-ribbon, .y-el-bg-color-teal.y-ribbon, .y-badge-color-teal.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-teal > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-teal, .y-progress-bar-color-teal.y-ribbon, .y-card-status-color-teal.y-ribbon, .y-el-bg-color-teal.y-ribbon, .y-badge-color-teal.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-teal);
 }
 
@@ -10897,7 +10973,7 @@ Progressbg
   border-color: rgba(var(--y-teal-rgb), 0.1) !important;
 }
 
-.y-stamp-bg-color-cyan > y-stamp-icon.y-ribbon, .y-ribbon.y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan.y-ribbon, .y-card-status-color-cyan.y-ribbon, .y-el-bg-color-cyan.y-ribbon, .y-badge-color-cyan.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-cyan > .y-ribbon.y-stamp-icon, .y-ribbon.y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan.y-ribbon, .y-card-status-color-cyan.y-ribbon, .y-el-bg-color-cyan.y-ribbon, .y-badge-color-cyan.y-ribbon:not(.y-badge-outline):not(.y-badge-ghost) {
   border-color: var(--y-cyan);
 }
 
@@ -11759,7 +11835,7 @@ Chart sparkline
   line-height: 1.5rem;
 }
 
-.y-stamp-bg-color-primary > y-stamp-icon, .y-ribbon-bg-color-primary, .y-progress-bar-color-primary, .y-card-status-color-primary, .y-el-bg-color-primary, .y-badge-color-primary:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-primary > .y-stamp-icon, .y-ribbon-bg-color-primary, .y-progress-bar-color-primary, .y-card-status-color-primary, .y-el-bg-color-primary, .y-badge-color-primary:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-primary-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11775,7 +11851,7 @@ Chart sparkline
   border-color: #206bc4 !important;
 }
 
-.y-stamp-bg-color-secondary > y-stamp-icon, .y-ribbon-bg-color-secondary, .y-progress-bar-color-secondary, .y-card-status-color-secondary, .y-el-bg-color-secondary, .y-badge-color-secondary:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-secondary > .y-stamp-icon, .y-ribbon-bg-color-secondary, .y-progress-bar-color-secondary, .y-card-status-color-secondary, .y-el-bg-color-secondary, .y-badge-color-secondary:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-secondary-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11791,7 +11867,7 @@ Chart sparkline
   border-color: #667382 !important;
 }
 
-.y-stamp-bg-color-success > y-stamp-icon, .y-ribbon-bg-color-success, .y-progress-bar-color-success, .y-card-status-color-success, .y-el-bg-color-success, .y-badge-color-success:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-success > .y-stamp-icon, .y-ribbon-bg-color-success, .y-progress-bar-color-success, .y-card-status-color-success, .y-el-bg-color-success, .y-badge-color-success:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-success-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11807,7 +11883,7 @@ Chart sparkline
   border-color: #2fb344 !important;
 }
 
-.y-stamp-bg-color-info > y-stamp-icon, .y-ribbon-bg-color-info, .y-progress-bar-color-info, .y-card-status-color-info, .y-el-bg-color-info, .y-badge-color-info:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-info > .y-stamp-icon, .y-ribbon-bg-color-info, .y-progress-bar-color-info, .y-card-status-color-info, .y-el-bg-color-info, .y-badge-color-info:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-info-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11823,7 +11899,7 @@ Chart sparkline
   border-color: #4299e1 !important;
 }
 
-.y-stamp-bg-color-warning > y-stamp-icon, .y-ribbon-bg-color-warning, .y-progress-bar-color-warning, .y-card-status-color-warning, .y-el-bg-color-warning, .y-badge-color-warning:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-warning > .y-stamp-icon, .y-ribbon-bg-color-warning, .y-progress-bar-color-warning, .y-card-status-color-warning, .y-el-bg-color-warning, .y-badge-color-warning:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-warning-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11839,7 +11915,7 @@ Chart sparkline
   border-color: #f76707 !important;
 }
 
-.y-stamp-bg-color-danger > y-stamp-icon, .y-ribbon-bg-color-danger, .y-progress-bar-color-danger, .y-card-status-color-danger, .y-el-bg-color-danger, .y-badge-color-danger:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-danger > .y-stamp-icon, .y-ribbon-bg-color-danger, .y-progress-bar-color-danger, .y-card-status-color-danger, .y-el-bg-color-danger, .y-badge-color-danger:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-danger-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11855,7 +11931,7 @@ Chart sparkline
   border-color: #d63939 !important;
 }
 
-.y-stamp-bg-color-light > y-stamp-icon, .y-ribbon-bg-color-light, .y-progress-bar-color-light, .y-card-status-color-light, .y-el-bg-color-light, .y-badge-color-light:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-light > .y-stamp-icon, .y-ribbon-bg-color-light, .y-progress-bar-color-light, .y-card-status-color-light, .y-el-bg-color-light, .y-badge-color-light:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-light-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11871,7 +11947,7 @@ Chart sparkline
   border-color: #fcfdfe !important;
 }
 
-.y-stamp-bg-color-dark > y-stamp-icon, .y-ribbon-bg-color-dark, .y-progress-bar-color-dark, .y-card-status-color-dark, .y-el-bg-color-dark, .y-badge-color-dark:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-dark > .y-stamp-icon, .y-ribbon-bg-color-dark, .y-progress-bar-color-dark, .y-card-status-color-dark, .y-el-bg-color-dark, .y-badge-color-dark:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-dark-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11887,7 +11963,7 @@ Chart sparkline
   border-color: #182433 !important;
 }
 
-.y-stamp-bg-color-muted > y-stamp-icon, .y-ribbon-bg-color-muted, .y-progress-bar-color-muted, .y-card-status-color-muted, .y-el-bg-color-muted, .y-badge-color-muted:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-muted > .y-stamp-icon, .y-ribbon-bg-color-muted, .y-progress-bar-color-muted, .y-card-status-color-muted, .y-el-bg-color-muted, .y-badge-color-muted:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-muted-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11903,7 +11979,7 @@ Chart sparkline
   border-color: #667382 !important;
 }
 
-.y-stamp-bg-color-blue > y-stamp-icon, .y-ribbon-bg-color-blue, .y-progress-bar-color-blue, .y-card-status-color-blue, .y-el-bg-color-blue, .y-badge-color-blue:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-blue > .y-stamp-icon, .y-ribbon-bg-color-blue, .y-progress-bar-color-blue, .y-card-status-color-blue, .y-el-bg-color-blue, .y-badge-color-blue:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-blue-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11919,7 +11995,7 @@ Chart sparkline
   border-color: #206bc4 !important;
 }
 
-.y-stamp-bg-color-azure > y-stamp-icon, .y-ribbon-bg-color-azure, .y-progress-bar-color-azure, .y-card-status-color-azure, .y-el-bg-color-azure, .y-badge-color-azure:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-azure > .y-stamp-icon, .y-ribbon-bg-color-azure, .y-progress-bar-color-azure, .y-card-status-color-azure, .y-el-bg-color-azure, .y-badge-color-azure:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-azure-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11935,7 +12011,7 @@ Chart sparkline
   border-color: #4299e1 !important;
 }
 
-.y-stamp-bg-color-indigo > y-stamp-icon, .y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo, .y-card-status-color-indigo, .y-el-bg-color-indigo, .y-badge-color-indigo:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-indigo > .y-stamp-icon, .y-ribbon-bg-color-indigo, .y-progress-bar-color-indigo, .y-card-status-color-indigo, .y-el-bg-color-indigo, .y-badge-color-indigo:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-indigo-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11951,7 +12027,7 @@ Chart sparkline
   border-color: #4263eb !important;
 }
 
-.y-stamp-bg-color-purple > y-stamp-icon, .y-ribbon-bg-color-purple, .y-progress-bar-color-purple, .y-card-status-color-purple, .y-el-bg-color-purple, .y-badge-color-purple:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-purple > .y-stamp-icon, .y-ribbon-bg-color-purple, .y-progress-bar-color-purple, .y-card-status-color-purple, .y-el-bg-color-purple, .y-badge-color-purple:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-purple-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11967,7 +12043,7 @@ Chart sparkline
   border-color: #ae3ec9 !important;
 }
 
-.y-stamp-bg-color-pink > y-stamp-icon, .y-ribbon-bg-color-pink, .y-progress-bar-color-pink, .y-card-status-color-pink, .y-el-bg-color-pink, .y-badge-color-pink:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-pink > .y-stamp-icon, .y-ribbon-bg-color-pink, .y-progress-bar-color-pink, .y-card-status-color-pink, .y-el-bg-color-pink, .y-badge-color-pink:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-pink-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11983,7 +12059,7 @@ Chart sparkline
   border-color: #d6336c !important;
 }
 
-.y-stamp-bg-color-red > y-stamp-icon, .y-ribbon-bg-color-red, .y-progress-bar-color-red, .y-card-status-color-red, .y-el-bg-color-red, .y-badge-color-red:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-red > .y-stamp-icon, .y-ribbon-bg-color-red, .y-progress-bar-color-red, .y-card-status-color-red, .y-el-bg-color-red, .y-badge-color-red:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-red-rgb), var(--y-bg-opacity)) !important;
 }
@@ -11999,7 +12075,7 @@ Chart sparkline
   border-color: #d63939 !important;
 }
 
-.y-stamp-bg-color-orange > y-stamp-icon, .y-ribbon-bg-color-orange, .y-progress-bar-color-orange, .y-card-status-color-orange, .y-el-bg-color-orange, .y-badge-color-orange:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-orange > .y-stamp-icon, .y-ribbon-bg-color-orange, .y-progress-bar-color-orange, .y-card-status-color-orange, .y-el-bg-color-orange, .y-badge-color-orange:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-orange-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12015,7 +12091,7 @@ Chart sparkline
   border-color: #f76707 !important;
 }
 
-.y-stamp-bg-color-yellow > y-stamp-icon, .y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow, .y-card-status-color-yellow, .y-el-bg-color-yellow, .y-badge-color-yellow:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-yellow > .y-stamp-icon, .y-ribbon-bg-color-yellow, .y-progress-bar-color-yellow, .y-card-status-color-yellow, .y-el-bg-color-yellow, .y-badge-color-yellow:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-yellow-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12031,7 +12107,7 @@ Chart sparkline
   border-color: #f59f00 !important;
 }
 
-.y-stamp-bg-color-lime > y-stamp-icon, .y-ribbon-bg-color-lime, .y-progress-bar-color-lime, .y-card-status-color-lime, .y-el-bg-color-lime, .y-badge-color-lime:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-lime > .y-stamp-icon, .y-ribbon-bg-color-lime, .y-progress-bar-color-lime, .y-card-status-color-lime, .y-el-bg-color-lime, .y-badge-color-lime:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-lime-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12047,7 +12123,7 @@ Chart sparkline
   border-color: #74b816 !important;
 }
 
-.y-stamp-bg-color-green > y-stamp-icon, .y-ribbon-bg-color-green, .y-progress-bar-color-green, .y-card-status-color-green, .y-el-bg-color-green, .y-badge-color-green:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-green > .y-stamp-icon, .y-ribbon-bg-color-green, .y-progress-bar-color-green, .y-card-status-color-green, .y-el-bg-color-green, .y-badge-color-green:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-green-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12063,7 +12139,7 @@ Chart sparkline
   border-color: #2fb344 !important;
 }
 
-.y-stamp-bg-color-teal > y-stamp-icon, .y-ribbon-bg-color-teal, .y-progress-bar-color-teal, .y-card-status-color-teal, .y-el-bg-color-teal, .y-badge-color-teal:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-teal > .y-stamp-icon, .y-ribbon-bg-color-teal, .y-progress-bar-color-teal, .y-card-status-color-teal, .y-el-bg-color-teal, .y-badge-color-teal:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-teal-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12079,7 +12155,7 @@ Chart sparkline
   border-color: #0ca678 !important;
 }
 
-.y-stamp-bg-color-cyan > y-stamp-icon, .y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan, .y-card-status-color-cyan, .y-el-bg-color-cyan, .y-badge-color-cyan:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-cyan > .y-stamp-icon, .y-ribbon-bg-color-cyan, .y-progress-bar-color-cyan, .y-card-status-color-cyan, .y-el-bg-color-cyan, .y-badge-color-cyan:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-cyan-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12095,7 +12171,7 @@ Chart sparkline
   border-color: #17a2b8 !important;
 }
 
-.y-stamp-bg-color-facebook > y-stamp-icon, .y-ribbon-bg-color-facebook, .y-progress-bar-color-facebook, .y-card-status-color-facebook, .y-el-bg-color-facebook, .y-badge-color-facebook:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-facebook > .y-stamp-icon, .y-ribbon-bg-color-facebook, .y-progress-bar-color-facebook, .y-card-status-color-facebook, .y-el-bg-color-facebook, .y-badge-color-facebook:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-facebook-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12111,7 +12187,7 @@ Chart sparkline
   border-color: #1877f2 !important;
 }
 
-.y-stamp-bg-color-twitter > y-stamp-icon, .y-ribbon-bg-color-twitter, .y-progress-bar-color-twitter, .y-card-status-color-twitter, .y-el-bg-color-twitter, .y-badge-color-twitter:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-twitter > .y-stamp-icon, .y-ribbon-bg-color-twitter, .y-progress-bar-color-twitter, .y-card-status-color-twitter, .y-el-bg-color-twitter, .y-badge-color-twitter:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-twitter-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12127,7 +12203,7 @@ Chart sparkline
   border-color: #1da1f2 !important;
 }
 
-.y-stamp-bg-color-linkedin > y-stamp-icon, .y-ribbon-bg-color-linkedin, .y-progress-bar-color-linkedin, .y-card-status-color-linkedin, .y-el-bg-color-linkedin, .y-badge-color-linkedin:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-linkedin > .y-stamp-icon, .y-ribbon-bg-color-linkedin, .y-progress-bar-color-linkedin, .y-card-status-color-linkedin, .y-el-bg-color-linkedin, .y-badge-color-linkedin:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-linkedin-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12143,7 +12219,7 @@ Chart sparkline
   border-color: #0a66c2 !important;
 }
 
-.y-stamp-bg-color-google > y-stamp-icon, .y-ribbon-bg-color-google, .y-progress-bar-color-google, .y-card-status-color-google, .y-el-bg-color-google, .y-badge-color-google:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-google > .y-stamp-icon, .y-ribbon-bg-color-google, .y-progress-bar-color-google, .y-card-status-color-google, .y-el-bg-color-google, .y-badge-color-google:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-google-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12159,7 +12235,7 @@ Chart sparkline
   border-color: #dc4e41 !important;
 }
 
-.y-stamp-bg-color-youtube > y-stamp-icon, .y-ribbon-bg-color-youtube, .y-progress-bar-color-youtube, .y-card-status-color-youtube, .y-el-bg-color-youtube, .y-badge-color-youtube:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-youtube > .y-stamp-icon, .y-ribbon-bg-color-youtube, .y-progress-bar-color-youtube, .y-card-status-color-youtube, .y-el-bg-color-youtube, .y-badge-color-youtube:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-youtube-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12175,7 +12251,7 @@ Chart sparkline
   border-color: #ff0000 !important;
 }
 
-.y-stamp-bg-color-vimeo > y-stamp-icon, .y-ribbon-bg-color-vimeo, .y-progress-bar-color-vimeo, .y-card-status-color-vimeo, .y-el-bg-color-vimeo, .y-badge-color-vimeo:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-vimeo > .y-stamp-icon, .y-ribbon-bg-color-vimeo, .y-progress-bar-color-vimeo, .y-card-status-color-vimeo, .y-el-bg-color-vimeo, .y-badge-color-vimeo:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-vimeo-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12191,7 +12267,7 @@ Chart sparkline
   border-color: #1ab7ea !important;
 }
 
-.y-stamp-bg-color-dribbble > y-stamp-icon, .y-ribbon-bg-color-dribbble, .y-progress-bar-color-dribbble, .y-card-status-color-dribbble, .y-el-bg-color-dribbble, .y-badge-color-dribbble:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-dribbble > .y-stamp-icon, .y-ribbon-bg-color-dribbble, .y-progress-bar-color-dribbble, .y-card-status-color-dribbble, .y-el-bg-color-dribbble, .y-badge-color-dribbble:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-dribbble-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12207,7 +12283,7 @@ Chart sparkline
   border-color: #ea4c89 !important;
 }
 
-.y-stamp-bg-color-github > y-stamp-icon, .y-ribbon-bg-color-github, .y-progress-bar-color-github, .y-card-status-color-github, .y-el-bg-color-github, .y-badge-color-github:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-github > .y-stamp-icon, .y-ribbon-bg-color-github, .y-progress-bar-color-github, .y-card-status-color-github, .y-el-bg-color-github, .y-badge-color-github:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-github-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12223,7 +12299,7 @@ Chart sparkline
   border-color: #181717 !important;
 }
 
-.y-stamp-bg-color-instagram > y-stamp-icon, .y-ribbon-bg-color-instagram, .y-progress-bar-color-instagram, .y-card-status-color-instagram, .y-el-bg-color-instagram, .y-badge-color-instagram:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-instagram > .y-stamp-icon, .y-ribbon-bg-color-instagram, .y-progress-bar-color-instagram, .y-card-status-color-instagram, .y-el-bg-color-instagram, .y-badge-color-instagram:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-instagram-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12239,7 +12315,7 @@ Chart sparkline
   border-color: #e4405f !important;
 }
 
-.y-stamp-bg-color-pinterest > y-stamp-icon, .y-ribbon-bg-color-pinterest, .y-progress-bar-color-pinterest, .y-card-status-color-pinterest, .y-el-bg-color-pinterest, .y-badge-color-pinterest:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-pinterest > .y-stamp-icon, .y-ribbon-bg-color-pinterest, .y-progress-bar-color-pinterest, .y-card-status-color-pinterest, .y-el-bg-color-pinterest, .y-badge-color-pinterest:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-pinterest-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12255,7 +12331,7 @@ Chart sparkline
   border-color: #bd081c !important;
 }
 
-.y-stamp-bg-color-vk > y-stamp-icon, .y-ribbon-bg-color-vk, .y-progress-bar-color-vk, .y-card-status-color-vk, .y-el-bg-color-vk, .y-badge-color-vk:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-vk > .y-stamp-icon, .y-ribbon-bg-color-vk, .y-progress-bar-color-vk, .y-card-status-color-vk, .y-el-bg-color-vk, .y-badge-color-vk:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-vk-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12271,7 +12347,7 @@ Chart sparkline
   border-color: #6383a8 !important;
 }
 
-.y-stamp-bg-color-rss > y-stamp-icon, .y-ribbon-bg-color-rss, .y-progress-bar-color-rss, .y-card-status-color-rss, .y-el-bg-color-rss, .y-badge-color-rss:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-rss > .y-stamp-icon, .y-ribbon-bg-color-rss, .y-progress-bar-color-rss, .y-card-status-color-rss, .y-el-bg-color-rss, .y-badge-color-rss:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-rss-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12287,7 +12363,7 @@ Chart sparkline
   border-color: #ffa500 !important;
 }
 
-.y-stamp-bg-color-flickr > y-stamp-icon, .y-ribbon-bg-color-flickr, .y-progress-bar-color-flickr, .y-card-status-color-flickr, .y-el-bg-color-flickr, .y-badge-color-flickr:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-flickr > .y-stamp-icon, .y-ribbon-bg-color-flickr, .y-progress-bar-color-flickr, .y-card-status-color-flickr, .y-el-bg-color-flickr, .y-badge-color-flickr:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-flickr-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12303,7 +12379,7 @@ Chart sparkline
   border-color: #0063dc !important;
 }
 
-.y-stamp-bg-color-bitbucket > y-stamp-icon, .y-ribbon-bg-color-bitbucket, .y-progress-bar-color-bitbucket, .y-card-status-color-bitbucket, .y-el-bg-color-bitbucket, .y-badge-color-bitbucket:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-bitbucket > .y-stamp-icon, .y-ribbon-bg-color-bitbucket, .y-progress-bar-color-bitbucket, .y-card-status-color-bitbucket, .y-el-bg-color-bitbucket, .y-badge-color-bitbucket:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-bitbucket-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12319,7 +12395,7 @@ Chart sparkline
   border-color: #0052cc !important;
 }
 
-.y-stamp-bg-color-tabler > y-stamp-icon, .y-ribbon-bg-color-tabler, .y-progress-bar-color-tabler, .y-card-status-color-tabler, .y-el-bg-color-tabler, .y-badge-color-tabler:not(.y-badge-outline):not(.y-badge-ghost) {
+.y-stamp-bg-color-tabler > .y-stamp-icon, .y-ribbon-bg-color-tabler, .y-progress-bar-color-tabler, .y-card-status-color-tabler, .y-el-bg-color-tabler, .y-badge-color-tabler:not(.y-badge-outline):not(.y-badge-ghost) {
   --y-bg-opacity: 1;
   background-color: rgba(var(--y-tabler-rgb), var(--y-bg-opacity)) !important;
 }
@@ -12335,182 +12411,182 @@ Chart sparkline
   border-color: #206bc4 !important;
 }
 
-.y-stamp-text-color-primary > y-stamp-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-primary > .y-stamp-icon, .y-spinner-color-primary, .y-slider-color-primary, .y-icon-color-primary, .y-divider-color-primary, .y-el-text-color-primary, .y-badge-color-primary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-primary-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-secondary > y-stamp-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-secondary > .y-stamp-icon, .y-spinner-color-secondary, .y-slider-color-secondary, .y-icon-color-secondary, .y-divider-color-secondary, .y-el-text-color-secondary, .y-badge-color-secondary.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-secondary-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-success > y-stamp-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-success > .y-stamp-icon, .y-spinner-color-success, .y-slider-color-success, .y-icon-color-success, .y-divider-color-success, .y-el-text-color-success, .y-badge-color-success.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-success-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-info > y-stamp-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-info > .y-stamp-icon, .y-spinner-color-info, .y-slider-color-info, .y-icon-color-info, .y-divider-color-info, .y-el-text-color-info, .y-badge-color-info.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-info-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-warning > y-stamp-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-warning > .y-stamp-icon, .y-spinner-color-warning, .y-slider-color-warning, .y-icon-color-warning, .y-divider-color-warning, .y-el-text-color-warning, .y-badge-color-warning.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-warning-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-danger > y-stamp-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-danger > .y-stamp-icon, .y-spinner-color-danger, .y-slider-color-danger, .y-icon-color-danger, .y-divider-color-danger, .y-el-text-color-danger, .y-badge-color-danger.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-danger-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-light > y-stamp-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-light > .y-stamp-icon, .y-spinner-color-light, .y-slider-color-light, .y-icon-color-light, .y-divider-color-light, .y-el-text-color-light, .y-badge-color-light.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-light-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-dark > y-stamp-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-dark > .y-stamp-icon, .y-spinner-color-dark, .y-slider-color-dark, .y-icon-color-dark, .y-divider-color-dark, .y-el-text-color-dark, .y-badge-color-dark.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dark-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-muted > y-stamp-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-muted > .y-stamp-icon, .y-spinner-color-muted, .y-slider-color-muted, .y-icon-color-muted, .y-divider-color-muted, .y-el-text-color-muted, .y-el-text-muted, .y-badge-color-muted.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-muted-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-blue > y-stamp-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-blue > .y-stamp-icon, .y-spinner-color-blue, .y-slider-color-blue, .y-icon-color-blue, .y-divider-color-blue, .y-el-text-color-blue, .y-badge-color-blue.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-blue-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-azure > y-stamp-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-azure > .y-stamp-icon, .y-spinner-color-azure, .y-slider-color-azure, .y-icon-color-azure, .y-divider-color-azure, .y-el-text-color-azure, .y-badge-color-azure.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-azure-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-indigo > y-stamp-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-indigo > .y-stamp-icon, .y-spinner-color-indigo, .y-slider-color-indigo, .y-icon-color-indigo, .y-divider-color-indigo, .y-el-text-color-indigo, .y-badge-color-indigo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-indigo-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-purple > y-stamp-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-purple > .y-stamp-icon, .y-spinner-color-purple, .y-slider-color-purple, .y-icon-color-purple, .y-divider-color-purple, .y-el-text-color-purple, .y-badge-color-purple.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-purple-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-pink > y-stamp-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-pink > .y-stamp-icon, .y-spinner-color-pink, .y-slider-color-pink, .y-icon-color-pink, .y-divider-color-pink, .y-el-text-color-pink, .y-badge-color-pink.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pink-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-red > y-stamp-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-red > .y-stamp-icon, .y-spinner-color-red, .y-slider-color-red, .y-icon-color-red, .y-divider-color-red, .y-el-text-color-red, .y-badge-color-red.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-red-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-orange > y-stamp-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-orange > .y-stamp-icon, .y-spinner-color-orange, .y-slider-color-orange, .y-icon-color-orange, .y-divider-color-orange, .y-el-text-color-orange, .y-badge-color-orange.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-orange-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-yellow > y-stamp-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-yellow > .y-stamp-icon, .y-spinner-color-yellow, .y-slider-color-yellow, .y-icon-color-yellow, .y-divider-color-yellow, .y-el-text-color-yellow, .y-badge-color-yellow.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-yellow-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-lime > y-stamp-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-lime > .y-stamp-icon, .y-spinner-color-lime, .y-slider-color-lime, .y-icon-color-lime, .y-divider-color-lime, .y-el-text-color-lime, .y-badge-color-lime.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-lime-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-green > y-stamp-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-green > .y-stamp-icon, .y-spinner-color-green, .y-slider-color-green, .y-icon-color-green, .y-divider-color-green, .y-el-text-color-green, .y-badge-color-green.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-green-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-teal > y-stamp-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-teal > .y-stamp-icon, .y-spinner-color-teal, .y-slider-color-teal, .y-icon-color-teal, .y-divider-color-teal, .y-el-text-color-teal, .y-badge-color-teal.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-teal-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-cyan > y-stamp-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-cyan > .y-stamp-icon, .y-spinner-color-cyan, .y-slider-color-cyan, .y-icon-color-cyan, .y-divider-color-cyan, .y-el-text-color-cyan, .y-badge-color-cyan.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-cyan-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-facebook > y-stamp-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-facebook > .y-stamp-icon, .y-spinner-color-facebook, .y-slider-color-facebook, .y-icon-color-facebook, .y-divider-color-facebook, .y-el-text-color-facebook, .y-badge-color-facebook.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-facebook-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-twitter > y-stamp-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-twitter > .y-stamp-icon, .y-spinner-color-twitter, .y-slider-color-twitter, .y-icon-color-twitter, .y-divider-color-twitter, .y-el-text-color-twitter, .y-badge-color-twitter.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-twitter-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-linkedin > y-stamp-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-linkedin > .y-stamp-icon, .y-spinner-color-linkedin, .y-slider-color-linkedin, .y-icon-color-linkedin, .y-divider-color-linkedin, .y-el-text-color-linkedin, .y-badge-color-linkedin.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-linkedin-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-google > y-stamp-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-google > .y-stamp-icon, .y-spinner-color-google, .y-slider-color-google, .y-icon-color-google, .y-divider-color-google, .y-el-text-color-google, .y-badge-color-google.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-google-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-youtube > y-stamp-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-youtube > .y-stamp-icon, .y-spinner-color-youtube, .y-slider-color-youtube, .y-icon-color-youtube, .y-divider-color-youtube, .y-el-text-color-youtube, .y-badge-color-youtube.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-youtube-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-vimeo > y-stamp-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-vimeo > .y-stamp-icon, .y-spinner-color-vimeo, .y-slider-color-vimeo, .y-icon-color-vimeo, .y-divider-color-vimeo, .y-el-text-color-vimeo, .y-badge-color-vimeo.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vimeo-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-dribbble > y-stamp-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-dribbble > .y-stamp-icon, .y-spinner-color-dribbble, .y-slider-color-dribbble, .y-icon-color-dribbble, .y-divider-color-dribbble, .y-el-text-color-dribbble, .y-badge-color-dribbble.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-dribbble-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-github > y-stamp-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-github > .y-stamp-icon, .y-spinner-color-github, .y-slider-color-github, .y-icon-color-github, .y-divider-color-github, .y-el-text-color-github, .y-badge-color-github.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-github-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-instagram > y-stamp-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-instagram > .y-stamp-icon, .y-spinner-color-instagram, .y-slider-color-instagram, .y-icon-color-instagram, .y-divider-color-instagram, .y-el-text-color-instagram, .y-badge-color-instagram.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-instagram-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-pinterest > y-stamp-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-pinterest > .y-stamp-icon, .y-spinner-color-pinterest, .y-slider-color-pinterest, .y-icon-color-pinterest, .y-divider-color-pinterest, .y-el-text-color-pinterest, .y-badge-color-pinterest.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-pinterest-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-vk > y-stamp-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-vk > .y-stamp-icon, .y-spinner-color-vk, .y-slider-color-vk, .y-icon-color-vk, .y-divider-color-vk, .y-el-text-color-vk, .y-badge-color-vk.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-vk-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-rss > y-stamp-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-rss > .y-stamp-icon, .y-spinner-color-rss, .y-slider-color-rss, .y-icon-color-rss, .y-divider-color-rss, .y-el-text-color-rss, .y-badge-color-rss.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-rss-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-flickr > y-stamp-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-flickr > .y-stamp-icon, .y-spinner-color-flickr, .y-slider-color-flickr, .y-icon-color-flickr, .y-divider-color-flickr, .y-el-text-color-flickr, .y-badge-color-flickr.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-flickr-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-bitbucket > y-stamp-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-bitbucket > .y-stamp-icon, .y-spinner-color-bitbucket, .y-slider-color-bitbucket, .y-icon-color-bitbucket, .y-divider-color-bitbucket, .y-el-text-color-bitbucket, .y-badge-color-bitbucket.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-bitbucket-rgb), var(--y-text-opacity)) !important;
 }
 
-.y-stamp-text-color-tabler > y-stamp-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
+.y-stamp-text-color-tabler > .y-stamp-icon, .y-spinner-color-tabler, .y-slider-color-tabler, .y-icon-color-tabler, .y-divider-color-tabler, .y-el-text-color-tabler, .y-badge-color-tabler.y-badge-outline:not(.y-badge-ghost) {
   --y-text-opacity: 1;
   color: rgba(var(--y-tabler-rgb), var(--y-text-opacity)) !important;
 }
@@ -12937,8 +13013,9 @@ Antialiasing
 }
 
 /*!
- * Quill Editor v1.3.7
- * https://quilljs.com/
+ * Quill Editor v2.0.3
+ * https://quilljs.com
+ * Copyright (c) 2017-2024, Slab
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
  */
@@ -12947,7 +13024,7 @@ Antialiasing
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   height: 100%;
-  margin: 0px;
+  margin: 0;
   position: relative;
 }
 
@@ -12955,8 +13032,8 @@ Antialiasing
   visibility: hidden;
 }
 
-.ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
-  pointer-events: none;
+.ql-container:not(.ql-disabled) li[data-list=checked] > .ql-ui, .ql-container:not(.ql-disabled) li[data-list=unchecked] > .ql-ui {
+  cursor: pointer;
 }
 
 .ql-clipboard {
@@ -12974,6 +13051,7 @@ Antialiasing
 
 .ql-editor {
   box-sizing: border-box;
+  counter-reset: list-0 list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
   line-height: 1.42;
   height: 100%;
   outline: none;
@@ -12990,198 +13068,232 @@ Antialiasing
   cursor: text;
 }
 
-.ql-editor p,
-.ql-editor ol,
-.ql-editor ul,
-.ql-editor pre,
-.ql-editor blockquote,
-.ql-editor h1,
-.ql-editor h2,
-.ql-editor h3,
-.ql-editor h4,
-.ql-editor h5,
-.ql-editor h6 {
+.ql-editor p, .ql-editor ol, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
   margin: 0;
   padding: 0;
-  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
 
-.ql-editor ol,
-.ql-editor ul {
+@supports (counter-set: none) {
+  .ql-editor p, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    counter-set: list-0 list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+@supports not (counter-set: none) {
+  .ql-editor p, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    counter-reset: list-0 list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor table {
+  border-collapse: collapse;
+}
+
+.ql-editor td {
+  border: 1px solid #000;
+  padding: 2px 5px;
+}
+
+.ql-editor ol {
   padding-left: 1.5em;
 }
 
-.ql-editor ol > li,
-.ql-editor ul > li {
+.ql-editor li {
   list-style-type: none;
+  padding-left: 1.5em;
+  position: relative;
 }
 
-.ql-editor ul > li::before {
-  content: "•";
-}
-
-.ql-editor ul[data-checked=true],
-.ql-editor ul[data-checked=false] {
-  pointer-events: none;
-}
-
-.ql-editor ul[data-checked=true] > li *,
-.ql-editor ul[data-checked=false] > li * {
-  pointer-events: all;
-}
-
-.ql-editor ul[data-checked=true] > li::before,
-.ql-editor ul[data-checked=false] > li::before {
-  color: #777;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.ql-editor ul[data-checked=true] > li::before {
-  content: "☑";
-}
-
-.ql-editor ul[data-checked=false] > li::before {
-  content: "☐";
-}
-
-.ql-editor li::before {
+.ql-editor li > .ql-ui:before {
   display: inline-block;
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
   white-space: nowrap;
   width: 1.2em;
 }
 
-.ql-editor li:not(.ql-direction-rtl)::before {
-  margin-left: -1.5em;
-  margin-right: 0.3em;
-  text-align: right;
+.ql-editor li[data-list=checked] > .ql-ui, .ql-editor li[data-list=unchecked] > .ql-ui {
+  color: #777;
 }
 
-.ql-editor li.ql-direction-rtl::before {
-  margin-left: 0.3em;
-  margin-right: -1.5em;
+.ql-editor li[data-list=bullet] > .ql-ui:before {
+  content: "•";
 }
 
-.ql-editor ol li:not(.ql-direction-rtl),
-.ql-editor ul li:not(.ql-direction-rtl) {
-  padding-left: 1.5em;
+.ql-editor li[data-list=checked] > .ql-ui:before {
+  content: "☑";
 }
 
-.ql-editor ol li.ql-direction-rtl,
-.ql-editor ul li.ql-direction-rtl {
-  padding-right: 1.5em;
+.ql-editor li[data-list=unchecked] > .ql-ui:before {
+  content: "☐";
 }
 
-.ql-editor ol li {
-  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list] {
+    counter-set: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+@supports not (counter-set: none) {
+  .ql-editor li[data-list] {
+    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered] {
   counter-increment: list-0;
 }
 
-.ql-editor ol li:before {
+.ql-editor li[data-list=ordered] > .ql-ui:before {
   content: counter(list-0, decimal) ". ";
 }
 
-.ql-editor ol li.ql-indent-1 {
+.ql-editor li[data-list=ordered].ql-indent-1 {
   counter-increment: list-1;
 }
 
-.ql-editor ol li.ql-indent-1:before {
+.ql-editor li[data-list=ordered].ql-indent-1 > .ql-ui:before {
   content: counter(list-1, lower-alpha) ". ";
 }
 
-.ql-editor ol li.ql-indent-1 {
-  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-1 {
+    counter-set: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-2 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-1 {
+    counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-2 {
   counter-increment: list-2;
 }
 
-.ql-editor ol li.ql-indent-2:before {
+.ql-editor li[data-list=ordered].ql-indent-2 > .ql-ui:before {
   content: counter(list-2, lower-roman) ". ";
 }
 
-.ql-editor ol li.ql-indent-2 {
-  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-2 {
+    counter-set: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-3 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-2 {
+    counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-3 {
   counter-increment: list-3;
 }
 
-.ql-editor ol li.ql-indent-3:before {
+.ql-editor li[data-list=ordered].ql-indent-3 > .ql-ui:before {
   content: counter(list-3, decimal) ". ";
 }
 
-.ql-editor ol li.ql-indent-3 {
-  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-3 {
+    counter-set: list-4 list-5 list-6 list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-4 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-3 {
+    counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-4 {
   counter-increment: list-4;
 }
 
-.ql-editor ol li.ql-indent-4:before {
+.ql-editor li[data-list=ordered].ql-indent-4 > .ql-ui:before {
   content: counter(list-4, lower-alpha) ". ";
 }
 
-.ql-editor ol li.ql-indent-4 {
-  counter-reset: list-5 list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-4 {
+    counter-set: list-5 list-6 list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-5 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-4 {
+    counter-reset: list-5 list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-5 {
   counter-increment: list-5;
 }
 
-.ql-editor ol li.ql-indent-5:before {
+.ql-editor li[data-list=ordered].ql-indent-5 > .ql-ui:before {
   content: counter(list-5, lower-roman) ". ";
 }
 
-.ql-editor ol li.ql-indent-5 {
-  counter-reset: list-6 list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-5 {
+    counter-set: list-6 list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-6 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-5 {
+    counter-reset: list-6 list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-6 {
   counter-increment: list-6;
 }
 
-.ql-editor ol li.ql-indent-6:before {
+.ql-editor li[data-list=ordered].ql-indent-6 > .ql-ui:before {
   content: counter(list-6, decimal) ". ";
 }
 
-.ql-editor ol li.ql-indent-6 {
-  counter-reset: list-7 list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-6 {
+    counter-set: list-7 list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-7 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-6 {
+    counter-reset: list-7 list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-7 {
   counter-increment: list-7;
 }
 
-.ql-editor ol li.ql-indent-7:before {
+.ql-editor li[data-list=ordered].ql-indent-7 > .ql-ui:before {
   content: counter(list-7, lower-alpha) ". ";
 }
 
-.ql-editor ol li.ql-indent-7 {
-  counter-reset: list-8 list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-7 {
+    counter-set: list-8 list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-8 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-7 {
+    counter-reset: list-8 list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-8 {
   counter-increment: list-8;
 }
 
-.ql-editor ol li.ql-indent-8:before {
+.ql-editor li[data-list=ordered].ql-indent-8 > .ql-ui:before {
   content: counter(list-8, lower-roman) ". ";
 }
 
-.ql-editor ol li.ql-indent-8 {
-  counter-reset: list-9;
+@supports (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-8 {
+    counter-set: list-9;
+  }
 }
-
-.ql-editor ol li.ql-indent-9 {
+@supports not (counter-set: none) {
+  .ql-editor li[data-list].ql-indent-8 {
+    counter-reset: list-9;
+  }
+}
+.ql-editor li[data-list=ordered].ql-indent-9 {
   counter-increment: list-9;
 }
 
-.ql-editor ol li.ql-indent-9:before {
+.ql-editor li[data-list=ordered].ql-indent-9 > .ql-ui:before {
   content: counter(list-9, decimal) ". ";
 }
 
@@ -13329,6 +13441,29 @@ Antialiasing
   padding-right: 28.5em;
 }
 
+.ql-editor li.ql-direction-rtl {
+  padding-right: 1.5em;
+}
+
+.ql-editor li.ql-direction-rtl > .ql-ui:before {
+  margin-left: 0.3em;
+  margin-right: -1.5em;
+  text-align: left;
+}
+
+.ql-editor table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.ql-editor table td {
+  outline: none;
+}
+
+.ql-editor .ql-code-block-container {
+  font-family: monospace;
+}
+
 .ql-editor .ql-video {
   display: block;
   max-width: 100%;
@@ -13435,6 +13570,10 @@ Antialiasing
   text-align: right;
 }
 
+.ql-editor .ql-ui {
+  position: absolute;
+}
+
 .ql-editor.ql-blank::before {
   color: rgba(0, 0, 0, 0.6);
   content: attr(data-placeholder);
@@ -13445,15 +13584,13 @@ Antialiasing
   right: 15px;
 }
 
-.ql-snow.ql-toolbar:after,
-.ql-snow .ql-toolbar:after {
+.ql-snow.ql-toolbar:after, .ql-snow .ql-toolbar:after {
   clear: both;
   content: "";
   display: table;
 }
 
-.ql-snow.ql-toolbar button,
-.ql-snow .ql-toolbar button {
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
   background: none;
   border: none;
   cursor: pointer;
@@ -13464,116 +13601,39 @@ Antialiasing
   width: 28px;
 }
 
-.ql-snow.ql-toolbar button svg,
-.ql-snow .ql-toolbar button svg {
+.ql-snow.ql-toolbar button svg, .ql-snow .ql-toolbar button svg {
   float: left;
   height: 100%;
 }
 
-.ql-snow.ql-toolbar button:active:hover,
-.ql-snow .ql-toolbar button:active:hover {
+.ql-snow.ql-toolbar button:active:hover, .ql-snow .ql-toolbar button:active:hover {
   outline: none;
 }
 
-.ql-snow.ql-toolbar input.ql-image[type=file],
-.ql-snow .ql-toolbar input.ql-image[type=file] {
+.ql-snow.ql-toolbar input.ql-image[type=file], .ql-snow .ql-toolbar input.ql-image[type=file] {
   display: none;
 }
 
-.ql-snow.ql-toolbar button:hover,
-.ql-snow .ql-toolbar button:hover,
-.ql-snow.ql-toolbar button:focus,
-.ql-snow .ql-toolbar button:focus,
-.ql-snow.ql-toolbar button.ql-active,
-.ql-snow .ql-toolbar button.ql-active,
-.ql-snow.ql-toolbar .ql-picker-label:hover,
-.ql-snow .ql-toolbar .ql-picker-label:hover,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active,
-.ql-snow.ql-toolbar .ql-picker-item:hover,
-.ql-snow .ql-toolbar .ql-picker-item:hover,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
   color: #06c;
 }
 
-.ql-snow.ql-toolbar button:hover .ql-fill,
-.ql-snow .ql-toolbar button:hover .ql-fill,
-.ql-snow.ql-toolbar button:focus .ql-fill,
-.ql-snow .ql-toolbar button:focus .ql-fill,
-.ql-snow.ql-toolbar button.ql-active .ql-fill,
-.ql-snow .ql-toolbar button.ql-active .ql-fill,
-.ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
-.ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
-.ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
-.ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
-.ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+.ql-snow.ql-toolbar button:hover .ql-fill, .ql-snow .ql-toolbar button:hover .ql-fill, .ql-snow.ql-toolbar button:focus .ql-fill, .ql-snow .ql-toolbar button:focus .ql-fill, .ql-snow.ql-toolbar button.ql-active .ql-fill, .ql-snow .ql-toolbar button.ql-active .ql-fill, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill, .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill, .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill, .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
   fill: #06c;
 }
 
-.ql-snow.ql-toolbar button:hover .ql-stroke,
-.ql-snow .ql-toolbar button:hover .ql-stroke,
-.ql-snow.ql-toolbar button:focus .ql-stroke,
-.ql-snow .ql-toolbar button:focus .ql-stroke,
-.ql-snow.ql-toolbar button.ql-active .ql-stroke,
-.ql-snow .ql-toolbar button.ql-active .ql-stroke,
-.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
-.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
-.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
-.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
-.ql-snow.ql-toolbar button:hover .ql-stroke-miter,
-.ql-snow .ql-toolbar button:hover .ql-stroke-miter,
-.ql-snow.ql-toolbar button:focus .ql-stroke-miter,
-.ql-snow .ql-toolbar button:focus .ql-stroke-miter,
-.ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
-.ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
-.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
-.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
-.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
-.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+.ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke, .ql-snow.ql-toolbar button:focus .ql-stroke, .ql-snow .ql-toolbar button:focus .ql-stroke, .ql-snow.ql-toolbar button.ql-active .ql-stroke, .ql-snow .ql-toolbar button.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow.ql-toolbar button:hover .ql-stroke-miter, .ql-snow .ql-toolbar button:hover .ql-stroke-miter, .ql-snow.ql-toolbar button:focus .ql-stroke-miter, .ql-snow .ql-toolbar button:focus .ql-stroke-miter, .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
   stroke: #06c;
 }
 
 @media (pointer: coarse) {
-  .ql-snow.ql-toolbar button:hover:not(.ql-active),
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active), .ql-snow .ql-toolbar button:hover:not(.ql-active) {
     color: #444;
   }
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
     fill: #444;
   }
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke, .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
     stroke: #444;
   }
 }
@@ -13589,8 +13649,7 @@ Antialiasing
   display: none;
 }
 
-.ql-snow .ql-out-bottom,
-.ql-snow .ql-out-top {
+.ql-snow .ql-out-bottom, .ql-snow .ql-out-top {
   visibility: hidden;
 }
 
@@ -13634,8 +13693,7 @@ Antialiasing
   stroke-width: 2;
 }
 
-.ql-snow .ql-fill,
-.ql-snow .ql-stroke.ql-fill {
+.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
   fill: #444;
 }
 
@@ -13647,8 +13705,7 @@ Antialiasing
   fill-rule: evenodd;
 }
 
-.ql-snow .ql-thin,
-.ql-snow .ql-stroke.ql-thin {
+.ql-snow .ql-thin, .ql-snow .ql-stroke.ql-thin {
   stroke-width: 1;
 }
 
@@ -13703,14 +13760,12 @@ Antialiasing
   padding-left: 16px;
 }
 
-.ql-snow .ql-editor code,
-.ql-snow .ql-editor pre {
+.ql-snow .ql-editor code, .ql-snow .ql-editor .ql-code-block-container {
   background-color: #f0f0f0;
   border-radius: 3px;
 }
 
-.ql-snow .ql-editor pre {
-  white-space: pre-wrap;
+.ql-snow .ql-editor .ql-code-block-container {
   margin-bottom: 5px;
   margin-top: 5px;
   padding: 5px 10px;
@@ -13721,7 +13776,7 @@ Antialiasing
   padding: 2px 4px;
 }
 
-.ql-snow .ql-editor pre.ql-syntax {
+.ql-snow .ql-editor .ql-code-block-container {
   background-color: #23241f;
   color: #f8f8f2;
   overflow: visible;
@@ -13793,23 +13848,20 @@ Antialiasing
   z-index: 1;
 }
 
-.ql-snow .ql-color-picker,
-.ql-snow .ql-icon-picker {
+.ql-snow .ql-color-picker, .ql-snow .ql-icon-picker {
   width: 28px;
 }
 
-.ql-snow .ql-color-picker .ql-picker-label,
-.ql-snow .ql-icon-picker .ql-picker-label {
+.ql-snow .ql-color-picker .ql-picker-label, .ql-snow .ql-icon-picker .ql-picker-label {
   padding: 2px 4px;
 }
 
-.ql-snow .ql-color-picker .ql-picker-label svg,
-.ql-snow .ql-icon-picker .ql-picker-label svg {
+.ql-snow .ql-color-picker .ql-picker-label svg, .ql-snow .ql-icon-picker .ql-picker-label svg {
   right: 4px;
 }
 
 .ql-snow .ql-icon-picker .ql-picker-options {
-  padding: 4px 0px;
+  padding: 4px 0;
 }
 
 .ql-snow .ql-icon-picker .ql-picker-item {
@@ -13828,7 +13880,7 @@ Antialiasing
   float: left;
   height: 16px;
   margin: 2px;
-  padding: 0px;
+  padding: 0;
   width: 16px;
 }
 
@@ -13840,12 +13892,7 @@ Antialiasing
   width: 18px;
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=""])::before,
-.ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=""])::before,
-.ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=""])::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=""])::before,
-.ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=""])::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=""])::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=""])::before, .ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=""])::before, .ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=""])::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=""])::before, .ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=""])::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=""])::before {
   content: attr(data-label);
 }
 
@@ -13853,38 +13900,31 @@ Antialiasing
   width: 98px;
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label::before, .ql-snow .ql-picker.ql-header .ql-picker-item::before {
   content: "Normal";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
   content: "Heading 1";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
   content: "Heading 2";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
   content: "Heading 3";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
   content: "Heading 4";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
   content: "Heading 5";
 }
 
-.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
-.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
   content: "Heading 6";
 }
 
@@ -13916,18 +13956,15 @@ Antialiasing
   width: 108px;
 }
 
-.ql-snow .ql-picker.ql-font .ql-picker-label::before,
-.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+.ql-snow .ql-picker.ql-font .ql-picker-label::before, .ql-snow .ql-picker.ql-font .ql-picker-item::before {
   content: "Sans Serif";
 }
 
-.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before,
-.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before, .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
   content: "Serif";
 }
 
-.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before,
-.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before, .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
   content: "Monospace";
 }
 
@@ -13943,23 +13980,19 @@ Antialiasing
   width: 98px;
 }
 
-.ql-snow .ql-picker.ql-size .ql-picker-label::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+.ql-snow .ql-picker.ql-size .ql-picker-label::before, .ql-snow .ql-picker.ql-size .ql-picker-item::before {
   content: "Normal";
 }
 
-.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
   content: "Small";
 }
 
-.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
   content: "Large";
 }
 
-.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
   content: "Huge";
 }
 
@@ -13981,6 +14014,15 @@ Antialiasing
 
 .ql-snow .ql-color-picker.ql-color .ql-picker-item {
   background-color: #000;
+}
+
+.ql-code-block-container {
+  position: relative;
+}
+
+.ql-code-block-container .ql-ui {
+  right: 5px;
+  top: 5px;
 }
 
 .ql-toolbar.ql-snow {
@@ -14011,19 +14053,18 @@ Antialiasing
   border-color: #ccc;
 }
 
-.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
-.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected, .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
   border-color: #000;
 }
 
 .ql-toolbar.ql-snow + .ql-container.ql-snow {
-  border-top: 0px;
+  border-top: 0;
 }
 
 .ql-snow .ql-tooltip {
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0px 0px 5px #ddd;
+  box-shadow: 0 0 5px #ddd;
   color: #444;
   padding: 5px 12px;
   white-space: nowrap;
@@ -14040,7 +14081,7 @@ Antialiasing
   border: 1px solid #ccc;
   font-size: 13px;
   height: 26px;
-  margin: 0px;
+  margin: 0;
   padding: 3px 5px;
   width: 170px;
 }
@@ -14069,8 +14110,7 @@ Antialiasing
   line-height: 26px;
 }
 
-.ql-snow .ql-tooltip.ql-editing a.ql-preview,
-.ql-snow .ql-tooltip.ql-editing a.ql-remove {
+.ql-snow .ql-tooltip.ql-editing a.ql-preview, .ql-snow .ql-tooltip.ql-editing a.ql-remove {
   display: none;
 }
 
@@ -14079,9 +14119,9 @@ Antialiasing
 }
 
 .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
-  border-right: 0px;
+  border-right: 0;
   content: "Save";
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .ql-snow .ql-tooltip[data-mode=link]::before {
@@ -14103,6 +14143,7 @@ Antialiasing
 .ql-container.ql-snow {
   border: 1px solid #ccc;
 }
+
 
 .y-accordion-header-show-opened button::after {
   transform: none !important;
@@ -14520,6 +14561,9 @@ Antialiasing
 .y-dropdown:not(.y-dropdown-arrow) .y-dropdown-target > *::after {
   display: none;
 }
+.y-dropdown-menu {
+  display: block;
+}
 
 .y-fieldset-legend {
   margin-top: -1.8rem;
@@ -14695,14 +14739,13 @@ body:has(.y-offcanvas-no-scroll) {
   left: 0;
   top: 0;
   opacity: 0;
-  display: none;
   pointer-events: none;
   scale: 0.98;
   transition: opacity 0.15s, scale 0.15s ease;
 }
 .y-popup-show {
-  display: block;
   pointer-events: all;
+  display: block;
   opacity: 1;
   scale: 1;
 }
@@ -15334,6 +15377,16 @@ body:has(.y-offcanvas-no-scroll) {
   color: #d63939;
 }
 
+.y-form-field-hint {
+  margin-top: 0.25rem;
+  font-size: 85.714285%;
+}
+.y-form-field-hint-state-valid {
+  color: #2fb344;
+}
+.y-form-field-hint-state-invalid {
+  color: #d63939;
+}
 .y-form-input-hint {
   margin-top: 0.25rem;
   font-size: 85.714285%;

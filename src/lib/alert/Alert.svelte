@@ -1,53 +1,57 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import { Icon } from '../icon'
 	import type { AlertProps } from './Alert.types'
 
 	type $$Props = AlertProps
 
-	export let color: $$Props['color'] = 'primary'
-	export let componentName: $$Props['componentName'] = 'alert'
-	export let dismissible: $$Props['dismissible'] = undefined
-	export let icon: $$Props['icon'] = undefined
-	export let important: $$Props['important'] = undefined
-	export let open: $$Props['open'] = true
-	export let title: $$Props['title'] = undefined
+	let {
+		color = 'primary',
+		componentName = 'alert',
+		dismissible,
+		icon,
+		important,
+		open = $bindable(),
+		title,
+		children,
+		startSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let cssProps: AlertProps = {}
-	let props: AlertProps = {}
-	$: {
-		cssProps = { color, icon, important, dismissible }
-		props = {
-			componentName,
-		}
-	}
+	let props: AlertProps = $derived({
+		...restProps,
+		componentName,
+		show: open,
+		role: 'alert',
+		cssProps: { color, icon, important, dismissible },
+	})
 </script>
 
-<El {components} {...$$restProps} {cssProps} {...props} role="alert" show={open}>
-	{#if icon || $$slots.start}
+<El {...props}>
+	{#if icon || startSnippet}
 		<El componentName="{componentName}-start">
-			<slot name="start">
+			{#if startSnippet}
+				{@render startSnippet()}
+			{:else}
 				<Icon size="xl" name={icon} />
-			</slot>
+			{/if}
 		</El>
 	{/if}
 	<El componentName="{componentName}-body">
-		{#if title || $$slots['title']}
+		{#if title}
 			<El componentName="{componentName}-title">
-				<slot name="title">{title}</slot>
+				{#if typeof title === 'string'}
+					{title}
+				{:else}
+					{@render title()}
+				{/if}
 			</El>
 		{/if}
 		<div>
-			<slot />
+			{@render children?.()}
 		</div>
 	</El>
 	{#if dismissible}
-		<El componentName="{componentName}-close" on:click={() => (open = false)} />
+		<El componentName="{componentName}-close" onclick={() => (open = false)} />
 	{/if}
 </El>

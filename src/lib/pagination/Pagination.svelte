@@ -3,69 +3,82 @@
 	import { El } from '../el'
 	import type { PaginationProps } from './Pagination.types'
 	import PaginationItem from './PaginationItem.svelte'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = PaginationProps
 
-	export let componentName: $$Props['componentName'] = 'pagination'
-	export let from: $$Props['from'] = 0
-	export let to: $$Props['to'] = 0
+	let {
+		componentName = 'pagination',
+		from = 0,
+		to = 0,
+		hasNext = false,
+		hasPrev = false,
+		hasFirst = false,
+		hasLast = false,
+		value = $bindable(from),
+		children,
+		firstSnippet,
+		prevSnippet,
+		nextSnippet,
+		lastSnippet,
+		pageSnippet,
+		...restProps
+	}: $$Props = $props()
 
-	export let hasNext: $$Props['hasNext'] = false
-	export let hasPrev: $$Props['hasPrev'] = false
-	export let hasFirst: $$Props['hasFirst'] = false
-	export let hasLast: $$Props['hasLast'] = false
-
-	export let value: $$Props['value'] = from
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	$: firstPage = from
-	$: lastPage = to
-	$: pages = Array.from({ length: 1 + to! - from! }, (_, i) => i + from!)
+	let firstPage = $derived(from)
+	let lastPage = $derived(to)
+	let pages = $derived(Array.from({ length: 1 + to! - from! }, (_, i) => i + from!))
 </script>
 
-<El {...$$restProps} {componentName} {components}>
-	<slot>
+<El {...restProps} {componentName}>
+	{#if children}
+		{@render children()}
+	{:else}
 		{#if hasFirst}
-			<PaginationItem disabled={value == firstPage} on:click={() => (value = firstPage)}>
-				<slot name="first">
+			<PaginationItem disabled={value == firstPage} onclick={() => (value = firstPage)}>
+				{#if firstSnippet}
+					{@render firstSnippet()}
+				{:else}
 					<Icon name="chevrons-left" />
-				</slot>
+				{/if}
 			</PaginationItem>
 		{/if}
 		{#if hasPrev}
-			<PaginationItem disabled={value == 1} on:click={() => (value -= 1)}>
-				<slot name="prev">
+			<PaginationItem disabled={value == 1} onclick={() => (value -= 1)}>
+				{#if prevSnippet}
+					{@render prevSnippet()}
+				{:else}
 					<Icon name="chevron-left" />
-				</slot>
+				{/if}
 			</PaginationItem>
 		{/if}
 
 		{#each pages as page}
-			<PaginationItem active={value === page} on:click={() => (value = page)}>
-				<slot name="page" {page}>
+			<PaginationItem active={value === page} onclick={() => (value = page)}>
+				{#if pageSnippet}
+					{@render pageSnippet({ page })}
+				{:else}
 					{page}
-				</slot>
+				{/if}
 			</PaginationItem>
 		{/each}
 
 		{#if hasNext}
-			<PaginationItem disabled={value == lastPage} on:click={() => (value += 1)}>
-				<slot name="next">
+			<PaginationItem disabled={value == lastPage} onclick={() => (value += 1)}>
+				{#if nextSnippet}
+					{@render nextSnippet()}
+				{:else}
 					<Icon name="chevron-right" />
-				</slot>
+				{/if}
 			</PaginationItem>
 		{/if}
 		{#if hasLast}
-			<PaginationItem disabled={value == lastPage} on:click={() => (value = lastPage)}>
-				<slot name="last">
+			<PaginationItem disabled={value == lastPage} onclick={() => (value = lastPage)}>
+				{#if lastSnippet}
+					{@render lastSnippet()}
+				{:else}
 					<Icon name="chevrons-right" />
-				</slot>
+				{/if}
 			</PaginationItem>
 		{/if}
-	</slot>
+	{/if}
 </El>

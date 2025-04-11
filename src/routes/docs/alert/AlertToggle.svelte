@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Alert, Button } from 'yesvelte'
 
-	let open = false
+	let open = $state(false)
 
 	function toggle() {
 		open = !open
@@ -11,4 +11,4 @@
 <Alert dismissible bind:open title="Wow! Everything worked!" color="success">
 	Your account has been saved!
 </Alert>
-<Button on:click={toggle}>Toggle Alert</Button>
+<Button onclick={toggle}>Toggle Alert</Button>

@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 	import { appendCustomStyle } from 'iconify-icon'
 
 	appendCustomStyle(`svg [stroke-width="2"] { stroke-width: 1.5; }`)
@@ -9,34 +9,35 @@
 	import type { IconProps } from './Icon.types'
 	import { onMount } from 'svelte'
 	import { El } from '../el'
-	import { get_current_component } from 'svelte/internal'
 
 	type $$Props = IconProps
 
-	export let componentName: $$Props['componentName'] = 'icon'
-	export let color: $$Props['color'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let pack: $$Props['pack'] = 'tabler'
-	export let size: $$Props['size'] = undefined
+	let {
+		componentName = 'icon',
+		color,
+		name,
+		pack = 'tabler',
+		size,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let loaded = false
+	let loaded = $state(false)
 
 	onMount(() => {
 		loaded = true
+		if (name?.includes(':')) {
+			pack = name.split(':')[0]
+			name = name.split(':')[1]
+		}
 	})
 
-	$: cssProps = {
+	let cssProps: $$Props = $derived({
 		color,
 		size,
-	}
+	})
 </script>
 
-<El {componentName} {components} {...$$restProps} {cssProps}>
+<El {componentName} {...restProps} {cssProps}>
 	{#if loaded}
 		<iconify-icon icon="{pack}:{name}" width="100%" height="100%" />
 	{/if}

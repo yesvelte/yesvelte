@@ -8,11 +8,13 @@
 		{ text: 'Svelte', code: 'svelte' },
 	]
 
-	let value = items[1].code
+	let value = $state(items[1].code)
 </script>
 
-<RadioGroup bind:value {items} key="code" let:item let:index>
-	{(index || 0) + 1}- {item.text}
+<RadioGroup bind:value {items} key="code">
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </RadioGroup>
 
 <i>value: {JSON.stringify(value)}</i>

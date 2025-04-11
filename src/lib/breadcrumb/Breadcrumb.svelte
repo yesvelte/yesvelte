@@ -1,34 +1,22 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { BreadcrumbProps } from './Breadcrumb.types'
 
 	type $$Props = BreadcrumbProps
 
-	export let componentName: $$Props['componentName'] = 'breadcrumb'
-	export let separator: $$Props['separator'] = undefined
+	let { componentName = 'breadcrumb', separator, children, ...restProps }: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let props: $$Props = {}
-	let cssProps: $$Props = {}
-
-	$: {
-		cssProps = {
+	let props: BreadcrumbProps = $derived({
+		...restProps,
+		componentName,
+		cssProps: {
 			separator,
-		}
-
-		props = {
-			componentName,
-		}
-	}
+		},
+	})
 </script>
 
-<El {components} tag="nav" aria-label="breadcrumb">
-	<El tag="ol" {...$$restProps} {cssProps} {...props}>
-		<slot />
+<El tag="nav" aria-label="breadcrumb">
+	<El tag="ol" {...props}>
+		{@render children?.()}
 	</El>
 </El>

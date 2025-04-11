@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { FormSelect } from 'yesvelte'
 
-	let items = ['Apple', 'Orange', 'Peach', 'Banana', 'Apricot']
-	let value: any = undefined
+	let items = $state(['Apple', 'Orange', 'Peach', 'Banana', 'Apricot'])
+	let value: any = $state(undefined)
 </script>
 
 <FormSelect bind:value {items} label="Label" />

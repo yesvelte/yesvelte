@@ -1,10 +1,10 @@
 <script>
 	import { Button, El, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle } from 'yesvelte'
 
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button on:click={() => (show = !show)} color="primary">Open Modal</Button>
+<Button onclick={() => (show = !show)} color="primary">Open Modal</Button>
 
 <Modal bind:show>
 	<img src="/images/road.png" alt="Road" />
@@ -19,7 +19,7 @@
 		reprehenderit sit tempora totam unde.
 	</ModalBody>
 	<ModalFooter>
-		<Button me="auto" on:click={() => (show = false)}>Close</Button>
-		<Button color="primary" on:click={() => (show = false)}>OK</Button>
+		<Button me="auto" onclick={() => (show = false)}>Close</Button>
+		<Button color="primary" onclick={() => (show = false)}>OK</Button>
 	</ModalFooter>
 </Modal>

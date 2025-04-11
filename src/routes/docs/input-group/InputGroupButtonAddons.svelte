@@ -3,31 +3,39 @@
 </script>
 
 <FormInput>
-	<Button slot="start">Button</Button>
+	{#snippet startSnippet()}
+		<Button>Button</Button>
+	{/snippet}
 </FormInput>
 
 <FormInput>
-	<Button slot="start" outline color="secondary">Button</Button>
+	{#snippet startSnippet()}
+		<Button outline color="secondary">Button</Button>
+	{/snippet}
 </FormInput>
 
 <FormInput placeholder="Recipient's username">
-	<Button slot="end">Button</Button>
+	{#snippet endSnippet()}
+		<Button>Button</Button>
+	{/snippet}
 </FormInput>
 
 <FormInput placeholder="Recipient's username">
-	<Button slot="end" outline color="secondary">Button</Button>
+	{#snippet endSnippet()}
+		<Button outline color="secondary">Button</Button>
+	{/snippet}
 </FormInput>
 
 <FormInput>
-	<svelte:fragment slot="start">
+	{#snippet startSnippet()}
 		<Button outline color="secondary">Button</Button>
 		<Button outline color="secondary">Button</Button>
-	</svelte:fragment>
+	{/snippet}
 </FormInput>
 
 <FormInput>
-	<svelte:fragment slot="end">
+	{#snippet endSnippet()}
 		<Button>Button</Button>
 		<Button>Button</Button>
-	</svelte:fragment>
+	{/snippet}
 </FormInput>

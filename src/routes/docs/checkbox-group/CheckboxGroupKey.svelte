@@ -12,13 +12,17 @@
 </script>
 
 <!-- key is a string -->
-<CheckboxGroup inline bind:value {items} key="code" let:item let:index>
-	{(index || 0) + 1}- {item.text}
+<CheckboxGroup inline bind:value {items} key="code">
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </CheckboxGroup>
 
 <!-- key is a function -->
-<CheckboxGroup inline bind:value {items} key={(item) => item.code} let:item let:index>
-	{(index || 0) + 1}- {item.text}
+<CheckboxGroup inline bind:value {items} key={(item) => item.code}>
+	{#snippet children({ item, index })}
+		{(index || 0) + 1}- {item.text}
+	{/snippet}
 </CheckboxGroup>
 
 <i>value: {JSON.stringify(value)}</i>

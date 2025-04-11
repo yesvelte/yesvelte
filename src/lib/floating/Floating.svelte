@@ -1,36 +1,30 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { El } from '../el'
 	import type { FloatingProps } from './Floating.types'
 
 	type $$Props = FloatingProps
 
-	export let componentName: $$Props['componentName'] = 'floating'
-	export let fixed: $$Props['fixed']
-	export let offset: $$Props['offset'] = 0
-	export let placement: $$Props['placement'] = 'end-bottom'
+	let {
+		componentName = 'floating',
+		fixed,
+		offset = 0,
+		placement = 'end-bottom',
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let element: HTMLElement | undefined = $state(undefined)
 
-	let element: HTMLElement
+	let props: $$Props = $derived({ ...restProps, componentName, cssProps: { fixed } })
 
-	let cssProps: FloatingProps = {}
-	let props: FloatingProps = {}
-	$: cssProps = { fixed }
-
-	$: props = { componentName }
-
-	$: (() => {
+	$effect(() => {
 		if (!element) return
 
 		if (typeof window != 'object') return
 
 		const rtl = getComputedStyle(element).getPropertyValue('direction').toLowerCase() == 'rtl'
 
-		let p = placement || ''
+		let p: string = placement || ''
 
 		if (p.match(/^(top|bottom)$/)) p = `-${p}`
 
@@ -66,10 +60,14 @@
 			})`
 		}
 
-		requestAnimationFrame(() => Object.assign(element.style, style))
-	})()
+		requestAnimationFrame(() => {
+			if (element) {
+				Object.assign(element.style, style)
+			}
+		})
+	})
 </script>
 
-<El {components} bind:element {...$$restProps} {cssProps} {...props}>
-	<slot />
+<El bind:element {...props}>
+	{@render children?.()}
 </El>

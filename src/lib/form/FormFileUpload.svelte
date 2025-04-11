@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { FileUpload } from '../file-upload'
 	import type { FormFileUploadProps } from './Form.types'
 	import FormField from './FormField.svelte'
@@ -7,68 +6,77 @@
 
 	type $$Props = FormFileUploadProps
 
-	export let componentName: $$Props['componentName'] = 'form-input'
-	export let disabled: $$Props['disabled'] = undefined
-	export let accept: $$Props['accept'] = undefined
-	export let name: $$Props['name'] = undefined
-	export let multiple: $$Props['multiple'] = undefined
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let required: $$Props['required'] = undefined
-	export let size: $$Props['size'] = undefined
-	export let state: $$Props['state'] = undefined
-	export let files: $$Props['files'] = undefined
-	export let label: $$Props['label'] = undefined
-	export let hint: $$Props['hint'] = undefined
+	let {
+		componentName = 'form-input',
+		disabled,
+		accept,
+		name,
+		multiple,
+		placeholder,
+		required,
+		size,
+		state: validationState,
+		files = $bindable(),
+		label,
+		hint,
+		hintSnippet,
+		labelSnippet,
+		startSnippet,
+		startIconSnippet,
+		endSnippet,
+		endIconSnippet,
+		groupSnippet,
+		onchange,
+		onfocus,
+		onblur,
+		...restProps
+	}: $$Props = $props()
 
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let id: string | undefined = $state(undefined)
 
-	let id: string
-	let props: $$Props = {}
-	let fileUploadProps: $$Props = {}
-
-	$: props = {
+	let props = $derived({
+		...restProps,
 		required,
 		label,
 		hint,
-		state,
+		state: validationState,
 		id,
 		componentName,
-	}
+		hintSnippet,
+		labelSnippet,
+	})
 
-	$: fileUploadProps = {
+	let fileUploadProps = $derived({
 		placeholder,
 		disabled,
 		required,
 		size,
-		state,
+		onchange,
+		onfocus,
+		onblur,
+		state: validationState,
 		multiple,
 		accept,
 		name,
-	}
+	})
 </script>
 
-<FormField {...props} {...$$restProps}>
-	<slot name="label" slot="label" />
-	<svelte:fragment slot="group">
-		<slot name="start">
-			{#if $$slots['start-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="start-icon" />
-				</El>
-			{/if}
-		</slot>
-		<FileUpload {components} bind:id {...fileUploadProps} bind:files />
-
-		<slot name="end">
-			{#if $$slots['end-icon']}
-				<El componentName="{componentName}-icon">
-					<slot name="end-icon" />
-				</El>
-			{/if}
-		</slot>
-	</svelte:fragment>
-	<slot name="hint" slot="hint" />
+<FormField {...props}>
+	{#snippet groupSnippet()}
+		{#if startSnippet}
+			{@render startSnippet()}
+		{:else if startIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render startIconSnippet()}
+			</El>
+		{/if}
+		<FileUpload bind:id {...fileUploadProps} bind:files />
+		{#if endSnippet}
+			{@render endSnippet()}
+		{:else if endIconSnippet}
+			<El componentName="{componentName}-icon">
+				{@render endIconSnippet()}
+			</El>
+		{/if}
+	{/snippet}
 </FormField>

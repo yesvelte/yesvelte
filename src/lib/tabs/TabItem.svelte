@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { get_current_component } from 'svelte/internal'
 	import { getContext, onMount, onDestroy } from 'svelte'
 	import { El } from '../el'
 	import type { TabItemProps, TabsContext } from './Tab.types'
@@ -7,16 +6,16 @@
 
 	type $$Props = TabItemProps
 
-	export let componentName: $$Props['componentName'] = 'tab-item'
-	export let tag: $$Props['tag'] = 'li'
-	export let active: $$Props['active'] = undefined
-	export let disabled: $$Props['disabled'] = undefined
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let {
+		componentName = 'tab-item',
+		tag = 'li',
+		active,
+		disabled,
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	const tab = { active }
+	const tab = $state({ active })
 	const { registerTab, selectTab, removeTab, selectedTab } = getContext<TabsContext>(TABS)
 
 	let element: HTMLElement
@@ -29,26 +28,21 @@
 		removeTab(tab)
 	})
 
-	$: active ? selectTab(tab) : null
-	$: icon = !(element?.textContent ?? true)
+	$effect(() => {
+		if (active) selectTab(tab)
+	})
 
-	let cssProps: any = {}
-	$: {
-		cssProps = {
-			disabled,
-			icon,
-			active: $selectedTab === tab,
-		}
-	}
+	let icon = $derived(!(element?.textContent ?? true))
+
+	let cssProps: any = $derived({
+		disabled,
+		icon,
+		active: $selectedTab === tab,
+	})
 </script>
 
-<El
-	{components}
-	{...$$restProps}
-	{tag}
-	{componentName}
-	on:click={() => (!disabled ? selectTab(tab) : null)}>
+<El {...restProps} {tag} {componentName} onclick={() => (!disabled ? selectTab(tab) : null)}>
 	<El bind:element tag="button" componentName="{componentName}-link" {cssProps}>
-		<slot />
+		{@render children?.()}
 	</El>
 </El>

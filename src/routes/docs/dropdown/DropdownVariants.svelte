@@ -3,7 +3,9 @@
 </script>
 
 <Dropdown>
-	<Button slot="target" color="primary">Primary Dropdown</Button>
+	{#snippet targetSnippet()}
+		<Button color="primary">Primary Dropdown</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -13,7 +15,9 @@
 </Dropdown>
 
 <Dropdown>
-	<Button slot="target" color="secondary">Secondary Dropdown</Button>
+	{#snippet targetSnippet()}
+		<Button color="secondary">Secondary Dropdown</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -23,7 +27,9 @@
 </Dropdown>
 
 <Dropdown>
-	<Button slot="target" color="success">Success Dropdown</Button>
+	{#snippet targetSnippet()}
+		<Button color="success">Success Dropdown</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>
@@ -33,7 +39,9 @@
 </Dropdown>
 
 <Dropdown>
-	<Button slot="target" color="danger">Danger Dropdown</Button>
+	{#snippet targetSnippet()}
+		<Button color="danger">Danger Dropdown</Button>
+	{/snippet}
 
 	<DropdownMenu>
 		<DropdownItem>Item 1</DropdownItem>

@@ -21,7 +21,7 @@
 		['clean'], // remove formatting button
 	]
 
-	let value = '<p>Hello <b>World</b>!</p>'
+	let value = $state('<p>Hello <b>World</b>!</p>')
 </script>
 
 <FormEditor label="Custom Toolbar" {toolbar} bind:value />

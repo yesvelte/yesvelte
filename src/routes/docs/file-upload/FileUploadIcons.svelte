@@ -3,11 +3,15 @@
 </script>
 
 <FileUpload>
-	<Icon slot="start" name="file-text" />
+	{#snippet startSnippet()}
+		<Icon name="file-text" />
+	{/snippet}
 </FileUpload>
 
 <El p="3" />
 
 <FileUpload>
-	<Icon slot="end" name="file-text" />
+	{#snippet endSnippet()}
+		<Icon name="file-text" />
+	{/snippet}
 </FileUpload>

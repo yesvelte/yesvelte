@@ -3,11 +3,15 @@
 </script>
 
 <Input placeholder="your domain name">
-	<Icon slot="end" name="search" />
+	{#snippet endSnippet()}
+		<Icon name="search" />
+	{/snippet}
 </Input>
 
 <FormInput placeholder="your domain name">
-	<Button tag="a" slot="end">
-		<Icon name="search" />
-	</Button>
+	{#snippet endSnippet()}
+		<Button tag="a">
+			<Icon name="search" />
+		</Button>
+	{/snippet}
 </FormInput>

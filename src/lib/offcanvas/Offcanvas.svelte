@@ -2,35 +2,31 @@
 	import { onMount, setContext, createEventDispatcher } from 'svelte'
 	import { El } from '../el'
 	import type { OffcanvasProps } from './Offcanvas.types'
-	import { get_current_component } from 'svelte/internal'
+
 	import type { FocusTrap } from 'focus-trap'
 
 	type $$Props = OffcanvasProps
 
-	export let componentName: $$Props['componentName'] = 'offcanvas'
-	export let placement: $$Props['placement'] = 'start'
-	export let noScroll: $$Props['noScroll'] = undefined
-	export let backdrop: $$Props['backdrop'] = undefined
-	export let autoClose: $$Props['autoClose'] = undefined
-	export let show: $$Props['show'] = undefined
-
-	const dispatch = createEventDispatcher()
-	const components = [
-		{ component: get_current_component(), except: ['close'] },
-		...($$props.components ?? []),
-	]
+	let {
+		componentName = 'offcanvas',
+		placement = 'start',
+		noScroll,
+		backdrop,
+		autoClose,
+		show = $bindable(),
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	const close = () => {
 		show = false
-		dispatch('close')
+		restProps.onclose?.()
 	}
 
 	setContext<OffcanvasProps>('OFFCANVAS', { close })
 
-	let element: HTMLElement
-	let instance: FocusTrap
-	let props: OffcanvasProps = { componentName, ...$$restProps }
-	let cssProps: OffcanvasProps = { placement }
+	let element: HTMLElement | undefined = $state(undefined)
+	let instance: FocusTrap | undefined = $state(undefined)
 
 	const handleEscapeKey = (event: any) => {
 		if (show && element && autoClose && event.key === 'Escape' && !event.defaultPrevented) {
@@ -67,31 +63,35 @@
 		}
 	})
 
-	$: if (instance && backdrop) {
-		setTimeout(() => {
-			try {
-				if (show) {
-					instance.activate()
-				} else {
-					instance.deactivate()
+	$effect(() => {
+		if (instance && backdrop) {
+			setTimeout(() => {
+				try {
+					if (show) {
+						instance.activate()
+					} else {
+						instance.deactivate()
+					}
+				} catch (err) {
+					//
 				}
-			} catch (err) {
-				//
-			}
-		}, 500)
-	}
+			}, 500)
+		}
+	})
 
-	$: {
-		cssProps = { placement }
-	}
+	let props: OffcanvasProps = $derived({
+		...restProps,
+		componentName,
+		cssProps: { placement },
+	})
 </script>
 
-<El {components} componentName="{componentName}-wrapper">
-	<El {...props} {...$$restProps} {cssProps} {componentName} bind:element tabindex="0" {show}>
-		<slot />
+<El componentName="{componentName}-wrapper">
+	<El {...props} {componentName} bind:element tabindex="0" {show}>
+		{@render children?.()}
 	</El>
 	{#if backdrop}
-		<El componentName="{componentName}-backdrop" on:click={handleOutsideClick} {show} />
+		<El componentName="{componentName}-backdrop" onclick={handleOutsideClick} {show} />
 	{/if}
 	{#if show}
 		{#if noScroll}

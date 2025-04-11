@@ -1,21 +1,21 @@
 <script lang="ts">
 	import { setContext } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
 
 	import { El, type ElProps } from '../el'
 
 	type $$Props = ElProps
 
-	export let tag: $$Props['tag'] = 'thead'
-	export let componentName: $$Props['componentName'] = 'table-head'
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let { tag = 'thead', componentName = 'table-head', children, ...restProps }: $$Props = $props()
 
 	setContext('TABLE:HEAD', true)
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		tag,
+	})
 </script>
 
-<El {components} {...$$restProps} {componentName} {tag}>
-	<slot />
+<El {...props} {componentName} {tag}>
+	{@render children?.()}
 </El>

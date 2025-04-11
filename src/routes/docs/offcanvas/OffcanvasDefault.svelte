@@ -1,9 +1,9 @@
 <script>
 	import { Button, Offcanvas, OffcanvasBody, OffcanvasHeader } from 'yesvelte'
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button color="primary" on:click={() => (show = !show)}>Toggle offcanvas</Button>
+<Button color="primary" onclick={() => (show = !show)}>Toggle offcanvas</Button>
 
 <Offcanvas bind:show>
 	<OffcanvasHeader title="Offcanvas Title" />

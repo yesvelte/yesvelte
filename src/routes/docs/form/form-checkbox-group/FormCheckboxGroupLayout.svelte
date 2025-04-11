@@ -50,7 +50,7 @@
 			and <a href={'#'}>Privacy Policy</a>.
 		</FormCheckbox>
 		<El col textAlign="end">
-			<Button color="primary" disabled={!tcAccepted} on:click={onClick}>Submit</Button>
+			<Button color="primary" disabled={!tcAccepted} onclick={onClick}>Submit</Button>
 		</El>
 	</El>
 </El>

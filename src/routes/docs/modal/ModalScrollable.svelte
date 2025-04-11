@@ -1,10 +1,10 @@
 <script>
 	import { Button, Modal, ModalBody, ModalFooter } from 'yesvelte'
 
-	let show = false
+	let show = $state(false)
 </script>
 
-<Button on:click={() => (show = !show)} color="primary">Open Scrollable Modal</Button>
+<Button onclick={() => (show = !show)} color="primary">Open Scrollable Modal</Button>
 
 <Modal scrollable title="Modal title" dismissible bind:show>
 	<ModalBody>
@@ -98,7 +98,7 @@
 		<br />
 	</ModalBody>
 	<ModalFooter>
-		<Button class="me-auto" on:click={() => (show = false)}>Close</Button>
-		<Button color="primary" on:click={() => (show = false)}>Save changes</Button>
+		<Button class="me-auto" onclick={() => (show = false)}>Close</Button>
+		<Button color="primary" onclick={() => (show = false)}>Save changes</Button>
 	</ModalFooter>
 </Modal>

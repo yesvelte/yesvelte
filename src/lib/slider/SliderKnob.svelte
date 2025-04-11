@@ -1,20 +1,18 @@
 <script lang="ts">
 	import { getContext, onDestroy, onMount } from 'svelte'
 	import type { SliderContext, SliderKnobProps, SliderKnobType } from './Slider.types'
-	import { get_current_component } from 'svelte/internal'
+
 	import { El } from '../el'
 
 	type $$Props = SliderKnobProps
 
-	export let value: $$Props['value'] = 0
-	export let connect: $$Props['connect'] = false
-	export let tooltip: $$Props['tooltip'] = false
-	export let name: $$Props['name'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
+	let {
+		value = $bindable(0),
+		connect = false,
+		tooltip = false,
+		name,
+		...restProps
+	}: $$Props = $props()
 
 	const { register, unregister, values, setValue } = getContext<SliderContext>('SLIDER')
 
@@ -32,13 +30,17 @@
 
 	const isDefined = (value: any) => typeof value !== 'undefined'
 
-	$: if (isDefined(id) && isDefined($values[id!])) {
-		value = $values[id!]
-	}
+	$effect(() => {
+		if (isDefined(id) && isDefined($values[id!])) {
+			value = $values[id!]
+		}
+	})
 
-	$: if (isDefined(id) && isDefined(value)) {
-		setValue(id!, value!)
-	}
+	$effect(() => {
+		if (isDefined(id) && isDefined(value)) {
+			setValue(id!, value!)
+		}
+	})
 </script>
 
-<El tag="input" type="hidden" {components} {name} {value} />
+<El {...restProps} tag="input" type="hidden" {name} {value} />

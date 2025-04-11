@@ -26,7 +26,7 @@ $text-aligns: 'start', 'center', 'end';
 @each $sizeName, $sizeValue in $displays-sizes {
 	@media (min-width: #{$sizeValue}) {
 		@each $text-align in $text-aligns {
-			.#{$prefix}el-text-align-#{$sizeName}-#{$text-aligns} {
+			.#{$prefix}el-text-align-#{$sizeName}-#{$text-align} {
 				text-align: #{$text-align};
 				justify-content: #{$text-align};
 			}

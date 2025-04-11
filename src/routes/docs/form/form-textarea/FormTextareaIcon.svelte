@@ -3,8 +3,13 @@
 </script>
 
 <FormTextarea label="Name">
-	<Icon slot="start-icon" name="user" />
+	{#snippet startIconSnippet()}
+		<Icon name="user" />
+	{/snippet}
 </FormTextarea>
+
 <FormTextarea label="Name" required>
-	<Icon slot="end-icon" name="user" />
+	{#snippet endIconSnippet()}
+		<Icon name="user" />
+	{/snippet}
 </FormTextarea>

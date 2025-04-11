@@ -3,11 +3,15 @@
 </script>
 
 <DatePicker placeholder="start Icon">
-	<Icon name="calendar" slot="start" />
+	{#snippet startSnippet()}
+		<Icon name="calendar" />
+	{/snippet}
 </DatePicker>
 
 <El p="3" />
 
 <DatePicker placeholder="end Icon">
-	<Icon name="calendar" slot="end" />
+	{#snippet endSnippet()}
+		<Icon name="calendar" />
+	{/snippet}
 </DatePicker>

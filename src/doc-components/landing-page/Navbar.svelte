@@ -13,14 +13,16 @@
 		OffcanvasHeader,
 	} from '$lib'
 
-	export let theme = 'tabler'
-	export let dark = false
-	export let redditLink = ''
-	export let githubLink = ''
-	export let replLink = ''
-	export let discordLink = ''
+	let {
+		theme = $bindable('tabler'),
+		dark = $bindable(false),
+		redditLink,
+		githubLink,
+		replLink,
+		discordLink,
+	} = $props()
 
-	let show = false
+	let show = $state(false)
 </script>
 
 <El container="xl" mx="auto" position="absolute" start="0" end="0" top="0" p="3" class="p-md-4">
@@ -28,7 +30,7 @@
 		<Logo height="34" dMd="none" />
 		<Logo d="none" dMd="block" />
 
-		<El vAlign="middle" d="block" dMd="none" on:click={() => (show = !show)}>
+		<El vAlign="middle" d="block" dMd="none" onclick={() => (show = !show)}>
 			<Icon size="xl" name="menu-2" />
 		</El>
 		<El d="none" dMd="flex" alignItems="center">
@@ -48,11 +50,11 @@
 					{/if}
 				</Button>
 				<DropdownMenu>
-					<DropdownItem on:click={() => (theme = 'tabler')}>Tabler</DropdownItem>
-					<DropdownItem on:click={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
+					<DropdownItem onclick={() => (theme = 'tabler')}>Tabler</DropdownItem>
+					<DropdownItem onclick={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
-			<Button outline color="light" on:click={() => (dark = !dark)}>
+			<Button outline color="light" onclick={() => (dark = !dark)}>
 				{#if dark}
 					<Icon name="sun" />
 				{:else}
@@ -85,11 +87,11 @@
 					{/if}
 				</Button>
 				<DropdownMenu>
-					<DropdownItem on:click={() => (theme = 'tabler')}>Tabler</DropdownItem>
-					<DropdownItem on:click={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
+					<DropdownItem onclick={() => (theme = 'tabler')}>Tabler</DropdownItem>
+					<DropdownItem onclick={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
-			<Button outline color="light" on:click={() => (dark = !dark)}>
+			<Button outline color="light" onclick={() => (dark = !dark)}>
 				{#if dark}
 					<Icon name="sun" />
 				{:else}

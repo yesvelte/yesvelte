@@ -1,35 +1,35 @@
 <script lang="ts">
 	import { getContext } from 'svelte'
-	import { get_current_component } from 'svelte/internal'
+
 	import { El } from '../el'
 	import type { TableCellProps } from './Table.types'
 
 	type $$Props = TableCellProps
 
-	export let tag: $$Props['tag'] = 'td'
-	export let componentName: $$Props['componentName'] = 'table-cell'
-	export let color: $$Props['color'] = undefined
-	export let truncate: $$Props['truncate'] = undefined
-	export let active: $$Props['active'] = undefined
-
-	const components = [
-		{ component: get_current_component(), except: [] },
-		...($$props.components ?? []),
-	]
-
-	let head = getContext('TABLE:HEAD') ?? false
-
-	$: cssProps = {
+	let {
+		tag = 'td',
+		componentName = 'table-cell',
 		color,
 		truncate,
 		active,
-	}
+		children,
+		...restProps
+	}: $$Props = $props()
 
-	$: {
-		tag = head ? 'th' : 'td'
-	}
+	let head = getContext('TABLE:HEAD') ?? false
+
+	let props: $$Props = $derived({
+		...restProps,
+		componentName,
+		tag: head ? 'th' : 'td',
+		cssProps: {
+			color,
+			truncate,
+			active,
+		},
+	})
 </script>
 
-<El {components} {...$$restProps} {cssProps} {componentName} {tag}>
-	<slot />
+<El {...props}>
+	{@render children?.()}
 </El>

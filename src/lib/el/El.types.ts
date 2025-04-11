@@ -1,4 +1,4 @@
-import type { SvelteComponent } from 'svelte'
+import type { Snippet, SvelteComponent } from 'svelte'
 
 // Theme Colors
 export type ThemeColors =
@@ -218,7 +218,7 @@ export interface CssProps {
 	clearfix?: boolean
 	ratio?: DisplayRatioTypes
 	sticky?: DisplayStickyTypes
-	fixed?: DisplayFixedTypes
+	fixed?: DisplayFixedTypes | any
 	d?: DisplayTypes
 	dSm?: DisplayTypes
 	dMd?: DisplayTypes
@@ -299,7 +299,7 @@ export interface CssProps {
 	orderXxl?: ColOrders
 
 	//Col Offset
-	offset?: OffsetSizes
+	offset?: OffsetSizes | any
 	offsetSm?: OffsetSizes
 	offsetMd?: OffsetSizes
 	offsetLg?: OffsetSizes
@@ -333,8 +333,9 @@ export interface CssProps {
 	justifyContent?: JustifyContentTypes
 }
 
-export interface ElProps extends CssProps {
+export interface ElProps extends CssProps, Record<string, any> {
 	id?: string
+	children?: Snippet | any
 	class?: string
 	tag?: HTMLTags
 	element?: HTMLElement
@@ -342,7 +343,7 @@ export interface ElProps extends CssProps {
 	components?: SvelteComponent[]
 	cssProps?: object
 	value?: unknown
-	title?: string
+	// title?: string
 	tabindex?: string | number
 	role?: string
 	'aria-current'?: string
