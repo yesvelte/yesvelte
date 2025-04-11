@@ -22,9 +22,9 @@
 	</Doc>
 
 	<Doc title="Color">
-		<p slot="description">
+		{#snippet description()}
 			You can change color of steps using <code>color</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./StepsColor.svelte">
 			<StepsColor />
 		</Preview>

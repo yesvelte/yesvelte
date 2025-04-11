@@ -40,9 +40,9 @@
 	</Doc>
 
 	<Doc title="Layout">
-		<p slot="description">
+		{#snippet description()}
 			You can set Column width of FormCheckbox using <code>row</code> and <code>col</code> props.
-		</p>
+		{/snippet}
 		<Preview src="./FormCheckboxColumn.svelte">
 			<FormCheckboxColumn />
 		</Preview>

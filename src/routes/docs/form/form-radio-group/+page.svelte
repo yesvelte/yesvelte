@@ -48,9 +48,9 @@
 	</Doc>
 
 	<Doc title="Binding">
-		<p slot="description">
+		{#snippet description()}
 			Set an array of objects to <code>items</code> property and define <code>label</code>.
-		</p>
+		{/snippet}
 
 		<Preview src="./FormRadioGroupArrayBinding.svelte">
 			<FormRadioGroupArrayBinding />

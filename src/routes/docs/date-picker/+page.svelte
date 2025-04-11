@@ -27,19 +27,19 @@
 	</Doc>
 
 	<Doc title="Formatter">
-		<p slot="description">
+		{#snippet description()}
 			You can change display format of the date using <code>formatText</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./DatepickerFormatter.svelte">
 			<DatepickerFormatter />
 		</Preview>
 	</Doc>
 
 	<Doc title="External library for format">
-		<p slot="description">
+		{#snippet description()}
 			The formats of this example is based on <a
 				href="https://momentjs.com/docs/#/displaying/format/">Format</a> of Moment.js.
-		</p>
+		{/snippet}
 		<Preview src="./DatepickerFormat.svelte">
 			<DatepickerFormat />
 		</Preview>
@@ -94,11 +94,11 @@
 	</Doc>
 
 	<Doc title="Options">
-		<p slot="description">
+		{#snippet description()}
 			DatePicker component internally uses <a href="https://litepicker.com/docs/options"
 				>LitePicker</a
 			>. which you can pass options to Litepicker instance using <code>options</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./DatepickerCustom.svelte">
 			<DatepickerCustom />
 		</Preview>

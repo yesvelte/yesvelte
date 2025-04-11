@@ -11,16 +11,16 @@
 </script>
 
 <Page title="Radio">
-	<p slot="description">
+	{#snippet description()}
 		<code>Radio</code> component is a wrapper for the native <code>input[type="radio"]</code> element.
-	</p>
+	{/snippet}
 	<Doc title="Default">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>label</code> property to set the radio's label. Also, label
 			<code>slot</code>
 			provides for complex contents. If you don't set neither <code>label</code> property nor
 			<code>label</code> slot, the radio will be rendered without label.
-		</p>
+		{/snippet}
 	</Doc>
 	<Preview src="./RadioLabels.svelte">
 		<RadioLabels />
@@ -51,25 +51,25 @@
 	</Doc>
 
 	<Doc title="Inline">
-		<p slot="description">
+		{#snippet description()}
 			Group radios on the same horizontal row by setting <code>inline</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./RadioInline.svelte">
 			<RadioInline />
 		</Preview>
 	</Doc>
 
 	<Doc title="Reverse">
-		<p slot="description">
+		{#snippet description()}
 			Put radios on the opposite side with the <code>reverse</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./RadioReverse.svelte">
 			<RadioReverse />
 		</Preview>
 	</Doc>
 
 	<Doc title="Example">
-		<p slot="description">Here is a complex example for payment card selection.</p>
+		{#snippet description()}Here is a complex example for payment card selection.{/snippet}
 		<Preview src="./RadioExample.svelte">
 			<RadioExample />
 		</Preview>

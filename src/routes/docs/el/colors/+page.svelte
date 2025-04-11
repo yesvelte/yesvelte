@@ -11,7 +11,7 @@
 hierarchy. They can also be used to create visual excitement and draw attention to parts of your
 layout.">
 	<Doc title="Theme colors">
-		<div slot="description">
+		{#snippet description()}
 			<p>
 				Theme colors are used throughout the component library to provide a consistent design that
 				can be adapted to your brand. Theme color has these variant names:
@@ -23,7 +23,7 @@ layout.">
 				You can use the colors to customize the design of components, indicate different states or
 				suggest actions you want users to take.
 			</p>
-		</div>
+		{/snippet}
 		<Preview src="./ColorsTheme.svelte">
 			<div class="custom-class text-light">
 				<ColorsTheme />
@@ -32,7 +32,7 @@ layout.">
 	</Doc>
 
 	<Doc title="Named colors">
-		<div slot="description">
+		{#snippet description()}
 			<p>
 				Named colors are used throughout the component library to provide a consistent design that
 				can be adapted to your brand.
@@ -41,7 +41,7 @@ layout.">
 				You can use the colors to customize the design of components, indicate different states or
 				suggest actions you want users to take.
 			</p>
-		</div>
+		{/snippet}
 		<Preview src="./ColorsNamed.svelte">
 			<div class="custom-class text-light">
 				<ColorsNamed />
@@ -50,20 +50,18 @@ layout.">
 	</Doc>
 
 	<Doc title="Social colors">
-		<div slot="description">
-			<p>
-				Social colors are used throughout the component library to provide a consistent design that
-				can be adapted to your brand. You can use the colors to customize the design of components,
-				indicate different states or suggest actions you want users to take. Choose one of the
-				available colors from the social color palette. Available social colors are:
-				<code>facebook</code>, <code>twitter</code>, <code>google</code>, <code>youtube</code>,
-				<code>vimeo</code>,
-				<code>linkedin</code>, <code>dribbble</code>, <code>github</code>, <code>instagram</code>,
-				<code>pinterest</code>,
-				<code>vk</code>, <code>rss</code>, <code>flickr</code>, <code>bitbucket</code>, and
-				<code>tabler</code>.
-			</p>
-		</div>
+		{#snippet description()}
+			Social colors are used throughout the component library to provide a consistent design that
+			can be adapted to your brand. You can use the colors to customize the design of components,
+			indicate different states or suggest actions you want users to take. Choose one of the
+			available colors from the social color palette. Available social colors are:
+			<code>facebook</code>, <code>twitter</code>, <code>google</code>, <code>youtube</code>,
+			<code>vimeo</code>,
+			<code>linkedin</code>, <code>dribbble</code>, <code>github</code>, <code>instagram</code>,
+			<code>pinterest</code>,
+			<code>vk</code>, <code>rss</code>, <code>flickr</code>, <code>bitbucket</code>, and
+			<code>tabler</code>.
+		{/snippet}
 		<Preview src="./ColorsSocial.svelte">
 			<div class="custom-class text-light">
 				<ColorsSocial />

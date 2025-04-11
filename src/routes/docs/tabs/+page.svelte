@@ -13,7 +13,7 @@
 	title="Tabs"
 	description="Tabs are used to split content between multiple sections. They are useful when you have too much content to fit on a single page.">
 	<Doc title="Basic usage">
-		<p slot="description">
+		{#snippet description()}
 			To use tabs, you need to wrap the <code>&lt;Tabs&gt;</code> component around the
 			<code>&lt;TabList&gt;</code>
 			and <code>&lt;TabContent&gt;</code> components.
@@ -23,44 +23,44 @@
 			component inside the <code>&lt;TabList&gt;</code> component. To display the content of the
 			tab, you need to use the <code>&lt;TabPanel&gt;</code> component inside the
 			<code>&lt;TabContent&gt;</code> component.
-		</p>
+		{/snippet}
 		<Preview src="./TabsDefault.svelte">
 			<TabsDefault />
 		</Preview>
 	</Doc>
 
 	<Doc title="Wit Selected Tab">
-		<p slot="description">
+		{#snippet description()}
 			To select another tab instead of first tab initially, you can use <code>active</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./TabsWithSelectedItem.svelte">
 			<TabsWithSelectedItem />
 		</Preview>
 	</Doc>
 
 	<Doc title="Grow">
-		<p slot="description">
+		{#snippet description()}
 			To make the tabs grow to fill all the available space, you can use the <code>grow</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./TabsGrow.svelte">
 			<TabsGrow />
 		</Preview>
 	</Doc>
 
 	<Doc title="Vertical">
-		<p slot="description">
+		{#snippet description()}
 			To make the tabs vertical, you can use the <code>vertical</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./TabsVertical.svelte">
 			<TabsVertical />
 		</Preview>
 	</Doc>
 
 	<Doc title="Icons">
-		<p slot="description">
+		{#snippet description()}
 			To add icons to the tabs, you can use the <code>&lt;Icon&gt;</code> component inside the
 			<code>&lt;TabItem&gt;</code> component.
-		</p>
+		{/snippet}
 		<Preview src="./TabsIcons.svelte">
 			<TabsIcons />
 		</Preview>

@@ -15,10 +15,12 @@
 		{#snippet startIconSnippet()}
 			<Icon name="mail" />
 		{/snippet}
-		<Button slot="end" onclick={validate}>
-			<Icon name="check" />
-			<Tooltip>Check if email is valid</Tooltip>
-		</Button>
+		{#snippet endSnippet()}
+			<Button onclick={validate}>
+				<Icon name="check" />
+				<Tooltip>Check if email is valid</Tooltip>
+			</Button>
+		{/snippet}
 	</FormInput>
 	<FormInput col="6" label="Password" required placeholder="Enter your password...">
 		{#snippet startIconSnippet()}

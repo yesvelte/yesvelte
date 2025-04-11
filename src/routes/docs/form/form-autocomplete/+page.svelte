@@ -21,10 +21,10 @@
 </script>
 
 <Page title="FormAutocomplete">
-	<p slot="description">
+	{#snippet description()}
 		FormAutocomplete supports all props and events of <a href="/docs/autocomplete">Autocomplete</a> and
 		also have some additional features
-	</p>
+	{/snippet}
 
 	<Doc title="Label">
 		<Preview src="./FormAutocompleteLabel.svelte">
@@ -51,20 +51,20 @@
 	</Doc>
 
 	<Doc title="Complex Items">
-		<p slot="description">
+		{#snippet description()}
 			You can have complex objects as item and you can use <code>key</code>
 			prop to extract the data that you need from Autocomplete.
-		</p>
+		{/snippet}
 		<Preview src="./FormAutocompleteObject.svelte">
 			<FormAutocompleteObject />
 		</Preview>
 	</Doc>
 
 	<Doc title="State">
-		<p slot="description">
+		{#snippet description()}
 			You can set the <code>valid</code> or <code>invalid</code> boolean properties to apply the valid
 			or invalid state to a Autocomplete.
-		</p>
+		{/snippet}
 		<Preview src="./FormAutocompleteStates.svelte">
 			<FormAutocompleteStates />
 		</Preview>
@@ -127,9 +127,9 @@
 	</Doc>
 
 	<Doc title="Layout">
-		<p slot="description">
+		{#snippet description()}
 			You can set width of each Form elements in a form using <code>col</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./FormAutocompleteColumn.svelte">
 			<FormAutocompleteColumn />
 		</Preview>

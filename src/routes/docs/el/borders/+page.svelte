@@ -24,10 +24,10 @@
 	</Preview>
 
 	<Doc title="Colors">
-		<p slot="description">
+		{#snippet description()}
 			To set the border color of an element, use the <code>borderColor</code> property. By default, this
 			sets all border sides to the same color. You can also set the border color individually.
-		</p>
+		{/snippet}
 		<Preview src="./BorderColor.svelte">
 			<div class="custom-class">
 				<BorderColor />
@@ -36,10 +36,10 @@
 	</Doc>
 
 	<Doc title="Width">
-		<p slot="description">
+		{#snippet description()}
 			To set the border width of an element, use the <code>border</code> property. By default, this sets
 			all border sides to the same width. You can also set the border width individually.
-		</p>
+		{/snippet}
 		<Preview src="./BorderWidth.svelte">
 			<div class="custom-class">
 				<BorderWidth />
@@ -48,10 +48,10 @@
 	</Doc>
 
 	<Doc title="Radius">
-		<p slot="description">
+		{#snippet description()}
 			To set the border radius of an element, use the <code>borderRadius</code> property. By default,
 			this sets all border sides to the same radius. You can also set the border radius individually.
-		</p>
+		{/snippet}
 		<Preview src="./BorderRadius.svelte">
 			<div class="custom-class radius-sample">
 				<BorderRadius />
@@ -60,10 +60,10 @@
 	</Doc>
 
 	<Doc title="Radius Sizes">
-		<p slot="description">
+		{#snippet description()}
 			To set the border radius size of an element, use the <code>borderRadiusSize</code> property. By
 			default, this sets all border sides to the same radius size.
-		</p>
+		{/snippet}
 		<Preview src="./BorderRadiusSize.svelte">
 			<div class="custom-class">
 				<BorderRadiusSize />

@@ -7,12 +7,12 @@
 </script>
 
 <Page title="Introduction">
-	<p slot="description">
+	{#snippet description()}
 		Welcome to the YeSvelte documentation website! YeSvelte is a powerful and flexible Svelte UI
 		component library, designed to help developers build enterprise-grade web applications quickly
 		and easily. With a focus on rapid application development and framework independence, YeSvelte
 		is the perfect complement to any CSS framework.
-	</p>
+	{/snippet}
 	<p>
 		In this documentation, you will find everything you need to know to get started with YeSvelte,
 		including installation instructions, usage examples, and detailed information about each
@@ -54,7 +54,7 @@
 	</Doc>
 
 	<Doc title="El component">
-		<p slot="description">
+		{#snippet description()}
 			The <code>El</code> component is the foundational building block of the YeSvelte component
 			library. It serves as a versatile element that other components are based on, providing a wide
 			range of utility props to customize its appearance.
@@ -68,7 +68,7 @@
 			border styling, and spacing control, you have the flexibility to craft visually appealing and highly
 			functional components that suit your specific design needs. you can learn more about El features
 			in "Core Features" section of our documentation.
-		</p>
+		{/snippet}
 		<El mt="4">
 			<El row>
 				<El d="flex" gap="3" style="flex-wrap: wrap">
@@ -96,17 +96,17 @@
 	</Doc>
 
 	<Doc title="Theme Support">
-		<p slot="description">
+		{#snippet description()}
 			YeSvelte components are independent from CSS Frameworks and works with any css framework
 			including bootstrap, tailwind and pure css styles. you can learn more about Theming in
 			<a href="/docs/theming">Theming</a>
 			section.
 			<!--  -->
-		</p>
+		{/snippet}
 	</Doc>
 
 	<Doc title="Components">
-		<p slot="description">Here is list of All YeSvelte components:</p>
+		{#snippet description()}Here is list of All YeSvelte components:{/snippet}
 
 		<El mt="4">
 			<El row>

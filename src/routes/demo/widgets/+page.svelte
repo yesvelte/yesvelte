@@ -40,7 +40,9 @@
 					</El>
 					<El col="auto" alignSelf="center">
 						<Dropdown placement="bottom-end" arrow={false}>
-							<Icon name="dots-vertical" slot="target" />
+							{#snippet targetSnippet()}
+								<Icon name="dots-vertical" />
+							{/snippet}
 							<DropdownMenu>
 								<DropdownItem href="#">Import</DropdownItem>
 								<DropdownItem href="#">Export</DropdownItem>
@@ -72,7 +74,9 @@
 					</El>
 					<El col="auto" alignSelf="center">
 						<Dropdown placement="bottom-end" arrow={false}>
-							<Icon name="dots-vertical" slot="target" />
+							{#snippet targetSnippet()}
+								<Icon name="dots-vertical" />
+							{/snippet}
 							<DropdownMenu>
 								<DropdownItem href="#">Import</DropdownItem>
 								<DropdownItem href="#">Export</DropdownItem>
@@ -249,7 +253,9 @@
 				</El>
 				<El col="auto">
 					<Dropdown placement="bottom-end" arrow={false}>
-						<Icon name="dots-vertical" slot="target" />
+						{#snippet targetSnippet()}
+							<Icon name="dots-vertical" />
+						{/snippet}
 						<DropdownMenu>
 							<DropdownItem href="#">Import</DropdownItem>
 							<DropdownItem href="#">Export</DropdownItem>
@@ -279,7 +285,9 @@
 				</El>
 				<El col="auto">
 					<Dropdown placement="bottom-end" arrow={false}>
-						<Icon name="dots-vertical" slot="target" />
+						{#snippet targetSnippet()}
+							<Icon name="dots-vertical" />
+						{/snippet}
 						<DropdownMenu>
 							<DropdownItem href="#">Import</DropdownItem>
 							<DropdownItem href="#">Export</DropdownItem>

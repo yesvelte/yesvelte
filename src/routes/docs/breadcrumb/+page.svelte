@@ -6,11 +6,11 @@
 </script>
 
 <Page title="Breadcrumb">
-	<p slot="description">
+	{#snippet description()}
 		Breadcrumbs are used to show the current website or app location and reduce the number of
 		actions users have to take. Thanks to breadcrumbs, they can easily navigate within the website
 		hierarchy and better understand its structure.
-	</p>
+	{/snippet}
 	<Doc title="Default">
 		<Preview src="./BreadcrumbDefault.svelte">
 			<BreadcrumbDefault />
@@ -18,10 +18,10 @@
 	</Doc>
 
 	<Doc title="Separator">
-		<p slot="description">
+		{#snippet description()}
 			If you wish to use different separators, set the <code>separator</code> prop. Depending on the
 			aesthetics of your design, you can choose dots, bullets or arrows.
-		</p>
+		{/snippet}
 		<Preview src="./BreadcrumbSeperator.svelte">
 			<BreadcrumbSeperator />
 		</Preview>

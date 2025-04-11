@@ -49,7 +49,9 @@
 						</El>
 					</El>
 					<Input type={textType} placeholder="Your password">
-						<Button slot="end" onclick={onClick}><Icon name={icon} /></Button>
+						{#snippet endSnippet()}
+							<Button onclick={onClick}><Icon name={icon} /></Button>
+						{/snippet}
 					</Input>
 				</FormField>
 

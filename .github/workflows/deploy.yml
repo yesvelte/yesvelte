@@ -24,7 +24,7 @@ jobs:
       - run: git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       # incremnet package version and create a commit
-      - run: npm version prerelease --preid=next -m "Release %s"
+      # - run: npm version prerelease --preid=next -m "Release %s"
 
       - uses: CasperWA/push-protected@v2
         with:

@@ -11,10 +11,10 @@
 </script>
 
 <Page title="FormTextarea">
-	<p slot="description">
+	{#snippet description()}
 		FormTextarea is a textarea component for forms. It is a wrapper around textarea element with
 		some additional features.
-	</p>
+	{/snippet}
 
 	<Doc title="Label">
 		<Preview src="./FormTextareaDefault.svelte">
@@ -23,11 +23,11 @@
 	</Doc>
 
 	<Doc title="Hint">
-		<p slot="description">
+		{#snippet description()}
 			Set <code>hint</code> string property to show some useful information about the input. You can
 			also use
 			<code>hint</code> slot.
-		</p>
+		{/snippet}
 		<Preview src="./FormTextareaHint.svelte">
 			<FormTextareaHint />
 		</Preview>

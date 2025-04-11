@@ -13,13 +13,13 @@
 </script>
 
 <Page title="FormDatePicker">
-	<p slot="description">
+	{#snippet description()}
 		<code>FormDatePicker</code> component supports all props and events of
 		<a href="/docs/date-picker">DatePicker</a>
 		and also have some additional features like <code>label</code>, <code>hint</code>,
 		<code>required</code>,
 		<code>cols</code>, etc. to make it easy to use in a form.
-	</p>
+	{/snippet}
 
 	<Doc title="Label">
 		<Preview src="./FormDatePickerLabel.svelte">

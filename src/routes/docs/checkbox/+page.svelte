@@ -11,28 +11,28 @@
 </script>
 
 <Page title="Checkbox">
-	<p slot="description">
+	{#snippet description()}
 		<code>Checkbox</code> component is a wrapper for <code>input</code> element with type
 		<code>checkbox</code>.
-	</p>
+	{/snippet}
 
 	<Doc title="Default">
-		<p slot="description">
+		{#snippet description()}
 			You can use the <code>label</code> property to display in front of the checkbox. Also, you can
 			use the default
 			<code>slot</code> to display a custom label.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxLabel.svelte">
 			<CheckboxLabel />
 		</Preview>
 	</Doc>
 
 	<Doc title="Description">
-		<p slot="description">
+		{#snippet description()}
 			Checkbox can have description, to display the description below the checkbox. description can
 			have custom color. Also, you can use the slot <code>name="description"</code> to display a custom
 			description.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxDescription.svelte">
 			<CheckboxDescription />
 		</Preview>
@@ -63,20 +63,20 @@
 	</Doc>
 
 	<Doc title="Inline">
-		<p slot="description">
+		{#snippet description()}
 			Checkbox can be inline, to display the checkbox in the same line with the sibling element. Use
 			the <code>inline</code>
 			boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxInline.svelte">
 			<CheckboxInline />
 		</Preview>
 	</Doc>
 
 	<Doc title="Reverse">
-		<p slot="description">
+		{#snippet description()}
 			Put checkboxes on the opposite side with the <code>reverse</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxReverse.svelte">
 			<CheckboxReverse />
 		</Preview>

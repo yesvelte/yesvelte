@@ -42,13 +42,15 @@
 				<Icon name="brand-discord-filled" />Discord</Button>
 			<Button target="_blank" href={replLink} p="3" link textColor="light">Try on Repl</Button>
 			<Dropdown autoClose p="3" placement="bottom-end">
-				<Button slot="target" color="light" outline>
-					{#if theme === 'tabler'}
-						Tabler
-					{:else}
-						DaisyUI
-					{/if}
-				</Button>
+				{#snippet targetSnippet()}
+					<Button color="light" outline>
+						{#if theme === 'tabler'}
+							Tabler
+						{:else}
+							DaisyUI
+						{/if}
+					</Button>
+				{/snippet}
 				<DropdownMenu>
 					<DropdownItem onclick={() => (theme = 'tabler')}>Tabler</DropdownItem>
 					<DropdownItem onclick={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>
@@ -79,13 +81,15 @@
 		<Button target="_blank" href={replLink} p="3" link textColor="light">Try on Repl</Button>
 		<El class="w-100" d="flex" alignItems="center">
 			<Dropdown p="3" class="flex-1">
-				<Button w="100" slot="target" color="light" outline>
-					{#if theme === 'tabler'}
-						Tabler
-					{:else}
-						DaisyUI
-					{/if}
-				</Button>
+				{#snippet targetSnippet()}
+					<Button w="100" color="light" outline>
+						{#if theme === 'tabler'}
+							Tabler
+						{:else}
+							DaisyUI
+						{/if}
+					</Button>
+				{/snippet}
 				<DropdownMenu>
 					<DropdownItem onclick={() => (theme = 'tabler')}>Tabler</DropdownItem>
 					<DropdownItem onclick={() => (theme = 'daisyui')}>DaisyUI</DropdownItem>

@@ -11,10 +11,10 @@
 </script>
 
 <Page title="RadioGroup">
-	<p slot="description">
+	{#snippet description()}
 		<code>RadioGroup</code> component is a wrapper for <code>Radio</code> component, it can be used to
 		group multiple radios in one component.
-	</p>
+	{/snippet}
 	<Doc title="Default">
 		<Preview src="./RadioGroupBasic.svelte">
 			<RadioGroupBasic />
@@ -22,9 +22,9 @@
 	</Doc>
 
 	<Doc title="Custom label">
-		<p slot="description">
+		{#snippet description()}
 			You can use default slot to pass a custom label for <code>RadioGroup</code>.
-		</p>
+		{/snippet}
 
 		<Preview src="./RadioGroupLabel.svelte">
 			<RadioGroupLabel />
@@ -32,28 +32,28 @@
 	</Doc>
 
 	<Doc title="Colors">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>color</code> property to define background color for all <code>Radios</code>
 			inside the <code>RadioGroup</code>
-		</p>
+		{/snippet}
 		<Preview src="./RadioGroupColor.svelte">
 			<RadioGroupColor />
 		</Preview>
 	</Doc>
 
 	<Doc title="Inline">
-		<p slot="description">
+		{#snippet description()}
 			Group radios on the same horizontal row by setting <code>inline</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./RadioGroupInline.svelte">
 			<RadioGroupInline />
 		</Preview>
 	</Doc>
 
 	<Doc title="Reverse">
-		<p slot="description">
+		{#snippet description()}
 			Put radios on the opposite side with the <code>reverse</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./RadioGroupReverse.svelte">
 			<RadioGroupReverse />
 		</Preview>
@@ -66,9 +66,9 @@
 	</Doc>
 
 	<Doc title="Binding">
-		<p slot="description">
+		{#snippet description()}
 			Set an array of objects to <code>items</code> property and define <code>label</code>.
-		</p>
+		{/snippet}
 		<Preview src="./RadioGroupArrayBinding.svelte">
 			<RadioGroupArrayBinding />
 		</Preview>

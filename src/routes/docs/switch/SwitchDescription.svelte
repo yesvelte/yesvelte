@@ -6,7 +6,7 @@
 </script>
 
 <Switch bind:value={value1} label="Switch 1: {value1}">
-	<div slot="description">this is description slot</div>
+	{#snippet description()}this is description slot{/snippet}
 </Switch>
 
 <Switch bind:value={value2} label="Switch 2: {value2}" description="this is description prop" />

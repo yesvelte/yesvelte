@@ -6,31 +6,31 @@
 </script>
 
 <Page title="Icon">
-	<p slot="description">
+	{#snippet description()}
 		Free and open source icons designed to make your website or app attractive, visually consistent
 		and simply beautiful. See the icons documentation from
 		<a href="https://tabler-icons.io/" target="_blank" rel="noreferrer">tabler-icons</a>.
-	</p>
+	{/snippet}
 	<Doc title="Name">
-		<p slot="description">
+		{#snippet description()}
 			To use an icon, set the <code>name</code> prop to the icon name.
-		</p>
+		{/snippet}
 		<Preview src="./IconDefault.svelte">
 			<IconDefault />
 		</Preview>
 	</Doc>
 
 	<Doc title="Color">
-		<p slot="description">
+		{#snippet description()}
 			Set the <code>color</code> prop to change your icons color.
-		</p>
+		{/snippet}
 		<Preview src="./IconColors.svelte">
 			<IconColors />
 		</Preview>
 	</Doc>
 
 	<Doc title="Size">
-		<p slot="description">
+		{#snippet description()}
 			To use a different icon size, set the <code>size</code> prop to <code>sm</code>,
 			<code>md</code>
 			or <code>lg</code>,
@@ -44,7 +44,7 @@
 			<code>7x</code>,
 			<code>8x</code>,
 			<code>9x</code>.
-		</p>
+		{/snippet}
 		<Preview src="./IconSizes.svelte">
 			<IconSizes />
 		</Preview>

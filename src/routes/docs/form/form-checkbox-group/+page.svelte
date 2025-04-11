@@ -11,10 +11,10 @@
 </script>
 
 <Page title="FormCheckboxGroup">
-	<p slot="description">
+	{#snippet description()}
 		FormCheckboxGroup is similar to <a href="/docs/checkbox-group">CheckboxGroup</a> component with decoration
 		features inside the form.
-	</p>
+	{/snippet}
 
 	<Doc title="Basic usage">
 		<Preview src="./FormCheckboxGroupBasic.svelte">
@@ -59,10 +59,10 @@
 	</Doc>
 
 	<Doc title="Layout">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>row</code> and <code>col</code> properties to change layout of the
 			<code>FormCheckboxes</code> inside forms.
-		</p>
+		{/snippet}
 		<Preview src="./FormCheckboxGroupLayout.svelte">
 			<FormCheckboxGroupLayout />
 		</Preview>

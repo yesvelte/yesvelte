@@ -5,10 +5,10 @@
 </script>
 
 <Page title="Event Forwarding">
-	<p slot="description">
+	{#snippet description()}
 		All YeSvelte components support Event forwarding which you can use <code
 			>on:(all DOM events)</code> on any component that you want.
-	</p>
+	{/snippet}
 
 	<Doc title="Default">
 		<Preview src="./ForwardEventsDefault.svelte">
@@ -17,10 +17,10 @@
 	</Doc>
 
 	<Doc title="With Modifiers">
-		<p slot="description">
+		{#snippet description()}
 			You can also use event modifiers with YeSvelte components, instead of | (pipe operator) you
 			should use <code>!</code> operator
-		</p>
+		{/snippet}
 		<Preview src="./ForwardEventsModifiers.svelte">
 			<ForwardEventsModifiers />
 		</Preview>

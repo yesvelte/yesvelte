@@ -48,9 +48,9 @@
 		</Doc> -->
 
 	<Doc title="Striped">
-		<p slot="description">
+		{#snippet description()}
 			You can change colors of Even/Odd rows by adding <code>striped</code> prop.
-		</p>
+		{/snippet}
 		<Preview src="./TableStriped.svelte">
 			<div class="custom-class">
 				<TableStriped />

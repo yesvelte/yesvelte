@@ -9,7 +9,7 @@
 	title="Spacing"
 	description="Spacing is used to create space around elements, outside of any defined borders. It can be used to create space between elements or to create space around elements.">
 	<Doc title="Margins">
-		<div slot="description">
+		{#snippet description()}
 			Margins are used to create space around elements, outside of any defined borders.
 			<code>m</code> property is used to set <b>all margin size</b>. It accepts the following
 			values:
@@ -37,7 +37,7 @@
 			It accepts the same values as <code>m</code>.<br />
 			<code>my</code> property is used to set the <b>margin-top</b> and <b>margin-bottom</b> size.
 			It accepts the same values as <code>m</code>.<br />
-		</div>
+		{/snippet}
 		<Preview src="./SpacingMargin.svelte">
 			<div class="custom-class">
 				<SpacingMargin />
@@ -46,7 +46,7 @@
 	</Doc>
 
 	<Doc title="Paddings">
-		<div slot="description">
+		{#snippet description()}
 			Paddings are used to create space around the content of an element, inside of any defined
 			borders.
 			<code>p</code> property is used to set <b>all paddings</b> size. It accepts the following
@@ -75,7 +75,7 @@
 			It accepts the same values as <code>p</code>.<br />
 			<code>py</code> property is used to set the <b>padding-top</b> and <b>padding-bottom</b> size.
 			It accepts the same values as <code>p</code>.<br />
-		</div>
+		{/snippet}
 	</Doc>
 	<Preview src="./SpacingPadding.svelte">
 		<div class="custom-class">

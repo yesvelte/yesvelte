@@ -4,7 +4,7 @@
 	import { navigations, type Navigation } from '../routes/docs/navigations'
 	import { Icon } from 'yesvelte/icon'
 
-	let {pathname = '', ...restProps} = $props()
+	let { pathname = '', ...restProps } = $props()
 
 	function isActive(navigation: Navigation, pathname: string) {
 		for (let child of navigation.children ?? []) {
@@ -14,7 +14,6 @@
 		}
 		return false
 	}
-
 </script>
 
 <Sidebar {...restProps}>
@@ -31,7 +30,9 @@
 						icon={menu.icon}
 						title={menu.title}
 						href={navigation.route + menu.route}>
-						<Icon slot="start" {pack} name={icon} />
+						{#snippet startSnippet()}
+							<Icon {pack} name={icon} />
+						{/snippet}
 					</SidebarItem>
 				{/each}
 			</SidebarItem>

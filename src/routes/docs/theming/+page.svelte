@@ -6,19 +6,19 @@
 </script>
 
 <Page title="Theming">
-	<p slot="description">
+	{#snippet description()}
 		The theming feature in YeSvelte allows you to customize the appearance of the components to
 		match your project's design system or visual preferences. By following our standard class naming
 		conventions, you can easily create your own themes using CSS.
 		<!--  -->
-	</p>
+	{#snippet description()}
 
 	<Doc title="CSS Naming Convention">
-		<p slot="description">
+		{#snippet description()}
 			YeSvelte follows a standard naming convention for CSS class names, making it simple to apply
 			your custom styles. The class names are designed to target specific elements and states within
 			the components.
-		</p>
+		{#snippet description()}
 		<p>
 			for example assume <code>Button</code> component, for default <code>.y-button</code> class is
 			applied, and you can customize style of all buttons, by overriding <code>.y-button</code>

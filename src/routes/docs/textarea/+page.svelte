@@ -24,9 +24,9 @@
 	</Doc>
 
 	<Doc title="Rows">
-		<p slot="description">
+		{#snippet description()}
 			You can set number of rows for Textarea using <code>rows</code> props.
-		</p>
+		{/snippet}
 		<Preview src="./TextareaRowCol.svelte">
 			<div class="custom-class">
 				<TextareaRowCol />

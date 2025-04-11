@@ -3,18 +3,26 @@
 </script>
 
 <FormTextarea label="Start Icon">
-	<Icon name="star" slot="start-icon" />
+	{#snippet startIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormTextarea>
 <El p="3" />
 <FormTextarea label="End Icon">
-	<Icon name="star" slot="end-icon" />
+	{#snippet endIconSnippet()}
+		<Icon name="star" />
+	{/snippet}
 </FormTextarea>
 <El p="3" />
 <FormTextarea label="Start Button">
-	<Button color="primary" slot="start">Start</Button>
+	{#snippet startSnippet()}
+		<Button color="primary">Start</Button>
+	{/snippet}
 </FormTextarea>
 <El p="3" />
 <FormTextarea label="End Button">
-	<Button color="primary" slot="end">Search</Button>
+	{#snippet endSnippet()}
+		<Button color="primary">Search</Button>
+	{/snippet}
 </FormTextarea>
 <El p="3" />

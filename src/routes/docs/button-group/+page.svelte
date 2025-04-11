@@ -8,9 +8,9 @@
 </script>
 
 <Page title="ButtonGroup">
-	<p slot="description">
+	{#snippet description()}
 		Group a <code>Button</code> series together on a single line or stack them in a vertical column.
-	</p>
+	{/snippet}
 	<Doc
 		title="Default"
 		description="Create a list of buttons using the `ButtonGroup` component to display different actions a user can take.">

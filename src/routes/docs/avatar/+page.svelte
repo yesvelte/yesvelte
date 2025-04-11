@@ -11,15 +11,15 @@
 </script>
 
 <Page title="Avatars">
-	<p slot="description">
+	{#snippet description()}
 		Avatars help customise various elements of a user interface and make the product experience more
 		personalised. They are often used in communication apps, collaboration tools and social media.
-	</p>
+	{/snippet}
 
 	<Doc title="Default">
-		<p slot="description">
+		{#snippet description()}
 			Use the <code>Avatar</code> component to add an avatar to your interface design for greater customisation.
-		</p>
+		{/snippet}
 		<Preview src="./AvatarDefault.svelte">
 			<div class="custom-class">
 				<AvatarDefault />
@@ -56,10 +56,10 @@
 	</Doc>
 
 	<Doc title="Image and Icon">
-		<p slot="description">
+		{#snippet description()}
 			Set an <code>image</code> as the background to make users easy to indentify and create a personalised
 			experience.
-		</p>
+		{/snippet}
 		<Preview src="./AvatarImage.svelte">
 			<div class="custom-class">
 				<AvatarImage />

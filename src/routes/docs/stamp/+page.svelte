@@ -6,11 +6,11 @@
 </script>
 
 <Page title="Stamps">
-	<p slot="description">
+	{#snippet description()}
 		Use stamp component to make the card view more attractive and eye catching. Stamp container
 		should have
 		<code>relative</code> position.
-	</p>
+	{/snippet}
 
 	<Doc title="Color">
 		<Preview src="./StampColor.svelte">

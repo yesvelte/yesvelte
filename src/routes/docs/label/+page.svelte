@@ -15,18 +15,18 @@
 	</Doc>
 
 	<Doc title="For">
-		<p slot="description">
+		{#snippet description()}
 			<code>for</code> property is used to connect Label with Form Elements.
-		</p>
+		{/snippet}
 		<Preview src="./LabelFor.svelte">
 			<LabelFor />
 		</Preview>
 	</Doc>
 
 	<Doc title="Required">
-		<p slot="description">
+		{#snippet description()}
 			<code>required</code> property is used to show a required Mark after the label text.
-		</p>
+		{/snippet}
 		<Preview src="./LabelRequired.svelte">
 			<LabelRequired />
 		</Preview>

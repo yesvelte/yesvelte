@@ -11,10 +11,10 @@
 </script>
 
 <Page title="CheckboxGroup">
-	<p slot="description">
+	{#snippet description()}
 		<code>CheckboxGroup</code> component is a wrapper for <code>Checkbox</code> component, it can be
 		used to group multiple checkboxes in one component.
-	</p>
+	{/snippet}
 
 	<Doc title="Default">
 		<Preview src="./CheckboxGroupDefault.svelte">
@@ -23,57 +23,57 @@
 	</Doc>
 
 	<Doc title="Label">
-		<p slot="description">
+		{#snippet description()}
 			You can use default slot to pass a custom label for <code>CheckboxGroup</code>.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupLabel.svelte">
 			<CheckboxGroupLabel />
 		</Preview>
 	</Doc>
 
 	<Doc title="Key">
-		<p slot="description">
+		{#snippet description()}
 			Using key prop you can to choose which field of object should bind to <code>value</code>.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupKey.svelte">
 			<CheckboxGroupKey />
 		</Preview>
 	</Doc>
 
 	<Doc title="Color">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>color</code> property to define background color for all
 			<code>Checkboxes</code>
 			inside the <code>CheckboxGroup</code>
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupColor.svelte">
 			<CheckboxGroupColor />
 		</Preview>
 	</Doc>
 
 	<Doc title="Inline">
-		<p slot="description">
+		{#snippet description()}
 			Group checkboxes on the same horizontal row by setting <code>inline</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupInline.svelte">
 			<CheckboxGroupInline />
 		</Preview>
 	</Doc>
 
 	<Doc title="Reverse">
-		<p slot="description">
+		{#snippet description()}
 			Put checkboxes on the opposite side with the <code>reverse</code> boolean property.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupReverse.svelte">
 			<CheckboxGroupReverse />
 		</Preview>
 	</Doc>
 
 	<Doc title="Binding">
-		<p slot="description">
+		{#snippet description()}
 			You can use <code>items</code> property to pass an array of items to
 			<code>CheckboxGroup</code> component.
-		</p>
+		{/snippet}
 		<Preview src="./CheckboxGroupItems.svelte">
 			<CheckboxGroupItems />
 		</Preview>

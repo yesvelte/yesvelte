@@ -38,11 +38,11 @@
 		</Preview>
 	</Doc>
 	<Doc title="Custom Toolbar">
-		<p slot="description">
+		{#snippet description()}
 			To customize toolbar items you may need to read <a
 				href="https://quilljs.com/docs/modules/toolbar/">Quilljs documentation</a> about all toolbar
 			options.
-		</p>
+		{/snippet}
 		<Preview src="./FormEditorCustomToolbar.svelte">
 			<FormEditorCustomToolbar />
 		</Preview>

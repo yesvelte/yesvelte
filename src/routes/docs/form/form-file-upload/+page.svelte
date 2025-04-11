@@ -10,30 +10,30 @@
 </script>
 
 <Page title="FormFileUpload">
-	<p slot="description">
+	{#snippet description()}
 		FormFileUpload is a wrapper around FileUploader component which can be used insisde forms. It
 		supports all props and events of
 		<a href="/docs/file-upload">FileUpload</a>
 		and also have some additional features.
-	</p>
+	{/snippet}
 
 	<Doc title="Label">
-		<p slot="description">
+		{#snippet description()}
 			Set <code>label</code> property to show FileUpload label's and bind to its id automatically.
 			<code>required</code> is a boolean property which show an indicator on label as well. You can
 			also use
 			<code>label</code> slot.
-		</p>
+		{/snippet}
 		<Preview src="./FormFileUploadDefault.svelte">
 			<FormFileUploadDefault />
 		</Preview>
 
 		<Doc title="Hint">
-			<p slot="description">
+			{#snippet description()}
 				Set <code>hint</code> string property to show some useful information about the FileUpload.
 				You can also use
 				<code>hint</code> slot.
-			</p>
+			{/snippet}
 			<Preview src="./FormFileUploadHint.svelte">
 				<FormFileUploadHint />
 			</Preview>
@@ -64,10 +64,10 @@
 		</Doc>
 
 		<Doc title="Layout">
-			<p slot="description">
+			{#snippet description()}
 				Use default <code>row</code> and <code>col</code> properties to change layout of the FormFileUploads
 				inside forms.
-			</p>
+			{/snippet}
 			<Preview src="./FormFileUploadLayout.svelte">
 				<FormFileUploadLayout />
 			</Preview>

@@ -18,18 +18,18 @@
 </script>
 
 <Page title="Cards">
-	<p slot="description">
+	{#snippet description()}
 		Cards are flexible user interface elements, which help organize content into meaningful sections
 		and make it easier to display on different screen sizes. Cards contain various smaller
 		components, such as images, text, links and buttons and may act as an entry to more detailed
 		information, helping users scan the page quickly and find the most relevant content.
-	</p>
+	{/snippet}
 
 	<Doc title="Default">
-		<p slot="description">
+		{#snippet description()}
 			Use the card and cardBody to create a card and use it as the basis for a more advanced card
 			design. A card is a perfect way to organize content and make it look neat and tidy.
-		</p>
+		{/snippet}
 		<Preview src="./CardBody.svelte">
 			<div class="custom-class">
 				<CardBody />
@@ -38,10 +38,10 @@
 	</Doc>
 
 	<Doc title="Title">
-		<p slot="description">
+		{#snippet description()}
 			Add a title to your card by adding title props. You can also place the title inside the
 			cardHeader slot to customize your header.
-		</p>
+		{/snippet}
 		<Preview src="./CardTitle.svelte">
 			<div class="custom-class"><CardTitle /></div>
 		</Preview>
@@ -72,10 +72,10 @@
 	</Doc>
 
 	<Doc title="Row deck">
-		<p slot="description">
+		{#snippet description()}
 			Add the .row-deck (it's tabler helper) class to .row, if you want to display several cards
 			next to one another. Thanks to that, they will all have the same height.
-		</p>
+		{/snippet}
 		<Preview src="./CardRow.svelte">
 			<div class="custom-class"><CardRow /></div>
 		</Preview>
@@ -122,21 +122,21 @@
 	</Doc>
 
 	<Doc title="Title and image">
-		<p slot="description">
+		{#snippet description()}
 			To create a more visually appealing card, add a title and an image. Thanks to that, the card
 			will go well with your inteface design and draw user’s attention.
-		</p>
+		{/snippet}
 		<Preview src="./CardImage.svelte">
 			<div class="custom-class"><CardImage /></div>
 		</Preview>
 	</Doc>
 
 	<Doc title="Blog post">
-		<p slot="description">
+		{#snippet description()}
 			Add an image to your blog post card to make it eye-catching. You can do it by adding the
 			image. Thanks to the grid within CardBody, the author details will be displayed at the bottom
 			of the card.
-		</p>
+		{/snippet}
 		<Preview src="./CardBlog.svelte">
 			<div class="custom-class"><CardBlog /></div>
 		</Preview>

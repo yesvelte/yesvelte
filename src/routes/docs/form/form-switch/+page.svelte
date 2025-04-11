@@ -9,13 +9,13 @@
 </script>
 
 <Page title="FormSwitch">
-	<p slot="description">
+	{#snippet description()}
 		<code>FormSwitch</code> component supports all props and events of
 		<a href="/docs/switch">Switch</a>
 		and also have some additional features like <code>label</code>, <code>hint</code>,
 		<code>required</code>,
 		<code>cols</code>, etc. to make it easy to use in a form.
-	</p>
+	{/snippet}
 
 	<Doc title="Label">
 		<Preview src="./FormSwitchDefault.svelte">
