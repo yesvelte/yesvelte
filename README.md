@@ -32,7 +32,7 @@ YeSvelte components have default styles which is based on tabler. which you can 
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://unpkg.com/yesvelte@next/css/tabler.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/yesvelte@next/dist/css/tabler.min.css" />
 </svelte:head>
 
 <Button color="primary">Hello YeSvelte!</Button>
