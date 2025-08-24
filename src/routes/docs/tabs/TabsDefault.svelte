@@ -9,10 +9,13 @@
 		CardHeader,
 		CardBody,
 	} from 'yesvelte'
+
+	let activeIndex = $state()
 </script>
 
+Active Tab index: {activeIndex}
 <Card>
-	<Tabs>
+	<Tabs bind:activeIndex>
 		<CardHeader>
 			<TabList>
 				<TabItem active>Home</TabItem>

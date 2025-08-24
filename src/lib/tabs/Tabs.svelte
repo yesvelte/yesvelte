@@ -10,17 +10,25 @@
 
 	type $$Props = TabsProps
 
-	let { componentName = 'tabs', vertical, children, ...restProps }: $$Props = $props()
+	let {
+		activeIndex = $bindable(),
+		componentName = 'tabs',
+		vertical,
+		children,
+		...restProps
+	}: $$Props = $props()
 
 	const tabs: Array<any> = $state([])
 	const panels: Array<any> = $state([])
-	const selectedTab = writable<any | null>(null)
+	const selectedTab = writable<any | null>()
 	const selectedPanel = writable<any | null>(null)
 
 	setContext<TabsContext>(TABS, {
 		registerTab: (tab: any) => {
+			if (tabs.length === (activeIndex ?? 0)) {
+				selectedTab.update((current) => current || tab)
+			}
 			tabs.push(tab)
-			selectedTab.update((current) => current || tab)
 		},
 		removeTab(tab: any) {
 			const i = tabs.indexOf(tab)
@@ -54,6 +62,8 @@
 		selectedTab,
 		selectedPanel,
 	})
+
+	selectedTab.subscribe((value) => (activeIndex = tabs.findIndex((x) => x === value)))
 
 	let props: TabsProps = $derived({
 		...restProps,
