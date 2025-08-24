@@ -6,14 +6,15 @@
 		TabPanel,
 		Tabs,
 		Card,
+		Button,
 		CardHeader,
 		CardBody,
 	} from 'yesvelte'
+	import { El } from 'yesvelte/el/index.js'
 
 	let activeIndex = $state()
 </script>
 
-Active Tab index: {activeIndex}
 <Card>
 	<Tabs bind:activeIndex>
 		<CardHeader>
@@ -36,3 +37,7 @@ Active Tab index: {activeIndex}
 		</CardBody>
 	</Tabs>
 </Card>
+
+<El pt="3"></El>
+Active Tab index: {activeIndex}
+<Button onclick={() => (activeIndex = 1)}>Open Profile Tab</Button>

@@ -65,6 +65,11 @@
 
 	selectedTab.subscribe((value) => (activeIndex = tabs.findIndex((x) => x === value)))
 
+	$effect(() => {
+		$selectedTab = tabs[activeIndex]
+		$selectedPanel = panels[activeIndex]
+	})
+
 	let props: TabsProps = $derived({
 		...restProps,
 		componentName,
