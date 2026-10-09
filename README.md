@@ -2,6 +2,8 @@
 
 YeSvelte is a powerful and flexible Svelte UI component library, designed to help developers build enterprise-grade web applications quickly and easily. With a focus on rapid application development and framework independence, YeSvelte is the perfect complement to any CSS framework. The component's UI is inspired by [Tabler](https://tabler.github.io/) UI Kit built on top of Bootstrap css.
 
+Created by [Momentaj](https://momentaj.com/), a Toronto AI engineering firm.
+
 ## Installation
 
 To install YeSvelte, you can use npm:
