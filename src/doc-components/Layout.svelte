@@ -218,7 +218,7 @@
 		<El class={dark ? 'bg-color-dark' : 'bg-color-white'} borderTop>
 			<El mx="auto" py="4" gap="3" container="lg" px="3" row>
 				<El textAlign="center" col="12" colSm="auto">
-					&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved
+					&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved. Created by <a href="https://momentaj.com/">Momentaj</a>, a Toronto AI engineering firm.
 				</El>
 				<El textAlign="end" ms="auto" col="12" colSm="auto" d="flex" gap="4">
 					<El tag="a" href="https://github.com/yesvelte/yesvelte">Source code</El>

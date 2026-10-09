@@ -838,7 +838,9 @@
 			class="flex-direction-column flex-direction-md-row"
 			alignItems="center"
 			justifyContent="between">
-			<El>&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved</El>
+			<El>
+				&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved. Created by <a href="https://momentaj.com/">Momentaj</a>, a Toronto AI engineering firm.
+			</El>
 			<El d="flex" gap="4">
 				<El>Privacy Policy</El>
 				<El>Terms of Service</El>
