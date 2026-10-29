@@ -839,7 +839,7 @@
 			alignItems="center"
 			justifyContent="between">
 			<El>
-				&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved. Created by <a href="https://momentaj.com/">Momentaj</a>, a Toronto AI engineering firm.
+				&copy; {new Date().getFullYear()} YeSvelte. All Rights Reserved. Created by <a href="https://pournasserian.com/open-source/yesvelte">Amir Pournasserian</a> and <a href="https://momentaj.com/">Momentaj</a>, a Toronto AI engineering firm.
 			</El>
 			<El d="flex" gap="4">
 				<El>Privacy Policy</El>
